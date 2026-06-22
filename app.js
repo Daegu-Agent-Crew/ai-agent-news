@@ -8,7 +8,7 @@
     recordsDir: "context/records",
     wikiDir: "context/wiki",
     cacheTtl: 60 * 60 * 1000,
-    cacheKey: "ai-agent-news-cache-v1",
+    cacheKey: "ai-agent-news-cache-v2",
     settingsKey: "ai-agent-news-settings-v1"
   };
 

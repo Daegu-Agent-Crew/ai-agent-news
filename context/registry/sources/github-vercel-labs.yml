@@ -1,0 +1,6 @@
+slug: github_vercel_labs
+name: "GitHub (Vercel Labs)"
+kind: github
+description: "Vercel Labs 오픈소스 프로젝트 — agent-browser 등 에이전트 도구"
+status: active
+categories: [tool]

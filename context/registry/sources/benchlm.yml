@@ -1,0 +1,6 @@
+slug: benchlm
+name: "BenchLM"
+kind: benchmark
+description: "AI 모델 벤치마크 리더보드 — 에이전트, 추론, 코딩 등 종합 평가"
+status: active
+categories: [research, model]

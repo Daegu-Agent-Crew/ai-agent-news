@@ -399,7 +399,7 @@
         return line.trim();
       })
       .forEach(function (line) {
-        var cleaned = line.replace(/^[-*]\s*/, "");
+        var cleaned = line.replace(/^[-*]\s*/, "").replace(/\*\*/g, "");
         var pair = cleaned.match(/^([^:：]+)\s*[:：]\s*(.+)$/);
         if (pair) {
           result[toKey(pair[1].trim())] = pair[2].trim();

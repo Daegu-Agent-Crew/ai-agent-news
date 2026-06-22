@@ -2,7 +2,7 @@
   "use strict";
 
   var CONFIG = {
-    owner: "openclaw",
+    owner: "Daegu-Agent-Crew",
     repo: "ai-agent-news",
     branch: "main",
     recordsDir: "context/records",

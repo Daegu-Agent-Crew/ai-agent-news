@@ -1,0 +1,6 @@
+slug: google_cloud_docs
+name: "Google Cloud Documentation"
+kind: docs
+description: "Google Gemini Enterprise Agent Platform 공식 문서"
+status: active
+categories: [model, tool]

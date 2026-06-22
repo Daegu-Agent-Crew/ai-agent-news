@@ -1,0 +1,5 @@
+slug: web-search
+name: "웹 검색 (범용)"
+kind: search
+description: "OpenClaw web_search / web_fetch 기반 범용 뉴스 탐색"
+status: active

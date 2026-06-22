@@ -1,0 +1,8 @@
+# Wiki 컴파일 — 주제별 분류
+
+## 카테고리
+- **frameworks** — 에이전트 프레임워크 (LangChain, CrewAI, AutoGen 등)
+- **models** — LLM/비전 모델 발표 (GPT, Claude, Gemini 등)
+- **tools** — 개발 도구 및 SDK
+- **industry** — 산업 동향, 투자, 인수합병
+- **research** — 학술 연구, 논문

@@ -1,0 +1,6 @@
+slug: marktechpost
+name: "MarkTechPost"
+kind: news
+description: "AI/ML 기술 심층 분석 미디어 — 프레임워크, 모델, 도구"
+status: active
+categories: [framework, model, tool, research]

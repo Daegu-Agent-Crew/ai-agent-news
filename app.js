@@ -8,7 +8,7 @@
     recordsDir: "context/records",
     wikiDir: "context/wiki",
     cacheTtl: 60 * 60 * 1000,
-    cacheKey: "ai-agent-news-cache-v3",
+    cacheKey: "ai-agent-news-cache-v4",
     settingsKey: "ai-agent-news-settings-v1"
   };
 
@@ -360,7 +360,10 @@
       collectedAt: metadata.collected_at || metadata["수집일"] || "",
       collector: metadata.collector || metadata["수집자"] || "",
       tags: parseTags(metadata.tags || metadata["태그"] || ""),
+      importance: metadata.importance || metadata["중요도"] || "",
+      freshness: metadata.freshness || metadata["신선도"] || "fresh",
       summary: sections["핵심 요약"] || sections["요약"] || metadata.summary || "",
+      whyImportant: sections["왜 중요한가?"] || "",
       translation: sections["번역"] || sections["한국어 번역"] || "",
       analysis: sections["심층 분석"] || "",
       excerpt: sections["원문 발췌"] || "",
@@ -423,6 +426,7 @@
       .replace(/##\s*메타데이터[\s\S]*?(?=\n##\s+|$)/g, "")
       .replace(/##\s*핵심 요약[\s\S]*?(?=\n##\s+|$)/g, "")
       .replace(/##\s*요약[\s\S]*?(?=\n##\s+|$)/g, "")
+      .replace(/##\s*왜 중요한가\?[\s\S]*?(?=\n##\s+|$)/g, "")
       .replace(/##\s*번역[\s\S]*?(?=\n##\s+|$)/g, "")
       .replace(/##\s*한국어 번역[\s\S]*?(?=\n##\s+|$)/g, "")
       .replace(/##\s*심층 분석[\s\S]*?(?=\n##\s+|$)/g, "")
@@ -472,6 +476,7 @@
       "태그": "tags",
       "소스": "source",
       "신선도": "freshness",
+      "중요도": "importance",
       "관련 뉴스 수": "related_count"
     };
     return map[label] || label.toLowerCase().replace(/\s+/g, "_");
@@ -807,7 +812,7 @@
   function renderNewsCard(record) {
     return [
       '<article class="card">',
-      '<div class="card-head"><span class="badge ' + escapeAttr(record.category) + '">' + escapeHtml(record.category) + "</span></div>",
+      '<div class="card-head"><span class="badge ' + escapeAttr(record.category) + '">' + escapeHtml(record.category) + "</span>" + (record.importance ? '<span class="importance">' + escapeHtml(record.importance) + "</span>" : "") + "</div>",
       '<h3><a href="#/news/' + encodeURIComponent(record.slug) + '">' + escapeHtml(record.title) + "</a></h3>",
       '<p>' + escapeHtml(record.summary || record.content || "") + "</p>",
       '<div class="card-meta"><span>' + escapeHtml(formatDate(record.collectedAt || record.publishedAt) || "-") + "</span><span>·</span><span>" + escapeHtml(record.collector || "-") + "</span><span>·</span><span>" + escapeHtml(record.source || "-") + "</span></div>",
@@ -833,9 +838,11 @@
       renderMetaItem("수집일", escapeHtml(formatDate(record.collectedAt) || "-")),
       renderMetaItem("수집자", escapeHtml(record.collector || "-")),
       renderMetaItem("카테고리", '<span class="badge ' + escapeAttr(record.category) + '">' + escapeHtml(record.category) + "</span>"),
+      renderMetaItem("중요도", escapeHtml(record.importance || "-")),
       renderMetaItem("태그", (record.tags || []).map(function (tag) { return '<span class="chip">' + escapeHtml(tag) + "</span>"; }).join(" ") || "-"),
       "</div>",
       renderContentSection("핵심 요약", record.summary),
+      renderContentSection("왜 중요한가?", record.whyImportant),
       renderContentSection("한국어 번역", record.translation),
       renderContentSection("심층 분석", record.analysis),
       renderContentSection("원문 발췌", record.excerpt),

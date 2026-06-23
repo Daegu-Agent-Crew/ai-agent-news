@@ -306,6 +306,14 @@ textarea {
 .badge.industry { background: #d29922; color: #111; }
 .badge.research { background: #db6d28; }
 
+.importance {
+  margin-left: auto;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.badge.industry { background: #d29922; color: #111; }
+.badge.research { background: #db6d28; }
+
 .search-input,
 .select,
 .text-input,

@@ -8,6 +8,7 @@
 - **수집자**: 대구루
 - **카테고리**: industry
 - **태그**: [huawei, harmonyos, ai-agent, operating-system, on-device-ai, xiaoyi]
+- **중요도": ⭐⭐⭐⭐⭐
 - **신선도**: fresh
 
 ## 핵심 요약
@@ -23,6 +24,9 @@
 HarmonyOS 7의 "자가 진화 에이전트 아키텍처(Agentic Self-Evolving Architecture)"는 샤오이에게 장기 기억, 자율 학습, 성찰(reflection) 능력을 부여하여 사용자 습관을 점진적으로 학습하고 축적된 지식을 후속 작업에 재사용할 수 있게 한다. Agent Framework 2.0은 복합 작업 성공률이 90%를 넘는다고 화웨이는 주장한다.
 
 보안 측면에서는 "로컬 우선, 데이터 최소화, 사용자 제어" 원칙의 HPIC(HarmonyOS Personal Intelligent Computing) 백서를 발표했으며, 딥페이크 통화, 음성 복제, 얼굴 교체 사기를 탐지하는 "성간 방패(Star Shield)" 반사기 시스템을 추가했다.
+
+## 왜 중요한가?
+AI가 스마트폰 안에서 “앱" 단위가 아닌 “의도(Intent)" 단위로 작동하게 바꾸는 최초의 상용 OS입니다. 사용자가 “예약해 줘"라고 말하면 여러 앱을 자동으로 오가며 처리합니다. 이것이 작동하면 iOS와 Android의 앱 중심 모델이 근본적으로 바뀔 수 있습니다. 중국이 미국 OS 의존에서 벗어나는 독자 생태계 구축의 핵심이기도 합니다.
 
 ## 심층 분석
 

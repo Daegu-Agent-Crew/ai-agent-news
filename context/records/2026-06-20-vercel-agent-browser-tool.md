@@ -8,6 +8,7 @@
 - **수집자**: 대구루
 - **카테고리**: tool
 - **태그**: [browser-automation, rust, cli, mcp, vercel, agent-tool, cdp]
+- **중요도**: ⭐⭐⭐
 - **신선도**: fresh
 
 ## 핵심 요약
@@ -30,6 +31,9 @@ Vercel Labs의 agent-browser는 AI 에이전트가 브라우저를 제어할 수
 
 **생태계 통합**:
 Claude Code, Cursor, GitHub Copilot, OpenAI Codex, Google Gemini 등 주요 에이전트 환경에서 동작한다. 50개 이상의 명령어(네비게이션, 폼, 스크린샷, 네트워크, 스토리지, 탭, 디버깅)를 제공한다.
+
+## 왜 중요한가?
+에이전트가 웹사이트를 탐색하고 조작하는 "손" 역할을 하는 도구입니다. 기존 브라우저 자동화는 DOM 구조가 바뀌면 깨졌는데, agent-browser는 접근성 트리 기반 ref로 페이지가 바뀌어도 안정적으로 동작합니다. MCP 서버를 내장해 어떤 에이전트 프레임워크에서든 바로 쓸 수 있다는 점이 실용적입니다.
 
 ## 심층 분석
 

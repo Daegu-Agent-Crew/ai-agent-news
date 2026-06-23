@@ -8,7 +8,7 @@
     recordsDir: "context/records",
     wikiDir: "context/wiki",
     cacheTtl: 60 * 60 * 1000,
-    cacheKey: "ai-agent-news-cache-v4",
+    cacheKey: "ai-agent-news-cache-v5",
     settingsKey: "ai-agent-news-settings-v1"
   };
 
@@ -756,22 +756,40 @@
   }
 
   function renderHome(stats, filtered) {
+    var top = filtered[0];
     return [
       '<section class="hero">',
-      '<div><h1>AI 에이전트 뉴스 아카이브</h1><p>GitHub의 <code>context/records/</code>와 <code>context/wiki/</code>를 직접 읽어 와서 뉴스, 위키, 통계를 한 화면에서 관리하는 SPA입니다.</p>',
-      '<div class="hero-actions"><a class="button primary" href="#/news">뉴스 보기</a><a class="button" href="#/wiki">위키 보기</a><button class="button" data-action="refresh" type="button">수동 새로고침</button></div></div>',
+      '<div class="hero-content">',
+      '<span class="hero-eyebrow">AI Agent News Archive</span>',
+      '<h1>AI 에이전트<br>뉴스 아카이브</h1>',
+      '<p class="hero-lead">GitHub의 <code>context/records/</code>와 <code>context/wiki/</code>를 직접 읽어 와서 뉴스, 위키, 통계를 한 화면에서 관리하는 SPA입니다.</p>',
+      '<div class="hero-actions"><a class="button primary" href="#/news">뉴스 보기</a><a class="button" href="#/wiki">위키 보기</a><button class="button" data-action="refresh" type="button">수동 새로고침</button></div>',
+      '</div>',
       '<div class="hero-side">',
-      '<div class="mini-panel"><div class="stat-label">전체 뉴스 수</div><strong>' + stats.total + "</strong></div>",
-      '<div class="mini-panel"><div class="stat-label">최근 수집일</div><strong>' + escapeHtml(formatDate(stats.latest) || "-") + "</strong></div>",
-      '<div class="mini-panel"><div class="stat-label">기본 저장소</div><strong>' + escapeHtml(state.settings.owner + "/" + state.settings.repo) + "</strong></div>",
-      "</div></section>",
-      '<section class="section"><div class="section-head"><div><h2>카테고리 분포</h2><p>빠른 진입점</p></div></div><div class="chips">',
-      renderCategoryChips(stats.categories),
-      "</div></section>",
-      '<section class="section"><div class="section-head"><div><h2>최신 뉴스 5개</h2><p>수집일 기준 정렬</p></div></div><div class="grid cols-3">',
-      filtered.slice(0, 5).map(renderNewsCard).join(""),
-      "</div></section>"
+      '<div class="hero-stats">',
+      '<div class="hero-stat"><div class="stat-label">전체 뉴스</div><strong>' + stats.total + '</strong></div>',
+      '<div class="hero-stat"><div class="stat-label">최근 수집일</div><strong>' + escapeHtml(formatDate(stats.latest) || "-") + '</strong></div>',
+      '<div class="hero-stat"><div class="stat-label">저장소</div><strong>' + escapeHtml(state.settings.owner + "/" + state.settings.repo) + '</strong></div>',
+      '</div>',
+      '</div></section>',
+      top ? '<section class="section"><div class="section-head"><div><h2>최근 주목할 뉴스</h2><p>가장 최근 수집된 뉴스</p></div></div><div class="grid cols-3">' + renderSpotlightCard(top) + filtered.slice(1, 5).map(renderNewsCard).join("") + '</div></section>' : "",
+      '<section class="section"><div class="section-head"><div><h2>카테고리 분포</h2><p>빠른 진입점</p></div></div><div class="chips">' + renderCategoryChips(stats.categories) + '</div></section>'
     ].join("");
+  }
+
+  function renderSpotlightCard(record) {
+    return [
+      '<article class="card spotlight-card">',
+      '<div class="card-head"><span class="badge ' + escapeAttr(record.category) + '">' + escapeHtml(record.category) + '</span>' + (record.importance ? '<span class="importance-badge"><span class="importance-stars">' + escapeHtml(record.importance) + '</span></span>' : '') + '</div>',
+      '<span class="card-kicker">최근 수집</span>',
+      '<h3 class="card-title"><a href="#/news/' + encodeURIComponent(record.slug) + '">' + escapeHtml(record.title) + '</a></h3>',
+      '<p class="spotlight-copy">' + escapeHtml(record.summary || record.whyImportant || "") + '</p>',
+      '<div class="spotlight-footer">',
+      '<div class="spotlight-meta"><span>' + escapeHtml(formatDate(record.collectedAt || record.publishedAt) || '-') + '</span><span class="dot"></span><span>' + escapeHtml(record.source || '-') + '</span></div>',
+      '<a class="button ghost" href="#/news/' + encodeURIComponent(record.slug) + '">자세히</a>',
+      '</div>',
+      '</article>'
+    ].join('');
   }
 
   function renderCategoryChips(categories) {
@@ -811,11 +829,11 @@
 
   function renderNewsCard(record) {
     return [
-      '<article class="card">',
-      '<div class="card-head"><span class="badge ' + escapeAttr(record.category) + '">' + escapeHtml(record.category) + "</span>" + (record.importance ? '<span class="importance">' + escapeHtml(record.importance) + "</span>" : "") + "</div>",
-      '<h3><a href="#/news/' + encodeURIComponent(record.slug) + '">' + escapeHtml(record.title) + "</a></h3>",
-      '<p>' + escapeHtml(record.summary || record.content || "") + "</p>",
-      '<div class="card-meta"><span>' + escapeHtml(formatDate(record.collectedAt || record.publishedAt) || "-") + "</span><span>·</span><span>" + escapeHtml(record.collector || "-") + "</span><span>·</span><span>" + escapeHtml(record.source || "-") + "</span></div>",
+      '<article class="wiki-card">',
+      '<div class="card-head"><span class="badge ' + escapeAttr(record.category) + '">' + escapeHtml(record.category) + '</span>' + (record.importance ? '<span class="importance-badge"><span class="importance-stars">' + escapeHtml(record.importance) + '</span></span>' : '') + '</div>',
+      '<h3 class="card-title"><a href="#/news/' + encodeURIComponent(record.slug) + '">' + escapeHtml(record.title) + "</a></h3>",
+      '<p class="card-summary">' + escapeHtml(record.summary || record.content || "") + "</p>",
+      '<div class="card-meta"><span>' + escapeHtml(formatDate(record.collectedAt || record.publishedAt) || "-") + "</span><span class="dot"></span><span>" + escapeHtml(record.collector || "-") + "</span><span class="dot"></span><span>" + escapeHtml(record.source || "-") + "</span></div>",
       '<div class="chips">' + (record.tags || []).slice(0, 4).map(function (tag) {
         return '<span class="chip">' + escapeHtml(tag) + "</span>";
       }).join("") + "</div>",
@@ -829,7 +847,7 @@
     }
 
     return [
-      '<section class="detail">',
+      '<section class="detail-shell">',
       '<div class="section-head"><div><h2>' + escapeHtml(record.title) + '</h2><p>' + escapeHtml(record.summary || "") + '</p></div><div class="section-actions"><a class="button" href="#/news">목록으로</a>' + (record.originalUrl ? '<a class="button primary" target="_blank" rel="noreferrer" href="' + escapeAttr(record.originalUrl) + '">원문 보기</a>' : "") + '</div></div>',
       '<div class="meta-grid">',
       renderMetaItem("원문 URL", record.originalUrl ? '<a class="external" target="_blank" rel="noreferrer" href="' + escapeAttr(record.originalUrl) + '">' + escapeHtml(record.originalUrl) + "</a>" : "-"),
@@ -859,7 +877,7 @@
     if (!content) {
       return "";
     }
-    return '<section><h3>' + escapeHtml(title) + '</h3><div class="content-block">' + markdownish(content) + "</div></section>";
+    return '<section class="detail-section"><h3>' + escapeHtml(title) + '</h3><div class="content-block">' + markdownish(content) + "</div></section>";
   }
 
   function renderWiki() {
@@ -875,12 +893,12 @@
       }).join("") + "</div>",
       items.length ? '<div class="grid cols-3">' + items.map(function (item) {
         return [
-          '<article class="card">',
+          '<article class="wiki-card">',
           '<div class="card-head"><span class="badge ' + escapeAttr(item.category === "frameworks" ? "framework" : item.category.replace(/s$/, "")) + '">' + escapeHtml(item.category) + "</span></div>",
           '<h3>' + escapeHtml(item.title) + "</h3>",
-          '<p class="wiki-summary">' + escapeHtml(item.summary || "") + "</p>",
+          '<p class="wiki-card-summary">' + escapeHtml(item.summary || "") + "</p>",
           '<div class="chip"><span>관련 뉴스</span><strong>' + escapeHtml(String(item.relatedCount || 0)) + "</strong></div>",
-          item.content ? '<div class="content-block">' + markdownish(item.content) + "</div>" : "",
+          item.content ? '<div class="wiki-card-content">' + markdownish(item.content) + "</div>" : "",
           "</article>"
         ].join("");
       }).join("") + "</div>" : '<div class="empty">표시할 위키 문서가 없습니다.</div>',
@@ -913,7 +931,7 @@
         var width = Math.max(12, (value / total) * 100);
         return '<div class="bar-row"><span>' + escapeHtml(month) + '</span><div class="bar-track"><div class="bar-fill" style="width:' + width + '%"></div></div><strong>' + value + "</strong></div>";
       }).join("") : '<p class="muted">데이터 없음</p>') + "</div></section>",
-      '<section class="panel"><h3>카테고리 분포</h3><div class="donut-wrap"><div class="donut" style="--d1:' + d1 + "deg;--d2:" + d2 + "deg;--d3:" + d3 + "deg;--d4:" + d4 + 'deg"></div><div class="legend">' +
+      '<section class="panel"><h3>카테고리 분포</h3><div class="donut-wrap"><div class="donut-card"><div class="donut" style="--d1:' + d1 + "deg;--d2:" + d2 + "deg;--d3:" + d3 + "deg;--d4:" + d4 + 'deg"></div><div class="legend">' +
         renderLegend("framework", "#1f6feb", c.framework) +
         renderLegend("model", "#8b5cf6", c.model) +
         renderLegend("tool", "#2ea043", c.tool) +

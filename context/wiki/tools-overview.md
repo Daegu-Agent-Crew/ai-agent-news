@@ -6,7 +6,7 @@
 - **최종 업데이트**: 2026-06-23
 
 ## 요약
-에이전트 도구 생태계가 빠르게 분화하고 있다. 브라우저 자동화, MCP 서버, 터미널 작업 등 각 영역별 전문 도구가 등장하면서, 에이전트 개발 스택이 성숙 단계에 진입했다.
+에이전트 도구 생태계가 빠르게 분화하고 있다. 브라우저 자동화, MCP 서버, 터미널 작업 등 각 영역별 전문 도구가 등장하면서, 에이전트 개발 스택이 성숙 단계에 진입했다. MCP(Model Context Protocol)가 사실상 표준으로 자리잡고 있다.
 
 ## 주요 도구
 
@@ -14,6 +14,7 @@
 - **상태**: 오픈소스 (Apache 2.0), 36.8k 스타
 - **핵심**: Rust 네이티브 CLI, ref 기반 접근성 트리, MCP 서버 내장
 - **토큰 효율**: DOM 대비 10~25배 절감 (200~400 vs 3000~5000 토큰)
+- **통합**: Claude Code, Cursor, GitHub Copilot, OpenAI Codex, Google Gemini
 - **링크**: <https://github.com/vercel-labs/agent-browser>
 
 ### 브라우저 자동화 경쟁 도구
@@ -27,8 +28,17 @@
 2. **셀프 힐링**: DOM 변경 시 자동 복구 (Stagehand, agent-browser ref 시스템)
 3. **토큰 최적화**: 에이전트 컨텍스트 비용 절감이 핵심 경쟁력
 
+> 💡 **교차 참조**: MCP 도구 호출 성능은 [평가 벤치마크](research-overview.md)의 MCP Atlas로 측정된다. 도구 호출 최적화는 [FAPO](frameworks-overview.md)의 파이프라인 최적화와도 연결된다 — FAPO는 도구 호출이 포함된 에이전트 체인의 프롬프트를 자동 개선한다.
+
 ## 관련 뉴스
 - [Vercel agent-browser](../records/2026-06-20-vercel-agent-browser-tool.md)
+- [Cisco FAPO](../records/2026-06-20-cisco-fapo-prompt-optimization.md) (도구 호출 최적화 맥락)
+- [Agentic AI Benchmarks 2026](../records/2026-06-18-agentic-benchmarks-2026.md) (MCP Atlas 벤치마크)
+
+## 관련 위키 문서
+- [평가 벤치마크](research-overview.md) — MCP Atlas로 측정하는 도구 호출 성능
+- [프레임워크 동향](frameworks-overview.md) — 도구 호출이 포함된 파이프라인 최적화
+- [모델 동향](models-overview.md) — customtools 엔드포인트로 도구 호출 최적화하는 모델
 
 ## 분석
-브라우저 자동화는 에이전트가 물리 세계(웹)에 개입하는 가장 중요한 인터페이스다. agent-browser의 Rust 네이티브 접근과 MCP 내장은 두 가지 중요한 방향성을 보여준다: 성능 최적화와 표준 준수.
+브라우저 자동화는 에이전트가 물리 세계(웹)에 개입하는 가장 중요한 인터페이스다. agent-browser의 Rust 네이티브 접근과 MCP 내장은 두 가지 중요한 방향성을 보여준다: 성능 최적화와 표준 준수. MCP가 도구 호출의 사실상 표준으로 자리잡으면서, 향후 새로운 도구들은 MCP 호환이 필수가 될 것이다.

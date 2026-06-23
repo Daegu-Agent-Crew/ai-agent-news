@@ -8,6 +8,7 @@
 - **수집자**: 대구루
 - **카테고리**: industry
 - **태그**: [huawei, harmonyos, ai-agent, operating-system, on-device-ai, xiaoyi]
+- **신선도**: fresh
 
 ## 핵심 요약
 > 화웨이가 HDC 2026에서 HarmonyOS 7을 공개했다. 샤오이(Xiaoyi) 어시스턴트가 OS 커널 수전에 통합된 시스템 에이전트로 진화했으며, 2,100+ 시스템 기능과 2,000+ 서드파티 에이전트를 제어한다. "인텐트 즉 서비스(Intent-as-a-Service)" 패러다임을 제시한다.
@@ -40,6 +41,11 @@ HarmonyOS 7의 "자가 진화 에이전트 아키텍처(Agentic Self-Evolving Ar
 - Agent Framework 2.0 (화웨이 에이전트 프레임워크)
 - Apple Intelligence (비교 대상 - 온디바이스 AI)
 - <https://pandaily.com/huawei-harmonyos-7-launch-hdc-2026-ai-agent-jun2026>
+
+### 관련 뉴스
+- [Gemini 3.1 Pro & Flash-Lite](../records/2026-06-18-gemini-31-pro-agentic-model.md) — 경쟁 모델 동향
+- [Humanoid Robotics Scaled Deployment](../records/2026-06-20-humanoid-robots-scaled-deployment.md) — 중국 AI 생태계 확장
+- [Agentic AI Benchmarks 2026](../records/2026-06-18-agentic-benchmarks-2026.md) — 에이전트 평가 기준
 
 ## 원문 발췌
 > "Huawei launched HarmonyOS 7 at HDC 2026, transforming its Xiaoyi assistant into a system-level AI agent with over 2,100 system capabilities and 2,000+ skills, marking a shift from app-centric to intent-driven interaction."

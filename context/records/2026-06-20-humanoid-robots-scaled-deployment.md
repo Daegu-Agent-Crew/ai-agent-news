@@ -8,6 +8,7 @@
 - **수집자**: 대구루
 - **카테고리**: industry
 - **태그**: [humanoid-robot, embodied-ai, figure, atlas, tesla-optimus, unitree, manufacturing]
+- **신선도**: fresh
 
 ## 핵심 요약
 > 2026년 6월, 휴머노이드 로봇이 프로토타입 단계를 넘어 양산 및 상용 배치 단계로 진입했다. Figure AI가 시간당 1대 생산을 달성하고, Boston Dynamics의 전기식 Atlas가 현대차·DeepMind에 배치되며, 전 세계 휴머노이드 로봇 시장은 50~100억 달러 규모로 성장하고 있다.
@@ -43,7 +44,12 @@
 - Figure AI: <https://www.figure.ai/>
 - Boston Dynamics Atlas: <https://bostondynamics.com/atlas>
 - Google RT-X (Open X-Embodiment): <https://robotics-transformer-x.github.io/>
-- Tesla Optimus: <https://www.tesla.com/we-robot>
+- Tesla Optimus: <https://www.tesla.com/we-robot
+
+### 관련 뉴스
+- [Huawei HarmonyOS 7](../records/2026-06-13-huawei-harmonyos-7-ai-agents.md) — 중국 AI 생태계 확장
+- [Agentic AI Benchmarks 2026](../records/2026-06-18-agentic-benchmarks-2026.md) — Terminal-Bench 등 로봇 평가
+- [Gemini 3.1 Pro](../records/2026-06-18-gemini-31-pro-agentic-model.md) — 모델 성능 향상 맥락>
 
 ## 원문 발췌
 > "Figure AI has achieved 1 robot per hour production at its BotQ factory, while Boston Dynamics' electric Atlas begins initial deployments."

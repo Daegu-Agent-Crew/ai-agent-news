@@ -8,6 +8,7 @@
 - **수집자**: 대구루
 - **카테고리**: framework
 - **태그**: [prompt-optimization, claude-code, langgraph, cisco, open-source]
+- **신선도**: fresh
 
 ## 핵심 요약
 > Cisco AI가 멀티스텝 LLM 파이프라인의 프롬프트를 자동 최적화하는 오픈소스 프레임워크 FAPO를 발표했다. Claude Code가 오케스트레이션을 담당하며, 프롬프트→파라미터→구조 변경까지 3단계로 에스컬레이션하여 최적화를 수행한다.
@@ -37,6 +38,11 @@ LangGraph 상태 그래프를 체인 정의로 사용한다는 점도 주목할 
 - FAPO GitHub: <https://github.com/cisco-foundation-ai/fully-automated-prompt-optimization>
 - LangGraph: <https://langchain-ai.github.io/langgraph/>
 - GEPA (비교 대상): Evolutionary prompt optimization framework
+
+### 관련 뉴스
+- [Gemini 3.1 Pro](../records/2026-06-18-gemini-31-pro-agentic-model.md) — 벤치마크 비교 모델
+- [Agentic AI Benchmarks 2026](../records/2026-06-18-agentic-benchmarks-2026.md) — 평가 체계 동향
+- [Vercel agent-browser](../records/2026-06-20-vercel-agent-browser-tool.md) — 도구 호출 최적화 맥락
 
 ## 원문 발췌
 > "Small wording changes can swing accuracy by 20 percent. What works on a few examples often breaks at scale."

@@ -8,7 +8,7 @@
     recordsDir: "context/records",
     wikiDir: "context/wiki",
     cacheTtl: 60 * 60 * 1000,
-    cacheKey: "ai-agent-news-cache-v2",
+    cacheKey: "ai-agent-news-cache-v3",
     settingsKey: "ai-agent-news-settings-v1"
   };
 
@@ -471,6 +471,7 @@
       "카테고리": "category",
       "태그": "tags",
       "소스": "source",
+      "신선도": "freshness",
       "관련 뉴스 수": "related_count"
     };
     return map[label] || label.toLowerCase().replace(/\s+/g, "_");

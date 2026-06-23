@@ -833,7 +833,7 @@
       '<div class="card-head"><span class="badge ' + escapeAttr(record.category) + '">' + escapeHtml(record.category) + '</span>' + (record.importance ? '<span class="importance-badge"><span class="importance-stars">' + escapeHtml(record.importance) + '</span></span>' : '') + '</div>',
       '<h3 class="card-title"><a href="#/news/' + encodeURIComponent(record.slug) + '">' + escapeHtml(record.title) + "</a></h3>",
       '<p class="card-summary">' + escapeHtml(record.summary || record.content || "") + "</p>",
-      '<div class="card-meta"><span>' + escapeHtml(formatDate(record.collectedAt || record.publishedAt) || "-") + "</span><span class="dot"></span><span>" + escapeHtml(record.collector || "-") + "</span><span class="dot"></span><span>" + escapeHtml(record.source || "-") + "</span></div>",
+      '<div class="card-meta"><span>' + escapeHtml(formatDate(record.collectedAt || record.publishedAt) || "-") + '</span><span class=\"dot\"></span><span>' + escapeHtml(record.collector || "-") + '</span><span class=\"dot\"></span><span>' + escapeHtml(record.source || "-") + "</span></div>",
       '<div class="chips">' + (record.tags || []).slice(0, 4).map(function (tag) {
         return '<span class="chip">' + escapeHtml(tag) + "</span>";
       }).join("") + "</div>",

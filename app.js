@@ -348,7 +348,7 @@
     var metadata = parseMetadataBlock(doc.text);
     var sections = splitSections(doc.text);
     var body = stripKnownSections(doc.text);
-    var slug = metadata.slug || slugify(title);
+    var slug = metadata.slug || slugifyFilename(doc.name);
 
     return {
       slug: slug,
@@ -380,7 +380,7 @@
     var summary = sections["요약"] || firstParagraph(doc.text) || metadata.summary || "";
 
     return {
-      slug: metadata.slug || slugify(title),
+      slug: metadata.slug || slugifyFilename(doc.name),
       title: title,
       category: normalizeWikiCategory(metadata.category || metadata["카테고리"] || guessWikiCategory(title)),
       summary: summary,
@@ -509,6 +509,13 @@
       .toLowerCase()
       .replace(/[^a-z0-9가-힣]+/g, "-")
       .replace(/^-+|-+$/g, "");
+  }
+
+  function slugifyFilename(name) {
+    return String(name || "")
+      .replace(/\.md$/, "")
+      .replace(/^\d{4}-\d{2}-\d{2}-/, "")
+      .toLowerCase();
   }
 
   function stripExtension(name) {

@@ -2,13 +2,30 @@
 
 ## 메타데이터
 - **카테고리**: industry
-- **관련 뉴스 수**: 2
-- **최종 업데이트**: 2026-06-23
+- **관련 뉴스 수**: 5
+- **최종 업데이트**: 2026-06-24
 
 ## 요약
-2026년 6월의 핵심 산업 동향은 두 가지 축으로 요약된다: (1) "OS 수준의 AI 에이전트 통합" — 화웨이 HarmonyOS 7이 에이전트 네이티브 OS를 발표하며 앱 중심에서 인텐트 중심으로의 패러다임 전환을 시도, (2) "물리 세계로의 에이전트 확장" — 휴머노이드 로봇이 프로토타입을 넘어 양산·상용 배치 단계로 진입.
+2026년 6월, 산업 동향이 세 가지 축으로 전개되고 있다: (1) **모델 전쟁 격화** — Google·OpenAI·Anthropic·Microsoft가 14일 사이에 플래그십 모델을 연달아 출시하며 용도별 경쟁이 시작됨, (2) **프레임워크 시장 재편** — Microsoft MAF가 프로덕션 배포 인프라를 통합하고 Anthropic은 에이전트 SDK를 별도 과금으로 전환, (3) **물리 세계로의 에이전트 확장** — 휴머노이드 로봇이 프로토타입을 넘어 양산·상용 배치 단계로 진입.
 
 ## 주요 이슈
+
+### 2026년 6월 AI 모델 전쟁
+- **기간**: 14일 사이 4개사 연달아 발표 (Google I/O → GPT-5.5 → Claude Opus 4.8 → MAI-Thinking-1)
+- **Google**: Gemini 3.5 Flash, $1.50/$9.00 가격 파괴, 1M 컨텍스트 + 무료 1,500회/일
+- **OpenAI**: GPT-5.5 Instant, AIME 2025 81.2% 수학 추론 1위, 환각 27% 감소
+- **Anthropic**: Claude Opus 4.8, SWE-Bench Verified 88.6% 코딩 1위 (GitHub 이슈 90% 자율 해결)
+- **Microsoft**: MAI-Thinking-1, 35B 활성/1T MoE, OpenAI 증류 없이 자체 학습 — OpenAI 독립성 증명
+- **핵심 인사이트**: 더 이상 "하나의 최고 모델" 없음. 용도별 라우팅이 새로운 표준.
+- **관련 위키**: [모델 동향](models-overview.md)
+
+### Microsoft의 전략적 독립
+MAI-Thinking-1은 2026년 4월 OpenAI 독점 계약 종료 이후 Microsoft가 자체 프론티어 모델을 보유하고 있음을 증명했다. 35B 활성 파라미터(~1T 총 MoE)로 Claude Opus 4.6 등급의 성능을 더 작은 추론 풋프린트로 달성했다. 이는 Azure 고객에게 "OpenAI 없이도" 프론티어 추론 능능을 제공할 수 있음을 의미하며, 클라우드 시장의 힘 균형을 바꿀 수 있는 중대한 신호다. 동시에 Microsoft Agent Framework(MAF)가 BUILD 2026에서 Agent Harness·CodeAct·Foundry Hosted Agents를 발표하며, 에이전트를 '실험 단계'에서 '프로덕션 배포'로 넘어가는 인프라를 통합했다.
+- **관련 위키**: [프레임워크 동향](frameworks-overview.md)
+
+### 프레임워크 시장 수익화 전환
+Anthropic이 Claude Agent SDK를 별도 월간 크레딧 과금제(Pro $20 / Max 5x $100 / Max 20x $200)로 전환했다. 에이전트 사용량과 대화형 사용을 분리 과금하는 이 모델은 다른 프레임워크에도 선례이 될 수 있다. 특히 CI/CD, 스케줄링된 배치 작업 등 비대화형 시나리오에서 Claude를 사용하는 팀은 예산 재설정이 필요하다. 한편 MAF는 Foundry Hosted Agents로 scale-to-zero를 제공하여 유휴 시 과금이 발생하지 않는다.
+- **관련 위키**: [프레임워크 동향](frameworks-overview.md)
 
 ### 화웨이 HarmonyOS 7 — 에이전트 네이티브 OS
 - **발표일**: 2026-06-13 (HDC 2026)
@@ -36,13 +53,16 @@
 화웨이는 파운데이션 모델(openPangu), 칩(Kirin), OS(HarmonyOS), 에이전트 프레임워크(Agent Framework 2.0)를 모두 자체 보유. Unitree 등 중국 로봇 기업이 전 세계 휴머노이드 출하의 80~90%를 차지. 미국 기술 의존도를 지속적으로 낮추는 방향이다.
 
 ## 관련 뉴스
+- [2026년 6월 AI 모델 전쟁](../records/2026-06-24-june-2026-ai-model-war.md)
+- [Microsoft Agent Framework BUILD 2026](../records/2026-06-24-microsoft-agent-framework-build-2026.md)
+- [Claude Agent SDK 구독제 변화](../records/2026-06-24-claude-agent-sdk-credit-2026.md)
 - [Huawei HarmonyOS 7: AI Agents Reshape the OS](../records/2026-06-13-huawei-harmonyos-7-ai-agents.md)
 - [Humanoid Robotics: From Prototypes to Scaled Deployment](../records/2026-06-20-humanoid-robots-scaled-deployment.md)
 
 ## 관련 위키 문서
-- [프레임워크 동향](frameworks-overview.md) — 화웨이 Agent Framework 2.0, Cisco FAPO
-- [모델 동향](models-overview.md) — openPangu 2.0, Gemini 3.1 Pro
+- [프레임워크 동향](frameworks-overview.md) — MAF, Claude Agent SDK, 화웨이 Agent Framework 2.0, Cisco FAPO
+- [모델 동향](models-overview.md) — Gemini 3.5 Flash, GPT-5.5, Claude Opus 4.8, MAI-Thinking-1, openPangu 2.0
 - [평가 벤치마크](research-overview.md) — 에이전트 성능 평가 기준
 
 ## 분석
-OS 경쟁의 새로운 축이 "앱 스토어 규모"에서 "에이전트 프레임워크 통합도"로 이동하고 있다. 동시에, AI 에이전트가 소프트웨어 경계를 넘어 물리 세계(로봇, 제조업, 물류)로 확장되고 있다. 두趋势 모두 "에이전트가 어디서 작동하느냐"를 넓히는 방향이다. 화웨이의 접근이 상용화에서 검증되어야 하지만, 방향성은 명확하다. Apple과 Google의 대응, 그리고 로봇 산업의 양산 효율화가 관건이다.
+2026년 6월은 AI 산업의 판도가 네 개의 뚜렷한 전략적 진영으로 분열되는 달이었다. 모델 경쟁이 용도별 세분화로 전환되면서 개발자는 다중 모델 라우팅 전략을 취해야 하고, 프레임워크는 프로덕션 배포 인프라(MAF)와 수익 모델 차별화(Claude Agent SDK 과금)로 경쟁이 이동하고 있다. 동시에 AI 에이전트가 소프트웨어 경계를 넘어 물리 세계(로봇, 제조업, 물류)와 OS 수준(HarmonyOS)으로 확장되고 있다. Microsoft가 OpenAI 의존에서 벗어나 자체 모델+프레임워크를 갖춘 것은 클라우드 시장의 힘 균형을 바꿀 수 있는 가장 중요한 구조적 변화다. Apple과 Google의 OS 수준 대응, 로봇 산업의 양산 효율화가 관건이다.

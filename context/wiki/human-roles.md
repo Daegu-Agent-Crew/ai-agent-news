@@ -185,7 +185,7 @@
 ---
 
 ## 관련 위키
-- [산업 동향](../wiki/industry-trends.md)
-- [프레임워크 개요](../wiki/frameworks-overview.md)
-- [모델 개요](../wiki/models-overview.md)
-- [도구 개요](../wiki/tools-overview.md)
+- [산업 동향](industry-trends.md)
+- [프레임워크 개요](frameworks-overview.md)
+- [모델 개요](models-overview.md)
+- [도구 개요](tools-overview.md)

@@ -1,12 +1,12 @@
-# AI 에이전트 산업 동향 — 2026년 6월
+# AI 에이전트 산업 동향 — 2026년 7월
 
 ## 메타데이터
 - **카테고리**: industry
-- **관련 뉴스 수**: 5
-- **최종 업데이트**: 2026-06-24
+- **관련 뉴스 수**: 9
+- **최종 업데이트**: 2026-07-06
 
 ## 요약
-2026년 6월, 산업 동향이 세 가지 축으로 전개되고 있다: (1) **모델 전쟁 격화** — Google·OpenAI·Anthropic·Microsoft가 14일 사이에 플래그십 모델을 연달아 출시하며 용도별 경쟁이 시작됨, (2) **프레임워크 시장 재편** — Microsoft MAF가 프로덕션 배포 인프라를 통합하고 Anthropic은 에이전트 SDK를 별도 과금으로 전환, (3) **물리 세계로의 에이전트 확장** — 휴머노이드 로봇이 프로토타입을 넘어 양산·상용 배치 단계로 진입.
+2026년 상반기, AI 에이전트 산업이 네 가지 축으로 전개되고 있다: (1) **모델 전쟁 격화** — Google·OpenAI·Anthropic·Microsoft가 14일 사이에 플래그십 모델을 연달아 출시하며 용도별 경쟁이 시작됨, (2) **프레임워크 시장 재편** — Microsoft MAF가 프로덕션 배포 인프라를 통합하고 Anthropic은 에이전트 SDK를 별도 과금으로 전환, (3) **물리 세계로의 에이전트 확장** — 휴머노이드 로봇이 프로토타입을 넘어 양산·상용 배치 단계로 진입, (4) **7월 신규 동향** — 프로토콜 표준화(MCP/A2A)로 상호 운용성 확보, 에이전트 커머스 상용화, 시장 통계가 입증하는 채택 격차(79% 도입 vs 11% 생산).
 
 ## 주요 이슈
 
@@ -53,16 +53,84 @@ Anthropic이 Claude Agent SDK를 별도 월간 크레딧 과금제(Pro $20 / Max
 화웨이는 파운데이션 모델(openPangu), 칩(Kirin), OS(HarmonyOS), 에이전트 프레임워크(Agent Framework 2.0)를 모두 자체 보유. Unitree 등 중국 로봇 기업이 전 세계 휴머노이드 출하의 80~90%를 차지. 미국 기술 의존도를 지속적으로 낮추는 방향이다.
 
 ## 관련 뉴스
+### 6월
 - [2026년 6월 AI 모델 전쟁](../records/2026-06-24-june-2026-ai-model-war.md)
 - [Microsoft Agent Framework BUILD 2026](../records/2026-06-24-microsoft-agent-framework-build-2026.md)
 - [Claude Agent SDK 구독제 변화](../records/2026-06-24-claude-agent-sdk-credit-2026.md)
 - [Huawei HarmonyOS 7: AI Agents Reshape the OS](../records/2026-06-13-huawei-harmonyos-7-ai-agents.md)
 - [Humanoid Robotics: From Prototypes to Scaled Deployment](../records/2026-06-20-humanoid-robots-scaled-deployment.md)
+### 7월
+- [Agentic AI Statistics 2026 — 150+ 데이터 포인트](../records/2026-07-05-agentic-ai-statistics-2026.md)
+- [Square 에이전트 커머스 — ChatGPT/Claude 주문](../records/2026-07-02-square-agentic-commerce-chatgpt-claude.md)
+- [5대 혁신: MCP/A2A 프로토콜 표준화](../records/2026-07-05-agentic-ai-breakthroughs-2026.md)
+- [10대 AI 에이전트 트렌드](../records/2026-07-05-10-ai-agent-trends-2026.md)
+- [BNB Agent Studio — 블록체인 AI 에이전트](../records/2026-07-03-bnb-agent-studio.md)
 
 ## 관련 위키 문서
 - [프레임워크 동향](frameworks-overview.md) — MAF, Claude Agent SDK, 화웨이 Agent Framework 2.0, Cisco FAPO
 - [모델 동향](models-overview.md) — Gemini 3.5 Flash, GPT-5.5, Claude Opus 4.8, MAI-Thinking-1, openPangu 2.0
 - [평가 벤치마크](research-overview.md) — 에이전트 성능 평가 기준
 
+## 2026년 7월 업데이트
+
+### 시장 규모와 채택 격차 — 150+ 데이터 포인트
+
+**출처**: [Digital Applied — Agentic AI Statistics 2026](../records/2026-07-05-agentic-ai-statistics-2026.md) ⭐⭐⭐⭐⭐
+
+| 지표 | 수치 |
+|------|------|
+| 글로벌 시장 규모 (2026) | **76억 달러** → 2034년 2,360억 달러 (CAGR 40-50%) |
+| 기업 채택률 | **79%** 도입, 단 **11%**만 생산 운영 |
+| 평균 ROI | **171%** (미국 192%), 회수 기간 8.3개월 |
+| Fortune 500 에이전트당 연간 절감 | **34만 달러** |
+| 생산 환경 평균 에이전트 수 | 4.7개 |
+| 실패 원인 1위 | 인프라 격차(관찰성, 오케스트레이션) 41% |
+| 실패 원인 2위 | 거버넌스·보안 장벽 38% |
+
+> **핵심 인사이트**: 79%가 도입했지만 11%만 생산하는 이유는 기술이 아니라 **인프라와 거버넌스**에 있다. 파일럿→생산 성공 사례는 6개월, 실패 사례는 18개월. 이 격차가 좁혀질 때 시장이 폭발한다.
+
+### 에이전트 커머스 상용화 — Square가 열다
+
+**출처**: [VentureBeat — Square Agentic Commerce](../records/2026-07-02-square-agentic-commerce-chatgpt-claude.md) ⭐⭐⭐⭐
+
+Square가 ChatGPT 앱과 Claude 플러그인을 통해 소비자가 AI 플랫폼 내에서 직접 식당을 발견하고 주문·결제까지 완료할 수 있는 통합을 출시했다.
+
+- **수수료 파괴**: 배달 앱 15-30% → Square 표준 2.9% + $0.30 (마켓플레이스 수수료 0%)
+- **기술**: 실시간 카탈로그 동기화, Order by Cash App 인채팅 결제
+- **의미**: AI 에이전트가 실제 상거래 트랜잭션을 완결하는 첫 상용 사례. Visa·Mastercard·Amex도 에이전트 결제 통합 진행 중.
+- **관련 위키**: [도구 생태계](tools-overview.md)
+
+### 프로토콜 표준화 — MCP와 A2A가 "에이전트의 HTTP"로
+
+**출처**: [Medium — 5 Biggest Breakthroughs](../records/2026-07-05-agentic-ai-breakthroughs-2026.md) ⭐⭐⭐⭐⭐
+
+- **MCP (Model Context Protocol)**: Anthropic의 개방형 표준. AI 모델과 외부 시스템 간 안전한 연결. 150+ 기업이 생산 환경에서 A2A 사용 중.
+- **A2A (Agent-to-Agent)**: Google의 보완 표준. 에이전트 간 발견·목표 공유·협력.
+- **다중 에이전트 오케스트레이션**: 단일 에이전트 → 전문화된 팀(연구원+코더+분석가+비평가). LangGraph(그래프 기반), CrewAI(역할 기반), AutoGen(대화형)이 주요 패턴.
+- **관련 위키**: [프레임워크 동향](frameworks-overview.md)
+
+### 2026년 10대 트렌드
+
+**출처**: [Medium — 10 AI Agent Trends](../records/2026-07-05-10-ai-agent-trends-2026.md) ⭐⭐⭐⭐
+
+1. 자율 AI 에이전트가 전통 소프트웨어 대체
+2. 다중 에이전트 시스템이 새로운 인프라
+3. AI 메모리 시스템 고도화
+4. AI 에이전트의 직장 진입
+5. **Context Engineering이 Prompt Engineering을 대체** — 메모리, 정보 검색, 도구 접근, 배경 지식의 체계적 설계
+6. 음성 AI 에이전트 성숙
+7. 에이전트 보안·거버넌스 이슈 부상
+8. 오픈소스 에이전트 프레임워크 확산
+9. 에이전트 협업(Copilot) 모델 진화
+10. 산업 특화 에이전트(의료·금융·법률) 등장
+
+### 블록체인 × AI 에이전트 융합
+
+**출처**: [Forbes — BNB Agent Studio](../records/2026-07-03-bnb-agent-studio.md) ⭐⭐⭐⭐
+
+BNB Chain × AWS가 15분 만에 자율형 온체인 AI 에이전트를 생성하는 플랫폼 출시. 각 에이전트가 자체 월렛 보유. DeFi 자동화, 디지털 자산 관리 새 시대. 동시에 Microsoft Discovery가 화학·생물학 R&D에서 자율형 에이전트 팀 상용화, Oracle이 Fusion Agentic Applications 출시.
+
 ## 분석
-2026년 6월은 AI 산업의 판도가 네 개의 뚜렷한 전략적 진영으로 분열되는 달이었다. 모델 경쟁이 용도별 세분화로 전환되면서 개발자는 다중 모델 라우팅 전략을 취해야 하고, 프레임워크는 프로덕션 배포 인프라(MAF)와 수익 모델 차별화(Claude Agent SDK 과금)로 경쟁이 이동하고 있다. 동시에 AI 에이전트가 소프트웨어 경계를 넘어 물리 세계(로봇, 제조업, 물류)와 OS 수준(HarmonyOS)으로 확장되고 있다. Microsoft가 OpenAI 의존에서 벗어나 자체 모델+프레임워크를 갖춘 것은 클라우드 시장의 힘 균형을 바꿀 수 있는 가장 중요한 구조적 변화다. Apple과 Google의 OS 수준 대응, 로봇 산업의 양산 효율화가 관건이다.
+2026년 6월은 AI 산업의 판도가 네 개의 뚜렷한 전략적 진영으로 분열되는 달이었다. 모델 경쟁이 용도별 세분화로 전환되면서 개발자는 다중 모델 라우팅 전략을 취해야 하고, 프레임워크는 프로덕션 배포 인프라(MAF)와 수익 모델 차별화(Claude Agent SDK 과금)로 경쟁이 이동하고 있다. 동시에 AI 에이전트가 소프트웨어 경계를 넘어 물리 세계(로봇, 제조업, 물류)와 OS 수준(HarmonyOS)으로 확장되고 있다. Microsoft가 OpenAI 의존에서 벗어나 자체 모델+프레임워크를 갖춘 것은 클라우드 시장의 힘 균형을 바꿀 수 있는 가장 중요한 구조적 변화다.
+
+**7월 업데이트**: 시장 데이터가 이 분석을 뒷받침한다. 79% 채택/11% 생산 격차는 곧 **인프라와 거버넌스가 새로운 경쟁 우위**임을 의미한다. 프로토콜 표준화(MCP/A2A)는 벤더 종속성을 줄여 새로운 진입자를 양산하고 있으며, 에이전트 커머스(Square)와 블록체인 에이전트(BNB)는 AI가 실제 경제 거래를 주도하는 시대의 시작을 알린다. Gartner가 예측한 2030년 2,340억 달러의 "에이전트 중재" 노출 규모가 현실화하고 있다.

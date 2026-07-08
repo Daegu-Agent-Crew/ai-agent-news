@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: frameworks
-- **관련 뉴스 수**: 15
-- **최종 업데이트**: 2026-07-05
+- **관련 뉴스 수**: 20
+- **최종 업데이트**: 2026-07-08 (4차 갱신)
 
 ## 요약
 2026년 6월 현재, 에이전트 프레임워크 생태가 8개 주력 SDK로 정리되었다. Microsoft Agent Framework(MAF)가 BUILD 2026에서 Agent Harness·CodeAct·Foundry Hosted Agents를 발표하며 프로덕션 배포 인프라를 통합했고, Anthropic은 Claude Agent SDK를 별도 월간 크레딧 과금제로 전환했다. Cisco의 FAPO는 파이프라인 단계별 자동 디버깅을, 화웨이는 OS 수준 통합이라는 각기 다른 접근을 보여준다. MCP가 200+ 서버를 확보하며 사실상 표준 도구 프로토콜로 자리 잡았고, ACP가 A2A로 통합되며 Linux Foundation 산하로 이관되었다.
@@ -110,6 +110,34 @@ SkillWeaver는 도구 최적화뿐 아니라 프레임워크 설계에도 시사
 
 > 💡 **교차 참조**: SkillWeaver의 토큰 절감 성과는 [도구 생태계](tools-overview.md)에서 상세히 다룬다. AutoTool의 그래프 기반 도구 선택 연구([연구 동향](research-overview.md))와도 같은 맥락이다.
 
+## 2026년 7월 3차 업데이트: Google ADK 2.0 — 결정론적 워크플로우의 완성
+
+Google이 2026년 7월 1일 **ADK 2.0**을 발표하며, 프로토타입에서 프로덕션으로의 전환을 위한 새로운 패러다임을 제시했다 ([원문](../records/2026-07-08-google-adk-20.md)).
+
+### 핵심 변화: 결정론적 + 자율 에이전트 하이브리드
+ADK 2.0의 혁신은 **워크플로우 런타임**을 도입하여 실행 라우팅을 언어 처리에서 분리한 것이다:
+- **결정론적 단계**: 도구 호출, HITL(human-in-the-loop), 데이터베이스 쿼리 — 전통적 코드로 처리
+- **개방형 단계**: LLM 호출, 전문 에이전트 호출 — 인지적 추론이 필요한 영역에만 사용
+- **그래프 기반 구조**: 노드-엣지 모델로 비즈니스 프로세스를 시각적 모델링, 각 노드가 특정 작업 수행
+
+### 기존 접근법의 한계 극복
+기존 LLM 루프 기반 에이전트는 라우팅·스케줄링·에러 처리까지 LLM에 위임하여 비효율적이고 비용이 많이 들었다. ADK 2.0은 전통적 코드가 이미 잘 수행하는 영역은 결정론적 코드로, 인지가 필요한 영역만 LLM로 처리하여 **토큰 비용과 지연 시간을 크게 줄인다**.
+
+### 프레임워크 비교표 업데이트 (ADK 2.0 반영)
+| 프레임워크 | 강점 | 약점 | 적용 시나리오 |
+|------------|------|------|---------------|
+| LangGraph 1.0 | 상태 그래프, 체크포인트/재개, 타임트래블 | 학습 곡면 | 복잡한 파이프라인, 프로덕션 |
+| **Google ADK 2.0** | **결정론적+자율 하이브리드, 그래프 런타임, Py/Go** | **Google Cloud 의존** | **엔터프라이즈 워크플로우, 금융/의료** |
+| Claude Agent SDK | MCP 최심 통합, 파일/셸 기본 | Claude 종속, TS/Py만 | 코딩, CI 자동화 |
+| MAF (Microsoft) | .NET/Py, Harness 내장, Foundry 배포 | Azure 생태계 편향 | 엔터프라이즈, .NET |
+| CrewAI 1.14 | 빠른 역할 기반 프로토타이핑 (52k 스타) | 대규모 시스템 제한 | MVP, 소규모 팀 |
+| Pydantic AI V2 | 타입 안정성, FastAPI 스타일 DX | 생태계 작음 | 타입 중심 개발 |
+
+### 순위 영향
+ADK 2.0으로 Google ADK의 위상이 크게 상승했다. Alice Labs 순위(7/6)에서는 Google ADK가 5위였으나 ([원문](../records/2026-07-06-alice-frameworks-ranking.md)), ADK 2.0의 결정론적 워크플로우 혁신으로 LangGraph(1위)와의 격차가 크게 좁혀졌다. AlphaCorp 가이드(7/6)도 LangGraph를 1위로 평가하면서 ADK의 생산 환경 적합성을 강조했다 ([원문](../records/2026-07-06-alphacorp-frameworks-guide.md)).
+
+> 💡 **교차 참조**: ADK 2.0의 결정론적 워크플로우는 Berkeley 연구진의 [데이터 시스템 재설계 제안](research-overview.md)과 맞물려, 에이전트 인프라 전반의 재구조화를 시사한다. 또한 [EmulatRx](tools-overview.md)의 감독자-설계자-정보학자-의사-통계학자 구조는 ADK 2.0의 전문 에이전트 호출 모델과 같은 맥락이다.
+
 ## 2026년 7월 업데이트: 오케스트레이션 패러다임 정립 및 순위 합의
 
 ### 오케스트레이션 3대 패러다임 (JetBrains 분석)
@@ -150,14 +178,42 @@ Google이 ADK Go 2.0을 발표하며 그래프 기반 워크플로우 엔진을 
 - **LLM 라우터 패턴**: LlmAgent가 분류 → 함수가 라우트 발행 → 그래프가 디스패치
 - **Go 이점**: 강한 타입, iter.Seq2 이벤트 스트림, 기존 Go 서비스와 자연스러운 통합
 
+### 프레임워크 버전 추적 (Q2 2026)
+Alice Labs 배포 보고서 기반 주요 프레임워크 Q2 2026 업데이트 ([원문](../records/2026-07-06-alice-frameworks-ranking.md)):
+
+| 프레임워크 | Q2 2026 업데이트 | 의미 |
+|-----------|------------------|------|
+| **LangGraph 1.0** | 노드별 타임아웃, DeltaChannel, v2 스트리밍 | 장기 실행 워크플로우 안정성 강화 |
+| **Claude Agent SDK** | 계층적 서브에이전트 생성 + 폴백 모델 체인 | 모델 장애 대응, 작업 위임 고도화 |
+| **CrewAI 1.14** | 플러그 가능 백엔드 + Chat API | 백엔드 교체 가능, 채팅 인터페이스 내장 |
+| **LlamaIndex Workflows 1.0** | 2026-06-22 GA | RAG 기반 에이전트 프로덕션 준비 완료 |
+| **Pydantic AI V2** | 2026-06-23, 헤네스 우선 재설계 | 타입 안전 + 에이전트 런타임 통합 |
+
+### TCO 및 거버넌스 (AlphaCorp 분석)
+AlphaCorp 개발자 가이드는 **총소유비용(TCO)**을 핵심 선택 기준으로 추가했다 ([원문](../records/2026-07-06-alphacorp-frameworks-guide.md)). Airbyte·Let's Data Science·Firecrawl의 독립 분석과 교차 검증하여 다음을 확인:
+- 초기 설정 속도 ≠ 장기적 최적 (LangGraph는 설정이 느리지만 프로덕션 신뢰성 최고)
+- 모델 종속성(lock-in) 비용이 TCO에 큰 영향
+- MCP/A2A 프로토콜 지원이 모든 주요 프레임워크에서 표준화되어 전환 비용 하락
+
+또한 Alice Labs 보고서에서 **엔터프라이즈 플랫폼 vs 오픈소스 SDK** 이원화가 확인되었다:
+- **관리형 엔터프라이즈 플랫폼**: Copilot Studio, Bedrock AgentCore, Vertex AI Agent Builder, OpenAI Agent Platform, Salesforce Agentforce 360, ServiceNow AI Agents, IBM watsonx Orchestrate, UiPath Agentic Automation
+- **오픈소스 SDK**: LangGraph, Claude Agent SDK, CrewAI, AutoGen/AG2, Semantic Kernel, LlamaIndex, Pydantic AI
+- 모든 엔터프라이즈 플랫폼이 **NIST AI RMF, ISO/IEC 42001, EU AI Act** 거버넌스 프레임워크와 정렬 중
+
 ### 7월 핵심 트렌드
 1. **그래프 기반 오케스트레이션 부상**: LangGraph + ADK 2.0 모두 그래프 모델 채택
-2. **MCP 표준화 가속**: 프레임워크 간 상호운용성 향상
+2. **MCP 표준화 가속**: 프레임워크 간 상호운용성 향상 — 7개 주요 프레임워크 모두 네이티브 MCP 지원
 3. **HITL 내장화**: 별도 기능에서 핵심 프리미티브로 승격
-4. **프로덕션 준비성 중시**: 관찰성, 오류 복구, 결정론적 제어가 필수
+4. **프로덕션 준비성 중시**: 관찰성, 오류 복구, 결정론적 제어가 필수 — TCO 분석으로 확장
 5. **Go 언어 진출**: Python 독점 구도 변화 가능성
+6. **거버넌스 정렬**: 엔터프라이즈 플랫폼이 규제 프레임워크(NIST, ISO, EU AI Act)와 표준 정렬
+7. **플랫폼 이원화**: 관리형 엔터프라이즈 플랫폼 vs 오픈소스 SDK 구조화
 
 ## 관련 뉴스 (7월 추가)
+- [Google ADK 2.0 — 결정론적 워크플로우](../records/2026-07-08-google-adk-20.md) ⭐NEW
+- [Alice Labs 프레임워크 순위 (18개 배포 기반)](../records/2026-07-06-alice-frameworks-ranking.md) ⭐NEW
+- [AlphaCorp 8대 프레임워크 개발자 가이드](../records/2026-07-06-alphacorp-frameworks-guide.md) ⭐NEW
+- [JetBrains PyCharm 에이전트 프레임워크 가이드](../records/2026-07-06-jetbrains-agentic-frameworks-2026.md) ⭐NEW
 - [KDnuggets 10대 에이전트 프레임워크](../records/2026-07-05-10-agentic-ai-frameworks-2026.md)
 - [LangChain 프레임워크 비교](../records/2026-07-05-langchain-ai-agent-frameworks.md)
 - [프로덕션 비교 (Towards AI)](../records/2026-07-05-production-frameworks-comparison.md)
@@ -170,4 +226,4 @@ Google이 ADK Go 2.0을 발표하며 그래프 기반 워크플로우 엔진을 
 ## 분석
 프레임워크 경쟁이 "어떤 모델을 쓰느냐"에서 "어떤 조합을 쓰느냐"로 전환되었다. MAF가 프로덕션 배포 인프라(Harness + Foundry)를 통합하며 "실험에서 프로덕션까지"의 간극을 메웠고, CodeAct는 도구 호출 효율성의 패러다임 전환을 보여준다. Claude Agent SDK의 별도 과금제는 에이전트 사용을 "대화형 사용"과 구분하여 수익화하려는 Anthropic의 전략으로, 다른 프레임워크에도 선례가 될 수 있다. 프로토콜 표준화(MCP 200+, ACP→A2A 통합)가 벽을 허물고 있으며, 라우팅 레이어를 구축하는 팀이 단일 모델에 베팅하는 팀보다 유리한 위치를 점할 것이다.
 
-7월 들어 LangGraph의 1위 지위가 Alice Labs·AlphaCorp 양쪽에서 재확인되었고, 오케스트레이션 패러다임이 그래프·역할·체인 3축으로 정식화되었다. Google ADK Go 2.0으로 Go 생태계가 본격 합류하면서 언어 다양성도 확대되고 있다.
+7월 들어 LangGraph의 1위 지위가 Alice Labs·AlphaCorp 양쪽에서 재확인되었고, 오케스트레이션 패러다임이 그래프·역할·체인 3축으로 정식화되었다. **Google ADK 2.0**은 결정론적 워크플로우 런타임을 도입하여 '프로토타입 → 프로덕션' 전환의 핵심 과제를 해결하며 LangGraph의 1위 지위를 위협하고 있다. 이는 Berkeley의 데이터 시스템 재설계 연구와 함께 에이전트 인프라 전반의 재구조화를 예고한다. Google ADK Go 2.0으로 Go 생태계가 본격 합류하면서 언어 다양성도 확대되고 있다.

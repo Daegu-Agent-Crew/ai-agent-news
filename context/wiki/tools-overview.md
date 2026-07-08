@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: tools
-- **관련 뉴스 수**: 7
-- **최종 업데이트**: 2026-07-05
+- **관련 뉴스 수**: 9
+- **최종 업데이트**: 2026-07-08 (2차 갱신)
 
 ## 요약
 에이전트 도구 생태계가 빠르게 분화하고 있다. 브라우저 자동화, MCP 서버, 터미널 작업 등 각 영역별 전문 도구가 등장하면서, 에이전트 개발 스택이 성숙 단계에 진입했다. MCP(Model Context Protocol)가 200+ 서버 구현체를 확보하며 사실상 표준으로 자리잡았고, 도구 간 상호운용성이 빠르게 표준화되고 있다.
@@ -60,17 +60,55 @@ MCP(Model Context Protocol)가 200개 이상의 서버 구현체를 보유하며
 - 도구 간 전환, 반복 명령, API 연결 관리를 자동화하는 통합 에이전트 도구가 부상
 - 개발 워크플로우 전체를 조율하는 메타 도구(Meta-tool) 개념 등장
 
+## 전문 도메인 도구 (2026년 7월)
+
+### EmulatRx (Weill Cornell Medicine) — 의료 임상 시험 설계 다중 에이전트
+- **상태**: Nature Communications 게재 (2026-07-07), 상업화 진행 중
+- **핵심**: 5개 전문 AI 에이전트가 협력하여 임상 시험 설계를 가속화하는 다중 에이전트 시스템
+- **에이전트 구성**: 감독자(조정) → 시험 설계자(구조 개요) → 정보학자(EHR 쿼리) → 의사(의학적 타당성) → 통계학자(성과 추정)
+- **기술**: '타겟 시험 모방(target trial emulation)' — 무작위 대조 시험의 핵심 기능을 일상 치료 데이터에 적용
+- **의미**: 임상 시험 설계의 시간과 비용을 획기적으로 단축; 노인·다병 환자 등 기존 시험에서 누락된 인구집단 포함 가능
+- **HITL**: 인간 전문가가 에이전트 작업을 모니터링하고 개입하여 교정 → 시스템이 실수 반복 감소
+- **링크**: [Weill Cornell 원문](../records/2026-07-08-weill-cornell-clinical-trial.md) · [Nature Communications 논문](https://www.nature.com/articles/s41467-026-74501-2)
+
+> 💡 **교차 참조**: EmulatRx의 다중 전문 에이전트 구조는 [Google ADK 2.0](frameworks-overview.md)의 결정론적 워크플로우 + 전문 에이전트 호출 모델과 같은 패러다임이다. 감독자 에이전트가 워크플로우를 관리하고 결과를 통합하는 구조는 ADK 2.0의 그래프 런타임과 유사하다. Berkeley의 [데이터 시스템 재설계 연구](research-overview.md)도 에이전트가 대량으로 데이터를 쿼리하는 패턴(에이전트 추측)을 예측하는데, EmulatRx의 정보학자 에이전트가 그 선례를 보여준다.
+
+## 엔터프라이즈 에이전트 제품 (CRN 2026 상반기 Top 10)
+CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문](../records/2026-07-05-crn-top-agentic-ai-products.md)). 기업용 에이전트 시장이 상용화 단계에 진입했음을 보여주는 지표:
+
+### AWS Bedrock AgentCore
+- **핵심**: 프레임워크·모델·프로토콜 무관한 대규모 에이전트 운영 플랫폼. 보안 내장, AgentCore Web Search, Bedrock Managed Knowledge Base 추가
+- **의미**: 개발자가 에이전트 역할(모델·도구·지침)을 선언하면 오케스트레이션 루프, 도구 실행, 메모리 관리, 오류 복구를 자동 처리
+- **링크**: <https://aws.amazon.com/bedrock/agentcore/>
+
+### Cisco Cloud Control
+- **핵심**: 네트워킹·보안·컴퓨팅·관찰성·협업을 단일 안전 환경에서 통합. 자연어로 에이전트·애플리케이션 구축
+- **의미**: 다중 도메인 에이전트 시스템의 복잡성 해결 — 인간과 AI 에이전트가 협업하여 IT 인프라 관리
+
+### Databricks Genie One
+- **핵심**: 마케팅·재무·영업 등 비즈니스 팀을 위한 협업 에이전트. Genie Ontology 실시간 컨텍스트 레이어 기반
+- **의미**: 비기술직 사용자도 데이터 기반 자동화·오케스트레이션 가능
+
+### Dell Deskside Agentic AI
+- **핵심**: 현지 인프라에서 에이전트 워크플로우 배포·확장. 클라우드 전용 접근의 비용·지연·데이터 주권 제약 해결
+- **의미**: 온프레미스 에이전트 배포 수요 존재 확인
+
+> 💡 **교차 참조**: 이 제품들은 [프레임워크 동향](frameworks-overview.md)의 '엔터프라이즈 플랫폼 vs 오픈소스 SDK' 이원화에서 관리형 엔터프라이즈 플랫폼에 해당한다. AWS Bedrock AgentCore는 [산업 동향](industry-trends.md)의 클라우드 플랫폼 경쟁과도 연결된다. AlphaCorp 분석에서 TCO가 핵심 기준으로 부상한 것도 이러한 엔터프라이즈 제품들의 비용 구조와 직결된다.
+
 ## 공통 트렌드
 1. **MCP 표준 채택**: 도구들이 MCP 서버를 내장하면서 상호 운용성 확보. 새로운 도구는 MCP 호환이 사실상 필수
 2. **셀프 힐링**: DOM 변경 시 자동 복구 (Stagehand, agent-browser ref 시스템)
 3. **토큰 최적화**: SkillWeaver(99% 절감), agent-browser(10~25배 절감) — 도구 로딩 비용이 핵심 과제
 4. **프레임워크-도구 융합**: MAF CodeAct의 `call_tool()` 다중 도구 병렬 호출, SkillWeaver의 실행 그래프 도구 라우팅
-5. **에이전트 우선 도구**: ZCode처럼 도구가 아닌 개발 환경 자체가 에이전트가 되는 패러다임 (Cursor·Claude Code 도전)
+5. **에이전트 우선 도구**: ZCode처럼 도구가 아닌 개발 환경 자체가 에이전트가 되는 패러다임 (Cursor·Claude Code 도적)
 6. **크로스 플랫폼 원격 제어**: ZCode의 WeChat/Feishu/Telegram 연동 — 메시징 앱을 통한 에이전트 제어
+7. **전문 도메인 다중 에이전트**: EmulatRx처럼 특정 산업(의료)의 과학 팀을 모방한 전문 에이전트 협업 모델 등장
 
 > 💡 **교차 참조**: MCP 도구 호출 성능은 [평가 벤치마크](research-overview.md)의 MCP Atlas로 측정된다. 도구 호출 최적화는 [FAPO](frameworks-overview.md)의 파이프라인 최적화와도 연결된다 — FAPO는 도구 호출이 포함된 에이전트 체인의 프롬프트를 자동 개선한다. MAF의 CodeAct는 도구 호출 효율성을 모델 턴 수 차원에서 혁신적으로 개선한다.
 
 ## 관련 뉴스
+- [CRN 2026 상반기 Top 10 AI 에이전트 제품](../records/2026-07-05-crn-top-agentic-ai-products.md) ⭐NEW (7월)
+- [EmulatRx 임상 시험 설계 에이전트 (Weill Cornell)](../records/2026-07-08-weill-cornell-clinical-trial.md) ⭐NEW (7월)
 - [Vercel agent-browser](../records/2026-06-20-vercel-agent-browser-tool.md)
 - [Claude Agent SDK 구독제 변화](../records/2026-06-24-claude-agent-sdk-credit-2026.md) (MCP 200+ 생태계)
 - [Cisco FAPO](../records/2026-06-20-cisco-fapo-prompt-optimization.md) (도구 호출 최적화 맥락)
@@ -89,4 +127,4 @@ MCP(Model Context Protocol)가 200개 이상의 서버 구현체를 보유하며
 ## 분석
 브라우저 자동화는 에이전트가 물리 세계(웹)에 개입하는 가장 중요한 인터페이스다. agent-browser의 Rust 네이티브 접근과 MCP 내장은 두 가지 중요한 방향성을 보여준다: 성능 최적화와 표준 준수. MCP가 200+ 서버를 확보하며 도구 호출의 사실상 표준으로 자리잡았고, ACP→A2A 통합으로 다중 에이전트 협업의 기반도 마련되었다.
 
-7월 들어 **도구 라우팅**이 핵심 테마로 부상했다. SkillWeaver의 99% 토큰 절감은 도구 선택 최적화가 비용 구조를 근본적으로 바꿀 수 있음을 증명했다. ZCode와 BNB Agent Studio는 각각 코딩과 블록체인 도메인에서 '도구 → 에이전트 환경'으로의 진화를 보여준다. 전반적으로 도구 생태계가 **분산된 단일 기능 도구 → 통합 에이전트 플랫폼**으로 수렴하고 있으며, MCP가 그 연결 조직 역할을 하고 있다.
+7월 들어 **도구 라우팅**이 핵심 테마로 부상했다. SkillWeaver의 99% 토큰 절감은 도구 선택 최적화가 비용 구조를 근본적으로 바꿀 수 있음을 증명했다. ZCode와 BNB Agent Studio는 각각 코딩과 블록체인 도메인에서 '도구 → 에이전트 환경'으로의 진화를 보여준다. **EmulatRx**는 의료 도메인에서 다중 전문 에이전트 협업 모델의 성공을 입증하며, HITL을 통한 신뢰성 구축의 중요성을 보여준다. 전반적으로 도구 생태계가 **분산된 단일 기능 도구 → 통합 에이전트 플랫폼 → 도메인 특화 다중 에이전트 시스템**으로 진화하고 있으며, MCP가 그 연결 조직 역할을 하고 있다.

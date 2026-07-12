@@ -1,7 +1,7 @@
 # 다음 위키 갱신 대기
-# 2026-07-10: models (3차), frameworks (5차) 갱신 완료.
-# - models: GPT-5.6 상세 추가 (Ultra, Programmatic Tool Calling, 벤치마크), Meta Muse Spark 1.1 추가
-# - frameworks: Omnigent 메타-하네스 추가, 멀티에이전트 트렌드 분석 보강
+# 2026-07-12: industry (3차), tools (3차) 갱신 완료.
+# - industry: Accenture × Google Cloud 중소기업 에이전트 AI 파트너십 추가
+# - tools: Warner Bros × AWS 에이전트 광고 기술 (미디어 도메인) 추가
 # 다음 대상:
-# - industry: Accenture-Google Cloud 중소기업 에이전트 AI 파트너십 (7/10) 반영 가능
-# - tools: 7/8 이후 신규 도구 records 확인 필요
+# - research: Berkeley 데이터 시스템 재설계 연구 (7/8) 반영 여부 확인
+# - frameworks: 7/8 이후 신규 프레임워크 records 확인 (Google ADK 2.0, Omnigent 등 이미 반영됨)

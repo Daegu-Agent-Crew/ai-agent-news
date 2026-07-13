@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: models
-- **관련 뉴스 수**: 7
-- **최종 업데이트**: 2026-07-10 (3차 갱신)
+- **관련 뉴스 수**: 8
+- **최종 업데이트**: 2026-07-13 (4차 갱신)
 
 ## 요약
 2026년 6월, 14일 사이에 Google, OpenAI, Anthropic, Microsoft가 연달아 플래그십 모델을 출격했다. 더 이상 "하나의 최고 모델"이 존재하지 않으며, 용도별(가격·수학·코딩·독립성) 최적 모델이 다르다. Google은 가격 파괴, OpenAI는 수학 추론, Anthropic은 코딩 정확도, Microsoft는 자체 모델 독립성이라는 각기 다른 승부수를 던졌다. **7월 9일, OpenAI가 GPT-5.6(Sol/Terra/Luna)을 발표**하며 프론티어 모델 경쟁이 재점화되었다. 트럼프 행정부와의 2주간 규제 갈등 끝에 공개된 이 모델군은 자율 다단계 계획, 독립 도구 사용, 자기 교정 능력을 갖춘 에이전트 네이티브 모델로, 미국 정부의 사전 검토 게이트가 반복적 패턴으로 자리 잡을 가능성을 시사한다.
@@ -125,6 +125,7 @@
 | 오픈웨이트 | GLM-5.2 | 91점 |
 | 프론티어 에이전트 | GPT-5.6 Sol | 자율 계획·도구 사용·Ultra 4에이전트 병렬 |
 | 멀티모달 에이전트 | Meta Muse Spark 1.1 | 1M 컨텍스트, 메인-서브에이전트 계층 |
+| 엔터프라이즈 생산성 | GPT-5.6 (M365 Copilot) | Word·Excel·PowerPoint·Cowork 기본 모델 |
 
 ### 업계 맥락
 - Cisco FAPO 벤치마크에서 GPT-4.1-mini, GPT-5.4-mini, Gemma 3-12B 사용
@@ -141,15 +142,35 @@
 - [OpenAI GPT-5.6 공식 발표](../records/2026-07-10-gpt-56-ai-model-release.md) ⭐⭐⭐⭐⭐
 - [OpenAI GPT-5.6 모델 출시 (규제 분쟁)](../records/2026-07-09-openai-gpt-56-model-release.md) ⭐⭐⭐⭐⭐
 - [Meta Muse Spark 1.1 에이전트 모델](../records/2026-07-10-meta-muse-spark-11-agentic-ai-model.md) ⭐⭐⭐⭐
+- [GPT-5.6 × Microsoft 365 Copilot 통합](../records/2026-07-13-gpt-5-6-microsoft-365-copilot.md) ⭐⭐⭐⭐⭐ ⭐NEW
 
 ## 관련 위키 문서
 - [평가 벤치마크](research-overview.md) — 모델별 에이전트 성능 리더보드
 - [프레임워크 동향](frameworks-overview.md) — Claude Agent SDK 과금, MAF 등 프레임워크별 최적 모델
 - [산업 동향](industry-trends.md) — Microsoft 자체 모델 전략, 중국 모델 생태계
 
+## GPT-5.6 × Microsoft 365 Copilot — 엔터프라이즈 생산력 통합
+
+**출처**: [OpenAI — GPT-5.6 in Microsoft 365 Copilot](../records/2026-07-13-gpt-5-6-microsoft-365-copilot.md) ⭐⭐⭐⭐⭐
+
+- **발표**: 2026년 7월 9일
+- **통합**: GPT-5.6이 Microsoft 365 Copilot의 **새로운 기본(preferred) 모델**로 탑재
+- **적용 범위**: Word, Excel, PowerPoint, Chat, Cowork — 수백만 기업 사용자
+- **개선 포인트**:
+  - **Word**: 초안 작성·편집·정련을 더 적은 프롬프트 라운드로 수행
+  - **Excel**: 더 깊은 분석, 토큰 효율화로 데이터 인사이트 속도 향상
+  - **PowerPoint**: 적은 수동 안내로 세련된 프레젠테이션 생성
+  - **Cowork**: 크로스펑셔널 복잡 작업을 더 적은 수동 조정으로 완료
+- **전략적 의미**: GPT-5.6의 '토큰당 더 많은 유용한 작업' 철학이 기업 생산성 도구와 결합되어, **수백만 사용자가 일상적으로 프론티어 모델에 노출**되는 최초의 대규모 사례
+- **OpenAI-Microsoft 파트너십**: API 직접 접근으로 Microsoft가 OpenAI 모델을 더 효과적으로 통합. 경쟁사(Google·Anthropic)에게 유사한 엔터프라이즈 파트너십 강화 압력
+
+> 💡 **교차 참조**: GPT-5.6의 엔터프라이즈 배포는 [산업 동향](industry-trends.md)의 Microsoft 전략적 독립성(MAI-Thinking-1)과 병행해서 봐야 한다. Microsoft는 자체 모델(MAI-Thinking-1)과 OpenAI 모델(GPT-5.6)을 동시에 운영하며 헤징 전략을 취하고 있다. 또한 [도구 생태계](tools-overview.md)의 ChatGPT Work(동일 모델 기반 생산성 에이전트)와 궤를 같이한다.
+
 ## 분석
-네 거대 기업이 동시에 최고 수준의 모델을 출시하면서, 더 이상 "하나의 최고 모델"이 존재하지 않게 되었다. 벤치마크 경쟁이 세분화되어 용도별(CoSWE-Bench, AIME, Terminal-Bench, GPQA) 서로 다른 모델이 1위를 차지한다. 개발자는 이제 여러 모델을 상황에 맞게 라우팅하는 전략을 취해야 한다. Google의 가격 파괴는 OpenAI와 Anthropic에 가격 인하 압력을 가하며, Microsoft의 자체 모델은 클라우드 시장의 힘 균형을 바꿀 수 있는 중대한 신호다. Anthropic의 SWE-Bench Verified 88.6%는 "AI 코딩 어시스턴트"에서 "AI 코딩 에이전트"로의 전환점이다.
+네 거대 기업이 동시에 최고 수준의 모델을 출시하면서, 더 이상 "하나의 최고 모델"이 존재하지 않게 되었다. 벤치마크 경쟁이 세분화되어 용도별(SWE-Bench, AIME, Terminal-Bench, GPQA) 서로 다른 모델이 1위를 차지한다. 개발자는 이제 여러 모델을 상황에 맞게 라우팅하는 전략을 취해야 한다. Google의 가격 파괴는 OpenAI와 Anthropic에 가격 인하 압력을 가하며, Microsoft의 자체 모델은 클라우드 시장의 힘 균형을 바꿀 수 있는 중대한 신호다. Anthropic의 SWE-Bench Verified 88.6%는 "AI 코딩 어시스턴트"에서 "AI 코딩 에이전트"로의 전환점이다.
 
 **7월 업데이트 (3차)**: GPT-5.6 발표는 두 가지 차원에서 중요하다. 기술적으로는 Sol/Terra/Luna 3단 구성으로 에이전트 네이티브 능력(자율 계획, 도구 사용, 자기 교정)을 본격 탑재했다. Programmatic Tool Calling과 Ultra 모드(4개 병렬 에이전트)는 도구 호출 패러다임을 변화시키며, Agents' Last Exam 53.6점·Coding Agent Index 80점으로 프론티어 성능을 입증했다. 그러나 더 큰 의미는 규제 측면에 있다. 트럼프 행정부의 사전 검토 프레임워크가 반복적 패턴으로 고착화될 경우, 미국 프론티어 모델 출시 일정이 정부 리스크 변수에 종속될 수 있다.
 
 **Meta Muse Spark 1.1**은 같은 주에 발표된 것으로, 모델 자체에 멀티에이전트 계층(메인-서브 구조)을 내장했다는 점에서 GPT-5.6 Ultra와 같은 방향성을 보여준다. 1M 토큰 컨텍스트 관리와 컴퓨터 사용 능력 결합은 에이전트 모델이 단순 텍스트 생성을 넘어 디지털 환경에서 독립적 작업을 수행하는 단계로 진입했음을 시사한다. **모델 레벨 멀티에이전트 내장**이 2026 하반기 핵심 트렌드로 부상했다.
+
+**7월 업데이트 (4차)**: GPT-5.6이 Microsoft 365 Copilot의 기본 모델로 탑재되며, 프론티어 AI 모델이 일상 업무 도구에 통합되는 첫 대규모 사례가 만들어졌다. 이는 모델 경쟁이 벤치마크 점수에서 **실제 업무 성과**로 무대를 옮기고 있음을 시사한다. OpenAI-Microsoft 파트너십이 API 직접 접근으로 심화되는 동시에, Microsoft는 MAI-Thinking-1이라는 자체 모델도 병행 운영하는 헤징 전략을 취하고 있다.

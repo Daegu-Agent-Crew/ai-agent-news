@@ -1,7 +1,8 @@
 # 다음 위키 갱신 대기
-# 2026-07-12: industry (3차), tools (3차) 갱신 완료.
-# - industry: Accenture × Google Cloud 중소기업 에이전트 AI 파트너십 추가
-# - tools: Warner Bros × AWS 에이전트 광고 기술 (미디어 도메인) 추가
+# 2026-07-13: models (4차), tools (4차) 갱신 완료.
+# - models: GPT-5.6 × Microsoft 365 Copilot 통합 추가, 용도 매트릭스에 엔터프라이즈 생산성 행 추가
+# - tools: GPT-Live (풀-덱스 음성), ChatGPT Work (생산성 에이전트) 새 섹션 추가
 # 다음 대상:
-# - research: Berkeley 데이터 시스템 재설계 연구 (7/8) 반영 여부 확인
-# - frameworks: 7/8 이후 신규 프레임워크 records 확인 (Google ADK 2.0, Omnigent 등 이미 반영됨)
+# - research: 7/13 기준 신규 연구 records 확인 (Berkeley 등 이미 반영됨)
+# - frameworks: 7/10 이후 신규 프레임워크 records 확인 (Omnigent, ADK 2.0 등 이미 반영됨)
+# - industry: GPT-Live, ChatGPT Work, M365 Copilot 통합의 산업적 영향 반영 여부 검토

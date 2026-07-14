@@ -1,8 +1,12 @@
 # 다음 위키 갱신 대기
-# 2026-07-13: models (4차), tools (4차) 갱신 완료.
-# - models: GPT-5.6 × Microsoft 365 Copilot 통합 추가, 용도 매트릭스에 엔터프라이즈 생산성 행 추가
-# - tools: GPT-Live (풀-덱스 음성), ChatGPT Work (생산성 에이전트) 새 섹션 추가
+# 2026-07-14: industry (4차) 갱신 완료.
+# - industry: GPT-Live(풀덱스 음성), ChatGPT Work(자율 프로젝트), GPT-5.6×M365 Copilot(엔터프라이즈 통합) 추가
+#   "AI 동료 시대 개막" 섹션 신설, 요약 5축으로 확장, 분석에 협업 패러다임 전환 추가
+#
 # 다음 대상:
-# - research: 7/13 기준 신규 연구 records 확인 (Berkeley 등 이미 반영됨)
-# - frameworks: 7/10 이후 신규 프레임워크 records 확인 (Omnigent, ADK 2.0 등 이미 반영됨)
-# - industry: GPT-Live, ChatGPT Work, M365 Copilot 통합의 산업적 영향 반영 여부 검토
+# - research: 7/14 기준 신규 연구 records 없음 (Berkeley, SkillWeaver, AutoTool 이미 반영됨)
+# - frameworks: 7/14 기준 신규 프레임워크 records 없음 (Omnigent, ADK 2.0 등 이미 반영됨)
+# - models: GPT-5.6×M365, Meta Spark 1.1 등 7/13 4차 갱신 완료
+# - tools: GPT-Live, ChatGPT Work 7/13 4차 갱신 완료
+#
+# 모든 위키가 최신 상태. 다음 신규 records 수집 시 재개.

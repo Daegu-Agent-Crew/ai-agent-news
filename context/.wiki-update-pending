@@ -1,12 +1,12 @@
 # 다음 위키 갱신 대기
-# 2026-07-14: industry (4차) 갱신 완료.
-# - industry: GPT-Live(풀덱스 음성), ChatGPT Work(자율 프로젝트), GPT-5.6×M365 Copilot(엔터프라이즈 통합) 추가
-#   "AI 동료 시대 개막" 섹션 신설, 요약 5축으로 확장, 분석에 협업 패러다임 전환 추가
+# 2026-07-15: frameworks (6차), tools (5차) 갱신 완료.
+# - frameworks: Gemini Enterprise Agent Platform 추가. 엔터프라이즈 플랫폼 경쟁 지형표, 분석 갱신
+# - tools: Claude Computer Use 추가. 컴퓨터 사용 에이전트 섹션 신설, 분석 갱신
 #
 # 다음 대상:
-# - research: 7/14 기준 신규 연구 records 없음 (Berkeley, SkillWeaver, AutoTool 이미 반영됨)
-# - frameworks: 7/14 기준 신규 프레임워크 records 없음 (Omnigent, ADK 2.0 등 이미 반영됨)
-# - models: GPT-5.6×M365, Meta Spark 1.1 등 7/13 4차 갱신 완료
-# - tools: GPT-Live, ChatGPT Work 7/13 4차 갱신 완료
+# - models: GPT-5.6 에이전트 최적화 record (2026-07-15-openai-gpt-5-6-agents.md) 반영 필요
+#   기존 GPT-5.6 Sol/Terra/Luna 내용과 중복 많으나, Memory Core/에이전트 간 통신 프로토콜 등 신규 정보 있음
+# - research: 7/15 기준 신규 연구 records 없음
+# - industry: 신규 records 없음 (7/14 4차 갱신 최신 상태)
 #
 # 모든 위키가 최신 상태. 다음 신규 records 수집 시 재개.

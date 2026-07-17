@@ -1,13 +1,11 @@
 # 다음 위키 갱신 대기
-# 2026-07-16: models (5차) 갱신 완료.
-# - models: GPT-5.6 에이전트 최적화 record (2026-07-15-openai-gpt-5-6-agents.md) 반영
-#   Memory Core, 에이전트 간 통신 프로토콜, GPT-5 대비 40% 성능 향상 추가
-#   5차 분석: 모델-프레임워크 경계 붕괴 가속화 트렌드 분석 추가
+# 2026-07-17: frameworks (7차), models (6차) 갱신 완료.
+# - frameworks: LangChain × NVIDIA NemoClaw Deep Agents 블루프린트 반영
+#   3개 레이어 아키텍처(모델·하네스·런타임), 10배 비용 효율, 컴포넌트 기반 조립 패러다임 추가
+# - models: NVIDIA Nemotron 3 Embed (RTEB 1위) 반영
+#   에이전트 검색 혁신, 32K 컨텍스트, 10배 비용 효율, 임베딩 계층 최적화 분석 추가
 #
 # 다음 대상:
-# - frameworks: 신규 records 없음 (7/15 6차 갱신 최신 상태)
-# - tools: 신규 records 없음 (7/15 5차 갱신 최신 상태)
-# - research: 신규 records 없음
+# - tools: Microsoft Azure AI Agent Service (2026-07-17-microsoft-azure-ai-agents-work-business-automation.md) ⭐⭐⭐⭐ 대기
 # - industry: 신규 records 없음 (7/14 4차 갱신 최신 상태)
-#
-# 모든 위키가 최신 상태. 다음 신규 records 수집 시 재개.
+# - research: 신규 records 없음

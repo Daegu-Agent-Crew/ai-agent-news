@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: models
-- **관련 뉴스 수**: 10
-- **최종 업데이트**: 2026-07-17 (6차 갱신)
+- **관련 뉴스 수**: 11
+- **최종 업데이트**: 2026-07-18 (7차 갱신)
 
 ## 요약
 2026년 6월, 14일 사이에 Google, OpenAI, Anthropic, Microsoft가 연달아 플래그십 모델을 출격했다. 더 이상 "하나의 최고 모델"이 존재하지 않으며, 용도별(가격·수학·코딩·독립성) 최적 모델이 다르다. Google은 가격 파괴, OpenAI는 수학 추론, Anthropic은 코딩 정확도, Microsoft는 자체 모델 독립성이라는 각기 다른 승부수를 던졌다. **7월 9일, OpenAI가 GPT-5.6(Sol/Terra/Luna)을 발표**하며 프론티어 모델 경쟁이 재점화되었다. 트럼프 행정부와의 2주간 규제 갈등 끝에 공개된 이 모델군은 자율 다단계 계획, 독립 도구 사용, 자기 교정 능력을 갖춘 에이전트 네이티브 모델로, 미국 정부의 사전 검토 게이트가 반복적 패턴으로 자리 잡을 가능성을 시사한다.
@@ -110,6 +110,24 @@
 
 > 💡 **교차 참조**: Nemotron 3 Embed는 [프레임워크 동향](frameworks-overview.md)의 LangChain × NVIDIA NemoClaw 블루프린트와 함께 NVIDIA의 에이전트 풀스택 전략을 구성한다 — NemoClaw가 모델·하네스·런타임을 통합한다면, Nemotron 3 Embed는 그 중 검색 기반의 **에이전트 메모리** 계층을 담당한다. 32K 컨텍스트는 긴 대화 히스토리 관리가 필요한 Claude Agent SDK의 파일 기반 세션 메모리 및 GPT-5.6의 Memory Core와 보완적이다. SkillWeaver([도구 생태계](tools-overview.md))의 토큰 절감 철학과도 같은 방향성 — 검색 단계에서의 효율화가 전체 에이전트 비용을 결정한다.
 
+## Anthropic Claude 3.5 Sonnet — 에이전트 특화 최강 모델
+
+**출처**: [Anthropic — Claude 3.5 Sonnet Agent Enhancements](../records/2026-07-18-anthropic-claude-3-5-sonnet-agent-enhancements.md) ⭐⭐⭐⭐⭐
+
+- **발표**: 2026년 7월 17일
+- **포지션**: 복잡한 작업 자동화에 특별히 설계된 향상된 에이전트 기능 탑재
+- **핵심 능력**:
+  - **다단계 계획 및 실행**: 장기적 목표 달성을 위한 단계별 계획 수립·실행
+  - **도구 조정 능력**: 다양한 외부 도구·API의 효과적 통합·활용
+  - **맥락 이해력 개선**: 대화 흐름 파악, 이전 정보 활용한 일관된 응답 생성
+- **안전성**: 강력한 안전성·신뢰성 유지하면서 강력한 기능 제공 → 금융·의료 등 규제 업종 도입 적합
+- **의미**: Claude가 단순 언어 모델에서 **진정한 에이전트**로 진화. Anthropic이 에이전트 특화 기능에서 경쟁 우위 확보
+
+### Claude 3.5 Sonnet vs 경쟁 모델
+Claude 3.5 Sonnet의 에이전트 특화 설계는 GPT-5.6 Ultra(병렬 멀티에이전트) 및 Meta Muse Spark 1.1(메인-서브 에이전트 계층)과 다른 접근법을 취한다. GPT-5.6이 **병렬 처리**로 성능을 극대화하고, Spark 1.1이 **계층적 위임**으로 효율을 추구한다면, Claude 3.5 Sonnet은 **다단계 계획·도구 조정·맥락 유지**의 결합으로 단일 에이전트의 자율성을 극대화한다. 이는 안전성이 최우선인 엔터프라이즈 환경에서 차별화된 가치를 제공한다.
+
+> 💡 **교차 참조**: Claude 3.5 Sonnet의 다단계 계획 능력은 [프레임워크 동향](frameworks-overview.md)의 결정론적 워크플로우 + 자율 에이전트 하이브리드(ADK 2.0)를 모델 레벨에서 구현한 것이다. 도구 조정 능력은 [도구 생태계](tools-overview.md)의 MCP 생태계와 직접 연결되며, Claude Computer Use(7/15 발표)의 기반 기술이기도 하다. 같은 날 발표된 Gemini 1.5 Enterprise의 메모리 통합([프레임워크 동향](frameworks-overview.md))은 Claude 3.5의 맥락 이해력 개선과 유사한 문제(장기 맥락 유지)를 다른 방식(명시적 메모리 vs 모델 내장 맥락)으로 해결한다.
+
 ## 기존 주요 모델
 
 ### Gemini 3.1 Pro (Google)
@@ -150,6 +168,7 @@
 | 오픈웨이트 | GLM-5.2 | 91점 |
 | 프론티어 에이전트 | GPT-5.6 Sol | 자율 계획·도구 사용·Ultra 4에이전트 병렬 |
 | 멀티모달 에이전트 | Meta Muse Spark 1.1 | 1M 컨텍스트, 메인-서브에이전트 계층 |
+| 에이전트 특화 (안전 우선) | Claude 3.5 Sonnet | 다단계 계획·도구 조정·맥락 유지, 엔터프라이즈 안전성 |
 | 에이전트 검색 (임베딩) | NVIDIA Nemotron 3 Embed 8B | RTEB 1위(78.5%), 32K 컨텍스트, 10배 비용 효율 |
 | 엔터프라이즈 생산성 | GPT-5.6 (M365 Copilot) | Word·Excel·PowerPoint·Cowork 기본 모델 |
 
@@ -170,7 +189,8 @@
 - [Meta Muse Spark 1.1 에이전트 모델](../records/2026-07-10-meta-muse-spark-11-agentic-ai-model.md) ⭐⭐⭐⭐
 - [GPT-5.6 × Microsoft 365 Copilot 통합](../records/2026-07-13-gpt-5-6-microsoft-365-copilot.md) ⭐⭐⭐⭐⭐
 - [GPT-5.6 에이전트 최적화 (Memory Core)](../records/2026-07-15-openai-gpt-5-6-agents.md) ⭐⭐⭐⭐⭐
-- [NVIDIA Nemotron 3 Embed — RTEB 1위 에이전트 검색](../records/2026-07-17-nvidia-nemotron-3-embed-agentic-retrieval.md) ⭐⭐⭐⭐⭐ ⭐NEW (7/17)
+- [NVIDIA Nemotron 3 Embed — RTEB 1위 에이전트 검색](../records/2026-07-17-nvidia-nemotron-3-embed-agentic-retrieval.md) ⭐⭐⭐⭐⭐ (7/17)
+- [Anthropic Claude 3.5 Sonnet — 에이전트 기능 강화](../records/2026-07-18-anthropic-claude-3-5-sonnet-agent-enhancements.md) ⭐⭐⭐⭐⭐ ⭐NEW (7/18)
 
 ## 관련 위키 문서
 - [평가 벤치마크](research-overview.md) — 모델별 에이전트 성능 리더보드
@@ -206,3 +226,5 @@
 **7월 업데이트 (5차)**: GPT-5.6의 에이전트 특화 아키텍처가 추가 공개되었다. **Memory Core**는 수십 단계의 작업 맥락을 유지하며 자기 수정을 수행하는 장기 메모리 시스템으로, 기존 에이전트의 '중간에 맥락을 잃는' 문제를 직접 해결한다. **에이전트 간 통신 프로토콜**은 Ultra 모드(4개 병렬 에이전트)를 넘어 서로 다른 AI 에이전트가 분업·협업하는 표준화된 통신 채널을 의미한다. 이는 [프레임워크 동향](frameworks-overview.md)의 멀티에이전트 오케스트레이션(MAF, ADK 2.0)이 모델 레벨로 흡수되고 있음을 시사하며, GPT-5 대비 **40% 성능 향상**이라는 수치는 에이전트 벤치마크가 아닌 실제 작업 완수율 기준이다. 모델이 곧 프레임워크가 되는 경계 붕괴가 가속화되고 있다.
 
 **7월 업데이트 (6차)**: **NVIDIA Nemotron 3 Embed**는 모델 동향에서 주목받기 어려운 **임베딩 모델** 카테고리의 혁신을 보여준다. RTEB 1위(78.5%) 달성과 10배 비용 효율은 에이전트 시스템에서 검색 품질이 전체 성능과 비용을 결정한다는 사실을 확인시킨다. 32K 컨텍스트 윈도우는 긴 문서 처리와 다중 턴 에이전트 히스토리 관리를 가능하게 하며, NVFP4 하드웨어 최적화는 클라우드 독점에서 벗어난 하이브리드 배포를 지원한다. 핵심 통찰은 **에이전트 성능 최적화가 모델 자체뿐 아니라 검색·임베딩 계층까지 확장되어야 한다는 점**이다. 이는 같은 날 공개된 LangChain × NVIDIA NemoClaw 블루프린트([프레임워크 동향](frameworks-overview.md))의 풀스택 최적화 철학(모델·하네스·런타임)과 일맥상통하며, NVIDIA가 모델·프레임워크 양쪽에서 에이전트 생태계를 공략하고 있음을 보여준다.
+
+**7월 업데이트 (7차)**: **Anthropic Claude 3.5 Sonnet**은 2026년 하반기 에이전트 모델 경쟁의 세 번째 축을 제시한다. GPT-5.6 Ultra가 **병렬 멀티에이전트**로, Meta Muse Spark 1.1이 **계층적 멀티에이전트**로 접근한 것과 달리, Claude 3.5 Sonnet은 **단일 에이전트의 자율성 극대화**(다단계 계획·도구 조정·맥락 유지)에 집중한다. 이는 안전성과 신뢰성이 최우선인 규제 산업(금융·의료)에서 명확한 차별화 포인트가 된다. 같은 날 발표된 Google Gemini 1.5 Enterprise의 메모리 통합이 **명시적 메모리 계층**으로 장기 맥락을 해결한다면, Claude 3.5 Sonnet은 **모델 내장 맥락 이해력**으로 접근한다 — 두 접근법이 경쟁하며 보완적으로 발전할 것으로 예상된다. Anthropic이 에이전트 특화 기능에서 경쟁 우위를 점함에 따라, 프레임워크-모델 경계 붕괴가 더욱 가속화되고 있다.

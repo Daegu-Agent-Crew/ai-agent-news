@@ -1,11 +1,16 @@
 # 다음 위키 갱신 대기
-# 2026-07-17: frameworks (7차), models (6차) 갱신 완료.
-# - frameworks: LangChain × NVIDIA NemoClaw Deep Agents 블루프린트 반영
-#   3개 레이어 아키텍처(모델·하네스·런타임), 10배 비용 효율, 컴포넌트 기반 조립 패러다임 추가
-# - models: NVIDIA Nemotron 3 Embed (RTEB 1위) 반영
-#   에이전트 검색 혁신, 32K 컨텍스트, 10배 비용 효율, 임베딩 계층 최적화 분석 추가
+# 2026-07-18: tools (6차), models (7차) 갱신 완료.
+# - tools: Microsoft Azure AI Agent Service + Meta Llama Agent Framework 반영
+#   Azure: 코드 우선 환경, 다중 에이전트, Copilot Studio 비개발자 도구, Cineplex ROI 사례
+#   Meta Llama: 상업용 오픈소스, 보안 샌드박싱, 사전 구성 컴포넌트, 기업급 배포 도구
+#   공통 트렌드 2개 추가 (#11 엔터프라이즈 플랫폼 통합, #12 상업용 오픈소스 에이전트)
+# - models: Anthropic Claude 3.5 Sonnet (⭐⭐⭐⭐⭐) 반영
+#   다단계 계획·도구 조정·맥락 유지, 단일 에이전트 자율성 극대화 접근
+#   용도 매트릭스에 '에이전트 특화 (안전 우선)' 행 추가
+#   경쟁 모델 비교 분석 (GPT-5.6 병렬 vs Spark 1.1 계층 vs Claude 3.5 단일 자율)
 #
 # 다음 대상:
-# - tools: Microsoft Azure AI Agent Service (2026-07-17-microsoft-azure-ai-agents-work-business-automation.md) ⭐⭐⭐⭐ 대기
+# - frameworks: Google Gemini 1.5 Enterprise 메모리 통합 (2026-07-18-google-gemini-1-5-enterprise-memory-integration.md) ⭐⭐⭐⭐ 대기
+#   상태 저장 아키텍처, 패턴 인식, 개인화 맥락 모델 → 장기 맥락 유지 혁신
 # - industry: 신규 records 없음 (7/14 4차 갱신 최신 상태)
 # - research: 신규 records 없음

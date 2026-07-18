@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: tools
-- **관련 뉴스 수**: 12
-- **최종 업데이트**: 2026-07-15 (5차 갱신)
+- **관련 뉴스 수**: 14
+- **최종 업데이트**: 2026-07-18 (6차 갱신)
 
 ## 요약
 에이전트 도구 생태계가 빠르게 분화하고 있다. 브라우저 자동화, MCP 서버, 터미널 작업 등 각 영역별 전문 도구가 등장하면서, 에이전트 개발 스택이 성숙 단계에 진입했다. MCP(Model Context Protocol)가 200+ 서버 구현체를 확보하며 사실상 표준으로 자리잡았고, 도구 간 상호운용성이 빠르게 표준화되고 있다.
@@ -161,6 +161,42 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 
 > 💡 **교차 참조**: Claude Computer Use는 브라우저 자동화(agent-browser, browser-use 등)의 상위 개념으로, 웹 브라우저뿐 아니라 운영체제 전체를 조작 대상으로 삼는다. [프레임워크 동향](frameworks-overview.md)의 Claude Agent SDK와 자연스럽게 통합되며, MCP 생태계의 도구 호출과 보완적이다. Meta Muse Spark 1.1([모델 동향](models-overview.md))의 컴퓨터 사용 능력과 경쟁하는 동일 트렌드. 개인정보·데이터 보안 규제 논의가 [산업 동향](industry-trends.md)에서 부각될 것.
 
+## 엔터프라이즈 에이전트 플랫폼 (2026년 7월)
+
+### Microsoft Azure AI Agent Service — 비즈니스 자동화의 새로운 전선
+
+**출처**: [Microsoft — AI Agents at Work](../records/2026-07-17-microsoft-azure-ai-agents-work-business-automation.md) ⭐⭐⭐⭐
+
+- **발표**: 2026년 7월 16일
+- **핵심**: Azure AI Agent Service + Microsoft 365 Copilot 통합으로 기업용 에이전트 자동화 생태계 구축
+- **주요 기능**:
+  - **코드 우선 환경**: GitHub·VS Code 통합으로 안전하고 상태 유지 자율 에이전트 구축
+  - **간소화된 함수 호출**: 기존 수백 줄 코드 → 몇 줄로 처리 (클라이언트 측 함수 호출 지원)
+  - **다중 에이전트 환경**: 여러 전문 에이전트가 협력하여 복잡한 작업 완료
+  - **Microsoft 365 Copilot**: Fort 500 기업 70% 이미 도입 — 이메일 검토 등 반복 업무 자동화
+  - **Copilot Studio**: 자연어 인터페이스 기반 에이전트 빌더 (비개발자도 구축 가능)
+  - **Microsoft 365 Agents SDK**: 채널 간 에이전트 배포 SDK
+- **고객 사례**: Cineplex — 고객 서비스 요청 처리 시간 15분 → 30초 단축; Fujitsu 등 대규모 도입
+- **에이전트 유형 전망**: 개인 비서, 비즈니스 프로세스 에이전트, 조직 간 에이전트가 협업하는 차세대 등장 예상
+- **의미**: 기업 AI가 단순 대화에서 벗어나 **실제 비즈니스 프로세스 자동화**로 전환. 개발자·비개발자 양쪽을 아우르는 도구로 시장 폭 확대
+
+> 💡 **교차 참조**: Azure AI Agent Service의 다중 에이전트 환경은 [프레임워크 동향](frameworks-overview.md)의 ADK 2.0 그래프 런타임 및 MAF CodeAct와 같은 오케스트레이션 패러다임이다. Copilot Studio의 자연어 빌더는 [모델 동향](models-overview.md)의 GPT-5.6 × M365 Copilot 통합과 직결된다. ChatGPT Work([위](#chatgpt-work-openai--야심찬-프로젝트를-위한-ai-에이전트))와 마이크로소프트의 엔터프라이즈 에이전트 전략은 같은 방향성을 공유한다.
+
+### Meta Llama Agent Framework — 상업용 오픈소스 에이전트 프레임워크
+
+**출처**: [Meta — Llama Agent Framework Open Source](../records/2026-07-18-meta-llama-agent-framework-open-source-commercial.md) ⭐⭐⭐⭐
+
+- **발표**: 2026년 7월 17일
+- **라이선스**: 관대한 상업용 오픈소스 (permissive commercial license)
+- **핵심 구성 요소**:
+  - **사전 구성 에이전트 컴포넌트**: 텍스트 생성, 데이터 분석, 도구 사용 등 일반 작업을 위한 재사용 가능한 모듈
+  - **보안 샌드박싱**: 에이전트 활동을 격리하여 악의적 행위·실수로 인한 피해 최소화
+  - **기업급 배포 도구**: 확장성, 모니터링, 관리 인프라 내장
+- **전략**: Meta 웹 생태계(소셜 미디어, 메타버스)와 통합 가능 → 광범위한 도달
+- **의미**: 대형 테크의 오픈소스 에이전트 프레임워크로 **에이전트 개발의 기술 장벽을 크게 낮춤**. 중소기업·스타트업도 강력한 에이전트 솔루션 구축 가능. 보안 샌드박싱 내장으로 기업 환경 도입 촉진
+
+> 💡 **교차 참조**: Llama Agent Framework의 사전 구성 컴포넌트는 [프레임워크 동향](frameworks-overview.md)의 컴포넌트 기반 조립 패러다임(LangChain × NemoClaw)과 같은 방향성이다. 보안 샌드박싱은 [도구 생태계](#)의 MCP 기반 격리 패턴과 보완적. 상업용 오픈소스 전략은 [산업 동향](industry-trends.md)의 에이전트 민주화 트렌드와 연결. 컴포넌트 재사용·표준화는 전체 에이전트 생태계의 성숙도를 높이는 핵심 요소.
+
 ## 공통 트렌드
 1. **MCP 표준 채택**: 도구들이 MCP 서버를 내장하면서 상호 운용성 확보. 새로운 도구는 MCP 호환이 사실상 필수
 2. **셀프 힐링**: DOM 변경 시 자동 복구 (Stagehand, agent-browser ref 시스템)
@@ -172,6 +208,8 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 8. **산업별 에이전트 상용화**: WBD×AWS 광고 기술처럼 특정 산업의 비즈니스 프로세스를 end-to-end 자율화하는 도구 등장
 9. **풀-덱스 음성 대화**: GPT-Live가 턴 기반 STT→LLM→TTS 파이프라인을 붕괴시키며, 실시간 동시 대화 가능. 음성 AI가 콜센터·교육·엔터테인먼트에서 새로운 도구 카테고리 창출
 10. **워크플로우 에이전트**: ChatGPT Work가 단일 요청으로 전체 워크플로우를 처리하며, 예약된 작업으로 무인 실행. 도구가 '응답 생성'에서 '프로젝트 완수'로 진화
+11. **엔터프라이즈 플랫폼 통합**: Azure AI Agent Service가 코드 우선 환경 + 비개발자 도구(Copilot Studio)를 결합하여 에이전트 구축의 민주화와 전문화를 동시에 추구
+12. **상업용 오픈소스 에이전트**: Meta Llama Agent Framework가 보안 샌드박싱·기업급 배포 도구를 포함한 완전한 프레임워크를 오픈소스화 → 에이전트 개발의 접근성 혁신
 
 > 💡 **교차 참조**: MCP 도구 호출 성능은 [평가 벤치마크](research-overview.md)의 MCP Atlas로 측정된다. 도구 호출 최적화는 [FAPO](frameworks-overview.md)의 파이프라인 최적화와도 연결된다 — FAPO는 도구 호출이 포함된 에이전트 체인의 프롬프트를 자동 개선한다. MAF의 CodeAct는 도구 호출 효율성을 모델 턴 수 차원에서 혁신적으로 개선한다.
 
@@ -190,7 +228,9 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - [10 Modern Agentic Tools](../records/2026-07-05-modern-agentic-tools.md) (7월)
 - [GPT-Live 풀-덱스 음성 모델](../records/2026-07-13-introducing-gpt-live.md) ⭐NEW (7월)
 - [ChatGPT Work 생산성 에이전트](../records/2026-07-13-chatgpt-for-your-most-ambitious-work.md) ⭐NEW (7월)
-- [Claude Computer Use — 컴퓨터 조작 에이전트](../records/2026-07-15-anthropic-claude-computer-use.md) ⭐NEW (7/15)
+- [Claude Computer Use — 컴퓨터 조작 에이전트](../records/2026-07-15-anthropic-claude-computer-use.md) (7/15)
+- [Microsoft Azure AI Agent Service — 비즈니스 자동화](../records/2026-07-17-microsoft-azure-ai-agents-work-business-automation.md) ⭐NEW (7/17)
+- [Meta Llama Agent Framework — 상업용 오픈소스](../records/2026-07-18-meta-llama-agent-framework-open-source-commercial.md) ⭐NEW (7/18)
 
 ## 관련 위키 문서
 - [평가 벤치마크](research-overview.md) — MCP Atlas로 측정하는 도구 호출 성능
@@ -201,6 +241,8 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 **Claude Computer Use**는 도구 생태계의 범위를 브라우저 자동화에서 **OS 전체 조작**으로 확장한다. 기존 도구들이 MCP 서버나 API를 통한 간접적 도구 호출에 그쳤다면, Claude Computer Use는 화면을 보고 마우스·키보드를 조작하는 '직접 제어' 방식으로, 에이전트가 인간의 컴퓨터 사용 패턴 자체를 모방하게 한다. 이는 반복 업무 자동화의 자유도를 극대화하지만, 동시에 개인정보 보호와 데이터 보안이라는 새로운 과제를 제시한다. 의도 추론과 오류 자동 복구가 결합되어 안정성을 확보하려는 시도가 주목된다.
 
 브라우저 자동화는 에이전트가 물리 세계(웹)에 개입하는 가장 중요한 인터페이스다. agent-browser의 Rust 네이티브 접근과 MCP 내장은 두 가지 중요한 방향성을 보여준다: 성능 최적화와 표준 준수. MCP가 200+ 서버를 확보하며 도구 호출의 사실상 표준으로 자리잡았고, ACP→A2A 통합으로 다중 에이전트 협업의 기반도 마련되었다.
+
+**Microsoft Azure AI Agent Service**와 **Meta Llama Agent Framework**는 에이전트 도구가 두 가지 새로운 방향으로 확장됨을 보여준다. Microsoft는 코드 우선 개발 환경과 비개발자용 자연어 빌더(Copilot Studio)를 결합하여, 기업 내 **모든 역할**이 에이전트를 구축할 수 있게 만든다. Cineplex 사례(15분→30초)는 이미 실질적인 ROI가 입증되었음을 보여준다. Meta는 반대로 **오픈소스 + 상업용 라이선스**로 접근하여, 사전 구성 컴포넌트·보안 샌드박싱·배포 도구를 포함한 완전한 프레임워크를 무료로 제공한다. 이 두 접근법은 에이전트 도구의 양극화 — **관리형 엔터프라이즈 플랫폼 vs 오픈소스 프레임워크** — 를 보여주며, [프레임워크 동향](frameworks-overview.md)의 이원화 트렌드와 일치한다. 특히 Meta의 보안 샌드박싱 내장은 도구 수준에서의 안전장치를 표준화하며, 규제 산업(금융·의료)의 에이전트 도입 장벽을 낮춘다.
 
 7월 들어 **도구 라우팅**이 핵심 테마로 부상했다. SkillWeaver의 99% 토큰 절감은 도구 선택 최적화가 비용 구조를 근본적으로 바꿀 수 있음을 증명했다. ZCode와 BNB Agent Studio는 각각 코딩과 블록체인 도메인에서 '도구 → 에이전트 환경'으로의 진화를 보여준다. **EmulatRx**는 의료 도메인에서 다중 전문 에이전트 협업 모델의 성공을 입증하며, HITL을 통한 신뢰성 구축의 중요성을 보여준다. **Warner Bros×AWS**는 미디어 광고 도메인에서 에이전트가 전통적 비즈니스 프로세스를 end-to-end 자율화한 첫 대규모 상용 사례로, 산업별 에이전트 도구의 가능성을 열었다. **GPT-Live**와 **ChatGPT Work**는 각각 음성 대화와 업무 자동화라는 새로운 도구 카테고리를 열었다. GPT-Live의 풀-덱스 아키텍처는 기존 3단계 음성 파이프라인(STT→LLM→TTS)을 붕괴시키며 실시간 동시 대화를 가능하게 했고, ChatGPT Work는 에이전트가 수 시간 지속되는 복잡한 프로젝트를 독립적으로 수행하며 완성된 자료를 생산하는 새로운 협업 모델을 제시했다. 두 도구 모두 GPT-5.5/5.6 프론티어 모델에 의존하며, 모델 성능과 도구 경험의 경계가 흐려지고 있음을 보여준다.
 

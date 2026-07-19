@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: frameworks
-- **관련 뉴스 수**: 22
-- **최종 업데이트**: 2026-07-17 (7차 갱신)
+- **관련 뉴스 수**: 23
+- **최종 업데이트**: 2026-07-19 (8차 갱신)
 
 ## 요약
 2026년 6월 현재, 에이전트 프레임워크 생태가 8개 주력 SDK로 정리되었다. Microsoft Agent Framework(MAF)가 BUILD 2026에서 Agent Harness·CodeAct·Foundry Hosted Agents를 발표하며 프로덕션 배포 인프라를 통합했고, Anthropic은 Claude Agent SDK를 별도 월간 크레딧 과금제로 전환했다. Cisco의 FAPO는 파이프라인 단계별 자동 디버깅을, 화웨이는 OS 수준 통합이라는 각기 다른 접근을 보여준다. MCP가 200+ 서버를 확보하며 사실상 표준 도구 프로토콜로 자리 잡았고, ACP가 A2A로 통합되며 Linux Foundation 산하로 이관되었다.
@@ -276,6 +276,25 @@ NemoClaw 블루프린트는 **'레고 블록식' 에이전트 구축**이라는 
 
 > 💡 **교차 참조**: NemoClaw의 3개 레이어 아키텍처는 [모델 동향](models-overview.md)의 NVIDIA Nemotron 3 Embed(검색 품질 혁신)와 함께 NVIDIA의 에이전트 풀스택 전략을 구성한다. OpenShell 거버넌스 런타임은 [Omnigent](#2026년-7월-4차-업데이트-omnigent--메타-하네스로-거버넌스-간극-해결)의 정책 중심 보안과 같은 방향성이며, LangChain Deep Agents는 본 문서의 LangGraph 기반 오케스트레이션 패러다임과 직결된다. [Google ADK 2.0](#google-adk-20--결정론적-워크플로우의-완성)의 결정론적+자율 하이브리드 모델과도 상호 보완적이다.
 
+## 2026년 7월 8차 업데이트: Google Gemini 1.5 Enterprise — 메모리 통합으로 장기 맥락 혁신
+
+**출처**: [Google Cloud — Gemini 1.5 Enterprise Memory Integration](../records/2026-07-18-google-gemini-1-5-enterprise-memory-integration.md) ⭐⭐⭐⭐
+
+### 핵심 설계
+Google가 Gemini 1.5 Enterprise를 발표하며, AI 에이전트가 확장형 상호작용에서 맥락을 유지하고 이전 대화에서 학습할 수 있는 **메모리 통합 기능**을 선보였다. 이는 기업 AI 배포의 핵심 과제인 장기간 맥락 유지 및 성능 개선을 해결하는 혁신이다.
+
+**3대 메모리 기술:**
+1. **상태 저장 아키텍처**: 에이전트가 대화 간에 상태를 유지하고 누적된 정보를 활용. 세션 종료 후에도 맥락이 보존됨
+2. **패턴 인식 알고리즘**: 이전 상호작용에서 학습한 패턴을 식별하고 미래 상호작용에 적용. 응답의 일관성 향상
+3. **개인화 맥락 모델**: 사용자의 선호도·작업 스타일·의사결정 패턴을 학습하여 점진적 맞춤화 제공
+
+### 프레임워크 생태계에서의 의미
+Gemini 1.5 Enterprise의 메모리 통합은 **에이전트가 단순한 응답 생성기에서 진정한 학습형 파트너로 전환**됨을 의미한다. 이는 본 문서의 6차 업데이트에서 다룬 [Gemini Enterprise Agent Platform](#2026년-7월-6차-업데이트-google-gemini-enterprise-agent-platform--기업용-에이전트-플랫폼-전쟁-개막)의 Enterprise Memory System을 한층 강화하는 기능이며, ADK 2.0의 그래프 런타임과 결합 시 더욱 강력한 장기 워크플로우가 가능해진다.
+
+또한 업계 전반의 **AI 메모리 시스템 고도화** 트렌드([산업 동향 10대 트렌드](industry-trends.md) #3)를 구체화한 사례로, 경쟁사(OpenAI·Anthropic)의 대응을 촉발할 것이다. 다만 메모리 기능은 개인정보 보호 및 데이터 거버넌스와 관련된 새로운 과제를 제기하며, 특히 [AI 에이전트 보안 격차](../records/2026-07-19-ai-agent-security-gap.md)에서 지적된 기업의 거버넌스 부족 문제와 직결된다.
+
+> 💡 **교차 참조**: 메모리 통합은 [Gemini Enterprise Agent Platform](#2026년-7월-6차-업데이트-google-gemini-enterprise-agent-platform--기업용-에이전트-플랫폼-전쟁-개막)의 Enterprise Memory System을 강화한다. [Omnigent](#2026년-7월-4차-업데이트-omnigent--메타-하네스로-거버넌스-간극-해결)의 세션 연속성(터미널→브라우저→폰 동기화)과 같은 방향성. [산업 동향](industry-trends.md)의 '에이전트 보안 격차' 이슈와 메모리 데이터 거버넌스가 맞물리는 지점.
+
 ## 관련 뉴스 (7월 추가)
 - [LangChain × NVIDIA NemoClaw Deep Agents 블루프린트](../records/2026-07-17-langchain-nvidia-nemoclaw-deep-agents-blueprint.md) ⭐NEW (7/17)
 - [Omnigent 메타-하네스 — 다중 에이전트 거버넌스](../records/2026-07-09-omnigent-open-source-ai-agent.md)
@@ -291,7 +310,8 @@ NemoClaw 블루프린트는 **'레고 블록식' 에이전트 구축**이라는 
 - [AlphaCorp 프레임워크 8선](../records/2026-07-04-alphacorp-ai-agent-frameworks.md)
 - [Alice Labs 프레임워크 순위](../records/2026-07-03-ai-agent-frameworks-2026.md)
 - [Google ADK Go 2.0](../records/2026-07-03-google-adk-go-20.md)
-- [Google Gemini Enterprise Agent Platform](../records/2026-07-15-google-gemini-enterprise-platform.md) ⭐NEW (7/15)
+- [Google Gemini 1.5 Enterprise 메모리 통합](../records/2026-07-18-google-gemini-1-5-enterprise-memory-integration.md) ⭐NEW (7/18)
+- [Google Gemini Enterprise Agent Platform](../records/2026-07-15-google-gemini-enterprise-platform.md) (7/15)
 
 ## 분석 (7월 17일 7차 갱신)
 **Google Gemini Enterprise Agent Platform**의 등장으로 엔터프라이즈 에이전트 플랫폼 경쟁이 본격화되었다. Google은 Enterprise Memory System, Multi-Agent Orchestration, Dynamic Learning Loop, Zero-Trust Architecture라는 4대 축으로 기업용 에이전트 시장을 공략한다. 이는 AWS Bedrock AgentCore, Microsoft Copilot Studio+MAF, OpenAI Agent Platform이 이미 확보한 자리에 Google이 직접 경쟁 카드를 던진 것으로, 기업 AI 에이전트 도입이 '선택'이 아닌 '필수'로 전환되는 분기점이 될 것이다. 규제 업종(금융·의료·제조)을 겨냥한 Zero-Trust 설계는 기업용 에이전트 시장의 보안·컴플라이언스 기준을 한 단계 끌어올릴 전망이다.

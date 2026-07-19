@@ -1,16 +1,17 @@
 {
-  "lastLint": "2026-07-12",
-  "lastLintEpoch": 1752343320,
+  "lastLint": "2026-07-19",
+  "lastLintEpoch": 1752960000,
   "filesChecked": 7,
   "criticalFixed": 0,
-  "warnings": 4,
+  "warnings": 5,
   "details": {
     "criticalFixed": [],
     "warnings": [
-      "human-roles.md & human-roles-in-agentic-era.md: 고립 페이지 — 다른 위키에서 링크하지 않음 (0건 참조). 2회 연속 지적",
-      "human-roles.md & human-roles-in-agentic-era.md: 내용 중복 — '인간의 역할' 주제를 2개 문서에서 다룸. 병합 권장. 2회 연속 지적",
-      "human-roles-in-agentic-era.md: 카테고리 'industry'이나 실제 내용은 'analysis'에 더 가까움. 2회 연속 지적",
-      "human-roles.md, human-roles-in-agentic-era.md: 2026-06-28 마지막 업데이트 — 7월 레코드 미반영. 다른 5개 위키는 모두 7월 업데이트 완료"
+      "human-roles.md & human-roles-in-agentic-era.md: 고립 페이지 — 다른 위키에서 링크하지 않음 (0건 참조). 3회 연속 지적",
+      "human-roles.md & human-roles-in-agentic-era.md: 내용 중복 — '인간의 역할' 주제를 2개 문서에서 다룸. 병합 권장. 3회 연속 지적",
+      "human-roles-in-agentic-era.md: 카테고리 'industry'이나 실제 내용은 'analysis'에 더 가까움. 3회 연속 지적",
+      "human-roles.md, human-roles-in-agentic-era.md: 2026-06-28 마지막 업데이트 — 7월 레코드 미반영 (21일 경과). 다른 5개 위키는 모두 7월 업데이트 완료",
+      "research-overview.md: 2026-07-09 마지막 업데이트 — 10일 경과, 최근 records 미반영 가능 (신규)"
     ]
   }
 }

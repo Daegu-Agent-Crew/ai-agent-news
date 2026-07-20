@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: tools
-- **관련 뉴스 수**: 14
-- **최종 업데이트**: 2026-07-18 (6차 갱신)
+- **관련 뉴스 수**: 16
+- **최종 업데이트**: 2026-07-20 (7차 갱신)
 
 ## 요약
 에이전트 도구 생태계가 빠르게 분화하고 있다. 브라우저 자동화, MCP 서버, 터미널 작업 등 각 영역별 전문 도구가 등장하면서, 에이전트 개발 스택이 성숙 단계에 진입했다. MCP(Model Context Protocol)가 200+ 서버 구현체를 확보하며 사실상 표준으로 자리잡았고, 도구 간 상호운용성이 빠르게 표준화되고 있다.
@@ -197,6 +197,34 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 
 > 💡 **교차 참조**: Llama Agent Framework의 사전 구성 컴포넌트는 [프레임워크 동향](frameworks-overview.md)의 컴포넌트 기반 조립 패러다임(LangChain × NemoClaw)과 같은 방향성이다. 보안 샌드박싱은 [도구 생태계](#)의 MCP 기반 격리 패턴과 보완적. 상업용 오픈소스 전략은 [산업 동향](industry-trends.md)의 에이전트 민주화 트렌드와 연결. 컴포넌트 재사용·표준화는 전체 에이전트 생태계의 성숙도를 높이는 핵심 요소.
 
+## 엔터프라이즈 개발 플랫폼 (2026년 7월)
+
+### Port AI Builder — 기업용 "Vibe Coding" 플랫폼
+
+**출처**: [InfoWorld — Port AI Builder](../records/2026-07-20-port-ai-builder-vibe-coding.md) ⭐⭐⭐⭐
+
+- **발표**: 2026년 7월 20일
+- **핵심**: 자연어로 에이전트 워크플로우를 생성·실행하는 기업용 "vibe coding" 플랫폼. 내장된 human-in-the-loop 검토/승인으로 품질과 통제력 유지
+- **기반 아키텍처**: Port의 Agentic SDLC 플랫폼 위에 작동 — 컨텍스트 레이크, 워크플로우 오케스트레이션, 에이전트 관리, 거버넌스 제공
+- **적용 분야**: SRE, DevOps, 아키텍처, 보안, AI 거버넌스, 데이터 모델링, UX 등 다양한 도메인 스킬 활용
+- **의미**: "vibe coding" 개념이 소비자 도구를 넘어 **기업용 프로덕션 환경**으로 진입. 자연어 개발과 기존 툴체인(VS Code, Codex 등) 통합으로 변환 저항 최소화
+- **링크**: [Port AI Builder](https://port.io/ai-builder)
+
+> 💡 **교차 참조**: Port AI Builder의 human-in-the-loop 거버넌스는 [프레임워크 동향](frameworks-overview.md)의 ADK 2.0 HITL 내장화 트렌드와 일치한다. Oracle AI Agent Studio(친숙한 도구 + 기업 런타임 연결)와 같은 방향성 — pro-code와 vibe coding이 기업용 에이전트 구축의 양대 패러다임으로 부상.
+
+### Macky AI — 첫 AI 비즈니스 컨설팅 플랫폼
+
+**출처**: [AI News — Macky AI Consulting Platform](../records/2026-07-20-macky-ai-business-consulting-platform.md) ⭐⭐⭐⭐
+
+- **발표**: 2026년 7월 20일
+- **핵심**: OpenAI 기반, 55개 비즈니스 카테고리를覆盖하는 프롬프트 없는 AI 컨설팅 플랫폼. 최대 3개 질문으로 원하는 결과물 생성
+- **적용**: 비즈니스 프로세스 설계, 직원 채용 공고 작성, 디지털 전환 계획 등
+- **타겟**: 중소기업(SME) — 전통적 컨설팅 비용 부담 없이 전문 수준의 컨설팅 접근 가능
+- **의미**: AI가 단순 도구를 넘어 **비즈니스 컨설팅이라는 전문 서비스 영역**으로 진입. SME의 디지털 격차 해소에 기여
+- **링크**: [Macky AI](https://macky.ai/)
+
+> 💡 **교차 참조**: Macky AI는 [산업 동향](industry-trends.md)의 에이전트 민주화 트렌드를 구체화한다. 비즈니스 컨설팅 자동화는 에이전트가 단순 반복 업무를 넘어 **전문 지식 영역**으로 확장됨을 시사. ChatGPT Work([위](#chatgpt-work-openai--야심찬-프로젝트를-위한-ai-에이전트))의 '복잡한 프로젝트 완수'와 방향성이 유사하되, SME를 타겟으로 한 접근이 차이점.
+
 ## 공통 트렌드
 1. **MCP 표준 채택**: 도구들이 MCP 서버를 내장하면서 상호 운용성 확보. 새로운 도구는 MCP 호환이 사실상 필수
 2. **셀프 힐링**: DOM 변경 시 자동 복구 (Stagehand, agent-browser ref 시스템)
@@ -210,6 +238,8 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 10. **워크플로우 에이전트**: ChatGPT Work가 단일 요청으로 전체 워크플로우를 처리하며, 예약된 작업으로 무인 실행. 도구가 '응답 생성'에서 '프로젝트 완수'로 진화
 11. **엔터프라이즈 플랫폼 통합**: Azure AI Agent Service가 코드 우선 환경 + 비개발자 도구(Copilot Studio)를 결합하여 에이전트 구축의 민주화와 전문화를 동시에 추구
 12. **상업용 오픈소스 에이전트**: Meta Llama Agent Framework가 보안 샌드박싱·기업급 배포 도구를 포함한 완전한 프레임워크를 오픈소스화 → 에이전트 개발의 접근성 혁신
+13. **엔터프라이즈 vibe coding**: Port AI Builder가 자연어 기반 개발을 기업용 SDLC에 통합하며, human-in-the-loop 거버넌스로 품질 통제 유지
+14. **전문 서비스 자동화**: Macky AI가 비즈니스 컨설팅을 AI로 자동화하며, 특히 SME의 전문 서비스 접근성을 혁신적으로 개선
 
 > 💡 **교차 참조**: MCP 도구 호출 성능은 [평가 벤치마크](research-overview.md)의 MCP Atlas로 측정된다. 도구 호출 최적화는 [FAPO](frameworks-overview.md)의 파이프라인 최적화와도 연결된다 — FAPO는 도구 호출이 포함된 에이전트 체인의 프롬프트를 자동 개선한다. MAF의 CodeAct는 도구 호출 효율성을 모델 턴 수 차원에서 혁신적으로 개선한다.
 
@@ -230,7 +260,9 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - [ChatGPT Work 생산성 에이전트](../records/2026-07-13-chatgpt-for-your-most-ambitious-work.md) ⭐NEW (7월)
 - [Claude Computer Use — 컴퓨터 조작 에이전트](../records/2026-07-15-anthropic-claude-computer-use.md) (7/15)
 - [Microsoft Azure AI Agent Service — 비즈니스 자동화](../records/2026-07-17-microsoft-azure-ai-agents-work-business-automation.md) ⭐NEW (7/17)
-- [Meta Llama Agent Framework — 상업용 오픈소스](../records/2026-07-18-meta-llama-agent-framework-open-source-commercial.md) ⭐NEW (7/18)
+- [Meta Llama Agent Framework — 상업용 오픈소스](../records/2026-07-18-meta-llama-agent-framework-open-source-commercial.md) (7/18)
+- [Port AI Builder — 기업용 Vibe Coding 플랫폼](../records/2026-07-20-port-ai-builder-vibe-coding.md) ⭐NEW (7/20)
+- [Macky AI — AI 비즈니스 컨설팅 플랫폼](../records/2026-07-20-macky-ai-business-consulting-platform.md) ⭐NEW (7/20)
 
 ## 관련 위키 문서
 - [평가 벤치마크](research-overview.md) — MCP Atlas로 측정하는 도구 호출 성능
@@ -247,3 +279,5 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 7월 들어 **도구 라우팅**이 핵심 테마로 부상했다. SkillWeaver의 99% 토큰 절감은 도구 선택 최적화가 비용 구조를 근본적으로 바꿀 수 있음을 증명했다. ZCode와 BNB Agent Studio는 각각 코딩과 블록체인 도메인에서 '도구 → 에이전트 환경'으로의 진화를 보여준다. **EmulatRx**는 의료 도메인에서 다중 전문 에이전트 협업 모델의 성공을 입증하며, HITL을 통한 신뢰성 구축의 중요성을 보여준다. **Warner Bros×AWS**는 미디어 광고 도메인에서 에이전트가 전통적 비즈니스 프로세스를 end-to-end 자율화한 첫 대규모 상용 사례로, 산업별 에이전트 도구의 가능성을 열었다. **GPT-Live**와 **ChatGPT Work**는 각각 음성 대화와 업무 자동화라는 새로운 도구 카테고리를 열었다. GPT-Live의 풀-덱스 아키텍처는 기존 3단계 음성 파이프라인(STT→LLM→TTS)을 붕괴시키며 실시간 동시 대화를 가능하게 했고, ChatGPT Work는 에이전트가 수 시간 지속되는 복잡한 프로젝트를 독립적으로 수행하며 완성된 자료를 생산하는 새로운 협업 모델을 제시했다. 두 도구 모두 GPT-5.5/5.6 프론티어 모델에 의존하며, 모델 성능과 도구 경험의 경계가 흐려지고 있음을 보여준다.
 
 전반적으로 도구 생태계가 **분산된 단일 기능 도구 → 통합 에이전트 플랫폼 → 도메인 특화 다중 에이전트 시스템**으로 진화하고 있으며, MCP가 그 연결 조직 역할을 하고 있다. 음성(GPT-Live)과 업무 자동화(ChatGPT Work)의 추가로 도구 생태계의 범위가 대화형 인터페이스에서 전체 업무 파이프라인으로 확장되었다.
+
+7월 20일 기준, **Port AI Builder**와 **Macky AI**는 도구 생태계의 두 가지 새로운 확장을 보여준다. Port는 'vibe coding'을 기업용 SDLC에 통합하며, 개발 생산성과 거버넌스 사이의 균형을 제시한다. 이는 Oracle AI Agent Studio([프레임워크 동향](frameworks-overview.md))의 pro-code 접근과 보완적 — 친숙한 도구를 활용하면서 기업 런타임에 연결한다는 공통 전략. Macky AI는 에이전트가 **전문 서비스(컨설팅)** 영역으로 진입했음을 보여주며, 특히 SME의 디지털 격차 해소라는 사회적 의미를 갖는다. 두 도구 모두 기존 툴체인(VS Code, OpenAI 등)과 통합되면서 에이전트 기능을 추가하는 '접목식' 접근을 취하고 있어, 기업의 전환 저항을 최소화하는 실용적 경로를 제시한다.

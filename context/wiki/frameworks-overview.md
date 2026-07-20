@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: frameworks
-- **관련 뉴스 수**: 23
-- **최종 업데이트**: 2026-07-19 (8차 갱신)
+- **관련 뉴스 수**: 24
+- **최종 업데이트**: 2026-07-20 (9차 갱신)
 
 ## 요약
 2026년 6월 현재, 에이전트 프레임워크 생태가 8개 주력 SDK로 정리되었다. Microsoft Agent Framework(MAF)가 BUILD 2026에서 Agent Harness·CodeAct·Foundry Hosted Agents를 발표하며 프로덕션 배포 인프라를 통합했고, Anthropic은 Claude Agent SDK를 별도 월간 크레딧 과금제로 전환했다. Cisco의 FAPO는 파이프라인 단계별 자동 디버깅을, 화웨이는 OS 수준 통합이라는 각기 다른 접근을 보여준다. MCP가 200+ 서버를 확보하며 사실상 표준 도구 프로토콜로 자리 잡았고, ACP가 A2A로 통합되며 Linux Foundation 산하로 이관되었다.
@@ -295,6 +295,34 @@ Gemini 1.5 Enterprise의 메모리 통합은 **에이전트가 단순한 응답 
 
 > 💡 **교차 참조**: 메모리 통합은 [Gemini Enterprise Agent Platform](#2026년-7월-6차-업데이트-google-gemini-enterprise-agent-platform--기업용-에이전트-플랫폼-전쟁-개막)의 Enterprise Memory System을 강화한다. [Omnigent](#2026년-7월-4차-업데이트-omnigent--메타-하네스로-거버넌스-간극-해결)의 세션 연속성(터미널→브라우저→폰 동기화)과 같은 방향성. [산업 동향](industry-trends.md)의 '에이전트 보안 격차' 이슈와 메모리 데이터 거버넌스가 맞물리는 지점.
 
+## 2026년 7월 9차 업데이트: Oracle AI Agent Studio — pro-code 개발로 기업용 에이전트 구축 혁신
+
+**출처**: [InfoWorld — Oracle AI Agent Studio Pro-Code Tools](../records/2026-07-20-oracle-ai-agent-studio-expansion.md) ⭐⭐⭐⭐⭐
+
+### 핵심 설계
+Oracle이 Fusion Applications용 AI Agent Studio를 확장하여 **AI Studio Skill**이라는 CLI 기반 pro-code 개발 도구를 추가했다. 개발자가 VS Code, Codex, Claude Code 등 익숙한 개발 환경에서 Fusion 네이티브 에이전트 애플리케이션을 구축할 수 있도록 지원한다.
+
+**핵심 기술:**
+1. **AI Studio Skill CLI**: Fusion 특정 컨텍스트(프로젝트 구조, API, 템플릿, 검증, 패키징, 배포 워크플로우)를 AI 코딩 어시스턴트에 제공
+2. **외부 AI 도구 통합**: Codex, Claude Code 등 인기 코딩 어시스턴트가 생성한 코드를 Oracle AI Agent Studio 및 Fusion 런타임과 연결
+3. **엔터프라이즈 개발 관행 유지**: 소스 제어, 코드 리뷰, 반복 가능한 배포, 테스트/디버깅, 기존 툴체인 통합을 그대로 활용
+
+### 엔터프라이즈 플랫폼 경쟁 지형 확장
+Oracle의 진입으로 기업용 에이전트 플랫폼 경쟁이 한층 치열해졌다:
+
+| 플랫폼 | 강점 | 상태 |
+|--------|------|------|
+| **Oracle AI Agent Studio** | **Fusion 통합, pro-code CLI, 외부 AI 도구 호환** | **확장 (7/20)** |
+| Google Gemini Enterprise | Enterprise Memory, Zero-Trust, Cloud 통합 | 상용 |
+| AWS Bedrock AgentCore | 모델·프레임워크 무관, Managed KB | 상용 |
+| Microsoft Copilot Studio + MAF | .NET 통합, Foundry 배포, Harness | GA |
+| Salesforce Agentforce 360 | CRM 통합 | GA |
+| SAP Joule Studio | SAP 에코시스템 통합 | 상용 |
+
+Oracle의 차별점은 **개발자가 이미 익숙한 도구(VS Code, Codex, Claude Code)를 활용하면서도 기업용 에이전트를 구축**할 수 있다는 점이다. 이는 프로토타입에서 프로덕션으로의 전환을 촉진하는 실용적 접근이다. 단, 벤더 종속성(vendor lock-in)에 대한 분석가 우려도 존재한다.
+
+> 💡 **교차 참조**: Oracle의 AI Studio Skill은 [Omnigent](#2026년-7월-4차-업데이트-omnigent--메타-하네스로-거버넌스-간극-해결)의 메타-하네스와 방향성이 유사하다 — 다양한 AI 코딩 도구를 단일 플랫폼 런타임에 연결. 단, Omnigent가 범용 거버넌스 계층이라면, Oracle은 Fusion 생태계에 특화. [도구 생태계](tools-overview.md)의 Port AI Builder(vibe coding for enterprise)와도 같은 맥락 — 자연어/친숙한 도구 기반 에이전트 구축. [산업 동향](industry-trends.md)의 기업용 에이전트 플랫폼 경쟁 가속화 트렌드.
+
 ## 관련 뉴스 (7월 추가)
 - [LangChain × NVIDIA NemoClaw Deep Agents 블루프린트](../records/2026-07-17-langchain-nvidia-nemoclaw-deep-agents-blueprint.md) ⭐NEW (7/17)
 - [Omnigent 메타-하네스 — 다중 에이전트 거버넌스](../records/2026-07-09-omnigent-open-source-ai-agent.md)
@@ -310,7 +338,8 @@ Gemini 1.5 Enterprise의 메모리 통합은 **에이전트가 단순한 응답 
 - [AlphaCorp 프레임워크 8선](../records/2026-07-04-alphacorp-ai-agent-frameworks.md)
 - [Alice Labs 프레임워크 순위](../records/2026-07-03-ai-agent-frameworks-2026.md)
 - [Google ADK Go 2.0](../records/2026-07-03-google-adk-go-20.md)
-- [Google Gemini 1.5 Enterprise 메모리 통합](../records/2026-07-18-google-gemini-1-5-enterprise-memory-integration.md) ⭐NEW (7/18)
+- [Oracle AI Agent Studio Pro-Code 확장](../records/2026-07-20-oracle-ai-agent-studio-expansion.md) ⭐NEW (7/20)
+- [Google Gemini 1.5 Enterprise 메모리 통합](../records/2026-07-18-google-gemini-1-5-enterprise-memory-integration.md) (7/18)
 - [Google Gemini Enterprise Agent Platform](../records/2026-07-15-google-gemini-enterprise-platform.md) (7/15)
 
 ## 분석 (7월 17일 7차 갱신)
@@ -318,4 +347,4 @@ Gemini 1.5 Enterprise의 메모리 통합은 **에이전트가 단순한 응답 
 
 프레임워크 경쟁이 "어떤 모델을 쓰느냐"에서 "어떤 조합을 쓰느냐"로 전환되었다. MAF가 프로덕션 배포 인프라(Harness + Foundry)를 통합하며 "실험에서 프로덕션까지"의 간극을 메웠고, CodeAct는 도구 호출 효율성의 패러다임 전환을 보여준다. Claude Agent SDK의 별도 과금제는 에이전트 사용을 "대화형 사용"과 구분하여 수익화하려는 Anthropic의 전략으로, 다른 프레임워크에도 선례가 될 수 있다. 프로토콜 표준화(MCP 200+, ACP→A2A 통합)가 벽을 허물고 있으며, 라우팅 레이어를 구축하는 팀이 단일 모델에 베팅하는 팀보다 유리한 위치를 점할 것이다.
 
-7월 들어 LangGraph의 1위 지위가 Alice Labs·AlphaCorp 양쪽에서 재확인되었고, 오케스트레이션 패러다임이 그래프·역할·체인 3축으로 정식화되었다. **Google ADK 2.0**은 결정론적 워크플로우 런타임을 도입하여 '프로토타입 → 프로덕션' 전환의 핵심 과제를 해결하며 LangGraph의 1위 지위를 위협하고 있다. **Omnigent**는 다중 코딩 에이전트 통합 관리라는 새로운 계층(메타-하네스)을 제시하며, 120+ 도구 시대의 거버넌스·보안 문제에 실용적 해법을 제공한다. **LangChain × NVIDIA NemoClaw** 블루프린트는 모델·하네스·런타임 3개 레이어를 통합 최적화하여 10배 비용 효율을 달성하며, 컴포넌트 기반 조립이라는 새로운 프레임워크 설계 기준을 제시한다. Google ADK Go 2.0으로 Go 생태계가 본격 합류하면서 언어 다양성도 확대되고 있다. **새로운 7월 트렌드**: 모델 레벨(GPT-5.6 Ultra, Meta Spark 1.1)과 프레임워크 레벨(Omnigent, NemoClaw) 모두에서 멀티에이전트 내장과 풀스택 최적화가 가속화되고 있다 ([모델 동향](models-overview.md) 참조).
+7월 들어 LangGraph의 1위 지위가 Alice Labs·AlphaCorp 양쪽에서 재확인되었고, 오케스트레이션 패러다임이 그래프·역할·체인 3축으로 정식화되었다. **Google ADK 2.0**은 결정론적 워크플로우 런타임을 도입하여 '프로토타입 → 프로덕션' 전환의 핵심 과제를 해결하며 LangGraph의 1위 지위를 위협하고 있다. **Omnigent**는 다중 코딩 에이전트 통합 관리라는 새로운 계층(메타-하네스)을 제시하며, 120+ 도구 시대의 거버넌스·보안 문제에 실용적 해법을 제공한다. **LangChain × NVIDIA NemoClaw** 블루프린트는 모델·하네스·런타임 3개 레이어를 통합 최적화하여 10배 비용 효율을 달성하며, 컴포넌트 기반 조립이라는 새로운 프레임워크 설계 기준을 제시한다. **Oracle AI Agent Studio**는 친숙한 개발 도구(VS Code, Codex, Claude Code)와 기업용 런타임(Fusion)을 연결하여 pro-code 에이전트 구축의 실용적 모델을 제시하며, SAP·ServiceNow와 함께 엔터프라이즈 소프트웨어 기업들의 에이전트 플랫폼 경쟁이 한층 격화되었다. Google ADK Go 2.0으로 Go 생태계가 본격 합류하면서 언어 다양성도 확대되고 있다. **새로운 7월 트렌드**: 모델 레벨(GPT-5.6 Ultra, Meta Spark 1.1)과 프레임워크 레벨(Omnigent, NemoClaw, Oracle AI Agent Studio) 모두에서 멀티에이전트 내장과 풀스택 최적화가 가속화되고 있다 ([모델 동향](models-overview.md) 참조).

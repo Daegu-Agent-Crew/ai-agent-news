@@ -1,17 +1,17 @@
 # 다음 위키 갱신 대기
-# 2026-07-20: frameworks (9차), tools (7차) 갱신 완료.
-# - frameworks: Oracle AI Agent Studio pro-code 확장 반영
-#   AI Studio Skill CLI — VS Code/Codex/Claude Code 통합, Fusion 런타임 연결
-#   엔터프라이즈 플랫폼 경쟁 테이블에 Oracle 추가 (SAP, ServiceNow와 경쟁)
-#   벤더 종속성 우려 분석가 경고 언급
-# - tools: Port AI Builder + Macky AI 반영
-#   Port: vibe coding for enterprise SDLC, human-in-the-loop 거버넌스
-#   Macky AI: 55개 비즈니스 카테고리, SME 타겟 AI 컨설팅
-#   공통 트렌드 #13, #14 추가 (엔터프라이즈 vibe coding, 전문 서비스 자동화)
+# 2026-07-23: models (8차), tools (8차) 갱신 완료.
+# - models: Kimi K3 (2.8T) / Qwen3.8 (2.4T) 중국 오픈소스 프론티어 반영
+#   오픈소스 모델 경쟁 구도 표 추가 (Kimi K3, Qwen3.8, GLM-5.2, openPangu)
+#   용도별 매트릭스에 "오픈소스 프론티어" 행 추가
+#   미중 기술 경쟁 + 에이전트 로컬 배포 가능성 분석 추가
+# - tools: Gemini Task Automation + OpenAI Presence 반영
+#   모바일 에이전트 섹션 신설 (Gemini GUI 탐색, 갤럭시 S26/픽셀 10)
+#   엔터프라이즈 프로덕션 플랫폼 섹션 신설 (Presence, FDE 모델, Codex 개선 루프)
+#   트렌드 #15(모바일 에이전트), #16(프로덕션 운영 체계) 추가
 #
 # 다음 대상:
-# - models: 신규 대기 record 없음 (7/18 7차 갱신 최신 상태)
-# - industry: 신규 대기 record 없음 (7/19 5차 갱신 최신 상태)
+# - industry: 7/23 records 대기 — openai-presence(엔터프라이즈), gemini-task-automation(모바일 산업), kimi-k3(미중 경쟁) 반영 필요
 # - research: 신규 records 없음
 # - frameworks: 신규 대기 record 없음 (7/20 9차 갱신 최신 상태)
-# - tools: 신규 대기 record 없음 (7/20 7차 갱신 최신 상태)
+# - models: 7/23 8차 갱신 완료. 다음 대기 record 없음
+# - tools: 7/23 8차 갱신 완료. 다음 대기 record 없음

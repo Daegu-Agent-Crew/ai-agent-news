@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: tools
-- **관련 뉴스 수**: 16
-- **최종 업데이트**: 2026-07-20 (7차 갱신)
+- **관련 뉴스 수**: 18
+- **최종 업데이트**: 2026-07-23 (8차 갱신)
 
 ## 요약
 에이전트 도구 생태계가 빠르게 분화하고 있다. 브라우저 자동화, MCP 서버, 터미널 작업 등 각 영역별 전문 도구가 등장하면서, 에이전트 개발 스택이 성숙 단계에 진입했다. MCP(Model Context Protocol)가 200+ 서버 구현체를 확보하며 사실상 표준으로 자리잡았고, 도구 간 상호운용성이 빠르게 표준화되고 있다.
@@ -225,6 +225,43 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 
 > 💡 **교차 참조**: Macky AI는 [산업 동향](industry-trends.md)의 에이전트 민주화 트렌드를 구체화한다. 비즈니스 컨설팅 자동화는 에이전트가 단순 반복 업무를 넘어 **전문 지식 영역**으로 확장됨을 시사. ChatGPT Work([위](#chatgpt-work-openai--야심찬-프로젝트를-위한-ai-에이전트))의 '복잡한 프로젝트 완수'와 방향성이 유사하되, SME를 타겟으로 한 접근이 차이점.
 
+## 모바일 에이전트 (2026년 7월)
+
+### Gemini Task Automation (Google) — 스마트폰에서 작동하는 첫 AI 에이전트
+
+**출처**: [The Verge — Gemini Task Automation Hands-on](../records/2026-07-23-gemini-task-automation-phone-agent.md) ⭐⭐⭐⭐
+
+- **발표**: 2026년 7월 22일 정식 론칭
+- **지원 기기**: 삼성 갤럭시 S26 울트라, Google 픽셀 10 프로
+- **핵심**: Gemini가 스마트폰 앱을 직접 조작하여 주문·예약 등 실제 작업 수행. Uber Eats, DoorDash, Uber 등 배달·라이드쉐어 서비스 지원 (베타)
+- **기술 방식**: 사람용 GUI를 추론으로 탐색 — 화면 시각 요소 이해, 앱 내비게이션 논리 유추, 자연어 지시를 단계별 UI 조작으로 변환
+- **맥락 이해**: "치킨 테리야키 콤보" → 반인분 단위 인식 후 2개 추가, 비행 일정에서 출발 시간 계산 후 적절한 탑승 시간 예약
+- **사용자 경험**: 백그라운드 실행, 최종 주문 승인 단계에서 사용자 개입. 전체 주문 약 9분 소요 (직접 조작보다 느림)
+- **한계**: 사람용 UI 탐색의 근본적 비효율성. 구글은 MCP나 Android App Functions 같은 구조화된 접근법으로의 전환을 예상
+- **의미**: 스마트폰에서 AI 에이전트가 처음으로 "진짜 일"을 하는 이정표. 발표장 데모가 아닌 실제 기기·실제 앱·실제 주문 완료
+
+> 💡 **교차 참조**: Gemini Task Automation의 GUI 탐색 방식은 [Claude Computer Use](#claude-computer-use-anthropic--ai가-컴퓨터를-직접-조작하다)의 OS 전체 조작과 같은 패러다임이지만, 모바일에 특화되어 있다. 사람용 UI를 AI가 탐색하는 "중간 단계" 해결책이라는 점에서 MCP 생태계(본 문서 상단)의 구조화된 도구 호출로 진화할 전환기적 기술. 삼성·구글 파트너십은 [산업 동향](industry-trends.md)의 모바일 AI 경쟁 가속화와 연결.
+
+## 엔터프라이즈 에이전트 프로덕션 플랫폼 (2026년 7월)
+
+### OpenAI Presence — 프로덕션급 에이전트 배포·관리 플랫폼
+
+**출처**: [OpenAI — Introducing Presence](../records/2026-07-23-openai-presence-enterprise-agent-platform.md) ⭐⭐⭐⭐⭐
+
+- **발표**: 2026년 7월 22일
+- **핵심**: 기업이 프로덕션 환경에서 신뢰할 수 있는 AI 에이전트를 배포·관리하는 통합 플랫폼. 음성·채팅 채널 지원
+- **구성 요소**:
+  - **정책·SOP**: 기업이 에이전트의 행동 범위, 승인 필요 조치, 사람 개입 상황을 정의
+  - **가드레일**: 최소 권한 원칙(least privilege) — 필요한 지식·접근 권한만 부여
+  - **시뮬레이션·평가**: 배포 전 공통 요청·엣지 케이스·고위험 시나리오 테스트
+  - **Codex 개선 루프**: 프로덕션 세션·에스컬레이션 데이터 기반 자동 개선안 제안
+- **성과**: OpenAI 자체 전화 지원(1-888-GPT-0090)에 적용, 인바운드 문제 75% 무인 해결. Codex 루프가 10일 만에 인계율 15%포인트 감소
+- **배포 모델**: 제한적 GA — FDE(Forward Deployed Engineers)·글로벌 SI가 주도하는 맞춤형 배포 (Palantir FDE 모델 유사)
+- **고객**: BBVA, 소프트뱅크, IAG 등 탐색 중
+- **의미**: AI 에이전트가 "실험실"에서 "실제 업무"로 나아가는 데 필요한 인프라 제공. 단순 API가 아닌 정책·가드레일·평가·지속적 개선을 포함한 완전한 프로덕션 운영 체계. 에이전트 생태계에 '운영 신뢰성(operational reliability)'이라는 새로운 기준 제시
+
+> 💡 **교차 참조**: Presence의 FDE 배포 모델과 최소 권한 원칙은 [산업 동향](industry-trends.md)의 에이전트 보안 갭(54% 기업 사고 경험)에 대한 직접적 해결책이다. Codex 개선 루프는 [모델 동향](models-overview.md)의 GPT-5.6 Memory Core(자기 교정)와 같은 'behavior drift' 해결 철학을 플랫폼 레벨에서 구현한다. Microsoft Azure AI Agent Service([위](#microsoft-azure-ai-agent-service--비즈니스-자동화의-새로운-전선))와 경쟁하면서도, Azure가 셀프서비스를 지향한다면 Presence는 FDE 기반 맞춤형 배포로 차별화. ChatGPT Work([위](#chatgpt-work-openai--야심찬-프로젝트를-위한-ai-에이전트))의 기업용 확장판으로 볼 수 있다.
+
 ## 공통 트렌드
 1. **MCP 표준 채택**: 도구들이 MCP 서버를 내장하면서 상호 운용성 확보. 새로운 도구는 MCP 호환이 사실상 필수
 2. **셀프 힐링**: DOM 변경 시 자동 복구 (Stagehand, agent-browser ref 시스템)
@@ -240,6 +277,8 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 12. **상업용 오픈소스 에이전트**: Meta Llama Agent Framework가 보안 샌드박싱·기업급 배포 도구를 포함한 완전한 프레임워크를 오픈소스화 → 에이전트 개발의 접근성 혁신
 13. **엔터프라이즈 vibe coding**: Port AI Builder가 자연어 기반 개발을 기업용 SDLC에 통합하며, human-in-the-loop 거버넌스로 품질 통제 유지
 14. **전문 서비스 자동화**: Macky AI가 비즈니스 컨설팅을 AI로 자동화하며, 특히 SME의 전문 서비스 접근성을 혁신적으로 개선
+15. **모바일 에이전트**: Gemini Task Automation이 스마트폰에서 처음으로 실제 작동하는 AI 에이전트 경험 제공. 사람용 GUI 탐색이라는 "중간 단계" 해결책으로 시작하여 MCP/App Functions 기반 구조화된 접근으로 진화할 전환기적 기술 ⭐NEW (7/23)
+16. **프로덕션 에이전트 운영 체계**: OpenAI Presence가 정책·가드레일·시뮬레이션·Codex 개선 루프를 통합 제공하며, 에이전트 배포가 'API 호출'에서 '완전한 운영 시스템'으로 격상. '운영 신뢰성'이라는 새로운 범주 창출 ⭐NEW (7/23)
 
 > 💡 **교차 참조**: MCP 도구 호출 성능은 [평가 벤치마크](research-overview.md)의 MCP Atlas로 측정된다. 도구 호출 최적화는 [FAPO](frameworks-overview.md)의 파이프라인 최적화와도 연결된다 — FAPO는 도구 호출이 포함된 에이전트 체인의 프롬프트를 자동 개선한다. MAF의 CodeAct는 도구 호출 효율성을 모델 턴 수 차원에서 혁신적으로 개선한다.
 
@@ -262,7 +301,9 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - [Microsoft Azure AI Agent Service — 비즈니스 자동화](../records/2026-07-17-microsoft-azure-ai-agents-work-business-automation.md) ⭐NEW (7/17)
 - [Meta Llama Agent Framework — 상업용 오픈소스](../records/2026-07-18-meta-llama-agent-framework-open-source-commercial.md) (7/18)
 - [Port AI Builder — 기업용 Vibe Coding 플랫폼](../records/2026-07-20-port-ai-builder-vibe-coding.md) ⭐NEW (7/20)
-- [Macky AI — AI 비즈니스 컨설팅 플랫폼](../records/2026-07-20-macky-ai-business-consulting-platform.md) ⭐NEW (7/20)
+- [Macky AI — AI 비즈니스 컨설팅 플랫폼](../records/2026-07-20-macky-ai-business-consulting-platform.md) (7/20)
+- [Gemini Task Automation — 모바일 에이전트](../records/2026-07-23-gemini-task-automation-phone-agent.md) ⭐NEW (7/23)
+- [OpenAI Presence — 프로덕션 에이전트 배포 플랫폼](../records/2026-07-23-openai-presence-enterprise-agent-platform.md) ⭐NEW (7/23)
 
 ## 관련 위키 문서
 - [평가 벤치마크](research-overview.md) — MCP Atlas로 측정하는 도구 호출 성능
@@ -281,3 +322,7 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 전반적으로 도구 생태계가 **분산된 단일 기능 도구 → 통합 에이전트 플랫폼 → 도메인 특화 다중 에이전트 시스템**으로 진화하고 있으며, MCP가 그 연결 조직 역할을 하고 있다. 음성(GPT-Live)과 업무 자동화(ChatGPT Work)의 추가로 도구 생태계의 범위가 대화형 인터페이스에서 전체 업무 파이프라인으로 확장되었다.
 
 7월 20일 기준, **Port AI Builder**와 **Macky AI**는 도구 생태계의 두 가지 새로운 확장을 보여준다. Port는 'vibe coding'을 기업용 SDLC에 통합하며, 개발 생산성과 거버넌스 사이의 균형을 제시한다. 이는 Oracle AI Agent Studio([프레임워크 동향](frameworks-overview.md))의 pro-code 접근과 보완적 — 친숙한 도구를 활용하면서 기업 런타임에 연결한다는 공통 전략. Macky AI는 에이전트가 **전문 서비스(컨설팅)** 영역으로 진입했음을 보여주며, 특히 SME의 디지털 격차 해소라는 사회적 의미를 갖는다. 두 도구 모두 기존 툴체인(VS Code, OpenAI 등)과 통합되면서 에이전트 기능을 추가하는 '접목식' 접근을 취하고 있어, 기업의 전환 저항을 최소화하는 실용적 경로를 제시한다.
+
+**7월 업데이트 (8차)**: **Gemini Task Automation**과 **OpenAI Presence**는 도구 생태계의 두 가지 핵심 방향성을 각각 구체화한다. Gemini Task Automation은 **모바일 환경**에서 AI 에이전트가 처음으로 실제 작업을 수행하는 이정표를 세웠다. 사람용 GUI를 추론으로 탐색하는 방식은 분명 "중간 단계" 해결책이지만, 발표장 데모가 아닌 실제 기기에서 실제 주문을 완료하는 경험이 제공된다는 점에서 의미가 크다. 구글이 자신이 예상하는 MCP/App Functions 기반 구조화된 접근으로의 전환이 업계 과제로 부상했다.
+
+**OpenAI Presence**는 에이전트 도구 생태계에 **'운영 신뢰성'**이라는 새로운 차원을 추가한다. 기존 도구들이 '에이전트 구축'에 초점을 맞추었다면, Presence는 '에이전트를 프로덕션에서 신뢰할 수 있게 운영하는' 문제를 직접 다룬다. 정책 정의·시뮬레이션·가드레일·Codex 기반 자동 개선 루프는 behavior drift(배포 후 성능 저하)라는 에이전트 운영의 근본적 과제를 체계적으로 해결한다. OpenAI 자체 전화 지원에서 75% 무인 해결, 10일 만에 15%포인트 인계율 감소라는 실증 데이터는 에이전트가 프로덕션 환경에서 실제 가치를 창출할 수 있음을 입증한다. FDE 기반 배포 모델(Palantir식)은 복잡한 엔터프라이즈 환경에 맞춤형 에이전트를 구축하는 전략으로, Azure AI Agent Service의 셀프서비스 모델과 차별화된다. 이 두 도구의 등장으로 도구 생태계가 **구축 → 배포 → 운영**의 전체 라이프사이클을 포괄하기 시작했다.

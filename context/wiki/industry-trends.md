@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: industry
-- **관련 뉴스 수**: 17
-- **최종 업데이트**: 2026-07-19 (5차 갱신)
+- **관련 뉴스 수**: 20
+- **최종 업데이트**: 2026-07-24 (6차 갱신)
 
 ## 요약
 2026년 상반기, AI 에이전트 산업이 다섯 가지 축으로 전개되고 있다: (1) **모델 전쟁 격화** — Google·OpenAI·Anthropic·Microsoft·Meta가 플래그십 모델을 연달아 출시하며 용도별 경쟁이 시작됨, (2) **프레임워크 시장 재편** — Microsoft MAF가 프로덕션 배포 인프라를 통합하고 Anthropic은 에이전트 SDK를 별도 과금으로 전환, (3) **물리 세계로의 에이전트 확장** — 휴머노이드 로봇이 프로토타입을 넘어 양산·상용 배치 단계로 진입, (4) **7월 신규 동향** — 프로토콜 표준화(MCP/A2A)로 상호 운용성 확보, 에이전트 커머스 상용화, 시장 통계가 입증하는 채택 격차(79% 도입 vs 11% 생산), (5) **AI 동료 시대 개막** — GPT-Live가 자연스러운 음성 대화를, ChatGPT Work가 자율 프로젝트 실행을, GPT-5.6 × M365 Copilot이 엔터프라이즈 생산성 도구 통합을 실현하며 AI가 도구에서 협업 파트너로 진화.
@@ -71,7 +71,10 @@ Anthropic이 Claude Agent SDK를 별도 월간 크레딧 과금제(Pro $20 / Max
 - [GPT-5.6 × Microsoft 365 Copilot](../records/2026-07-13-gpt-5-6-microsoft-365-copilot.md) ⭐⭐⭐⭐⭐ ⭐NEW
 - [AI 컨텍스트 신뢰 격차 — 101개 기업 조사](../records/2026-07-19-ai-context-trust-gap.md) ⭐⭐⭐⭐⭐ ⭐NEW (7/19)
 - [AI 에이전트 보안 격차 — 54% 사건 경험](../records/2026-07-19-ai-agent-security-gap.md) ⭐⭐⭐⭐⭐ ⭐NEW (7/19)
-- [AI 인프라 비용 격차 — GPU 활용률 <50%](../records/2026-07-19-ai-infrastructure-cost-gap.md) ⭐⭐⭐⭐ ⭐NEW (7/19)
+- [AI 인프라 비용 격차 — GPU 활용률 <50%](../records/2026-07-19-ai-infrastructure-cost-gap.md) ⭐⭐⭐⭐ (7/19)
+- [OpenAI Presence — 엔터프라이즈 에이전트 프로덕션 플랫폼](../records/2026-07-23-openai-presence-enterprise-agent-platform.md) ⭐⭐⭐⭐⭐ ⭐NEW (7/23)
+- [Gemini 작업 자동화 — 모바일 에이전트 상용화](../records/2026-07-23-gemini-task-automation-phone-agent.md) ⭐⭐⭐⭐ ⭐NEW (7/23)
+- [중국 Kimi K3 · Qwen3.8 오픈소스 프론티어](../records/2026-07-23-china-kimi-k3-qwen3-8-open-source-ai.md) ⭐⭐⭐⭐ ⭐NEW (7/23)
 
 ## 관련 위키 문서
 - [프레임워크 동향](frameworks-overview.md) — MAF, Claude Agent SDK, 화웨이 Agent Framework 2.0, Cisco FAPO
@@ -251,5 +254,58 @@ GPT-5.6이 Microsoft 365 Copilot의 새로운 기본 모델로 도입되었다. 
 2026년 6월은 AI 산업의 판도가 네 개의 뚜렷한 전략적 진영으로 분열되는 달이었다. 모델 경쟁이 용도별 세분화로 전환되면서 개발자는 다중 모델 라우팅 전략을 취해야 하고, 프레임워크는 프로덕션 배포 인프라(MAF)와 수익 모델 차별화(Claude Agent SDK 과금)로 경쟁이 이동하고 있다. 동시에 AI 에이전트가 소프트웨어 경계를 넘어 물리 세계(로봇, 제조업, 물류)와 OS 수준(HarmonyOS)으로 확장되고 있다. Microsoft가 OpenAI 의존에서 벗어나 자체 모델+프레임워크를 갖춘 것은 클라우드 시장의 힘 균형을 바꿀 수 있는 가장 중요한 구조적 변화다.
 
 **7월 업데이트**: 시장 데이터가 이 분석을 뒷받침한다. 79% 채택/11% 생산 격차는 곧 **인프라와 거버넌스가 새로운 경쟁 우위**임을 의미한다. 프로토콜 표준화(MCP/A2A)는 벤더 종속성을 줄여 새로운 진입자를 양산하고 있으며, 에이전트 커머스(Square)와 블록체인 에이전트(BNB)는 AI가 실제 경제 거래를 주도하는 시대의 시작을 알린다. Gartner가 예측한 2030년 2,340억 달러의 "에이전트 중재" 노출 규모가 현실화하고 있다. **워너브라더스의 AWS 기반 에이전트 광고 기술**은 이러한 상용화 흐름을 미디어 산업으로 확장하며, 전통적 비즈니스 프로세스의 end-to-end 자율화가 단순한 효율 개선이 아닌 산업 구조 재편으로 이어지고 있음을 시사한다. **Accenture Edge × Google Cloud** 파트너십은 에이전트 AI가 대기업을 넘어 중소기업 시장으로 확장되는 두 번째 물결을 알리며, 사전 구성 솔루션을 통한 AI 민주화가 시장 규모 자체를 확대하는 핵심 동력이 되고 있음을 보여준다.
+
+**7월 셋째 주 추가 분석 (6차 갱신)**: 7/23의 세 가지 발표는 산업 지형을 세 축에서 재편한다.
+
+#### 축 1: 엔터프라이즈 프로덕션 — OpenAI Presence
+
+**출처**: [OpenAI — Introducing Presence](../records/2026-07-23-openai-presence-enterprise-agent-platform.md) ⭐⭐⭐⭐⭐
+
+OpenAI가 에이전트를 '실험실'에서 '실제 업무'로 끌어올리는 **완전한 프로덕션 운영 플랫폼** Presence를 발표했다. 정책·가드레일·시뮬레이션·평가·Codex 기반 개선 루프를 통합 제공하며, FDE(Forward Deployed Engineers) 주도 배포 모델을 채택했다.
+
+- **실증 성과**: OpenAI 자체 전화 지원(1-888-GPT-0090)에서 인바운드 문제 75% 무인 해결, Codex 개선 루프로 10일 만이 인계율 15%p 감소
+- **산업 의미**: 에이전트 배포가 '모델 호출'에서 '운영 시스템'으로 격상. [산업 통계](../records/2026-07-05-agentic-ai-statistics-2026.md)의 79% 도입/11% 생산 격차를 좁히는 핵심 인프라 등장.
+- **경쟁 촉발**: 구글·앤스로픽·마이크로소프트의 유사 엔터프라이즈 관리 플랫폼 가속 예상
+- **관련 위키**: [도구 생태계](tools-overview.md) — Presence 프로덕션 플랫폼 섹션 | [프레임워크 동향](frameworks-overview.md)
+
+> 💡 **교차 참조**: Presence의 최소 권한 원칙(least privilege) 설계는 [에이전트 보안 격차](../records/2026-07-19-ai-agent-security-gap.md)의 54% 사고 경험에 대한 직접적 대응이다. FDE 모델은 [Accenture Edge × Google Cloud](#중소기업-에이전트-ai-시장-확장--accenture-edge--google-cloud) 중소기업 솔루션과 대비되는 프리미엄 엔터프라이즈 접근이다.
+
+#### 축 2: 모바일 에이전트 상용화 — Gemini 작업 자동화
+
+**출처**: [The Verge — Gemini Task Automation](../records/2026-07-23-gemini-task-automation-phone-agent.md) ⭐⭐⭐⭐
+
+구글이 갤럭시 S26 울트라·픽셀 10 프로에서 Gemini 작업 자동화를 정식 출시했다. Uber Eats·DoorDash·Uber 등에서 Gemini가 앱 UI를 직접 조작해 주문을 완료한다. **스마트폰에서 처음으로 작동하는 AI 에이전트** 경험이다.
+
+- **실사용 결과**: 5일 테스트, 자연어→메뉴 탐색→주문 구성 가능. 약 9분 소요(인간 직접 조작보다 느림). 백그라운드 실행, 최종 승인은 사용자가 확인
+- **근본적 한계**: 사람용 GUI를 AI가 탐색하는 방식 → MCP·Android App Functions 등 구조화된 접근으로 전환 필요
+- **산업 의미**: 스마트폰이 '앱 런처'에서 **'에이전트 플랫폼'**으로 진화. 삼성×구글 파트너십이 모바일 AI 에이전트 경쟁의 시작을 알림
+- **관련 위키**: [도구 생태계](tools-overview.md) — 모바일 에이전트 섹션
+
+> 💡 **교차 참조**: Gemini 작업 자동화의 GUI 탐색 한계는 [프로토콜 표준화](#프로토콜-표준화--mcp와-a2a가-에이전트의-http로)에서 다룬 MCP의 필요성을 실증한다. 화웨이 [HarmonyOS 7의 Intent-as-a-Service](#intent-as-a-service-패러다임)가 OS 수준에서 이 문제를 선제적으로 해결하는 대안이다.
+
+#### 축 3: 미중 오픈소스 프론티어 경쟁 — Kimi K3 · Qwen3.8
+
+**출처**: [The Verge — Chinese AI Models Open Source](../records/2026-07-23-china-kimi-k3-qwen3-8-open-source-ai.md) ⭐⭐⭐⭐
+
+중국 Moonshot AI(2.8조 파라미터 Kimi K3)와 알리바바(2.4조 파라미터 Qwen3.8)가 미국 최고 수준 폐쇄형 모델에 필적하는 오픈소스 모델을 연달아 발표했다. **미국 기술 독주에 대한 가장 강력한 반격**이자, AI 패권 경쟁의 균형 재편 신호다.
+
+- **전략적 대비**: 미국 최고 모델(GPT-5.6 Sol, Claude Fable 5)은 폐쇄형 → 중국 최고 모델은 **오픈소스** 공개. 전 세계 개발자가 자체 인프라에 배포 가능
+- **지정학적 압력**: 미국 수출 통제(GB300 칩 접근 제한, Fable 5 시장 철수 강제)에도 불구하고 중국이 더 적은 자원으로 프론티어에 근접
+- **에이전트 생태계 영향**: 고품질 로컬 배포 모델이 에이전트 비용 구조와 접근성을 근본적으로 변화시킴. API 독점에서 **오픈소스 선택지**로의 전환 가속
+- **관련 위키**: [모델 동향](models-overview.md) — 오픈소스 프론티어 경쟁 구도
+
+> 💡 **교차 참조**: 중국의 수직 통합 생태계([화웨이 openPangu + Kirin + HarmonyOS](#중국-ai-생태계-수직-통합))에 Kimi K3·Qwen3.8이 추가되며, 미국 대비 **자체 인프라 독립성**이 강화되고 있다. 동시에 [에이전트 보안 격차](../records/2026-07-19-ai-agent-security-gap.md)와 맞물려, 오픈소스 모델의 기업 내 로컬 배포가 보안 통제를 강화하는 대안이 될 수도 있다.
+
+### 삼축의 교차점: "프로덕션·모바일·오픈소스" — 2026 하반기 산업 구도
+
+7/23의 세 발표는 단독 사건이 아니다. **Presence**(엔터프라이즈 프로덕션), **Gemini 작업 자동화**(모바일 소비자), **Kimi K3/Qwen3.8**(오픈소스 인프라)는 각각 다른 시장 축을 공략하지만, 모두 **'에이전트를 실제 환경에서 작동시킨다'**는 공통 목표를 가진다. 이는 2026 하반기 산업 경쟁이 모델 성능을 넘어 **배포·운영·접근성**으로 이동했음을 확인시킨다.
+
+- **OpenAI**: 프로덕션 운영 체계(Presence)로 고마진 엔터프라이즈 시장 선점
+- **Google**: 모바일 에이전트(Gemini 작업 자동화)로 소비자 일상 침투
+- **중국(Moonshot/Alibaba)**: 오픈소스 프론티어로 비용 장벽 제거, 글로벌 개발자 확보
+
+이 삼각 구도에서 **포인트 오브 노 리턴(Point of No Return)**이 다가오고 있다: 에이전트가 파일럿을 넘어 실제 비즈니스·소비자 환경에 배치되기 시작하면, 경쟁은 속도와 신뢰의 싸움이 된다. [신뢰 격차](../records/2026-07-19-ai-context-trust-gap.md)·[보안 격차](../records/2026-07-19-ai-agent-security-gap.md)·[비용 격차](../records/2026-07-19-ai-infrastructure-cost-gap.md)를 먼저 해결하는 진영이 시장을 장악할 것이다.
+
+---
 
 **7월 둘째 주 추가 분석**: OpenAI의 GPT-Live·ChatGPT Work·GPT-5.6 × M365 Copilot 3중 발표는 산업 경쟁의 새로운 축을 정의했다. **'AI 동료 시대'**가 개막한 것이다. GPT-Live는 음성 인터페이스의 자연스러움을, ChatGPT Work는 자율 프로젝트 실행을, M365 Copilot은 엔터프라이즈 도구 통합을 각각 담당하며, 모두 GPT-5.6을 기반으로 한다. 이는 경쟁이 모델 성능에서 **협업 경험의 질**로 이동했음을 시사한다. 특히 ChatGPT Work의 내부 성과(영업 POC 24시간 완성, 재무 마감 며칠→시간)는 [산업 통계](../records/2026-07-05-agentic-ai-statistics-2026.md)의 79% 도입/11% 생산 격차를 좁히는 실질적 사례다. 동시에 Meta Muse Spark 1.1이 멀티에이전트 아키텍처로 경쟁에 합류하며, 모델·프레임워크·응용 계층 모두에서 멀티에이전트 내장이 표준이 되고 있다.

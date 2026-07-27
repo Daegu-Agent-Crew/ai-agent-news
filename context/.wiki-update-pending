@@ -1,17 +1,19 @@
 # 다음 위키 갱신 대기
-# 2026-07-24: industry (6차) 갱신 완료.
-# - industry: 7/23 records 3건 반영 (OpenAI Presence, Gemini Task Automation, Kimi K3/Qwen3.8)
-#   "삼축의 교차점" 섹션 신설 — 프로덕션·모바일·오픈소스 경쟁 구도 분석
-#   축 1: OpenAI Presence — 엔터프라이즈 프로덕션 운영 플랫폼 (75% 무인 해결, FDE 모델)
-#   축 2: Gemini 작업 자동화 — 모바일 에이전트 상용화 (갤럭시 S26, GUI 탐색 한계)
-#   축 3: Kimi K3 · Qwen3.8 — 미중 오픈소스 프론티어 경쟁 (2.8T/2.4T 파라미터)
-#   관련 뉴스 17→20건, 교차 참조 6곳 추가
+# 2026-07-27: models (9차), industry (7차) 갱신 완료.
+# - models: 7/27 records 2건 반영 (FLUX 3 시각 지능, KAT-Coder-V2.5 에이전트 코딩)
+#   FLUX 3: 이미지+비디오+오디오+행동예측 단일 아키텍처, 시각 지능 카테고리 제안
+#   KAT-Coder-V2.5: PinchBench 94.9점 1위 (Opus 4.8 추월), 인프라 중심 접근 입증, 35B 오픈웨이트
+#   용도별 매트릭스 2행 추가, 관련 뉴스 2건 추가
+# - industry: 7/27 record 1건 반영 (Inflection AI Pi Journeys)
+#   관계형 지능(Relational Intelligence) 제4의 패러다임 제안
+#   소비자 에이전트 새 축: 인간관계 맥락 이해, 생애 단계 적응
+#   프라이버시 과제 분석, 교차 참조 3곳 추가
 #
 # 다음 대상:
-# - industry: 7/24 신규 record 없음. 최신 상태.
-# - research: 신규 records 없음
-# - frameworks: 7/20 9차 갱신 최신 상태. 다음 대기 record 없음
-# - models: 7/23 8차 갱신 완료. 다음 대기 record 없음
-# - tools: 7/23 8차 갱신 완료. 다음 대기 record 없음
+# - models: 최신 상태. 다음 신규 record 대기.
+# - industry: 최신 상태. 다음 신규 record 대기.
+# - research: 신규 records 없음. 최신 상태.
+# - frameworks: 7/20 9차 갱신 최신 상태. 다음 대기 record 없음.
+# - tools: 7/23 8차 갱신 최신 상태. 다음 대기 record 없음.
 #
 # 모든 위키가 최신 상태. 다음 신규 record 대기.

@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: industry
-- **관련 뉴스 수**: 20
-- **최종 업데이트**: 2026-07-24 (6차 갱신)
+- **관련 뉴스 수**: 21
+- **최종 업데이트**: 2026-07-27 (7차 갱신)
 
 ## 요약
 2026년 상반기, AI 에이전트 산업이 다섯 가지 축으로 전개되고 있다: (1) **모델 전쟁 격화** — Google·OpenAI·Anthropic·Microsoft·Meta가 플래그십 모델을 연달아 출시하며 용도별 경쟁이 시작됨, (2) **프레임워크 시장 재편** — Microsoft MAF가 프로덕션 배포 인프라를 통합하고 Anthropic은 에이전트 SDK를 별도 과금으로 전환, (3) **물리 세계로의 에이전트 확장** — 휴머노이드 로봇이 프로토타입을 넘어 양산·상용 배치 단계로 진입, (4) **7월 신규 동향** — 프로토콜 표준화(MCP/A2A)로 상호 운용성 확보, 에이전트 커머스 상용화, 시장 통계가 입증하는 채택 격차(79% 도입 vs 11% 생산), (5) **AI 동료 시대 개막** — GPT-Live가 자연스러운 음성 대화를, ChatGPT Work가 자율 프로젝트 실행을, GPT-5.6 × M365 Copilot이 엔터프라이즈 생산성 도구 통합을 실현하며 AI가 도구에서 협업 파트너로 진화.
@@ -74,7 +74,8 @@ Anthropic이 Claude Agent SDK를 별도 월간 크레딧 과금제(Pro $20 / Max
 - [AI 인프라 비용 격차 — GPU 활용률 <50%](../records/2026-07-19-ai-infrastructure-cost-gap.md) ⭐⭐⭐⭐ (7/19)
 - [OpenAI Presence — 엔터프라이즈 에이전트 프로덕션 플랫폼](../records/2026-07-23-openai-presence-enterprise-agent-platform.md) ⭐⭐⭐⭐⭐ ⭐NEW (7/23)
 - [Gemini 작업 자동화 — 모바일 에이전트 상용화](../records/2026-07-23-gemini-task-automation-phone-agent.md) ⭐⭐⭐⭐ ⭐NEW (7/23)
-- [중국 Kimi K3 · Qwen3.8 오픈소스 프론티어](../records/2026-07-23-china-kimi-k3-qwen3-8-open-source-ai.md) ⭐⭐⭐⭐ ⭐NEW (7/23)
+- [중국 Kimi K3 · Qwen3.8 오픈소스 프론티어](../records/2026-07-23-china-kimi-k3-qwen3-8-open-source-ai.md) ⭐⭐⭐⭐ (7/23)
+- [Inflection AI Pi Journeys — 관계형 지능 소비자 에이전트](../records/2026-07-27-inflection-ai-pi-journeys-relational-intelligence.md) ⭐⭐⭐ ⭐NEW (7/27)
 
 ## 관련 위키 문서
 - [프레임워크 동향](frameworks-overview.md) — MAF, Claude Agent SDK, 화웨이 Agent Framework 2.0, Cisco FAPO
@@ -309,3 +310,24 @@ OpenAI가 에이전트를 '실험실'에서 '실제 업무'로 끌어올리는 *
 ---
 
 **7월 둘째 주 추가 분석**: OpenAI의 GPT-Live·ChatGPT Work·GPT-5.6 × M365 Copilot 3중 발표는 산업 경쟁의 새로운 축을 정의했다. **'AI 동료 시대'**가 개막한 것이다. GPT-Live는 음성 인터페이스의 자연스러움을, ChatGPT Work는 자율 프로젝트 실행을, M365 Copilot은 엔터프라이즈 도구 통합을 각각 담당하며, 모두 GPT-5.6을 기반으로 한다. 이는 경쟁이 모델 성능에서 **협업 경험의 질**로 이동했음을 시사한다. 특히 ChatGPT Work의 내부 성과(영업 POC 24시간 완성, 재무 마감 며칠→시간)는 [산업 통계](../records/2026-07-05-agentic-ai-statistics-2026.md)의 79% 도입/11% 생산 격차를 좁히는 실질적 사례다. 동시에 Meta Muse Spark 1.1이 멀티에이전트 아키텍처로 경쟁에 합류하며, 모델·프레임워크·응용 계층 모두에서 멀티에이전트 내장이 표준이 되고 있다.
+
+## 2026년 7월 7차 업데이트: 소비자 에이전트의 새로운 축 — 관계형 지능
+
+### Inflection AI Pi Journeys — 관계형 지능(Relational Intelligence) 제4의 패러다임
+
+**출처**: [VentureBeat — Inflection AI Returns with Pi Journeys](../records/2026-07-27-inflection-ai-pi-journeys-relational-intelligence.md) ⭐⭐⭐
+
+Microsoft 인수 후 경영권 변동을 겪었던 Inflection AI가 소비자 시장으로 복귀했다. CEO Sean White는 AI 지능의 4단계 framework를 제시했다: 원시 지능(IQ) → 감성 지능 → 에이전트 지능 → **관계형 지능(relational intelligence)**.
+
+- **Pi Journeys**: 사용자의 생애 단계(육아, 간병, 경력 전환, 노화 등)에 맞춰 적응하는 AI 경험. 사용자 주변 중요 인물들의 구조화된 관계 메모리 구축
+- **능동적 행동**: 단순 Q&A를 넘어 친구에게 전화하라고 리마인더를 보내거나, 가족 간병 논의 내용을 다시 불러오는 등 맥락 기반 제안
+- **Pi 챗봇 업데이트**: 음성, 메모리, 리마인더/할 일/쇼핑 에이전트 도구 탑재
+- **소비자 AI 현실**: 평균 소비자는 하루 2개, 일주일 3개 AI 도구 사용. 선택 기준은 성능뿐 아니라 개인화, 스타일·톤, 맥락 이해, 감성 이해
+- **프라이버시 과제**: 사회적 관계망을 구조화된 데이터로 수집하는 것에 대한 우려. 삭제·관리 시스템 구축했으나 근본적 한계
+
+### 관계형 지능의 산업적 의미
+Inflection의 전략은 주요 AI 랩이 코딩 도구·엔터프라이즈 에이전트·개발자 플랫폼에 집중할 때, **소비자 일상·모바일 우선**이라는 빈틈을 노린다. "노트북 없이 폰만 있는 사용자"를 타깃으로 한다는 점은 전 세계 대다수 소비자의 현실과 부합한다. 그러나 Microsoft 인수 실패라는 과거사와 프론티어 모델 경쟁에서의 열세라는 구조적 한계에 직면해 있다.
+
+> 💡 **교차 참조**: Pi Journeys의 관계형 지능은 [AI 동료 시대](#ai-동료-시대-개막--음성프로젝트엔터프라이즈-삼위일체)의 세 발표(GPT-Live·ChatGPT Work·M365 Copilot)와 같은 방향성 — AI가 도구에서 협업 파트너로 진화 — 을 소비자 영역에서 추구한다. 다만 OpenAI가 엔터프라이즈·생산성에 집중할 때, Inflection은 **인간관계·생애 맥락**이라는 더 추상적인 영역을 타깃으로 한다. [에이전트 보안 격차](../records/2026-07-19-ai-agent-security-gap.md)와 맞물려, 관계 데이터 수집은 프라이버시 규제의 핵심 표적이 될 수 있다. GPT-5.6 Memory Core([모델 동향](models-overview.md))의 장기 작업 기억과 Pi Journeys의 관계 메모리는 메모리 설계의 서로 다른 접근법이다.
+
+---

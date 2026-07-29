@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: models
-- **관련 뉴스 수**: 14
-- **최종 업데이트**: 2026-07-27 (9차 갱신)
+- **관련 뉴스 수**: 16
+- **최종 업데이트**: 2026-07-29 (10차 갱신)
 
 ## 요약
 2026년 6월, 14일 사이에 Google, OpenAI, Anthropic, Microsoft가 연달아 플래그십 모델을 출격했다. 더 이상 "하나의 최고 모델"이 존재하지 않으며, 용도별(가격·수학·코딩·독립성) 최적 모델이 다르다. Google은 가격 파괴, OpenAI는 수학 추론, Anthropic은 코딩 정확도, Microsoft는 자체 모델 독립성이라는 각기 다른 승부수를 던졌다. **7월 9일, OpenAI가 GPT-5.6(Sol/Terra/Luna)을 발표**하며 프론티어 모델 경쟁이 재점화되었다. 트럼프 행정부와의 2주간 규제 갈등 끝에 공개된 이 모델군은 자율 다단계 계획, 독립 도구 사용, 자기 교정 능력을 갖춘 에이전트 네이티브 모델로, 미국 정부의 사전 검토 게이트가 반복적 패턴으로 자리 잡을 가능성을 시사한다.
@@ -172,6 +172,49 @@ FLUX 3는 이미지·비디오·오디오를 별도 모델로 조합하지 않�
 
 > 💡 **교차 참조**: FLUX 3 Action의 물리적 행동 예측은 [산업 동향](industry-trends.md)의 휴머노이드 로봇(VLA 모델 기반)과 연결된다. 제한적 출시 전략은 GPT-5.6·Claude Fable 5 등 프론티어 모델의 보수적 출시 패턴과 일관된다. 중국 오픈소스 모델(Kimi K3·Qwen3.8)이 가중치를 적극 공개하는 것과 대비되는 접근. Gemini Omni Flash가 $0.10/초로 API를 공개한 반면, FLUX 3는 가격 미정으로 시장 진입이 늦어질 수 있다.
 
+## Anthropic Claude Opus 5 — 가성비 프론티어 시대 개막
+
+**출처**: [VentureBeat — Claude Opus 5 Launch](../records/2026-07-28-anthropic-claude-opus-5-coding-agents-enterprise.md) ⭐⭐⭐⭐⭐
+
+- **발표**: 2026년 7월 25일
+- **포지션**: Fable 5의 거의 모든 지능을 **절반 가격**에 제공하는 가성비 프론티어 모델
+- **가격**: 입력 $5 / 출력 $25 (1M 토큰당) — Opus 4.8과 동일 가격 유지
+- **벤치마크**:
+  - **Frontier-Bench v0.1**: 43.3% — Opus 4.8(18.7%)의 2배 이상, Fable 5(33.7%)도 앞섬
+  - **ARC-AGI 3**: 차점 모델의 3배 점수
+  - **OSWorld 2.0**: Fable 5 최고 기록을 1/3 비용으로 달성
+- **핵심 특징**:
+  - 조절 가능한 **"effort" 설정**: 지능 vs 속도·토큰 절감 트레이드오프 제어
+  - **제한된 작업(bounded tasks)**에 최적화 — 구체적 결과가 있는 단기 작업
+  - Fable 5는 **장기 수평 작업(long-horizon tasks)**에 적합 — 수시간~수일 자율 작업
+- **초기 고객 증언**: Harvey(평균 26% 토큰 절감), Zapier(이전 모델 실패 워크플로우 100% 달성)
+- **전략적 의미**: AI 경쟁이 "가장 똑똑한 모델"에서 **"가장 가성비 좋은 프론티어 모델"**로 전환. 추론 비용이 보드 수준 결재 항목이 된 엔터프라이즈 현실 반영
+
+### Opus 5 vs Fable 5 — 모델 선택의 새로운 기준
+Anthropic 스스로 벤치마크 한계를 인정하며 모델 선택 가이드를 명확히 했다: **Opus 5는 벤치마크가 측정할 수 있는 작업에 최고**, **Fable 5는 작업이 벤치마크를 초과할 때 선택**. 이는 에이전트 워크플로우 설계 시 모델 선택이 작업의 기간·복잡성에 따라 달라져야 함을 의미한다.
+
+> 💡 **교차 참조**: Opus 5의 가성비 전략은 [산업 동향](industry-trends.md)의 Microsoft 자체 모델 89% 비용 절감과 같은 흐름 — **추론 경제학**이 2026 하반기 핵심 경쟁 축. Fireworks Nexus([도구 생태계](tools-overview.md))의 난이도 기반 라우팅과 결합하면, Opus 5를 일반 작업용으로 배치하는 에스컬레이션 래더 설계가 가능. GPT-5.6 Sol의 프리미엄 포지셔닝과 대비되는 접근.
+
+## Microsoft MAI-Cyber-1-Flash — 에이전트 기반 사이버 방어 전용 모델
+
+**출처**: [MarkTechPost — MAI-Cyber-1-Flash Release](../records/2026-07-28-microsoft-mai-cyber-1-flash-agentic-security.md) ⭐⭐⭐⭐
+
+- **발표**: 2026년 7월 28일
+- **포지션**: 사이버 보안에 특화된 Microsoft 첫 전용 모델 — MAI-Code-1-Flash를 보안 도메인으로 파인튜닝
+- **아키텍처**: 137B 총 파라미터 중 **5B만 활성화**하는 희소 MoE (Sparse Mixture-of-Experts)
+- **컨텍스트**: 256K 토큰 — 대규모 코드베이스 분석 지원
+- **배포**: 독립 모델이 아닌 **MDASH**(다중 모델 에이전트 스캐닝 하니스) 내부에서 실행
+- **성능**:
+  - **CyberGym 벤치마크**: 95.95% — Anthropic Mythos(약 84%) 대비 +12포인트
+  - 경쟁 시스템(83.2%~85.6%)을 크게 상회
+- **비용 효율**: 전체 작업의 **최대 90%**를 처리, 가장 어려운 10%만 GPT-5.4에 위임 → 이전 대비 **50% 비용 절감**
+- **안전 설계**: 취약점 패치·방어 작업에만 훈련, 악용 코드 생성은 의도적으로 제한
+
+### 도메인 특화 소형 모델의 패러다임
+MAI-Cyber-1-Flash는 **전문화된 소형 모델이 고비용 프론티어 모델과 협력하여 최고 성능을 달성**하는 패러다임을 입증한다. 137B 중 5B만 활성화하는 설계로 추론 비용을 극적으로 낮추면서도 도메인 특화 성능을 유지한다. 이는 범용 프론티어 모델 하나로 모든 것을 해결하는 패러다임에서 벗어나, **에이전트 아키텍처 내 역할 분담**이 새로운 최적화 전략임을 보여준다.
+
+> 💡 **교차 참조**: MDASH의 5단계 에이전트 파이프라인(준비→스캔→검증→중복 제거→증명)은 [프레임워크 동향](frameworks-overview.md)의 역할 기반 오케스트레이션과 같은 패턴. Claude가 암호학적 취약점을 자율 발견([연구 동향](research-overview.md))한 것과 연결 — AI의 보안 연구 역량이 모델 레벨과 도구 레벨 양쪽에서 진전. Microsoft의 [산업 동향](industry-trends.md) 자체 모델 전략(MAI 시리즈)의 보안 영역 확장.
+
 ## KAT-Coder-V2.5 — 인프라 중심 에이전트 코딩 모델 (Kuaishou)
 
 **출처**: [MarkTechPost — KAT-Coder-V2.5 Agentic Coding](../records/2026-07-27-kat-coder-v25-agentic-coding-model.md) ⭐⭐⭐⭐
@@ -237,6 +280,8 @@ KAT-Coder-V2.5는 에이전트 코딩 모델의 발전이 **모델 크기 경쟁
 | 오픈소스 프론티어 | Kimi K3 / Qwen3.8 | 2.8조 / 2.4조 파라미터, 미국 최상위 모델과 경쟁 |
 | 에이전트 코딩 (오픈) | KAT-Coder-V2.5 | PinchBench 94.9점 1위, 35B Apache-2.0 오픈웨이트 |
 | 시각 지능 (멀티모달) | FLUX 3 | 이미지+비디오+오디오+행동 예측 단일 아키텍처 |
+| 가성비 프론티어 | Claude Opus 5 | Fable 5급 성능 절반 가격, Frontier-Bench 43.3% |
+| 사이버 보안 (도메인 특화) | MAI-Cyber-1-Flash | CyberGym 95.95%, 137B/5B 활성 희소 MoE |
 | 엔터프라이즈 생산성 | GPT-5.6 (M365 Copilot) | Word·Excel·PowerPoint·Cowork 기본 모델 |
 
 ### 업계 맥락
@@ -260,7 +305,9 @@ KAT-Coder-V2.5는 에이전트 코딩 모델의 발전이 **모델 크기 경쟁
 - [Anthropic Claude 3.5 Sonnet — 에이전트 기능 강화](../records/2026-07-18-anthropic-claude-3-5-sonnet-agent-enhancements.md) ⭐⭐⭐⭐⭐ (7/18)
 - [중국 Kimi K3 & Qwen3.8 오픈소스 발표](../records/2026-07-23-china-kimi-k3-qwen3-8-open-source-ai.md) ⭐⭐⭐⭐ (7/23)
 - [Black Forest Labs FLUX 3 — 시각 지능 멀티모달](../records/2026-07-27-black-forest-labs-flux-3-multimodal.md) ⭐⭐⭐ ⭐NEW (7/27)
-- [KAT-Coder-V2.5 — 인프라 중심 에이전트 코딩](../records/2026-07-27-kat-coder-v25-agentic-coding-model.md) ⭐⭐⭐⭐ ⭐NEW (7/27)
+- [KAT-Coder-V2.5 — 인프라 중심 에이전트 코딩](../records/2026-07-27-kat-coder-v25-agentic-coding-model.md) ⭐⭐⭐⭐ (7/27)
+- [Anthropic Claude Opus 5 — 가성비 프론티어](../records/2026-07-28-anthropic-claude-opus-5-coding-agents-enterprise.md) ⭐⭐⭐⭐⭐ ⭐NEW (7/28)
+- [Microsoft MAI-Cyber-1-Flash — 사이버 방어 전용](../records/2026-07-28-microsoft-mai-cyber-1-flash-agentic-security.md) ⭐⭐⭐⭐ ⭐NEW (7/28)
 
 ## 관련 위키 문서
 - [평가 벤치마크](research-overview.md) — 모델별 에이전트 성능 리더보드
@@ -304,3 +351,7 @@ KAT-Coder-V2.5는 에이전트 코딩 모델의 발전이 **모델 크기 경쟁
 **7월 업데이트 (9차)**: 두 가지 새로운 모델이 각각 다른 차원에서 모델 경쟁의 지형을 넓혔다. **FLUX 3**(Black Forest Labs)는 이미지·비디오·오디오를 단일 아키텍처에서 공동 훈련하고, FLUX 3 Action으로 물리적 행동 예측까지 다루며 "시각 지능"이라는 새로운 카테고리를 제안했다. 이는 멀티모달 AI가 로봇 공학으로 확장되는 신호이며, 기존 텍스트 중심 에이전트 모델과는 차원이 다른 접근이다. 단, 가격 미정·제한적 출시라는 보수적 전략은 시장 점유율 확보의 장애가 될 수 있다.
 
 **KAT-Coder-V2.5**(Kuaishou)는 에이전트 코딩 모델의 병목이 **모델 크기가 아닌 훈련 인프라**임을 입증한 사례다. AutoBuilder로 환경 구축 성공률을 16.5%에서 57.2%로 끌어올리고, 샌드박스 오류를 16%에서 2% 미만으로 줄인 결과, PinchBench에서 Claude Opus 4.8을 추월했다. 핵심 시사점은 **에이전트 성능 최적화가 파라미터 규모가 아닌 데이터 품질과 인프라 안정성에 달려 있다**는 것이다. Meituan(LongCat-2.0)·Alibaba에 이은 Kuaishou의 오픈웨이트 공개로, 중국 기업들이 에이전트 코딩 영역에서 오픈소스 생태계를 구축하고 있다. 단, Terminal-Bench 열세(60.7 vs 84.6점)는 범용 환경에서의 한계를 보여주며, 코딩 특화 vs 범용 에이전트의 트레이드오프가 분명하다.
+
+**7월 업데이트 (10차)**: 두 모델이 각각 **비용 효율성**과 **도메인 특화**라는 새로운 경쟁 축을 정의했다. **Claude Opus 5**는 Fable 5급 성능을 절반 가격으로 제공하며, 모델 경쟁이 "최고 성능"에서 "최고 가성비"로 전환되었음을 선언했다. Frontier-Bench 43.3%(Opus 4.8의 2배 이상)라는 벤치마크와 조절 가능한 effort 설정은 추론 비용이 보드 수준 결재 항목이 된 엔터프라이즈 현실을 직접 공략한다. Anthropic이 스스로 벤치마크 한계를 인정하고 Opus 5(제한된 작업) vs Fable 5(장기 자율 작업)라는 명확한 선택 가이드를 제시한 것은 모델 선택이 용도별로 세분화되는 성숙기 징후다.
+
+**MAI-Cyber-1-Flash**는 137B 파라미터 중 5B만 활성화하는 희소 MoE로, **도메인 특화 소형 모델이 프론티어 모델과 협력하여 최고 성능을 달성**하는 패러다임을 입증했다. CyberGym 95.95%(경쟁사 대비 +12포인트)라는 압도적 성능을 50% 비용 절감으로 달성한 것은, 에이전트 아키텍처 내 역할 분담(90% 소형 모델 + 10% 프론티어)이 새로운 최적화 전략임을 보여준다. 이는 Microsoft의 자체 모델 생태계(MAI 시리즈)가 코딩·이미지·음성·보안으로 확장되며 OpenAI 독립성을 강화하고 있음을 시사한다.

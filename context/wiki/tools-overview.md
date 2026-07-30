@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: tools
-- **관련 뉴스 수**: 18
-- **최종 업데이트**: 2026-07-23 (8차 갱신)
+- **관련 뉴스 수**: 21
+- **최종 업데이트**: 2026-07-30 (9차 갱신)
 
 ## 요약
 에이전트 도구 생태계가 빠르게 분화하고 있다. 브라우저 자동화, MCP 서버, 터미널 작업 등 각 영역별 전문 도구가 등장하면서, 에이전트 개발 스택이 성숙 단계에 진입했다. MCP(Model Context Protocol)가 200+ 서버 구현체를 확보하며 사실상 표준으로 자리잡았고, 도구 간 상호운용성이 빠르게 표준화되고 있다.
@@ -23,8 +23,10 @@
 - nanobrowser (13k 스타) — Chrome 확장
 - Steel Browser (7k 스타) — 오픈소스 Browser API
 
-### MCP 생태계 확장 (2026년 6월)
+### MCP 생태계 확장 (2026년 6월~7월)
 MCP(Model Context Protocol)가 200개 이상의 서버 구현체를 보유하며 사실상 표준 도구 프로토콜로 확립되었다. 단일 설정 라인으로 Playwright, Slack, GitHub 등을 연결할 수 있게 만들었으며, 프레임워크가 도구 통합을 자체 구현하는 대신 표준 프로토콜에 위임하는 패러다임 전환을 보여준다. ACP(Agent Communication Protocol)가 Linux Foundation 산하에서 A2A(Agent-to-Agent) 프로토콜로 통합되어, 다중 벤더 에이전트 생태계의 기반이 마련되었다.
+
+> 🔧 **MCP 2026-07-28 스펙 업데이트**: 무상태 프로토콜 코어 전환 — `initialize/initialized` 핸드셰이크와 `Mcp-Session-Id` 헤더가 제거되고, 모든 요청이 `_meta` 필드에 자기 설명 정보를 포함하는 request/response 방식으로 변경. 일반 라운드 로빈 로드 밸런서 뒤의 어떤 인스턴스로도 요청 라우팅이 가능해져 쿠버네티스/서버리스 환경에서의 확장성이 극적으로 향상됨. 상태 유지 스트림 대신 MRTR(Multi Round-Trip Requests) 패턴으로 사용자 입력 처리. RFC 9207 발급자 검증, CIMD 기반 클라이언트 등록으로 보안 강화. 월간 5억 다운로드를 기록하는 MCP의 엔터프라이즈 확장성 확보. — [상세](../records/2026-07-29-mcp-spec-2026-07-28-stateless-protocol.md) ⭐⭐⭐⭐⭐ (7/28)
 
 > 💡 **교차 참조**: MCP + A2A를 함께 사용하는 조직이 단일 프로토콜 방식보다 40~60% 빠른 워크플로우 개발 속도를 보인다는 2026년 채택 트렌드 분석이 있다. 자세한 내용은 [프레임워크 동향](frameworks-overview.md) 참조.
 
@@ -262,6 +264,34 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 
 > 💡 **교차 참조**: Presence의 FDE 배포 모델과 최소 권한 원칙은 [산업 동향](industry-trends.md)의 에이전트 보안 갭(54% 기업 사고 경험)에 대한 직접적 해결책이다. Codex 개선 루프는 [모델 동향](models-overview.md)의 GPT-5.6 Memory Core(자기 교정)와 같은 'behavior drift' 해결 철학을 플랫폼 레벨에서 구현한다. Microsoft Azure AI Agent Service([위](#microsoft-azure-ai-agent-service--비즈니스-자동화의-새로운-전선))와 경쟁하면서도, Azure가 셀프서비스를 지향한다면 Presence는 FDE 기반 맞춤형 배포로 차별화. ChatGPT Work([위](#chatgpt-work-openai--야심찬-프로젝트를-위한-ai-에이전트))의 기업용 확장판으로 볼 수 있다.
 
+## AI 인프라 & 비용 최적화 도구 (2026년 7월)
+
+### Fireworks AI Nexus — 코딩 에이전트 비용 라우팅 계층
+
+**출처**: [MarkTechPost — Fireworks Nexus](../records/2026-07-29-fireworks-ai-nexus-cost-routing.md) ⭐⭐⭐⭐
+
+- **발표**: 2026년 7월 28일
+- **핵심**: AI 코딩 에이전트(Claude Code, Codex, OpenCode 등)의 요청 난이도를 실시간 평가하여, 일반 작업은 오픈 웨이트 모델(GLM-5.2, Kimi K3)로, 복잡한 작업은 프론티어 모델(Claude Opus 5)로 자동 라우팅. **3~5배 비용 절감** 달성
+- **구성**: ① 엔터프라이즈 비용 관리(팀/회사 예산, ROI 추적) ② FireConnect(Apache 2.0, Claude Code 설정 한 줄 추가로 전환) ③ 난이도 분류기(커스텀 학습 모델)
+- **성과**: Faros AI 211개 태스크 평가에서 Claude Code+GLM-5.2 조합이 Claude Code+Opus 4.8 대비 비용 절반에 거의 동등한 성과. Arize 2,400회 실행 벤치마크에서 에스컬레이션 래더 전략이 단일 모델보다 우수
+- **의미**: Uber가 Claude Code 도입 후 4개월 만에 연간 AI 예산 소진 등 비용 폭발이 산업계 실제 문제로 부상. 기존 워크플로우 변경 없이 드롭인 적용 가능한 실용적 해결책
+- **링크**: [Fireworks Nexus](https://fireworks.ai/blog/fireworks-nexus) · [FireConnect GitHub](https://github.com/fw-ai/fireconnect)
+
+> 💡 **교차 참조**: Nexus의 난이도 기반 라우팅은 [Alibaba SkillWeaver](#alibaba-skillweaver--99-토큰-절감)의 조합형 스킬 라우팅과 같은 방향성 — 도구/모델 선택 최적화로 비용 구조를 근본적으로 개선. 에스컬레이션 래더 설계는 [프레임워크 동향](frameworks-overview.md)의 ADK 2.0 결정론적+자율 하이브리드 모델(쉬운 작업은 코드, 어려운 작업은 LLM)과도 같은 패러다임. MCP 무상태 전환과 함께 AI 인프라 중간 계층이 새로운 경쟁 영역으로 부상.
+
+### OpenAI Codex Security — 오픈소스 보안 스캐닝 CLI
+
+**출처**: [GitHub — OpenAI Codex Security](../records/2026-07-29-openai-opensource-codex-security.md) ⭐⭐⭐⭐
+
+- **발표**: 2026년 7월 28일
+- **핵심**: 보안 취약점 탐지·검증·수정을 위한 CLI 및 TypeScript SDK (`@openai/codex-security`). 저장소 전체 스캔, 변경 사항 검토, CI 파이프라인 통합 자동화 지원
+- **사용법**: `npm install @openai/codex-security` → `npx codex-security scan .` (CI에서는 `OPENAI_API_KEY` 환경 변수로 인증)
+- **요구사항**: Node.js 22+, Python 3.10+, Codex Security 서비스 접근 권한
+- **의미**: AI 코딩 에이전트가 작성하는 코드의 보안 검증이 핵심 요소로 부상. 기존 Snyk·SonarQube와 경쟁하면서 AI 기반 분석이라는 차별점. 오픈소스 공개로 CI/CD 파이프라인 통합 진입 장벽 제거
+- **링크**: [GitHub 저장소](https://github.com/openai/codex-security)
+
+> 💡 **교차 참조**: Codex Security는 [Claude 암호학적 취약점 발견](../records/2026-07-29-claude-discovers-cryptographic-weaknesses.md)([연구 동향](research-overview.md))과 같은 맥락 — AI가 코드 보안의 탐지·수정 양쪽에서 활약. [ChatGPT Work](#chatgpt-work-openai--야심찬-프로젝트를-위한-ai-에이전트)에 내장된 Codex 기술과 보완적. HN 199포인트로 기술 커뮤니티 높은 관심.
+
 ## 공통 트렌드
 1. **MCP 표준 채택**: 도구들이 MCP 서버를 내장하면서 상호 운용성 확보. 새로운 도구는 MCP 호환이 사실상 필수
 2. **셀프 힐링**: DOM 변경 시 자동 복구 (Stagehand, agent-browser ref 시스템)
@@ -279,6 +309,9 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 14. **전문 서비스 자동화**: Macky AI가 비즈니스 컨설팅을 AI로 자동화하며, 특히 SME의 전문 서비스 접근성을 혁신적으로 개선
 15. **모바일 에이전트**: Gemini Task Automation이 스마트폰에서 처음으로 실제 작동하는 AI 에이전트 경험 제공. 사람용 GUI 탐색이라는 "중간 단계" 해결책으로 시작하여 MCP/App Functions 기반 구조화된 접근으로 진화할 전환기적 기술 ⭐NEW (7/23)
 16. **프로덕션 에이전트 운영 체계**: OpenAI Presence가 정책·가드레일·시뮬레이션·Codex 개선 루프를 통합 제공하며, 에이전트 배포가 'API 호출'에서 '완전한 운영 시스템'으로 격상. '운영 신뢰성'이라는 새로운 범주 창출 ⭐NEW (7/23)
+17. **MCP 무상태 프로토콜 전환**: MCP 2026-07-28 스펙이 상태 유지 양방향 프로토콜에서 무상태 request/response로 근본적 전환. 로드 밸런서 뒤의 어떤 인스턴스로도 라우팅 가능해져 클라우드 네이티브 환경(K8s, 서버리스) 배포 장벽 제거. MRTR 패턴으로 상태 유지 스트림 의존도 해소. 월간 5억 다운로드의 프로토콜이 엔터프라이즈 확장성을 확보 ⭐NEW (7/28)
+18. **비용 라우팅 계층 부상**: Fireworks Nexus가 난이도 기반 모델 라우팅으로 3~5배 비용 절감. Uber의 예산 소진 사례 등 AI 코딩 비용 폭발이 현실화되면서, 프론티어 모델과 오픈 웨이트 모델 간 지능적 분산이 새로운 인프라 계층으로 등장. 에스컬레이션 래더 설계가 단일 모델 전략을 능가 ⭐NEW (7/28)
+19. **AI 기반 보안 스캐닝**: OpenAI Codex Security가 오픈소스로 공개되며, AI 에이전트가 작성한 코드의 보안 검증이 CI/CD 표준 파이프라인으로 통합. 기존 보안 도구(Snyk, SonarQube)와 AI 기반 분석이 경쟁하는 새로운 카테고리 형성 ⭐NEW (7/28)
 
 > 💡 **교차 참조**: MCP 도구 호출 성능은 [평가 벤치마크](research-overview.md)의 MCP Atlas로 측정된다. 도구 호출 최적화는 [FAPO](frameworks-overview.md)의 파이프라인 최적화와도 연결된다 — FAPO는 도구 호출이 포함된 에이전트 체인의 프롬프트를 자동 개선한다. MAF의 CodeAct는 도구 호출 효율성을 모델 턴 수 차원에서 혁신적으로 개선한다.
 
@@ -304,6 +337,9 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - [Macky AI — AI 비즈니스 컨설팅 플랫폼](../records/2026-07-20-macky-ai-business-consulting-platform.md) (7/20)
 - [Gemini Task Automation — 모바일 에이전트](../records/2026-07-23-gemini-task-automation-phone-agent.md) ⭐NEW (7/23)
 - [OpenAI Presence — 프로덕션 에이전트 배포 플랫폼](../records/2026-07-23-openai-presence-enterprise-agent-platform.md) ⭐NEW (7/23)
+- [Fireworks AI Nexus — 비용 라우팅 계층](../records/2026-07-29-fireworks-ai-nexus-cost-routing.md) ⭐NEW (7/28)
+- [MCP 2026-07-28 스펙 — 무상태 프로토콜 전환](../records/2026-07-29-mcp-spec-2026-07-28-stateless-protocol.md) ⭐NEW (7/28)
+- [OpenAI Codex Security — 오픈소스 보안 CLI](../records/2026-07-29-openai-opensource-codex-security.md) ⭐NEW (7/28)
 
 ## 관련 위키 문서
 - [평가 벤치마크](research-overview.md) — MCP Atlas로 측정하는 도구 호출 성능
@@ -326,3 +362,9 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 **7월 업데이트 (8차)**: **Gemini Task Automation**과 **OpenAI Presence**는 도구 생태계의 두 가지 핵심 방향성을 각각 구체화한다. Gemini Task Automation은 **모바일 환경**에서 AI 에이전트가 처음으로 실제 작업을 수행하는 이정표를 세웠다. 사람용 GUI를 추론으로 탐색하는 방식은 분명 "중간 단계" 해결책이지만, 발표장 데모가 아닌 실제 기기에서 실제 주문을 완료하는 경험이 제공된다는 점에서 의미가 크다. 구글이 자신이 예상하는 MCP/App Functions 기반 구조화된 접근으로의 전환이 업계 과제로 부상했다.
 
 **OpenAI Presence**는 에이전트 도구 생태계에 **'운영 신뢰성'**이라는 새로운 차원을 추가한다. 기존 도구들이 '에이전트 구축'에 초점을 맞추었다면, Presence는 '에이전트를 프로덕션에서 신뢰할 수 있게 운영하는' 문제를 직접 다룬다. 정책 정의·시뮬레이션·가드레일·Codex 기반 자동 개선 루프는 behavior drift(배포 후 성능 저하)라는 에이전트 운영의 근본적 과제를 체계적으로 해결한다. OpenAI 자체 전화 지원에서 75% 무인 해결, 10일 만에 15%포인트 인계율 감소라는 실증 데이터는 에이전트가 프로덕션 환경에서 실제 가치를 창출할 수 있음을 입증한다. FDE 기반 배포 모델(Palantir식)은 복잡한 엔터프라이즈 환경에 맞춤형 에이전트를 구축하는 전략으로, Azure AI Agent Service의 셀프서비스 모델과 차별화된다. 이 두 도구의 등장으로 도구 생태계가 **구축 → 배포 → 운영**의 전체 라이프사이클을 포괄하기 시작했다.
+
+**7월 업데이트 (9차)**: 세 가지 신규 도구가 에이전트 인프라의 **밑바탕 프로토콜·비용 구조·보안 검증**이라는 기반 계층을 각각 혁신한다. **MCP 2026-07-28 스펙**은 프로토콜 자체의 아키텍처를 무상태로 전환하여, 쿠버네티스·서버리스·CDN 엣지 등 클라우드 네이티브 환경에서 MCP 서버의 배포·확장을 극적으로 단순화했다. 상태 유지 스트림 대신 MRTR 패턴을 도입하여 대화형 상호작용을 무상태 요청/응답으로 처리하며, RFC 9207·CIMD로 엔터프라이즈 보안 기반도 강화했다. 이는 MCP가 '좋은 아이디어'에서 '엔터프라이즈급 인프라'로 성숙했음을 의미한다.
+
+**Fireworks AI Nexus**는 AI 코딩 에이전트의 비용 폭발이라는 실제 문제에 대응한다. Uber가 Claude Code 도입 4개월 만에 연간 예산을 소진한 사례에서 보듯, 프론티어 모델 기반 코딩 에이전트의 비용은 기업 도입의 핵심 장벽이다. Nexus의 난이도 기반 라우팅(에스컬레이션 래더)은 일반 작업을 오픈 웨이트 모델로 분산시켜 3~5배 비용 절감을 달성하면서, FireConnect 한 줄 설정으로 기존 워크플로우를 변경하지 않는 실용성을 제공한다. 이는 [SkillWeaver](#alibaba-skillweaver--99-토큰-절감)의 토큰 최적화와 함께 도구/모델 라우팅이 독립된 인프라 계층으로 부상했음을 시사한다.
+
+**OpenAI Codex Security**는 AI 에이전트가 작성한 코드의 보안 검증이라는 새로운 필요를 충족한다. 오픈소스 CLI·SDK로 제공되어 기존 CI/CD 파이프라인에 쉽게 통합 가능하며, AI 기반 정적 분석으로 Snyk·SonarQube 등 기존 보안 도구와 차별화된다. 특히 Claude Code, Cursor, GitHub Copilot 등 AI 코딩 도구 보급으로 코드 생성 속도가 폭증하는 상황에서, 보안 검증의 자동화가 필수적이다. 세 도구는 공통적으로 **에이전트 인프라의 기반층**(프로토콜·비용·보안)을 다루며, 에이전트 생태계가 표면적 기능 경쟁을 넘어 깊이 있는 인프라 혁신 단계에 진입했음을 보여준다.

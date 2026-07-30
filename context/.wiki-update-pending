@@ -1,21 +1,28 @@
 # 다음 위키 갱신 대기
-# 2026-07-29: models (10차), industry (8차) 갱신 완료.
-# - models: 7/28 records 2건 반영 (Claude Opus 5, MAI-Cyber-1-Flash)
-#   Claude Opus 5: Fable 5급 성능 절반 가격, Frontier-Bench 43.3%, effort 설정, 가성비 프론티어 카테고리
-#   MAI-Cyber-1-Flash: 137B/5B 활성 희소 MoE, CyberGym 95.95%, MDASH 내 에이전트 협업, 사이버 보안 특화
-#   용도별 매트릭스 2행 추가, 관련 뉴스 2건 추가
-# - industry: 7/27~7/28 records 6건 반영 (Sam Altman deceleration, MS 89% 비용절감, Claude 공유채팅 노출,
-#   Amodei open-weight/중국, RSI $410M Amazon, Runlayer vs Rippling MCP 소송)
-#   프론티어 딜레마 6각 구도 분석 추가, 교차 참조 8곳 연결
+# 2026-07-30: tools (9차), frameworks (10차) 갱신 완료.
+# - tools: 7/28~7/29 records 3건 반영 (Fireworks Nexus, MCP 2026-07-28 스펙, OpenAI Codex Security)
+#   Fireworks Nexus: 난이도 기반 모델 라우팅, 에스컬레이션 래더, 3~5배 비용절감, FireConnect Apache 2.0
+#   MCP 2026-07-28: 무상태 프로토콜 코어 전환, MRTR 패턴, RFC 9207/CIMD 보안, 월간 5억 다운로드
+#   Codex Security: 오픈소스 CLI/TS SDK, CI 통합 보안 스캐닝, Node.js 22+/Python 3.10+
+#   트렌드 3개 추가 (#17~#19), 관련 뉴스 3건 추가, 분석 9차 갱신
+# - frameworks: 7/28 record 1건 반영 (Gemini Managed Agents 3.6 Flash)
+#   Hooks(.agents/hooks.json): pre/post_tool_execution, HTTP 훅, deny 전달
+#   예산 통제(max_total_tokens), 예약 실행(Triggers), 무료 티어 개방
+#   ADK 2.0 결정론적 HITL과의 일관성 분석, Claude Agent SDK 생명주기 훅과 비교
+#   관련 뉴스 1건 추가, 분석 10차 갱신
 #
 # 다음 대상:
-# - tools: 7/28~7/29 records 3건 대기
-#   1. Fireworks AI Nexus — 비용 라우팅 계층 (⭐⭐⭐⭐)
-#   2. MCP 2026-07-28 스펙 — 무상태 프로토콜 전환 (⭐⭐⭐⭐⭐)
-#   3. OpenAI Codex Security — 오픈소스 보안 CLI (⭐⭐⭐⭐)
-# - frameworks: 7/29 record 1건 대기
-#   1. Gemini Managed Agents 3.6 Flash — Hooks, 예산 통제, 예약 실행 (⭐⭐⭐⭐⭐)
 # - research: 7/29 record 1건 대기
 #   1. Claude 암호학적 취약점 자율 발견 — HAWK/AES 공격 (⭐⭐⭐⭐⭐)
+# - models: 7/29 records 다수 대기 (7/29 뉴스 12건 중 미반영 건)
+#   - Claude Opus 5 Vending Bench 사기 행동
+#   - Hugging Face AI 침해 — OpenAI 자율 에이전트 17,600회 행동
+#   - Sam Altman AI 감속 신호
+#   - 기타 7/29~7/30 신규 records
+# - industry: 7/29 records 대기
+#   - Zuckerberg 수십억 에이전트 예측
+#   - Prompt vs Loop vs Graph Engineering
+#   - OpenAI 코딩 에이전트 과학 소프트웨어
+#   - 기타
 #
-# 우선순위: tools > frameworks > research (record 수 기준)
+# 우선순위: research (중요도 ⭐⭐⭐⭐⭐ 단일 건) > models > industry

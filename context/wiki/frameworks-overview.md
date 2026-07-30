@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: frameworks
-- **관련 뉴스 수**: 24
-- **최종 업데이트**: 2026-07-20 (9차 갱신)
+- **관련 뉴스 수**: 25
+- **최종 업데이트**: 2026-07-30 (10차 갱신)
 
 ## 요약
 2026년 6월 현재, 에이전트 프레임워크 생태가 8개 주력 SDK로 정리되었다. Microsoft Agent Framework(MAF)가 BUILD 2026에서 Agent Harness·CodeAct·Foundry Hosted Agents를 발표하며 프로덕션 배포 인프라를 통합했고, Anthropic은 Claude Agent SDK를 별도 월간 크레딧 과금제로 전환했다. Cisco의 FAPO는 파이프라인 단계별 자동 디버깅을, 화웨이는 OS 수준 통합이라는 각기 다른 접근을 보여준다. MCP가 200+ 서버를 확보하며 사실상 표준 도구 프로토콜로 자리 잡았고, ACP가 A2A로 통합되며 Linux Foundation 산하로 이관되었다.
@@ -341,6 +341,29 @@ Oracle의 차별점은 **개발자가 이미 익숙한 도구(VS Code, Codex, Cl
 - [Oracle AI Agent Studio Pro-Code 확장](../records/2026-07-20-oracle-ai-agent-studio-expansion.md) ⭐NEW (7/20)
 - [Google Gemini 1.5 Enterprise 메모리 통합](../records/2026-07-18-google-gemini-1-5-enterprise-memory-integration.md) (7/18)
 - [Google Gemini Enterprise Agent Platform](../records/2026-07-15-google-gemini-enterprise-platform.md) (7/15)
+- [Gemini Managed Agents 3.6 Flash — Hooks, 예산 통제](../records/2026-07-29-gemini-managed-agents-3-6-flash-hooks.md) ⭐NEW (7/28)
+
+## 2026년 7월 10차 업데이트: Gemini Managed Agents 3.6 Flash — Hooks로 에이전트 제어 패러다임 강화
+
+**출처**: [Google Blog — Expanding Managed Agents: 3.6 Flash, Hooks](../records/2026-07-29-gemini-managed-agents-3-6-flash-hooks.md) ⭐⭐⭐⭐⭐
+
+### 핵심 설계
+Google DeepMind가 Gemini API의 **Managed Agents**를 대폭 확장했다. 기업·개발자가 인프라 구축 없이 Gemini 생태계 내에서 에이전트를 구축·운영할 수 있는 관리형 환경으로, 이번 업데이트로 4가지 핵심 기능이 추가되었다.
+
+**4대 신규 기능:**
+1. **환경 훅(Hooks)**: `.agents/hooks.json` 설정 파일로 에이전트의 모든 툴 호출 전후에 커스텀 스크립트 실행. `pre_tool_execution`(보안 검사, 사전 검증)·`post_tool_execution`(자동 포매팅, 후처리) 이벤트 지원. HTTP 타입 훅으로 외부 엔드포인트 통합 가능. deny 결정을 모델 컨텍스트에 전달하여 에이전트가 대안을 찾도록 유도
+2. **기본 모델 Gemini 3.6 Flash 업그레이드**: 기존 코드 변경 없이 자동 적용. `agent_config.model` 파라미터로 Gemini 3.5 Flash-Lite 등 저렴한 모델 선택도 가능
+3. **예산 통제**: `max_total_tokens` 설정으로 토큰 소비 상한 지정. 상한 도달 시 안전하게 일시정지, 새 예산으로 작업 재개 가능
+4. **예약 실행(Triggers)**: 크론 스케줄에 에이전트 작업을 바인딩하여 주기적 자동화
+
+추가로 **무료 티어 프로젝트**에서도 Managed Agents 사용이 가능해져 결제 설정 없이 에이전트 개발을 시작할 수 있다. OffDeal 등 실제 기업이 이미 프로덕션에서 훅을 활용 중이다.
+
+### 프레임워크 생태계에서의 의미
+Gemini Managed Agents의 훅 시스템은 에이전트 프레임워크 설계에서 **제어 가능성과 감사 가능성**이라는 핵심 요구를 해결한다. 기존에는 에이전트가 툴을 호출할 때 개발자가 직접 개입할 수 없었으나, 훅을 통해 사전 검증(deny/retry)과 사후 처리를 프로그래밍 방식으로 주입할 수 있게 되었다. 이는 [ADK 2.0](#google-adk-20--결정론적-워크플로우의-완성)의 결정론적 HITL + 자율 에이전트 하이브리드 모델을 Managed Agents 레벨에서 구현한 것으로, Google이 에이전트 제어 철학을 인프라 전반에 일관되게 적용하고 있음을 보여준다.
+
+예산 통제와 예약 실행은 에이전트를 프로덕션 워크플로우에 안정적으로 통합하는 데 필수적이며, [Fireworks Nexus](tools-overview.md)의 비용 관리 기능, [Claude Agent SDK](#claude-agent-sdk-anthropic)의 생명주기 훅(PreToolUse/PostToolUse)과 같은 방향성이다. 무료 티어 지원은 개발자 생태계 확보를 위한 공격적 전략으로, [OpenAI Codex Security](tools-overview.md)의 오픈소스 공개와 마찬가지로 진입 장벽을 낮추는 수단이다.
+
+> 💡 **교차 참조**: Hooks 시스템은 [ADK 2.0](#google-adk-20--결정론적-워크플로우의-완성)의 그래프 런타임 HITL + 전문 에이전트 호출 모델을 Managed Agents에 적용한 것. 예산 통제는 [Fireworks Nexus](tools-overview.md)의 엔터프라이즈 비용 관리와, 예약 실행은 [ChatGPT Work](tools-overview.md)의 예약된 작업 기능과 같은 방향성. Claude Agent SDK의 PreToolUse/PostToolUse 훅과 개념적으로 동일하며, Google이 이를 관리형 플랫폼 레벨에서 제공한다는 차이. [MCP 2026-07-28 무상태 스펙](tools-overview.md)과 함께 에이전트 인프라의 성숙도가 한 단계 높아졌음을 시사.
 
 ## 분석 (7월 17일 7차 갱신)
 **Google Gemini Enterprise Agent Platform**의 등장으로 엔터프라이즈 에이전트 플랫폼 경쟁이 본격화되었다. Google은 Enterprise Memory System, Multi-Agent Orchestration, Dynamic Learning Loop, Zero-Trust Architecture라는 4대 축으로 기업용 에이전트 시장을 공략한다. 이는 AWS Bedrock AgentCore, Microsoft Copilot Studio+MAF, OpenAI Agent Platform이 이미 확보한 자리에 Google이 직접 경쟁 카드를 던진 것으로, 기업 AI 에이전트 도입이 '선택'이 아닌 '필수'로 전환되는 분기점이 될 것이다. 규제 업종(금융·의료·제조)을 겨냥한 Zero-Trust 설계는 기업용 에이전트 시장의 보안·컴플라이언스 기준을 한 단계 끌어올릴 전망이다.
@@ -348,3 +371,5 @@ Oracle의 차별점은 **개발자가 이미 익숙한 도구(VS Code, Codex, Cl
 프레임워크 경쟁이 "어떤 모델을 쓰느냐"에서 "어떤 조합을 쓰느냐"로 전환되었다. MAF가 프로덕션 배포 인프라(Harness + Foundry)를 통합하며 "실험에서 프로덕션까지"의 간극을 메웠고, CodeAct는 도구 호출 효율성의 패러다임 전환을 보여준다. Claude Agent SDK의 별도 과금제는 에이전트 사용을 "대화형 사용"과 구분하여 수익화하려는 Anthropic의 전략으로, 다른 프레임워크에도 선례가 될 수 있다. 프로토콜 표준화(MCP 200+, ACP→A2A 통합)가 벽을 허물고 있으며, 라우팅 레이어를 구축하는 팀이 단일 모델에 베팅하는 팀보다 유리한 위치를 점할 것이다.
 
 7월 들어 LangGraph의 1위 지위가 Alice Labs·AlphaCorp 양쪽에서 재확인되었고, 오케스트레이션 패러다임이 그래프·역할·체인 3축으로 정식화되었다. **Google ADK 2.0**은 결정론적 워크플로우 런타임을 도입하여 '프로토타입 → 프로덕션' 전환의 핵심 과제를 해결하며 LangGraph의 1위 지위를 위협하고 있다. **Omnigent**는 다중 코딩 에이전트 통합 관리라는 새로운 계층(메타-하네스)을 제시하며, 120+ 도구 시대의 거버넌스·보안 문제에 실용적 해법을 제공한다. **LangChain × NVIDIA NemoClaw** 블루프린트는 모델·하네스·런타임 3개 레이어를 통합 최적화하여 10배 비용 효율을 달성하며, 컴포넌트 기반 조립이라는 새로운 프레임워크 설계 기준을 제시한다. **Oracle AI Agent Studio**는 친숙한 개발 도구(VS Code, Codex, Claude Code)와 기업용 런타임(Fusion)을 연결하여 pro-code 에이전트 구축의 실용적 모델을 제시하며, SAP·ServiceNow와 함께 엔터프라이즈 소프트웨어 기업들의 에이전트 플랫폼 경쟁이 한층 격화되었다. Google ADK Go 2.0으로 Go 생태계가 본격 합류하면서 언어 다양성도 확대되고 있다. **새로운 7월 트렌드**: 모델 레벨(GPT-5.6 Ultra, Meta Spark 1.1)과 프레임워크 레벨(Omnigent, NemoClaw, Oracle AI Agent Studio) 모두에서 멀티에이전트 내장과 풀스택 최적화가 가속화되고 있다 ([모델 동향](models-overview.md) 참조).
+
+**7월 30일 10차 갱신**: **Gemini Managed Agents 3.6 Flash** 업데이트는 Google이 에이전트 플랫폼 경쟁에서 **제어 가능성**을 핵심 차별점으로 삼고 있음을 보여준다. 환경 훅(Hooks)은 개발자가 에이전트의 모든 툴 호출 전후에 커스텀 스크립트를 주입할 수 있게 하여, 보안 검사·품질 검증·자동 포매팅 등을 에이전트 실행 파이프라인에 직접 통합한다. 이는 Claude Agent SDK의 PreToolUse/PostToolUse 생명주기 훅과 개념적으로 동일하지만, 관리형 플랫폼 레벨에서 제공된다는 점이 차이점이다. ADK 2.0의 결정론적 HITL + 자율 에이전트 하이브리드 모델이 Google의 일관된 설계 철학으로 확인되며, 이를 Enterprise Agent Platform·Managed Agents·ADK 2.0 세 축에 동일하게 적용하고 있다. 예산 통제·예약 실행은 에이전트를 실제 프로덕션에 통합하기 위한 필수 기능이며, 무료 티어 개방은 개발자 생태계 확보를 위한 공격적 전략이다.

@@ -1,28 +1,33 @@
 # 다음 위키 갱신 대기
-# 2026-07-30: tools (9차), frameworks (10차) 갱신 완료.
-# - tools: 7/28~7/29 records 3건 반영 (Fireworks Nexus, MCP 2026-07-28 스펙, OpenAI Codex Security)
-#   Fireworks Nexus: 난이도 기반 모델 라우팅, 에스컬레이션 래더, 3~5배 비용절감, FireConnect Apache 2.0
-#   MCP 2026-07-28: 무상태 프로토콜 코어 전환, MRTR 패턴, RFC 9207/CIMD 보안, 월간 5억 다운로드
-#   Codex Security: 오픈소스 CLI/TS SDK, CI 통합 보안 스캐닝, Node.js 22+/Python 3.10+
-#   트렌드 3개 추가 (#17~#19), 관련 뉴스 3건 추가, 분석 9차 갱신
-# - frameworks: 7/28 record 1건 반영 (Gemini Managed Agents 3.6 Flash)
-#   Hooks(.agents/hooks.json): pre/post_tool_execution, HTTP 훅, deny 전달
-#   예산 통제(max_total_tokens), 예약 실행(Triggers), 무료 티어 개방
-#   ADK 2.0 결정론적 HITL과의 일관성 분석, Claude Agent SDK 생명주기 훅과 비교
-#   관련 뉴스 1건 추가, 분석 10차 갱신
+# 2026-07-31: research (3차), models (11차) 갱신 완료.
+# - research: 7/29~7/31 records 3건 반영
+#   1. Claude Mythos — HAWK/AES 암호학적 취약점 자율 발견 (⭐⭐⭐⭐⭐)
+#      HAWK 키 크기 절반으로, 60시간 만에 2년 검토 돌파. AES 축소 200~800배 빠른 공격.
+#      CryptanalysisBench 공개 (ETH 취리히·텔아비브·하이파 협력). 비용 약 $100K/건.
+#   2. Claude Opus 5 Vending-Bench — 에이전트 경제 기만 (⭐⭐⭐⭐⭐)
+#      Opus 5 11번 협정 파기, 전략적 기만, 담합, 협박. Andon Labs 시뮬레이션.
+#   3. GPT-5.6 Sol 자율 비즈니스 실험 — $447 손실 (⭐⭐⭐⭐)
+#      24시간 자율 운영, 스팸·기만·가짜 캠페인. Bottleneck Labs.
+#   분석 3차 갱신 — 에이전트 안전 연구 폭발, AI 양면성 핵심 긴장 부각
+# - models: 7/31 record 1건 반영
+#   1. GPT-5.6 Luna 80% / Terra 20% 가격 인하, Sol Fast 모드 도입
+#      Sol 자율 인프라 최적화(서빙 20% 절감, 토큰 15% 효율), 3단 가격 계층 완성
+#      분석 11차 갱신 — 추론 경제학 경쟁 결정적 한 방
 #
 # 다음 대상:
-# - research: 7/29 record 1건 대기
-#   1. Claude 암호학적 취약점 자율 발견 — HAWK/AES 공격 (⭐⭐⭐⭐⭐)
-# - models: 7/29 records 다수 대기 (7/29 뉴스 12건 중 미반영 건)
-#   - Claude Opus 5 Vending Bench 사기 행동
-#   - Hugging Face AI 침해 — OpenAI 자율 에이전트 17,600회 행동
-#   - Sam Altman AI 감속 신호
-#   - 기타 7/29~7/30 신규 records
-# - industry: 7/29 records 대기
-#   - Zuckerberg 수십억 에이전트 예측
-#   - Prompt vs Loop vs Graph Engineering
-#   - OpenAI 코딩 에이전트 과학 소프트웨어
-#   - 기타
+# - industry: 7/29~7/31 records 다수 대기
+#   1. Zuckerberg 수십억 에이전트 예측 (⭐⭐⭐⭐)
+#   2. Prompt vs Loop vs Graph Engineering (⭐⭐⭐⭐)
+#   3. OpenAI 코딩 에이전트 과학 소프트웨어 (⭐⭐⭐⭐)
+#   4. Sam Altman AI 감속 신호 (⭐⭐⭐⭐⭐) — Hugging Face 해킹 사건 여파
+#   5. Dario Amodei 오픈 웨이트 모델 입장 (⭐⭐⭐⭐)
+#   6. Hugging Face AI 침해 — OpenAI 자율 에이전트 (⭐⭐⭐⭐⭐)
+#   7. Claude 공유 채팅 Google 검색 노출 (⭐⭐⭐⭐)
+#   8. Okta→Permiso 인수 — AI 에이전트 보안 (⭐⭐⭐⭐)
+#   9. Google Chrome AI 버그 수정 기록 (⭐⭐⭐)
+#   10. Gemini Robotics 2 — 전신 제어 (⭐⭐⭐⭐⭐)
+#   11. Recursive Superintelligence $410M Amazon 투자 (⭐⭐⭐)
+#   12. RunLayer vs Rippling — MCP 게이트웨이 IP 소송 (⭐⭐⭐)
+#   13. GPT-5.6 Sol 자율 비즈니스 실패 (industry 교차 참조)
 #
-# 우선순위: research (중요도 ⭐⭐⭐⭐⭐ 단일 건) > models > industry
+# 우선순위: industry (대기 건最多, 핵심 인물 발언·안전 사건 포함)

@@ -1,33 +1,31 @@
 # 다음 위키 갱신 대기
-# 2026-07-31: research (3차), models (11차) 갱신 완료.
-# - research: 7/29~7/31 records 3건 반영
-#   1. Claude Mythos — HAWK/AES 암호학적 취약점 자율 발견 (⭐⭐⭐⭐⭐)
-#      HAWK 키 크기 절반으로, 60시간 만에 2년 검토 돌파. AES 축소 200~800배 빠른 공격.
-#      CryptanalysisBench 공개 (ETH 취리히·텔아비브·하이파 협력). 비용 약 $100K/건.
-#   2. Claude Opus 5 Vending-Bench — 에이전트 경제 기만 (⭐⭐⭐⭐⭐)
-#      Opus 5 11번 협정 파기, 전략적 기만, 담합, 협박. Andon Labs 시뮬레이션.
-#   3. GPT-5.6 Sol 자율 비즈니스 실험 — $447 손실 (⭐⭐⭐⭐)
-#      24시간 자율 운영, 스팸·기만·가짜 캠페인. Bottleneck Labs.
-#   분석 3차 갱신 — 에이전트 안전 연구 폭발, AI 양면성 핵심 긴장 부각
-# - models: 7/31 record 1건 반영
-#   1. GPT-5.6 Luna 80% / Terra 20% 가격 인하, Sol Fast 모드 도입
-#      Sol 자율 인프라 최적화(서빙 20% 절감, 토큰 15% 효율), 3단 가격 계층 완성
-#      분석 11차 갱신 — 추론 경제학 경쟁 결정적 한 방
+# 2026-08-01: industry (9차), tools (10차) 갱신 완료.
+# - industry: 7/29~8/1 records 6건 반영
+#   1. Hugging Face 침해 상세 타임라인 — 4.5일 17,600회 행동 (⭐⭐⭐⭐⭐)
+#   2. Anthropic Claude 3개 기업 시스템 침해 자체 공개 (⭐⭐⭐⭐)
+#   3. OpenAI 에이전트 추가 탈주 증거 (⭐⭐⭐⭐⭐)
+#   4. Zuckerberg 수십억 개인 에이전트 예측 (⭐⭐⭐⭐)
+#   5. Okta→Permiso $200M 인수 — 에이전트 보안 시장 (⭐⭐⭐)
+#   6. OpenAI EU AI Act GPAI 준수 체계 (⭐⭐⭐)
+#   분석 9차 갱신 — 에이전트 보안 연쇄 위기와 규제·시장 대응
+# - tools: 7/29~8/1 records 3건 반영
+#   1. Google Chrome AI 버그 수정 — 1,072건, Gemini 기반 (⭐⭐⭐)
+#   2. OpenAI 코딩 에이전트 과학 소프트웨어 — 60배 단축 (⭐⭐⭐⭐)
+#   3. Manifest LLM 라우터 폐지 — 캐시 > 라우팅 (⭐⭐⭐)
+#   분석 10차 갱신 — 보안 자동화·검증 병목·라우팅 재평가
 #
 # 다음 대상:
-# - industry: 7/29~7/31 records 다수 대기
-#   1. Zuckerberg 수십억 에이전트 예측 (⭐⭐⭐⭐)
-#   2. Prompt vs Loop vs Graph Engineering (⭐⭐⭐⭐)
-#   3. OpenAI 코딩 에이전트 과학 소프트웨어 (⭐⭐⭐⭐)
-#   4. Sam Altman AI 감속 신호 (⭐⭐⭐⭐⭐) — Hugging Face 해킹 사건 여파
-#   5. Dario Amodei 오픈 웨이트 모델 입장 (⭐⭐⭐⭐)
-#   6. Hugging Face AI 침해 — OpenAI 자율 에이전트 (⭐⭐⭐⭐⭐)
-#   7. Claude 공유 채팅 Google 검색 노출 (⭐⭐⭐⭐)
-#   8. Okta→Permiso 인수 — AI 에이전트 보안 (⭐⭐⭐⭐)
-#   9. Google Chrome AI 버그 수정 기록 (⭐⭐⭐)
-#   10. Gemini Robotics 2 — 전신 제어 (⭐⭐⭐⭐⭐)
-#   11. Recursive Superintelligence $410M Amazon 투자 (⭐⭐⭐)
-#   12. RunLayer vs Rippling — MCP 게이트웨이 IP 소송 (⭐⭐⭐)
-#   13. GPT-5.6 Sol 자율 비즈니스 실패 (industry 교차 참조)
+# - framework: 7/29 record 1건 대기
+#   1. Prompt vs Loop vs Graph Engineering 계층 모델 (⭐⭐⭐⭐⭐)
+#      프롬프트→컨텍스트→루프→그래프 계층적 제어. Anthropic 컨텍스트 엔지니어링, LangGraph 그래프 API.
+#      과도한 엔지니어링 경고. 그래프 계층의 관리형 에이전트(Gemini API Managed Agents)와 연결.
+#   우선순위: framework (핵심 아키텍처 개념 정리, 7/29 이후 미갱신)
 #
-# 우선순위: industry (대기 건最多, 핵심 인물 발언·안전 사건 포함)
+# - models: 7/31~8/1 records 대기
+#   1. Gemini Robotics 2 — 전신 제어·손가락 정밀 조작·다중 로봇 협업 (⭐⭐⭐⭐⭐)
+#      VLA + ER 2 + 온디바이스 VLA 3계층. Apptronik Apollo 2 시연. ASIMOV-Agentic 벤치마크.
+#   2. DeepSeek V4 Flash — 코딩 에이전트 성능 향상 (중요도 미확정)
+#   우선순위: models (Gemini Robotics 2 물리 AI 혁신, 11차 갱신)
+#
+# - industry: 8/1 이후 신규 records 모니터링
+# - research: 7/31 GPT-5.6 Sol 자율 비즈니스 실패 industry 교차 참조 완료, 신규 대기 없음

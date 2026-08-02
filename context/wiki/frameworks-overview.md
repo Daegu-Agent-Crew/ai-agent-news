@@ -3,7 +3,7 @@
 ## 메타데이터
 - **카테고리**: frameworks
 - **관련 뉴스 수**: 26
-- **최종 업데이트": 2026-08-02 (11차 갱신)
+- **최종 업데이트**: 2026-08-02 (11차 갱신)
 
 ## 요약
 2026년 6월 현재, 에이전트 프레임워크 생태가 8개 주력 SDK로 정리되었다. Microsoft Agent Framework(MAF)가 BUILD 2026에서 Agent Harness·CodeAct·Foundry Hosted Agents를 발표하며 프로덕션 배포 인프라를 통합했고, Anthropic은 Claude Agent SDK를 별도 월간 크레딧 과금제로 전환했다. Cisco의 FAPO는 파이프라인 단계별 자동 디버깅을, 화웨이는 OS 수준 통합이라는 각기 다른 접근을 보여준다. MCP가 200+ 서버를 확보하며 사실상 표준 도구 프로토콜로 자리 잡았고, ACP가 A2A로 통합되며 Linux Foundation 산하로 이관되었다.

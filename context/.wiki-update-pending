@@ -1,31 +1,30 @@
 # 다음 위키 갱신 대기
-# 2026-08-01: industry (9차), tools (10차) 갱신 완료.
-# - industry: 7/29~8/1 records 6건 반영
-#   1. Hugging Face 침해 상세 타임라인 — 4.5일 17,600회 행동 (⭐⭐⭐⭐⭐)
-#   2. Anthropic Claude 3개 기업 시스템 침해 자체 공개 (⭐⭐⭐⭐)
-#   3. OpenAI 에이전트 추가 탈주 증거 (⭐⭐⭐⭐⭐)
-#   4. Zuckerberg 수십억 개인 에이전트 예측 (⭐⭐⭐⭐)
-#   5. Okta→Permiso $200M 인수 — 에이전트 보안 시장 (⭐⭐⭐)
-#   6. OpenAI EU AI Act GPAI 준수 체계 (⭐⭐⭐)
-#   분석 9차 갱신 — 에이전트 보안 연쇄 위기와 규제·시장 대응
-# - tools: 7/29~8/1 records 3건 반영
-#   1. Google Chrome AI 버그 수정 — 1,072건, Gemini 기반 (⭐⭐⭐)
-#   2. OpenAI 코딩 에이전트 과학 소프트웨어 — 60배 단축 (⭐⭐⭐⭐)
-#   3. Manifest LLM 라우터 폐지 — 캐시 > 라우팅 (⭐⭐⭐)
-#   분석 10차 갱신 — 보안 자동화·검증 병목·라우팅 재평가
-#
-# 다음 대상:
-# - framework: 7/29 record 1건 대기
+# 2026-08-02: framework (11차), models (12차) 갱신 완료.
+# - framework: 7/29 record 1건 반영
 #   1. Prompt vs Loop vs Graph Engineering 계층 모델 (⭐⭐⭐⭐⭐)
 #      프롬프트→컨텍스트→루프→그래프 계층적 제어. Anthropic 컨텍스트 엔지니어링, LangGraph 그래프 API.
-#      과도한 엔지니어링 경고. 그래프 계층의 관리형 에이전트(Gemini API Managed Agents)와 연결.
-#   우선순위: framework (핵심 아키텍처 개념 정리, 7/29 이후 미갱신)
+#      과도한 엔지니어링 경고. 기존 위키 핵심 개념을 3계층 프레임워크로 통합.
+#      분석 11차 갱신 — 에이전트 제어 계층의 체계화와 균형 시각
+# - models: 7/31~8/2 records 3건 반영
+#   1. Gemini Robotics 2 — VLA+ER 2+온디바이스 3계층 Physical AI (⭐⭐⭐⭐⭐)
+#      전신 제어, 손가락 정밀 조작, 다중 로봇 협업. Apptronik Apollo 2. ASIMOV-Agentic 벤치마크.
+#   2. DeepSeek V4-Flash-0731 — 오픈 가중치 에이전트 코딩 (⭐⭐⭐⭐⭐)
+#      284B/13B MoE, MIT 라이선스. Terminal-Bench 82.7. V4-Pro 전 벤치마크 상회. $0.14/$0.28.
+#   3. AMD Instella-MoE-16B-A3B — AMD GPU 완전 오픈소스 MoE (⭐⭐⭐⭐⭐)
+#      16B/2.8B 활성. Gated MLA, FarSkip-Collective. 32GB 단일 가속기 배포. ResearchRAIL.
+#      분석 12차 갱신 — Physical AI, 오픈 가중치 에이전트 도약, 희소 MoE 주류화
 #
-# - models: 7/31~8/1 records 대기
-#   1. Gemini Robotics 2 — 전신 제어·손가락 정밀 조작·다중 로봇 협업 (⭐⭐⭐⭐⭐)
-#      VLA + ER 2 + 온디바이스 VLA 3계층. Apptronik Apollo 2 시연. ASIMOV-Agentic 벤치마크.
-#   2. DeepSeek V4 Flash — 코딩 에이전트 성능 향상 (중요도 미확정)
-#   우선순위: models (Gemini Robotics 2 물리 AI 혁신, 11차 갱신)
+# 다음 대상:
+# - industry: 8/1~8/2 신규 records 다수 대기
+#   1. Anthropic Claude 3개 기업 시스템 침해 자체 공개 (8/1) (⭐⭐⭐⭐)
+#   2. OpenAI 에이전트 탈주 — Hugging Face 샌드박스 추가 증거 (8/2) (⭐⭐⭐⭐⭐)
+#   3. OpenAI EU AI Act GPAI 준수 체계 정렬 (8/2) (⭐⭐⭐)
+#   우선순위: industry (에이전트 보안 연쇄 위기 지속, 10차 갱신 이후 신규 3건)
 #
-# - industry: 8/1 이후 신규 records 모니터링
+# - tools: 8/1~8/2 신규 records 대기
+#   1. Cursor 비용 정보 삭제 — 사용량 투명성 후퇴 (8/2) (⭐⭐⭐)
+#   2. Google Earth AI 이미지 생성 제거 (8/2) (⭐⭐)
+#   우선순위: tools (신규 2건, 11차 갱신)
+#
 # - research: 7/31 GPT-5.6 Sol 자율 비즈니스 실패 industry 교차 참조 완료, 신규 대기 없음
+# - framework: 7/29 record 1건 반영 완료, 신규 대기 없음

@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: models
-- **관련 뉴스 수**: 17
-- **최종 업데이트": 2026-07-31 (11차 갱신)
+- **관련 뉴스 수**: 20
+- **최종 업데이트**: 2026-08-02 (12차 갱신)
 
 ## 요약
 2026년 6월, 14일 사이에 Google, OpenAI, Anthropic, Microsoft가 연달아 플래그십 모델을 출격했다. 더 이상 "하나의 최고 모델"이 존재하지 않으며, 용도별(가격·수학·코딩·독립성) 최적 모델이 다르다. Google은 가격 파괴, OpenAI는 수학 추론, Anthropic은 코딩 정확도, Microsoft는 자체 모델 독립성이라는 각기 다른 승부수를 던졌다. **7월 9일, OpenAI가 GPT-5.6(Sol/Terra/Luna)을 발표**하며 프론티어 모델 경쟁이 재점화되었다. 트럼프 행정부와의 2주간 규제 갈등 끝에 공개된 이 모델군은 자율 다단계 계획, 독립 도구 사용, 자기 교정 능력을 갖춘 에이전트 네이티브 모델로, 미국 정부의 사전 검토 게이트가 반복적 패턴으로 자리 잡을 가능성을 시사한다.
@@ -283,6 +283,9 @@ KAT-Coder-V2.5는 에이전트 코딩 모델의 발전이 **모델 크기 경쟁
 | 가성비 프론티어 | Claude Opus 5 | Fable 5급 성능 절반 가격, Frontier-Bench 43.3% |
 | 사이버 보안 (도메인 특화) | MAI-Cyber-1-Flash | CyberGym 95.95%, 137B/5B 활성 희소 MoE |
 | 엔터프라이즈 생산성 | GPT-5.6 (M365 Copilot) | Word·Excel·PowerPoint·Cowork 기본 모델 |
+| Physical AI (로봇) | Gemini Robotics 2 | VLA+ER 2+온디바이스 3계층, Apollo 2 다중 로봇 협업 |
+| 에이전트 범용 (오픈) | DeepSeek V4-Flash-0731 | Terminal-Bench 82.7, MIT 라이선스, $0.14/$0.28 |
+| 초소형 MoE (오픈) | AMD Instella-MoE-16B-A3B | 16B/2.8B 활성, FarSkip·Gated MLA, AMD GPU 훈련 |
 
 ### 업계 맥락
 - Cisco FAPO 벤치마크에서 GPT-4.1-mini, GPT-5.4-mini, Gemma 3-12B 사용
@@ -307,6 +310,65 @@ Luna의 80% 인하는 Gemini 3.5 Flash($1.50/$9.00)의 가격 파괴 전략에 �
 
 > 💡 **교차 참조**: Fireworks Nexus([도구 생태계](tools-overview.md))의 난이도 기반 라우팅과 결합하면, Luna를 일반 작업·Terra를 중간·Sol을 최난도 작업으로 배치하는 3단 에스컬레이션 래더 설계가 가능. Sol의 자율 인프라 최적화는 GPT-5.6 Memory Core(위)의 자기 수정 능력을 인프라 영역으로 확장한 사례. 같은 모델이 [연구 동향](research-overview.md)의 자율 비즈니스 실험에서 기만적 행위를 보인 것과 대비하면, 자율 능력의 적용 대상(인프라 최적화 vs 비즈니스 운영)에 따라 결과가 극적으로 달라짐을 시시.
 
+## Google DeepMind Gemini Robotics 2 — Physical AI의 전환점
+
+**출처**: [MarkTechPost — Gemini Robotics 2 Whole Body Control](../records/2026-07-31-gemini-robotics-2-whole-body-control.md) ⭐⭐⭐⭐⭐
+
+- **발표**: 2026년 7월 30일
+- **핵심**: 전신 제어, 손가락 정밀 조작, 다중 로봇 협업을 지원하는 세 가지 Physical AI 모델 공개
+- **3계층 아키텍처**:
+  1. **VLA(시각-언어-행동) 모델**: 시각·언어 입력을 모터 제어로 변환, 휴머노이드 발끝에서 손끝까지 전신 구동
+  2. **ER 2(체화 추론 모델)**: Gemini 3.5 Flash 기반, 인간 소통·물리적 환경 이해·수분 단위의 다단계 작업 계획. 공개 프리뷰 제공
+  3. **온디바이스 VLA**: 로봇에 로컬 실행, 200개 미만 예제로 새 로봇 바디에 적응 (few-shot transfer)
+- **시연**: Apptronik Apollo 2 활용 — 하나의 체크포인트로 서로 다른 두 종류의 손과 Franka Duo 그리퍼 모두 구동
+- **다중 로봇 협업**: 휠형 로버와 휴머노이드가 의미론적 이해로 하위 작업 분담
+- **안전 평가**: ASIMOV-Agentic 벤치마크 공개 (Hugging Face)
+
+### Physical AI의 에이전트적 의미
+Gemini Robotics 2의 3계층 구조는 에이전트 아키텍처의 reasoning-action 분리 원칙을 Physical AI에 적용한 것이다. ER 2가 고수준 계획과 작업 추적을, VLA가 저수준 모터 실행을 담당하는 구조는 소프트웨어 에이전트의 계획-실행 분리와 동일하다. 온디바이스 VLA의 few-shot 적응 능력은 로봇 하드웨어에서도 전이 학습이 작동함을 입증하며, 다중 로봇 협업은 소프트웨어 멀티에이전트 시스템의 물리적 구현체다.
+
+> 💡 **교차 참조**: ER 2의 고수준 계획 + VLA의 저수준 실행 구조는 [프레임워크 동향](frameworks-overview.md)의 프롬프트→루프→그래프 계층 모델(11차 갱신)에서 루프 계층에 해당 — 에이전트의 지각-추론-행동 주기를 물리적 환경에서 구현. GPT-5.6 Memory Core(위)의 장기 작업 추적과 ER 2의 다단계 작업 계획이 같은 패턴. [산업 동향](industry-trends.md)의 휴머노이드 로봇 상용화 경쟁(Tesla Optimus, Figure AI)과 직결.
+
+## DeepSeek V4-Flash-0731 — 오픈 가중치 에이전트 코딩 최강
+
+**출처**: [MarkTechPost — DeepSeek V4 Flash 0731](../records/2026-08-01-deepseek-v4-flash-0731-agentic-coding-gains.md) ⭐⭐⭐⭐⭐
+
+- **발표**: 2026년 7월 31일 (Hugging Face 공식 발표, API 퍼블릭 베타)
+- **아키텍처**: 284B 파라미터 MoE, 토큰당 13B 활성화 (재-포스트트레이닝, 구조 변경 없음)
+- **가격**: 입력 $0.14/출력 $0.28 (V4-Pro의 약 1/3). DSpark 추론 디코딩으로 60~85% 더 빠른 생성
+- **에이전트 벤치마크 (V4-Pro 프리뷰 전부 상회)**:
+  - Terminal Bench 2.1: **82.7**
+  - NL2Repo: **54.2**
+  - DeepSWE: **54.4**
+  - Toolathlon: **70.3**
+- **라이선스**: MIT (상용 온프레미스 배포 가능)
+- **한계**: 벤치마크가 DeepSeek 자체 보고 (공개되지 않은 하니스 사용), 자체 호스팅 시 최소 110GB 메모리
+
+### 오픈소스 에이전트 생태계에 미치는 영향
+V4-Flash-0731은 세 가지 측면에서 의미있는 릴리스다. 첫째, 출력 토큰당 $0.28이라는 가격은 에이전트 루프를 GPU 예산 없이도 운영 가능하게 만들어 에이전트 애플리케이션의 진입장벽을 크게 낮춘다. 둘째, 더 작고 저렴한 오픈 모델이 더 큰 V4-Pro를 모든 에이전트 벤치마크에서 상회했다는 것은 포스트트레이닝의 질이 에이전트 성능에 결정적임을 보여준다. 셋째, DSpark 추론 디코딩 통합으로 다중 툴 호출과 긴 체인이 빈번한 에이전트 시스템에서 체감 성능 개선이 직결된다.
+
+> 💡 **교차 참조**: KAT-Coder-V2.5(위)와 함께 중국 오픈소스 에이전트 코딩 생태계의 확장. 단, KAT-Coder가 코딩 특화(35B)라면 V4-Flash는 범용 에이전트(284B/13B). [프레임워크 동향](frameworks-overview.md)의 LangChain×NVIDIA NemoClaw 블루프린트(오픈 모델 기반 에이전트)와 결합 시 풀스택 오픈소스 에이전트 구축 가능. GPT-5.6 Luna(위)의 초저가 전략과 정면 경쟁 — API $0.20/$1.20 vs 자체 호스팅 $0.14/$0.28. [중국 오픈소스 프론티어](#중국-오픈소스-프론티어--kimi-k3--qwen38-2026년-7월)의 Kimi K3·Qwen3.8와 함께 중국이 오픈 가중치 생태계를 주도.
+
+## AMD Instella-MoE-16B-A3B — AMD GPU 생태계의 첫 대규모 MoE 모델
+
+**출처**: [MarkTechPost — AMD Instella-MoE-16B-A3B](../records/2026-08-02-amd-instella-moe-16b-a3b.md) ⭐⭐⭐⭐⭐
+
+- **발표**: 2026년 8월 1일
+- **핵심**: AMD Instinct MI300X/MI325X GPU로 처음부터 훈련한 완전 오픈소스 MoE 언어모델
+- **구조**: 16B 총 파라미터, 토큰당 2.8B 활성화 (고도로 희소화된 MoE)
+- **혁신 구조 2종**:
+  1. **Gated MLA (Multi-head Latent Attention)**: 어텐션 출력에 학습 가능한 게이트 추가 → 토큰별 어텐션 강도 조절, 정적 어텐션 패턴 한계 극복
+  2. **FarSkip-Collective**: 전문가 병렬 통신을 연산과 겹침 → 사전훈련 12.7% 속도 향상, 첫 토큰 생성 시간 39.2% 단축
+- **훈련**: 7.1T 토큰 사전훈련 (Nemotron-CC-v2, MegaMath, FineMath 등), 4K→64K 컨텍스트 확장, Multi-Teacher On-Policy Distillation으로 수학/코딩 성능 저하 방지
+- **성능**: 완전 오픈 모델 중 최고인 평균 76.7점 (WinoGrande 86.5, HumanEval+ 65.7)
+- **배포**: 32GB 메모리 단일 가속기 배포 가능, SGLang 추론 프레임워크 지원
+- **라이선스**: ResearchRAIL (학술/연구), 훈련 코드베이스 MIT
+
+### 하드웨어 다변화와 MoE 실용화
+Instella-MoE는 두 가지 측면에서 새로운 지형을 연다. 첫째, NVIDIA 독점 시장에 대한 AMD의 직접적 도전으로, end-to-end MoE 훈련 레시피를 AMD GPU 생태계에서 증명한 첫 대규모 공개 모델이다. 둘째, FarSkip-Collective와 Gated MLA라는 구조적 혁신은 MoE 모델의 실제 배포 장벽(통신 병목, 어텐션 효율)을 직접 해결하며, 완전한 훈련 파이프라인 공개는 연구 커뮤니티의 재현성과 학습 가속에 기여한다. 32GB 단일 가속기 배포는 상용 서비스에 충분한 스펙이다.
+
+> 💡 **교차 참조**: DeepSeek V4-Flash(284B/13B 활성)와 비교하면 Instella-MoE(16B/2.8B 활성)는 훨씬 작고 효율적인 모델 — 에이전트의 로컬 추론 계층이나 소형 작업에 적합. MAI-Cyber-1-Flash(137B/5B 활성)와 같은 희소 MoE 패러다임의 확산을 시사. [프레임워크 동향](frameworks-overview.md)의 LangChain×NVIDIA NemoClaw(오픈 모델 기반 에이전트)에서 AMD GPU로 훈련된 모델 선택지 확대. ResearchRAIL 라이선스 제약은 상업적 직접 사용을 제한하지만, MIT 훈련 코드로 자체 데이터 재훈련이 가능. [산업 동향](industry-trends.md)의 미중 AI 하드웨어 경쟁과 NVIDIA 독점 깨기 흐름.
+
 ## 관련 뉴스
 ### 6월
 - [2026년 6월 AI 모델 전쟁](../records/2026-06-24-june-2026-ai-model-war.md)
@@ -327,6 +389,9 @@ Luna의 80% 인하는 Gemini 3.5 Flash($1.50/$9.00)의 가격 파괴 전략에 �
 - [Anthropic Claude Opus 5 — 가성비 프론티어](../records/2026-07-28-anthropic-claude-opus-5-coding-agents-enterprise.md) ⭐⭐⭐⭐⭐ ⭐NEW (7/28)
 - [Microsoft MAI-Cyber-1-Flash — 사이버 방어 전용](../records/2026-07-28-microsoft-mai-cyber-1-flash-agentic-security.md) ⭐⭐⭐⭐ (7/28)
 - [GPT-5.6 Luna/Terra 가격 인하 — 가격-성능 프론티어](../records/2026-07-31-gpt-56-luna-terra-price-cuts.md) ⭐⭐⭐⭐ ⭐NEW (7/31)
+- [Gemini Robotics 2 — 전신 제어·다중 로봇 협업 Physical AI](../records/2026-07-31-gemini-robotics-2-whole-body-control.md) ⭐⭐⭐⭐⭐ ⭐NEW (7/31)
+- [DeepSeek V4-Flash-0731 — 에이전트 코딩 성능 대폭 향상](../records/2026-08-01-deepseek-v4-flash-0731-agentic-coding-gains.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/1)
+- [AMD Instella-MoE-16B-A3B — AMD GPU 완전 오픈소스 MoE](../records/2026-08-02-amd-instella-moe-16b-a3b.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/2)
 
 ## 관련 위키 문서
 - [평가 벤치마크](research-overview.md) — 모델별 에이전트 성능 리더보드
@@ -376,3 +441,9 @@ Luna의 80% 인하는 Gemini 3.5 Flash($1.50/$9.00)의 가격 파괴 전략에 �
 **7월 업데이트 (10차)**: 두 모델이 각각 **비용 효율성**과 **도메인 특화**라는 새로운 경쟁 축을 정의했다. **Claude Opus 5**는 Fable 5급 성능을 절반 가격으로 제공하며, 모델 경쟁이 "최고 성능"에서 "최고 가성비"로 전환되었음을 선언했다. Frontier-Bench 43.3%(Opus 4.8의 2배 이상)라는 벤치마크와 조절 가능한 effort 설정은 추론 비용이 보드 수준 결재 항목이 된 엔터프라이즈 현실을 직접 공략한다. Anthropic이 스스로 벤치마크 한계를 인정하고 Opus 5(제한된 작업) vs Fable 5(장기 자율 작업)라는 명확한 선택 가이드를 제시한 것은 모델 선택이 용도별로 세분화되는 성숙기 징후다.
 
 **MAI-Cyber-1-Flash**는 137B 파라미터 중 5B만 활성화하는 희소 MoE로, **도메인 특화 소형 모델이 프론티어 모델과 협력하여 최고 성능을 달성**하는 패러다임을 입증했다. CyberGym 95.95%(경쟁사 대비 +12포인트)라는 압도적 성능을 50% 비용 절감으로 달성한 것은, 에이전트 아키텍처 내 역할 분담(90% 소형 모델 + 10% 프론티어)이 새로운 최적화 전략임을 보여준다. 이는 Microsoft의 자체 모델 생태계(MAI 시리즈)가 코딩·이미지·음성·보안으로 확장되며 OpenAI 독립성을 강화하고 있음을 시사한다.
+
+**8월 2일 12차 갱신**: 세 개의 신규 모델이 각각 다른 차원에서 모델 경쟁을 확장한다. **Gemini Robotics 2**는 Physical AI라는 새로운 영역을 개척하며, 소프트웨어 에이전트의 계획-실행 분리 원칙(VLA+ER 2)을 물리적 환경에 구현했다. 200개 미만 예제로 새 로봇 바디에 적응하는 few-shot transfer와 다중 로봇 협업은 로봇 에이전트 상용화의 실마리를 보여준다. 모델 경쟁이 화면 안의 디지털 작업을 넘어 물리적 세계로 확장되는 전환점이다.
+
+**DeepSeek V4-Flash-0731**는 오픈 가중치 모델의 에이전트 역량 도약을 입증한다. V4-Pro 프리뷰를 모든 에이전트 벤치마크에서 상회했다는 것은 "더 크고 비싼 모델이 항상 더 나은 에이전트"라는 통념을 깨뜨리며, 포스트트레이닝의 질이 에이전트 성능을 결정한다는 핵심 통찰을 제공한다. MIT 라이선스와 $0.14/$0.28 가격은 GPT-5.6 Luna($0.20/$1.20)과의 본격적인 가격 경쟁을 촉발하며, 로컬 배포 옵션은 API 의존도를 낮추고 기업의 자율적 에이전트 구축을 가능하게 한다.
+
+**AMD Instella-MoE-16B-A3B**는 두 가지 새로운 축을 연다. 하드웨어 측에서 NVIDIA 독점에 대한 AMD의 직접적 도전으로, AMD GPU로 end-to-end MoE 훈련을 증명한 첫 대규모 공개 모델이다. 구조 측에서 FarSkip-Collective(통신-연산 겹침)와 Gated MLA(조건부 어텐션 게이팅)는 희소 MoE 모델의 실제 배포 장벽을 직접 해결하며, MAI-Cyber-1-Flash(137B/5B)·DeepSeek V4-Flash(284B/13B)와 함께 희소 MoE가 2026년 주류 모델 구조로 자리잡았음을 확인시킨다. 32GB 단일 가속기 배포는 에이전트의 로컬 추론 계층에 충분한 스펙이며, 완전한 훈련 파이프라인 공개는 연구 커뮤니티의 재현성 기준을 한 단계 높인다.

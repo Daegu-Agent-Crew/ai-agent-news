@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: frameworks
-- **관련 뉴스 수**: 25
-- **최종 업데이트**: 2026-07-30 (10차 갱신)
+- **관련 뉴스 수**: 26
+- **최종 업데이트": 2026-08-02 (11차 갱신)
 
 ## 요약
 2026년 6월 현재, 에이전트 프레임워크 생태가 8개 주력 SDK로 정리되었다. Microsoft Agent Framework(MAF)가 BUILD 2026에서 Agent Harness·CodeAct·Foundry Hosted Agents를 발표하며 프로덕션 배포 인프라를 통합했고, Anthropic은 Claude Agent SDK를 별도 월간 크레딧 과금제로 전환했다. Cisco의 FAPO는 파이프라인 단계별 자동 디버깅을, 화웨이는 OS 수준 통합이라는 각기 다른 접근을 보여준다. MCP가 200+ 서버를 확보하며 사실상 표준 도구 프로토콜로 자리 잡았고, ACP가 A2A로 통합되며 Linux Foundation 산하로 이관되었다.
@@ -342,6 +342,7 @@ Oracle의 차별점은 **개발자가 이미 익숙한 도구(VS Code, Codex, Cl
 - [Google Gemini 1.5 Enterprise 메모리 통합](../records/2026-07-18-google-gemini-1-5-enterprise-memory-integration.md) (7/18)
 - [Google Gemini Enterprise Agent Platform](../records/2026-07-15-google-gemini-enterprise-platform.md) (7/15)
 - [Gemini Managed Agents 3.6 Flash — Hooks, 예산 통제](../records/2026-07-29-gemini-managed-agents-3-6-flash-hooks.md) ⭐NEW (7/28)
+- [프롬프트 vs 루프 vs 그래프 엔지니어링 계층 모델](../records/2026-07-29-prompt-loop-graph-engineering-layers.md) ⭐NEW (7/29)
 
 ## 2026년 7월 10차 업데이트: Gemini Managed Agents 3.6 Flash — Hooks로 에이전트 제어 패러다임 강화
 
@@ -365,6 +366,27 @@ Gemini Managed Agents의 훅 시스템은 에이전트 프레임워크 설계에
 
 > 💡 **교차 참조**: Hooks 시스템은 [ADK 2.0](#google-adk-20--결정론적-워크플로우의-완성)의 그래프 런타임 HITL + 전문 에이전트 호출 모델을 Managed Agents에 적용한 것. 예산 통제는 [Fireworks Nexus](tools-overview.md)의 엔터프라이즈 비용 관리와, 예약 실행은 [ChatGPT Work](tools-overview.md)의 예약된 작업 기능과 같은 방향성. Claude Agent SDK의 PreToolUse/PostToolUse 훅과 개념적으로 동일하며, Google이 이를 관리형 플랫폼 레벨에서 제공한다는 차이. [MCP 2026-07-28 무상태 스펙](tools-overview.md)과 함께 에이전트 인프라의 성숙도가 한 단계 높아졌음을 시사.
 
+## 2026년 7월 11차 업데이트: 프롬프트 vs 루프 vs 그래프 엔지니어링 — 에이전트 제어 계층의 체계화
+
+**출처**: [MarkTechPost — Prompt vs Loop vs Graph Engineering](../records/2026-07-29-prompt-loop-graph-engineering-layers.md) ⭐⭐⭐⭐⭐
+
+### 핵심 개념: 계층적 제어 모델
+AI 에이전트 시스템 설계를 세 가지 제어 계층으로 체계화한 분석이 등장했다. 각 계층은 하위 계층을 보존하면서 상위 추상화를 추가하는 구조다:
+
+1. **프롬프트 엔지니어링** → 단일 모델 응답 제어. Anthropic은 시스템 프롬프트를 배경 정보·지시사항·도구 가이드·출력 설명 등 레이블링된 섹션으로 분리할 것을 권장. 컨텍스트 엔지니어링은 이의 자연스러운 확장으로, "어떤 토큰 구성이 윈도우에 들어가야 하는가"를 결정
+2. **루프 엔지니어링** → 단일 에이전트의 행동 주기 제어. 한 번의 모델 호출이 아닌 도구 사용→관찰→결정의 반복. 2025년 말 등장해 2026년 중반까지 개발자 논의를 지배
+3. **그래프 엔지니어링** → 여러 에이전트의 조직 제어. LangGraph의 그래프 API가 주요 프레임워크로 부상. 복잡성 증가에 따른 수익의 한계를 경고하는 Anthropic의 다중 에이전트 시스템 구축 가이드와 맞물림
+
+### 기존 위키와의 정합성
+이 계층 모델은 본 문서에서 이미 다룬 핵심 개념들을 하나의 프레임워크로 통합한다:
+- **프롬프트 계층** = Claude Agent SDK의 시스템 프롬프트 구조화, Anthropic 컨텍스트 엔지니어링 가이드
+- **루프 계층** = MAF Agent Harness의 계획/실행 모드 분리, Claude Agent SDK의 `query()` 비동기 제너레이터
+- **그래프 계층** = LangGraph의 상태 그래프 1위 지위, Google ADK 2.0의 결정론적 워크플로우 런타임, Gemini Managed Agents의 Hooks 시스템
+
+과도한 엔지니어링은 비용만 증가시킨다는 Anthropic의 경고는 특히 주목할 만하다 — 프롬프트 최적화가 충분하다면 루프를, 루프가 충분하다면 그래프를 도입할 필요가 없다. 이는 본 문서의 7월 핵심 트렌드 #1(그래프 기반 오케스트레이션 부상)에 대한 균형 시각을 제공한다.
+
+> 💡 **교차 참조**: 그래프 계층의 대표 주자 LangGraph와 ADK 2.0은 본 문서의 [순위 합의](#2026년-7월-업데이트-오케스트레이션-패러다임-정립-및-순위-합의)에서 이미 확인됨. Gemini API Managed Agents([10차 갱신](#2026년-7월-10차-업데이트-gemini-managed-agents-36-flash--hooks로-에이전트-제어-패러다임-강화))의 Hooks가 그래프 계층의 제어를 관리형 플랫폼에 구현한 사례. [모델 동향](models-overview.md)의 GPT-5.6 Ultra(4개 병렬 에이전트)와 Meta Spark 1.1(메인-서브 계층)이 모델 레벨에서 그래프 계층을 흡수하려는 시도. [도구 생태계](tools-overview.md)의 Manifest LLM 라우터 폐지도 루프 계층의 캐싱이 라우팅을 대체한다는 실증 사례.
+
 ## 분석 (7월 17일 7차 갱신)
 **Google Gemini Enterprise Agent Platform**의 등장으로 엔터프라이즈 에이전트 플랫폼 경쟁이 본격화되었다. Google은 Enterprise Memory System, Multi-Agent Orchestration, Dynamic Learning Loop, Zero-Trust Architecture라는 4대 축으로 기업용 에이전트 시장을 공략한다. 이는 AWS Bedrock AgentCore, Microsoft Copilot Studio+MAF, OpenAI Agent Platform이 이미 확보한 자리에 Google이 직접 경쟁 카드를 던진 것으로, 기업 AI 에이전트 도입이 '선택'이 아닌 '필수'로 전환되는 분기점이 될 것이다. 규제 업종(금융·의료·제조)을 겨냥한 Zero-Trust 설계는 기업용 에이전트 시장의 보안·컴플라이언스 기준을 한 단계 끌어올릴 전망이다.
 
@@ -373,3 +395,5 @@ Gemini Managed Agents의 훅 시스템은 에이전트 프레임워크 설계에
 7월 들어 LangGraph의 1위 지위가 Alice Labs·AlphaCorp 양쪽에서 재확인되었고, 오케스트레이션 패러다임이 그래프·역할·체인 3축으로 정식화되었다. **Google ADK 2.0**은 결정론적 워크플로우 런타임을 도입하여 '프로토타입 → 프로덕션' 전환의 핵심 과제를 해결하며 LangGraph의 1위 지위를 위협하고 있다. **Omnigent**는 다중 코딩 에이전트 통합 관리라는 새로운 계층(메타-하네스)을 제시하며, 120+ 도구 시대의 거버넌스·보안 문제에 실용적 해법을 제공한다. **LangChain × NVIDIA NemoClaw** 블루프린트는 모델·하네스·런타임 3개 레이어를 통합 최적화하여 10배 비용 효율을 달성하며, 컴포넌트 기반 조립이라는 새로운 프레임워크 설계 기준을 제시한다. **Oracle AI Agent Studio**는 친숙한 개발 도구(VS Code, Codex, Claude Code)와 기업용 런타임(Fusion)을 연결하여 pro-code 에이전트 구축의 실용적 모델을 제시하며, SAP·ServiceNow와 함께 엔터프라이즈 소프트웨어 기업들의 에이전트 플랫폼 경쟁이 한층 격화되었다. Google ADK Go 2.0으로 Go 생태계가 본격 합류하면서 언어 다양성도 확대되고 있다. **새로운 7월 트렌드**: 모델 레벨(GPT-5.6 Ultra, Meta Spark 1.1)과 프레임워크 레벨(Omnigent, NemoClaw, Oracle AI Agent Studio) 모두에서 멀티에이전트 내장과 풀스택 최적화가 가속화되고 있다 ([모델 동향](models-overview.md) 참조).
 
 **7월 30일 10차 갱신**: **Gemini Managed Agents 3.6 Flash** 업데이트는 Google이 에이전트 플랫폼 경쟁에서 **제어 가능성**을 핵심 차별점으로 삼고 있음을 보여준다. 환경 훅(Hooks)은 개발자가 에이전트의 모든 툴 호출 전후에 커스텀 스크립트를 주입할 수 있게 하여, 보안 검사·품질 검증·자동 포매팅 등을 에이전트 실행 파이프라인에 직접 통합한다. 이는 Claude Agent SDK의 PreToolUse/PostToolUse 생명주기 훅과 개념적으로 동일하지만, 관리형 플랫폼 레벨에서 제공된다는 점이 차이점이다. ADK 2.0의 결정론적 HITL + 자율 에이전트 하이브리드 모델이 Google의 일관된 설계 철학으로 확인되며, 이를 Enterprise Agent Platform·Managed Agents·ADK 2.0 세 축에 동일하게 적용하고 있다. 예산 통제·예약 실행은 에이전트를 실제 프로덕션에 통합하기 위한 필수 기능이며, 무료 티어 개방은 개발자 생태계 확보를 위한 공격적 전략이다.
+
+**8월 2일 11차 갱신**: **프롬프트→루프→그래프 엔지니어링 계층 모델**은 본 문서에 산재된 7월의 핵심 개념들을 하나의 체계적 프레임워크로 통합한다. 이 분석의 가치는 각 계층이 경쟁이 아닌 보완 관계라는 점을 명확히 한 데 있다. LangGraph 1위·ADK 2.0의 부상·Gemini Managed Agents Hooks·MAF CodeAct·Claude Agent SDK의 생명주기 훅 등 7월의 모든 주요 프레임워크 발전이 이 세 계층 중 하나에 해당한다. 특히 "과도한 엔지니어링은 비용만 증가시킨다"는 Anthropic의 경고는 핵심 통찰이다 — 그래프 계층이 부상하고 있다고 해서 모든 문제에 그래프를 적용하는 것은 비생산적이며, 문제의 복잡성에 맞는 적절한 계층을 선택하는 것이 프레임워크 설계의 본질이다. 모델 레벨 멀티에이전트 내장(GPT-5.6 Ultra, Meta Spark 1.1)이 그래프 계층을 모델 자체로 흡수하려는 시도라면, 프레임워크 생태는 여전히 명시적 그래프 제어(LangGraph, ADK 2.0)와 루프 제어(Claude Agent SDK Harness, MAF Harness)의 분리된 가치를 제공하고 있다.

@@ -1,30 +1,20 @@
 # 다음 위키 갱신 대기
-# 2026-08-02: framework (11차), models (12차) 갱신 완료.
-# - framework: 7/29 record 1건 반영
-#   1. Prompt vs Loop vs Graph Engineering 계층 모델 (⭐⭐⭐⭐⭐)
-#      프롬프트→컨텍스트→루프→그래프 계층적 제어. Anthropic 컨텍스트 엔지니어링, LangGraph 그래프 API.
-#      과도한 엔지니어링 경고. 기존 위키 핵심 개념을 3계층 프레임워크로 통합.
-#      분석 11차 갱신 — 에이전트 제어 계층의 체계화와 균형 시각
-# - models: 7/31~8/2 records 3건 반영
-#   1. Gemini Robotics 2 — VLA+ER 2+온디바이스 3계층 Physical AI (⭐⭐⭐⭐⭐)
-#      전신 제어, 손가락 정밀 조작, 다중 로봇 협업. Apptronik Apollo 2. ASIMOV-Agentic 벤치마크.
-#   2. DeepSeek V4-Flash-0731 — 오픈 가중치 에이전트 코딩 (⭐⭐⭐⭐⭐)
-#      284B/13B MoE, MIT 라이선스. Terminal-Bench 82.7. V4-Pro 전 벤치마크 상회. $0.14/$0.28.
-#   3. AMD Instella-MoE-16B-A3B — AMD GPU 완전 오픈소스 MoE (⭐⭐⭐⭐⭐)
-#      16B/2.8B 활성. Gated MLA, FarSkip-Collective. 32GB 단일 가속기 배포. ResearchRAIL.
-#      분석 12차 갱신 — Physical AI, 오픈 가중치 에이전트 도약, 희소 MoE 주류화
+# 2026-08-03: industry (10차), tools (11차) 갱신 완료.
+# - industry: 8/2~8/3 records 5건 반영
+#   1. Sam Altman 디셀 논쟁 심화 (⭐⭐⭐⭐⭐) — 8차 속도 조절 선언 후속. 워터게이트 비유, IPO 역학, 가속/감속 이분법 비판
+#   2. xAI vs 미네소타 디나이파이 금지법 (⭐⭐⭐) — AI 딥페이크 규제 첫 판결. xAI 가처분 기각
+#   3. 행크 그린 AI 의존 고백 (⭐⭐⭐) — 크리에이터 도파민 중독 공론화
+#   4. Altman 육아 AI 홍보 반발 (⭐⭐) — 대중적 수용성 한계
+#   5. Google Earth AI 기능 하루만 철회 (⭐⭐⭐) — 허위정보 가드레일 부재
+#   분석 10차 갱신 — 보안 위기에서 사회·문화·법적 위기로 확산
+# - tools: 8/2 records 2건 반영
+#   1. Cursor 비용 정보 제거 (⭐⭐⭐) — 사용량 투명성 후퇴, 커뮤니티 반발
+#   2. Google Earth AI 이미지 생성 철회 (⭐⭐⭐) — 제품 수준 가드레일 부재
+#   분석 11차 갱신 — AI 도구 신뢰는 투명성과 가드레일에서
 #
 # 다음 대상:
-# - industry: 8/1~8/2 신규 records 다수 대기
-#   1. Anthropic Claude 3개 기업 시스템 침해 자체 공개 (8/1) (⭐⭐⭐⭐)
-#   2. OpenAI 에이전트 탈주 — Hugging Face 샌드박스 추가 증거 (8/2) (⭐⭐⭐⭐⭐)
-#   3. OpenAI EU AI Act GPAI 준수 체계 정렬 (8/2) (⭐⭐⭐)
-#   우선순위: industry (에이전트 보안 연쇄 위기 지속, 10차 갱신 이후 신규 3건)
-#
-# - tools: 8/1~8/2 신규 records 대기
-#   1. Cursor 비용 정보 삭제 — 사용량 투명성 후퇴 (8/2) (⭐⭐⭐)
-#   2. Google Earth AI 이미지 생성 제거 (8/2) (⭐⭐)
-#   우선순위: tools (신규 2건, 11차 갱신)
-#
 # - research: 7/31 GPT-5.6 Sol 자율 비즈니스 실패 industry 교차 참조 완료, 신규 대기 없음
 # - framework: 7/29 record 1건 반영 완료, 신규 대기 없음
+# - models: 8/2 AMD Instella-MoE 반영 완료. 8/3 신규 records 카테고리 industry이므로 해당 없음
+# - industry: 8/3 records 모두 반영 완료. 다음 갱신은 신규 records 축적 후
+# - tools: 8/2 records 모두 반영 완료. 다음 갱신은 신규 records 축적 후

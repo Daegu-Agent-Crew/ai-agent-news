@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: industry
-- **관련 뉴스 수**: 38
-- **최종 업데이트**: 2026-08-03 (10차 갱신)
+- **관련 뉴스 수**: 43
+- **최종 업데이트**: 2026-08-05 (11차 갱신)
 
 ## 요약
 2026년 상반기, AI 에이전트 산업이 다섯 가지 축으로 전개되고 있다: (1) **모델 전쟁 격화** — Google·OpenAI·Anthropic·Microsoft·Meta가 플래그십 모델을 연달아 출시하며 용도별 경쟁이 시작됨, (2) **프레임워크 시장 재편** — Microsoft MAF가 프로덕션 배포 인프라를 통합하고 Anthropic은 에이전트 SDK를 별도 과금으로 전환, (3) **물리 세계로의 에이전트 확장** — 휴머노이드 로봇이 프로토타입을 넘어 양산·상용 배치 단계로 진입, (4) **7월 신규 동향** — 프로토콜 표준화(MCP/A2A)로 상호 운용성 확보, 에이전트 커머스 상용화, 시장 통계가 입증하는 채택 격차(79% 도입 vs 11% 생산), (5) **AI 동료 시대 개막** — GPT-Live가 자연스러운 음성 대화를, ChatGPT Work가 자율 프로젝트 실행을, GPT-5.6 × M365 Copilot이 엔터프라이즈 생산성 도구 통합을 실현하며 AI가 도구에서 협업 파트너로 진화.
@@ -90,12 +90,17 @@ Anthropic이 Claude Agent SDK를 별도 월간 크레딧 과금제(Pro $20 / Max
 - [OpenAI, EU AI Act GPAI 규정 준수 체계 공개](../records/2026-08-01-openai-eu-ai-act-gpai-code-compliance.md) ⭐⭐⭐ ⭐NEW (7/31)
 
 ### 8월
-- [Google Earth AI 이미지 생성 기능 철회](../records/2026-08-02-google-earth-ai-image-generation-removed.md) ⭐⭐⭐ ⭐NEW (8/2)
+- [Google Earth AI 이미지 생성 기능 철회](../records/2026-08-02-google-earth-ai-image-generation-removed.md) ⭐⭐⭐ (8/2)
 - [OpenAI EU AI Act GPAI 준수 체계 정렬 상세](../records/2026-08-02-openai-aligns-eu-ai-act-gpai-code.md) ⭐⭐⭐ (8/2)
-- [Sam Altman과 AI 디셀 논쟁](../records/2026-08-03-sam-altman-ai-decel-debate.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/3)
-- [미네소타 디나이파이 앱 금지법 — xAI 가처분 기각](../records/2026-08-03-xai-minnesota-nudify-ban-blocked.md) ⭐⭐⭐ ⭐NEW (8/3)
-- [행크 그린 "AI 사용이 건강하지 않다"](../records/2026-08-03-hank-green-ai-usage-not-healthy.md) ⭐⭐⭐ ⭐NEW (8/3)
-- [Sam Altman, ChatGPT로 육아 홍보에 반발](../records/2026-08-03-sam-altman-parenting-via-chatgpt.md) ⭐⭐ ⭐NEW (8/3)
+- [Sam Altman과 AI 디셀 논쟁](../records/2026-08-03-sam-altman-ai-decel-debate.md) ⭐⭐⭐⭐⭐ (8/3)
+- [미네소타 디나이파이 앱 금지법 — xAI 가처분 기각](../records/2026-08-03-xai-minnesota-nudify-ban-blocked.md) ⭐⭐⭐ (8/3)
+- [행크 그린 "AI 사용이 건강하지 않다"](../records/2026-08-03-hank-green-ai-usage-not-healthy.md) ⭐⭐⭐ (8/3)
+- [Sam Altman, ChatGPT로 육아 홍보에 반발](../records/2026-08-03-sam-altman-parenting-via-chatgpt.md) ⭐⭐ (8/3)
+- [Anthropic, Volta와 100억 달러 클라우드 계약](../records/2026-08-04-anthropic-10-billion-volta-cloud-deal.md) ⭐⭐⭐⭐ ⭐NEW (8/4)
+- [EU AI Act 제50조 투명성 규정 발효](../records/2026-08-04-eu-ai-act-article-50-transparency.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/4)
+- [Open Secure AI Alliance 설립 1주일만에 120+ 기업 확보](../records/2026-08-04-open-secure-ai-alliance-progress-one-week-in.md) ⭐⭐⭐⭐ ⭐NEW (8/4)
+- [Apple Siri AI 대개편 — 그러나 혁신은 아니다](../records/2026-08-04-apple-siri-ai-overhaul-anticlimactic.md) ⭐⭐⭐⭐ ⭐NEW (8/4)
+- [오픈가중치 모델, 프론티어 추격… 안전 격차는 잔존](../records/2026-08-04-open-weight-ai-models-closing-frontier-gap-safety-remains.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/4)
 
 ## 관련 위키 문서
 - [프레임워크 동향](frameworks-overview.md) — MAF, Claude Agent SDK, 화웨이 Agent Framework 2.0, Cisco FAPO
@@ -270,6 +275,87 @@ GPT-5.6이 Microsoft 365 Copilot의 새로운 기본 모델로 도입되었다. 
 - **AI 인프라 비용 분석 도구**: 단위 경제성 추적 (비용 격차 해결)
 
 > 💡 **교차 참조**: 보안 격차의 해결책은 [프레임워크 동향](frameworks-overview.md)의 [Omnigent](#) 정책 중심 보안·샌드박싱과 같은 방향이다. Google Gemini 1.5 Enterprise의 메모리 통합([프레임워크](frameworks-overview.md))은 신뢰 격차를 기술적으로 해결하려는 시도이나, 메모리 데이터 거버넌스라는 새로운 보안 과제를 동시에 생성한다. [Accenture Edge × Google Cloud](#중소기업-에이전트-ai-시장-확장--accenture-edge--google-cloud)의 사전 구성 솔루션이 중소기업의 이러한 격차를 줄이는 접근법이 될 수 있다.
+
+## 2026년 8월 11차 업데이트: 컴퓨팅 경쟁·규제 시행·산업 보안 연대·오픈가중치 안전 격차
+
+10차 갱신의 "보안 위기에서 사회적 시험대로"가 8월 첫째 주에 **산업 구조 재편**으로 이어졌다. 컴퓨팅 인프라 경쟁의 대규모 확전, EU AI Act 투명성 조항의 공식 시행, Nvidia 주도의 보안 연대 급속 결성, 오픈가중치 모델의 안전 격차 실증이 동시에 발생했다.
+
+### 1. Anthropic × Volta $100B — 컴퓨팅 경쟁의 대규모 확전 ⭐⭐⭐⭐
+
+**출처**: [TechCrunch — Anthropic signs $10B deal with Volta](../records/2026-08-04-anthropic-10-billion-volta-cloud-deal.md)
+
+Anthropic이 AI 클라우드 스타트업 Volta와 6년간 **100억 달러** 규모의 컴퓨팅 계약을 체결했다. 노르웨이 133MW 데이터센터에 Nvidia 차세대 **Vera Rubin** 칩 탑재.
+
+- **전략**: SpaceX·Amazon에 이은 세 번째 대규모 컴퓨팅 파트너십. 전통 클라우드(AWS/GCP/Azure) 외부에서 자원 확보
+- **의미**: [RSI × Amazon $410M](#5-recursive-superintelligence--amazon-410m--컴퓨팅이-새로운-인건비-)에 이어 컴퓨팅이 곧 AI 기업의 생존 조건임을 입증. 새로운 AI 클라우드 제공업체(Volta)의 부상은 시장 다변화 가속
+- **경쟁 구도**: OpenAI(Microsoft), Google(TPU), Anthropic(Volta+AWS+SpaceX) — 컴퓨팅 확보 전략이 기업별로 분기
+
+> 💡 **교차 참조**: [Microsoft 자체 모델 89% 비용 절감](#2-microsoft-자체-모델-89-비용-절감--openai-독립-가속-)과 대비. Microsoft는 자체 모델로 비용을 줄이는 반면, Anthropic은 외부 컴퓨팅을 대규모 확보하는 전략. [모델 동향](models-overview.md)의 추론 경제학 경쟁의 인프라 차원.
+
+### 2. EU AI Act 제50조 투명성 규정 발효 — 글로벌 기준 최초 시행 ⭐⭐⭐⭐⭐
+
+**출처**: [AI News — EU AI Act Article 50 Transparency Rules](../records/2026-08-04-eu-ai-act-article-50-transparency.md)
+
+EU AI Act 제50조가 정식 발효되어, AI 제공자·배포자에게 **3대 투명성 의무**가 부과되었다:
+
+1. **AI 상호작용 고지**: 사용자가 AI와 상호작용 중임을 명확히 알려야 함
+2. **AI 생성 콘텐츠 표시**: 합성 음성·이미지·비디오·텍스트에 기계 판독 가능 마크 의무화
+3. **딥페이크 명시**: AI 조작 콘텐츠의 조작 사실 명시
+
+- **기술적 요구**: 생성 파이프라인 전체에 워터마킹/라벨링 레이어 삽입 — 에이전트 UI/UX 설계부터 백엔드까지 전 스택 영향
+- **브뤼셀 효과**: 비유럽 기업도 글로벌 서비스에서 EU 규제를 디폴트로 채택하는 효과 예상
+- **관련**: [OpenAI EU AI Act GPAI 준수](#6-openai-eu-ai-act-gpai-준수--자율-규제에서-법적-준수로-)(9차 #6)의 C2PA+SynthID 이중 접근이 기술적 준수 수단. [미네소타 딥페이크 금지법](#2-xai-vs-미네소타--ai-딥페이크-성착취물-규제-첫-판결-)(10차 #2)과 함께 AI 생성 콘텐츠 규제의 양대 축(미국 주법 + EU 연방법) 형성
+
+### 3. Open Secure AI Alliance (OSAA) — 1주일 만에 120+ 기업, 보안 연대 가속 ⭐⭐⭐⭐
+
+**출처**: [TechCrunch — Nvidia OSAA Progress](../records/2026-08-04-open-secure-ai-alliance-progress-one-week-in.md)
+
+Nvidia가 주도하는 Open Secure AI Alliance가 설립 1주일 만에 **120개 이상의 기업**을 확보하고, 블랙햇 컨퍼런스에서 첫 제안을 발표했다.
+
+- **SAFE 워킹그룹**: AI 사이버보안 사건의 기밀 보고·영향 통지·무고분석(blame-free analysis) 가이드라인. Linux Foundation이 관리. 기존 CSIRT 모델을 AI 도메인에 적용
+- **오픈소스 기여**: Nvidia Garak(LLM 취약점 스캐너), Okta 에이전트 신원 기술, Red Hat 에이전트 거버넌스, Amazon Strands Agents + Cedar 인가 언어
+- **불참 주목**: Anthropic, OpenAI, Google은 미참여. 오픈소스 생태계 vs 폐쇄적 생태계 균열 시사
+- **의미**: [9차 갱신의 보안 연쇄 위기](#9차-업데이트-종합-분석-보안-연쇄-위기가-촉발한-세-가지-시장-형성)에 대한 산업계 자발적 대응. [Okta→Permiso $200M 인수](https://techcrunch.com/2026/07/31/okta-acquires-permiso-ai-agent-security/)와 보완적
+
+> 💡 **교차 참조**: OSAA의 SAFE 워크그룹은 [Hugging Face 침해 타임라인](#1-hugging-face-침해-상세-타임라인--45일-17600회-행동-)(9차 #1)에서 드러난 '사건 공유 부재'에 대한 직접적 대응. 중국 오픈가중치 모델에 대한 미국의 규제 압박이 결성을 촉발했다는 점에서 [Amodei의 중국 AI 우려](#4-amodei의-지정학적-분리--오픈-웨이트-vs-중국-ai)와 연결.
+
+### 4. Apple Siri AI 대개편 — "따라잡기"의 한계 ⭐⭐⭐⭐
+
+**출처**: [TechCrunch — Apple Siri AI Overhaul Anticlimactic](../records/2026-08-04-apple-siri-ai-overhaul-anticlimactic.md)
+
+Apple이 오랫동안 기다려온 Siri AI 대개편을 완성했지만, 시장이 이미 ChatGPT·Claude·Gemini가 설정한 높은 기준에 의해 "혁신적"으로 느껴지지 않는다는 평가를 받았다.
+
+- **하이브리드 아키텍처**: 온디바이스 모델(Apple Silicon Neural Engine) + 클라우드 모델 결합. 프라이버시·지연시간 이점 vs 복잡한 추론의 근본적 한계
+- **20억 대 기기 배포**: AI 대중화의 마지막 단계 — 일반 소비자의 AI 어시스턴트 경험이 당연해지는 전환점
+- **경쟁 재촉발**: Google Assistant, Samsung Bixby, Amazon Alexa와의 음성 AI 경쟁 재점화
+- **의미**: [GPT-Live 음성 AI](#ai-동료-시대-개막--음성프로젝트엔터프라이즈-삼위일체)가 설정한 기준을 Apple이 따라잡는 수준. [Gemini 작업 자동화](#축-2-모바일-에이전트-상용화--gemini-작업-자동화)의 모바일 에이전트 경쟁에 Apple이 본격 합류했으나, 선도하지는 못하는 위치
+
+### 5. 오픈가중치 모델 안전 격차 실증 — GLM-5.2, 능력은 추격·안전은 공백 ⭐⭐⭐⭐⭐
+
+**출처**: [TechCrunch — Open-weight models catch up, safety gap remains](../records/2026-08-04-open-weight-ai-models-closing-frontier-gap-safety-remains.md)
+
+AI 안전 비영리 SaferAI의 보고서에 따르면, 중국 Z.ai의 **GLM-5.2**가 사이버·생물학 능력에서 OpenAI GPT-5.5, Anthropic Claude Opus 4.7과 수개월 차이로 추격했다. 그러나 **모든 공격적 사이버·이중용도 생물학 작업을 단 한 건도 거부하지 않았다**.
+
+- **핵심 명언**: "능력의 프론티어가 리스크의 프론티어가 아니다" — SaferAI Henry Papadatos 이사
+- **근본 딜레마**: 오픈가중치 모델은 다운로드 후 가드레일 무력화·수정·파인튜닝 가능. API 기반 안전 통제는 자체 하드웨어 실행 시 무효
+- **코딩 능력 vs 해킹 능력**: 코딩이 AI 최대 수익원인 만큼, 능력 향상과 오용 제한이 근본적으로 충돌
+- **중국 규제 특성**: 정치적 콘텐츠·허위정보·사회 안정에 집중, 파국적 AI 리스크(사이버·생물)에는 관심 적음
+- **의미**: [Amodei의 오픈 웨이트 입장](#4-amodei의-지정학적-분리--오픈-웨이트-vs-중국-ai-)에서 우려한 시나리오가 실증. [Mistral Shieldstral](../records/2026-08-04-mistral-releases-shieldstral-3b-multimodal-safety-classifier.md) 같은 독립 안전 분류기가 오픈가중치 생태계의 필수 보완층으로 부상
+
+> 💡 **교차 참조**: GLM-5.2는 [연구 동향](research-overview.md) 상위 모델 표에서 오픈웨이트 최고(91점)로 기록. 능력은 프론티어 근접이나 안전은 공백이라는 평가는 [산업 통계](../records/2026-07-05-agentic-ai-statistics-2026.md)의 79% 도입/11% 생산 격차를 좁히는 또 다른 장벽. OSAA(위 #3)와 Mistral Shieldstral이 각각 산업·기술 차원의 대응.
+
+### 11차 업데이트 종합 분석: "위기 대응에서 구조 재편으로"
+
+10차까지의 위기 인식(보안 사태·사회적 반발·규제 압박)이 8월 첫째 주에 **산업 구조 재편**으로 구체화되었다:
+
+1. **컴퓨팅 경쟁 구조화**: Anthropic-Volta $100B는 단발성 계약이 아닌, AI 기업의 생존 전략으로서 컴퓨팅 다변화가 표준화되었음을 의미
+2. **규제의 기술적 구현**: EU AI Act 제50조 발효는 투명성을 법적 의무로 전환. AI 생성 콘텐츠 마킹이 모든 파이프라인에 필수 레이어로 추가
+3. **산업 보안 연대**: OSAA 120+ 기업 참여는 보안이 경쟁 요소가 아닌 **공동 인프라**임을 업계가 인정했음을 의미. 단, OpenAI·Anthropic·Google 불참은 여전히 생태계 분단
+4. **오픈가중치 안전 공백 실증**: 능력 추격을 검증하면서 동시에 안전 공백을 정량화한 SaferAI 보고서는 정책·기술 양쪽에 행동을 촉구하는 기준점
+
+> 💡 **종합 교차 참조**: EU AI Act 제50조(투명성) + OSAA(보안 연대) + SaferAI 보고서(안전 격차) + Anthropic-Volta(컴퓨팅) = AI 산업이 **'무엇을 만들 것인가'**에서 **'어떻게 안전하게 만들 것인가'**로 전환하는 4대 축. [Zuckerberg의 수십억 에이전트 비전](https://techcrunch.com/2026/07/29/zuckerberg-predicts-billions-personal-ai-agents/)이 이 프레임워크 안에서 실현되려면, 투명성·보안·안전·컴퓨팅의 4축이 모두 작동해야 한다.
+
+---
 
 ## 분석
 2026년 6월은 AI 산업의 판도가 네 개의 뚜렷한 전략적 진영으로 분열되는 달이었다. 모델 경쟁이 용도별 세분화로 전환되면서 개발자는 다중 모델 라우팅 전략을 취해야 하고, 프레임워크는 프로덕션 배포 인프라(MAF)와 수익 모델 차별화(Claude Agent SDK 과금)로 경쟁이 이동하고 있다. 동시에 AI 에이전트가 소프트웨어 경계를 넘어 물리 세계(로봇, 제조업, 물류)와 OS 수준(HarmonyOS)으로 확장되고 있다. Microsoft가 OpenAI 의존에서 벗어나 자체 모델+프레임워크를 갖춘 것은 클라우드 시장의 힘 균형을 바꿀 수 있는 가장 중요한 구조적 변화다.

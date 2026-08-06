@@ -1,9 +1,9 @@
-# 에이전트 도구 생태계 — 2026년 7월
+# 에이전트 도구 생태계 — 2026년 7~8월
 
 ## 메타데이터
 - **카테고리**: tools
-- **관련 뉴스 수**: 26
-- **최종 업데이트**: 2026-08-03 (11차 갱신)
+- **관련 뉴스 수**: 31
+- **최종 업데이트**: 2026-08-06 (12차 갱신)
 
 ## 요약
 에이전트 도구 생태계가 빠르게 분화하고 있다. 브라우저 자동화, MCP 서버, 터미널 작업 등 각 영역별 전문 도구가 등장하면서, 에이전트 개발 스택이 성숙 단계에 진입했다. MCP(Model Context Protocol)가 200+ 서버 구현체를 확보하며 사실상 표준으로 자리잡았고, 도구 간 상호운용성이 빠르게 표준화되고 있다.
@@ -334,6 +334,80 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 
 > 💡 **교차 참조**: Manifest의 결론은 [Fireworks AI Nexus](#fireworks-ai-nexus--비용-라우팅-계층)의 라우팅 접근과 **정면으로 충돌**한다. Nexus는 난이도 기반 라우팅으로 3~5배 비용 절감을 주장하지만, Manifest는 캐시가 더 효과적이라고 반박. 이 분기는 에이전트 시스템 설계의 핵심 의사결정: **라우팅(비용 절감 vs 일관성 저하)** vs **캐싱(비용 절감 + 일관성 유지)**. 또한 [Anthropic의 컨텍스트 엔지니어링 가이드](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)가 강조하는 컨텍스트 일관성과도 연관. [프레임워크 동향](frameworks-overview.md)의 Prompt→Loop→Graph 계층 모델에서, 라우터는 그래프 계층에 해당하며 과도한 복잡성을 경고하는 Anthropic의 입장을 뒷받침.
 
+## 코딩 에이전트 대전 & 인프라 혁신 (2026년 8월 12차 갱신)
+
+8월 첫째 주, 코딩 에이전트 시장에 **터미널 네이티브·멀티 에이전트·엔터프라이즈 사설 클라우드**라는 세 가지 새로운 접근이 동시에 등장했다. 동시에 Cloudflare가 엣지 추론 최적화 기법을 공개하며, 브라우저 자동화 에이전트(Hark)가 컴퓨터 사용 에이전트 경쟁에 합류했다.
+
+### Warp Agent CLI — 모든 터미널에서 작동하는 독립형 코딩 에이전트 ⭐⭐⭐
+
+**출처**: [Warp — Introducing Agent CLI](../records/2026-08-04-warp-releases-agent-cli-standalone-coding-agent.md)
+
+- **발표**: 2026년 8월 4일
+- **핵심**: Warp Terminal에 내장된 코딩 에이전트를 **독립형 CLI**로 분리. Ghostty, iTerm2, VS Code 등 모든 터미널에서 사용 가능
+- **차별점**: tmux 스타일 멀티플렉싱 아키텍처 — 에이전트 세션과 셸 간 풍부한 상호작용, 인터랙티브 앱(REPL, 디버거) 직접 제어
+- **원격 에이전트**: SSH 세션을 통해 원격 머신에서 에이전트 실행. 원격 바이너리 설치 불필요
+- **비용 최적화**: 작업 복잡도에 따라 프론티어 모델과 오픈가중치 모델 간 자동 라우팅. 월 $18 구독 또는 $10 크레딧
+- **의미**: Claude Code, Cursor, Copilot에 이은 터미널 네이티브 대안. SSH 원격 에이전트와 멀티 에이전트 오케스트레이션은 기존 CLI 에이전트의 차별화된 기능
+
+> 💡 **교차 참조**: Warp의 비용 최적화 라우팅은 [Fireworks Nexus](#fireworks-ai-nexus--코딩-에이전트-비용-라우팅-계층)의 에스컬레이션 래더와 같은 방향성. 그러나 [Manifest의 라우터 폐지 선언](#manifest-llm-라우터-폐지-선언--단일-모델-고수가-최선-)이 제기한 일관성 vs 비용 트레이드오프 논쟁과 직접 관련. [Meta Muse Code](#meta-muse-code--대규모-코드베이스-코딩-에이전트-)와 경쟁하면서 멀티 에이전트 오케스트레이션으로 차별화.
+
+### AWS × Superblocks — 사설 클라우드 Vibe Coding ⭐⭐⭐⭐
+
+**출처**: [TechCrunch — AWS Embeds Superblocks in Private Clouds](../records/2026-08-04-aws-superblocks-vibe-coding-private-cloud.md)
+
+- **발표**: 2026년 8월 3일
+- **핵심**: AWS 고객의 **사설 클라우드** 내에 바이브 코딩 도구 Superblocks를 임베드. 앱과 AI 모델의 분리(decoupling) 가속
+- **보안**: 기업의 소스 코드, API 키, DB 스키마 등 민감 정보가 외부로 나가지 않으면서 AI 코딩 혜택. 보안 정책·접근 제어 준수 기반 제공
+- **산업 의미**: 클라우드 벤더가 AI 코딩 도구를 자사 플랫폼에 통합하는 경쟁의 신호탄. Google Project IDX, Microsoft Copilot에 이어 AWS 본격 진입
+- **관련**: [Port AI Builder](#port-ai-builder--기업용-vibe-coding-플랫폼)의 엔터프라이즈 vibe coding 흐름과 같은 맥락
+
+> 💡 **교차 참조**: Superblocks의 사설 클라우드 배포는 [에이전트 보안 격차](../records/2026-07-19-ai-agent-security-gap.md)의 54% 사고 경험에 대한 인프라 차원 대응. [Azure AI Agent Service](#microsoft-azure-ai-agent-service--비즈니스-자동화의-새로운-전선)의 엔터프라이즈 통합과 같은 방향성이나, AWS는 서드파티 도구(Superblocks) 임베드로 차별화.
+
+### Cloudflare Workers AI — Kimi K2.6·GLM 5.2 대규모 추론 최적화 ⭐⭐⭐⭐
+
+**출처**: [Cloudflare Blog — Smaller Faster Safer Models](../records/2026-08-04-cloudflare-kimi-glm-workers-ai-inference.md)
+
+- **발표**: 2026년 8월 3일
+- **3단계 최적화**:
+  1. **KV 캐시 FP8 양자화**: Kimi K2.6 컨텍스트 68.6만 → 137만 토큰(2배), 64동시 요청 시 BF16 실패 → FP8 초당 2,192토큰 처리 성공
+  2. **GLM 5.2 가중치 INT4 압축**: 체크포인트 705GB → 421GB(40% 감소), GPU당 메모리 88GB → 52GB, 정확도 FP8과 동등
+  3. **캐시 무결성 보호**: 요청 간 캐시 공유의 보안 위험 방지
+- **기반**: 오픈소스 추론 프레임워크 **SGLang**. Cloudflare가 SGLang 팀과 협력하여 업스트림 기여
+- **의미**: 동일 하드웨어에서 더 많은 에이전트 인스턴스 동시 실행 가능 → 대규모 에이전트 배포 경제성 획기적 개선. 엣지에서 중국계 대형 모델의 상용 서비스 수준 제공
+
+> 💡 **교차 참조**: INT4 가중치 압축은 [모델 동향](models-overview.md)의 추론 경제학 경쟁의 인프라 차원. [Fireworks Nexus](#fireworks-ai-nexus--코딩-에이전트-비용-라우팅-계층)가 모델 선택으로 비용을 최적화한다면, Cloudflare는 **동일 모델의 서빙 효율**으로 비용을 최적화. SGLang 오픈소스 기여는 [MCP 생태계](#mcp-생태계-확장-2026년-6월7월)의 상호운용성 정신과 일치.
+
+### Hark Handoff — 브라우저 작업 자동화 에이전트 ⭐⭐⭐
+
+**출처**: [TechCrunch — Hark Previews Browser Use Agent](../records/2026-08-05-hark-handoff-browser-agent.md)
+
+- **발표**: 2026년 8월 5일
+- **핵심**: API가 없는 웹사이트(Target, Walmart, OpenTable 등)도 자유롭게 탐색해 작업 완수. 웹사이트 구조와 시각 데이터를 분석해 클릭·입력 자동 수행
+- **기술**: '다음 토큰'이 아닌 **'다음 행동'(클릭·키보드 입력)을 예측**하는 모델. GPT 5.5나 Opus 4.8보다 빠르고 저렴하다고 주장
+- **배경**: CEO Brett Adcock(Figure AI 창업자), 5월 7억 달러 시리즈 A 유치
+- **의미**: [Claude Computer Use](#claude-computer-use-anthropic--ai가-컴퓨터를-직접-조작하다)·[Gemini Task Automation](#gemini-task-automation-google--스마트폰에서-작동하는-첫-ai-에이전트)에 이어 브라우저 자동화 에이전트 경쟁 가열
+
+### Meta Muse Code — 대규모 코드베이스 코딩 에이전트 ⭐⭐⭐⭐
+
+**출처**: [TechCrunch — Meta Launches Muse Code](../records/2026-08-05-meta-muse-code-coding-agent.md)
+
+- **발표**: 2026년 8월 5일
+- **핵심**: 자체 코딩 모델 **Muse Spark**를 구동하는 터미널 기반 AI 코딩 에이전트. 단일 명령어 설치. OpenAI Codex, Anthropic Claude Code와 직접 경쟁
+- **멀티 에이전트 오케스트레이션**: 대규모 작업 시 자동으로 병렬 서브에이전트 분할 실행. 각 서브에이전트는 **격리된 워크트리**에서 작동 → 사용자 작업 사본 변경 없음. Zuckerberg 밝힌 바에 따르면 6개 기능 동시 구축 시 충돌 0건
+- **의미**: Meta가 [Llama Agent Framework](#meta-llama-agent-framework--상업용-오픈소스-에이전트-프레임워크)에 이어 코딩 에이전트 시장에 본격 진입. 멀티 에이전트 병렬 실행의 충돌 없는 작동은 산업 최초 수준
+
+> 💡 **교차 참조**: Muse Code의 병렬 서브에이전트(격리 워크트리)는 [Prime Agent](frameworks-overview.md)의 Continual Harness(에이전트가 서브에이전트를 CRUD)와 같은 방향성 — 단일 에이전트에서 멀티 에이전트 자가 조직화로 진화. [Warp Agent CLI](#warp-agent-cli--모든-터미널에서-작동하는-독립형-코딩-에이전트-)의 멀티 에이전트 오케스트레이션과 직접 경쟁. [Microsoft 자체 모델 89% 비용 절감](../records/2026-07-28-microsoft-in-house-ai-models-cut-costs-89-percent-vs-openai.md)과 같은 자체 모델 전략(Muse Spark)으로 비용 우위 확보 시도.
+
+### 12차 갱신 분석: "코딩 에이전트의 터미널 네이티브 다원화"
+
+8월 첫째 주의 5건 신규 도구는 **코딩 에이전트 시장의 폭발적 다원화**와 **인프라 최적화의 성숙**을 동시에 보여준다.
+
+**코딩 에이전트 3파전**: Warp Agent CLI(터미널 네이티브, SSH 원격), Meta Muse Code(멀티 에이전트 병렬, 자체 모델), AWS × Superblocks(사설 클라우드 vibe coding)가 각각 다른 차별점으로 코딩 에이전트 시장에 진입했다. Claude Code, Cursor, GitHub Copilot이 선도하는 시장에 3개의 새로운 접근이 동시에 등장한 것은 수요가 하나의 패러다임으로 수렴하지 않음을 시사한다. 터미널 통합 깊이(Warp), 멀티 에이전트 병렬(Muse Code), 엔터프라이즈 보안(Superblocks)이 각각 다른 고객 세그먼트를 공략한다.
+
+**인프라 최적화의 분리**: Cloudflare의 KV 캐시 양자화·INT4 압축은 [Fireworks Nexus](#fireworks-ai-nexus--코딩-에이전트-비용-라우팅-계층)의 모델 라우팅, [Manifest](#manifest-llm-라우터-폐지-선언--단일-모델-고수가-최선-)의 캐싱 전략과 함께 비용 최적화의 3가지 독립적 경로(서빙 효율·모델 선택·캐싱)가 형성되었음을 보여준다. 에이전트 배포 비용이 기술 경쟁의 핵심 축으로 굳어지고 있다.
+
+**브라우저 에이전트 확장**: Hark Handoff는 [Claude Computer Use](#claude-computer-use-anthropic--ai가-컴퓨터를-직접-조작하다)·[agent-browser](#agent-browser-vercel) 경쟁에 '다음 행동 예측'이라는 새로운 접근을 추가했다. 에이전트가 화면을 '읽는' 것에서 '행동을 예측'하는 것으로 진화하는 패러다임 전환이다.
+
 ## 공통 트렌드
 1. **MCP 표준 채택**: 도구들이 MCP 서버를 내장하면서 상호 운용성 확보. 새로운 도구는 MCP 호환이 사실상 필수
 2. **셀프 힐링**: DOM 변경 시 자동 복구 (Stagehand, agent-browser ref 시스템)
@@ -387,8 +461,13 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - [Manifest, LLM 라우터 폐지 선언](../records/2026-08-01-manifest-deprecates-llm-router-single-model-wins.md) ⭐NEW (7/31)
 
 ### 8월
-- [Cursor, 사용량 페이지 비용 정보 제거](../records/2026-08-02-cursor-removes-cost-info-from-usage.md) ⭐⭐⭐ ⭐NEW (8/2)
-- [Google Earth AI 이미지 생성 기능 철회](../records/2026-08-02-google-earth-ai-image-generation-removed.md) ⭐⭐⭐ ⭐NEW (8/2)
+- [Cursor, 사용량 페이지 비용 정보 제거](../records/2026-08-02-cursor-removes-cost-info-from-usage.md) ⭐⭐⭐ (8/2)
+- [Google Earth AI 이미지 생성 기능 철회](../records/2026-08-02-google-earth-ai-image-generation-removed.md) ⭐⭐⭐ (8/2)
+- [Warp Agent CLI — 독립형 코딩 에이전트](../records/2026-08-04-warp-releases-agent-cli-standalone-coding-agent.md) ⭐⭐⭐ ⭐NEW (8/4)
+- [AWS × Superblocks — 사설 클라우드 Vibe Coding](../records/2026-08-04-aws-superblocks-vibe-coding-private-cloud.md) ⭐⭐⭐⭐ ⭐NEW (8/4)
+- [Cloudflare Workers AI — Kimi·GLM 추론 최적화](../records/2026-08-04-cloudflare-kimi-glm-workers-ai-inference.md) ⭐⭐⭐⭐ ⭐NEW (8/4)
+- [Hark Handoff — 브라우저 작업 자동화 에이전트](../records/2026-08-05-hark-handoff-browser-agent.md) ⭐⭐⭐ ⭐NEW (8/5)
+- [Meta Muse Code — 대규모 코드베이스 코딩 에이전트](../records/2026-08-05-meta-muse-code-coding-agent.md) ⭐⭐⭐⭐ ⭐NEW (8/5)
 
 ## 관련 위키 문서
 - [평가 벤치마크](research-overview.md) — MCP Atlas로 측정하는 도구 호출 성능

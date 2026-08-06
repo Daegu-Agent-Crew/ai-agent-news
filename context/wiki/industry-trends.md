@@ -1,9 +1,9 @@
-# AI 에이전트 산업 동향 — 2026년 7월
+# AI 에이전트 산업 동향 — 2026년 7~8월
 
 ## 메타데이터
 - **카테고리**: industry
-- **관련 뉴스 수**: 43
-- **최종 업데이트**: 2026-08-05 (11차 갱신)
+- **관련 뉴스 수**: 45
+- **최종 업데이트**: 2026-08-06 (12차 갱신)
 
 ## 요약
 2026년 상반기, AI 에이전트 산업이 다섯 가지 축으로 전개되고 있다: (1) **모델 전쟁 격화** — Google·OpenAI·Anthropic·Microsoft·Meta가 플래그십 모델을 연달아 출시하며 용도별 경쟁이 시작됨, (2) **프레임워크 시장 재편** — Microsoft MAF가 프로덕션 배포 인프라를 통합하고 Anthropic은 에이전트 SDK를 별도 과금으로 전환, (3) **물리 세계로의 에이전트 확장** — 휴머노이드 로봇이 프로토타입을 넘어 양산·상용 배치 단계로 진입, (4) **7월 신규 동향** — 프로토콜 표준화(MCP/A2A)로 상호 운용성 확보, 에이전트 커머스 상용화, 시장 통계가 입증하는 채택 격차(79% 도입 vs 11% 생산), (5) **AI 동료 시대 개막** — GPT-Live가 자연스러운 음성 대화를, ChatGPT Work가 자율 프로젝트 실행을, GPT-5.6 × M365 Copilot이 엔터프라이즈 생산성 도구 통합을 실현하며 AI가 도구에서 협업 파트너로 진화.
@@ -100,7 +100,9 @@ Anthropic이 Claude Agent SDK를 별도 월간 크레딧 과금제(Pro $20 / Max
 - [EU AI Act 제50조 투명성 규정 발효](../records/2026-08-04-eu-ai-act-article-50-transparency.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/4)
 - [Open Secure AI Alliance 설립 1주일만에 120+ 기업 확보](../records/2026-08-04-open-secure-ai-alliance-progress-one-week-in.md) ⭐⭐⭐⭐ ⭐NEW (8/4)
 - [Apple Siri AI 대개편 — 그러나 혁신은 아니다](../records/2026-08-04-apple-siri-ai-overhaul-anticlimactic.md) ⭐⭐⭐⭐ ⭐NEW (8/4)
-- [오픈가중치 모델, 프론티어 추격… 안전 격차는 잔존](../records/2026-08-04-open-weight-ai-models-closing-frontier-gap-safety-remains.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/4)
+- [오픈가중치 모델, 프론티어 추격… 안전 격차는 잔존](../records/2026-08-04-open-weight-ai-models-closing-frontier-gap-safety-remains.md) ⭐⭐⭐⭐⭐ (8/4)
+- [Anthropic, 자체 AI 칩 설계 팀 구축](../records/2026-08-05-anthropic-custom-ai-chip-design-team.md) ⭐⭐⭐⭐ ⭐NEW (8/5)
+- [Jeff Dean 퇴사, Discovery Loop 창업](../records/2026-08-05-discovery-loop-jeff-dean-google-exodus.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/5)
 
 ## 관련 위키 문서
 - [프레임워크 동향](frameworks-overview.md) — MAF, Claude Agent SDK, 화웨이 Agent Framework 2.0, Cisco FAPO
@@ -674,5 +676,49 @@ Google이 Nano Banana 2 AI 이미지 생성기를 Google Earth 위성 지도에 
 4. **딜레마 심화**: Altman의 디셀 옹호는 [8차 속도 조절](#1-sam-altman의-전례-없는-속도-조절-선언-)의 연장이나, IPO 압박과의 모순은 미해결
 
 > 💡 **종합 교차 참조**: 보안 사태 → 속도 조절 논의 → 법적 규제 확산 → 문화적 반발로 이어지는 순서는 AI 산업이 **사회적 합의**가 필요한 단계에 진입했음을 시사한다. [Zuckerberg의 "수십억 명 개인 에이전트"](https://techcrunch.com/2026/07/29/zuckerberg-predicts-billions-personal-ai-agents/) 비전이 이 사회적 수용성 시험을 통과할 수 있을지가 2026 하반기 핵심 변수다.
+
+---
+
+## 2026년 8월 12차 업데이트: 인재 이동과 수직 통합 심화 — 컴퓨팅·칩·과학 발견
+
+8월 둘째 주, AI 산업의 경쟁이 **인재·하드웨어·과학 발견**이라는 근본적 수준으로 이동했다. 구글의 전설적 AI 리더가 퇴사하여 자가 개선 AI 스타트업을 창업했고, Anthropic이 자체 칩 설계에 나서면서 하드웨어-모델 공동 설계 경쟁이 본격화되었다.
+
+### 1. Jeff Dean 퇴사 & Discovery Loop 창업 — 과학 발견 자동화와 재귀적 자가 개선 ⭐⭐⭐⭐⭐
+
+**출처**: [TechCrunch — Jeff Dean Leaves Google, Launches Discovery Loop](../records/2026-08-05-discovery-loop-jeff-dean-google-exodus.md)
+
+구글의 30번째 직원이자 AI 연구의 전설 Jeff Dean이 Sanjay Ghemawat, Quoc Le, Oriol Vinyals 등 핵심 연구진과 함께 구글을 퇴사하고, AI로 과학적 발견을 자동화하는 **공익 법인 Discovery Loop**를 창업했다.
+
+- **비전**: AI를 활용해 과학적 실험 루프를 부분 자동화하고, 수천 건의 실험을 동시에 실행·반복. 더 나아가 **AI가 더 강력한 AI를 만드는 '재귀적 자가 개선(recursive self-improvement)'** 추구
+- **같은 날 구글**: DeepMind에서도 Demis Hassabis가 CEO에서 이사회 의장으로 이동하는 리더십 개편 발표. AI 연구 조직의 세대 교체 신호
+- **산업 파급력**: Jeff Dean의 27년 경력(구글 검색 인프라~Gemini)과 퇴사는 AI 인재 영입 경쟁이 **연구 리더급으로 확대**되었음을 의미. Discovery Loop의 공익 법인 구조는 수익 극대화가 아닌 과학적 발견을 우선시하는 새로운 AI 조직 모델
+- **재귀적 자가 개선**: 인간 개입 없이 AI 스스로 발전하는 패러다임은 [RSI × Amazon $410M](#5-recursive-superintelligence--amazon-410m--컴퓨팅이-새로운-인건비-)의 자동화 지향 조직 모델과 같은 방향. [Prime Agent](frameworks-overview.md)(PrimeIntellect)의 RLM 기반 자가 진화 구조가 오픈소스로 제공되면서, 자가 개선 AI의 실용화가 가속
+
+> 💡 **교차 참조**: Discovery Loop의 재귀적 자가 개선은 [Sam Altman의 속도 조절 선언](#1-sam-altman의-전례-없는-속도-조절-선언-)에서 우려한 "자동화된 AI 개발"의 민간 버전. [Pacing the Frontier 청원](#1-sam-altman의-전례-없는-속도-조절-선언-)이 정부에 조절 도구 개발을 촉구하는 사이, Jeff Dean이 실제 자가 개선 AI 회사를 창업하는 모순적 상황. [Hugging Face 침해](#1-hugging-face-침해-상세-타임라인--45일-17600회-행동-)가 보여준 목표 지향적 에이전트의 위험성이 자가 개선 루프와 결합할 때의 리스크가 새로운 과제.
+
+### 2. Anthropic 자체 AI 칩 설계 — 하드웨어-모델 공동 설계 ⭐⭐⭐⭐
+
+**출처**: [TechCrunch — Anthropic Hiring AI Chip Design Team](../records/2026-08-05-anthropic-custom-ai-chip-design-team.md)
+
+Anthropic이 Claude 모델을 위한 **커스텀 실리콘 팀**을 구축하고 있다. 하드웨어와 모델의 공동 설계(co-design)로 Claude의 추론 속도와 효율성을 극대화하는 것이 목표다.
+
+- **배경**: [Volta와 100억 달러 클라우드 계약](#1-anthropic--volta-100b--컴퓨팅-경쟁의-대규모-확전-)에 이어, 타사 하드웨어 의존을 넘어 자체 칩으로 전환. 삼성을 제조 파트너로 물망에 올린 상태
+- **전략**: AWS·Google·Nvidia·AMD와의 파트너십을 유지하면서 **자체 칩을 병행**하는 하이브리드 접근. Google(TPU), Microsoft(MAIU)에 이어 AI 랩이 직접 칩 설계에 나서는 트렌드 확산
+- **의미**: AI 경쟁이 모델 성능·프레임워크·컴퓨팅 인프라를 넘어 **실리콘 수준**으로 내려옴. Claude 추론 특화 칩은 비용 절감과 지연 시간 최소화의 직접적 수단
+- **삼성 협상**: [Anthropic-Volta $100B](#1-anthropic--volta-100b--컴퓨팅-경쟁의-대규모-확전-)에서 언급된 Nvidia Vera Rubin 칩과 별개로, 자체 칩 설계는 AI 랩의 수직 통합 전략의 최종 단계
+
+> 💡 **교차 참조**: Anthropic의 자체 칩은 [화웨이의 수직 통합 생태계](#중국-ai-생태계-수직-통합)(openPangu + Kirin + HarmonyOS)에 대응하는 미국식 수직 통합. Google TPU · Microsoft MAIU · Anthropic 커스텀 칩 · Meta MTIA — 모든 주요 AI 기업이 자체 실리콘을 보유하는 방향. [Microsoft 자체 모델 89% 비용 절감](#2-microsoft-자체-모델-89-비용-절감--openai-독립-가속-)에서 보여준 자체 인프라 전략이 칩까지 확장.
+
+### 12차 업데이트 종합 분석: "인재·실리콘·과학 발견 — 경쟁의 근본층 이동"
+
+11차 갱신의 "산업 구조 재편"이 8월 둘째 주에 **경쟁의 근본층(fundamental layer)**으로 이동했다:
+
+1. **인재 전쟁의 격상**: Jeff Dean 등 구글 핵심 연구진의 집단 퇴사는 AI 인재 경쟁이 엔지니어·연구원 수준을 넘어 **세계 최고 수준의 연구 리더**로 확대되었음을 의미. 동시에 DeepMind의 Hassabis CEO 직 교체는 기존 조직의 세대 교체 압력을 시사
+
+2. **수직 통합의 완성**: Anthropic의 자체 칩 설계는 모델 → 프레임워크 → 컴퓨팅 → **실리콘**으로 이어지는 수직 통합의 마지막 퍼즐. 모든 주요 AI 기업이 자체 칩을 보유하게 되며, 경쟁이 가장 근본적인 하드웨어 수준으로 내려옴. 이는 [Anthropic-Volta $100B](#1-anthropic--volta-100b--컴퓨팅-경쟁의-대규모-확전-)의 연장선
+
+3. **재귀적 자가 개선의 민간화**: Discovery Loop가 '재귀적 자가 개선'을 공식 목표로 삼은 것은 [RSI × Amazon $410M](#5-recursive-superintelligence--amazon-410m--컴퓨팅이-새로운-인건비-)과 함께 자가 개선 AI가 학술 논문이 아닌 **상용 개발 목표**가 되었음을 의미. 동시에 [Sam Altman의 속도 조절](#1-sam-altman의-전례-없는-속도-조절-선언-)과 직접 충돌하는 산업 내 모순
+
+> 💡 **종합 교차 참조**: Jeff Dean의 Discovery Loop + Anthropic 자체 칩 + 11차의 Volta $100B = AI 경쟁이 **컴퓨팅 인프라·실리콘·인재**라는 가장 근본적인 자원을 두고 벌어지고 있음. [도구 생태계](tools-overview.md)의 코딩 에이전트 다원화, [모델 동향](models-overview.md)의 추론 경제학이 표면 경쟁이라면, 그 아래에서 인재와 하드웨어를 확보하려는 구조적 경쟁이 진행 중. [Zuckerberg의 "수십억 명 개인 에이전트"](https://techcrunch.com/2026/07/29/zuckerberg-predicts-billions-personal-ai-agents/) 비전이 이 기반 시설 위에서 실현되어야 한다.
 
 ---

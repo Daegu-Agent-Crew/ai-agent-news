@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: industry
-- **관련 뉴스 수**: 45
-- **최종 업데이트**: 2026-08-06 (12차 갱신)
+- **관련 뉴스 수**: 47
+- **최종 업데이트**: 2026-08-07 (13차 갱신)
 
 ## 요약
 2026년 상반기, AI 에이전트 산업이 다섯 가지 축으로 전개되고 있다: (1) **모델 전쟁 격화** — Google·OpenAI·Anthropic·Microsoft·Meta가 플래그십 모델을 연달아 출시하며 용도별 경쟁이 시작됨, (2) **프레임워크 시장 재편** — Microsoft MAF가 프로덕션 배포 인프라를 통합하고 Anthropic은 에이전트 SDK를 별도 과금으로 전환, (3) **물리 세계로의 에이전트 확장** — 휴머노이드 로봇이 프로토타입을 넘어 양산·상용 배치 단계로 진입, (4) **7월 신규 동향** — 프로토콜 표준화(MCP/A2A)로 상호 운용성 확보, 에이전트 커머스 상용화, 시장 통계가 입증하는 채택 격차(79% 도입 vs 11% 생산), (5) **AI 동료 시대 개막** — GPT-Live가 자연스러운 음성 대화를, ChatGPT Work가 자율 프로젝트 실행을, GPT-5.6 × M365 Copilot이 엔터프라이즈 생산성 도구 통합을 실현하며 AI가 도구에서 협업 파트너로 진화.
@@ -97,7 +97,9 @@ Anthropic이 Claude Agent SDK를 별도 월간 크레딧 과금제(Pro $20 / Max
 - [행크 그린 "AI 사용이 건강하지 않다"](../records/2026-08-03-hank-green-ai-usage-not-healthy.md) ⭐⭐⭐ (8/3)
 - [Sam Altman, ChatGPT로 육아 홍보에 반발](../records/2026-08-03-sam-altman-parenting-via-chatgpt.md) ⭐⭐ (8/3)
 - [Anthropic, Volta와 100억 달러 클라우드 계약](../records/2026-08-04-anthropic-10-billion-volta-cloud-deal.md) ⭐⭐⭐⭐ ⭐NEW (8/4)
-- [EU AI Act 제50조 투명성 규정 발효](../records/2026-08-04-eu-ai-act-article-50-transparency.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/4)
+- [EU AI Act 제50조 투명성 규정 발효](../records/2026-08-04-eu-ai-act-article-50-transparency.md) ⭐⭐⭐⭐⭐ (8/4)
+- [AMD, Taalas 인수 — 모델 웨이트를 실리콘에 직접 새겨 추론 혁신](../records/2026-08-07-amd-acquires-taalas-models-in-silicon.md) ⭐⭐⭐⭐ ⭐NEW (8/7)
+- [Mirendil, Google Cloud와 $100M+ 파트너십 — 자가 개선 AI](../records/2026-08-07-mirendil-100m-google-cloud-self-improving-ai.md) ⭐⭐⭐⭐ ⭐NEW (8/7)
 - [Open Secure AI Alliance 설립 1주일만에 120+ 기업 확보](../records/2026-08-04-open-secure-ai-alliance-progress-one-week-in.md) ⭐⭐⭐⭐ ⭐NEW (8/4)
 - [Apple Siri AI 대개편 — 그러나 혁신은 아니다](../records/2026-08-04-apple-siri-ai-overhaul-anticlimactic.md) ⭐⭐⭐⭐ ⭐NEW (8/4)
 - [오픈가중치 모델, 프론티어 추격… 안전 격차는 잔존](../records/2026-08-04-open-weight-ai-models-closing-frontier-gap-safety-remains.md) ⭐⭐⭐⭐⭐ (8/4)
@@ -720,5 +722,47 @@ Anthropic이 Claude 모델을 위한 **커스텀 실리콘 팀**을 구축하고
 3. **재귀적 자가 개선의 민간화**: Discovery Loop가 '재귀적 자가 개선'을 공식 목표로 삼은 것은 [RSI × Amazon $410M](#5-recursive-superintelligence--amazon-410m--컴퓨팅이-새로운-인건비-)과 함께 자가 개선 AI가 학술 논문이 아닌 **상용 개발 목표**가 되었음을 의미. 동시에 [Sam Altman의 속도 조절](#1-sam-altman의-전례-없는-속도-조절-선언-)과 직접 충돌하는 산업 내 모순
 
 > 💡 **종합 교차 참조**: Jeff Dean의 Discovery Loop + Anthropic 자체 칩 + 11차의 Volta $100B = AI 경쟁이 **컴퓨팅 인프라·실리콘·인재**라는 가장 근본적인 자원을 두고 벌어지고 있음. [도구 생태계](tools-overview.md)의 코딩 에이전트 다원화, [모델 동향](models-overview.md)의 추론 경제학이 표면 경쟁이라면, 그 아래에서 인재와 하드웨어를 확보하려는 구조적 경쟁이 진행 중. [Zuckerberg의 "수십억 명 개인 에이전트"](https://techcrunch.com/2026/07/29/zuckerberg-predicts-billions-personal-ai-agents/) 비전이 이 기반 시설 위에서 실현되어야 한다.
+
+---
+
+## 2026년 8월 13차 업데이트: 실리콘 혁신과 자가 개선 AI의 상용화 가속
+
+8월 셋째 주, 12차 갱신의 "인재·실리콘·과학 발견" 경쟁이 **구체적 인수·투자**로 나타났다. AMD가 혁신적 칩 스타트업을 인수하고, 자가 개선 AI 벤처가 Google Cloud와 대규모 파트너십을 체결했다.
+
+### 1. AMD, Taalas 인수 — 모델 웨이트를 실리콘에 직접 새겨 추론 혁신 ⭐⭐⭐⭐
+
+**출처**: [The Register — AMD Acquires Taalas](../records/2026-08-07-amd-acquires-taalas-models-in-silicon.md)
+
+AMD가 캐나다 토론토 기반 AI 칩 스타트업 Taalas를 인수했다. Taalas의 핵심 기술은 AI 모델의 가중치(weight)를 실리콘에 직접 새겨 넣어(etching) HBM 없이도 초고속 추론을 수행하는 것이다.
+
+- **기술**: 모델 가중치가 새겨진 mask-ROM recall fabric + KV 캐시·LoRA 어댑터용 SRAM recall fabric. 별도 HBM 불필요
+- **성능**: 테스트 칩 HC1(TSMC 6nm)에서 Llama 3.1 8B를 초당 16,960 토큰으로 서빙 — Nvidia GPU 대비 **48배**, Cerebras 대비 **8.5배** 빠름
+- **전략**: Nvidia 독점에 대항하는 AMD의 실리콘 혁신 카드. [Anthropic 자체 칩 설계](#2-anthropic-자체-ai-칩-설계--하드웨어-모델-공동-설계-)와 다른 접근 — Anthropic은 칩을 직접 설계하지만, AMD는 인수를 통해 혁신 기술을 확보
+- **의미**: AI 추론이 "GPU + HBM" 패러다임에서 벗어나 **모델 맞춤형 실리콘**으로 전환할 수 있음을 시사. 에이전트 추론 비용 절감에 직접적 기여
+
+> 💡 **교차 참조**: [Anthropic 자체 칩 설계](#2-anthropic-자체-ai-칩-설계--하드웨어-모델-공동-설계-)(12차) + [AMD Instella-MoE](models-overview.md)(AMD GPU 훈련 모델) + Taalas 인수 = AMD가 모델 훈련(Instella)부터 실리콘(Taalas)까지 AI 인프라 생태계를 구축하려는 전략. [모델 동향](models-overview.md)의 추론 경제학 경쟁이 하드웨어 수준으로 확장.
+
+### 2. Mirendil, Google Cloud와 $100M+ 파트너십 — 자가 개선 AI 스케일업 ⭐⭐⭐⭐
+
+**출처**: [TechCrunch — Mirendil × Google Cloud](../records/2026-08-07-mirendil-100m-google-cloud-self-improving-ai.md)
+
+Anthropic 베테랑이 창업한 Mirendil이 Google Cloud와 1억 달러 이상의 멀티년 파트너십을 체결했다. 자기 개선 AI(Self-improving AI) 연구를 위해 Google TPU와 Nvidia GPU를 모두 활용할 수 있는 인프라를 확보한다.
+
+- **규모**: 시드 투자 밸류에이션(10억 달러)의 절반에 해당하는 컴퓨팅 인프라 확보
+- **인프라**: Google TPU + Nvidia GPU + 관리형 훈련 클러스터
+- **비전**: "문제를 지정하면 시간이 지날수록 점점 더 나아지는 AI 시스템" — 인간 과학자의 학습 방식 모방
+- **의미**: [Discovery Loop(Jeff Dean)](#1-jeff-dean-퇴사--discovery-loop-창업--과학-발견-자동화와-재귀적-자가-개선-)와 [RSI × Amazon $410M](#5-recursive-superintelligence--amazon-410m--컴퓨팅이-새로운-인건비-)에 이어 자가 개선 AI에 대한 세 번째 대규모 투자. 자가 개선 AI가 단일 스타트업이 아닌 **산업적 트렌드**로 부상
+
+> 💡 **교차 참조**: Jeff Dean의 Discovery Loop(12차) + RSI × Amazon $410M(11차) + Mirendil × Google $100M = 자가 개선 AI에 대한 투자가 가속화되고 있음. [Sam Altman의 속도 조절 선언](#1-sam-altman의-전례-없는-속도-조절-선언-)이 우려한 "자동화된 AI 개발"이 동시에 3곳 이상에서 상용화되고 있는 상황.
+
+### 13차 업데이트 종합 분석: "실리콘 혁신과 자가 개선 AI의 상용화 가속"
+
+1. **실리콘 혁신의 두 경로**: AMD의 Taalas 인수(모델을 실리콘에 직접 새김)와 Anthropic의 자체 칩 설계(12차)는 각각 **인수 기반 혁신**과 **자체 개발** 경로. 둘 다 "GPU + HBM" 패러다임을 넘어서려는 시도로, 추론 비용 절감이 하드웨어 수준에서 진행 중
+
+2. **자가 개선 AI의 세 번째 대규모 투자**: Discovery Loop(Jeff Dean) → RSI × Amazon $410M → Mirendil × Google $100M. 자가 개선 AI가 산업적 트렌드로 확립되고 있으며, Google과 Amazon이 각각 다른 자가 개선 AI 스타트업에 컴퓨팅을 공급하며 경쟁
+
+3. **컴퓨팅이 새로운 인건비**: Mirendil의 $100M가 인건비가 아닌 컴퓨팅에 지출된다는 것은 AI 연구의 병목이 인재에서 컴퓨팅으로 이동했음을 확인. 동시에 Jeff Dean 같은 최상위 인재가 기존 조직을 떠나 자가 개선 AI 벤처를 창업하는 것은, 인재와 컴퓨팅이 결합된 새로운 경쟁 구도를 형성
+
+> 💡 **종합 교차 참조**: AMD × Taalas + Mirendil × Google = 12차 갱신의 경쟁이 가속화되고 있음. [모델 동향](models-overview.md)의 추론 경제학이 하드웨어(Taalas)와 컴퓨팅 인프라(Mirendil) 양쪽에서 뒷받침되며, GPT-5.6 Sol의 자율 인프라 최적화가 보여준 자기 개선 루프가 더 큰 규모로 산업화되고 있음.
 
 ---

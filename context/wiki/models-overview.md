@@ -1,9 +1,9 @@
-# LLM/에이전트 모델 동향 — 2026년 7월
+# LLM/에이전트 모델 동향 — 2026년 7~8월
 
 ## 메타데이터
 - **카테고리**: models
-- **관련 뉴스 수**: 20
-- **최종 업데이트**: 2026-08-02 (12차 갱신)
+- **관련 뉴스 수**: 23
+- **최종 업데이트**: 2026-08-07 (13차 갱신)
 
 ## 요약
 2026년 6월, 14일 사이에 Google, OpenAI, Anthropic, Microsoft가 연달아 플래그십 모델을 출격했다. 더 이상 "하나의 최고 모델"이 존재하지 않으며, 용도별(가격·수학·코딩·독립성) 최적 모델이 다르다. Google은 가격 파괴, OpenAI는 수학 추론, Anthropic은 코딩 정확도, Microsoft는 자체 모델 독립성이라는 각기 다른 승부수를 던졌다. **7월 9일, OpenAI가 GPT-5.6(Sol/Terra/Luna)을 발표**하며 프론티어 모델 경쟁이 재점화되었다. 트럼프 행정부와의 2주간 규제 갈등 끝에 공개된 이 모델군은 자율 다단계 계획, 독립 도구 사용, 자기 교정 능력을 갖춘 에이전트 네이티브 모델로, 미국 정부의 사전 검토 게이트가 반복적 패턴으로 자리 잡을 가능성을 시사한다.
@@ -286,6 +286,8 @@ KAT-Coder-V2.5는 에이전트 코딩 모델의 발전이 **모델 크기 경쟁
 | Physical AI (로봇) | Gemini Robotics 2 | VLA+ER 2+온디바이스 3계층, Apollo 2 다중 로봇 협업 |
 | 에이전트 범용 (오픈) | DeepSeek V4-Flash-0731 | Terminal-Bench 82.7, MIT 라이선스, $0.14/$0.28 |
 | 초소형 MoE (오픈) | AMD Instella-MoE-16B-A3B | 16B/2.8B 활성, FarSkip·Gated MLA, AMD GPU 훈련 |
+| 에이전트 벤치마크 1위 (오픈) | Qwen3.8 Max | Artificial Analysis Agentic Index 종합 1위, 오픈 모델 최초 |
+| 안전 분류 (오픈) | Mistral Shieldstral 3B | 3B 멀티모달, Apache 2.0, 재학습 없는 정책 적응 |
 
 ### 업계 맥락
 - Cisco FAPO 벤치마크에서 GPT-4.1-mini, GPT-5.4-mini, Gemma 3-12B 사용
@@ -369,6 +371,51 @@ Instella-MoE는 두 가지 측면에서 새로운 지형을 연다. 첫째, NVID
 
 > 💡 **교차 참조**: DeepSeek V4-Flash(284B/13B 활성)와 비교하면 Instella-MoE(16B/2.8B 활성)는 훨씬 작고 효율적인 모델 — 에이전트의 로컬 추론 계층이나 소형 작업에 적합. MAI-Cyber-1-Flash(137B/5B 활성)와 같은 희소 MoE 패러다임의 확산을 시사. [프레임워크 동향](frameworks-overview.md)의 LangChain×NVIDIA NemoClaw(오픈 모델 기반 에이전트)에서 AMD GPU로 훈련된 모델 선택지 확대. ResearchRAIL 라이선스 제약은 상업적 직접 사용을 제한하지만, MIT 훈련 코드로 자체 데이터 재훈련이 가능. [산업 동향](industry-trends.md)의 미중 AI 하드웨어 경쟁과 NVIDIA 독점 깨기 흐름.
 
+## Mistral Shieldstral 3B — 오픈소스 멀티모달 안전 분류기
+
+**출처**: [Mistral AI — Shieldstral Release](../records/2026-08-04-mistral-releases-shieldstral-3b-multimodal-safety-classifier.md) ⭐⭐⭐⭐
+
+- **발표**: 2026년 8월 4일
+- **핵심**: 3B 파라미터 멀티모달 안전 분류기, **Apache 2.0** 라이선스
+- **혁신**: 자연어 정책 적응 — 재학습 없이 프롬프트로 정책을 작성하면 즉시 적용. 고정된 해악 카테고리가 아닌 배포 컨텍스트에 맞춘 유연한 모더레이션
+- **접근법**: 이진 QA(binary question-answering) 프레임워크 — 개발자가 자연어 질문을 입력하면 보정된 안전 점수(calibrated safety score) 반환. 프롬프트 분류, 응답 모더레이션, 거부 감지, 독성 탐지를 단일 인터페이스로 처리
+- **성능**: 자신보다 7배 큰 모델과 동등한 성능, 16GB GPU 단일 장비 구동
+- **의미**: 에이전트 출력 제어 가드레일이 필수 인프라가 된 시점에서, 오픈소스 경량 모델로 모든 개발자가 접근 가능. OSAA(Open Secure AI Alliance) 창립 멤버로서의 기여
+
+> 💡 **교차 참조**: MAI-Cyber-1-Flash(위)가 도메인 특화 소형 MoE로 보안 분석을 수행한다면, Shieldstral은 범용 안전 분류를 더 작은 3B 모델로 처리. [산업 동향](industry-trends.md)의 AI 보안 격차(54% 사건 경험)에 대한 오픈소스 대응.
+
+## GPT-5.6 Sol 개선 & Luna 무제한 — 사실 오류 68% 감소, 무료 채팅 개방
+
+**출처**: [OpenAI Blog — Improving GPT-5.6 Sol](../records/2026-08-07-openai-gpt-5-6-sol-luna-free-unlimited.md) ⭐⭐⭐⭐⭐
+
+- **발표**: 2026년 8월 6일
+- **핵심 개선**:
+  - **Sol**: 더 직접적인 응답, 불필요한 포맷팅 제거, 사실 기반 답변 신뢰성 향상
+  - **사실 오류율**: GPT-5.5 Instant 대비 Luna **62%**, Sol **68% 감소** (금융·의료·법률 분야)
+  - **Luna 무제한**: 무료 사용자에게 GPT-5.6 Luna 기반 **무제한 텍스트 채팅** + Think 버튼 제공
+- **경험 통합**: 기존 Instant 모드와 Thinking 모드의 톤·스타일 불일치 해소. Plus/Pro는 슬라이더로 사고량 조절
+- **전략**: 10억 주간 사용자 기반의 품질 향상으로 사용자 유지. 무료 무제한 Luna로 경쟁사(Gemini, Claude) 무료 티어와 차별화
+
+### 에이전트 품질의 신뢰성 도약
+사실 오류 68% 감소는 에이전트 시스템에 직접적 영향을 미친다. 다단계 에이전트 워크플로우에서 중간 단계의 사실 오류는 후속 단계로 전파되어 최종 결과의 신뢰성을 극적으로 저하시킨다. Sol의 정확도 향상은 에이전트 체인의 **오류 누적(error propagation)** 을 줄여, 금융·의료·법률 등 높은 정확도가 요구되는 에이전트 애플리케이션의 신뢰 구간을 넓힌다.
+
+> 💡 **교차 참조**: GPT-5.6 Luna/Terra 가격 인하(아래)의 연장선 — Luna가 무료 무제한으로까지 확대되며, 초저가 전략이 "무료"라는 극단점에 도달. Gemini 3.5 Flash의 무료 1,500회/일과의 무료 티어 경쟁 격화. 사실 오류 68% 감소는 Claude 3.5 Sonnet(위)의 다단계 계획·맥락 유지와 보완적 — 추론 정확도 + 맥락 유지의 결합이 에이전트 신뢰성의 핵심.
+
+## Qwen3.8 Max — 에이전트 벤치마크 종합 1위, 오픈 모델의 새로운 이정표
+
+**출처**: [Artificial Analysis — Agentic Index](../records/2026-08-07-qwen-3-8-max-tops-agentic-index.md) ⭐⭐⭐⭐
+
+- **발표**: 2026년 8월 6일 (Artificial Analysis 독립 평가)
+- **핵심**: Alibaba Qwen3.8 Max가 Artificial Analysis **Agentic Index 종합 1위** 달성 — 중국 오픈 모델이 글로벌 에이전트 벤치마크 정상을 차지한 첫 사례
+- **평가 영역**: 추론 능력, 도구 사용, 다단계 작업 수행 등 에이전트 종합 능력
+- **반응**: HN 377포인트, 242댓글 — 기술 커뮤니티 뜨거운 반응
+- **의미**: 이전 세대를 넘어 GPT 시리즈와 Claude 모델을 종합 지표에서 추월. 오픈 웨이트 모델이 프롭리어터리 모델에 필적하거나 능가한다는 논쟁에 실증적 근거 추가
+
+### 오픈 모델의 에이전트 역량 입증
+Qwen3.8 Max의 Agentic Index 1위는 [중국 오픈소스 프론티어](#중국-오픈소스-프론티어--kimi-k3--qwen38-2026년-7월) 섹션에서 다룬 Kimi K3·Qwen3.8(7월 공개)의 연장선이다. 7월에는 "미국 최상위 모델과 경쟁" 수준이었다면, 8월에는 독립 벤치마크에서 **정상을 차지**한 것. 추론·도구 사용·다단계 작업에서 오픈 모델이 폐쇄형 모델을 능가한다는 것은, 에이전트 구축 시 모델 선택의 기준이 "오픈 vs 클로즈드"가 아닌 "용도별 최적"으로 완전히 전환되었음을 시사한다.
+
+> 💡 **교차 참조**: DeepSeek V4-Flash(위)와 KAT-Coder-V2.5(위)에 이어 Qwen3.8 Max까지 — 중국 오픈 모델이 코딩 특화(35B) → 범용 에이전트(284B/13B) → 에이전트 종합 1위(2.4조)로 영역을 확장. [산업 동향](industry-trends.md)의 미중 AI 패권 경쟁에서 오픈소스가 중국의 핵심 전략임을 재확인.
+
 ## 관련 뉴스
 ### 6월
 - [2026년 6월 AI 모델 전쟁](../records/2026-06-24-june-2026-ai-model-war.md)
@@ -391,7 +438,10 @@ Instella-MoE는 두 가지 측면에서 새로운 지형을 연다. 첫째, NVID
 - [GPT-5.6 Luna/Terra 가격 인하 — 가격-성능 프론티어](../records/2026-07-31-gpt-56-luna-terra-price-cuts.md) ⭐⭐⭐⭐ ⭐NEW (7/31)
 - [Gemini Robotics 2 — 전신 제어·다중 로봇 협업 Physical AI](../records/2026-07-31-gemini-robotics-2-whole-body-control.md) ⭐⭐⭐⭐⭐ ⭐NEW (7/31)
 - [DeepSeek V4-Flash-0731 — 에이전트 코딩 성능 대폭 향상](../records/2026-08-01-deepseek-v4-flash-0731-agentic-coding-gains.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/1)
-- [AMD Instella-MoE-16B-A3B — AMD GPU 완전 오픈소스 MoE](../records/2026-08-02-amd-instella-moe-16b-a3b.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/2)
+- [AMD Instella-MoE-16B-A3B — AMD GPU 완전 오픈소스 MoE](../records/2026-08-02-amd-instella-moe-16b-a3b.md) ⭐⭐⭐⭐⭐ (8/2)
+- [Mistral Shieldstral 3B — 멀티모달 안전 분류기, Apache 2.0](../records/2026-08-04-mistral-releases-shieldstral-3b-multimodal-safety-classifier.md) ⭐⭐⭐⭐ ⭐NEW (8/4)
+- [GPT-5.6 Sol 개선 & Luna 무제한 — 사실 오류 68% 감소](../records/2026-08-07-openai-gpt-5-6-sol-luna-free-unlimited.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/7)
+- [Qwen3.8 Max — Agentic Index 종합 1위](../records/2026-08-07-qwen-3-8-max-tops-agentic-index.md) ⭐⭐⭐⭐ ⭐NEW (8/7)
 
 ## 관련 위키 문서
 - [평가 벤치마크](research-overview.md) — 모델별 에이전트 성능 리더보드
@@ -447,3 +497,9 @@ Instella-MoE는 두 가지 측면에서 새로운 지형을 연다. 첫째, NVID
 **DeepSeek V4-Flash-0731**는 오픈 가중치 모델의 에이전트 역량 도약을 입증한다. V4-Pro 프리뷰를 모든 에이전트 벤치마크에서 상회했다는 것은 "더 크고 비싼 모델이 항상 더 나은 에이전트"라는 통념을 깨뜨리며, 포스트트레이닝의 질이 에이전트 성능을 결정한다는 핵심 통찰을 제공한다. MIT 라이선스와 $0.14/$0.28 가격은 GPT-5.6 Luna($0.20/$1.20)과의 본격적인 가격 경쟁을 촉발하며, 로컬 배포 옵션은 API 의존도를 낮추고 기업의 자율적 에이전트 구축을 가능하게 한다.
 
 **AMD Instella-MoE-16B-A3B**는 두 가지 새로운 축을 연다. 하드웨어 측에서 NVIDIA 독점에 대한 AMD의 직접적 도전으로, AMD GPU로 end-to-end MoE 훈련을 증명한 첫 대규모 공개 모델이다. 구조 측에서 FarSkip-Collective(통신-연산 겹침)와 Gated MLA(조건부 어텐션 게이팅)는 희소 MoE 모델의 실제 배포 장벽을 직접 해결하며, MAI-Cyber-1-Flash(137B/5B)·DeepSeek V4-Flash(284B/13B)와 함께 희소 MoE가 2026년 주류 모델 구조로 자리잡았음을 확인시킨다. 32GB 단일 가속기 배포는 에이전트의 로컬 추론 계층에 충분한 스펙이며, 완전한 훈련 파이프라인 공개는 연구 커뮤니티의 재현성 기준을 한 단계 높인다.
+
+**8월 7일 13차 갱신**: 세 개의 신규 모델이 각각 다른 차원에서 모델 경쟁을 심화시킨다. **Mistral Shieldstral 3B**는 안전 분류라는 비주도 카테고리에서 오픈소스의 가치를 증명한다. 3B 파라미터로 7배 큰 모델과 동등한 성능, 재학습 없는 정책 적응, Apache 2.0 라이선스는 에이전트 가드레일 인프라를 모든 개발자가 구축할 수 있게 만든다. 이는 MAI-Cyber-1-Flash(보안 분석 특화)와 함께 도메인 특화 소형 모델이 프론티어 모델과 협력하는 에이전트 역할 분담 패러다임의 확장이다.
+
+**GPT-5.6 Sol 개선**은 사실 오류 68% 감소라는 수치로 에이전트 신뢰성의 실용적 도약을 보여준다. 다단계 에이전트 워크플로우에서 중간 단계의 사실 오류가 후속 단계로 전파되는 오류 누적 문제를 직접 해결하며, 금융·의료·법률 분야 에이전트의 신뢰 구간을 넓힌다. Luna 무제한 무료 채팅은 GPT-5.6 제품군의 3단 가격 계층을 "프리미엄 → 중간 → 초저가 → 무료"로 확장하며, Gemini 3.5 Flash 무료 티어와의 경쟁을 격화시킨다.
+
+**Qwen3.8 Max**는 독립 평가 기관 Artificial Analysis의 Agentic Index에서 오픈 모델 최초로 종합 1위를 차지했다. 이는 7월 Kimi K3·Qwen3.8 발표 시 "미국 최상위 모델과 경쟁"이라는 주장이 독립 검증을 거친 것으로, 오픈 웨이트 모델이 프롭리어터리 모델을 능가하는 새로운 이정표다. 핵심 시사점은 세 가지: 첫째, 추론·도구 사용·다단계 작업에서 오픈 모델이 리더십을 확보. 둘째, 중국이 오픈소스를 통한 글로벌 에이전트 생태계 주도 전략을 지속. 셋째, 모델 선택 기준이 "오픈 vs 클로즈드"에서 "용도별 최적"으로 완전히 전환되었음을 확인.

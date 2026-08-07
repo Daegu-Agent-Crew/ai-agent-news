@@ -1,19 +1,17 @@
 # 다음 위키 갱신 대기
-# 2026-08-06: tools (12차), industry (12차) 갱신 완료.
-# - tools: 8/4~5 records 5건 반영
-#   1. Warp Agent CLI (⭐⭐⭐) — 터미널 네이티브 코딩 에이전트, SSH 원격, 멀티 에이전트 오케스트레이션
-#   2. AWS × Superblocks (⭐⭐⭐⭐) — 사설 클라우드 vibe coding, 앱-모델 분리
-#   3. Cloudflare Workers AI (⭐⭐⭐⭐) — KV 캐시 FP8 양자화, GLM INT4 압축, SGLang 기반
-#   4. Hark Handoff (⭐⭐⭐) — 브라우저 작업 자동화, '다음 행동' 예측 모델
-#   5. Meta Muse Code (⭐⭐⭐⭐) — 대규모 코드베이스, Muse Spark, 병렬 서브에이전트 격리 워크트리
-#   분석 12차 갱신 — 코딩 에이전트 3파전 + 인프라 최적화 3경로(서빙/라우팅/캐싱)
-# - industry: 8/5 records 2건 반영
-#   1. Anthropic 자체 AI 칩 설계 팀 (⭐⭐⭐⭐) — 하드웨어-모델 공동 설계, 삼성 제조 물망
-#   2. Jeff Dean 퇴사 & Discovery Loop 창업 (⭐⭐⭐⭐⭐) — 과학 발견 자동화, 재귀적 자가 개선, 공익 법인
-#   분석 12차 갱신 — 경쟁의 근본층 이동 (인재·실리콘·과학 발견)
+# 2026-08-07: models (13차), industry (13차) 갱신 완료.
+# - models: 8/4~7 records 3건 반영
+#   1. Mistral Shieldstral 3B (⭐⭐⭐⭐) — 3B 멀티모달 안전 분류기, Apache 2.0, 재학습 없는 정책 적응
+#   2. GPT-5.6 Sol 개선 & Luna 무제한 (⭐⭐⭐⭐⭐) — 사실 오류 68% 감소, 무료 무제한 채팅
+#   3. Qwen3.8 Max (⭐⭐⭐⭐) — Artificial Analysis Agentic Index 종합 1위, 오픈 모델 최초
+#   분석 13차 갱신 — 안전 분류 오픈소스 + 에이전트 신뢰성 도약 + 오픈 모델 벤치마크 정상
+# - industry: 8/7 records 2건 반영
+#   1. AMD × Taalas (⭐⭐⭐⭐) — 모델 웨이트를 실리콘에 직접 새겨 48배 빠른 추론, HBM 불필요
+#   2. Mirendil × Google Cloud $100M+ (⭐⭐⭐⭐) — 자가 개선 AI, Anthropic 베테랑 창업, TPU+GPU 활용
+#   분석 13차 갱신 — 실리콘 혁신(인수 vs 자체) + 자가 개선 AI 3번째 대규모 투자
 #
 # 다음 대상:
 # - framework: 8/5 신규 Prime Agent (RLM 기반 자가 진화 코딩 에이전트) — 대기
-# - models: 8/4 신규 Mistral Shieldstral 3B (안전 분류기, Apache 2.0), Cloudflare Kimi K2.6/GLM 5.2 추론 최적화 — 대기 (Cloudflare는 tools에 반영 완료, models에는 추론 효율 관점만)
-# - tools: 8/4~5 모두 반영 완료. 다음 갱신은 신규 records 축적 후
-# - industry: 8/5 모두 반영 완료. 다음 갱신은 신규 records 축적 후
+# - tools: 8/7 신규 Cloudflare Kitesurf (에이전트 전용 브라우저, V8 isolate 기반) — 대기
+# - models: 8/4~7 모두 반영 완료. 다음 갱신은 신규 records 축적 후
+# - industry: 8/7 모두 반영 완료. 다음 갱신은 신규 records 축적 후

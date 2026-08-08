@@ -3,7 +3,7 @@
 ## 메타데이터
 - **카테고리**: frameworks
 - **관련 뉴스 수**: 26
-- **최종 업데이트**: 2026-08-02 (11차 갱신)
+- **최종 업데이트**: 2026-08-08 (12차 갱신)
 
 ## 요약
 2026년 6월 현재, 에이전트 프레임워크 생태가 8개 주력 SDK로 정리되었다. Microsoft Agent Framework(MAF)가 BUILD 2026에서 Agent Harness·CodeAct·Foundry Hosted Agents를 발표하며 프로덕션 배포 인프라를 통합했고, Anthropic은 Claude Agent SDK를 별도 월간 크레딧 과금제로 전환했다. Cisco의 FAPO는 파이프라인 단계별 자동 디버깅을, 화웨이는 OS 수준 통합이라는 각기 다른 접근을 보여준다. MCP가 200+ 서버를 확보하며 사실상 표준 도구 프로토콜로 자리 잡았고, ACP가 A2A로 통합되며 Linux Foundation 산하로 이관되었다.
@@ -343,6 +343,7 @@ Oracle의 차별점은 **개발자가 이미 익숙한 도구(VS Code, Codex, Cl
 - [Google Gemini Enterprise Agent Platform](../records/2026-07-15-google-gemini-enterprise-platform.md) (7/15)
 - [Gemini Managed Agents 3.6 Flash — Hooks, 예산 통제](../records/2026-07-29-gemini-managed-agents-3-6-flash-hooks.md) ⭐NEW (7/28)
 - [프롬프트 vs 루프 vs 그래프 엔지니어링 계층 모델](../records/2026-07-29-prompt-loop-graph-engineering-layers.md) ⭐NEW (7/29)
+- [Prime Agent — 자가 진화형 RLM 코딩 에이전트](../records/2026-08-05-prime-agent-self-improving-rlm.md) ⭐⭐⭐⭐ ⭐NEW (8/5)
 
 ## 2026년 7월 10차 업데이트: Gemini Managed Agents 3.6 Flash — Hooks로 에이전트 제어 패러다임 강화
 
@@ -397,3 +398,26 @@ AI 에이전트 시스템 설계를 세 가지 제어 계층으로 체계화한 
 **7월 30일 10차 갱신**: **Gemini Managed Agents 3.6 Flash** 업데이트는 Google이 에이전트 플랫폼 경쟁에서 **제어 가능성**을 핵심 차별점으로 삼고 있음을 보여준다. 환경 훅(Hooks)은 개발자가 에이전트의 모든 툴 호출 전후에 커스텀 스크립트를 주입할 수 있게 하여, 보안 검사·품질 검증·자동 포매팅 등을 에이전트 실행 파이프라인에 직접 통합한다. 이는 Claude Agent SDK의 PreToolUse/PostToolUse 생명주기 훅과 개념적으로 동일하지만, 관리형 플랫폼 레벨에서 제공된다는 점이 차이점이다. ADK 2.0의 결정론적 HITL + 자율 에이전트 하이브리드 모델이 Google의 일관된 설계 철학으로 확인되며, 이를 Enterprise Agent Platform·Managed Agents·ADK 2.0 세 축에 동일하게 적용하고 있다. 예산 통제·예약 실행은 에이전트를 실제 프로덕션에 통합하기 위한 필수 기능이며, 무료 티어 개방은 개발자 생태계 확보를 위한 공격적 전략이다.
 
 **8월 2일 11차 갱신**: **프롬프트→루프→그래프 엔지니어링 계층 모델**은 본 문서에 산재된 7월의 핵심 개념들을 하나의 체계적 프레임워크로 통합한다. 이 분석의 가치는 각 계층이 경쟁이 아닌 보완 관계라는 점을 명확히 한 데 있다. LangGraph 1위·ADK 2.0의 부상·Gemini Managed Agents Hooks·MAF CodeAct·Claude Agent SDK의 생명주기 훅 등 7월의 모든 주요 프레임워크 발전이 이 세 계층 중 하나에 해당한다. 특히 "과도한 엔지니어링은 비용만 증가시킨다"는 Anthropic의 경고는 핵심 통찰이다 — 그래프 계층이 부상하고 있다고 해서 모든 문제에 그래프를 적용하는 것은 비생산적이며, 문제의 복잡성에 맞는 적절한 계층을 선택하는 것이 프레임워크 설계의 본질이다. 모델 레벨 멀티에이전트 내장(GPT-5.6 Ultra, Meta Spark 1.1)이 그래프 계층을 모델 자체로 흡수하려는 시도라면, 프레임워크 생태는 여전히 명시적 그래프 제어(LangGraph, ADK 2.0)와 루프 제어(Claude Agent SDK Harness, MAF Harness)의 분리된 가치를 제공하고 있다.
+
+## 2026년 8월 12차 업데이트: Prime Agent — 런타임 자가 진화형 코딩 에이전트 프레임워크
+
+**출처**: [PrimeIntellect — Prime Agent](../records/2026-08-05-prime-agent-self-improving-rlm.md) ⭐⭐⭐⭐
+
+### 핵심 설계
+PrimeIntellect가 재귀적 언어 모델(RLM)과 지속적 하니스(Continual Harness)를 기반으로 한 오픈소스 코딩 에이전트 **Prime Agent**를 공개했다. 에이전트가 런타임에 자신의 프롬프트·스킬·메모리·서브에이전트를 동적으로 생성·수정·삭제(CRUD)할 수 있어, 설계 시점에 고정된 정적 스캐폴딩의 한계를 넘는 **자가 진화 구조**를 제공한다.
+
+**2대 핵심 추상화:**
+1. **Recursive Language Model (RLM)**: 컨텍스트를 변수로, 서브에이전트 위임을 함수 호출로 처리하는 지속적 REPL 환경. 에이전트가 자신의 히스토리·서브에이전트·도구에 프로그래밍 방식으로 접근해 임의로 긴 세션을 처리. IPython 커널을 유일한 도구로 사용
+2. **Continual Harness**: 하니스 자체의 상태(프롬프트·스킬·메모리·서브에이전트)를 에이전트가 CRUD할 수 있는 메커니즘. 에이전트 간 통신으로 서브에이전트 오케스트레이션 및 세션 간 직접 통신 지원. 백그라운드 데몬이 모든 세션 관리, 워커 프로세스 충돌 시 JSONL 세션 로그와 커널 스냅샷에서 복구
+
+### 기존 프레임워크와의 차별점
+기존 AI 코딩 에이전트(Claude Code, Codex, Cursor 등)는 설계 시점에 고정된 프롬프트와 도구 체계를 사용한다. Prime Agent는 에이전트가 실행 중 자신의 '작동 방법' 자체를 개선할 수 있는 구조를 제공한다. 이는 인간이 경험을 통해 작업 방법을 개선하는 과정을 에이전트 아키텍처 수준에서 구현한 것으로, **메타에이전트 시대의 실용적 구현**을 보여준다.
+
+Continual Harness의 CRUD 메커니즘은 에이전트가 실행 중 새로운 스킬을 학습하고, 불필요한 도구를 제거하며, 효율적인 서브에이전트 구성을 동적으로 발견하게 한다. RLM 논문(arXiv: 2512.24601)과 Continual Harness 논문(arXiv: 2605.09998)으로 학술적 근거도 확보했다.
+
+### 프레임워크 생태계에서의 의미
+오픈소스로 공개된 Prime Agent는 Claude Code, Codex 같은 상용 에이전트에 대한 강력한 대안이 될 수 있다. 특히 Continual Harness의 자기 수정 메커니즘은 다른 오픈소스 프로젝트에도 채택될 수 있는 범용 패턴이며, 에이전트 하니스 설계의 새로운 표준이 될 가능성이 있다.
+
+**프롬프트→루프→그래프 계층 모델과의 관계**: Prime Agent는 루프 계층(단일 에이전트 행동 주기)과 그래프 계층(서브에이전트 조직)을 모두 다루면서도, **메타 계층**(에이전트가 자신의 루프와 그래프를 런타임에 재구성)이라는 새로운 추상화를 추가한다. 이는 Anthropic이 경고한 "과도한 엔지니어링"의 위험을 안고 있지만, 동시에 에이전트가 자신의 복잡성을 스스로 관리한다는 점에서 독특한 해결책을 제시한다.
+
+> 💡 **교차 참조**: Prime Agent의 Continual Harness(CRUD 기반 자기 수정)는 [Meta Muse Code](tools-overview.md)의 병렬 서브에이전트(격리 워크트리)와 같은 방향성 — 단일 에이전트에서 멀티 에이전트 자가 조직화로 진화. 단, Muse Code는 컴파일 타임에 설계된 병렬화라면, Prime Agent는 런타임에 에이전트가 스스로 구조를 결정한다. [Omnigent](#2026년-7월-4차-업데이트-omnigent--메타-하네스로-거버넌스-간극-해결)의 메타-하네스(다중 에이전트 도구 통합)와도 보완적 — Omnigent가 외부 도구를 오케스트레이션한다면, Prime Agent는 내부 구조를 오케스트레이션한다. [LangChain × NVIDIA NemoClaw](#2026년-7월-7차-업데이트-langchain--nvidia-nemoclaw--풀스택-에이전트-최적화-패러다임)의 컴포넌트 기반 조립 패러다임과도 같은 맥락 — 에이전트를 구성하는 컴포넌트를 동적으로 교체할 수 있다는 점에서.

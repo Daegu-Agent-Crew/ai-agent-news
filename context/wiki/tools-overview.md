@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: tools
-- **관련 뉴스 수**: 31
-- **최종 업데이트**: 2026-08-06 (12차 갱신)
+- **관련 뉴스 수**: 34
+- **최종 업데이트**: 2026-08-08 (13차 갱신)
 
 ## 요약
 에이전트 도구 생태계가 빠르게 분화하고 있다. 브라우저 자동화, MCP 서버, 터미널 작업 등 각 영역별 전문 도구가 등장하면서, 에이전트 개발 스택이 성숙 단계에 진입했다. MCP(Model Context Protocol)가 200+ 서버 구현체를 확보하며 사실상 표준으로 자리잡았고, 도구 간 상호운용성이 빠르게 표준화되고 있다.
@@ -468,6 +468,9 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - [Cloudflare Workers AI — Kimi·GLM 추론 최적화](../records/2026-08-04-cloudflare-kimi-glm-workers-ai-inference.md) ⭐⭐⭐⭐ ⭐NEW (8/4)
 - [Hark Handoff — 브라우저 작업 자동화 에이전트](../records/2026-08-05-hark-handoff-browser-agent.md) ⭐⭐⭐ ⭐NEW (8/5)
 - [Meta Muse Code — 대규모 코드베이스 코딩 에이전트](../records/2026-08-05-meta-muse-code-coding-agent.md) ⭐⭐⭐⭐ ⭐NEW (8/5)
+- [Cloudflare Kitesurf — 에이전트 전용 브라우저, V8 Isolate](../records/2026-08-07-cloudflare-kitesurf-agent-first-browser.md) ⭐⭐⭐⭐ ⭐NEW (8/7)
+- [TencentDB Agent Memory v2.0 — 팀 단위 메모리 허브, 오픈소스](../records/2026-08-08-tencentdb-agent-memory-v2-open-source.md) ⭐⭐⭐⭐ ⭐NEW (8/8)
+- [Google Maps Agentic — 소비자 앱 에이전트화](../records/2026-08-08-google-maps-agentic-features.md) ⭐⭐⭐ ⭐NEW (8/8)
 
 ## 관련 위키 문서
 - [평가 벤치마크](research-overview.md) — MCP Atlas로 측정하는 도구 호출 성능
@@ -535,3 +538,62 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 Cursor 사례는 AI SaaS 기업이 사용자로부터 비용 정보를 감추려는 유혹과 그 결과를 보여준다. 개발자 커뮤니티의 강한 반응(HN 280포인트)은 AI 도구 시장에서 사용자 목소리의 영향력을 입증하며, 투명성이 경쟁 우위가 될 수 있음을 시사한다. 이는 [Fireworks Nexus](#fireworks-ai-nexus--코딩-에이전트-비용-라우팅-계층)의 비용 라우팅과 [Manifest의 라우터 폐지](#manifest-llm-라우터-폐지-선언--단일-모델-고수가-최선-)의 캐싱 접근 사이에서, **사용자에게 비용 가시성을 제공하는 것이 전제 조건**임을 강조한다.
 
 Google Earth 사례는 AI 이미지 생성 기술이 신뢰 기반 정보 시스템에 무분별하게 통합될 때 발생하는 위험을 보여준다. 하루 만에 철회한 것은 Google이 사회적 영향을 사전에 평가하지 않았음을 입증하며, [산업 동향](industry-trends.md)의 보안 위기가 모델 수준이라면 이것은 **제품 출시 수준**의 가드레일 부재다.
+
+## 에이전트 인프라 혁신 & 소비자 에이전트 (2026년 8월 13차 갱신)
+
+8월 둘째 주, 에이전트 도구 생태계에 **인프라 계층의 근본적 재설계**(에이전트 전용 브라우저), **팀 단위 메모리 거버넌스**(오픈소스), **소비자 앱 에이전트화**(Google Maps)라는 세 가지 새로운 방향이 동시에 등장했다.
+
+### Cloudflare Kitesurf — 에이전트 전용 브라우저, V8 Isolate에서 구동 ⭐⭐⭐⭐
+
+**출처**: [MarkTechPost — Cloudflare Kitesurf](../records/2026-08-07-cloudflare-kitesurf-agent-first-browser.md)
+
+- **발표**: 2026년 8월 6일
+- **핵심**: AI 에이전트 전용 경량 브라우저. Chromium 기반이 아닌 **V8 isolate 기반**으로, 사람용 기능(탭, 확장, 60fps 렌더링)을 제거하고 에이전트에 필요한 것만 남김
+- **아키텍처**: Engine(PageScript, PageRenderer, SandboxOutbound) 구조. HTML/CSS 파싱에 Rust 기반 Blitz + Firefox Stylo, JavaScript 실행은 Boa JS 엔진. 네트워크 접근은 SandboxOutbound 워커가 단독 관리로 보안 강화
+- **성능**: 스크린샷 생성 시 CPU 3.1배 절감, 메모리 4.7배 절감. HTML 추출 시 메모리 7.0배 절감 (vs Chromium)
+- **호환성**: 기존 Puppeteer, Playwright, MCP 클라이언트와 호환 — `browser=kitesurf` 파라미터 하나만 추가하면 즉시 사용 가능
+- **의미**: 수많은 에이전트가 동시에 웹을 탐색하는 시대에 브라우저 인프라 비용을 수직적으로 낮추는 패러다임 전환. 프롬프트 인젝션 방어 계층도 내장
+
+> 💡 **교차 참조**: Kitesurf는 브라우저를 "사람용 UI 렌더러"에서 "에이전트용 콘텐츠 추출기"로 재정의했다. 이는 [agent-browser](#agent-browser-vercel)의 ref 기반 접근성 트리(DOM 대비 10~25배 토큰 절감)와 같은 방향성이지만, V8 isolate라는 근본적으로 다른 아키텍처를 사용한다. [Hark Handoff](#hark-handoff--브라우저-작업-자동화-에이전트-)의 '다음 행동 예측' 모델과도 보완적 — Kitesurf는 인프라 계층을, Hark는 인지 계층을 혁신한다. 에이전트가 웹을 탐색하는 비용이 [Fireworks Nexus](#fireworks-ai-nexus--코딩-에이전트-비용-라우팅-계층)의 모델 라우팅, [Cloudflare Workers AI](../records/2026-08-04-cloudflare-kimi-glm-workers-ai-inference.md)의 추론 최적화와 함께 3축으로 절감되고 있다.
+
+### TencentDB Agent Memory v2.0 — 팀 단위 에이전트 메모리 허브, 오픈소스 ⭐⭐⭐⭐
+
+**출처**: [MarkTechPost — TencentDB Agent Memory v2.0](../records/2026-08-08-tencentdb-agent-memory-v2-open-source.md)
+
+- **발표**: 2026년 8월 7일 (MIT 라이선스)
+- **핵심**: AI 코딩 에이전트를 위한 **팀 단위 메모리 허브**. 대화·문서·코드를 4가지 재사용 가능한 메모리 에셋으로 변환
+- **4가지 메모리 에셋**:
+  1. **Chat Memory** — 선호, 사실, 결정
+  2. **Skill** — 재사용 가능한 절차
+  3. **LLM-Wiki** — 구조화된 지식 페이지
+  4. **Code-Graph** — 심볼, 파일, 호출 관계 인덱스
+- **거버넌스**: ACL 기반 가시성 — private(소유자만) / team / restricted. 새 메모리는 기본적으로 private, 공유는 명시적 행위
+- **기술**: L0→L3 계층화 증류 파이프라인, BM25+벡터+RRF 검색. 항목 수·문자 예산·타임아웃으로 컨텍스트 윈도우 보호
+- **통합**: Memory Proxy가 Anthropic + OpenAI 프로토콜 모두 지원. Claude Code, OpenClaw, Hermes, CodeBuddy와 통합. Docker 명령 하나로 자체 호스팅
+- **의미**: 한 에이전트가 배운 것을 다른 에이전트가 재학습하지 않아도 되게 만들며, 프라이버시 보호와 메모리 공유를 동시에 해결한 결정적 사례
+
+> 💡 **교차 참조**: TencentDB Agent Memory의 ACL 거버넌스는 [Omnigent](frameworks-overview.md)의 정책 중심 보안(셸 명령어·파일 편집·토큰 소비 제어)과 같은 철학 — 도구 사용에 대한 거버넌스 계층. [Gemini Enterprise Agent Platform](frameworks-overview.md)의 Enterprise Memory System과 기능적으로 겹치지만, TencentDB는 오픈소스 자체 호스팅이라는 점에서 접근성이 혁신적으로 높다. [Prime Agent](frameworks-overview.md)의 Continual Harness(에이전트가 자신의 스킬·메모리를 CRUD)와도 연결 — 단, Prime Agent는 단일 에이전트 내부의 자기 수정이고, TencentDB는 팀 간 메모리 공유가 핵심 차이점.
+
+### Google Maps Agentic — 소비자 앱의 에이전트화 ⭐⭐⭐
+
+**출처**: [TechCrunch — Google Maps Agentic Features](../records/2026-08-08-google-maps-agentic-features.md)
+
+- **발표**: 2026년 8월 6일 (미국 사용자 순차 롤아웃)
+- **핵심**: Google Maps의 "Ask Maps"에 음식 주문, 호텔 예약, 이벤트 티켓 구매 등 에이전트형 능력 추가. 20억+ 사용자 플랫폼에서 에이전트 AI 도입
+- **기능**:
+  - 자연어 질문("비건 아보카도 토스트와 오트밀 라떼를 시킬 수 있는 곳?") → 매칭 식당 탐색 → Square/Toast/Uber Eats를 통한 주문 완료
+  - 호텔 예약: 복잡한 조건(헬스장, 식당 도보 거리 등) 처리 → 가격 비교·재고 확인 → 파트너 사이트 예약
+  - **Personal Intelligence**: Gmail·Google Calendar 데이터 기반 개인화 응답 (기본 OFF)
+- **의미**: 일반 대중에게 "AI 에이전트" 개념을 가장 널리 알리는 계기. 내비게이션 앱이 실제 거래를 수행하는 에이전트로 진화
+
+> 💡 **교차 참조**: Google Maps의 에이전트화는 [Gemini Task Automation](#gemini-task-automation-google--스마트폰에서-작동하는-첫-ai-에이전트)(스마트폰 앱 조작)의 소비자 확장판. Google이 모바일 에이전트(Task Automation) → 지도 에이전트(Maps) → 엔터프라이즈 에이전트(Gemini Enterprise)에 이르기까지 전 스펙트럼을 커버하고 있음을 보여준다. [ChatGPT Work](#chatgpt-work-openai--야심찬-프로젝트를-위한-ai-에이전트)의 "수 시간 지속 프로젝트"와 다른 점은, Maps는 **단일 거래 완수**(주문·예약)에 집중한다는 것. Personal Intelligence의 RAG 기반 개인화는 [TencentDB Agent Memory](#tencentdb-agent-memory-v20--팀-단위-에이전트-메모리-허브-오픈소스-)의 방향성과 같지만, 개인 vs 팀이라는 스케일 차이가 있다.
+
+### 13차 갱신 분석: "에이전트 도구의 3계층 혁신"
+
+세 건의 신규 도구는 에이전트 도구 생태계의 **인프라·미들웨어·소비자** 3계층이 동시에 혁신되고 있음을 보여준다.
+
+**인프라 계층 (Kitesurf)**: 브라우저 자동화의 가장 큰 비용 구조인 Chromium 오버헤드를 V8 isolate로 근본적으로 해결했다. Puppeteer/Playwright 호환성으로 도입 장벽을 제거한 점이 핵심 — 기존 코드 한 줄만 바꾸면 된다. 이는 [Cloudflare Workers AI](../records/2026-08-04-cloudflare-kimi-glm-workers-ai-inference.md)의 추론 최적화와 함께 Cloudflare가 에이전트 인프라 전체(추론 + 브라우징)를 엣지에서 최적화하려는 전략의 일환으로 보인다.
+
+**미들웨어 계층 (TencentDB Agent Memory)**: 에이전트 메모리의 "거버넌스 간극"을 해결했다. 기존 에이전트 메모리는 세션 단위 격리 또는 전체 공유의 양극단만 존재했지만, ACL 기반 3단계 가시성(private/team/restricted)으로 팀 협업 시 프라이버시와 공유를 동시에 달성했다. MIT 라이선스 + Docker 원령 배포 + Anthropic/OpenAI 프로토콜 동시 지원으로 기업 도입 장벽을 최소화한 것이 차별점.
+
+**소비자 계층 (Google Maps)**: 20억 사용자에게 AI 에이전트를 직접 경험시키는 최초의 대규모 사례. 개발자 도구에서 시작된 에이전트 개념이 일반 소비자 앱으로 확산되는 전환점으로, 사용자의 행동 데이터(이메일, 캘린더)를 활용한 Personal Intelligence가 개인화 에이전트의 대중화를 앞당길 것이다.

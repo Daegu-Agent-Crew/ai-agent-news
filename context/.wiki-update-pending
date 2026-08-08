@@ -1,17 +1,14 @@
 # 다음 위키 갱신 대기
-# 2026-08-07: models (13차), industry (13차) 갱신 완료.
-# - models: 8/4~7 records 3건 반영
-#   1. Mistral Shieldstral 3B (⭐⭐⭐⭐) — 3B 멀티모달 안전 분류기, Apache 2.0, 재학습 없는 정책 적응
-#   2. GPT-5.6 Sol 개선 & Luna 무제한 (⭐⭐⭐⭐⭐) — 사실 오류 68% 감소, 무료 무제한 채팅
-#   3. Qwen3.8 Max (⭐⭐⭐⭐) — Artificial Analysis Agentic Index 종합 1위, 오픈 모델 최초
-#   분석 13차 갱신 — 안전 분류 오픈소스 + 에이전트 신뢰성 도약 + 오픈 모델 벤치마크 정상
-# - industry: 8/7 records 2건 반영
-#   1. AMD × Taalas (⭐⭐⭐⭐) — 모델 웨이트를 실리콘에 직접 새겨 48배 빠른 추론, HBM 불필요
-#   2. Mirendil × Google Cloud $100M+ (⭐⭐⭐⭐) — 자가 개선 AI, Anthropic 베테랑 창업, TPU+GPU 활용
-#   분석 13차 갱신 — 실리콘 혁신(인수 vs 자체) + 자가 개선 AI 3번째 대규모 투자
+# 2026-08-08: framework (12차), tools (13차) 갱신 완료.
+# - framework: 8/5 Prime Agent (⭐⭐⭐⭐) — RLM + Continual Harness, 런타임 자가 진화 코딩 에이전트
+#   분석 12차 갱신 — 메타 계층(에이전트가 자신의 루프/그래프를 런타임 재구성) 추가
+# - tools: 8/7~8/8 records 3건 반영
+#   1. Cloudflare Kitesurf (⭐⭐⭐⭐) — V8 isolate 기반 에이전트 전용 브라우저, CPU 3~7배 절감
+#   2. TencentDB Agent Memory v2.0 (⭐⭐⭐⭐) — 팀 단위 메모리 허브, ACL 거버넌스, MIT 오픈소스
+#   3. Google Maps Agentic (⭐⭐⭐) — 20억 사용자 에이전트화, 음식 주문/호텔 예약
+#   분석 13차 갱신 — 인프라/미들웨어/소비자 3계층 동시 혁신
 #
 # 다음 대상:
-# - framework: 8/5 신규 Prime Agent (RLM 기반 자가 진화 코딩 에이전트) — 대기
-# - tools: 8/7 신규 Cloudflare Kitesurf (에이전트 전용 브라우저, V8 isolate 기반) — 대기
-# - models: 8/4~7 모두 반영 완료. 다음 갱신은 신규 records 축적 후
-# - industry: 8/7 모두 반영 완료. 다음 갱신은 신규 records 축적 후
+# - models: 8/8 신규 OpenAI Astra 사이버보안 보류 (⭐⭐⭐⭐⭐) — 대기
+# - industry: 8/8 신규 Databricks AI 코딩 비용 절감 (⭐⭐⭐⭐), OpenAI Critical Cyber Framework (⭐⭐⭐⭐⭐) — 대기
+# - research: 신규 records 축적 후 갱신

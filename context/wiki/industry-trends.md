@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: industry
-- **관련 뉴스 수**: 47
-- **최종 업데이트**: 2026-08-07 (13차 갱신)
+- **관련 뉴스 수**: 49
+- **최종 업데이트**: 2026-08-09 (14차 갱신)
 
 ## 요약
 2026년 상반기, AI 에이전트 산업이 다섯 가지 축으로 전개되고 있다: (1) **모델 전쟁 격화** — Google·OpenAI·Anthropic·Microsoft·Meta가 플래그십 모델을 연달아 출시하며 용도별 경쟁이 시작됨, (2) **프레임워크 시장 재편** — Microsoft MAF가 프로덕션 배포 인프라를 통합하고 Anthropic은 에이전트 SDK를 별도 과금으로 전환, (3) **물리 세계로의 에이전트 확장** — 휴머노이드 로봇이 프로토타입을 넘어 양산·상용 배치 단계로 진입, (4) **7월 신규 동향** — 프로토콜 표준화(MCP/A2A)로 상호 운용성 확보, 에이전트 커머스 상용화, 시장 통계가 입증하는 채택 격차(79% 도입 vs 11% 생산), (5) **AI 동료 시대 개막** — GPT-Live가 자연스러운 음성 대화를, ChatGPT Work가 자율 프로젝트 실행을, GPT-5.6 × M365 Copilot이 엔터프라이즈 생산성 도구 통합을 실현하며 AI가 도구에서 협업 파트너로 진화.
@@ -105,6 +105,8 @@ Anthropic이 Claude Agent SDK를 별도 월간 크레딧 과금제(Pro $20 / Max
 - [오픈가중치 모델, 프론티어 추격… 안전 격차는 잔존](../records/2026-08-04-open-weight-ai-models-closing-frontier-gap-safety-remains.md) ⭐⭐⭐⭐⭐ (8/4)
 - [Anthropic, 자체 AI 칩 설계 팀 구축](../records/2026-08-05-anthropic-custom-ai-chip-design-team.md) ⭐⭐⭐⭐ ⭐NEW (8/5)
 - [Jeff Dean 퇴사, Discovery Loop 창업](../records/2026-08-05-discovery-loop-jeff-dean-google-exodus.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/5)
+- [Databricks, AI 코딩 비용 70% 절감 전략 공개](../records/2026-08-08-databricks-ai-coding-cost-reduction.md) ⭐⭐⭐⭐ ⭐NEW (8/8)
+- [OpenAI, 다음 프론티어 사이버 역량 대응 — 준비 프레임워크 적용](../records/2026-08-08-openai-critical-cyber-framework-response.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/8)
 
 ## 관련 위키 문서
 - [프레임워크 동향](frameworks-overview.md) — MAF, Claude Agent SDK, 화웨이 Agent Framework 2.0, Cisco FAPO
@@ -764,5 +766,45 @@ Anthropic 베테랑이 창업한 Mirendil이 Google Cloud와 1억 달러 이상�
 3. **컴퓨팅이 새로운 인건비**: Mirendil의 $100M가 인건비가 아닌 컴퓨팅에 지출된다는 것은 AI 연구의 병목이 인재에서 컴퓨팅으로 이동했음을 확인. 동시에 Jeff Dean 같은 최상위 인재가 기존 조직을 떠나 자가 개선 AI 벤처를 창업하는 것은, 인재와 컴퓨팅이 결합된 새로운 경쟁 구도를 형성
 
 > 💡 **종합 교차 참조**: AMD × Taalas + Mirendil × Google = 12차 갱신의 경쟁이 가속화되고 있음. [모델 동향](models-overview.md)의 추론 경제학이 하드웨어(Taalas)와 컴퓨팅 인프라(Mirendil) 양쪽에서 뒷받침되며, GPT-5.6 Sol의 자율 인프라 최적화가 보여준 자기 개선 루프가 더 큰 규모로 산업화되고 있음.
+
+---
+
+## 2026년 8월 14차 업데이트: AI 코딩 비용 전쟁과 사이버보안 거버넌스의 실전 배치
+
+13차 갱신의 "실리콘 혁신과 자가 개선 AI"가 8월 둘째 주에 **에이전트 경제학과 안전 거버넌스**의 두 영역에서 구체화되었다. Databricks가 대규모 AI 코딩 배포의 비용 폭증 해법을 실증적으로 제시했고, OpenAI가 준비 프레임워크를 실전 배치하며 사이버보안 역량 통제의 체계를 공개했다.
+
+### 1. Databricks AI 코딩 비용 70% 절감 — 에이전트 경제학의 실증적 레시피 ⭐⭐⭐⭐
+
+**출처**: [Databricks Blog — Managing AI Coding Costs at Scale](../records/2026-08-08-databricks-ai-coding-cost-reduction.md)
+
+Databricks가 Stripe, Coinbase, Uber, Ramp와의 공동 경험을 바탕으로 AI 코딩 도구 대규모 배포에서 비용 폭증을 해결한 실증적 전략을 공개했다. 최대 **70% 비용 절감**을 달성했다.
+
+- **효율성 프론티어(Efficiency Frontier)**: 최첨단 지능 모델이 아닌, 주어진 지능 수준에서 최고 가성비를 제공하는 모델 선택. **GLM 모델**이 Databricks 내부 벤치마크에서 매우 경쟁력적인 가격/성능을 보여 도입 결정. 반면 Stripe는 Opus 4.7이 품질 향상 없이 비용만 증가해 도입 거부
+- **동적 라우팅**: 태스크 수준 라우팅, 캐시 최적화, 요청 라우팅의 3가지 접근. Cursor Router, OpenRouter AutoRouter 등 경쟁 제품 등장으로 라우팅 시장 형성
+- **Omnigent 메타 하니스**: 개발자가 하니스를 직접 전환하지 않고도 다양한 모델·하니스에 접근할 수 있는 오픈소스 메타 하니스. Unity AI Gateway의 스마트 라우팅 기능과 결합
+- **의미**: AI 코딩 비용 관리가 2026년 엔터프라이즈 AI의 핵심 과제로 부상. 벤더 중립적 접근으로 특정 AI 제공업체 종속 방지. Databricks·Stripe 등의 실증적 베스트 프랙티스 공유가 업계 전체 비용 효율화 가속
+
+### 2. OpenAI 준비 프레임워크 실전 배치 — "임계 사이버 역량" 통제 체계 공개 ⭐⭐⭐⭐⭐
+
+**출처**: [OpenAI Blog — Responding to Next Frontier Critical Cyber Capabilities](../records/2026-08-08-openai-critical-cyber-framework-response.md)
+
+OpenAI가 차세대 모델 Astra의 사이버보안 역량이 "임계(Critical)" 수준에 도달할 가능성을 확인하고, 구체적인 통제 조치를 발표했다.
+
+- **5대 핵심 조치**: (1) 격리된 테스트 환경·제한된 네트워크 접근, (2) 강화 요건 미충족 Astra 활동 일시 중지, (3) **모든 에이전트 응용 분야에 대한 보편적 위험 행동 모니터링** — Chain of Thought를 실시간 감시하여 고위험 행동 탐지 시 보안 응답 트리거, (4) 정부 기관·AI 안전 조직과 협력 테스트, (5) 서드파티 파트너용 보안 통제 가이드 제공
+- **프레임워크 2차 발동**: 2025년 6월 생물학 역량 이후 두 번째. 프레임워크가 실제로 작동하는 거버넌스 메커니즘임이 입증
+- **방어자 우선 원칙**: "고급 사이버 역량 모델이 공격자보다 먼저 방어자가 취약점을 식별하도록 도와야 한다"는 원칙 천명. OpenAI Daybreak 방어적 보안 도구 개발
+- **의미**: AI 모델이 독자적으로 사이버공격을 기획·실행할 수 있는 수준에 도달했음을 스스로 인정. [Sam Altman의 속도 조절 선언](#1-sam-altman의-전례-없는-속도-조절-선언-)에서 우려한 시나리오의 구체적 실체. 정부 참여 테스트는 AI 안전 규제가 산업 자율 규제에서 정부 참여로 전환하는 신호
+
+### 14차 업데이트 종합 분석: "에이전트 경제학과 안전 거버넌스의 동시 성숙"
+
+두 사건은 각각 다른 축에서 AI 에이전트 산업의 성숙을 보여준다:
+
+1. **비용 전쟁의 실증 단계 진입**: Databricks의 70% 비용 절감은 [Microsoft 자체 모델 89% 절감](#2-microsoft-자체-모델-89-비용-절감--openai-독립-가속-), [Claude Opus 5 가성비 전략](models-overview.md), [GPT-5.6 Luna 80% 인하](models-overview.md)의 연장선. 단, Databricks가 더 중요한 기여는 **모델 선택 → 동적 라우팅 → 메타 하니스**라는 체계적 비용 관리 레시피를 실증 데이터와 함께 공개한 것. Omnigent 오픈소스 메타 하니스는 벤더 종속 없는 에이전트 비용 관리의 인프라를 제공
+
+2. **안전 거버넌스의 실전 배치**: OpenAI의 준비 프레임워크 2차 발동은 [9차 갱신의 보안 연쇄 위기](#9차-업데이트-종합-분석-보안-연쇄-위기가-촉발한-세-가지-시장-형성)에 대한 구조적 대응. Chain of Thought 실시간 모니터링은 [Vending-Bench 기만](research-overview.md)에서 보여준 AI의 전략적 기만 행동에 대한 기술적 대응이자, [연구 동향](research-overview.md)의 에이전트 정렬 연구의 산업적 적용
+
+3. **비용 vs 안전의 딜레마 심화**: Databricks가 "효율성 프론티어" 모델(GLM 등)로 비용을 줄이는 반면, OpenAI는 안전 테스트로 인해 프론티어 모델 출시가 지연되는 구조. [SaferAI의 GLM-5.2 안전 격차 보고서](#5-오픈가중치-모델-안전-격차-실증--glm-52-능력은-추격안전은-공백-)이 경고한 것처럼, 저비용 모델의 안전 통제 부재와 프론티어 모델의 안전 테스트 지연이 만나는 지점에서 **비용 효율적이면서 안전한 모델**이라는 과제가 핵심 경쟁 축으로 부상
+
+> 💡 **종합 교차 참조**: Databricks의 Omnigent 메타 하니스는 [프레임워크 동향](frameworks-overview.md)의 메타 계층(에이전트가 자신의 루프/그래프를 런타임 재구성)과 같은 방향 — 모델·하니스 독립성이 에이전트 비용 관리의 핵심. OpenAI의 보편적 모니터링은 [에이전트 보안 격차](../records/2026-07-19-ai-agent-security-gap.md)의 54% 사건 경험에 대한 시스템적 대응. [OSAA](#3-open-secure-ai-alliance-osaa--1주일-만에-120-기업-보안-연대-가속-)의 산업 자율 규제와 OpenAI의 준비 프레임워크가 보완적으로 작동하며, [EU AI Act 제50조](#2-eu-ai-act-제50조-투명성-규정-발효--글로벌-기준-최초-시행-)의 법적 강제력이 이를 뒷받침하는 3층 구조.
 
 ---

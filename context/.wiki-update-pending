@@ -1,14 +1,14 @@
 # 다음 위키 갱신 대기
-# 2026-08-08: framework (12차), tools (13차) 갱신 완료.
-# - framework: 8/5 Prime Agent (⭐⭐⭐⭐) — RLM + Continual Harness, 런타임 자가 진화 코딩 에이전트
-#   분석 12차 갱신 — 메타 계층(에이전트가 자신의 루프/그래프를 런타임 재구성) 추가
-# - tools: 8/7~8/8 records 3건 반영
-#   1. Cloudflare Kitesurf (⭐⭐⭐⭐) — V8 isolate 기반 에이전트 전용 브라우저, CPU 3~7배 절감
-#   2. TencentDB Agent Memory v2.0 (⭐⭐⭐⭐) — 팀 단위 메모리 허브, ACL 거버넌스, MIT 오픈소스
-#   3. Google Maps Agentic (⭐⭐⭐) — 20억 사용자 에이전트화, 음식 주문/호텔 예약
-#   분석 13차 갱신 — 인프라/미들웨어/소비자 3계층 동시 혁신
+# 2026-08-09: models (14차), industry (14차) 갱신 완료.
+# - models: 8/8 OpenAI Astra 사이버보안 임계 역량 도달, 개발 보류 (⭐⭐⭐⭐⭐)
+#   분석 14차 갱신 — 프론티어 모델 안전 역량 경쟁 시대 개막, 준비 프레임워크 2차 발동
+# - industry: 8/8 Databricks AI 코딩 비용 70% 절감 (⭐⭐⭐⭐) + OpenAI Critical Cyber Framework (⭐⭐⭐⭐⭐)
+#   분석 14차 갱신 — 에이전트 경제학(Omnigent 메타 하니스)과 안전 거버넌스(Chain of Thought 모니터링)의 동시 성숙
 #
 # 다음 대상:
-# - models: 8/8 신규 OpenAI Astra 사이버보안 보류 (⭐⭐⭐⭐⭐) — 대기
-# - industry: 8/8 신규 Databricks AI 코딩 비용 절감 (⭐⭐⭐⭐), OpenAI Critical Cyber Framework (⭐⭐⭐⭐⭐) — 대기
-# - research: 신규 records 축적 후 갱신
+# - research: 8/8~ 최근 records 축적 확인 후 갱신
+#   후보: Shepherd Agent Fork-Replay Substrate, OpenAI Astra 보류의 연구적 의미
+# - framework: 신규 records 축적 후 갱신
+#   후보: Warp Agent CLI, Shepherd Agent
+# - tools: 신규 records 축적 후 갱신
+#   후보: Hark Handoff Browser Agent, OpenAI NextSlide 인수

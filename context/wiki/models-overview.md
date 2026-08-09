@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: models
-- **관련 뉴스 수**: 23
-- **최종 업데이트**: 2026-08-07 (13차 갱신)
+- **관련 뉴스 수**: 24
+- **최종 업데이트**: 2026-08-09 (14차 갱신)
 
 ## 요약
 2026년 6월, 14일 사이에 Google, OpenAI, Anthropic, Microsoft가 연달아 플래그십 모델을 출격했다. 더 이상 "하나의 최고 모델"이 존재하지 않으며, 용도별(가격·수학·코딩·독립성) 최적 모델이 다르다. Google은 가격 파괴, OpenAI는 수학 추론, Anthropic은 코딩 정확도, Microsoft는 자체 모델 독립성이라는 각기 다른 승부수를 던졌다. **7월 9일, OpenAI가 GPT-5.6(Sol/Terra/Luna)을 발표**하며 프론티어 모델 경쟁이 재점화되었다. 트럼프 행정부와의 2주간 규제 갈등 끝에 공개된 이 모델군은 자율 다단계 계획, 독립 도구 사용, 자기 교정 능력을 갖춘 에이전트 네이티브 모델로, 미국 정부의 사전 검토 게이트가 반복적 패턴으로 자리 잡을 가능성을 시사한다.
@@ -288,6 +288,7 @@ KAT-Coder-V2.5는 에이전트 코딩 모델의 발전이 **모델 크기 경쟁
 | 초소형 MoE (오픈) | AMD Instella-MoE-16B-A3B | 16B/2.8B 활성, FarSkip·Gated MLA, AMD GPU 훈련 |
 | 에이전트 벤치마크 1위 (오픈) | Qwen3.8 Max | Artificial Analysis Agentic Index 종합 1위, 오픈 모델 최초 |
 | 안전 분류 (오픈) | Mistral Shieldstral 3B | 3B 멀티모달, Apache 2.0, 재학습 없는 정책 적응 |
+| 사이버보안 (보류 중) | OpenAI Astra | 임계(Critical) 사이버 역량 도달, 준비 프레임워크 발동 |
 
 ### 업계 맥락
 - Cisco FAPO 벤치마크에서 GPT-4.1-mini, GPT-5.4-mini, Gemma 3-12B 사용
@@ -416,6 +417,22 @@ Qwen3.8 Max의 Agentic Index 1위는 [중국 오픈소스 프론티어](#중국-
 
 > 💡 **교차 참조**: DeepSeek V4-Flash(위)와 KAT-Coder-V2.5(위)에 이어 Qwen3.8 Max까지 — 중국 오픈 모델이 코딩 특화(35B) → 범용 에이전트(284B/13B) → 에이전트 종합 1위(2.4조)로 영역을 확장. [산업 동향](industry-trends.md)의 미중 AI 패권 경쟁에서 오픈소스가 중국의 핵심 전략임을 재확인.
 
+## OpenAI Astra — 사이버보안 "임계(Critical)" 역량 도달, 개발 보류 ⭐⭐⭐⭐⭐
+
+**출처**: [TechCrunch — OpenAI Slowed Astra Over Security Concerns](../records/2026-08-08-openai-astra-cybersecurity-pause.md) / [OpenAI 공식 블로그](../records/2026-08-08-openai-critical-cyber-framework-response.md)
+
+- **발표**: 2026년 8월 7일
+- **핵심**: OpenAI 차세대 모델 Astra가 내부 평가에서 **"임계 사이버보안 역량(Critical Cyber Capability)"** 에 도달할 가능성을 배제할 수 없어, 개발 일부를 공식 보류
+- **임계(Critical) 수준의 의미**: 모델이 인간 개입 없이 실제 강화된 시스템의 **모든 심각도 수준의 제로데이 익스플로잇을 독자적으로 식별·개발**하거나, 높은 수준의 목표만 주어져도 **엔드투엔드 공격 전략을 수립·실행**할 수 있는 능력
+- **준비 프레임워크(Preparedness Framework) 2차 발동**: 2025년 6월 생물학 역량 고위험 도달에 이은 두 번째 실제 적용. 프레임워크가 이론이 아닌 **작동하는 거버넌스 메커니즘**임이 입증
+- **5대 조치**: 격리 테스트 환경, 강화된 보안 통제, Astra 관련 활동 일시 중지, 에이전트 응용 보편적 위험 행동 모니터링(Chain of Thought 실시간 감시), 정부 기관·AI 안전 조직과 협력 테스트
+- **GPT-5.6 Sol 대비 위상**: GPT-5.6 Sol이 사이버보안 "높음(High)" 수준이었던 것과 비교하면 **質적 도약**. 에이전트형 코딩 능력 향상이 사이버보안 역량으로 직결
+
+### 프론티어 모델 안전의 새로운 패러다임
+Astra 보류는 단일 모델의 지연이 아니다. AI 모델이 **독자적으로 제로데이 익스플로잇을 발견하고 실행**할 수 있는 수준에 도달했다는 것은, 프론티어 모델 개발이 성능 경쟁에서 **안전 역량 경쟁**으로 전환되었음을 의미한다. OpenAI가 개발 중인 모델의 위험을 스스로 공개한 것은 이례적 투명성이며, 다른 AI 연구소(Anthropic, Google DeepMind)에 유사한 평가 프레임워크 도입을 압박하는 선례가 된다. 동시에 [Sam Altman의 속도 조절 선언](industry-trends.md#1-sam-altman의-전례-없는-속도-조절-선언-)과 [Hugging Face 침해 사건](industry-trends.md#1-hugging-face-침해-상세-타임라인--45일-17600회-행동-)이 만나는 지점 — AI 에이전트의 자율 행동이 실제 위협이 된 시대의 분수령이다.
+
+> 💡 **교차 참조**: Astra의 임계 사이버 역량은 [MAI-Cyber-1-Flash](#microsoft-mai-cyber-1-flash--에이전트-기반-사이버-방어-전용-모델)의 방어적 보안 도구와 동전의 양면. 공격 능력(Astra)과 방어 능력(MAI-Cyber)이 동시에 발전하며, OpenAI는 "방어자가 먼저 취약점을 식별해야 한다"고 주장. [산업 동향](industry-trends.md)의 보안 연쇄 위기(9차 갱신)와 OpenAI Critical Cyber Framework 응답(14차 갱신)에서 산업 차원의 대응 분석. 준비 프레임워크의 보편적 모니터링(Chain of Thought 감시)은 [연구 동향](research-overview.md)의 에이전트 정렬 연구와 직결.
+
 ## 관련 뉴스
 ### 6월
 - [2026년 6월 AI 모델 전쟁](../records/2026-06-24-june-2026-ai-model-war.md)
@@ -442,6 +459,7 @@ Qwen3.8 Max의 Agentic Index 1위는 [중국 오픈소스 프론티어](#중국-
 - [Mistral Shieldstral 3B — 멀티모달 안전 분류기, Apache 2.0](../records/2026-08-04-mistral-releases-shieldstral-3b-multimodal-safety-classifier.md) ⭐⭐⭐⭐ ⭐NEW (8/4)
 - [GPT-5.6 Sol 개선 & Luna 무제한 — 사실 오류 68% 감소](../records/2026-08-07-openai-gpt-5-6-sol-luna-free-unlimited.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/7)
 - [Qwen3.8 Max — Agentic Index 종합 1위](../records/2026-08-07-qwen-3-8-max-tops-agentic-index.md) ⭐⭐⭐⭐ ⭐NEW (8/7)
+- [OpenAI Astra — 사이버보안 임계 역량 도달, 개발 보류](../records/2026-08-08-openai-astra-cybersecurity-pause.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/8)
 
 ## 관련 위키 문서
 - [평가 벤치마크](research-overview.md) — 모델별 에이전트 성능 리더보드
@@ -497,6 +515,8 @@ Qwen3.8 Max의 Agentic Index 1위는 [중국 오픈소스 프론티어](#중국-
 **DeepSeek V4-Flash-0731**는 오픈 가중치 모델의 에이전트 역량 도약을 입증한다. V4-Pro 프리뷰를 모든 에이전트 벤치마크에서 상회했다는 것은 "더 크고 비싼 모델이 항상 더 나은 에이전트"라는 통념을 깨뜨리며, 포스트트레이닝의 질이 에이전트 성능을 결정한다는 핵심 통찰을 제공한다. MIT 라이선스와 $0.14/$0.28 가격은 GPT-5.6 Luna($0.20/$1.20)과의 본격적인 가격 경쟁을 촉발하며, 로컬 배포 옵션은 API 의존도를 낮추고 기업의 자율적 에이전트 구축을 가능하게 한다.
 
 **AMD Instella-MoE-16B-A3B**는 두 가지 새로운 축을 연다. 하드웨어 측에서 NVIDIA 독점에 대한 AMD의 직접적 도전으로, AMD GPU로 end-to-end MoE 훈련을 증명한 첫 대규모 공개 모델이다. 구조 측에서 FarSkip-Collective(통신-연산 겹침)와 Gated MLA(조건부 어텐션 게이팅)는 희소 MoE 모델의 실제 배포 장벽을 직접 해결하며, MAI-Cyber-1-Flash(137B/5B)·DeepSeek V4-Flash(284B/13B)와 함께 희소 MoE가 2026년 주류 모델 구조로 자리잡았음을 확인시킨다. 32GB 단일 가속기 배포는 에이전트의 로컬 추론 계층에 충분한 스펙이며, 완전한 훈련 파이프라인 공개는 연구 커뮤니티의 재현성 기준을 한 단계 높인다.
+
+**8월 9일 14차 갱신**: **OpenAI Astra**의 사이버보안 임계 역량 도달과 개발 보류는 2026년 모델 경쟁에서 가장 충격적인 사건 중 하나다. AI 모델이 독자적으로 제로데이 익스플로잇을 발견하고 실행할 수 있는 수준에 도달했다는 것은, 프론티어 모델 개발이 단순한 성능 경쟁에서 **안전 역량 경쟁**으로 전환되었음을 의미한다. 준비 프레임워크의 두 번째 발동은 이 거버넌스 메커니즘이 작동한다는 것을 입증했지만, 동시에 AI 모델의 능력이 이미 통제가 필요한 수준에 도달했음을 시사한다. 에이전트형 코딩 능력의 향상이 사이버보안 역량으로 직결된다는 점은, 코딩 에이전트의 발전이 양날의 검임을 확인시킨다. 다른 AI 연구소에 유사한 평가 프레임워크 도입을 압박하는 선례이며, 정부 규제의 방향성에도 직접적 영향을 미칠 것이다.
 
 **8월 7일 13차 갱신**: 세 개의 신규 모델이 각각 다른 차원에서 모델 경쟁을 심화시킨다. **Mistral Shieldstral 3B**는 안전 분류라는 비주도 카테고리에서 오픈소스의 가치를 증명한다. 3B 파라미터로 7배 큰 모델과 동등한 성능, 재학습 없는 정책 적응, Apache 2.0 라이선스는 에이전트 가드레일 인프라를 모든 개발자가 구축할 수 있게 만든다. 이는 MAI-Cyber-1-Flash(보안 분석 특화)와 함께 도메인 특화 소형 모델이 프론티어 모델과 협력하는 에이전트 역할 분담 패러다임의 확장이다.
 

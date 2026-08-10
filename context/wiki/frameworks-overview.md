@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: frameworks
-- **관련 뉴스 수**: 26
-- **최종 업데이트**: 2026-08-08 (12차 갱신)
+- **관련 뉴스 수**: 28
+- **최종 업데이트**: 2026-08-10 (13차 갱신)
 
 ## 요약
 2026년 6월 현재, 에이전트 프레임워크 생태가 8개 주력 SDK로 정리되었다. Microsoft Agent Framework(MAF)가 BUILD 2026에서 Agent Harness·CodeAct·Foundry Hosted Agents를 발표하며 프로덕션 배포 인프라를 통합했고, Anthropic은 Claude Agent SDK를 별도 월간 크레딧 과금제로 전환했다. Cisco의 FAPO는 파이프라인 단계별 자동 디버깅을, 화웨이는 OS 수준 통합이라는 각기 다른 접근을 보여준다. MCP가 200+ 서버를 확보하며 사실상 표준 도구 프로토콜로 자리 잡았고, ACP가 A2A로 통합되며 Linux Foundation 산하로 이관되었다.
@@ -344,6 +344,8 @@ Oracle의 차별점은 **개발자가 이미 익숙한 도구(VS Code, Codex, Cl
 - [Gemini Managed Agents 3.6 Flash — Hooks, 예산 통제](../records/2026-07-29-gemini-managed-agents-3-6-flash-hooks.md) ⭐NEW (7/28)
 - [프롬프트 vs 루프 vs 그래프 엔지니어링 계층 모델](../records/2026-07-29-prompt-loop-graph-engineering-layers.md) ⭐NEW (7/29)
 - [Prime Agent — 자가 진화형 RLM 코딩 에이전트](../records/2026-08-05-prime-agent-self-improving-rlm.md) ⭐⭐⭐⭐ ⭐NEW (8/5)
+- [Anthropic Claude Code Auto Mode 기본값 전환](../records/2026-08-10-anthropic-claude-code-auto-mode-default.md) ⭐⭐⭐⭐ ⭐NEW (8/10)
+- [Docker Sandboxes — AI 에이전트 격리 환경](../records/2026-08-10-docker-sandboxes-ai-agents.md) ⭐⭐⭐⭐ ⭐NEW (8/10)
 
 ## 2026년 7월 10차 업데이트: Gemini Managed Agents 3.6 Flash — Hooks로 에이전트 제어 패러다임 강화
 
@@ -421,3 +423,32 @@ Continual Harness의 CRUD 메커니즘은 에이전트가 실행 중 새로운 �
 **프롬프트→루프→그래프 계층 모델과의 관계**: Prime Agent는 루프 계층(단일 에이전트 행동 주기)과 그래프 계층(서브에이전트 조직)을 모두 다루면서도, **메타 계층**(에이전트가 자신의 루프와 그래프를 런타임에 재구성)이라는 새로운 추상화를 추가한다. 이는 Anthropic이 경고한 "과도한 엔지니어링"의 위험을 안고 있지만, 동시에 에이전트가 자신의 복잡성을 스스로 관리한다는 점에서 독특한 해결책을 제시한다.
 
 > 💡 **교차 참조**: Prime Agent의 Continual Harness(CRUD 기반 자기 수정)는 [Meta Muse Code](tools-overview.md)의 병렬 서브에이전트(격리 워크트리)와 같은 방향성 — 단일 에이전트에서 멀티 에이전트 자가 조직화로 진화. 단, Muse Code는 컴파일 타임에 설계된 병렬화라면, Prime Agent는 런타임에 에이전트가 스스로 구조를 결정한다. [Omnigent](#2026년-7월-4차-업데이트-omnigent--메타-하네스로-거버넌스-간극-해결)의 메타-하네스(다중 에이전트 도구 통합)와도 보완적 — Omnigent가 외부 도구를 오케스트레이션한다면, Prime Agent는 내부 구조를 오케스트레이션한다. [LangChain × NVIDIA NemoClaw](#2026년-7월-7차-업데이트-langchain--nvidia-nemoclaw--풀스택-에이전트-최적화-패러다임)의 컴포넌트 기반 조립 패러다임과도 같은 맥락 — 에이전트를 구성하는 컴포넌트를 동적으로 교체할 수 있다는 점에서.
+
+## 2026년 8월 13차 업데이트: Claude Code Auto Mode 기본값 전환 — 승인 피로 해결과 에이전트 자율성 가속
+
+**출처**: [TechCrunch — Anthropic Turns Claude Code Auto Mode On by Default](../records/2026-08-10-anthropic-claude-code-auto-mode-default.md) ⭐⭐⭐⭐
+
+### 핵심 변화: 자동 모드(Auto Mode) 기본값 도입
+Anthropic이 Claude Code의 자동 모드를 **Pro, Max, Team 계정의 기본 설정**으로 전환한다. 2026년 8월 14일부터 적용되며, 파괴적이거나 외부 대상인 행위가 아닌 한 인간 승인 없이 진행된다.
+
+- **승인 피로(Approval Fatigue) 해결**: 사용자가 권한 프롬프트의 **97%를 승인**한다는 데이터를 직시하고, 모델 스스로 위험을 판단하게 하는 방식으로 전환
+- **안전성 실증**: 1,053명 유료 테스터 연구에서 자동 모드는 유해 행위의 **89%를 차단**, 수동 검토는 13.6%만 차단 — 습관적 승인보다 모델 자체 판단이 더 안전
+- **추가 안전 기능**: 프롬프트 인젝션 검사, 사용자 정의 거부 규칙 추가
+- **의미**: AI 코딩 도구가 '승인 요청 도구'에서 '자율 코딩 동료'로 전환되는 기념비적 변화. Cursor, GitHub Copilot, Windsurf 등 경쟁사도 유사한 자동 실행 모드 도입을 가속할 가능성
+
+### Docker Sandboxes — 자율성+안전의 인프라 계층
+
+**출처**: [Docker — Docker Sandboxes](../records/2026-08-10-docker-sandboxes-ai-agents.md) ⭐⭐⭐⭐
+
+Docker가 Claude Code, Gemini CLI, Copilot CLI 등 AI 코딩 에이전트를 위한 **일회용 격리 샌드박스 환경**인 Docker Sandboxes를 출시했다.
+
+- **microVM 기반 격리**: 에이전트는 전용 microVM 내에서 실행. 호스트 파일시스템·네트워크 접근 차단. `--dangerously-skip-permissions` 모드에서도 호스트 보호
+- **"YOLO 모드, 안전하게"**: 에이전트에게 최대 자율성을 부여하면서도 인프라 수준에서 안전 보장
+- **Docker AI Governance 통합**: 조직 전체에 네트워크 정책, 파일시스템 규칙, MCP 거버넌스를 중앙에서 강제
+- **네스팅 지원**: 에이전트 내부에서 다시 Docker 컨테이너 실행 가능
+- **의미**: Claude Code Auto Mode와 결합하면 'AI에게 더 많은 권한을 줘도 안전하다'는 생태계의 핵심 인프라. NanoClaw, Warp 등이 이미 지원 선언
+
+### 프레임워크 생태계에서의 의미
+Claude Code Auto Mode와 Docker Sandboxes는 **에이전트 자율성의 양면**을 해결한다. Auto Mode가 모델 수준의 안전 판단이라면, Docker Sandboxes는 인프라 수준의 격리. 이 둘이 결합하면 개발자는 AI에게 최대 자율성을 부여하면서도 시스템 안전을 유지할 수 있다. 이는 [Omnigent](#2026년-7월-4차-업데이트-omnigent--메타-하네스로-거버넌스-간극-해결)의 정책 중심 보안과 같은 방향성이며, [AI Safety Test Becoming Safety Risk](industry-trends.md)에서 보여준 샌드박스 탈주 위험에 대한 인프라 수준의 대응이다.
+
+> 💡 **교차 참조**: Docker Sandboxes의 microVM 격리는 [AI 안전 평가 환경 탈주](../records/2026-08-10-ai-safety-test-becoming-safety-risk.md)([산업 동향](industry-trends.md))에서 드러난 '테스트 환경 통제가 모델 능력을 따라잡지 못하는' 문제에 대한 직접적 인프라 해법. Claude Code Auto Mode의 89% 차단율은 [Vending-Bench 기만](research-overview.md)에서 보여준 AI의 전략적 행동 통제를 모델 스스로 수행한다는 것을 의미. [Databricks의 Omnigent 메타 하니스](../records/2026-08-08-databricks-ai-coding-cost-reduction.md)([산업 동향](industry-trends.md))와 결합하면 비용 효율적이면서 안전한 코딩 에이전트 스택 구축 가능.

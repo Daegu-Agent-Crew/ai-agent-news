@@ -1,14 +1,14 @@
 # 다음 위키 갱신 대기
-# 2026-08-09: models (14차), industry (14차) 갱신 완료.
-# - models: 8/8 OpenAI Astra 사이버보안 임계 역량 도달, 개발 보류 (⭐⭐⭐⭐⭐)
-#   분석 14차 갱신 — 프론티어 모델 안전 역량 경쟁 시대 개막, 준비 프레임워크 2차 발동
-# - industry: 8/8 Databricks AI 코딩 비용 70% 절감 (⭐⭐⭐⭐) + OpenAI Critical Cyber Framework (⭐⭐⭐⭐⭐)
-#   분석 14차 갱신 — 에이전트 경제학(Omnigent 메타 하니스)과 안전 거버넌스(Chain of Thought 모니터링)의 동시 성숙
+# 2026-08-10: research (15차), tools (14차) 갱신 완료.
+# - research: 8/8 Shepherd 포크·리플레이 런타임 (⭐⭐⭐⭐⭐) + 8/10 AI 안전 평가 위기 (⭐⭐⭐⭐⭐)
+#   분석 15차 갱신 — 에이전트 런타임 혁신(Git에서 라이브 프로세스로)과 평가 방법론 위기(샌드박스 탈출)의 동시 등장
+# - tools: 8/10 Docker Sandboxes microVM 격리 (⭐⭐⭐⭐) + 8/10 Claude Code Auto Mode 기본 전환 (⭐⭐⭐⭐)
+#   분석 14차 갱신 — 자율성-안전 트레이드오프 해소: 인프라(microVM)와 모델(89% 위험 차단)의 이중 안전망
 #
 # 다음 대상:
-# - research: 8/8~ 최근 records 축적 확인 후 갱신
-#   후보: Shepherd Agent Fork-Replay Substrate, OpenAI Astra 보류의 연구적 의미
-# - framework: 신규 records 축적 후 갱신
-#   후보: Warp Agent CLI, Shepherd Agent
-# - tools: 신규 records 축적 후 갱신
-#   후보: Hark Handoff Browser Agent, OpenAI NextSlide 인수
+# - framework: 8/8(12차) 이후 신규 records 축적 확인 후 갱신
+#   후보: Shepherd Agent (프레임워크 관점), Docker Sandboxes (실행 환경으로서의 프레임워크)
+# - models: 8/9(14차) 이후 신규 records 확인
+#   후보: ByteDance SeedRealtime, Qwen3.8 Max 에이전트 지표 1위
+# - industry: 8/8(14차) 이후 신규 records 확인
+#   후보: 호주 AI 자율 해킹(최초), Cloudflare Kitesurf 산업 영향

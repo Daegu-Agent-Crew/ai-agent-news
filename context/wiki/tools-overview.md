@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: tools
-- **관련 뉴스 수**: 34
-- **최종 업데이트**: 2026-08-08 (13차 갱신)
+- **관련 뉴스 수**: 36
+- **최종 업데이트**: 2026-08-10 (14차 갱신)
 
 ## 요약
 에이전트 도구 생태계가 빠르게 분화하고 있다. 브라우저 자동화, MCP 서버, 터미널 작업 등 각 영역별 전문 도구가 등장하면서, 에이전트 개발 스택이 성숙 단계에 진입했다. MCP(Model Context Protocol)가 200+ 서버 구현체를 확보하며 사실상 표준으로 자리잡았고, 도구 간 상호운용성이 빠르게 표준화되고 있다.
@@ -597,3 +597,60 @@ Google Earth 사례는 AI 이미지 생성 기술이 신뢰 기반 정보 시스
 **미들웨어 계층 (TencentDB Agent Memory)**: 에이전트 메모리의 "거버넌스 간극"을 해결했다. 기존 에이전트 메모리는 세션 단위 격리 또는 전체 공유의 양극단만 존재했지만, ACL 기반 3단계 가시성(private/team/restricted)으로 팀 협업 시 프라이버시와 공유를 동시에 달성했다. MIT 라이선스 + Docker 원령 배포 + Anthropic/OpenAI 프로토콜 동시 지원으로 기업 도입 장벽을 최소화한 것이 차별점.
 
 **소비자 계층 (Google Maps)**: 20억 사용자에게 AI 에이전트를 직접 경험시키는 최초의 대규모 사례. 개발자 도구에서 시작된 에이전트 개념이 일반 소비자 앱으로 확산되는 전환점으로, 사용자의 행동 데이터(이메일, 캘린더)를 활용한 Personal Intelligence가 개인화 에이전트의 대중화를 앞당길 것이다.
+
+## 에이전트 실행 환경의 성숙 & 자율성-안전 패러다임 (2026년 8월 14차 갱신)
+
+8월 둘째 주, 에이전트 도구 생태계에서 **실행 환경의 표준화**(Docker Sandboxes)와 **자율성-안전 트레이드오프 해소**(Claude Code Auto Mode 기본 전환)라는 두 가지 상호 보완적 발전이 동시에 일어났다. 이 두 사례는 "AI에게 더 많은 권한을 줘도 안전하다"는 에이전트 인프라의 새로운 합의가 형성되고 있음을 보여준다.
+
+### Docker Sandboxes — AI 코딩 에이전트를 위한 일회용 microVM 격리 환경 ⭐⭐⭐⭐
+
+**출처**: [Docker — Docker Sandboxes](../records/2026-08-10-docker-sandboxes-ai-agents.md)
+**링크**: [docker.com/products/docker-sandboxes](https://www.docker.com/products/docker-sandboxes/)
+
+#### 핵심 설계
+Docker가 Claude Code, Gemini CLI, Copilot CLI, Codex, OpenCode, Kiro 등 주요 코딩 에이전트를 위한 **일회성 격리 환경**을 출시했다. "YOLO 모드, 안전하게"라는 슬로건 아래, 각 에이전트는 전용 **microVM** 내에서 실행된다.
+
+| 특징 | 설명 |
+|------|------|
+| **격리 방식** | microVM (커널 수준 호스트 분리) |
+| **에이전트 권한** | 패키지 설치, 설정 변경, 컨테이너 실행 가능 |
+| **호스트 보호** | 파일시스템·네트워크 접근 차단 |
+| **거버넌스** | Docker AI Governance 통합 — 네트워크 정책, 파일시스템 규칙, MCP 거버넌스 중앙 강제 |
+| **지원 환경** | macOS, Windows (Docker Desktop 불필요) |
+
+#### 의미: "승인 피로"의 인프라 해결책
+AI 코딩 에이전트 도입의 가장 큰 장애물인 보안 우려를 인프라 수준에서 해결한다. `--dangerously-skip-permissions` 모드에서도 microVM 격리로 호스트가 보호되므로, 에이전트에게 최대 자율성을 부여하면서도 안전을 유지할 수 있다. 이는 아래 Claude Code Auto Mode의 통계(수동 검토 13.6% vs 자동 모드 89% 위험 차단)와 결합하면, **인프라 격리 + 모델 자체 판단**의 이중 안전망이 에이전트 실용성을 크게 높인다.
+
+> 💡 **교차 참조**: Docker Sandboxes는 [Shepherd](research-overview.md)(에이전트 실행 포크·리플레이)와 보완적 — Shepherd는 실행 상태의 버전 관리를, Docker Sandboxes는 실행 환경의 격리를 담당한다. 두 기술이 결합하면 '안전하고 롤백 가능한 에이전트 실행 환경'이 완성된다. [Omnigent](frameworks-overview.md)의 정책 중심 보안(셸 명령어·파일 편집 제어)과도 같은 방향성 — 단, Omnigent는 정책 엔진이고, Docker Sandboxes는 인프라 계층이다.
+
+### Anthropic Claude Code — Auto Mode 기본 전환, 승인 피로 해소 ⭐⭐⭐⭐
+
+**출처**: [TechCrunch — Claude Code Auto Mode Default](../records/2026-08-10-anthropic-claude-code-auto-mode-default.md)
+**링크**: [claude.com/blog/auto-mode-default-in-claude-code](https://claude.com/blog/auto-mode-default-in-claude-code)
+
+#### 핵심 변화
+Anthropic이 Claude Code의 자동 모드(Auto Mode)를 **Pro, Max, Team 계정의 기본 설정**으로 전환한다 (8월 14일 적용). 파괴적이거나 외부 대상인 행위가 아닌 한 인간 승인 없이 진행된다.
+
+#### 통계: 수동 검토보다 자동 모드가 더 안전
+| 지표 | 자동 모드 | 수동 검토 |
+|------|----------|----------|
+| 유해 행위 차단율 | **89%** | 13.6% |
+| 사용자 권한 프롬프트 승인율 | — | 97% (습관적 승인) |
+
+1,053명 유료 테스터 대상 연구에서 자동 모드가 수동 검토보다 월등히 안전한 것으로 나타났다. 사용자가 권한 프롬프트의 97%를 승인하는 현실("승인 피로")을 직시하고, 모델 스스로 위험을 판단하게 하는 방식으로 전환한 것이다. 새로운 **프롬프트 인젝션 검사**와 **사용자 정의 거부 규칙**도 추가되었다.
+
+#### 의미: 에이전트 자율성의 사회적 합의 형성
+이 결정은 AI 코딩 에이전트 시장에서 중요한 선례를 만든다. Cursor, GitHub Copilot, Windsurf 등 경쟁사들도 유사한 자동 실행 모드를 고려할 가능성이 높으며, 사용자 워크플로우에서 "AI 코딩 도구"가 "AI 코딭 동료"로 전환되는 기념비적 순간이다. Docker Sandboxes와 결합하면, 개발자는 AI에게 더 많은 자율성을 부여하면서도 안전을 유지할 수 있다.
+
+> 💡 **교차 참조**: Auto Mode의 승인 피로 해소는 [Docker Sandboxes](#docker-sandboxes--ai-코딩-에이전트를-위한-일회용-microvm-격리-환경-)와 완벽한 상보 관계를 형성한다. Docker Sandboxes가 인프라 수준의 격리를 제공하면, Auto Mode는 모델 수준의 안전 판단을 제공한다 — 이중 안전망. [프레임워크 동향](frameworks-overview.md)의 Claude Agent SDK 생명주기 훅(PreToolUse/PostToolUse)과 같은 맥락이지만, 훅을 사용자가 아닌 모델이 활용하는 것이 차이점. [연구 동향](research-overview.md)의 AI 안전 평가 위기(샌드박스 탈출)와 대조적 — 안전 평가 환경의 위기를 제품 수준에서 해결하는 실용적 접근.
+
+### 14차 갱신 분석: "자율성-안전 트레이드오프의 해소 — 인프라와 모델의 이중 안전망"
+
+Docker Sandboxes와 Claude Code Auto Mode는 각각 다른 계층에서 같은 문제를 해결한다:
+
+| 계층 | 솔루션 | 접근 방식 |
+|------|--------|----------|
+| **인프라** | Docker Sandboxes | microVM 격리로 호스트 보호. 에이전트가 무엇을 하든 호스트에는 영향 없음 |
+| **모델** | Claude Code Auto Mode | 모델 스스로 행위의 안전성 판단. 수동 승인의 97% 자동 승인 현실 해소 |
+
+이 두 발전이 동시에 일어난 것은 우연이 아니다. 에이전트 생태계 전반에서 **"AI에게 더 많은 권한을 줘도 안전하다"**는 새로운 합의가 형성되고 있다. Docker는 인프라 수준의 보장을, Anthropic은 모델 수준의 판단을 각각 제공하며, 이 두 층위가 독립적으로 작동하면서 상호 보완한다. 이는 [Kitesurf](#cloudflare-kitesurf--에이전트-전용-브라우저-v8-isolate에서-구동-)(V8 isolate 브라우저)와 [TencentDB Agent Memory](#tencentdb-agent-memory-v20--팀-단위-에이전트-메모리-허브-오픈소스-)(ACL 거버넌스)로 이어진 2026년 8월의 에이전트 인프라 혁신 흐름의 핵심 축이다. 또한 [ByteDance SeedRealtime](../records/2026-08-10-bytedance-seedrealtime-audio-visual-llm.md) 등 멀티모달 모델의 발전과 결합하면, 코딩 에이전트를 넘어 일반 작업 에이전트의 자율성도 빠르게 확대될 것이다.

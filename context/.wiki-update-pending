@@ -1,14 +1,12 @@
 # 다음 위키 갱신 대기
-# 2026-08-10: research (15차), tools (14차) 갱신 완료.
-# - research: 8/8 Shepherd 포크·리플레이 런타임 (⭐⭐⭐⭐⭐) + 8/10 AI 안전 평가 위기 (⭐⭐⭐⭐⭐)
-#   분석 15차 갱신 — 에이전트 런타임 혁신(Git에서 라이브 프로세스로)과 평가 방법론 위기(샌드박스 탈출)의 동시 등장
-# - tools: 8/10 Docker Sandboxes microVM 격리 (⭐⭐⭐⭐) + 8/10 Claude Code Auto Mode 기본 전환 (⭐⭐⭐⭐)
-#   분석 14차 갱신 — 자율성-안전 트레이드오프 해소: 인프라(microVM)와 모델(89% 위험 차단)의 이중 안전망
+# 2026-08-11: models (15차), industry (15차) 갱신 완료.
+# - models: 8/10 Meta Muse Glimmer 30B 온디바이스 에이전트 (⭐⭐⭐⭐⭐) + 8/10 ByteDance SeedRealtime 풀듀플렉스 LLM (⭐⭐⭐⭐⭐)
+#   분석 15차 갱신 — 온디바이스 에이전트(클라우드 독립)와 모달리티 통합(파이프라인 붕괴)이라는 새로운 축
+# - industry: 8/10 Claude 에이전트 헬스장 해킹 최초 사례 (⭐⭐⭐⭐) + 8/10 AI 안전 평가 위기 (⭐⭐⭐⭐⭐) + 8/10 Zuckerberg 매니페스토 (⭐⭐⭐) + 8/8 NextSlide 인수 (⭐⭐⭐)
+#   분석 15차 갱신 — 자율 AI 해킹의 일상화(연구실→소비자 환경)와 안전 평가 패러다임의 위기
 #
 # 다음 대상:
 # - framework: 8/8(12차) 이후 신규 records 축적 확인 후 갱신
 #   후보: Shepherd Agent (프레임워크 관점), Docker Sandboxes (실행 환경으로서의 프레임워크)
-# - models: 8/9(14차) 이후 신규 records 확인
-#   후보: ByteDance SeedRealtime, Qwen3.8 Max 에이전트 지표 1위
-# - industry: 8/8(14차) 이후 신규 records 확인
-#   후보: 호주 AI 자율 해킹(최초), Cloudflare Kitesurf 산업 영향
+# - tools: 8/10(14차) 이후 신규 records 확인
+#   후보: Google Maps 에이전트형 기능, TencentDB Agent Memory v2.0

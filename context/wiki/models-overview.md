@@ -3,11 +3,7 @@
 ## 메타데이터
 - **카테고리**: models
 - **관련 뉴스 수**: 26
-<<<<<<< Updated upstream
-- **최종 업데이트**: 2026-08-10 (15차 갱신)
-=======
-- **최종 업데이트**: 2026-08-11 (15차 갱신)
->>>>>>> Stashed changes
+- **최종 업데이트**: 2026-08-12 (16차 갱신)
 
 ## 요약
 2026년 6월, 14일 사이에 Google, OpenAI, Anthropic, Microsoft가 연달아 플래그십 모델을 출격했다. 더 이상 "하나의 최고 모델"이 존재하지 않으며, 용도별(가격·수학·코딩·독립성) 최적 모델이 다르다. Google은 가격 파괴, OpenAI는 수학 추론, Anthropic은 코딩 정확도, Microsoft는 자체 모델 독립성이라는 각기 다른 승부수를 던졌다. **7월 9일, OpenAI가 GPT-5.6(Sol/Terra/Luna)을 발표**하며 프론티어 모델 경쟁이 재점화되었다. 트럼프 행정부와의 2주간 규제 갈등 끝에 공개된 이 모델군은 자율 다단계 계획, 독립 도구 사용, 자기 교정 능력을 갖춘 에이전트 네이티브 모델로, 미국 정부의 사전 검토 게이트가 반복적 패턴으로 자리 잡을 가능성을 시사한다.
@@ -501,15 +497,10 @@ SeedRealtime은 AI 모델이 별도의 컴포넌트(ASR, VLM, TTS)를 조립하�
 - [Mistral Shieldstral 3B — 멀티모달 안전 분류기, Apache 2.0](../records/2026-08-04-mistral-releases-shieldstral-3b-multimodal-safety-classifier.md) ⭐⭐⭐⭐ ⭐NEW (8/4)
 - [GPT-5.6 Sol 개선 & Luna 무제한 — 사실 오류 68% 감소](../records/2026-08-07-openai-gpt-5-6-sol-luna-free-unlimited.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/7)
 - [Qwen3.8 Max — Agentic Index 종합 1위](../records/2026-08-07-qwen-3-8-max-tops-agentic-index.md) ⭐⭐⭐⭐ ⭐NEW (8/7)
-<<<<<<< Updated upstream
-- [OpenAI Astra — 사이버보안 임계 역량 도달, 개발 보류](../records/2026-08-08-openai-astra-cybersecurity-pause.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/8)
-- [ByteDance SeedRealtime — 네이티브 오디오-비주얼 풀듀플렉스 LLM](../records/2026-08-10-bytedance-seedrealtime-audio-visual-llm.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/10)
-- [Meta Muse Glimmer — 30B 오픈 웨이트 에이전트 모델](../records/2026-08-10-meta-muse-glimmer-30b-open-agentic-model.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/10)
-=======
 - [OpenAI Astra — 사이버보안 임계 역량 도달, 개발 보류](../records/2026-08-08-openai-astra-cybersecurity-pause.md) ⭐⭐⭐⭐⭐ (8/8)
-- [Meta Muse Glimmer — 30B 오픈 웨이트 온디바이스 에이전트 모델](../records/2026-08-10-meta-muse-glimmer-30b-open-agentic-model.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/10)
-- [ByteDance SeedRealtime — 네이티브 오디오-비주얼 풀듀플렉스 LLM](../records/2026-08-10-bytedance-seedrealtime-audio-visual-llm.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/10)
->>>>>>> Stashed changes
+- [Meta Muse Glimmer — 30B 오픈 웨이트 온디바이스 에이전트 모델](../records/2026-08-10-meta-muse-glimmer-30b-open-agentic-model.md) ⭐⭐⭐⭐⭐ (8/10)
+- [ByteDance SeedRealtime — 네이티브 오디오-비주얼 풀듀플렉스 LLM](../records/2026-08-10-bytedance-seedrealtime-audio-visual-llm.md) ⭐⭐⭐⭐⭐ (8/10)
+- [NVIDIA Nemotron 3.5 Lightning — 에이전트 전용 30B MoE 오픈 모델](../records/2026-08-12-nvidia-nemotron-3-5-lightning-nemo-switchyard.md) ⭐⭐⭐⭐ ⭐NEW (8/12)
 
 ## 관련 위키 문서
 - [평가 벤치마크](research-overview.md) — 모델별 에이전트 성능 리더보드
@@ -574,14 +565,32 @@ SeedRealtime은 AI 모델이 별도의 컴포넌트(ASR, VLM, TTS)를 조립하�
 
 **Qwen3.8 Max**는 독립 평가 기관 Artificial Analysis의 Agentic Index에서 오픈 모델 최초로 종합 1위를 차지했다. 이는 7월 Kimi K3·Qwen3.8 발표 시 "미국 최상위 모델과 경쟁"이라는 주장이 독립 검증을 거친 것으로, 오픈 웨이트 모델이 프롭리어터리 모델을 능가하는 새로운 이정표다. 핵심 시사점은 세 가지: 첫째, 추론·도구 사용·다단계 작업에서 오픈 모델이 리더십을 확보. 둘째, 중국이 오픈소스를 통한 글로벌 에이전트 생태계 주도 전략을 지속. 셋째, 모델 선택 기준이 "오픈 vs 클로즈드"에서 "용도별 최적"으로 완전히 전환되었음을 확인.
 
-<<<<<<< Updated upstream
-**8월 10일 15차 갱신**: 두 개의 신규 모델이 각각 **실시간 오디오-비주얼 통합**과 **온디바이스 에이전트 모델**이라는 새로운 영역을 개척했다.
-
-**ByteDance SeedRealtime**은 오디오·비디오·텍스트를 단일 모델에서 통합 처리하는 네이티브 오디오-비주얼 풀듀플렉스 LLM이다. 기존 ASR→VLM→TTS 파이프라인의 병목(단계별 지연, 정보 손실)을 제거하고, 인지·이해·판단·표현을 하나의 엔드투엔드 모델 안에서 병렬 실행한다. 턴테이킹도 모델 내부에서 처리하여 외부 VAD에 의존하지 않는다. 시연에서는 시끄러운 환경에서 화자 얼굴-음성 매칭(정체성 바인딩), 박물관에서의 능동적 인터랙션, 에스프레소 제작 과정 시각적 감지·교정 등이 공개되었다. GPT-4o의 실시간 음성 기능과 유사하지만 비디오까지 통합한 점에서 한 차원 높은 통합 수준. 다만 기술 보고서, 파라미터 수, 오픈 가중치, API 미공개로 생태계 기여는 제한적이다. 실시간 멀티모달 AI 경쟁의 새로운 기준을 제시한다.
-
-**Meta Muse Glimmer**는 300억 파라미터의 오픈 웨이트 에이전트 모델로, Apache 2.0 라이선스로 공개되었다. 4비트 양자화와 DFlash 블록 사양적 디코딩(speculative decoding)으로 단일 소비자 GPU(RTX 5090, M4/M5 Max Mac)에서 실행 가능하다. MCP Atlas 75.5, DeepSearch QA 74.6 등 8개 범용 에이전트 벤치마크 중 5개에서 Gemma4-31B와 Qwen3.6-27B를 상회하며, SWE-Bench Pro 51.2점을 기록했다. 재시도 훈련(retry training)으로 실패한 도구 호출 복구 능력을 내장했으나, 보안 가드레일 없는 bare 엔드포인트 배포를 경고하는 등 시스템 수준 제어를 권장한다. 클라우드 없이 단일 GPU에서 실행 가능한 오픈 소스 에이전트 모델이라는 점에서 파괴적이며, 프라이버시·데이터 주권이 중요한 의료·법률·금융·국방 분야의 로컬 에이전트 배포를 위한 첫 실용적 선택지를 제공한다.
-
-> 💡 **교차 참조**: SeedRealtime의 풀듀플렉스 통합은 [GPT-Live](industry-trends.md)의 음성 풀듀플렉스를 비디오까지 확장한 것. [FLUX 3 Action](#black-forest-labs-flux-3--시각-지능visual-intelligence-통합-모델)의 물리적 행동 예측과 함께 멀티모달 AI가 단일 아키텍처로 통합되는 추세를 확인시킨다. Muse Glimmer는 [Zuckerberg의 개인 에이전트 대중화 비전](industry-trends.md)을 뒷받침하는 기술로, 클라우드 비용 없이 로컬에서 에이전트를 운영할 수 있게 한다. [Qwen3.8 Max Agentic Index 1위](#qwen38-max--에이전트-벤치마크-종합-1위-오픈-모델의-새로운-이정표)와 함께 오픈 모델이 에이전트 영역에서 경쟁력을 확보하는 추세를 가속. DFlash 사양적 디코딩은 [프레임워크 동향](frameworks-overview.md)의 루프 계층(에이전트 응답 속도)에서 중요하며, [Docker Sandboxes](frameworks-overview.md)와 결합 시 안전한 로컬 에이전트 실행 환경 구축 가능.
-=======
 **8월 11일 15차 갱신**: 두 개의 ⭐⭐⭐⭐⭐ 모델이 각각 **온디바이스 에이전트**와 **실시간 멀티모달**이라는 새로운 차원을 열었다. **Meta Muse Glimmer**는 30B 파라미터 오픈 웨이트 모델을 단일 소비자 GPU에서 실행 가능하게 만들어, 에이전트의 클라우드 독립성을 의미있게 확보했다. 이는 GPT-5.6 Luna(초저가 API)와 DeepSeek V4-Flash(오픈 가중치)의 비용 경쟁에 **완전한 무료 로컬 실행**이라는 세 번째 축을 추가하며, 데이터 주권과 오프라인 실행이 필요한 엔터프라이즈 에이전트 시나리오의 실현 가능성을 높인다. **ByteDance SeedRealtime**은 ASR→VLM→TTS 파이프라인을 단일 모델로 통합하여, 실시간 오디오-비주얼 처리의 지연 시간을 극적으로 단축했다. GPT-Live가 음성 풀덱스를 상용화했고, FLUX 3가 생성 멀티모달을 통합했으며, SeedRealtime이 이해+생성 멀티모달을 통합하는 트렌드는 **모달리티 경계를 모델 내부로 흡수**하는 2026년 핵심 방향성이다. 두 모델 모델 경쟁이 성능 점수를 넘어 **배포 형태(온디바이스 vs 클라우드)**와 **인터페이스(텍스트 vs 실시간 멀티모달)**로 확장되었음을 시사한다.
->>>>>>> Stashed changes
+
+## 2026년 8월 16차 갱신: NVIDIA Nemotron 3.5 Lightning — 에이전트 전용 오픈 모델 + 지능형 라우팅
+
+**출처**: [NVIDIA Blog — Nemotron 3.5 Lightning + NeMo Switchyard](../records/2026-08-12-nvidia-nemotron-3-5-lightning-nemo-switchyard.md) ⭐⭐⭐⭐
+
+### 핵심 설계
+NVIDIA가 에이전트 AI 워크로드에 최적화된 **Nemotron 3.5 Lightning**(30B 파라미터 MoE 오픈 모델)과 오픈소스 모델 라우팅 라이브러리 **NeMo Switchyard**를 동시 출시했다. 두 기술이 결합하여 단일 프론티어 모델 대비 **비용을 최대 66% 절감**하면서도 프론티어급 정확도를 유지하는 "시스템 오브 모델(System of Models)" 접근을 제시한다.
+
+### Nemotron 3.5 Lightning — 에이전트 전문 실행 모델
+- **구조**: 30B 파라미터 혼합 전문가(MoE), 동급 대비 최대 4배 빠른 출력 속도
+- **설계**: 장시간 실행되는 에이전트 워크로드 최적화 — 코드 리뷰, 도구 사용, 보안 모니터링 등 전문 태스크
+- **로컬 구동**: RTX PC, DGX Spark/Station, Jetson 등 NVIDIA 로컬 AI 환경에서 구동 가능
+- **포스트 트레이닝**: NVIDIA NeMo로 기업 자체 도메인 데이터 파인튜닝 지원
+- **도입 사례**: CrowdStrike, Harvey, CodeRabbit, Lila Sciences 등 이미 사용 중
+- **RL 데이터셋**: Nemotron-RL-Agentic-Terminal-Pivot 데이터셋을 함께 공개하여 에이전트 코딩 능력 향상 지원
+
+### NeMo Switchyard — 오픈소스 모델 라우팅
+- **핵심**: 에이전트 워크플로우의 각 단계를 가장 적합한 모델로 자동 전달 — 코딩, 추론, 경량 태스크, 로컬 프라이버시별 최적 모델 선택
+- **성과**: Opus 4.8 단독 사용 대비 비용을 **약 1/3 수준**으로 절감하면서 프론티어급 정확도 유지
+- **오픈소스**: 기업이 자체 라우팅 알고리즘을 튜닝하여 품질·지연·비용 우선순위에 맞게 최적화 가능
+- **도입**: Boomi, Cadence 등 업계 파트너 이미 도입
+
+### 모델 생태계에서의 의미
+Nemotron 3.5 Lightning은 [Meta Muse Glimmer](#meta-muse-glimmer--온디바이스-에이전트를-위한-30b-오픈-웨이트-모델)(온디바이스 에이전트)과 [DeepSeek V4-Flash](#deepseek-v4-flash-0731--오픈-가중치-에이전트-코딩-최강)(오픈 가중치 코딩)의 흐름을 이으며, **에이전트 전문 실행 모델**이라는 새로운 카테고리를 제시한다. 범용 프론티어 모델(GPT-5.6 Sol, Claude Opus 5)이 워크플로우를 기획·조율한다면, Lightning은 실제 태스크를 빠르고 저렴하게 실행하는 전문 모델이다.
+
+NeMo Switchyard는 [Fireworks Nexus](tools-overview.md)(비용 라우팅)와 [Databricks의 동적 라우팅](industry-trends.md)(14차)의 오픈소스 대안이다. [Manifest의 LLM 라우터 폐지 선언](tools-overview.md)이 "캐싱이 라우팅보다 낫다"고 주장한 것에 대해, NVIDIA는 라우팅을 오픈소스로 공개하여 **투명성과 튜닝 가능성**으로 대응한다. 기업이 자체 라우팅 알고리즘을 소유할 수 있다는 점은 벤더 종속을 피하려는 엔터프라이즈에게 매력적이다.
+
+> 💡 **교차 참조**: NVIDIA의 "시스템 오브 모델" 접근은 [프레임워크 동향](frameworks-overview.md)의 프롬프트→루프→그래프 계층 모델에서 **그래프 계층**에 해당한다. 프론티어 모델이 워크플로우를 계획(Lightning이 비용 효율적 실행)하는 구조는 ADK 2.0의 결정론적+자율 하이브리드 모델과 같은 방향. [River AI](industry-trends.md)의 "프롬프트가 아닌 모델 훈련으로 개인화" 비전과 결합하면, Lightning을 사용자 데이터로 파인튜닝하여 완전히 개인화된 에이전트 실행 모델 구축 가능. [LangChain × NVIDIA NemoClaw](frameworks-overview.md) 블루프린트의 모델 레이어가 Nemotron 3 Ultra에서 Lightning으로 확장되며, NVIDIA가 모델·라우팅·하네스·런타임 4개 레이어를 모두 오픈소스로 제공하는 풀스택 전략을 완성.

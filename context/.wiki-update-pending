@@ -1,14 +1,12 @@
 # 다음 위키 갱신 대기
-# 2026-08-12: models (16차), industry (16차) 갱신 완료.
-# - models: 8/12 NVIDIA Nemotron 3.5 Lightning + NeMo Switchyard (⭐⭐⭐⭐)
-#   분석 16차 갱신 — 에이전트 전문 실행 모델(System of Models)과 오픈소스 라우팅
-# - industry: 8/12 Anthropic 워터마크 (⭐⭐⭐⭐⭐) + River AI 11억 달러 (⭐⭐⭐⭐⭐)
-#   분석 16차 갱신 — 투명성 인프라 실전 시행과 개인 에이전트 자본 검증
-#
-# 충돌 해결: models-overview.md, industry-trends.md의 git merge conflict 해결
+# 2026-08-13: research (17차), tools (15차) 갱신 완료.
+# - research: 8/12 Anthropic 리만 가설 진전 (⭐⭐⭐⭐) — 6차 갱신
+#   멀티에이전트 자율 연구(60 서브에이전트, 31M 토큰) + Lean 형식화 검증
+# - tools: 8/8 Shepherd Agent (⭐⭐⭐⭐⭐) — 15차 갱신
+#   에이전트 실행 포크·리플레이·되돌리기 Python 런타임 전용 섹션 추가
 #
 # 다음 대상:
-# - research: 8/12 Anthropic 리만 가설 진전 (⭐⭐⭐⭐) — 멀티에이전트 자율 조율 연구
-#   후보: research-overview.md 갱신
-# - tools: Shepherd Agent (8/8, tool 카테고리) 아직 전용 섹션 없음
-#   후보: tools-overview.md에 Shepherd 섹션 추가
+# - frameworks: 8/10 Meta Muse Glimmer 30B (⭐⭐⭐⭐) — 오픈 에이전틱 모델
+#   후보: frameworks-overview.md 갱신
+# - industry: 8/12 Cognition 40B valuation / Lovable 13.3B valuation (⭐⭐⭐⭐)
+#   후보: industry-trends.md 갱신

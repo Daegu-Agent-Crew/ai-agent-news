@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: tools
-- **관련 뉴스 수**: 36
-- **최종 업데이트**: 2026-08-10 (14차 갱신)
+- **관련 뉴스 수**: 37
+- **최종 업데이트**: 2026-08-13 (15차 갱신)
 
 ## 요약
 에이전트 도구 생태계가 빠르게 분화하고 있다. 브라우저 자동화, MCP 서버, 터미널 작업 등 각 영역별 전문 도구가 등장하면서, 에이전트 개발 스택이 성숙 단계에 진입했다. MCP(Model Context Protocol)가 200+ 서버 구현체를 확보하며 사실상 표준으로 자리잡았고, 도구 간 상호운용성이 빠르게 표준화되고 있다.
@@ -470,7 +470,8 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - [Meta Muse Code — 대규모 코드베이스 코딩 에이전트](../records/2026-08-05-meta-muse-code-coding-agent.md) ⭐⭐⭐⭐ ⭐NEW (8/5)
 - [Cloudflare Kitesurf — 에이전트 전용 브라우저, V8 Isolate](../records/2026-08-07-cloudflare-kitesurf-agent-first-browser.md) ⭐⭐⭐⭐ ⭐NEW (8/7)
 - [TencentDB Agent Memory v2.0 — 팀 단위 메모리 허브, 오픈소스](../records/2026-08-08-tencentdb-agent-memory-v2-open-source.md) ⭐⭐⭐⭐ ⭐NEW (8/8)
-- [Google Maps Agentic — 소비자 앱 에이전트화](../records/2026-08-08-google-maps-agentic-features.md) ⭐⭐⭐ ⭐NEW (8/8)
+- [Google Maps Agentic — 소비자 앱 에이전트화](../records/2026-08-08-google-maps-agentic-features.md) ⭐⭐⭐ (8/8)
+- [Shepherd — 에이전트 실행 포크·리플레이·되돌리기 Python 런타임](../records/2026-08-08-shepherd-agent-fork-replay-substrate.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/8)
 
 ## 관련 위키 문서
 - [평가 벤치마크](research-overview.md) — MCP Atlas로 측정하는 도구 호출 성능
@@ -654,3 +655,36 @@ Docker Sandboxes와 Claude Code Auto Mode는 각각 다른 계층에서 같은 �
 | **모델** | Claude Code Auto Mode | 모델 스스로 행위의 안전성 판단. 수동 승인의 97% 자동 승인 현실 해소 |
 
 이 두 발전이 동시에 일어난 것은 우연이 아니다. 에이전트 생태계 전반에서 **"AI에게 더 많은 권한을 줘도 안전하다"**는 새로운 합의가 형성되고 있다. Docker는 인프라 수준의 보장을, Anthropic은 모델 수준의 판단을 각각 제공하며, 이 두 층위가 독립적으로 작동하면서 상호 보완한다. 이는 [Kitesurf](#cloudflare-kitesurf--에이전트-전용-브라우저-v8-isolate에서-구동-)(V8 isolate 브라우저)와 [TencentDB Agent Memory](#tencentdb-agent-memory-v20--팀-단위-에이전트-메모리-허브-오픈소스-)(ACL 거버넌스)로 이어진 2026년 8월의 에이전트 인프라 혁신 흐름의 핵심 축이다. 또한 [ByteDance SeedRealtime](../records/2026-08-10-bytedance-seedrealtime-audio-visual-llm.md) 등 멀티모달 모델의 발전과 결합하면, 코딩 에이전트를 넘어 일반 작업 에이전트의 자율성도 빠르게 확대될 것이다.
+
+## 에이전트 런타임 관리 (2026년 8월 15차 갱신)
+
+### Shepherd — 에이전트 실행 포크·리플레이·되돌리기 Python 런타임 ⭐⭐⭐⭐⭐
+
+**출처**: [MarkTechPost — Shepherd: Open-Source Python Substrate](../records/2026-08-08-shepherd-agent-fork-replay-substrate.md)
+**코드**: [github.com/shepherd-agents/shepherd](https://github.com/shepherd-agents/shepherd) (MIT 라이선스)
+**설치**: `pip install shepherd-ai` (Python 3.11+, macOS/Linux)
+
+#### 핵심 기능
+Shepherd는 AI 에이전트의 모든 실행 상태(프로세스, 파일시스템, 프롬프트 캐시)를 **Git 방식**으로 기록하여, 임의 시점에서 포크·리플레이·되돌리기를 가능하게 하는 Python 런타임이다. 현재 **얼리 알파** 단계.
+
+| 연산 | 설명 | 성능 |
+|------|------|------|
+| **포크(Fork)** | 특정 시점에서 에이전트 상태 복제 | Docker 대비 **5배 빠름** |
+| **리플레이(Replay)** | 과거 이벤트 재생 | **95%+ 프롬프트 캐시 재사용** |
+| **되돌리기(Revert)** | 특정 시점으로 실행 롤백 | 전체 재시작 비용 절감 |
+
+#### 기술적 차별점
+- **copy-on-write 커밋**: 각 에이전트-환경 상호작용을 하나의 커밋으로 기록. Git과 달리 파일뿐 아니라 **라이브 프로세스와 프롬프트 캐시를 함께** 버전 관리
+- **Lean 정형화**: 핵심 연산의 수학적 정확성 보장
+- **OS 수준 권한 강제**: macOS(Seatbelt), Linux(Landlock)에서 샌드박싱
+
+#### 실증 결과
+- CooperBench 페어 코딩 통과율: **28.8% → 54.7%** (라이브 슈퍼바이저)
+- 4개 벤치마크 최대 **11포인트 향상**, **58% 실행 시간 단축** (반사실적 메타 최적화)
+- TerminalBench-2: **34.2% → 39.4%** (Tree-RL 훈련)
+
+> 💡 **교차 참조**: Shepherd는 [Docker Sandboxes](#docker-sandboxes--ai-코딩-에이전트를-위한-일회용-microvm-격리-환경-)와 보완적 — Docker는 실행 환경의 격리를, Shepherd는 실행 상태의 버전 관리를 담당. 결합하면 '안전하고 롤백 가능한 에이전트 실행 환경' 완성. [TencentDB Agent Memory](#tencentdb-agent-memory-v20--팀-단위-에이전트-메모리-허브-오픈소스-)의 팀 메모리 공유와도 시너지. [연구 동향](research-overview.md)에서 런타임 혁신 관점으로 상세 분석(5차 갱신).
+
+### 15차 갱신 분석: "에이전트 실행의 일급 객체화"
+
+Shepherd의 등장으로 에이전트 도구 생태계에 **'실행 상태 관리'**라는 새로운 카테고리가 추가되었다. 기존 도구들이 에이전트 구축(MCP, 프레임워크), 실행 환경(Docker Sandboxes), 비용 최적화(Fireworks Nexus)를 다뤘다면, Shepherd는 에이전트 실행 자체를 **버전 관리 가능한 객체**로 취급한다. 이는 장시간 실행되는 에이전트의 가장 큰 병목 — 실패 후 복구 비용 — 을 근본적으로 해결하며, 메타 에이전트가 실시간으로 하위 에이전트를 감시하고 개입하는 구조의 인프라 기반을 제공한다.

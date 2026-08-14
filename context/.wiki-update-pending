@@ -1,12 +1,16 @@
 # 다음 위키 갱신 대기
-# 2026-08-13: research (17차), tools (15차) 갱신 완료.
-# - research: 8/12 Anthropic 리만 가설 진전 (⭐⭐⭐⭐) — 6차 갱신
-#   멀티에이전트 자율 연구(60 서브에이전트, 31M 토큰) + Lean 형식화 검증
-# - tools: 8/8 Shepherd Agent (⭐⭐⭐⭐⭐) — 15차 갱신
-#   에이전트 실행 포크·리플레이·되돌리기 Python 런타임 전용 섹션 추가
+# 2026-08-14: frameworks (14차), industry (17차) 갱신 완료.
+# - frameworks: 8/10 Meta Muse Glimmer 30B (⭐⭐⭐⭐⭐) — 14차 갱신
+#   오픈 웨이트 30B 에이전트 모델, 소비자 GPU 실행, 로컬 에이전트 인프라
+# - industry: 8/12 Cognition $40B / Lovable $13.3B (⭐⭐⭐⭐⭐) — 17차 갱신
+#   AI 코딩 에이전트 밸류에이션 폭발, 매출 $1B+$500M 검증
 #
 # 다음 대상:
-# - frameworks: 8/10 Meta Muse Glimmer 30B (⭐⭐⭐⭐) — 오픈 에이전틱 모델
-#   후보: frameworks-overview.md 갱신
-# - industry: 8/12 Cognition 40B valuation / Lovable 13.3B valuation (⭐⭐⭐⭐)
-#   후보: industry-trends.md 갱신
+# - models: 8/14 Gemini 3.7 Flash 출시 / Writer Palmyra X6 토큰 비용 (⭐⭐⭐⭐)
+#   후보: models-overview.md 갱신
+# - tools: 8/14 Okta MCP Tool Scoping / OpenAI Ultrafast Cerebras (⭐⭐⭐⭐)
+#   후보: tools-overview.md 갱신
+# - research: 8/12 Google AMIE 비디오 진료 / Anthropic 리만 가설 (⭐⭐⭐⭐)
+#   후보: research-overview.md 갱신
+# - industry: 8/14 Anthropic 멀티에이전트 텃밭 분쟁 (⭐⭐⭐⭐)
+#   후보: industry-trends.md 추가 갱신

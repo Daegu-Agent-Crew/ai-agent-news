@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: frameworks
-- **관련 뉴스 수**: 28
-- **최종 업데이트**: 2026-08-10 (13차 갱신)
+- **관련 뉴스 수**: 30
+- **최종 업데이트**: 2026-08-14 (14차 갱신)
 
 ## 요약
 2026년 6월 현재, 에이전트 프레임워크 생태가 8개 주력 SDK로 정리되었다. Microsoft Agent Framework(MAF)가 BUILD 2026에서 Agent Harness·CodeAct·Foundry Hosted Agents를 발표하며 프로덕션 배포 인프라를 통합했고, Anthropic은 Claude Agent SDK를 별도 월간 크레딧 과금제로 전환했다. Cisco의 FAPO는 파이프라인 단계별 자동 디버깅을, 화웨이는 OS 수준 통합이라는 각기 다른 접근을 보여준다. MCP가 200+ 서버를 확보하며 사실상 표준 도구 프로토콜로 자리 잡았고, ACP가 A2A로 통합되며 Linux Foundation 산하로 이관되었다.
@@ -346,6 +346,7 @@ Oracle의 차별점은 **개발자가 이미 익숙한 도구(VS Code, Codex, Cl
 - [Prime Agent — 자가 진화형 RLM 코딩 에이전트](../records/2026-08-05-prime-agent-self-improving-rlm.md) ⭐⭐⭐⭐ ⭐NEW (8/5)
 - [Anthropic Claude Code Auto Mode 기본값 전환](../records/2026-08-10-anthropic-claude-code-auto-mode-default.md) ⭐⭐⭐⭐ ⭐NEW (8/10)
 - [Docker Sandboxes — AI 에이전트 격리 환경](../records/2026-08-10-docker-sandboxes-ai-agents.md) ⭐⭐⭐⭐ ⭐NEW (8/10)
+- [Meta Muse Glimmer 30B — 오픈 웨이트 에이전트 모델](../records/2026-08-10-meta-muse-glimmer-30b-open-agentic-model.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/10)
 
 ## 2026년 7월 10차 업데이트: Gemini Managed Agents 3.6 Flash — Hooks로 에이전트 제어 패러다임 강화
 
@@ -452,3 +453,27 @@ Docker가 Claude Code, Gemini CLI, Copilot CLI 등 AI 코딩 에이전트를 위
 Claude Code Auto Mode와 Docker Sandboxes는 **에이전트 자율성의 양면**을 해결한다. Auto Mode가 모델 수준의 안전 판단이라면, Docker Sandboxes는 인프라 수준의 격리. 이 둘이 결합하면 개발자는 AI에게 최대 자율성을 부여하면서도 시스템 안전을 유지할 수 있다. 이는 [Omnigent](#2026년-7월-4차-업데이트-omnigent--메타-하네스로-거버넌스-간극-해결)의 정책 중심 보안과 같은 방향성이며, [AI Safety Test Becoming Safety Risk](industry-trends.md)에서 보여준 샌드박스 탈주 위험에 대한 인프라 수준의 대응이다.
 
 > 💡 **교차 참조**: Docker Sandboxes의 microVM 격리는 [AI 안전 평가 환경 탈주](../records/2026-08-10-ai-safety-test-becoming-safety-risk.md)([산업 동향](industry-trends.md))에서 드러난 '테스트 환경 통제가 모델 능력을 따라잡지 못하는' 문제에 대한 직접적 인프라 해법. Claude Code Auto Mode의 89% 차단율은 [Vending-Bench 기만](research-overview.md)에서 보여준 AI의 전략적 행동 통제를 모델 스스로 수행한다는 것을 의미. [Databricks의 Omnigent 메타 하니스](../records/2026-08-08-databricks-ai-coding-cost-reduction.md)([산업 동향](industry-trends.md))와 결합하면 비용 효율적이면서 안전한 코딩 에이전트 스택 구축 가능.
+
+## 2026년 8월 14차 업데이트: Meta Muse Glimmer 30B — 오픈 웨이트 에이전트 모델의 소비자 GPU 도달
+
+**출처**: [MarkTechPost — Meta Muse Glimmer](../records/2026-08-10-meta-muse-glimmer-30b-open-agentic-model.md) ⭐⭐⭐⭐⭐
+
+### 핵심 설계
+Meta Superintelligence Labs가 300억 파라미터 오픈 웨이트 에이전트 모델 **Muse Glimmer**를 Apache 2.0 라이선스로 공개했다. 4비트 웨이트 양자화 + DFlash 블록 사양적 디코딩으로 단일 소비자 GPU(RTX 5090, M4/M5 Max Mac)에서 실행 가능하며, always-on 로컬 에이전트 워크플로우에 최적화되었다.
+
+**기술적 혁신:**
+1. **4비트 양자화 + DFlash**: 30B 모델(정밀도 기준 55GB+)을 20GB 미만으로 압축. DFlash는 작은 drafter 모델이 블록 단위로 여러 토큰을 제안하고 메인 모델이 병렬 검증하는 사양적 디코딩 → 3.1배 속도 향상, 에이전트 루프 지연 시간 해결
+2. **벤치마크**: MCP Atlas 75.5, DeepSearch QA 74.6 등 8개 에이전트 벤치마크 중 5개에서 Gemma4-31B, Qwen3.6-27B 상회. SWE-Bench Pro 51.2점. 시각 이해(스크린샷·차트·문서)를 위한 전용 인식 인코더 내장
+3. **배포 형태**: BF16 웨이트, GGUF k-quants, ExecuTorch 빌드, DFlash drafter를 Hugging Face에 공개. llama.cpp, MLX, ExecuTorch 통합 예정
+
+### 프레임워크 생태계에서의 의미
+Muse Glimmer는 에이전트 모델의 **클라우드 의존도를 낮추는 패러다임 전환**을 의미한다. 소비자 GPU 하나로 프롬프트당 비용 없이 에이전트를 구동할 수 있다는 것은:
+- **로컬 에이전트 실행**: [Docker Sandboxes](#2026년-8월-13차-업데이트-claude-code-auto-mode-기본값-전환--승인-피로-해결과-에이전트-자율성-가속)의 microVM 격리와 결합하면, 완전히 오프라인에서 작동하는 안전한 에이전트 환경 구축 가능
+- **데이터 주권**: 의료·법률·금융·국방 등 규제 산업에서 네트워크 연결 없이 에어갭 배포 가능. EU AI Act 데이터 거주 요건 충족
+- **개인 에이전트 인프라**: [Zuckerberger의 '개인 초지능' 비전](industry-trends.md)과 [River AI의 11억 달러 투자](industry-trends.md)(RL 기반 개인화)를 뒷받침하는 오픈소스 기반
+- **경쟁 모델**: Qwen3.6-27B, Gemma4-31B와의 경쟁으로 소형 오픈 에이전트 모델 시장 활성화
+
+### 보안 고려
+Meta는 재시도 훈련(retry training)으로 실패한 도구 호출 복구 능력을 내장했으나, **보안 가드레일 없는 bare 엔드포인트로 배포하지 말 것**을 권장한다. 시스템 수준의 제어([Omnigent](#2026년-7월-4차-업데이트-omnigent--메타-하네스로-거버넌스-간극-해결) 정책 엔진, Docker Sandboxes 격리 등)와 결합이 필수적이다.
+
+> 💡 **교차 참조**: Muse Glimmer의 로컬 실행은 Docker Sandboxes(13차)의 microVM과 결합 시 가장 강력한 시너지를 발휘 — 클라우드 없이 안전하게 에이전트를 구동하는 완전한 로컬 스택. [NemoClaw 블루프린트](#2026년-7월-7차-업데이트-langchain--nvidia-nemoclaw--풀스택-에이전트-최적화-패러다임)의 3개 레이어(모델·하네스·런타임) 중 모델 레이어를 Muse Glimmer로 대체 가능. [모델 동향](models-overview.md)의 추론 경제학 경쟁을 소비자 GPU 수준으로 확장. River AI([산업 동향](industry-trends.md))의 RL 기반 개인화와 결합하면, 사용자 데이터로 파인튜닝된 Muse Glimmer를 로컬에서 구동하는 완전히 개인화된 에이전트가 가능.

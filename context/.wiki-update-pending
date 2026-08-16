@@ -1,16 +1,12 @@
 # 다음 위키 갱신 대기
-# 2026-08-14: frameworks (14차), industry (17차) 갱신 완료.
-# - frameworks: 8/10 Meta Muse Glimmer 30B (⭐⭐⭐⭐⭐) — 14차 갱신
-#   오픈 웨이트 30B 에이전트 모델, 소비자 GPU 실행, 로컬 에이전트 인프라
-# - industry: 8/12 Cognition $40B / Lovable $13.3B (⭐⭐⭐⭐⭐) — 17차 갱신
-#   AI 코딩 에이전트 밸류에이션 폭발, 매출 $1B+$500M 검증
+# 2026-08-16: models (17차), tools (16차) 갱신 완료.
+# - models: 8/14 Gemini 3.7 Flash (⭐⭐⭐⭐⭐) + Ultrafast + Palmyra X6 / 8/15 Aquila-SFT — 17차 갱신
+# - tools: 8/14 Okta MCP Tool Scoping (⭐⭐⭐⭐) — 16차 갱신
+#   → "에이전트 비용 절감 3계층"(모델/하니스/툴 스코핑) 프레임으로 정리됨
 #
-# 다음 대상:
-# - models: 8/14 Gemini 3.7 Flash 출시 / Writer Palmyra X6 토큰 비용 (⭐⭐⭐⭐)
-#   후보: models-overview.md 갱신
-# - tools: 8/14 Okta MCP Tool Scoping / OpenAI Ultrafast Cerebras (⭐⭐⭐⭐)
-#   후보: tools-overview.md 갱신
+# 다음 대상 (우선순위순):
+# - industry: 8/16 SpaceX-Cursor $60B 인수 완료 (⭐⭐⭐⭐⭐) + 8/14 Anthropic 멀티에이전트 텃밭 분쟁 (⭐⭐⭐⭐)
+#   후보: industry-trends.md 갱신 (최우선 — ⭐5 대형 뉴스 미처리. 기존 17차 갱신에 이어 18차)
+#   메모: Cognition $40B/Lovable $13.3B(17차)에 이은 AI 코딩 밸류에이션 서사 + 인프라 수직 통합(SpaceX GPU 플릿)
 # - research: 8/12 Google AMIE 비디오 진료 / Anthropic 리만 가설 (⭐⭐⭐⭐)
 #   후보: research-overview.md 갱신
-# - industry: 8/14 Anthropic 멀티에이전트 텃밭 분쟁 (⭐⭐⭐⭐)
-#   후보: industry-trends.md 추가 갱신

@@ -210,7 +210,7 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - **기반 아키텍처**: Port의 Agentic SDLC 플랫폼 위에 작동 — 컨텍스트 레이크, 워크플로우 오케스트레이션, 에이전트 관리, 거버넌스 제공
 - **적용 분야**: SRE, DevOps, 아키텍처, 보안, AI 거버넌스, 데이터 모델링, UX 등 다양한 도메인 스킬 활용
 - **의미**: "vibe coding" 개념이 소비자 도구를 넘어 **기업용 프로덕션 환경**으로 진입. 자연어 개발과 기존 툴체인(VS Code, Codex 등) 통합으로 변환 저항 최소화
-- **링크**: [Port AI Builder](https://port.io/ai-builder)
+- **링크**: [Port AI Builder](https://port.io/platform/port-ai-builder)
 
 > 💡 **교차 참조**: Port AI Builder의 human-in-the-loop 거버넌스는 [프레임워크 동향](frameworks-overview.md)의 ADK 2.0 HITL 내장화 트렌드와 일치한다. Oracle AI Agent Studio(친숙한 도구 + 기업 런타임 연결)와 같은 방향성 — pro-code와 vibe coding이 기업용 에이전트 구축의 양대 패러다임으로 부상.
 

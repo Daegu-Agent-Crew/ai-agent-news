@@ -330,7 +330,7 @@ Nvidia가 주도하는 Open Secure AI Alliance가 설립 1주일 만에 **120개
 - **SAFE 워킹그룹**: AI 사이버보안 사건의 기밀 보고·영향 통지·무고분석(blame-free analysis) 가이드라인. Linux Foundation이 관리. 기존 CSIRT 모델을 AI 도메인에 적용
 - **오픈소스 기여**: Nvidia Garak(LLM 취약점 스캐너), Okta 에이전트 신원 기술, Red Hat 에이전트 거버넌스, Amazon Strands Agents + Cedar 인가 언어
 - **불참 주목**: Anthropic, OpenAI, Google은 미참여. 오픈소스 생태계 vs 폐쇄적 생태계 균열 시사
-- **의미**: [9차 갱신의 보안 연쇄 위기](#9차-업데이트-종합-분석-보안-연쇄-위기가-촉발한-세-가지-시장-형성)에 대한 산업계 자발적 대응. [Okta→Permiso $200M 인수](https://techcrunch.com/2026/07/31/okta-acquires-permiso-ai-agent-security/)와 보완적
+- **의미**: [9차 갱신의 보안 연쇄 위기](#9차-업데이트-종합-분석-보안-연쇄-위기가-촉발한-세-가지-시장-형성)에 대한 산업계 자발적 대응. [Okta→Permiso $200M 인수](https://techcrunch.com/2026/07/30/okta-buys-ai-security-startup-permiso-source-says-for-about-200m/)와 보완적
 
 > 💡 **교차 참조**: OSAA의 SAFE 워크그룹은 [Hugging Face 침해 타임라인](#1-hugging-face-침해-상세-타임라인--45일-17600회-행동-)(9차 #1)에서 드러난 '사건 공유 부재'에 대한 직접적 대응. 중국 오픈가중치 모델에 대한 미국의 규제 압박이 결성을 촉발했다는 점에서 [Amodei의 중국 AI 우려](#4-amodei의-지정학적-분리--오픈-웨이트-vs-중국-ai)와 연결.
 
@@ -368,7 +368,7 @@ AI 안전 비영리 SaferAI의 보고서에 따르면, 중국 Z.ai의 **GLM-5.2*
 3. **산업 보안 연대**: OSAA 120+ 기업 참여는 보안이 경쟁 요소가 아닌 **공동 인프라**임을 업계가 인정했음을 의미. 단, OpenAI·Anthropic·Google 불참은 여전히 생태계 분단
 4. **오픈가중치 안전 공백 실증**: 능력 추격을 검증하면서 동시에 안전 공백을 정량화한 SaferAI 보고서는 정책·기술 양쪽에 행동을 촉구하는 기준점
 
-> 💡 **종합 교차 참조**: EU AI Act 제50조(투명성) + OSAA(보안 연대) + SaferAI 보고서(안전 격차) + Anthropic-Volta(컴퓨팅) = AI 산업이 **'무엇을 만들 것인가'**에서 **'어떻게 안전하게 만들 것인가'**로 전환하는 4대 축. [Zuckerberg의 수십억 에이전트 비전](https://techcrunch.com/2026/07/29/zuckerberg-predicts-billions-personal-ai-agents/)이 이 프레임워크 안에서 실현되려면, 투명성·보안·안전·컴퓨팅의 4축이 모두 작동해야 한다.
+> 💡 **종합 교차 참조**: EU AI Act 제50조(투명성) + OSAA(보안 연대) + SaferAI 보고서(안전 격차) + Anthropic-Volta(컴퓨팅) = AI 산업이 **'무엇을 만들 것인가'**에서 **'어떻게 안전하게 만들 것인가'**로 전환하는 4대 축. [Zuckerberg의 수십억 에이전트 비전](https://techcrunch.com/2026/07/29/mark-zuckerberg-predicts-that-billions-of-people-will-have-personal-ai-agents-in-five-years/)이 이 프레임워크 안에서 실현되려면, 투명성·보안·안전·컴퓨팅의 4축이 모두 작동해야 한다.
 
 ---
 
@@ -665,7 +665,7 @@ OpenAI가 EU AI Act의 **일반목적 AI(GPAI) 실무 규정 집행**(2026년 8�
 - **Altman 육아 홍보**: ChatGPT Work로 등굣길 맞춤형 팟캐스트 제작을 홍보. "그냥 아이들과 대화하면 안 되나요?"라는 반응(Alex Hirsch, 12만 좋아요)이 원 게시물(9,600 좋아요)을 12배 압도. **AI가 가족 관계의 기본적 상호작용까지 대체하려는 것에 대한 대중적 거부감**.
 - **기업 리스크**: OpenAI가 자살·망상 관련 소송에 직면한 상황에서 육아 AI 홍보는 안전 리스크 증폭
 
-> 💡 **교차 참조**: [Zuckerberg의 "수십억 명 개인 에이전트"](https://techcrunch.com/2026/07/29/zuckerberg-predicts-billions-personal-ai-agents/) 비전과 [Pi Journeys](#inflection-ai-pi-journeys--관계형-지능relational-intelligence-제4의-패러다임)의 관계형 지능이 추구하는 "인간 관계 보조" vs AI가 "인간 관계 대체"로 인식되는 것 사이의 경계가 핵심 쟁점.
+> 💡 **교차 참조**: [Zuckerberg의 "수십억 명 개인 에이전트"](https://techcrunch.com/2026/07/29/mark-zuckerberg-predicts-that-billions-of-people-will-have-personal-ai-agents-in-five-years/) 비전과 [Pi Journeys](#inflection-ai-pi-journeys--관계형-지능relational-intelligence-제4의-패러다임)의 관계형 지능이 추구하는 "인간 관계 보조" vs AI가 "인간 관계 대체"로 인식되는 것 사이의 경계가 핵심 쟁점.
 
 ### 4. Google Earth AI 기능 철회 — 허위정보 가드레일 부재 ⭐⭐⭐
 
@@ -688,7 +688,7 @@ Google이 Nano Banana 2 AI 이미지 생성기를 Google Earth 위성 지도에 
 3. **빅테크 가드레일 부재 지속**: Google Earth 하루 만 철회는 AI 기능 출시 전 사회적 영향 평가 부재 입증
 4. **딜레마 심화**: Altman의 디셀 옹호는 [8차 속도 조절](#1-sam-altman의-전례-없는-속도-조절-선언-)의 연장이나, IPO 압박과의 모순은 미해결
 
-> 💡 **종합 교차 참조**: 보안 사태 → 속도 조절 논의 → 법적 규제 확산 → 문화적 반발로 이어지는 순서는 AI 산업이 **사회적 합의**가 필요한 단계에 진입했음을 시사한다. [Zuckerberg의 "수십억 명 개인 에이전트"](https://techcrunch.com/2026/07/29/zuckerberg-predicts-billions-personal-ai-agents/) 비전이 이 사회적 수용성 시험을 통과할 수 있을지가 2026 하반기 핵심 변수다.
+> 💡 **종합 교차 참조**: 보안 사태 → 속도 조절 논의 → 법적 규제 확산 → 문화적 반발로 이어지는 순서는 AI 산업이 **사회적 합의**가 필요한 단계에 진입했음을 시사한다. [Zuckerberg의 "수십억 명 개인 에이전트"](https://techcrunch.com/2026/07/29/mark-zuckerberg-predicts-that-billions-of-people-will-have-personal-ai-agents-in-five-years/) 비전이 이 사회적 수용성 시험을 통과할 수 있을지가 2026 하반기 핵심 변수다.
 
 ---
 
@@ -732,7 +732,7 @@ Anthropic이 Claude 모델을 위한 **커스텀 실리콘 팀**을 구축하고
 
 3. **재귀적 자가 개선의 민간화**: Discovery Loop가 '재귀적 자가 개선'을 공식 목표로 삼은 것은 [RSI × Amazon $410M](#5-recursive-superintelligence--amazon-410m--컴퓨팅이-새로운-인건비-)과 함께 자가 개선 AI가 학술 논문이 아닌 **상용 개발 목표**가 되었음을 의미. 동시에 [Sam Altman의 속도 조절](#1-sam-altman의-전례-없는-속도-조절-선언-)과 직접 충돌하는 산업 내 모순
 
-> 💡 **종합 교차 참조**: Jeff Dean의 Discovery Loop + Anthropic 자체 칩 + 11차의 Volta $100B = AI 경쟁이 **컴퓨팅 인프라·실리콘·인재**라는 가장 근본적인 자원을 두고 벌어지고 있음. [도구 생태계](tools-overview.md)의 코딩 에이전트 다원화, [모델 동향](models-overview.md)의 추론 경제학이 표면 경쟁이라면, 그 아래에서 인재와 하드웨어를 확보하려는 구조적 경쟁이 진행 중. [Zuckerberg의 "수십억 명 개인 에이전트"](https://techcrunch.com/2026/07/29/zuckerberg-predicts-billions-personal-ai-agents/) 비전이 이 기반 시설 위에서 실현되어야 한다.
+> 💡 **종합 교차 참조**: Jeff Dean의 Discovery Loop + Anthropic 자체 칩 + 11차의 Volta $100B = AI 경쟁이 **컴퓨팅 인프라·실리콘·인재**라는 가장 근본적인 자원을 두고 벌어지고 있음. [도구 생태계](tools-overview.md)의 코딩 에이전트 다원화, [모델 동향](models-overview.md)의 추론 경제학이 표면 경쟁이라면, 그 아래에서 인재와 하드웨어를 확보하려는 구조적 경쟁이 진행 중. [Zuckerberg의 "수십억 명 개인 에이전트"](https://techcrunch.com/2026/07/29/mark-zuckerberg-predicts-that-billions-of-people-will-have-personal-ai-agents-in-five-years/) 비전이 이 기반 시설 위에서 실현되어야 한다.
 
 ---
 
@@ -859,7 +859,7 @@ Mark Zuckerberg가 6,500자의 AI 매니페스토를 발표하며 '모든 사람
 - **비전**: 교육, 법률, 의료 분야에서 모든 사람이 무료 또는 저렴하게 AI 도구에 접근할 수 있도록 하는 프리미엄 모델. 컴퓨팅 자원의 동적 경매 메커니즘으로 가격 책정
 - **TechCrunch의 비판**: 64%의 미국인이 소셜 미디어가 민주주의에 해롭다고 믿고 있고, Meta는 아동 안전 소송에서 5억 6,700만 달러 벌금을 받은 상황에서, 사회적 우려를 인정하지 않는 낙관론이 오히려 산업에 해가 될 수 있다고 지적
 - **현실 간과**: 학생들이 숙제를 AI에 맡기는 문제, '초지능 변호사'가 소송 폭증을 유발할 가능성 등 부작용 무시. 철학적 일반론이 제품('Personal Intelligence') 마케팅처럼 읽힌다는 비판
-- **의미**: [Zuckerberg의 이전 발언](https://techcrunch.com/2026/07/29/zuckerberg-predicts-billions-personal-ai-agents/)(5년 내 수십억 명 개인 AI 에이전트 보유)의 확장판. [Meta Muse Glimmer](models-overview.md)가 이 비전을 뒷받침하는 기술적 기반. 그러나 [10차 갱신의 AI 의존 반발](#3-ai-의존과-대중적-반발--행크-그린육아-논쟁-)에서 확인된 대로, 공공의 신뢰를 획득하지 못한 채 AI를 전면 도입하려는 접근의 위험을 보여줌
+- **의미**: [Zuckerberg의 이전 발언](https://techcrunch.com/2026/07/29/mark-zuckerberg-predicts-that-billions-of-people-will-have-personal-ai-agents-in-five-years/)(5년 내 수십억 명 개인 AI 에이전트 보유)의 확장판. [Meta Muse Glimmer](models-overview.md)가 이 비전을 뒷받침하는 기술적 기반. 그러나 [10차 갱신의 AI 의존 반발](#3-ai-의존과-대중적-반발--행크-그린육아-논쟁-)에서 확인된 대로, 공공의 신뢰를 획득하지 못한 채 AI를 전면 도입하려는 접근의 위험을 보여줌
 
 > 💡 **교차 참조**: Zuckerberg 매니페스토의 '개인 초지능'은 [Meta Muse Glimmer](models-overview.md)(로컬 실행 가능한 30B 에이전트 모델)로 기술적으로 뒷받침되지만, 사회적 수용성은 별개 문제. [Sam Altman의 속도 조절 선언](#1-sam-altman의-전례-없는-속도-조절-선언-)과 대비되는 접근 — Altman은 속도를 늦추자고 하는 반면, Zuckerberg는 가속화하자고 주장. [OpenAI Astra 보류](models-overview.md)와 [AI 안전 평가 역설](#2-ai-안전-평가의-역설--샌드박스-탈출이-안전-위험이-되다-)가 보여주는 위험이 매니페스토에서는 전혀 다뤄지지 않음.
 

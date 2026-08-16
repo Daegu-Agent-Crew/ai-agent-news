@@ -29,7 +29,7 @@
 ## 2026년 7월 업데이트: Alibaba SkillWeaver — 도구 라우팅으로 토큰 99% 절감
 
 **논문**: [SkillWeaver — VentureBeat 보도](../records/2026-07-05-alibaba-skillweaver-tool-routing.md) ⭐⭐⭐⭐⭐  
-**코드**: [github.com/alibaba/skillweaver](https://github.com/alibaba/skillweaver)
+**코드**: [github.com/OSU-NLP-Group/SkillWeaver](https://github.com/OSU-NLP-Group/SkillWeaver)
 
 ### 문제의식
 기업 AI 에이전트가 수백 개의 도구를 보유하게 되면서, 매 스텝마다 전체 도구 라이브러리를 컨텍스트에 로드하는 방식의 토큰 비용이 폭증한다. 이는 [산업 통계](industry-trends.md)가 보여주는 88% 생산 실패율의 주요 원인 중 하나다.

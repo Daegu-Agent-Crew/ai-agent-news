@@ -1,19 +1,27 @@
 {
-  "lastLint": "2026-08-09",
-  "lastLintEpoch": 1723245780,
-  "filesChecked": 7,
-  "totalLinksChecked": 509,
-  "criticalFixed": 1,
-  "warnings": 4,
+  "lastLint": "2026-08-16",
+  "lastLintEpoch": 1786889342,
+  "filesChecked": 5,
+  "totalLinksChecked": 154,
+  "externalLinksChecked": 14,
+  "criticalFixed": 3,
+  "criticalDeferred": 1,
+  "warnings": 5,
   "details": {
     "criticalFixed": [
-      "research-overview.md:6: 메타데이터 따옴표 오타 수정 (업데이트\" → 업데이트**)"
+      "research-overview.md: GitHub 404 — alibaba/skillweaver → OSU-NLP-Group/SkillWeaver (원본 레포)",
+      "tools-overview.md: port.io/ai-builder 404 → port.io/platform/port-ai-builder (페이지 이전)",
+      "industry-trends.md: TechCrunch 축약 URL 404 6곳 — records 원문 전체 URL로 교체 (Zuckerberg 5, Okta 1)"
+    ],
+    "criticalDeferred": [
+      "industry-trends.md:9 요약 모순 — '다섯 가지 축' 서술 뒤 6개 축 나열(18차 갱신 시 개수 미수정). 내용 변경 금지 규칙으로 자동 수정 보류 → 다음 갱신 때 '여섯 가지' 수정 요청"
     ],
     "warnings": [
-      "human-roles.md & human-roles-in-agentic-era.md: 고립 페이지 (incoming links: 0). 5회 연속 지적",
-      "human-roles.md & human-roles-in-agentic-era.md: 내용 중복 — 병합 권장. 5회 연속 지적. 42일 경과 (2026-06-28)",
-      "human-roles-in-agentic-era.md: 카테고리 'industry'이나 실제 내용은 'analysis'에 더 가까움. 5회 연속 지적",
-      "research-overview.md: 2026-08-05 마지막 업데이트 — 4일 경과, 최근 records 미반영 가능"
+      "human-roles.md & human-roles-in-agentic-era.md: 고립 페이지 (incoming links: 0). 6회 연속 지적",
+      "human-roles.md & human-roles-in-agentic-era.md: 내용 중복 — 병합 권장. 6회 연속 지적, 49일 경과 (2026-06-28~)",
+      "human-roles-in-agentic-era.md: 카테고리 'industry'이나 실제 내용은 'analysis'에 더 가까움. 6회 연속 지적",
+      "frameworks-overview.md: 제목 '— 2026년 7월' vs 최종 업데이트 2026-08-14 — 제목 기간 미갱신",
+      "research-overview.md: 제목 '— 2026년 7월' vs 최종 업데이트 2026-08-16 — 제목 기간 미갱신 (전 라운드 'records 미반영' 경고는 7차 갱신으로 해소)"
     ]
   }
 }

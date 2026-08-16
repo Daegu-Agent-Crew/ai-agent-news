@@ -2,11 +2,11 @@
 
 ## 메타데이터
 - **카테고리**: industry
-- **관련 뉴스 수**: 58
-- **최종 업데이트**: 2026-08-14 (17차 갱신)
+- **관련 뉴스 수**: 59
+- **최종 업데이트**: 2026-08-16 (18차 갱신)
 
 ## 요약
-2026년 상반기, AI 에이전트 산업이 다섯 가지 축으로 전개되고 있다: (1) **모델 전쟁 격화** — Google·OpenAI·Anthropic·Microsoft·Meta가 플래그십 모델을 연달아 출시하며 용도별 경쟁이 시작됨, (2) **프레임워크 시장 재편** — Microsoft MAF가 프로덕션 배포 인프라를 통합하고 Anthropic은 에이전트 SDK를 별도 과금으로 전환, (3) **물리 세계로의 에이전트 확장** — 휴머노이드 로봇이 프로토타입을 넘어 양산·상용 배치 단계로 진입, (4) **7월 신규 동향** — 프로토콜 표준화(MCP/A2A)로 상호 운용성 확보, 에이전트 커머스 상용화, 시장 통계가 입증하는 채택 격차(79% 도입 vs 11% 생산), (5) **AI 동료 시대 개막** — GPT-Live가 자연스러운 음성 대화를, ChatGPT Work가 자율 프로젝트 실행을, GPT-5.6 × M365 Copilot이 엔터프라이즈 생산성 도구 통합을 실현하며 AI가 도구에서 협업 파트너로 진화.
+2026년 상반기, AI 에이전트 산업이 다섯 가지 축으로 전개되고 있다: (1) **모델 전쟁 격화** — Google·OpenAI·Anthropic·Microsoft·Meta가 플래그십 모델을 연달아 출시하며 용도별 경쟁이 시작됨, (2) **프레임워크 시장 재편** — Microsoft MAF가 프로덕션 배포 인프라를 통합하고 Anthropic은 에이전트 SDK를 별도 과금으로 전환, (3) **물리 세계로의 에이전트 확장** — 휴머노이드 로봇이 프로토타입을 넘어 양산·상용 배치 단계로 진입, (4) **7월 신규 동향** — 프로토콜 표준화(MCP/A2A)로 상호 운용성 확보, 에이전트 커머스 상용화, 시장 통계가 입증하는 채택 격차(79% 도입 vs 11% 생산), (5) **AI 동료 시대 개막** — GPT-Live가 자연스러운 음성 대화를, ChatGPT Work가 자율 프로젝트 실행을, GPT-5.6 × M365 Copilot이 엔터프라이즈 생산성 도구 통합을 실현하며 AI가 도구에서 협업 파트너로 진화, (6) **AI 코딩 수직 통합 시대** — Cognition $400억·Lovable $133억 밸류에이션에 이어 SpaceX가 Cursor를 $600억에 인수하며 컴퓨팅-모델-코딩 도구 수직 통합이 산업 표준으로 부상.
 
 ## 주요 이슈
 
@@ -115,6 +115,7 @@ Anthropic이 Claude Agent SDK를 별도 월간 크레딧 과금제(Pro $20 / Max
 - [Zuckerberg AI 매니페스토 — 개인 초지능 비전](../records/2026-08-10-zuckerberg-ai-manifesto-personal-superintelligence.md) ⭐⭐⭐ ⭐NEW (8/10)
 - [Cognition 400억 달러 밸류에이션 논의 — Devin AI 코딩 에이전트](../records/2026-08-12-cognition-40b-valuation-devin.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/12)
 - [Lovable 133억 달러 밸류에이션 — 바이브 코딩 상용화](../records/2026-08-12-lovable-13-3b-valuation-400m-raise.md) ⭐⭐⭐⭐ ⭐NEW (8/12)
+- [SpaceX, Cursor를 600억 달러에 인수 완료 — AI 코딩 수직 통합](../records/2026-08-16-spacex-acquires-cursor-60b.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/16)
 
 ## 관련 위키 문서
 - [프레임워크 동향](frameworks-overview.md) — MAF, Claude Agent SDK, 화웨이 Agent Framework 2.0, Cisco FAPO
@@ -969,3 +970,25 @@ Cognition과 Lovable의 밸류에이션 폭등은 [River AI의 11억 달러 투�
 개발자의 역할이 코드 작성에서 **에이전트 관리와 아키텍처 설계**로 전환되는 구조적 변화가 가속화되고 있으며, 이는 [Microsoft의 자체 모델 89% 비용 절감](#2-microsoft-자체-모델-89-비용-절감--openai-독립-가속-)과 [OpenAI Presence](#축-1-엔터프라이즈-프로덕션--openai-presence)(엔터프라이즈 프로덕션)의 방향성과 일치한다.
 
 > 💡 **종합 교차 참조**: Cognition $400억 + Lovable $133억 + River AI $11억 = AI 에이전트 시장의 3대 축(엔터프라이즈 코딩·소비자 개발·개인 에이전트)이 동시에 자본 검증을 받았다. [ChatGPT Work](tools-overview.md)의 자율 프로젝트·[GPT-5.6 × M365 Copilot](models-overview.md)의 엔터프라이즈 통합이 경쟁을 가속. [Anthropic 워터마크](#1-anthropic-ai-생성-텍스트-워터마크-적용--eu-ai-act-준수-)(16차)의 투명성 규제가 이 시장 전체에 적용될 예정. 개발자 역할 변화는 [Claude Code Auto Mode](frameworks-overview.md)(자율 코딩)와 [Prime Agent](frameworks-overview.md)(자가 진화형 코딩 에이전트)의 맥락. [Meta Muse Glimmer](frameworks-overview.md)의 로컬 실행 모델이 개인 에이전트 하드웨어 기반을 제공.
+
+## 2026년 8월 18차 업데이트: SpaceX, Cursor를 600억 달러에 인수 — AI 코딩의 '수직 통합' 시대
+
+17차의 밸류에이션 폭발(Cognition $400억·Lovable $133억)에 이어, AI 코딩 시장이 **출구(exit)와 수직 통합** 단계로 진입했다. 인수 주체가 소프트웨어 기업이 아닌 우주항공·컴퓨팅 기업이라는 점이 이번 딜의 본질이다.
+
+### 1. SpaceX-Cursor $60B 인수 완료 — AI 코딩 도구 시장 사상 최대 딜 ⭐⭐⭐⭐⭐
+
+**출처**: [TechCrunch — SpaceX officially closes its Cursor acquisition](../records/2026-08-16-spacex-acquires-cursor-60b.md)
+
+일론 머스크의 SpaceX가 AI 코딩 스타트업 Cursor를 **600억 달러**에 공식 인수 완료했다. 지난 4월 기술 공동 개발 협정으로 시작된 협력이 SpaceX 상장(2개월 전) 이후 주식 교환 방식으로 완결되었다.
+
+- **인수 구조**: 주식 교환 방식. SpaceX는 올해 초 자체 AI 기업 xAI를 인수한 바 있음
+- **핵심 카드**: Cursor가 "세계 최대 규모 GPU 플릿"에 접근. SpaceX는 Anthropic·Google 등에 컴퓨팅 인프라를 임대하는 사업도 확장 중
+- **전략 비전**: "SpaceX는 오늘보다 훨씬 큰 지능을 확장하는 컴퓨팅을 구축 중이며, Cursor는 그 지능이 유용해지는 곳이 될 것" (Cursor 블로그) — xAI 모델 × Cursor IDE × SpaceX 컴퓨팅의 3층 수직 통합
+
+### 2. 18차 업데이트 종합 분석: '밸류에이션에서 수직 통합으로 — AI 코딩 시장의 출구'
+
+1. **밸류에이션 기준점 확정**: $60B는 GitHub Copilot(Microsoft)·Claude Code(Anthropic)·Windsurf 등 경쟁 코딩 도구 가치 평가의 새 기준. 독립 AI 코딩 스타트업의 생존 전략이 근본적으로 재편
+2. **인프라-애플리케이션 수직 통합의 이해관계 충돌**: 컴퓨팅 제공업체(SpaceX)가 고객사(Anthropic·Google)에 컴퓨팅을 팔면서 동시에 경쟁 애플리케이션(Cursor)을 소유하는 구도. [Anthropic-Volta $100B](../records/2026-08-04-anthropic-10-billion-volta-cloud-deal.md)(11차)·[Anthropic 자체 칩 설계](../records/2026-08-05-anthropic-custom-ai-chip-design-team.md)(12차)·[AMD-Taalas 인수](../records/2026-08-07-amd-acquires-taalas-models-in-silicon.md)(13차)로 이어지던 수직 통합 흐름의 최대 규모 사례
+3. **컴퓨팅이 곧 전략 자산**: 일반 기업이 아닌 우주항공 기업의 인수는 AI 컴퓨팅 인프라 자체가 핵심 전략 자산임을 재확인. 모델·애플리케이션은 컴퓨팅 확보 능력에 종속되는 구조 심화
+
+> 💡 **종합 교차 참조**: AI 코딩 서사의 3단계 완성 — [Databricks 비용 70% 절감](../records/2026-08-08-databricks-ai-coding-cost-reduction.md)(14차, 경제성 입증) → [Cognition·Lovable 밸류에이션](#2026년-8월-17차-업데이트-ai-코딩-에이전트-밸류에이션-폭발--cognition-400억lovable-133억)(17차, 시장 검증) → **SpaceX-Cursor 인수(18차, 수직 통합)**. [모델 동향](models-overview.md)의 추론 인프라 경쟁과 [도구 생태계](tools-overview.md)의 코딩 도구 경쟁이 M&A로 수렴하며, 2026년 하반기 산업 구도가 '누가 컴퓨팅을 보유하는가'로 수렴하고 있음을 시사.

@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: frameworks
-- **관련 뉴스 수**: 30
-- **최종 업데이트**: 2026-08-14 (14차 갱신)
+- **관련 뉴스 수**: 31
+- **최종 업데이트**: 2026-08-17 (15차 갱신)
 
 ## 요약
 2026년 6월 현재, 에이전트 프레임워크 생태가 8개 주력 SDK로 정리되었다. Microsoft Agent Framework(MAF)가 BUILD 2026에서 Agent Harness·CodeAct·Foundry Hosted Agents를 발표하며 프로덕션 배포 인프라를 통합했고, Anthropic은 Claude Agent SDK를 별도 월간 크레딧 과금제로 전환했다. Cisco의 FAPO는 파이프라인 단계별 자동 디버깅을, 화웨이는 OS 수준 통합이라는 각기 다른 접근을 보여준다. MCP가 200+ 서버를 확보하며 사실상 표준 도구 프로토콜로 자리 잡았고, ACP가 A2A로 통합되며 Linux Foundation 산하로 이관되었다.
@@ -347,6 +347,7 @@ Oracle의 차별점은 **개발자가 이미 익숙한 도구(VS Code, Codex, Cl
 - [Anthropic Claude Code Auto Mode 기본값 전환](../records/2026-08-10-anthropic-claude-code-auto-mode-default.md) ⭐⭐⭐⭐ ⭐NEW (8/10)
 - [Docker Sandboxes — AI 에이전트 격리 환경](../records/2026-08-10-docker-sandboxes-ai-agents.md) ⭐⭐⭐⭐ ⭐NEW (8/10)
 - [Meta Muse Glimmer 30B — 오픈 웨이트 에이전트 모델](../records/2026-08-10-meta-muse-glimmer-30b-open-agentic-model.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/10)
+- [AllenAI Open Instruct Tulu-3 — 16GB 사후 훈련 파이프라인](../records/2026-08-12-allenai-open-instruct-tulu-3-post-training.md) ⭐⭐⭐⭐ ⭐NEW (8/12)
 
 ## 2026년 7월 10차 업데이트: Gemini Managed Agents 3.6 Flash — Hooks로 에이전트 제어 패러다임 강화
 
@@ -477,3 +478,28 @@ Muse Glimmer는 에이전트 모델의 **클라우드 의존도를 낮추는 패
 Meta는 재시도 훈련(retry training)으로 실패한 도구 호출 복구 능력을 내장했으나, **보안 가드레일 없는 bare 엔드포인트로 배포하지 말 것**을 권장한다. 시스템 수준의 제어([Omnigent](#2026년-7월-4차-업데이트-omnigent--메타-하네스로-거버넌스-간극-해결) 정책 엔진, Docker Sandboxes 격리 등)와 결합이 필수적이다.
 
 > 💡 **교차 참조**: Muse Glimmer의 로컬 실행은 Docker Sandboxes(13차)의 microVM과 결합 시 가장 강력한 시너지를 발휘 — 클라우드 없이 안전하게 에이전트를 구동하는 완전한 로컬 스택. [NemoClaw 블루프린트](#2026년-7월-7차-업데이트-langchain--nvidia-nemoclaw--풀스택-에이전트-최적화-패러다임)의 3개 레이어(모델·하네스·런타임) 중 모델 레이어를 Muse Glimmer로 대체 가능. [모델 동향](models-overview.md)의 추론 경제학 경쟁을 소비자 GPU 수준으로 확장. River AI([산업 동향](industry-trends.md))의 RL 기반 개인화와 결합하면, 사용자 데이터로 파인튜닝된 Muse Glimmer를 로컬에서 구동하는 완전히 개인화된 에이전트가 가능.
+
+## 2026년 8월 15차 업데이트: AllenAI Open Instruct Tulu-3 — 16GB에서 도는 사후 훈련 파이프라인
+
+**출처**: [MarkTechPost — Open Instruct Tulu 3 Post-Training](../records/2026-08-12-allenai-open-instruct-tulu-3-post-training.md) ⭐⭐⭐⭐
+
+### 핵심 내용: SFT → DPO → RLVR 전체 파이프라인의 단일 GPU 경량화
+AllenAI의 **Open Instruct** 프레임워크를 활용해 다중 GPU용 Tulu 3 스택을 **16GB 런타임**(Colab)에 맞게 재구현한 엔드투엔드 사후 훈련 튜토리얼이 공개되었다.
+
+**3단계 훈련 파이프라인:**
+1. **SFT (지도 미세조정)**: GSM8K 수학 데이터셋, 640 토큰 시퀀스, 40스텝
+2. **DPO (직접 선호 최적화)**: 24스텝 — 선호 기반 정렬
+3. **RLVR + GRPO (검증 가능 보상 강화학습)**: 6반복 — 결정론적 검증기로 수학 답변 평가
+
+**경량화 기법:**
+- vLLM·Ray 액터·DeepSpeed·비동기 롤아웃 큐 등 분산 컴포넌트를 Hugging Face + PyTorch 경량 구현으로 대체
+- **AST 파싱 기반 선택적 추출**: 원본 리포지토리에서 DPO 손실 함수, GRPO 계산, 토큰 확률 로깅 등 핵심 함수만 발췌 — 오픈소스 재사용의 교과서적 접근
+- **LoRA 어댑터**로 학습 파라미터 최소화 (기반 모델: Qwen2.5-0.5B-Instruct)
+
+### 프레임워크 생태계에서의 의미
+Open Instruct는 이제 "Llama·Qwen 등 오픈소스 모델의 상용 수준 정렬을 가능하게 하는 핵심 인프라"를 넘어, **소비자급 GPU에서 전체 사후 훈련이 가능한 유일한 표준 스택**으로 자리잡고 있다. 이는 두 가지 흐름과 맞물린다:
+
+1. **소형 모델 에이전트 민주화**: [Muse Glimmer 30B](#2026년-8월-14차-업데이트-meta-muse-glimmer-30b--오픈-웨이트-에이전트-모델의-소비자-gpu-도달)(14차)가 로컬 *추론*을 열었다면, Tulu-3 경량화는 로컬 *훈련*을 연다. 도메인 특화 에이전트 모델을 대규모 GPU 클러스터 없이 자체 훈련하는 길이 열림
+2. **RL 기반 개인화와의 연결**: [River AI](industry-trends.md)의 "RL+LoRA로 오픈 웨이트 모델을 사용자 데이터에 맞게 커스터마이징" 접근(16차 산업 갱신)과 정확히 같은 기술 스택. 개인·소규모 팀이 자기 데이터로 에이전트를 정렬하는 파이프라인의 공개 표준
+
+> 💡 **교차 참조**: Tulu-3 경량 파이프라인 + [Docker Sandboxes](#2026년-8월-13차-업데이트-claude-code-auto-mode-기본값-전환--승인-피로-해결과-에이전트-자율성-가속)(13차) 격리 = 로컬에서 훈련·배포까지 완결하는 오프라인 에이전트 스택. [NemoClaw 블루프린트](#2026년-7월-7차-업데이트-langchain--nvidia-nemoclaw--풀스택-에이전트-최적화-패러다임)의 모델 레이어를 자체 훈련한 Qwen 계열 소형 모델로 대체 가능. 툴 호출 파인튜닝 후속 실증은 [모델 동향](models-overview.md)의 XYZ-Aquila-SFT 가이드(이월 예정)에서 다룰 예정.

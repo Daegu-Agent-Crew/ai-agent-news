@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: industry
-- **관련 뉴스 수**: 59
-- **최종 업데이트**: 2026-08-16 (18차 갱신)
+- **관련 뉴스 수**: 62
+- **최종 업데이트**: 2026-08-17 (19차 갱신)
 
 ## 요약
 2026년 상반기, AI 에이전트 산업이 다섯 가지 축으로 전개되고 있다: (1) **모델 전쟁 격화** — Google·OpenAI·Anthropic·Microsoft·Meta가 플래그십 모델을 연달아 출시하며 용도별 경쟁이 시작됨, (2) **프레임워크 시장 재편** — Microsoft MAF가 프로덕션 배포 인프라를 통합하고 Anthropic은 에이전트 SDK를 별도 과금으로 전환, (3) **물리 세계로의 에이전트 확장** — 휴머노이드 로봇이 프로토타입을 넘어 양산·상용 배치 단계로 진입, (4) **7월 신규 동향** — 프로토콜 표준화(MCP/A2A)로 상호 운용성 확보, 에이전트 커머스 상용화, 시장 통계가 입증하는 채택 격차(79% 도입 vs 11% 생산), (5) **AI 동료 시대 개막** — GPT-Live가 자연스러운 음성 대화를, ChatGPT Work가 자율 프로젝트 실행을, GPT-5.6 × M365 Copilot이 엔터프라이즈 생산성 도구 통합을 실현하며 AI가 도구에서 협업 파트너로 진화, (6) **AI 코딩 수직 통합 시대** — Cognition $400억·Lovable $133억 밸류에이션에 이어 SpaceX가 Cursor를 $600억에 인수하며 컴퓨팅-모델-코딩 도구 수직 통합이 산업 표준으로 부상.
@@ -116,6 +116,9 @@ Anthropic이 Claude Agent SDK를 별도 월간 크레딧 과금제(Pro $20 / Max
 - [Cognition 400억 달러 밸류에이션 논의 — Devin AI 코딩 에이전트](../records/2026-08-12-cognition-40b-valuation-devin.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/12)
 - [Lovable 133억 달러 밸류에이션 — 바이브 코딩 상용화](../records/2026-08-12-lovable-13-3b-valuation-400m-raise.md) ⭐⭐⭐⭐ ⭐NEW (8/12)
 - [SpaceX, Cursor를 600억 달러에 인수 완료 — AI 코딩 수직 통합](../records/2026-08-16-spacex-acquires-cursor-60b.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/16)
+- [Stripe, AI 게이트웨이 OpenRouter를 70억 달러+에 인수](../records/2026-08-17-stripe-acquires-openrouter-7b.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/17)
+- [Anthropic CEO “AI 반발은 신뢰의 위기”](../records/2026-08-17-anthropic-ceo-ai-backlash-crisis-of-trust.md) ⭐⭐⭐⭐ ⭐NEW (8/17)
+- [Claude 텍스트 워터마크 논란 — 스테가노그래피 vs 글쓰기 품질](../records/2026-08-17-claude-text-watermark-controversy.md) ⭐⭐⭐⭐ ⭐NEW (8/17)
 
 ## 관련 위키 문서
 - [프레임워크 동향](frameworks-overview.md) — MAF, Claude Agent SDK, 화웨이 Agent Framework 2.0, Cisco FAPO
@@ -992,3 +995,51 @@ Cognition과 Lovable의 밸류에이션 폭등은 [River AI의 11억 달러 투�
 3. **컴퓨팅이 곧 전략 자산**: 일반 기업이 아닌 우주항공 기업의 인수는 AI 컴퓨팅 인프라 자체가 핵심 전략 자산임을 재확인. 모델·애플리케이션은 컴퓨팅 확보 능력에 종속되는 구조 심화
 
 > 💡 **종합 교차 참조**: AI 코딩 서사의 3단계 완성 — [Databricks 비용 70% 절감](../records/2026-08-08-databricks-ai-coding-cost-reduction.md)(14차, 경제성 입증) → [Cognition·Lovable 밸류에이션](#2026년-8월-17차-업데이트-ai-코딩-에이전트-밸류에이션-폭발--cognition-400억lovable-133억)(17차, 시장 검증) → **SpaceX-Cursor 인수(18차, 수직 통합)**. [모델 동향](models-overview.md)의 추론 인프라 경쟁과 [도구 생태계](tools-overview.md)의 코딩 도구 경쟁이 M&A로 수렴하며, 2026년 하반기 산업 구도가 '누가 컴퓨팅을 보유하는가'로 수렴하고 있음을 시사.
+
+## 2026년 8월 19차 업데이트: AI 인프라 M&A의 수평 확장 + "신뢰의 위기" 공식화
+
+18차의 수직 통합(SpaceX-Cursor)에 이어 8월 셋째 주, M&A가 **컴퓨팅·코딩 도구를 넘어 유통·과금 계층(게이트웨이)으로 확장**했다. 동시에 Anthropic CEO가 AI 반발을 "신뢰의 위기"로 공식화하고, 16차의 워터마크 발표가 스테가노그래피 방식 논란으로 비화하며 **투명성 vs 품질의 트레이드오프**가 산업 최대 쟁점으로 부상했다.
+
+### 1. Stripe-OpenRouter $7B+ — AI 라우팅·과금 계층의 통합 ⭐⭐⭐⭐⭐
+
+**출처**: [TechCrunch — Stripe to acquire OpenRouter for $7B+](../records/2026-08-17-stripe-acquires-openrouter-7b.md)
+
+결제 인프라 기업 Stripe가 AI 모델 라우팅 게이트웨이 OpenRouter를 **70억 달러 이상**에 인수 최종 확정했다.
+
+- **딜 구조**: 5개월 전 Series B($113M, valuation 13억 달러) 이후 밸류에이션 **5배+ 급등**. Sequoia·a16z·Menlo·Alphabet Capital G 투자
+- **규모**: 전 세계 800만 사용자, 400+ 모델 제공. CEO Alex Atallah은 자사를 "AI를 위한 Stripe"라고 소개해 왔음
+- **전략**: 결제 → 모델 선택·과금·배포까지 아우르는 포괄 플랫폼 확장. "AI를 위한 Stripe"를 Stripe가 직접 인수한 상징성
+
+**18차와의 구조적 차이 — 수직에서 수평으로:**
+[SpaceX-Cursor](#2026년-8월-18차-업데이트-spacex-cursor를-600억-달러에-인수--ai-코딩의-수직-통합-시대)(18차)가 컴퓨팅→모델→도구의 **수직 통합**이었다면, Stripe-OpenRouter는 모델 유통·과금이라는 **수평 인프라 계층**의 통합이다. AI 시대의 핵심 인프라 목록에 "모델 라우팅"이 결제와 동급으로 편입되었음을 산업이 합의한 셈이다. 5개월 만 5배 밸류에이션 점프는 [Cognition $40B·Lovable $13.3B](#2026년-8월-17차-업데이트-ai-코딩-에이전트-밸류에이션-폭발--cognition-400억lovable-133억)(17차)에 이은 인프라 거품의 가늠자로도 작동한다.
+
+> 💡 **교차 참조**: OpenRouter가 다루는 다중 모델 라우팅은 [모델 전쟁](#2026년-6월-ai-모델-전쟁)의 "용도별 라우팅 표준화"와 직결. 라우팅·과금 인프라가 결제 레벨로 편입되면 [Runlayer vs Rippling MCP 게이트웨이 소송](../records/2026-07-29-runlayer-sues-rippling-mcp-gateway-ip-theft.md)에서 예고된 게이트웨이 IP 경쟁이 본격화할 것. [OpenAI Presence](#축-1-엔터프라이즈-프로덕션--openai-presence)·[Fireworks Nexus](tools-overview.md) 등 플랫폼형 경쟁자와의 충돌 축 형성.
+
+### 2. Anthropic CEO "AI 반발은 근본적으로 신뢰의 위기" ⭐⭐⭐⭐
+
+**출처**: [TechCrunch — Anthropic CEO: AI backlash is a crisis of trust](../records/2026-08-17-anthropic-ceo-ai-backlash-crisis-of-trust.md)
+
+Dario Amodei가 AI에 대한 대중적 반발을 기술 문제가 아닌 **"근본적인 신뢰의 위기"**로 규정하고, 자신의 비관론 비판에 반박했다.
+
+- **진단**: AI 능력 우려가 아닌 **AI 기업에 대한 신뢰 붕괴**가 반발의 본질
+- **반박**: 자신의 경고는 비관주의가 아닌 실질적 리스크 조명. 신뢰 회복이 최우선 과제
+- **맥락**: Claude 워터마크 논란·투명성 요구 고조 속에서 나온 발언 — "안전에 진심인 AI 기업" 브랜드 유지 전략으로도 읽힘
+
+### 3. Claude 워터마크 논란 — 스테가노그래피 vs 글쓰기 품질 ⭐⭐⭐⭐
+
+**출처**: [Daring Fireball / TechCrunch — Claude Text Watermark Controversy](../records/2026-08-17-claude-text-watermark-controversy.md)
+
+[16차 워터마크 발표](#1-anthropic-ai-생성-텍스트-워터마크-적용--eu-ai-act-준수-)의 구현 방식이 공개되며 강한 비판이 제기된 후속 논란.
+
+- **구현 방식**: 유니코드 삽입이 아닌 **토큰 생성 시 동의어 선택의 통계적 편향**(녹색/적색 목록). Claude는 녹색 단어 선택 확률이 미세하게 높아지고, 비밀 키를 가진 Anthropic만 지문 해독 가능
+- **Gruber의 비판**: 두 동의어는 결코 같은 의미가 아니며, 최적 단어 대신 통계적으로 편향된 단어를 고르는 것은 글쓰기의 본질 훼손. "의미·품질·가독성을 바꾸지 않는다"는 Anthropic 약속과 실제 구현의 모순 지적
+- **기술적 한계**: 짧은 텍스트 감지 불가, 편집·번역 시 지문 손상, **코드에도 적용**되어 개발 워크플로우 영향. 벤더 간 상호 감지 불가
+- **본질**: EU AI Act 준수라는 "치료"가 텍스트 품질이라는 "병"보다 나쁠 수 있는지를 묻는 규제-기술 트레이드오프 사례
+
+### 19차 업데이트 종합 분석: "인프라 확장과 신뢰 적자의 동시 진행"
+
+1. **M&A의 계층 이동**: 17차(밸류에이션) → 18차(수직 통합: 컴퓨팅-코딩) → 19차(수평 통합: 유통-과금). AI 가치사슬의 남은 미통합 계층이 빠르게 흡수되고 있으며, 다음 통합 대상은 관측성·평가(evals) 계층일 가능성
+2. **신뢰 적자의 공식화**: Amodei의 "신뢰의 위기" 진단은 [7월의 대중 반발](#3-ai-의존과-대중적-반발--행크-그린육아-논쟁-)·[컨텍스트 신뢰 격차](#1-컨텍스트-신뢰-격차-context-trust-gap-)를 관통하는 프레임. 그러나 같은 주에 자사 워터마크가 품질 논란에 휘말린 것은, 신뢰 회복 수단 자체가 신뢰를 잃을 수 있다는 역설
+3. **규제 구현의 2막**: [EU AI Act 제50조](#2-eu-ai-act-제50조-투명성-규정-발효--글로벌-기준-최초-시행-)(11차) → 워터마크 발표(16차) → 구현 방식 논란(19차). 규제 준수가 기술적으로 정교할수록 부작용도 정교해지는 구조
+
+> 💡 **종합 교차 참조**: Stripe-OpenRouter는 [Anthropic-Volta $100B](#1-anthropic--volta-100b--컴퓨팅-경쟁의-대규모-확전-)(11차)·[AMD-Taalas](../records/2026-08-07-amd-acquires-taalas-models-in-silicon.md)(13차)·[SpaceX-Cursor](#2026년-8월-18차-업데이트-spacex-cursor를-600억-달러에-인수--ai-코딩의-수직-통합-시대)(18차)로 이어진 2026 M&A 서사의 완결편 — 이제 가치사슬 전 계층(칩·컴퓨팅·모델·유통·코딩 도구)에 메가 딜이 존재한다. 워터마크 논란은 [모델 동향](models-overview.md)의 환각·품질 논의 및 [연구 동향](research-overview.md)의 "지식-추론 트레이드오프"(이월 예정)와 함께 '품질을 희생하지 않는 검증'이라는 공통 과제로 수렴.

@@ -1,12 +1,19 @@
 # 다음 위키 갱신 대기
-# 2026-08-16: industry (18차), research (7차) 갱신 완료.
-# - industry: 8/16 SpaceX-Cursor $60B 인수 완료 (⭐⭐⭐⭐⭐) — 18차 갱신
-#   → Cognition $40B/Lovable $13.3B(17차)에 이은 "밸류에이션 → 수직 통합" 서사로 정리
-# - research: 8/12 Google AMIE 비디오 진료 (⭐⭐⭐⭐⭐) + 8/14 Anthropic 멀티에이전트 텃밭 분쟁 (⭐⭐⭐⭐⭐) — 7차 갱신
-#   → "멀티에이전트의 두 얼굴(협업 설계 vs 상호작용 리스크)" 프레임. 텃밭 분쟁은 record 카테고리가 research라 research 위키에 반영 (기존 industry 후보에서 이동)
-#   → 분석 섹션 4차 문단의 중복 텍스트 정리 완료
+# 2026-08-17: framework (15차), industry (19차) 갱신 완료.
+# - framework: 8/12 AllenAI Open Instruct Tulu-3 사후 훈련 파이프라인 (⭐⭐⭐⭐) — 15차 갱신
+#   → "Muse Glimmer가 로컬 추론을 열었다면 Tulu-3는 로컬 훈련을 연다" 프레임
+# - industry: 8/17 Stripe-OpenRouter $7B+ (⭐⭐⭐⭐⭐) + Anthropic CEO 신뢰 위기 (⭐⭐⭐⭐)
+#   + Claude 워터마크 논란 (⭐⭐⭐⭐) — 19차 갱신
+#   → "M&A 수직→수평 확장(유통·과금 계층) + 신뢰 적자 공식화" 프레임
 #
 # 다음 대상 (우선순위순):
-# - framework: 8/12 AllenAI Open Instruct Tulu-3 사후 훈련 파이프라인 (⭐⭐⭐⭐, 미처리)
-#   후보: frameworks-overview.md 갱신 (최우선 — 유일 미처리 record)
-# - 참고: 8/12 Nemotron 3.5 Lightning + NeMo Switchyard는 models 17차 관련 뉴스에 이미 반영됨 (2026-08-16 확인)
+# - research: 8/17 "Models Getting Dumber on Purpose" 지식-추론 트레이드오프 (⭐⭐⭐⭐, 미처리)
+#   → research 8차 갱신 후보. harness(외부 검색)로 지식 이관 설계 — 에이전트 아키텍처 시사점 중심으로.
+#   industry 19차 종합 분석에서 이미 예고 링크 걸어둠 (연결 필수)
+# - model: 8/15 XYZ-Aquila-SFT × Qwen3 툴 호출 파인튜닝 가이드 (⭐⭐⭐⭐, 미처리)
+#   → models 18차 갱신 후보. framework 15차 Tulu-3와 짝이 되는 툴 호출 실증.
+#   framework 15차 교차 참조에서 "이월 예정"으로 링크 걸어둠 (갱신 시 연결)
+#
+# 참고:
+# - 8/12 Nemotron 3.5 + NeMo Switchyard는 models 17차에 이미 반영됨 (2026-08-16 확인)
+# - 8/16 SpaceX-Cursor는 industry 18차에 이미 반영됨

@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: models
-- **관련 뉴스 수**: 30
-- **최종 업데이트**: 2026-08-16 (17차 갱신)
+- **관련 뉴스 수**: 31
+- **최종 업데이트**: 2026-08-18 (18차 갱신)
 
 ## 요약
 2026년 6월, 14일 사이에 Google, OpenAI, Anthropic, Microsoft가 연달아 플래그십 모델을 출격했다. 더 이상 "하나의 최고 모델"이 존재하지 않으며, 용도별(가격·수학·코딩·독립성) 최적 모델이 다르다. Google은 가격 파괴, OpenAI는 수학 추론, Anthropic은 코딩 정확도, Microsoft는 자체 모델 독립성이라는 각기 다른 승부수를 던졌다. **7월 9일, OpenAI가 GPT-5.6(Sol/Terra/Luna)을 발표**하며 프론티어 모델 경쟁이 재점화되었다. 트럼프 행정부와의 2주간 규제 갈등 끝에 공개된 이 모델군은 자율 다단계 계획, 독립 도구 사용, 자기 교정 능력을 갖춘 에이전트 네이티브 모델로, 미국 정부의 사전 검토 게이트가 반복적 패턴으로 자리 잡을 가능성을 시사한다.
@@ -291,6 +291,7 @@ KAT-Coder-V2.5는 에이전트 코딩 모델의 발전이 **모델 크기 경쟁
 | 사이버보안 (보류 중) | OpenAI Astra | 임계(Critical) 사이버 역량 도달, 준비 프레임워크 발동 |
 | 온디바이스 에이전트 (오픈) | Meta Muse Glimmer | 30B Apache 2.0, 단일 소비자 GPU 실행, 온디바이스 최적 |
 | 실시간 오디오-비주얼 | ByteDance SeedRealtime | 네이티브 풀듀플렉스, ASR→VLM→TTS 파이프라인 통합 |
+| 텍스트-음악 생성 (오픈웨이트) | MiniMax-Music3 | 8B+0.6B 하이브리드 + 2.4B flow-matching, 5분 완성곡, 상업 라이선스 |
 
 ### 업계 맥락
 - Cisco FAPO 벤치마크에서 GPT-4.1-mini, GPT-5.4-mini, Gemma 3-12B 사용
@@ -501,6 +502,7 @@ SeedRealtime은 AI 모델이 별도의 컴포넌트(ASR, VLM, TTS)를 조립하�
 - [Meta Muse Glimmer — 30B 오픈 웨이트 온디바이스 에이전트 모델](../records/2026-08-10-meta-muse-glimmer-30b-open-agentic-model.md) ⭐⭐⭐⭐⭐ (8/10)
 - [ByteDance SeedRealtime — 네이티브 오디오-비주얼 풀듀플렉스 LLM](../records/2026-08-10-bytedance-seedrealtime-audio-visual-llm.md) ⭐⭐⭐⭐⭐ (8/10)
 - [NVIDIA Nemotron 3.5 Lightning — 에이전트 전용 30B MoE 오픈 모델](../records/2026-08-12-nvidia-nemotron-3-5-lightning-nemo-switchyard.md) ⭐⭐⭐⭐ ⭐NEW (8/12)
+- [MiniMax-Music3 — 오픈웨이트 텍스트-음악 모델](../records/2026-08-17-minimax-releases-minimax-music3.md) ⭐⭐⭐⭐ ⭐NEW (8/17)
 
 ## 관련 위키 문서
 - [평가 벤치마크](research-overview.md) — 모델별 에이전트 성능 리더보드
@@ -652,3 +654,35 @@ NeMo Switchyard는 [Fireworks Nexus](tools-overview.md)(비용 라우팅)와 [Da
 Gemini 3.7 Flash의 $0.75는 [GPT-5.6 Luna 가격 인하](#gpt-56-lunaterra-가격-인하--가격-성능-프론티어-재정의)(11차)·[DeepSeek V4-Flash](#deepseek-v4-flash-0731--오픈-가중치-에이전트-코딩-최강)로 이어진 가격 전쟁에 Google이 직접 가세한 것으로, "지능 대비 가성비"가 벤치마크 점수를 대체하는 구매 기준이 되었음을 확정한다. Ultrafast는 [Sol-Fast 모드](#gpt-56-lunaterra-가격-인하--가격-성능-프론티어-재정의)(2.5배 속도)를 훌쩍 넘는 하드웨어 기반 도약으로, **추론 인프라 혁신이 모델 혁신과 동등한 경쟁 변수**가 되었음을 보여준다. Palmyra X6와 Aquila-SFT는 반대 방향의 같은 결론 — 프론티어 API가 아니어도(오픈소스 GLM-5.2, 0.6B 소형 모델) 하니스·파인튜닝으로 실용적 에이전트를 만들 수 있다.
 
 > 💡 **교차 참조**: Palmyra X6의 "하니스 효율" 논문은 같은 날 발표된 [Okta MCP 툴 스코핑](tools-overview.md)과 정확히 같은 문제(토큰 비용)를 다른 계층(하니스 vs 도구 노출)에서 푼다 — 함께 읽으면 "에이전트 비용 절감 3계층"(모델 선택 / 하니스 최적화 / 툴 스코핑)이 완성된다. Ultrafast의 하드웨어 가속은 [산업 동향](industry-trends.md)의 인프라 수직 통합(SpaceX GPU 플릿 등) 흐름의 추론 버전. Aquila-SFT의 온디바이스 툴 호출은 Meta Muse Glimmer(15차, 로컬 에이전트)·[Nemotron 3.5 Lightning](#nvidia-nemotron-35-lightning--에이전트-전용-오픈-모델--지능형-라우팅)(16차, 에이전트 전문 실행 모델)로 이어지는 온디바이스·소형 모델 계열의 파인튜닝 접근법이다.
+
+## 2026년 8월 18차 갱신: MiniMax-Music3 — 오픈웨이트 텍스트-음악 생성의 상용 임계점
+
+**출처**: [MarkTechPost — MiniMax-Music3 Release](../records/2026-08-17-minimax-releases-minimax-music3.md) ⭐⭐⭐⭐
+
+### 핵심 설계
+가사(섹션 태그 포함)와 구조화된 음악 설명을 별도 입력으로 받아 **32kHz 16비트 스테레오 WAV, 최대 5분 완성곡**을 단일 패스로 생성하는 오픈웨이트 텍스트-음악 모델.
+
+- **계층형 하이브리드 아키텍처**:
+  - **8B Global LLM**: 첫 번째 RVQ 코드북을 프레임별 예측 → 장기 구조(곡의 형태) 유지
+  - **0.6B Local LLM**: 프레임 내 나머지 코드북 예측 → 로컬 디테일(음질)
+  - **2.4B flow-matching 합성기**: 두 LLM의 최종 hidden state를 융합해 conditioning, 123M Flow-VAE로 최종 디코딩
+- **핵심 차별점**: **이산 토크나이저 디코더를 추론 시 전혀 로드하지 않음** — discrete-to-continuous 갭을 우회해 품질 유지 + 속도 개선
+
+### 배포 계층
+| 환경 | 방식 | 요구 사양 |
+|------|------|------|
+| 서버 | SGLang-Omni | 2-GPU |
+| 워크스테이션 | diffusers 파이프라인 | 24GB VRAM 이하 |
+| 로컬/경량 | ComfyUI 템플릿 | 8GB |
+
+- **라이선스**: 상업적 사용 허용, 단 연 매출 $2,000만 이상 조직은 사전 승인 필요
+
+### 의미: 오디오 생성에서도 "파이프라인 붕괴" 완성
+Music3는 [ByteDance SeedRealtime](#bytedance-seedrealtime--네이티브-오디오-비주얼-풀듀플렉스-llm)(15차)·[FLUX 3](#black-forest-labs-flux-3--시각-지능visual-intelligence-통합-모델)(9차)이 보여준 **모달리티 경계를 모델 내부로 흡수** 트렌드의 음악 버전이다. 핵심 시사점 두 가지:
+
+1. **RVQ 이산 경로 → flow-matching 연속 경로 전환**: LLM hidden state를 직접 flow-matching 모듈에 conditioning하는 설계는 오디오 생성 아키텍처의 세대 교체를 시사한다. SeedRealtime이 ASR→VLM→TTS 파이프라인을 단일 모델로 흡수한 것과 같은 '중간 디코딩 제거' 원리다.
+2. **글로벌-로컬 역할 분리(8B+0.6B)**: 장기 구조와 로컬 디테일을 서로 다른 크기의 모델에 분리하는 것은 Google AMIE(Talker-Planner-Perception, [연구 동향](research-overview.md))·[MAI-Cyber-1-Flash](#microsoft-mai-cyber-1-flash--에이전트-기반-사이버-방어-전용-모델)(90% 소형+10% 프론티어 분업)과 같은 **역할 분담 패러다임**의 오디오 적용이다.
+
+상업 라이선스를 포함한 오픈웨이트 공개는 Suno·Udio 등 폐쇄형 음악 AI에 대한 오픈소스 대안을 제시하며, BGM·게임·광고 음향 제작 비용을 극적으로 낮춘다. 에이전트 관점에서는 미디어 제작 에이전트의 동적 음악 생성 역량이 한 단계 확장되는 전환점이다.
+
+> 💡 **교차 참조**: [연구 동향 8차](research-overview.md)의 지식-추론 트레이드오프 관점에서 보면, Music3의 8B+0.6B 하이브리드는 "구조(추론)와 디테일(지식)을 크기가 다른 모델에 분리 배치"하는 설계로 읽힌다. ComfyUI 8GB 배포는 [Meta Muse Glimmer](#meta-muse-glimmer--온디바이스-에이전트를-위한-30b-오픈-웨이트-모델)(15차)·[Nemotron 3.5 Lightning](#nvidia-nemotron-35-lightning--에이전트-전용-오픈-모델--지능형-라우팅)(16차)의 온디바이스 계열에 창작 도구로 합류한다. [DeepSeek](#deepseek-v4-flash-0731--오픈-가중치-에이전트-코딩-최강)·[Qwen](#qwen38-max--에이전트-벤치마크-종합-1위-오픈-모델의-새로운-이정표)·ByteDance에 이은 MiniMax의 오픈 공개로, 중국 오픈소스 진영이 텍스트→코딩→실시간 멀티모달→음악으로 영역을 확장 중임을 확인시킨다.

@@ -2,11 +2,11 @@
 
 ## 메타데이터
 - **카테고리**: tools
-- **관련 뉴스 수**: 38
-- **최종 업데이트**: 2026-08-16 (16차 갱신)
+- **관련 뉴스 수**: 41
+- **최종 업데이트**: 2026-08-19 (17차 갱신)
 
 ## 요약
-에이전트 도구 생태계가 빠르게 분화하고 있다. 브라우저 자동화, MCP 서버, 터미널 작업 등 각 영역별 전문 도구가 등장하면서, 에이전트 개발 스택이 성숙 단계에 진입했다. MCP(Model Context Protocol)가 200+ 서버 구현체를 확보하며 사실상 표준으로 자리잡았고, 도구 간 상호운용성이 빠르게 표준화되고 있다.
+에이전트 도구 생태계가 빠르게 분화하고 있다. 브라우저 자동화, MCP 서버, 터미널 작업 등 각 영역별 전문 도구가 등장하면서, 에이전트 개발 스택이 성숙 단계에 진입했다. MCP(Model Context Protocol)가 200+ 서버 구현체를 확보하며 사실상 표준으로 자리잡았고, 도구 간 상호운용성이 빠르게 표준화되고 있다. 8월에는 코딩 도구가 에디터를 넘어 코드 호스팅·소프트웨어 팩토리·추론 배포까지 개발 파이프라인 전 계층의 인프라로 확장하고 있다.
 
 ## 주요 도구
 
@@ -472,6 +472,9 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - [TencentDB Agent Memory v2.0 — 팀 단위 메모리 허브, 오픈소스](../records/2026-08-08-tencentdb-agent-memory-v2-open-source.md) ⭐⭐⭐⭐ ⭐NEW (8/8)
 - [Google Maps Agentic — 소비자 앱 에이전트화](../records/2026-08-08-google-maps-agentic-features.md) ⭐⭐⭐ (8/8)
 - [Shepherd — 에이전트 실행 포크·리플레이·되돌리기 Python 런타임](../records/2026-08-08-shepherd-agent-fork-replay-substrate.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/8)
+- [NVIDIA TensorRT Model Connect — 두 명령어 C++ 추론 배포](../records/2026-08-19-nvidia-tensorrt-model-connect-public-preview.md) ⭐⭐⭐ ⭐NEW (8/19)
+- [Warp Factories — 아웃오브더박스 소프트웨어 팩토리](../records/2026-08-19-warp-factories-ai-software-factory.md) ⭐⭐⭐ ⭐NEW (8/19)
+- [Cursor Origin — GitHub 대항 코드 호스팅](../records/2026-08-19-cursor-launches-origin-code-hosting.md) ⭐⭐⭐⭐ ⭐NEW (8/19)
 
 ## 관련 위키 문서
 - [평가 벤치마크](research-overview.md) — MCP Atlas로 측정하는 도구 호출 성능
@@ -725,3 +728,55 @@ Okta의 툴 스코핑은 같은 주(8/13~14)에 발표된 [Writer Palmyra X6](mo
 각 계층은 독립적으로 적용 가능하고 곱셈적으로 결합된다. 핵심 통찰은 **비용 제어가 사후 미터링(게이트웨이)이 아니라 신원 거버넌스·하니스 설계 같은 '사전 설계 영역'으로 이동**하고 있다는 점이다.
 
 > 💡 **교차 참조**: [Fireworks Nexus](#fireworks-ai-nexus--코딩-에이전트-비용-라우팅-계층)가 모델 라우팅으로 비용을 낮춘다면, Okta는 애초에 프롬프트에 실리는 도구 수를 줄인다 — 상호 보완적. [SkillWeaver](#alibaba-skillweaver--99-토큰-절감)(7차, 스킬 주문형 로딩으로 99% 토큰 절감)와 같은 문제 의식의 신원 거버넌스 버전. [Docker Sandboxes](#docker-sandboxes--ai-코딩-에이전트를-위한-일회용-microvm-격리-환경-)(14차, 격리)·[Claude Code Auto Mode](#anthropic-claude-code--auto-mode-기본-전환-승인-피로-해소-)(14차, 모델 판단)로 이어진 "자율성-안전" 인프라에 **비용-보안 동시 통제**라는 새 축을 추가한다.
+
+## AI 코딩 인프라의 전 계층 장악 — 호스팅·팩토리·배포 (2026년 8월 17차 갱신)
+
+12차의 "코딩 에이전트 터미널 네이티브 다원화"가 에디터·CLI 경쟁이었다면, 8월 셋째 주의 세 발표는 개발 파이프라인의 **인프라 계층 자체**를 장악하려는 시도다. 코드 저장(Cursor Origin) → 개발 프로세스(Warp Factories) → 모델 배포(TensorRT Model Connect)의 3계층이 동시에 움직였다.
+
+### Cursor Origin — GitHub 대항 에이전트 네이티브 코드 호스팅 ⭐⭐⭐⭐
+
+**출처**: [TechCrunch — Cursor launches rival hosting platform Origin](../records/2026-08-19-cursor-launches-origin-code-hosting.md)
+
+- **전략**: GitHub과 **병행 사용 가능한 상호운용 설계** — 전환 장벽을 최소화하며 이탈 수요를 흡수. GitHub 리포를 Org 단위로 동기화
+- **계기**: GitHub 1년간 257회 장애 분석, Origin 출시 당일 6시간+ 전 세계 장애 발생 — 고프로필 사용자 이탈 가시화
+- **차별화**: '에이전트 네이티브' 기능 예고 — PR 리뷰·코드 검색·브랜치 관리를 에이전트가 API 수준에서 수행하는 환경 구축
+- **한계**: GitHub 1억 8천만 사용자 기반 압도. 오픈소스 프로젝트 이동·CI/CD 통합·서드파티 앱 생태계 확보가 과제
+
+> 💡 **교차 참조**: SpaceX 인수 이후 '도구'에서 '플랫폼'으로 확장 중([산업 동향 18차](industry-trends.md) SpaceX-Cursor $60B). [Warp Agent CLI](#warp-agent-cli--모든-터미널에서-작동하는-독립형-코딩-에이전트-)(12차)의 터미널 계층에 이어 Cursor는 호스팅 계층으로 — AI 코딩 도구의 개발 스택 전 방향 확장이 진행 중.
+
+### Warp Factories — 아웃오브더박스 소프트웨어 팩토리 ⭐⭐⭐
+
+**출처**: [TechCrunch — Warp's out-of-the-box software factory](../records/2026-08-19-warp-factories-ai-software-factory.md)
+
+- **구조**: 트리아지 → 사양 정의 → 구현 → 리뷰 → 검증의 개발 파이프라인 전 단계를 에이전트 슬롯으로 추상화
+- **모델 어그노스틱**: Claude Code·Codex 모두 지원. 모든 에이전트가 동일 환경에서 실행되어 모델-프롬프트-하네스 조합의 A/B 비교·토큰 지출 추적 가능
+- **통합**: Linear·Jira(티켓), Slack·Teams(메시징) 연동으로 기존 워크플로우에 매끄럽게 결합
+- **민주화**: Stripe 'minions'·Ramp 백그라운드 에이전트급 자체 팩토리를 중소기업에 제공
+- **현실 인식**: Warp 자체 자동화율 주간 30~35%(CEO 증언) — 인간-에이전트 협업 모델이 당분간 지속
+
+> 💡 **교차 참조**: '소프트웨어 팩토리' 패러다임의 상품화. [ChatGPT Work](#chatgpt-work-openai--야심찬-프로젝트를-위한-ai-에이전트)(프로젝트 자율 실행)·[Shepherd](../records/2026-08-08-shepherd-agent-fork-replay-substrate.md)(런타임 관리)와 함께 에이전트 개발 라이프사이클 인프라를 완성. 16차 "비용 절감 3계층"에 이어 모델-하네스 조합을 실험하는 **팩토리 운영 계층**이 새로 추가됨.
+
+### NVIDIA TensorRT Model Connect — 두 명령어 C++ 추론 배포 ⭐⭐⭐
+
+**출처**: [MarkTechPost — TensorRT Model Connect public preview](../records/2026-08-19-nvidia-tensorrt-model-connect-public-preview.md)
+
+- **핵심**: Hugging Face 체크포인트를 ONNX 변환 없이 `trtmc build` / `trtmc run` **두 명령어**로 네이티브 C++ TensorRT 추론 환경에 배포 (버전 관리되는 .bundle 아티팩트, Apache-2.0)
+- **성능**: 76개 모델 패밀리·105개 프로필 테스트(GB300 기준), 102개가 기준 대비 5%+ 빠름
+- **제약**: 현재 Linux aarch64 전용 릴리즈(x86_64는 Docker 소스 빌드), Python 3.10/3.12·TensorRT 11.1 필요
+- **의미**: PyTorch 없는 C++ 런타임 — 엣지·로봛·자율주행·의료기기 등 제한 환경 배포의 진입 장벽 제거. 태스크 API(`generate()`·`transcribe()`·`embed()`) 추상화로 모델별 통합 코드 대폭 감소. 프로젝트 전체를 OpenAI Codex 에이전트로 구축했다는 점에서 에이전트 개발 실증 사례이기도 함
+
+> 💡 **교차 참조**: [Cloudflare Workers AI](#cloudflare-workers-ai--kimi-k26glm-52-대규모-추론-최적화)(12차)가 서버리스 추론이라면 TRTMC는 네이티브 온디바이스 추론 — 배포 계층의 양극화. [모델 동향](models-overview.md)의 배포 매트릭스·추론 인프라 경쟁(Groq 네오클라우드 피벗 포함, [산업 동향 20차](industry-trends.md))과 연결.
+
+### 17차 갱신 분석: "코딩 도구의 인프라 계층화 — 에디터에서 파이프라인 OS로"
+
+세 발표는 각각 다른 계층을 공략하지만 방향은 동일하다: **AI 코딩 도구가 '코드 편집 보조'를 넘어 개발 조직의 운영 체제로 진화**한다는 것.
+
+| 계층 | 도구 | 기존 패러다임 | 새 패러다임 |
+|------|------|--------------|------------|
+| 코드 저장 | Cursor Origin | GitHub 단일 표준 | 에이전트 네이티브 호스팅 + 상호운용 |
+| 개발 프로세스 | Warp Factories | 단계별 수동 파이프라인 | 에이전트 슬롯 기반 자동 팩토리 |
+| 모델 배포 | TensorRT Model Connect | PyTorch→ONNX→TRT 다단계 | 두 명령어 .bundle 배포 |
+
+핵심 통찰은 **플랫폼 전환 강요 없는 계층 장악**이라는 공통 전략이다. Origin은 GitHub 병행을 허용하고, Factories는 기존 티켓·메시징에 통합되며, TRTMC는 HF 체크포인트를 그대로 받는다. 채택 장벽을 낮춘 채 생태계를 내부로 흡수하는 전략 — [Stripe-OpenRouter](industry-trends.md)(19차)의 유통 계층 흡수와 같은 구조가 도구 생태계에서도 반복되고 있다.
+
+> 💡 **교차 참조**: 12차 "터미널 네이티브 다원화"(Warp Agent CLI·Claude Code Auto Mode)가 실행 환경 경쟁이었다면, 17차는 그 위의 인프라 계층 경쟁. [산업 동향](industry-trends.md) 18차 SpaceX-Cursor의 수직 통합이 자본 시장에서 일어났다면, 17차 세 발표는 제품 수준에서 같은 흐름을 구현한다. [Docker Sandboxes](#docker-sandboxes--ai-코딩-에이전트를-위한-일회용-microvm-격리-환경-)(14차)·[Shepherd](../records/2026-08-08-shepherd-agent-fork-replay-substrate.md)(15차)로 이어진 실행 인프라에 호스팅·팩토리·배포가 더해져 에이전트 개발 스택의 전 계층이 갖춰졌다.

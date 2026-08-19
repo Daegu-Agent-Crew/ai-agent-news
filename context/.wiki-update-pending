@@ -1,22 +1,13 @@
 # 다음 위키 갱신 대기
-# 2026-08-18: research (8차), model (18차) 갱신 완료.
-# - research: 8/17 "Models Getting Dumber on Purpose" 지식-추론 트레이드오프 (⭐⭐⭐⭐) — 8차 갱신
-#   → "지식은 가중치에서 harness로 이관, 에이전트 설계 단위 = 모델+harness" 프레임
-#   industry 19차의 예고 링크(워터마크 ↔ 검증 과제) 연결 완료
-# - model: 8/17 MiniMax-Music3 오픈웨이트 텍스트-음악 모델 (⭐⭐⭐⭐) — 18차 갱신
-#   → RVQ→flow-matching 전환 + 8B/0.6B 글로벌-로컬 분리. 배포 매트릭스 행 추가
+# 2026-08-19: industry (20차), tools (17차) 갱신 완료.
+# - industry 20차: Amazon 희귀서적 파괴(⭐⭐⭐⭐) + OpenAI HF 침해 후속 안전장치(⭐⭐⭐⭐⭐)
+#   + Groq 네오클라우드 피벗(⭐⭐⭐⭐) + Relay→Chrome acquihire(⭐⭐⭐) + Anthropic 매출 $65B(⭐⭐⭐⭐)
+#   → "위기와 호황의 동시성" 프레임. 19차 '품질을 희생하지 않는 검증' 예고의 계층별 응답으로 구성
+#   (데이터-보안-인프라-자본 4계층)
+# - tools 17차: Cursor Origin(⭐⭐⭐⭐) + Warp Factories(⭐⭐⭐) + TensorRT Model Connect(⭐⭐⭐)
+#   → "코딩 인프라의 전 계층 장악(호스팅·팩토리·배포)" 프레임.
+#   12차 터미널 다원화 → 16차 비용 3계층에 이어 팩토리 운영 계층 추가
 #
-# 정정 기록:
-# - 8/15 XYZ-Aquila-SFT는 models 17차(8/16)에 이미 반영되어 있었음 (이전 pending 메모 부정확).
-#   framework 15차의 "이월 예정" 링크를 "17차 갱신 반영"으로 수정 연결 완료.
-#
-# 다음 대상 (우선순위순):
-# - industry: 8/17 Groq $350M 네오클라우드 전환 (⭐⭐⭐⭐)
-#   + Amazon 희귀서적 절단·스캔 AI 훈련 논란 (⭐⭐⭐⭐) + Relay 종료·팀 Chrome 합류 (⭐⭐⭐) — 20차 갱신 후보
-#   → 프레임 후보: "훈련 데이터 수급의 윤리(Amazon) + 인퍼런스 인프라 재편(Groq) + 빅테크 흡수(Relay)"
-#     M&A·수직 통합 서사(18~19차)의 자연스러운 연장선. Anthropic CEO 신뢰 위기(19차)와
-#     Amazon 데이터 논란이 '신뢰' 테마로 연결됨
-#
-# 참고:
-# - 8/16 SpaceX-Cursor는 industry 18차에 이미 반영됨
-# - 8/17 Stripe-OpenRouter, Anthropic CEO, Claude 워터마크는 industry 19차에 이미 반영됨
+# 다음 대상: 이월 없음 — 8/17~8/19 records 전부 반영 완료.
+# framework·model·research는 8/18 갱신 이후 신규 records 없음.
+# 새 records 수집 시 카테고리 매핑(framework/model/tool/industry/research) 후 갱신.

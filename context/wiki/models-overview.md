@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: models
-- **관련 뉴스 수**: 31
-- **최종 업데이트**: 2026-08-18 (18차 갱신)
+- **관련 뉴스 수**: 32
+- **최종 업데이트**: 2026-08-20 (19차 갱신)
 
 ## 요약
 2026년 6월, 14일 사이에 Google, OpenAI, Anthropic, Microsoft가 연달아 플래그십 모델을 출격했다. 더 이상 "하나의 최고 모델"이 존재하지 않으며, 용도별(가격·수학·코딩·독립성) 최적 모델이 다르다. Google은 가격 파괴, OpenAI는 수학 추론, Anthropic은 코딩 정확도, Microsoft는 자체 모델 독립성이라는 각기 다른 승부수를 던졌다. **7월 9일, OpenAI가 GPT-5.6(Sol/Terra/Luna)을 발표**하며 프론티어 모델 경쟁이 재점화되었다. 트럼프 행정부와의 2주간 규제 갈등 끝에 공개된 이 모델군은 자율 다단계 계획, 독립 도구 사용, 자기 교정 능력을 갖춘 에이전트 네이티브 모델로, 미국 정부의 사전 검토 게이트가 반복적 패턴으로 자리 잡을 가능성을 시사한다.
@@ -503,6 +503,7 @@ SeedRealtime은 AI 모델이 별도의 컴포넌트(ASR, VLM, TTS)를 조립하�
 - [ByteDance SeedRealtime — 네이티브 오디오-비주얼 풀듀플렉스 LLM](../records/2026-08-10-bytedance-seedrealtime-audio-visual-llm.md) ⭐⭐⭐⭐⭐ (8/10)
 - [NVIDIA Nemotron 3.5 Lightning — 에이전트 전용 30B MoE 오픈 모델](../records/2026-08-12-nvidia-nemotron-3-5-lightning-nemo-switchyard.md) ⭐⭐⭐⭐ ⭐NEW (8/12)
 - [MiniMax-Music3 — 오픈웨이트 텍스트-음악 모델](../records/2026-08-17-minimax-releases-minimax-music3.md) ⭐⭐⭐⭐ ⭐NEW (8/17)
+- [NVIDIA TensorRT Model Connect — 두 명령어 C++ 추론, ONNX 단계 제거](../records/2026-08-20-nvidia-tensorrt-model-connect.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/20)
 
 ## 관련 위키 문서
 - [평가 벤치마크](research-overview.md) — 모델별 에이전트 성능 리더보드
@@ -686,3 +687,23 @@ Music3는 [ByteDance SeedRealtime](#bytedance-seedrealtime--네이티브-오디�
 상업 라이선스를 포함한 오픈웨이트 공개는 Suno·Udio 등 폐쇄형 음악 AI에 대한 오픈소스 대안을 제시하며, BGM·게임·광고 음향 제작 비용을 극적으로 낮춘다. 에이전트 관점에서는 미디어 제작 에이전트의 동적 음악 생성 역량이 한 단계 확장되는 전환점이다.
 
 > 💡 **교차 참조**: [연구 동향 8차](research-overview.md)의 지식-추론 트레이드오프 관점에서 보면, Music3의 8B+0.6B 하이브리드는 "구조(추론)와 디테일(지식)을 크기가 다른 모델에 분리 배치"하는 설계로 읽힌다. ComfyUI 8GB 배포는 [Meta Muse Glimmer](#meta-muse-glimmer--온디바이스-에이전트를-위한-30b-오픈-웨이트-모델)(15차)·[Nemotron 3.5 Lightning](#nvidia-nemotron-35-lightning--에이전트-전용-오픈-모델--지능형-라우팅)(16차)의 온디바이스 계열에 창작 도구로 합류한다. [DeepSeek](#deepseek-v4-flash-0731--오픈-가중치-에이전트-코딩-최강)·[Qwen](#qwen38-max--에이전트-벤치마크-종합-1위-오픈-모델의-새로운-이정표)·ByteDance에 이은 MiniMax의 오픈 공개로, 중국 오픈소스 진영이 텍스트→코딩→실시간 멀티모달→음악으로 영역을 확장 중임을 확인시킨다.
+
+---
+
+## 2026년 8월 19차 갱신: TensorRT Model Connect — 배포 파이프라인의 붕괴, 두 명령어로 끝내는 C++ 추론
+
+### NVIDIA TensorRT Model Connect 공개 프리뷰 ⭐⭐⭐⭐⭐
+
+**출처**: [MarkTechPost — NVIDIA Releases TensorRT Model Connect in Public Preview](../records/2026-08-20-nvidia-tensorrt-model-connect.md)
+
+- **내용**: Hugging Face/로컬 체크포인트를 **두 명령어**로 엔드투엔드 TensorRT 추론으로 변환하는 오픈소스(Apache-2.0) 프로젝트. **ONNX 내보내기 중간 단계 제거**, 버전화된 `.bundle` 아티팩트가 네이티브 C++ 작업 API로 실행
+- **아키텍처**: 빌드/런타임 분리 — Python은 체크포인트 해상도·엔진 구성만 담당, 런타임은 **PyTorch 없이 순수 C++** 추론. GPU 컨텍스트 스위칭 오버헤드 제거로 지연·안정성 개선
+- **검증**: 2026-07-29 GB300 스냅샷 — 76개 모델 패밀리 105개 프로파일 중 **102개가 참조치 대비 5%+ 우수**
+- **범위**: 현재 Linux aarch64 릴리스 휠 제공. 로봇·자율주행·임베디드 등 실시간 추론 필수 영역의 배포 진입 장벽 급락
+
+### 19차 갱신 분석: "배포 계층의 파이프라인 붕괴"
+
+1. **모달리티 파이프라인에 이은 배포 파이프라인 흡수**: Music3(18차)·SeedRealtime(15차)이 모델 **내부**의 중간 디코딩을 제거했다면, TRTMC는 모델 **외부**의 변환 단계(ONNX·TorchScript)를 제거한다. 두 흐름은 '중간 계층 제거'라는 동일 원리의 다른 적용이며, 개발-배포-실행 전 과정의 마찰 제거라는 관점에서 수렴
+2. **Python 개발 / C++ 실행의 역할 분리**: 'Python은 빌드 타임에만, 런타임은 네이티브' 설계는 [Muse Glimmer](#meta-muse-glimmer--온디바이스-에이전트를-위한-30b-오픈-웨이트-모델)(온디바이스)·[Nemotron 3.5 Lightning](#nvidia-nemotron-35-lightning--에이전트-전용-오픈-모델--지능형-라우팅)(경량 실행) 계열의 엣지 배포 트렌드와 정확히 맞닿음. 임베디드·로보틱스 스택에서 PyTorch 의존성 제거는 메모리·전력·안정성 이득으로 직결
+
+> 💡 **교차 참조**: [도구 생태계](tools-overview.md) 17차에서 TensorRT Model Connect 공개 프리뷰를 코딩·배포 인프라 관점에서 다뤘다면, 본 갱신은 배포 파이프라인 붕괴라는 모델 생태계 관점의 심층 분석(105개 프로파일 검증 데이터 포함). [산업 동향](industry-trends.md) 21차의 프라이버시·전력 계층 재편과 함께, 모델 경쟁의 축이 '성능'에서 '배포 마찰'로 확장되는 흐름.

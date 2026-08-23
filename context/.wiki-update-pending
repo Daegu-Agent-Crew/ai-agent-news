@@ -1,12 +1,10 @@
 # 다음 위키 갱신 대기
-# 2026-08-20: industry (21차), models (19차) 갱신 완료.
-# - industry 21차: OpenAI 프라이빗 안전 처리(⭐⭐⭐⭐⭐) + TerraPower 원자력(⭐⭐⭐⭐)
-#   → "프라이버시 무기화 + 전력 병목의 원자력 해법" 프레임. 20차 '이중 궤도' 연장선.
-# - models 19차: TensorRT Model Connect(⭐⭐⭐⭐⭐) → "배포 파이프라인 붕괴" 프레임.
-#   ONNX 제거·Python 빌드/C++ 런타임 분리·105 프로파일 검증. tools 17차 보완 심층.
+# 2026-08-24: tools (18차), models (20차) 갱신 완료.
+# - tools 18차: Google 학습 도구(⭐⭐⭐⭐, 이월분 반영) + NanoGPT Speedrun(⭐⭐⭐⭐) + Linkdaze(⭐⭐⭐)
+#   → "교육·평가·생활로 확산" 프레임. 신학기 시즌 겨냥 2건 포착.
+# - models 20차: Qwen 3.8 27B 역엔지니어링(⭐⭐⭐⭐⭐) + Harvey Tenet(⭐⭐⭐⭐) + Ox Alpha(⭐⭐⭐)
+#   → "프론티어 능력의 탈중앙화(규모·랩·정체성)" 프레임.
 #
-# 이월: tool 1건 — Google 학습 도구(⭐⭐⭐⭐, records 2건: TechCrunch + Google Blog, 8/20 수집)
-#   - Search/Gemini 학습 도구: 상호 시각자료·3D 시뮬레이션·연습 퀴즈·Lens 학습·노트북 AI 모드
-#   - 다음 갱신 시 tools-overview.md(18차)에 반영. 교육 AI 시장(OpenAI·Knowt·Gauth 경쟁) 프레임 권장.
+# 이월: 없음 (8/20·8/24 records 전량 반영 완료)
 # framework·research는 8/18 갱신 이후 신규 records 없음.
 # 새 records 수집 시 카테고리 매핑(framework/model/tool/industry/research) 후 갱신.

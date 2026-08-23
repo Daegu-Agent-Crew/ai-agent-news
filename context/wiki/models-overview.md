@@ -654,7 +654,7 @@ NeMo Switchyard는 [Fireworks Nexus](tools-overview.md)(비용 라우팅)와 [Da
 
 Gemini 3.7 Flash의 $0.75는 [GPT-5.6 Luna 가격 인하](#gpt-56-lunaterra-가격-인하--가격-성능-프론티어-재정의)(11차)·[DeepSeek V4-Flash](#deepseek-v4-flash-0731--오픈-가중치-에이전트-코딩-최강)로 이어진 가격 전쟁에 Google이 직접 가세한 것으로, "지능 대비 가성비"가 벤치마크 점수를 대체하는 구매 기준이 되었음을 확정한다. Ultrafast는 [Sol-Fast 모드](#gpt-56-lunaterra-가격-인하--가격-성능-프론티어-재정의)(2.5배 속도)를 훌쩍 넘는 하드웨어 기반 도약으로, **추론 인프라 혁신이 모델 혁신과 동등한 경쟁 변수**가 되었음을 보여준다. Palmyra X6와 Aquila-SFT는 반대 방향의 같은 결론 — 프론티어 API가 아니어도(오픈소스 GLM-5.2, 0.6B 소형 모델) 하니스·파인튜닝으로 실용적 에이전트를 만들 수 있다.
 
-> 💡 **교차 참조**: Palmyra X6의 "하니스 효율" 논문은 같은 날 발표된 [Okta MCP 툴 스코핑](tools-overview.md)과 정확히 같은 문제(토큰 비용)를 다른 계층(하니스 vs 도구 노출)에서 푼다 — 함께 읽으면 "에이전트 비용 절감 3계층"(모델 선택 / 하니스 최적화 / 툴 스코핑)이 완성된다. Ultrafast의 하드웨어 가속은 [산업 동향](industry-trends.md)의 인프라 수직 통합(SpaceX GPU 플릿 등) 흐름의 추론 버전. Aquila-SFT의 온디바이스 툴 호출은 Meta Muse Glimmer(15차, 로컬 에이전트)·[Nemotron 3.5 Lightning](#nvidia-nemotron-35-lightning--에이전트-전용-오픈-모델--지능형-라우팅)(16차, 에이전트 전문 실행 모델)로 이어지는 온디바이스·소형 모델 계열의 파인튜닝 접근법이다.
+> 💡 **교차 참조**: Palmyra X6의 "하니스 효율" 논문은 같은 날 발표된 [Okta MCP 툴 스코핑](tools-overview.md)과 정확히 같은 문제(토큰 비용)를 다른 계층(하니스 vs 도구 노출)에서 푼다 — 함께 읽으면 "에이전트 비용 절감 3계층"(모델 선택 / 하니스 최적화 / 툴 스코핑)이 완성된다. Ultrafast의 하드웨어 가속은 [산업 동향](industry-trends.md)의 인프라 수직 통합(SpaceX GPU 플릿 등) 흐름의 추론 버전. Aquila-SFT의 온디바이스 툴 호출은 Meta Muse Glimmer(15차, 로컬 에이전트)·[Nemotron 3.5 Lightning](#2026년-8월-16차-갱신-nvidia-nemotron-35-lightning--에이전트-전용-오픈-모델--지능형-라우팅)(16차, 에이전트 전문 실행 모델)로 이어지는 온디바이스·소형 모델 계열의 파인튜닝 접근법이다.
 
 ## 2026년 8월 18차 갱신: MiniMax-Music3 — 오픈웨이트 텍스트-음악 생성의 상용 임계점
 
@@ -686,7 +686,7 @@ Music3는 [ByteDance SeedRealtime](#bytedance-seedrealtime--네이티브-오디�
 
 상업 라이선스를 포함한 오픈웨이트 공개는 Suno·Udio 등 폐쇄형 음악 AI에 대한 오픈소스 대안을 제시하며, BGM·게임·광고 음향 제작 비용을 극적으로 낮춘다. 에이전트 관점에서는 미디어 제작 에이전트의 동적 음악 생성 역량이 한 단계 확장되는 전환점이다.
 
-> 💡 **교차 참조**: [연구 동향 8차](research-overview.md)의 지식-추론 트레이드오프 관점에서 보면, Music3의 8B+0.6B 하이브리드는 "구조(추론)와 디테일(지식)을 크기가 다른 모델에 분리 배치"하는 설계로 읽힌다. ComfyUI 8GB 배포는 [Meta Muse Glimmer](#meta-muse-glimmer--온디바이스-에이전트를-위한-30b-오픈-웨이트-모델)(15차)·[Nemotron 3.5 Lightning](#nvidia-nemotron-35-lightning--에이전트-전용-오픈-모델--지능형-라우팅)(16차)의 온디바이스 계열에 창작 도구로 합류한다. [DeepSeek](#deepseek-v4-flash-0731--오픈-가중치-에이전트-코딩-최강)·[Qwen](#qwen38-max--에이전트-벤치마크-종합-1위-오픈-모델의-새로운-이정표)·ByteDance에 이은 MiniMax의 오픈 공개로, 중국 오픈소스 진영이 텍스트→코딩→실시간 멀티모달→음악으로 영역을 확장 중임을 확인시킨다.
+> 💡 **교차 참조**: [연구 동향 8차](research-overview.md)의 지식-추론 트레이드오프 관점에서 보면, Music3의 8B+0.6B 하이브리드는 "구조(추론)와 디테일(지식)을 크기가 다른 모델에 분리 배치"하는 설계로 읽힌다. ComfyUI 8GB 배포는 [Meta Muse Glimmer](#meta-muse-glimmer--온디바이스-에이전트를-위한-30b-오픈-웨이트-모델)(15차)·[Nemotron 3.5 Lightning](#2026년-8월-16차-갱신-nvidia-nemotron-35-lightning--에이전트-전용-오픈-모델--지능형-라우팅)(16차)의 온디바이스 계열에 창작 도구로 합류한다. [DeepSeek](#deepseek-v4-flash-0731--오픈-가중치-에이전트-코딩-최강)·[Qwen](#qwen38-max--에이전트-벤치마크-종합-1위-오픈-모델의-새로운-이정표)·ByteDance에 이은 MiniMax의 오픈 공개로, 중국 오픈소스 진영이 텍스트→코딩→실시간 멀티모달→음악으로 영역을 확장 중임을 확인시킨다.
 
 ---
 
@@ -704,7 +704,7 @@ Music3는 [ByteDance SeedRealtime](#bytedance-seedrealtime--네이티브-오디�
 ### 19차 갱신 분석: "배포 계층의 파이프라인 붕괴"
 
 1. **모달리티 파이프라인에 이은 배포 파이프라인 흡수**: Music3(18차)·SeedRealtime(15차)이 모델 **내부**의 중간 디코딩을 제거했다면, TRTMC는 모델 **외부**의 변환 단계(ONNX·TorchScript)를 제거한다. 두 흐름은 '중간 계층 제거'라는 동일 원리의 다른 적용이며, 개발-배포-실행 전 과정의 마찰 제거라는 관점에서 수렴
-2. **Python 개발 / C++ 실행의 역할 분리**: 'Python은 빌드 타임에만, 런타임은 네이티브' 설계는 [Muse Glimmer](#meta-muse-glimmer--온디바이스-에이전트를-위한-30b-오픈-웨이트-모델)(온디바이스)·[Nemotron 3.5 Lightning](#nvidia-nemotron-35-lightning--에이전트-전용-오픈-모델--지능형-라우팅)(경량 실행) 계열의 엣지 배포 트렌드와 정확히 맞닿음. 임베디드·로보틱스 스택에서 PyTorch 의존성 제거는 메모리·전력·안정성 이득으로 직결
+2. **Python 개발 / C++ 실행의 역할 분리**: 'Python은 빌드 타임에만, 런타임은 네이티브' 설계는 [Muse Glimmer](#meta-muse-glimmer--온디바이스-에이전트를-위한-30b-오픈-웨이트-모델)(온디바이스)·[Nemotron 3.5 Lightning](#2026년-8월-16차-갱신-nvidia-nemotron-35-lightning--에이전트-전용-오픈-모델--지능형-라우팅)(경량 실행) 계열의 엣지 배포 트렌드와 정확히 맞닿음. 임베디드·로보틱스 스택에서 PyTorch 의존성 제거는 메모리·전력·안정성 이득으로 직결
 
 > 💡 **교차 참조**: [도구 생태계](tools-overview.md) 17차에서 TensorRT Model Connect 공개 프리뷰를 코딩·배포 인프라 관점에서 다뤘다면, 본 갱신은 배포 파이프라인 붕괴라는 모델 생태계 관점의 심층 분석(105개 프로파일 검증 데이터 포함). [산업 동향](industry-trends.md) 21차의 프라이버시·전력 계층 재편과 함께, 모델 경쟁의 축이 '성능'에서 '배포 마찰'로 확장되는 흐름.
 
@@ -753,4 +753,4 @@ Music3는 [ByteDance SeedRealtime](#bytedance-seedrealtime--네이티브-오디�
 
 세 사례 모두 능력의 원천이 전통적 앵커(스케일링 법칙·빅테크 랩·브랜드)에서 **레시피(후훈련·하니스·평가)**로 이동했음을 보여준다. Harvey Tenet의 "레시피 공개·아티팩트 미공개"와 Ox Alpha의 "익명 공개"는 모델 경쟁의 단위가 체크포인트에서 훈련·운영 방법론으로 이동하는 방향과 정확히 일치한다.
 
-> 💡 **교차 참조**: Qwen 3.8 27B는 [Qwen3.8 Max](#qwen38-max--에이전트-벤치마크-종합-1위-오픈-모델의-새로운-이정표)의 소형 형제로, [Muse Glimmer](#meta-muse-glimmer--온디바이스-에이전트를-위한-30b-오픈-웨이트-모델)·[Nemotron 3.5 Lightning](#nvidia-nemotron-35-lightning--에이전트-전용-오픈-모델--지능형-라우팅)의 온디바이스 계열이 '실행'을 넘어 '실전 침해 테스트' 단계에 도달했음을 의미. Harvey Tenet의 베이스 Kimi K3와 Ox Alpha의 GLM설은 [도구 생태계 18차](tools-overview.md) NanoGPT Speedrun 리더보드(Kimi K3 2~4위)와 교차 검증된다. Ox Alpha의 MAI설은 [MAI-Thinking-1](#mai-thinking-1-microsoft) 이후 Microsoft 자체 모델 행보의 연장선. Qwen의 보안 역량은 [연구 동향](research-overview.md)의 안전성 논의와 연결.
+> 💡 **교차 참조**: Qwen 3.8 27B는 [Qwen3.8 Max](#qwen38-max--에이전트-벤치마크-종합-1위-오픈-모델의-새로운-이정표)의 소형 형제로, [Muse Glimmer](#meta-muse-glimmer--온디바이스-에이전트를-위한-30b-오픈-웨이트-모델)·[Nemotron 3.5 Lightning](#2026년-8월-16차-갱신-nvidia-nemotron-35-lightning--에이전트-전용-오픈-모델--지능형-라우팅)의 온디바이스 계열이 '실행'을 넘어 '실전 침해 테스트' 단계에 도달했음을 의미. Harvey Tenet의 베이스 Kimi K3와 Ox Alpha의 GLM설은 [도구 생태계 18차](tools-overview.md) NanoGPT Speedrun 리더보드(Kimi K3 2~4위)와 교차 검증된다. Ox Alpha의 MAI설은 [MAI-Thinking-1](#mai-thinking-1-microsoft) 이후 Microsoft 자체 모델 행보의 연장선. Qwen의 보안 역량은 [연구 동향](research-overview.md)의 안전성 논의와 연결.

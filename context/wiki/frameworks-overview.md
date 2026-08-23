@@ -183,7 +183,7 @@ Gemini Enterprise Agent Platform의 출시로 관리형 엔터프라이즈 플�
 
 Google의 진입은 가격·기능 경쟁을 촉발하며 기업 AI 에이전트 도입을 가속할 것이다. 특히 기업용 에이전트 전문 개발자 수요 급증이 예상된다.
 
-> 💡 **교차 참조**: Gemini Enterprise의 Multi-Agent Orchestration은 [Google ADK 2.0](#google-adk-20--결정론적-워크플로우의-완성)의 그래프 런타임 기술을 기반으로 한다. Zero-Trust Architecture는 [Omnigent](#2026년-7월-4차-업데이트-omnigent--메타-하네스로-거버넌스-간극-해결)의 정책 중심 보안과 같은 방향성. 기업용 에이전트 시장 경쟁은 [산업 동향](industry-trends.md)의 클라우드 플랫폼 전쟁과 직결된다. ChatGPT Work([도구 생태계](tools-overview.md))와 GPT-5.6×M365 Copilot([모델 동향](models-overview.md))이 각각 소비자·엔터프라이즈 시장을 겨냥하는 가운데, Google이 플랫폼 레벨에서 직접 대응한 셈이다.
+> 💡 **교차 참조**: Gemini Enterprise의 Multi-Agent Orchestration은 [Google ADK 2.0](#2026년-7월-3차-업데이트-google-adk-20--결정론적-워크플로우의-완성)의 그래프 런타임 기술을 기반으로 한다. Zero-Trust Architecture는 [Omnigent](#2026년-7월-4차-업데이트-omnigent--메타-하네스로-거버넌스-간극-해결)의 정책 중심 보안과 같은 방향성. 기업용 에이전트 시장 경쟁은 [산업 동향](industry-trends.md)의 클라우드 플랫폼 전쟁과 직결된다. ChatGPT Work([도구 생태계](tools-overview.md))와 GPT-5.6×M365 Copilot([모델 동향](models-overview.md))이 각각 소비자·엔터프라이즈 시장을 겨냥하는 가운데, Google이 플랫폼 레벨에서 직접 대응한 셈이다.
 
 ## 2026년 7월 업데이트: 오케스트레이션 패러다임 정립 및 순위 합의
 
@@ -274,7 +274,7 @@ Nemotron 3 Ultra 조정 랭체인 딥 에이전트는 종합 점수 **0.86**을 
 ### 프레임워크 생태계에서의 의미
 NemoClaw 블루프린트는 **'레고 블록식' 에이전트 구축**이라는 새로운 패러다임을 제시한다. 기업은 특정 워크로드에 맞춰 필요한 기능만 선택적으로 조합할 수 있다. 이는 Omnigent의 메타-하네스 개념과 함께, 120+ 도구 시대에 **컴포넌트 기반 조립**이 프레임워크 설계의 새로운 기준이 됨을 시사한다. EY, Basenten, PowerWorks 등 주요 파트너사의 참여는 규제 업종에서의 에이전트 도입 신뢰도를 높이고 있다.
 
-> 💡 **교차 참조**: NemoClaw의 3개 레이어 아키텍처는 [모델 동향](models-overview.md)의 NVIDIA Nemotron 3 Embed(검색 품질 혁신)와 함께 NVIDIA의 에이전트 풀스택 전략을 구성한다. OpenShell 거버넌스 런타임은 [Omnigent](#2026년-7월-4차-업데이트-omnigent--메타-하네스로-거버넌스-간극-해결)의 정책 중심 보안과 같은 방향성이며, LangChain Deep Agents는 본 문서의 LangGraph 기반 오케스트레이션 패러다임과 직결된다. [Google ADK 2.0](#google-adk-20--결정론적-워크플로우의-완성)의 결정론적+자율 하이브리드 모델과도 상호 보완적이다.
+> 💡 **교차 참조**: NemoClaw의 3개 레이어 아키텍처는 [모델 동향](models-overview.md)의 NVIDIA Nemotron 3 Embed(검색 품질 혁신)와 함께 NVIDIA의 에이전트 풀스택 전략을 구성한다. OpenShell 거버넌스 런타임은 [Omnigent](#2026년-7월-4차-업데이트-omnigent--메타-하네스로-거버넌스-간극-해결)의 정책 중심 보안과 같은 방향성이며, LangChain Deep Agents는 본 문서의 LangGraph 기반 오케스트레이션 패러다임과 직결된다. [Google ADK 2.0](#2026년-7월-3차-업데이트-google-adk-20--결정론적-워크플로우의-완성)의 결정론적+자율 하이브리드 모델과도 상호 보완적이다.
 
 ## 2026년 7월 8차 업데이트: Google Gemini 1.5 Enterprise — 메모리 통합으로 장기 맥락 혁신
 
@@ -365,11 +365,11 @@ Google DeepMind가 Gemini API의 **Managed Agents**를 대폭 확장했다. 기�
 추가로 **무료 티어 프로젝트**에서도 Managed Agents 사용이 가능해져 결제 설정 없이 에이전트 개발을 시작할 수 있다. OffDeal 등 실제 기업이 이미 프로덕션에서 훅을 활용 중이다.
 
 ### 프레임워크 생태계에서의 의미
-Gemini Managed Agents의 훅 시스템은 에이전트 프레임워크 설계에서 **제어 가능성과 감사 가능성**이라는 핵심 요구를 해결한다. 기존에는 에이전트가 툴을 호출할 때 개발자가 직접 개입할 수 없었으나, 훅을 통해 사전 검증(deny/retry)과 사후 처리를 프로그래밍 방식으로 주입할 수 있게 되었다. 이는 [ADK 2.0](#google-adk-20--결정론적-워크플로우의-완성)의 결정론적 HITL + 자율 에이전트 하이브리드 모델을 Managed Agents 레벨에서 구현한 것으로, Google이 에이전트 제어 철학을 인프라 전반에 일관되게 적용하고 있음을 보여준다.
+Gemini Managed Agents의 훅 시스템은 에이전트 프레임워크 설계에서 **제어 가능성과 감사 가능성**이라는 핵심 요구를 해결한다. 기존에는 에이전트가 툴을 호출할 때 개발자가 직접 개입할 수 없었으나, 훅을 통해 사전 검증(deny/retry)과 사후 처리를 프로그래밍 방식으로 주입할 수 있게 되었다. 이는 [ADK 2.0](#2026년-7월-3차-업데이트-google-adk-20--결정론적-워크플로우의-완성)의 결정론적 HITL + 자율 에이전트 하이브리드 모델을 Managed Agents 레벨에서 구현한 것으로, Google이 에이전트 제어 철학을 인프라 전반에 일관되게 적용하고 있음을 보여준다.
 
 예산 통제와 예약 실행은 에이전트를 프로덕션 워크플로우에 안정적으로 통합하는 데 필수적이며, [Fireworks Nexus](tools-overview.md)의 비용 관리 기능, [Claude Agent SDK](#claude-agent-sdk-anthropic)의 생명주기 훅(PreToolUse/PostToolUse)과 같은 방향성이다. 무료 티어 지원은 개발자 생태계 확보를 위한 공격적 전략으로, [OpenAI Codex Security](tools-overview.md)의 오픈소스 공개와 마찬가지로 진입 장벽을 낮추는 수단이다.
 
-> 💡 **교차 참조**: Hooks 시스템은 [ADK 2.0](#google-adk-20--결정론적-워크플로우의-완성)의 그래프 런타임 HITL + 전문 에이전트 호출 모델을 Managed Agents에 적용한 것. 예산 통제는 [Fireworks Nexus](tools-overview.md)의 엔터프라이즈 비용 관리와, 예약 실행은 [ChatGPT Work](tools-overview.md)의 예약된 작업 기능과 같은 방향성. Claude Agent SDK의 PreToolUse/PostToolUse 훅과 개념적으로 동일하며, Google이 이를 관리형 플랫폼 레벨에서 제공한다는 차이. [MCP 2026-07-28 무상태 스펙](tools-overview.md)과 함께 에이전트 인프라의 성숙도가 한 단계 높아졌음을 시사.
+> 💡 **교차 참조**: Hooks 시스템은 [ADK 2.0](#2026년-7월-3차-업데이트-google-adk-20--결정론적-워크플로우의-완성)의 그래프 런타임 HITL + 전문 에이전트 호출 모델을 Managed Agents에 적용한 것. 예산 통제는 [Fireworks Nexus](tools-overview.md)의 엔터프라이즈 비용 관리와, 예약 실행은 [ChatGPT Work](tools-overview.md)의 예약된 작업 기능과 같은 방향성. Claude Agent SDK의 PreToolUse/PostToolUse 훅과 개념적으로 동일하며, Google이 이를 관리형 플랫폼 레벨에서 제공한다는 차이. [MCP 2026-07-28 무상태 스펙](tools-overview.md)과 함께 에이전트 인프라의 성숙도가 한 단계 높아졌음을 시사.
 
 ## 2026년 7월 11차 업데이트: 프롬프트 vs 루프 vs 그래프 엔지니어링 — 에이전트 제어 계층의 체계화
 

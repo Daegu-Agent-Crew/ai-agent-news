@@ -1,10 +1,12 @@
 # 다음 위키 갱신 대기
-# 2026-08-24: tools (18차), models (20차) 갱신 완료.
-# - tools 18차: Google 학습 도구(⭐⭐⭐⭐, 이월분 반영) + NanoGPT Speedrun(⭐⭐⭐⭐) + Linkdaze(⭐⭐⭐)
-#   → "교육·평가·생활로 확산" 프레임. 신학기 시즌 겨냥 2건 포착.
-# - models 20차: Qwen 3.8 27B 역엔지니어링(⭐⭐⭐⭐⭐) + Harvey Tenet(⭐⭐⭐⭐) + Ox Alpha(⭐⭐⭐)
-#   → "프론티어 능력의 탈중앙화(규모·랩·정체성)" 프레임.
+# 2026-08-26: industry (22차), research (9차) 갱신 완료.
+# - industry 22차: XPeng IRON $900M(⭐⭐⭐⭐) + 스탠퍼드 신입 고용 연구(⭐⭐⭐⭐)
+#   → "확장의 두 이면 — 물리 세계의 자본, 인간 세계의 온램프" 프레임.
+# - research 9차: MIT η-learning 극한 기상 예측(⭐⭐⭐⭐⭐)
+#   → "데이터의 한계를 넘는 두 번째 방법(harness 최적화 vs 통계적 외삽)" 프레임.
 #
-# 이월: 없음 (8/20·8/24 records 전량 반영 완료)
-# framework·research는 8/18 갱신 이후 신규 records 없음.
+# 이월 (8/25 records 미반영 2건):
+# - tools → Perplexity Portable Computer (⭐⭐⭐⭐⭐, 로컬-first 에이전트/NVIDIA DGX Spark/토큰 비용 0)
+#   ※ models-overview에도 참고 가능(로컬 하네스 튜닝 PPLX 27B, 85.4% 벤치)
+# - frameworks → Keenable 웹 인덱싱 (⭐⭐⭐⭐, AI 에이전트 전용 검색 인프라, $26M 시드, 8/18 이후 첫 framework record)
 # 새 records 수집 시 카테고리 매핑(framework/model/tool/industry/research) 후 갱신.

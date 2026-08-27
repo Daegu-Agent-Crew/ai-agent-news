@@ -2,11 +2,11 @@
 
 ## 메타데이터
 - **카테고리**: models
-- **관련 뉴스 수**: 35
-- **최종 업데이트**: 2026-08-24 (20차 갱신)
+- **관련 뉴스 수**: 36
+- **최종 업데이트**: 2026-08-27 (21차 갱신)
 
 ## 요약
-2026년 6월, 14일 사이에 Google, OpenAI, Anthropic, Microsoft가 연달아 플래그십 모델을 출격했다. 더 이상 "하나의 최고 모델"이 존재하지 않으며, 용도별(가격·수학·코딩·독립성) 최적 모델이 다르다. Google은 가격 파괴, OpenAI는 수학 추론, Anthropic은 코딩 정확도, Microsoft는 자체 모델 독립성이라는 각기 다른 승부수를 던졌다. **7월 9일, OpenAI가 GPT-5.6(Sol/Terra/Luna)을 발표**하며 프론티어 모델 경쟁이 재점화되었다. 트럼프 행정부와의 2주간 규제 갈등 끝에 공개된 이 모델군은 자율 다단계 계획, 독립 도구 사용, 자기 교정 능력을 갖춘 에이전트 네이티브 모델로, 미국 정부의 사전 검토 게이트가 반복적 패턴으로 자리 잡을 가능성을 시사한다. 8월 하순에는 능력이 규모(Qwen 3.8 27B의 로컬 역엔지니어링)·개발 랩(Harvey Tenet의 오픈웨이트 후훈련)·정체성(Ox Alpha의 익명 공개)에서 분리되는 '프론티어 탈중앙화' 조짐이 나타났다.
+2026년 6월, 14일 사이에 Google, OpenAI, Anthropic, Microsoft가 연달아 플래그십 모델을 출격했다. 더 이상 "하나의 최고 모델"이 존재하지 않으며, 용도별(가격·수학·코딩·독립성) 최적 모델이 다르다. Google은 가격 파괴, OpenAI는 수학 추론, Anthropic은 코딩 정확도, Microsoft는 자체 모델 독립성이라는 각기 다른 승부수를 던졌다. **7월 9일, OpenAI가 GPT-5.6(Sol/Terra/Luna)을 발표**하며 프론티어 모델 경쟁이 재점화되었다. 트럼프 행정부와의 2주간 규제 갈등 끝에 공개된 이 모델군은 자율 다단계 계획, 독립 도구 사용, 자기 교정 능력을 갖춘 에이전트 네이티브 모델로, 미국 정부의 사전 검토 게이트가 반복적 패턴으로 자리 잡을 가능성을 시사한다. 8월 하순에는 능력이 규모(Qwen 3.8 27B의 로컬 역엔지니어링)·개발 랩(Harvey Tenet의 오픈웨이트 후훈련)·정체성(Ox Alpha의 익명 공개)에서 분리되는 '프론티어 탈중앙화' 조짐이 나타났다. 이어 Z.ai GLM-5.3-Flash(320B-A18B MoE·1M 토큰 컨텍스트·MIT 오픈웨이트)가 하이브리드 어텐션으로 어텐션 계산을 1/3로 압축하며 '능력당 비용' 경쟁을 극한까지 밀어붙였다.
 
 ## 2026년 6월 모델 전쟁
 
@@ -504,6 +504,7 @@ SeedRealtime은 AI 모델이 별도의 컴포넌트(ASR, VLM, TTS)를 조립하�
 - [NVIDIA Nemotron 3.5 Lightning — 에이전트 전용 30B MoE 오픈 모델](../records/2026-08-12-nvidia-nemotron-3-5-lightning-nemo-switchyard.md) ⭐⭐⭐⭐ ⭐NEW (8/12)
 - [MiniMax-Music3 — 오픈웨이트 텍스트-음악 모델](../records/2026-08-17-minimax-releases-minimax-music3.md) ⭐⭐⭐⭐ ⭐NEW (8/17)
 - [NVIDIA TensorRT Model Connect — 두 명령어 C++ 추론, ONNX 단계 제거](../records/2026-08-20-nvidia-tensorrt-model-connect.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/20)
+- [Z.ai GLM-5.3-Flash — 320B-A18B 네이티브 멀티모달 MoE, 1M 토큰](../records/2026-08-26-z-ai-glm-5-3-flash.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/26)
 
 ## 관련 위키 문서
 - [평가 벤치마크](research-overview.md) — 모델별 에이전트 성능 리더보드
@@ -754,3 +755,25 @@ Music3는 [ByteDance SeedRealtime](#bytedance-seedrealtime--네이티브-오디�
 세 사례 모두 능력의 원천이 전통적 앵커(스케일링 법칙·빅테크 랩·브랜드)에서 **레시피(후훈련·하니스·평가)**로 이동했음을 보여준다. Harvey Tenet의 "레시피 공개·아티팩트 미공개"와 Ox Alpha의 "익명 공개"는 모델 경쟁의 단위가 체크포인트에서 훈련·운영 방법론으로 이동하는 방향과 정확히 일치한다.
 
 > 💡 **교차 참조**: Qwen 3.8 27B는 [Qwen3.8 Max](#qwen38-max--에이전트-벤치마크-종합-1위-오픈-모델의-새로운-이정표)의 소형 형제로, [Muse Glimmer](#meta-muse-glimmer--온디바이스-에이전트를-위한-30b-오픈-웨이트-모델)·[Nemotron 3.5 Lightning](#2026년-8월-16차-갱신-nvidia-nemotron-35-lightning--에이전트-전용-오픈-모델--지능형-라우팅)의 온디바이스 계열이 '실행'을 넘어 '실전 침해 테스트' 단계에 도달했음을 의미. Harvey Tenet의 베이스 Kimi K3와 Ox Alpha의 GLM설은 [도구 생태계 18차](tools-overview.md) NanoGPT Speedrun 리더보드(Kimi K3 2~4위)와 교차 검증된다. Ox Alpha의 MAI설은 [MAI-Thinking-1](#mai-thinking-1-microsoft) 이후 Microsoft 자체 모델 행보의 연장선. Qwen의 보안 역량은 [연구 동향](research-overview.md)의 안전성 논의와 연결.
+
+---
+
+## 2026년 8월 21차 갱신: GLM-5.3-Flash — 어텐션을 재설계해 100만 토큰을 값싸게 만들다
+
+### Z.ai GLM-5.3-Flash — 네이티브 멀티모달 MoE ⭐⭐⭐⭐⭐
+
+**출처**: [MarkTechPost — Z.ai Releases GLM-5.3-Flash](../records/2026-08-26-z-ai-glm-5-3-flash.md)
+
+- **스펙**: GLM-5 시리즈 첫 네이티브 멀티모달 모델. **320B 총 파라미터 / 18B 활성** MoE, **1,048,576 토큰 컨텍스트 윈도우**, 이미지·비디오 입력. MIT 라이선스로 Hugging Face 가중치 공개
+- **아키텍처 3점**: ① **KDA 선형 어텐션 + NoPE 희소 MLA 어텐션**을 45층에 교차 배치한 하이브리드 — 어텐션 계산 약 **1/3**, KV 캐시 **1/4.4** ② **IndexPool** — 인덱서 벡터 그룹을 가중 풀링으로 압축해 검색 병목·지연 제거 ③ **mHC**(Manifold-Constrained Hyper-Connections) — 활성 파라미터와 층 수를 절반으로 줄여 확장 효율 개선
+- **성능**: Terminal-Bench 2.1 84.3점, DeepSWE v1.1 63.4점 — Claude Opus 4.8에 근접한 코딩·에이전트 영역 성능
+- **가격**: 입력 $0.15 / 출력 $0.50 (1M 토큰당) — 동급 능력 대비 1/10 수준
+- **실행**: FP8 가중치 약 306GB, NVIDIA Hopper 이상 GPU. SGLang·vLLM·TokenSpeed·KTransformers 서빙 지원 — 자체 호스팅 인프라 게이트는 높지만 API 가격이 접근성 대안 제공
+
+### 21차 갱신 분석: "경쟁의 단위가 '스케일'에서 '능력당 비용'으로 완전 이동"
+
+1. **어텐션 재설계 = 새로운 스케일링 법칙**: 1M 토큰 컨텍스트를 경제적으로 만든 것은 파라미터 확장이 아니라 **계산 구조 재설계**(선형+희소 하이브리드)다. 입력 $0.15는 [Gemini 3.7 Flash](#google-gemini-37-flash--0751m-토큰-코딩에이전트-특화-가격-파괴-)(17차, $0.75)의 1/5 — 17차 '지능당 비용' 축이 극한까지 심화된 지점
+2. **모달리티 파이프라인 흡수의 GLM 버전**: 18차 Music3·[SeedRealtime](#bytedance-seedrealtime--네이티브-오디오-비주얼-풀듀플렉스-llm)이 보여준 '중간 디코딩 제거' 원리가 GLM-5 시리즈에 네이티브 멀티모달로 착탄 — 멀티모달이 옵션이 아닌 기본값이 되는 흐름
+3. **탈중앙화의 다음 장**: 20차(규모·랩·정체성에서 능력 분리)에 이어, MIT 오픈웨이트 + 1/10 가격은 '체크포인트가 아니라 레시피와 가격으로 승부'하는 전략. Ox Alpha의 GLM설과 함께 Z.ai가 오픈 진영 가격 리더십을 장악했다
+
+> 💡 **교차 참조**: NanoGPT Speedrun에서 GLM 5.2는 중위권(휴먼 대비 20.3%), GLM 5.3은 검증 기록 없음([도구 생태계 18차](tools-overview.md)) — 벤치마크 점수와 가격 경쟁력이 반드시 함께 가지 않는다는 증거. [Nemotron 3.5 Lightning](#2026년-8월-16차-갱신-nvidia-nemotron-35-lightning--에이전트-전용-오픈-모델--지능형-라우팅)(16차)·[Muse Glimmer](#meta-muse-glimmer--온디바이스-에이전트를-위한-30b-오픈-웨이트-모델)의 온디바이스 계열과 달리 306GB FP8은 로컬 배포가 아직 현실적이지 않아 API 가격이 주무기. 로컬-first 진영과는 [도구 생태계 19차](tools-overview.md) Perplexity Portable Computer(Qwen 3.8 27B 탑재, PPLX 하네스 튜닝)가 하네스×모델 공진화의 대칭점이다.

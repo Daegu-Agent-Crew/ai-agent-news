@@ -3,7 +3,7 @@
 ## 메타데이터
 - **카테고리**: frameworks
 - **관련 뉴스 수**: 31
-- **최종 업데이트**: 2026-08-17 (15차 갱신)
+- **최종 업데이트**: 2026-08-28 (16차 갱신)
 
 ## 요약
 2026년 6월 현재, 에이전트 프레임워크 생태가 8개 주력 SDK로 정리되었다. Microsoft Agent Framework(MAF)가 BUILD 2026에서 Agent Harness·CodeAct·Foundry Hosted Agents를 발표하며 프로덕션 배포 인프라를 통합했고, Anthropic은 Claude Agent SDK를 별도 월간 크레딧 과금제로 전환했다. Cisco의 FAPO는 파이프라인 단계별 자동 디버깅을, 화웨이는 OS 수준 통합이라는 각기 다른 접근을 보여준다. MCP가 200+ 서버를 확보하며 사실상 표준 도구 프로토콜로 자리 잡았고, ACP가 A2A로 통합되며 Linux Foundation 산하로 이관되었다.
@@ -348,6 +348,7 @@ Oracle의 차별점은 **개발자가 이미 익숙한 도구(VS Code, Codex, Cl
 - [Docker Sandboxes — AI 에이전트 격리 환경](../records/2026-08-10-docker-sandboxes-ai-agents.md) ⭐⭐⭐⭐ ⭐NEW (8/10)
 - [Meta Muse Glimmer 30B — 오픈 웨이트 에이전트 모델](../records/2026-08-10-meta-muse-glimmer-30b-open-agentic-model.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/10)
 - [AllenAI Open Instruct Tulu-3 — 16GB 사후 훈련 파이프라인](../records/2026-08-12-allenai-open-instruct-tulu-3-post-training.md) ⭐⭐⭐⭐ ⭐NEW (8/12)
+- [Keenable — AI 에이전트 전용 웹 인덱싱, $26M 시드](../records/2026-08-25-keenable-web-indexing.md) ⭐⭐⭐⭐ ⭐NEW (8/25)
 
 ## 2026년 7월 10차 업데이트: Gemini Managed Agents 3.6 Flash — Hooks로 에이전트 제어 패러다임 강화
 
@@ -503,3 +504,29 @@ Open Instruct는 이제 "Llama·Qwen 등 오픈소스 모델의 상용 수준 �
 2. **RL 기반 개인화와의 연결**: [River AI](industry-trends.md)의 "RL+LoRA로 오픈 웨이트 모델을 사용자 데이터에 맞게 커스터마이징" 접근(16차 산업 갱신)과 정확히 같은 기술 스택. 개인·소규모 팀이 자기 데이터로 에이전트를 정렬하는 파이프라인의 공개 표준
 
 > 💡 **교차 참조**: Tulu-3 경량 파이프라인 + [Docker Sandboxes](#2026년-8월-13차-업데이트-claude-code-auto-mode-기본값-전환--승인-피로-해결과-에이전트-자율성-가속)(13차) 격리 = 로컬에서 훈련·배포까지 완결하는 오프라인 에이전트 스택. [NemoClaw 블루프린트](#2026년-7월-7차-업데이트-langchain--nvidia-nemoclaw--풀스택-에이전트-최적화-패러다임)의 모델 레이어를 자체 훈련한 Qwen 계열 소형 모델로 대체 가능. 툴 호출 파인튜닝 후속 실증은 [모델 동향](models-overview.md)의 XYZ-Aquila-SFT 가이드(17차 갱신 반영) 참조.
+
+---
+
+## 2026년 8월 16차 갱신: Keenable — 에이전트 전용 검색 인프라, 도구 계층 아래의 데이터 계층
+
+### 1. Keenable, AI 에이전트를 위한 웹 인덱싱 — $26M 시드 ⭐⭐⭐⭐
+
+**출처**: [TechCrunch — Accel-backed Keenable is indexing the web for AI agents](../records/2026-08-25-keenable-web-indexing.md)
+
+- **핵심**: 사람이 아닌 AI 에이전트를 위한 웹 검색 인덱스 — **1,000억+ 문서** 규모, API가 이미 여러 AI 연구소·추론 제공업체의 훈련·런타임에 실사용 중(고객 비공개). 음성 AI 그라디움(Gradium)과 실시간 정보 검색 파트너십
+- **투자·팀**: $26M 시드(Accel 주도, Conviction Partners 참여). Yandex 검색·AI·클라우드 부문 총괄 출신 안드레이 스타이스킨 + 독일 AI 과학자 마티아스 페트리 공동 창업 — 20년 웹 검색 구축 경험(Yandex·Amazon)
+- **기술 차별점**: 쿼리에 따라 검색 공간을 빠르게 좁히는 인덱스 구조의 작업별 미세 조정 — 웹 전체 제공·스캔 비용 문제 해결. 출시 예정 'Web Query Language(WQL)'은 단일 소스에 완전한 답이 없을 때도 여러 웹 소스의 정보를 결합해 답변 생성 지원
+- **등장 배경**: Google·Microsoft가 AI 챗봇의 검색 API 과다 사용(자사 서비스 침식 방어)으로 기존 API 폐쇄 결정 → AI 플레이어들의 웹 규모 검색 인프라 선택지가 사실상 소수로 축소. Brave·Exa에 이은 진입이나 인덱스 규모·검색 경험이 차별점
+
+### 프레임워크 생태계에서의 의미
+
+**도구 프로토콜 계층(MCP 200+ 서버) 아래에 '검색 인프라 계층'이 독립 카테고리로 형성 중이다.**
+
+1. **에이전트 스택의 수직 분업 심화**: Claude Agent SDK의 웹 검색 기본 도구, Gemini Managed Agents의 런타임 검색이 소비하는 하부 인프라가 별도 시장으로 분화 — 프레임워크는 오케스트레이션, 검색은 전문 인프라 업체가 담당하는 계층화
+2. **'Ten Blue Links'의 종언**: 인간용 최적화(페이지 스캔 전제)에서 에이전트용 인덱스(대량 병렬 처리·구조화된 소스 인용 전제)로 검색 패러다임 자체가 전환 — 프레임워크의 RAG 파이프라인 설계도 이 인덱스 특성에 맞춰 재설계될 것
+3. **WQL의 프레임워크적 함의**: 쿼리 언어가 '검색 요청'을 넘어 '결과 결합·추론 지시'를 포함하게 되면, 도구 호출 계층(CodeAct·MCP 툴)과 검색 계층 사이의 인터페이스 표준 경쟁이 새로운 쟁점으로 부상
+
+> 💡 **교차 참조**: [산업 동향](industry-trends.md) 23차 Anthropic-Nscale $45B와 정확히 대칭 — 컴퓨팅 인프라와 검색 인프라라는 에이전트의 두 하부 계층이 같은 주(週)에 자본 시장 진입을 공식화. [도구 동향](tools-overview.md) 19차 Perplexity Portable Computer(소비자 에이전트 하드웨어)와 연결하면 '에이전트 전용 인프라'(인덱스·디바이스·컴퓨팅)가 2026년 하반기의 공통 투자 테마임이 확인된다.
+
+### 16차 갱신 요약
+Keenable은 프레임워크 생태계에 새로운 계층 구도를 추가한다: 오케스트레이션(MAF·Claude SDK)과 도구 프로토콜(MCP/A2A) 아래, 에이전트가 웹 지식에 접근하는 **검색 인프라 계층**이다. Google·Microsoft의 API 폐쇄가 만든 공백을 $26M 시드와 1,000억 문서 인덱스로 노리는 이 계층이 표준으로 자리잡으면, 향후 모든 에이전트 프레임워크의 검색 도구는 이 인프라 위에서 동작하게 된다.

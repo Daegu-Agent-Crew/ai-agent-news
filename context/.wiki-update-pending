@@ -1,12 +1,12 @@
 # 다음 위키 갱신 대기
-# 2026-08-27: tools (19차), models (21차) 갱신 완료.
-# - tools 19차: Perplexity Portable Computer(⭐⭐⭐⭐⭐, 이월분 해소) + Gatik 무인 화물(⭐⭐⭐⭐) + Gemini 브랜딩 파편화(⭐⭐⭐⭐)
-#   → "실행·적용·경험 — 도구의 세 경계 동시 시험" 프레임.
-# - models 21차: Z.ai GLM-5.3-Flash(⭐⭐⭐⭐⭐)
-#   → "어텐션 재설계로 여는 1M 토큰 — 능력당 비용의 극한" 프레임.
+# 2026-08-28: industry (23차), frameworks (16차) 갱신 완료.
+# - industry 23차: OpenAI 경영진 이탈(⭐⭐⭐⭐, 이월분 해소) + Anthropic-Nscale $45B(⭐⭐⭐⭐, 이월분 해소)
+#   + Zoph Thinking Machines→Google(⭐⭐⭐⭐⭐) + Meta $17B 안전 규칙 집필권(⭐⭐⭐⭐) + 데이터센터 반발 부정(⭐⭐⭐)
+#   → "이중 궤도 — 자본의 상층부 가속, 사회 기반의 마찰" 프레임.
+# - frameworks 16차: Keenable 웹 인덱싱(⭐⭐⭐⭐, 8/25 수집 이월분 해소)
+#   → "에이전트 전용 검색 인프라 — 도구 계층 아래의 데이터 계층" 프레임.
 #
-# 이월 (8/26 수집분 미반영 3건):
-# - industry (23차 대기) → OpenAI 경영진 이탈 (⭐⭐⭐⭐, IPO 그림자 아래 조직 재편, 말론 데이터센터 책임자 퇴사 포함)
-# - industry (23차 대기) → Anthropic-Nscale $45B 컴퓨팅 거래 (⭐⭐⭐⭐, Vera Rubin, 8개월 인프라 확장 스택: Volta $10B·AMD $5B·SpaceX·Amazon 5GW)
-# - frameworks (16차 대기) → Keenable 웹 인덱싱 (⭐⭐⭐⭐, 8/25 수집 이월분, AI 에이전트 전용 검색 인프라, $26M 시드)
+# 이월:
+# - models (22차 대기) → Cohere Parse 5 / parse-v5.0 (⭐⭐⭐, 8/27 수집, 2.3B 비전-언어 모델, 기업 문서→Markdown 변환)
+# - 참고: 8/27 $900M wind farm 뉴스는 AI 관련성 낮아 위키 미반영 (스킵 처리)
 # 새 records 수집 시 카테고리 매핑(framework/model/tool/industry/research) 후 갱신.

@@ -1,12 +1,12 @@
 # 다음 위키 갱신 대기
-# 2026-08-28: industry (23차), frameworks (16차) 갱신 완료.
-# - industry 23차: OpenAI 경영진 이탈(⭐⭐⭐⭐, 이월분 해소) + Anthropic-Nscale $45B(⭐⭐⭐⭐, 이월분 해소)
-#   + Zoph Thinking Machines→Google(⭐⭐⭐⭐⭐) + Meta $17B 안전 규칙 집필권(⭐⭐⭐⭐) + 데이터센터 반발 부정(⭐⭐⭐)
-#   → "이중 궤도 — 자본의 상층부 가속, 사회 기반의 마찰" 프레임.
-# - frameworks 16차: Keenable 웹 인덱싱(⭐⭐⭐⭐, 8/25 수집 이월분 해소)
-#   → "에이전트 전용 검색 인프라 — 도구 계층 아래의 데이터 계층" 프레임.
+# 2026-08-29: models (22차), industry (24차) 갱신 완료.
+# - models 22차: GLM-5.3 오픈웨이트 공개(⭐⭐⭐⭐⭐, Ox Alpha 정체 해소) + GLM/Qwen 아키텍처 수렴(⭐⭐⭐⭐⭐)
+#   + Cohere Parse 5(⭐⭐⭐, 이월분 해소 — 2.3B 비전-언어 문서 파서)
+#   → "경쟁의 단위가 '모델'에서 '설계 문법'으로" 프레임.
+# - industry 24차: 엔비디아 순환 자금 조달(⭐⭐⭐⭐, $50B·매출 25%) + 오픈웨이트 M&A 열기(⭐⭐⭐⭐, 엔비디아-허깅페이스 $13B)
+#   → "엔비디아의 이중 루프 — 자본 루프 + 플랫폼 매수" 프레임. 23차 '이중 궤도' 자본 층 완성.
 #
-# 이월:
-# - models (22차 대기) → Cohere Parse 5 / parse-v5.0 (⭐⭐⭐, 8/27 수집, 2.3B 비전-언어 모델, 기업 문서→Markdown 변환)
-# - 참고: 8/27 $900M wind farm 뉴스는 AI 관련성 낮아 위키 미반영 (스킵 처리)
+# 이월 (8/28 수집분):
+# - research (대기): Anthropic 자기개선 AI ⭐⭐⭐⭐⭐ — 자동 정렬 연구자(AAR), 10개 정렬 벤치마크 전체 개선, 시간당 $4 vs 인간 $150. research-overview 다음 갱신 1순위.
+# - tools (대기): Qwen 3.8 27B 로컬 실행 실측 ⭐⭐⭐⭐ — Mac Studio, 양자화·최적화 실전 데이터. tools-overview 반영 대상.
 # 새 records 수집 시 카테고리 매핑(framework/model/tool/industry/research) 후 갱신.

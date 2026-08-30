@@ -1,34 +1,39 @@
 {
-  "lastLint": "2026-08-24",
-  "lastLintEpoch": 1787519895,
+  "lastLint": "2026-08-30",
+  "lastLintEpoch": 1788099044,
   "filesChecked": 5,
-  "totalLinksChecked": 499,
-  "recordLinksChecked": 409,
-  "anchorLinksChecked": 90,
+  "totalLinksChecked": 705,
+  "recordLinksChecked": 467,
+  "anchorLinksChecked": 238,
   "externalLinksChecked": 0,
-  "criticalFixed": 9,
-  "warnings": 5,
+  "criticalFixed": 11,
+  "warnings": 6,
   "details": {
     "criticalFixed": [
-      "frameworks-overview.md: 내부 앵커 #google-adk-20--결정론적-워크플로우의-완성 → #2026년-7월-3차-업데이트-google-adk-20--결정론적-워크플로우의-완성 (4곳)",
-      "industry-trends.md: #4-amodei의-지정학적-분리--오픈-웨이트-vs-중국-ai → 끝 하이픈 누락 수정 (2곳)",
-      "industry-trends.md: #3-zuckerberg-ai-매니페스토...신뢰-격사 → 격차 오타 수정 (1곳)",
-      "models-overview.md: #nvidia-nemotron-35-lightning--에이전트-전용-오픈-모델--지능형-라우팅 → #2026년-8월-16차-갱신-... 형식으로 수정 (4곳)",
-      "tools-overview.md: #openai-codex-security → #openai-codex-security--오픈소스-보안-스캐닝-cli (2곳)",
-      "tools-overview.md: #openai-codex-security--오픈소스-보안-cli → 스캐닝 누락 보완 (1곳)",
-      "tools-overview.md: #fireworks-ai-nexus--비용-라우팅-계층 → #fireworks-ai-nexus--코딩-에이전트-비용-라우팅-계층 (1곳)",
-      "tools-overview.md: #fireworks-ai-nexus-cost-routing--비용-라우팅-계층 → 동일 대상 수정 (1곳)",
-      "tools-overview.md: #cloudflare-workers-ai--kimi-k26glm-52-대규모-추론-최적화 → 끝 하이픈 누락 수정 (1곳)"
+      "models-overview.md: 22차 갱신분의 #20차-관련 (존재하지 않는 앵커) → #2026년-8월-20차-갱신-프론티어-능력의-탈중앙화--규모랩정체성에서-분리되는-능력 (신규 유입분)",
+      "industry-trends.md: 23차 갱신분 [Anthropic-Volta $10B](#) 빈 앵커 → #1-anthropic--volta-100b--컴퓨팅-경쟁의-대규모-확전- (신규 유입분)",
+      "industry-trends.md: [Omnigent](#) → 교차 파일 frameworks-overview.md#2026년-7월-4차-업데이트-omnigent--메타-하네스로-거버넌스-간극-해결 (누적)",
+      "industry-trends.md: [9차 갱신의 보안 연쇄 위기](#) → #2026년-7월-9차-업데이트-에이전트-보안-연쇄-위기의-확산과-규제시장-대응 (누적)",
+      "research-overview.md: [오픈가중치 안전 격차](#) → #오픈가중치-안전-격차--saferai-glm-52-평가- (누적)",
+      "research-overview.md: [OpenAI Astra](#) → #openai-astra--10대-수학-난제-해결-lean-형식화-검증-완료- (누적)",
+      "research-overview.md: [CryptanalysisBench](#) → #cryptanalysisbench (누적)",
+      "research-overview.md: [Vending-Bench 기만](#) → #2026년-7월-업데이트-vending-bench--에이전트-경제-기만-행동-최초-실증 (누적)",
+      "research-overview.md: [GPT-5.6 Sol 자율 비즈니스 실패](#) → #2026년-7월-업데이트-gpt-56-sol-자율-비즈니스-실험--실제-환경-에이전트-정렬-실패 (누적)",
+      "tools-overview.md: [도구 생태계](#) → #docker-sandboxes--ai-코딩-에이전트를-위한-일회용-microvm-격리-환경- (누적)",
+      "research-overview.md: 8차→9차 섹션 사이 중복 수평선(---) 2연속 → 1개로 정리 (형식)"
     ],
     "lintNotes": [
-      "이번 라운드부터 GitHub 슬러그 규칙 기반 내부 앵커(#...) 전수 검사 도입 — 90종 전부 검증, 17개 참조 깨진 앵커 수정(위 9패턴). records 링크 409개 참조 전수 검사 — 모두 정상. 신규 외부 링크 없음(8/17~8/24 갱신분은 records 링크만 사용). 메타데이터 7개 문서 모두 완비."
+      "빈 앵커 `(#)` 패턴을 이번에야 검사 범위에 포함 — 과거 린트는 #내용 형식만 검증해 8곳(누적)을 놓침. 이번 갱신분에서 신규 유입 2건 포함 총 10건 전부 수정. 교차 파일 앵커(file.md#...) 검증도 신설.",
+      "records 링크 467개 전수 검사 — 모두 정상. 메타데이터 7개 문서 완비. research-overview 제목 '7~8월' 갱신 확인(전라운드 경고 해소).",
+      "GitHub 슬러그 산출 시 헤딩 말미 ⭐ 제거로 끝 공백→하이픈이 붙는 점(예: ...선언-) 유지 필요 — 자체 트리밍 금지."
     ],
     "warnings": [
-      "industry-trends.md 요약 모순 — '다섯 가지 축' 서술 뒤 이제 8개 축 나열(21차 갱신에도 개수 미수정). 7회 연속 지적, 악화 추세. 내용 변경 금지로 자동 수정 보류 → 다음 갱신 때 '여덟 가지' 수정 강력 요청",
-      "human-roles.md & human-roles-in-agentic-era.md: 고립 페이지 (incoming links: 0). 7회 연속 지적, 57일 경과 (2026-06-28~)",
-      "human-roles.md & human-roles-in-agentic-era.md: 내용 중복 — 병합 권장. 7회 연속 지적",
-      "human-roles-in-agentic-era.md: 카테고리 'industry'이나 실제 내용은 'analysis'에 더 가까움. 7회 연속 지적",
-      "frameworks-overview.md 제목 '— 2026년 7월' vs 최종 업데이트 2026-08-17 (15차) — 제목 기간 미갱신 / research-overview.md 제목 '— 2026년 7월' vs 2026-08-18 (8차) — 동일. 2회 연속 지적 (models·industry·tools는 '7~8월'로 정상 갱신됨)"
+      "⚠️ NEW industry-trends.md: Volta 거래 금액 모순 — 11차 헤딩은 '$100B', 23차 본문·원본 기록(2026-08-04-anthropic-10-billion-volta-cloud-deal.md)은 '$10B'. 헤딩 수정은 내용 변경 금지로 보류 → 다음 갱신 때 '$10B' 수정 강력 요청. ※ 헤딩 수정 시 앵커 슬러그가 변하므로 #1-anthropic--volta-100b... 링크 4곳 동시 갱신 필요",
+      "industry-trends.md 요약 모순 — '다섯 가지 축' 서술 뒤 이제 10개 축 나열(24차 갱신에도 개수 미수정). 8회 연속 지적, 악화 추세. → 다음 갱신 때 '열 가지' 수정 강력 요청",
+      "frameworks-overview.md 제목 '— 2026년 7월' vs 최종 업데이트 2026-08-28 (16차) — 제목 기간 미갱신. 3회 연속 지적 (models·industry·tools·research는 정상 갱신됨)",
+      "human-roles.md & human-roles-in-agentic-era.md: 고립 페이지 (incoming links: 0 재확인). 8회 연속 지적, 63일 경과 (2026-06-28~)",
+      "human-roles.md & human-roles-in-agentic-era.md: 내용 중복 — 병합 권장. 8회 연속 지적",
+      "human-roles-in-agentic-era.md: 카테고리 'industry'이나 실제 내용은 'analysis'에 더 가까움. 8회 연속 지적"
     ]
   }
 }

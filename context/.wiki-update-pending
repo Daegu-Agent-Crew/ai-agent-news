@@ -1,22 +1,17 @@
 # 다음 위키 갱신 대기
-# 2026-08-30: research (10차), tools (20차) 갱신 완료.
-# - research 10차: Anthropic 자동 정렬 연구자(AAR) ⭐⭐⭐⭐⭐ (이월분 해소) — 10개 정렬 벤치마크 회귀 없는 전체 개선,
-#   $4/hr vs $150/hr, "정렬의 부트스트랩 루프" 프레임. 3~7차 정렬 실패 실증에 대한 해결 자동화 응답.
-# - tools 20차: Qwen 3.8 27B Mac Studio 로컬 실행 실측 ⭐⭐⭐⭐ (이월분 해소) — "같은 모델, 두 갈래 로컬 전략"
-#   (전용 패키지 Perplexity Portable vs 보유 장비 최적화) 프레임. 8차 지식-추론 트레이드오프 실측 확인.
+# 2026-08-31: industry (25차), research (11차) 갱신 완료.
+# - industry 25차: 엔비디아 탈GPU 우위(TechCrunch) + Sony Music·Warner vs Anthropic 저작권 소송 ⭐⭐⭐⭐
+#   — "확장의 두 청구" 프레임. 24차 이중 루프 외부 확인 + '법적 라이선스 부채' 축 신설.
+# - research 11차: NVIDIA Earth2Studio 배치 앙상블 기상 예측 ⭐⭐⭐⭐
+#   — "예측의 두 층위(외삽 vs 전개)" 프레임. 9차 η-learning과 대칭 연결.
 #
-# 이월 (8/30 수집분 — records가 템플릿 스텁 상태, 요약·분석 미충전):
-# ⚠️ 아래 5건은 수집 시 카테고리가 모두 'research'로 표기되어 있으나 내용상 재분류 필요.
-# records 내용 보강(요약·원문·심층 분석) 후 위키 반영 권장.
-# - Warp builds self-improving agents on Claude (claude.com) → tool 또는 framework 후보 ⭐⭐⭐⭐
+# ⚠️ 8/30 수집분 5건 records는 여전히 템플릿 스텁 상태(요약·원문·심층 분석 미충전).
+# 위키에는 제목·프레임 기반으로 반영했으므로, records 보강 후 세부 수치·논거 정밀 업데이트 필요.
+#
+# 이월 (2건):
+# - Warp builds self-improving agents on Claude (claude.com) → tools 또는 framework ⭐⭐⭐⭐ — 다음 갱신 1순위
 #   — 자기개선 에이전트 구축 사례. research 10차 AAR 교차 참조와 연결 가능.
-# - Nvidia's AI advantage is moving beyond the GPU (TechCrunch) → industry 후보 ⭐⭐⭐⭐
-#   — industry 24차 엔비디아 이중 루프 후속. industry 25차 갱신 1순위.
-# - Sony Music, Warner sue Anthropic (TechCrunch) → industry 후보 ⭐⭐⭐⭐
-#   — 저작권 소송. industry 갱신 대기.
-# - LLMs are making me lose my savviness (pgaleone.eu) → research 또는 industry 후보 ⭐⭐⭐⭐
-#   — 기술 사고력 상실 에세이.
-# - NVIDIA Earth2Studio 배치 앙상블 기상 예측 (MarkTechPost) → research 후보 ⭐⭐⭐⭐
-#   — research 9차 MIT η-learning과 같은 기상 예측 주제, 연결 가능.
-# 다음 갱신 순서 제안: industry (25차) → research (11차, Earth2Studio) → tools/framework (Warp).
+# - LLMs are making me lose my savviness (pgaleone.eu) → research 12차 후보(인지·사회 축) 또는 industry ⭐⭐⭐⭐
+#   — 기술 사고력 상실 에세이. industry 스탠퍼드 노동 연구·훈련 데이터 윤리 축과 인적 역량 논의로 연결 가능.
+# 다음 갱신 순서 제안: tools/framework (Warp) → research 12차 (savviness, records 보강 시).
 # 새 records 수집 시 카테고리 매핑(framework/model/tool/industry/research) 후 갱신.

@@ -1,17 +1,18 @@
 # 다음 위키 갱신 대기
-# 2026-08-31: industry (25차), research (11차) 갱신 완료.
-# - industry 25차: 엔비디아 탈GPU 우위(TechCrunch) + Sony Music·Warner vs Anthropic 저작권 소송 ⭐⭐⭐⭐
-#   — "확장의 두 청구" 프레임. 24차 이중 루프 외부 확인 + '법적 라이선스 부채' 축 신설.
-# - research 11차: NVIDIA Earth2Studio 배치 앙상블 기상 예측 ⭐⭐⭐⭐
-#   — "예측의 두 층위(외삽 vs 전개)" 프레임. 9차 η-learning과 대칭 연결.
+# 2026-09-01: tools (21차), research (12차) 갱신 완료 — 8/30 수집분 이월 2건 처리.
+# - tools 21차: Warp 자기개선 에이전트(claude.com) ⭐⭐⭐⭐
+#   — "자기개선의 3층위(모델/하네스/팩토리)" 프레임. research 10차 AAR과 연구-제품 대칭 연결.
+#   — Warp 3부작 완결: Agent CLI(12차) → Factories(17차) → 자기개선(21차).
+#   — 10차에 걸려 있던 미존재 링크(산업 동향의 Warp) → 도구 생태계 21차로 수정.
+# - research 12차: LLMs are making me lose my savviness(pgaleone.eu) ⭐⭐⭐⭐
+#   — "위임의 대가 — 두 개의 트레이드오프" 프레임. 인지·사회 축 신설(위키 최초).
+#   — 8차 지식-추론 트레이드오프의 인간 대칭 + 검증 병목의 인지적 설명 후보.
 #
 # ⚠️ 8/30 수집분 5건 records는 여전히 템플릿 스텁 상태(요약·원문·심층 분석 미충전).
-# 위키에는 제목·프레임 기반으로 반영했으므로, records 보강 후 세부 수치·논거 정밀 업데이트 필요.
+# 이번 갱신 2건(Warp, savviness)도 제목·프레임 기반 반영 — records 보강 후 세부 정밀 업데이트 필요.
 #
-# 이월 (2건):
-# - Warp builds self-improving agents on Claude (claude.com) → tools 또는 framework ⭐⭐⭐⭐ — 다음 갱신 1순위
-#   — 자기개선 에이전트 구축 사례. research 10차 AAR 교차 참조와 연결 가능.
-# - LLMs are making me lose my savviness (pgaleone.eu) → research 12차 후보(인지·사회 축) 또는 industry ⭐⭐⭐⭐
-#   — 기술 사고력 상실 에세이. industry 스탠퍼드 노동 연구·훈련 데이터 윤리 축과 인적 역량 논의로 연결 가능.
-# 다음 갱신 순서 제안: tools/framework (Warp) → research 12차 (savviness, records 보강 시).
-# 새 records 수집 시 카테고리 매핑(framework/model/tool/industry/research) 후 갱신.
+# 이월: 없음 — 8/30 수집분 5건 모두 위키 반영 완료.
+# 다음 갱신: 새 records 수집 시 카테고리 매핑(framework/model/tool/industry/research) 후 갱신.
+# 숙제: ① records 스텁 5건 보강(특히 Warp 루프 구조·savviness 논거)
+#       ② lint-state 경고 처리 — industry Volta $10B 헤딩 모순(앵커 4곳 동시 수정 필요),
+#         industry 요약 '다섯 가지 축'→축 개수 수정, frameworks 제목 기간 미갱신(16차).

@@ -1,18 +1,24 @@
 # 다음 위키 갱신 대기
-# 2026-09-01: tools (21차), research (12차) 갱신 완료 — 8/30 수집분 이월 2건 처리.
-# - tools 21차: Warp 자기개선 에이전트(claude.com) ⭐⭐⭐⭐
-#   — "자기개선의 3층위(모델/하네스/팩토리)" 프레임. research 10차 AAR과 연구-제품 대칭 연결.
-#   — Warp 3부작 완결: Agent CLI(12차) → Factories(17차) → 자기개선(21차).
-#   — 10차에 걸려 있던 미존재 링크(산업 동향의 Warp) → 도구 생태계 21차로 수정.
-# - research 12차: LLMs are making me lose my savviness(pgaleone.eu) ⭐⭐⭐⭐
-#   — "위임의 대가 — 두 개의 트레이드오프" 프레임. 인지·사회 축 신설(위키 최초).
-#   — 8차 지식-추론 트레이드오프의 인간 대칭 + 검증 병목의 인지적 설명 후보.
+# 2026-09-02: models (23차), industry (26차) 갱신 완료 — 9/2 수집분 5건 중 3건 처리.
+# - models 23차: OpenAI Astra 발표 임박 (⭐⭐⭐⭐⭐) — 14차 보류의 후속 전개.
+#   '치명적 사이버버리티 임계값' 최초 통과, ExploitBench 만점·제로데이 2건 실증.
+#   Mythos(파트너 전용)와 Astra(제한 공개)의 '배포 문법 수렴' 프레임.
+# - models 23차: Anthropic Fable 5.1·Mythos 5.1 (⭐⭐⭐⭐) — 세이프가드 오탐 감소·토큰 비용 절감.
+#   매트릭스 '사이버보안(보류 중)' 행 → '제한 공개 임박'으로 갱신, 플래그십 쌍둥이 행 추가.
+# - industry 26차: Anthropic EFS (⭐⭐⭐⭐⭐) — ZDR×오용 탐지 양립 아키텍처.
+#   21차 '프라이버시 무기화'에 대한 Anthropic의 응수 프레임. 요약 (12)축 신설.
 #
-# ⚠️ 8/30 수집분 5건 records는 여전히 템플릿 스텁 상태(요약·원문·심층 분석 미충전).
-# 이번 갱신 2건(Warp, savviness)도 제목·프레임 기반 반영 — records 보강 후 세부 정밀 업데이트 필요.
+# 이월: 2건 (다음 갱신 우선 대상)
+# - tool: AIR 시드 $50M (⭐⭐⭐⭐, TechCrunch) → tools-overview.md 22차 갱신 대상
+#   에이전트 스킬·플러그인·MCP 서버 지속 검증, "에이전트용 드라이버 서명" 서사,
+#   애드온 27% 필터링, Zenity·Noma 등 경쟁 구도. records 상태 충분(요약·번역·심층 완비).
+# - research: 신경망의 창발적 기호 구조 (⭐⭐⭐, arXiv 2608.29530) → research-overview.md 13차 갱신 대상
+#   벡터 vs 기호 30년 난제, 행동 보존 교체 실험, 산술·논리·코드·언어 4도메인 검증,
+#   표적 개입(인과 입증). research 8차 지식-추론 트레이드오프와 연결 가능.
 #
-# 이월: 없음 — 8/30 수집분 5건 모두 위키 반영 완료.
-# 다음 갱신: 새 records 수집 시 카테고리 매핑(framework/model/tool/industry/research) 후 갱신.
-# 숙제: ① records 스텁 5건 보강(특히 Warp 루프 구조·savviness 논거)
-#       ② lint-state 경고 처리 — industry Volta $10B 헤딩 모순(앵커 4곳 동시 수정 필요),
-#         industry 요약 '다섯 가지 축'→축 개수 수정, frameworks 제목 기간 미갱신(16차).
+# 숙제(기존): ① records 스텁 5건 보강(특히 Warp 루프 구조·savviness 논거)
+#             ② lint-state 경고 처리 — industry Volta $10B 헤딩 모순(앵커 4곳 동시 수정 필요),
+#               industry 요약 '다섯 가지 축'→축 개수 수정(이제 12개까지 열거됨),
+#               frameworks 제목 기간 미갱신(16차).
+# 숙제(신규): ③ industry 요약의 축 나열이 12개로 장성 — 다음 갱신 시 '다섯 가지 축' 서두를
+#               실제 축 수에 맞게 재작성하는 것이 좋음(구조적 리팩터링 필요).

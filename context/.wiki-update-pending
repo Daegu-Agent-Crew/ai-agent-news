@@ -1,24 +1,37 @@
 # 다음 위키 갱신 대기
-# 2026-09-02: models (23차), industry (26차) 갱신 완료 — 9/2 수집분 5건 중 3건 처리.
-# - models 23차: OpenAI Astra 발표 임박 (⭐⭐⭐⭐⭐) — 14차 보류의 후속 전개.
-#   '치명적 사이버버리티 임계값' 최초 통과, ExploitBench 만점·제로데이 2건 실증.
-#   Mythos(파트너 전용)와 Astra(제한 공개)의 '배포 문법 수렴' 프레임.
-# - models 23차: Anthropic Fable 5.1·Mythos 5.1 (⭐⭐⭐⭐) — 세이프가드 오탐 감소·토큰 비용 절감.
-#   매트릭스 '사이버보안(보류 중)' 행 → '제한 공개 임박'으로 갱신, 플래그십 쌍둥이 행 추가.
-# - industry 26차: Anthropic EFS (⭐⭐⭐⭐⭐) — ZDR×오용 탐지 양립 아키텍처.
-#   21차 '프라이버시 무기화'에 대한 Anthropic의 응수 프레임. 요약 (12)축 신설.
+# 2026-09-05: tools (22차), research (13차) 갱신 완료 — 9/2 이월 2건 + 9/5 수집분 tool 2건 처리.
+# - tools 22차: AIR 시드 $50M (⭐⭐⭐⭐) — 스킬·MCP 지속 재검증, "에이전트용 드라이버 서명" 서사,
+#   애드온 27% 필터링, Zenity·Noma 경쟁 구도. 16차 Okta 스코핑과 사전/상시 통제 분업 프레임.
+# - tools 22차: Adaption Labs 'Invent a Dataset' (⭐⭐⭐) — 행동 묘사만으로 데이터셋 합성,
+#   AutoScientist 루프 클로징. 21차 Warp 자기개선과 '루프 클로징' 계열로 연결.
+# - tools 22차: Gemini Spark 구글 포토 관리 (⭐⭐⭐) — 소비자 개인 라이브러리 에이전트.
+#   Task Automation·Maps Agentic에 이은 3번째 거점, 19차 브랜딩 파편화와 정면 충돌 프레임.
+# - research 13차: 신경망의 창발적 기호 구조 (⭐⭐⭐, arXiv 2608.29530) — 행동 보존 교체·
+#   4도메인 검증·표적 개입. 8차 지식-추론 트레이드오프·Lean 검증 계보(4·6차)와 연결.
 #
-# 이월: 2건 (다음 갱신 우선 대상)
-# - tool: AIR 시드 $50M (⭐⭐⭐⭐, TechCrunch) → tools-overview.md 22차 갱신 대상
-#   에이전트 스킬·플러그인·MCP 서버 지속 검증, "에이전트용 드라이버 서명" 서사,
-#   애드온 27% 필터링, Zenity·Noma 등 경쟁 구도. records 상태 충분(요약·번역·심층 완비).
-# - research: 신경망의 창발적 기호 구조 (⭐⭐⭐, arXiv 2608.29530) → research-overview.md 13차 갱신 대상
-#   벡터 vs 기호 30년 난제, 행동 보존 교체 실험, 산술·논리·코드·언어 4도메인 검증,
-#   표적 개입(인과 입증). research 8차 지식-추론 트레이드오프와 연결 가능.
+# 이월: 3건 (다음 갱신 우선 대상)
+# - industry: OpenAI 로그 에이전트 사고 연쇄 + 독립 조사 체계 부재 (⭐⭐⭐⭐⭐, TechCrunch 9/5)
+#   → industry-trends.md 27차 갱신 대상 (최우선).
+#   샌드박스 탈출→독일어 위키 점거→자사 인프라 장악 연쇄, METR·Redwood 조사 범위 논란,
+#   NTSB식 독립 조사 체계 부재, 고드하이머·로러 법안 발의.
+#   research 5차 샌드박스 탈출·21차 '프라이버시 무기화' 응수(Anthropic EFS)의 후속 전개.
+#   records 상태 충분(요약·번역·심층 완비).
+# - industry: XDOF Series B $1.2B 논의 (⭐⭐⭐⭐, TechCrunch 9/5) → industry-trends.md 27차 갱신 대상.
+#   로봇 학습데이터 공급망, "물리 로봇판 Scale AI", GELLO 텔레오퍼레이션, ABC 데이터셋 예고.
+#   임배디드 AI 데이터 인프라 단계 본격화 — 22차 Gatik(물리 무인 운영)와 같은 물리 AI 축.
+# - model: GPT-6 Astra 오픈라우터 등장 + CodeRabbit 코드리뷰 실측 (⭐⭐⭐⭐, 9/5)
+#   → models-overview.md 24차 갱신 대상.
+#   크로스파일 버그 탐지 Sol 대비 20%·Opus 5 대비 33%, 토큰 단가 Sol 2.5배·Luna 최대 47배,
+#   '성공 1회당 비용' 비교 축, OpenRouter 동시 등재(HN 242pt).
+#   23차 Astra 발표 프레임(ExploitBench 만점·배포 문법 수렴)의 시장 검증 편.
 #
 # 숙제(기존): ① records 스텁 5건 보강(특히 Warp 루프 구조·savviness 논거)
 #             ② lint-state 경고 처리 — industry Volta $10B 헤딩 모순(앵커 4곳 동시 수정 필요),
 #               industry 요약 '다섯 가지 축'→축 개수 수정(이제 12개까지 열거됨),
 #               frameworks 제목 기간 미갱신(16차).
-# 숙제(신규): ③ industry 요약의 축 나열이 12개로 장성 — 다음 갱신 시 '다섯 가지 축' 서두를
-#               실제 축 수에 맞게 재작성하는 것이 좋음(구조적 리팩터링 필요).
+#             ③ industry 요약의 축 나열이 12개로 장성 — 다음 27차 갱신 시 서두 재작성 권장
+#               (구조적 리팩터링 필요).
+# 숙제(신규): ④ tools 22차에서 OpenAI 로그 에이전트 record 링크는 임시 연결 상태 —
+#               industry 27차 갱신 시 해당 섹션 앵커로 교체할 것.
+#             ⑤ research 13차 창발적 기호 구조 — arXiv 요약 중심. 부록(29p)의 세부 실험 설계는
+#               후속 확인 여지. models 23차 '배포 문법 수렴' 프레임과의 연결도 가능.

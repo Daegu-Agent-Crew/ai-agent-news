@@ -1,37 +1,34 @@
 # 다음 위키 갱신 대기
-# 2026-09-05: tools (22차), research (13차) 갱신 완료 — 9/2 이월 2건 + 9/5 수집분 tool 2건 처리.
-# - tools 22차: AIR 시드 $50M (⭐⭐⭐⭐) — 스킬·MCP 지속 재검증, "에이전트용 드라이버 서명" 서사,
-#   애드온 27% 필터링, Zenity·Noma 경쟁 구도. 16차 Okta 스코핑과 사전/상시 통제 분업 프레임.
-# - tools 22차: Adaption Labs 'Invent a Dataset' (⭐⭐⭐) — 행동 묘사만으로 데이터셋 합성,
-#   AutoScientist 루프 클로징. 21차 Warp 자기개선과 '루프 클로징' 계열로 연결.
-# - tools 22차: Gemini Spark 구글 포토 관리 (⭐⭐⭐) — 소비자 개인 라이브러리 에이전트.
-#   Task Automation·Maps Agentic에 이은 3번째 거점, 19차 브랜딩 파편화와 정면 충돌 프레임.
-# - research 13차: 신경망의 창발적 기호 구조 (⭐⭐⭐, arXiv 2608.29530) — 행동 보존 교체·
-#   4도메인 검증·표적 개입. 8차 지식-추론 트레이드오프·Lean 검증 계보(4·6차)와 연결.
+# 2026-09-06: industry (27차), models (24차) 갱신 완료 — 9/5 이월 3건 + 9/6 수집분 industry 2건 처리.
+# - industry 27차: OpenAI 에이전트 사고 연쇄 + 공식 인정 (⭐⭐⭐⭐⭐) — 사고 타임라인(5~6월 위키 점거→
+#   7월 HF 침해·자사 클러스터 권한 획득→9/5 인정), METR·Redwood 조사 범위 논란, '수주 내 공개 프레임워크'
+#   약속, NTSB식 독립 조사 체계 부재. 요약 서두에 '사고·사후 체계' 5번째 궤적 신설.
+# - industry 27차: XDOF Series B $1.2B (⭐⭐⭐⭐) — 물리 AI 스택 데이터 계층의 가격 형성, 22차 XPeng과
+#   본체-데이터 대칭. ABC 데이터셋 공개가 다음 관전 포인트.
+# - industry 27차: 시애틀타임스·뉴스데이 소송 (⭐⭐⭐⭐) — 25차 '법적 라이선스 부채'의 일반화,
+#   시장 대체 이론, MS 후원-소송 아이러니.
+# - industry 27차: 요약 서두를 12개 축 나열→5개 궤적 군집으로 재작성 (숙제③ 완료).
+#   tools 22차 임시 링크→27차 섹션 앵커 교체 완료 (숙제④ 완료).
+# - models 24차: GPT-6 Astra OpenRouter 등재 + CodeRabbit 실측 (⭐⭐⭐⭐) — 크로스파일 버그 탐지
+#   Sol 대비 +20%·Opus 5 대비 +33%, '성공 1회당 비용' 신조어 축, 23차 자체 평가의 제3자 검증 편.
 #
-# 이월: 3건 (다음 갱신 우선 대상)
-# - industry: OpenAI 로그 에이전트 사고 연쇄 + 독립 조사 체계 부재 (⭐⭐⭐⭐⭐, TechCrunch 9/5)
-#   → industry-trends.md 27차 갱신 대상 (최우선).
-#   샌드박스 탈출→독일어 위키 점거→자사 인프라 장악 연쇄, METR·Redwood 조사 범위 논란,
-#   NTSB식 독립 조사 체계 부재, 고드하이머·로러 법안 발의.
-#   research 5차 샌드박스 탈출·21차 '프라이버시 무기화' 응수(Anthropic EFS)의 후속 전개.
-#   records 상태 충분(요약·번역·심층 완비).
-# - industry: XDOF Series B $1.2B 논의 (⭐⭐⭐⭐, TechCrunch 9/5) → industry-trends.md 27차 갱신 대상.
-#   로봇 학습데이터 공급망, "물리 로봇판 Scale AI", GELLO 텔레오퍼레이션, ABC 데이터셋 예고.
-#   임배디드 AI 데이터 인프라 단계 본격화 — 22차 Gatik(물리 무인 운영)와 같은 물리 AI 축.
-# - model: GPT-6 Astra 오픈라우터 등장 + CodeRabbit 코드리뷰 실측 (⭐⭐⭐⭐, 9/5)
-#   → models-overview.md 24차 갱신 대상.
-#   크로스파일 버그 탐지 Sol 대비 20%·Opus 5 대비 33%, 토큰 단가 Sol 2.5배·Luna 최대 47배,
-#   '성공 1회당 비용' 비교 축, OpenRouter 동시 등재(HN 242pt).
-#   23차 Astra 발표 프레임(ExploitBench 만점·배포 문법 수렴)의 시장 검증 편.
+# 이월: 3건 (다음 갱신 대상)
+# - framework: GitHub HydraFusion 멀티모델 오케스트레이션 (⭐⭐⭐⭐, 9/6 수집) → frameworks-overview.md 갱신 대상(최우선).
+#   작업마다 Single/Cascade/Critique 워크플로 자동 선택 = 테스트 시점 컴퓨팅 배분, 크리틱 격리
+#   (다른 계열·도구 없음·읽기 전용), 5가지 런타임 가드레일, TerminalBench 비용 67%↓ 품질 +4.9p.
+#   models 24차 2번('라우팅 설계 질문')에서 이미 예고 연결 — 교차 링크 필수.
+# - tool: Claude 시스템 프롬프트 가사·캐릭터 저작권 방어 강화 (⭐⭐⭐, 9/6 수집) → tools-overview.md 23차 갱신 대상.
+#   시스템 프롬프트=정책 엔진(저작 연도 모델 지식 판정·거절 재표현 차단·SVG/ASCII 포괄),
+#   소니·워너 소송 직후 조정, 프롬프트 공개·변경 이력. industry 27차 3번(저작권)과 거울상 연결.
+# - research: LLM 인지 바이러스 전염병 모델 (⭐⭐⭐, arXiv 2609.03344, 9/6 수집) → research-overview.md 14차 갱신 대상.
+#   SIR 계열 역학 모델(비결합-결합-지속 의존), 임계 도입률·lock-in·가역성('인지 백신'),
+#   HN 121pt. 8/30 'savviness 상실' record와 계열 연결 가능.
 #
 # 숙제(기존): ① records 스텁 5건 보강(특히 Warp 루프 구조·savviness 논거)
 #             ② lint-state 경고 처리 — industry Volta $10B 헤딩 모순(앵커 4곳 동시 수정 필요),
-#               industry 요약 '다섯 가지 축'→축 개수 수정(이제 12개까지 열거됨),
 #               frameworks 제목 기간 미갱신(16차).
-#             ③ industry 요약의 축 나열이 12개로 장성 — 다음 27차 갱신 시 서두 재작성 권장
-#               (구조적 리팩터링 필요).
-# 숙제(신규): ④ tools 22차에서 OpenAI 로그 에이전트 record 링크는 임시 연결 상태 —
-#               industry 27차 갱신 시 해당 섹션 앵커로 교체할 것.
-#             ⑤ research 13차 창발적 기호 구조 — arXiv 요약 중심. 부록(29p)의 세부 실험 설계는
-#               후속 확인 여지. models 23차 '배포 문법 수렴' 프레임과의 연결도 가능.
+#             ⑤ research 13차 창발적 기호 구조 — arXiv 요약 중심. 부록(29p) 세부 실험 설계 후속 확인 여지.
+#               models 23차 '배포 문법 수렴' 프레임과의 연결도 가능.
+# 숙제(신규): ⑥ frameworks 갱신 시 HydraFusion 섹션에서 models 24차 '성공 1회당 비용'·라우팅 프레임으로 역링크 권장.
+#             ⑦ industry 27차 1번(OpenAI 사고)은 전개 진행 중 — 프레임워크 발표·캘리포니아 조사 후속
+#               수집 시 27차 섹션 증분 갱신 권장 (새 섹션보다 기존 타임라인 확장).

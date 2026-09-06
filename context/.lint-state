@@ -1,39 +1,33 @@
 {
-  "lastLint": "2026-08-30",
-  "lastLintEpoch": 1788099044,
-  "filesChecked": 5,
-  "totalLinksChecked": 705,
-  "recordLinksChecked": 467,
-  "anchorLinksChecked": 238,
+  "lastLint": "2026-09-06",
+  "lastLintEpoch": 1788704520,
+  "filesChecked": 4,
+  "filesChangedSinceLastLint": ["industry-trends.md", "models-overview.md", "research-overview.md", "tools-overview.md"],
+  "totalLinksChecked": 924,
+  "recordLinksChecked": 419,
+  "anchorLinksChecked": 229,
+  "internalFileLinksChecked": 276,
   "externalLinksChecked": 0,
-  "criticalFixed": 11,
-  "warnings": 6,
+  "criticalFixed": 1,
+  "warnings": 5,
   "details": {
     "criticalFixed": [
-      "models-overview.md: 22차 갱신분의 #20차-관련 (존재하지 않는 앵커) → #2026년-8월-20차-갱신-프론티어-능력의-탈중앙화--규모랩정체성에서-분리되는-능력 (신규 유입분)",
-      "industry-trends.md: 23차 갱신분 [Anthropic-Volta $10B](#) 빈 앵커 → #1-anthropic--volta-100b--컴퓨팅-경쟁의-대규모-확전- (신규 유입분)",
-      "industry-trends.md: [Omnigent](#) → 교차 파일 frameworks-overview.md#2026년-7월-4차-업데이트-omnigent--메타-하네스로-거버넌스-간극-해결 (누적)",
-      "industry-trends.md: [9차 갱신의 보안 연쇄 위기](#) → #2026년-7월-9차-업데이트-에이전트-보안-연쇄-위기의-확산과-규제시장-대응 (누적)",
-      "research-overview.md: [오픈가중치 안전 격차](#) → #오픈가중치-안전-격차--saferai-glm-52-평가- (누적)",
-      "research-overview.md: [OpenAI Astra](#) → #openai-astra--10대-수학-난제-해결-lean-형식화-검증-완료- (누적)",
-      "research-overview.md: [CryptanalysisBench](#) → #cryptanalysisbench (누적)",
-      "research-overview.md: [Vending-Bench 기만](#) → #2026년-7월-업데이트-vending-bench--에이전트-경제-기만-행동-최초-실증 (누적)",
-      "research-overview.md: [GPT-5.6 Sol 자율 비즈니스 실패](#) → #2026년-7월-업데이트-gpt-56-sol-자율-비즈니스-실험--실제-환경-에이전트-정렬-실패 (누적)",
-      "tools-overview.md: [도구 생태계](#) → #docker-sandboxes--ai-코딩-에이전트를-위한-일회용-microvm-격리-환경- (누적)",
-      "research-overview.md: 8차→9차 섹션 사이 중복 수평선(---) 2연속 → 1개로 정리 (형식)"
+      "tools-overview.md:979 [Google Maps Agentic](#google-maps-agentic--소비자-앱의-에이전트화) → 후행 하이픈 누락(⭐ 규칙). '#google-maps-agentic--소비자-앱의-에이전트화-'로 수정 (22차 갱신 신규 유입분)"
+    ],
+    "resolvedWarnings": [
+      "✅ industry-trends.md '다섯 가지 축 vs 12개 축 나열' 모순 해소 — 27차 갱신에서 12개 축을 ①~⑤ 5개 궤적으로 군집화 재구성, 요약('다섯 개 궤적')과 본문 일치. 9회 연속 지적 끝에 해결."
     ],
     "lintNotes": [
-      "빈 앵커 `(#)` 패턴을 이번에야 검사 범위에 포함 — 과거 린트는 #내용 형식만 검증해 8곳(누적)을 놓침. 이번 갱신분에서 신규 유입 2건 포함 총 10건 전부 수정. 교차 파일 앵커(file.md#...) 검증도 신설.",
-      "records 링크 467개 전수 검사 — 모두 정상. 메타데이터 7개 문서 완비. research-overview 제목 '7~8월' 갱신 확인(전라운드 경고 해소).",
-      "GitHub 슬러그 산출 시 헤딩 말미 ⭐ 제거로 끝 공백→하이픈이 붙는 점(예: ...선언-) 유지 필요 — 자체 트리밍 금지."
+      "lint 헬퍼 스크립트(.lint-run.py, 미커밋)로 GitHub 슬러그 알고리즘 에뮬레이션 검증 도입 — grep 기반보다 정확. 후행 ⭐→하이픈 규칙 자동 처리됨.",
+      "주의: grep 출력 시 한글 '의' 유무 오독 주의 — 실제 헤딩은 '소비자 앱의 에이전트화'(의 포함). 수정 전 슬러그 재계산 필수 (이번에 오수정 1회 방지함).",
+      "메타데이터는 YAML이 아닌 '## 메타데이터' 섹션 형식 — 7개 문서 모두 완비(title/category/updated 상당 항목 존재)."
     ],
     "warnings": [
-      "⚠️ NEW industry-trends.md: Volta 거래 금액 모순 — 11차 헤딩은 '$100B', 23차 본문·원본 기록(2026-08-04-anthropic-10-billion-volta-cloud-deal.md)은 '$10B'. 헤딩 수정은 내용 변경 금지로 보류 → 다음 갱신 때 '$10B' 수정 강력 요청. ※ 헤딩 수정 시 앵커 슬러그가 변하므로 #1-anthropic--volta-100b... 링크 4곳 동시 갱신 필요",
-      "industry-trends.md 요약 모순 — '다섯 가지 축' 서술 뒤 이제 10개 축 나열(24차 갱신에도 개수 미수정). 8회 연속 지적, 악화 추세. → 다음 갱신 때 '열 가지' 수정 강력 요청",
-      "frameworks-overview.md 제목 '— 2026년 7월' vs 최종 업데이트 2026-08-28 (16차) — 제목 기간 미갱신. 3회 연속 지적 (models·industry·tools·research는 정상 갱신됨)",
-      "human-roles.md & human-roles-in-agentic-era.md: 고립 페이지 (incoming links: 0 재확인). 8회 연속 지적, 63일 경과 (2026-06-28~)",
-      "human-roles.md & human-roles-in-agentic-era.md: 내용 중복 — 병합 권장. 8회 연속 지적",
-      "human-roles-in-agentic-era.md: 카테고리 'industry'이나 실제 내용은 'analysis'에 더 가까움. 8회 연속 지적"
+      "⚠️ NEW→지속 industry-trends.md: Volta 거래 금액 모순 — 333행 헤딩·401행 본문은 '$100B', 요약 13행·출처 링크·원본 기록(2026-08-04-anthropic-10-billion-volta-cloud-deal.md)은 '$10B'. 헤딩 수정은 내용 변경 금지로 보류 → 다음 갱신 때 '$10B' 수정 강력 요청 (2회 연속). ※ 수정 시 #1-anthropic--volta-100b... 앵커 링크 4곳 동반 갱신 필요",
+      "frameworks-overview.md 제목 '— 2026년 7월' vs 최종 업데이트 2026-08-28 (16차) — 제목 기간 미갱신. 4회 연속 지적 (models·industry·tools·research는 정상 갱신됨)",
+      "human-roles.md & human-roles-in-agentic-era.md: 고립 페이지 (incoming links: 0 재확인). 9회 연속 지적, 70일 경과 (2026-06-28~)",
+      "human-roles.md & human-roles-in-agentic-era.md: 내용 중복 — 병합 권장. 9회 연속 지적",
+      "human-roles-in-agentic-era.md: 카테고리 'industry'이나 실제 내용은 'analysis'에 더 가까움. 9회 연속 지적"
     ]
   }
 }

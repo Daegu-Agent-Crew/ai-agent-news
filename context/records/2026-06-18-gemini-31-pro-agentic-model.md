@@ -9,7 +9,7 @@
 - **카테고리**: model
 - **태그**: [gemini, google, multimodal, reasoning, agent, 1m-context, custom-tools]
 - **중요도**: ⭐⭐⭐⭐
-- **신선도": fresh
+- **신선도**: fresh
 
 ## 핵심 요약
 > Google이 Gemini 3.1 Pro와 Flash-Lite를 발표했다. Pro는 1M 토큰 컨텍스트와 향상된 에이전트 능력(금융, 스프레드시트, SWE)을 갖추고, Flash-Lite는 Gemini 2.5 Flash 수준의 품질을 최저 비용으로 제공한다.

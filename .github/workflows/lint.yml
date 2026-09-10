@@ -1,0 +1,12 @@
+name: lint records
+on:
+  push:
+    paths: ["context/records/**", "scripts/**", ".github/workflows/lint.yml"]
+  pull_request:
+    paths: ["context/records/**", "scripts/**", ".github/workflows/lint.yml"]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/lint_records.py

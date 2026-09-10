@@ -39,7 +39,7 @@ AI 학습 데이터를 둘러싼 저작권 전쟁이 또 한 단계 확대된 �
 - [GeekWire 보도](https://www.geekwire.com/2026/seattle-times-sues-microsoft-and-openai-alleging-they-trained-their-ai-on-its-journalism/)
 
 ### 관련 뉴스
-- [Sony Music·Warner, Anthropic 상대 소송](../records/2026-08-30-sony-music,-warner-sue-anthropic,-alleging-a-"braz.md) — 음악 가사 학습을 둘러싼 동종 분쟁
+- [Sony Music·Warner, Anthropic 상대 소송](../records/2026-08-30-sony-warner-sue-anthropic.md) — 음악 가사 학습을 둘러싼 동종 분쟁
 - [Claude 신규 시스템 프롬프트의 저작권 방어](../records/2026-09-06-claude-system-prompt-lyrics-copyright.md) — 소송에 대응한 출력 단계 통제
 
 ## 원문 발췌

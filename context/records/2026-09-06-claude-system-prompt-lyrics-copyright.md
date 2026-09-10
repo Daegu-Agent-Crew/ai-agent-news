@@ -41,7 +41,7 @@ AI 기업이 법적 리스크에 대응해 모델이 아니라 시스템 프롬�
 
 ### 관련 뉴스
 - [Anthropic Fable 5.1 출시](../records/2026-09-02-anthropic-fable-5-1-release.md) — 해당 프롬프트의 대상 모델
-- [Sony Music·Warner, Anthropic 소송](../records/2026-08-30-sony-music,-warner-sue-anthropic,-alleging-a-"braz.md) — 이번 조정의 직접적 배경
+- [Sony Music·Warner, Anthropic 소송](../records/2026-08-30-sony-warner-sue-anthropic.md) — 이번 조정의 직접적 배경
 - [시애틀타임스·뉴스데이의 OpenAI 소송](../records/2026-09-06-seattle-times-newsday-sue-openai-microsoft.md) — 저작권 분쟁의 확산 국면
 
 ## 원문 발췌

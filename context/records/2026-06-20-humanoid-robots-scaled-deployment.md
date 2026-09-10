@@ -53,7 +53,7 @@ AI가 이제 화면 너머 물리 세계로 나가고 있습니다. Figure, Atla
 ### 관련 뉴스
 - [Huawei HarmonyOS 7](../records/2026-06-13-huawei-harmonyos-7-ai-agents.md) — 중국 AI 생태계 확장
 - [Agentic AI Benchmarks 2026](../records/2026-06-18-agentic-benchmarks-2026.md) — Terminal-Bench 등 로봇 평가
-- [Gemini 3.1 Pro](../records/2026-06-18-gemini-31-pro-agentic-model.md) — 모델 성능 향상 맥락>
+- [Gemini 3.1 Pro](../records/2026-06-18-gemini-31-pro-agentic-model.md) — 모델 성능 향상 맥락
 
 ## 원문 발췌
 > "Figure AI has achieved 1 robot per hour production at its BotQ factory, while Boston Dynamics' electric Atlas begins initial deployments."

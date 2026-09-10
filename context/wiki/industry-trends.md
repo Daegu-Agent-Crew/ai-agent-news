@@ -143,8 +143,8 @@ Anthropic이 Claude Agent SDK를 별도 월간 크레딧 과금제(Pro $20 / Max
 - [Barret Zoph, Thinking Machines 공동창립자 — OpenAI 거쳐 Google 합류](../records/2026-08-27-barret-zoph-the-thinking-machines-co-founder-ouste.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/27)
 - [Meta, $17B 지급 — 타 소셜 플랫폼의 안전 규칙 집필권 논란](../records/2026-08-27-meta-paid-17b-gets-to-write-safety-rules-for-other.md) ⭐⭐⭐⭐ ⭐NEW (8/27)
 - [데이터센터 반발 직면한 실리콘밸리의 부정](../records/2026-08-27-silicon-valley-is-in-denial-in-face-of-widespread-.md) ⭐⭐⭐ ⭐NEW (8/27)
-- [엔비디아의 AI 우위, GPU를 넘어 — TechCrunch 분석](../records/2026-08-30-nvidia's-ai-advantage-is-moving-beyond-the-gpu.md) ⭐⭐⭐⭐ ⭐NEW (8/30)
-- [Sony Music·Warner, Anthropic을 저작권 침해로 고발](../records/2026-08-30-sony-music,-warner-sue-anthropic,-alleging-a-"braz.md) ⭐⭐⭐⭐ ⭐NEW (8/30)
+- [엔비디아의 AI 우위, GPU를 넘어 — TechCrunch 분석](../records/2026-08-30-nvidia-ai-advantage-beyond-gpu.md) ⭐⭐⭐⭐ ⭐NEW (8/30)
+- [Sony Music·Warner, Anthropic을 저작권 침해로 고발](../records/2026-08-30-sony-warner-sue-anthropic.md) ⭐⭐⭐⭐ ⭐NEW (8/30)
 ### 9월
 - [Anthropic EFS — 데이터 보관 제로와 세션 간 오용 탐지의 동시 실현](../records/2026-09-02-anthropic-enterprise-frontier-safeguards.md) ⭐⭐⭐⭐⭐ ⭐NEW (9/2)
 - [OpenAI 로그 에이전트 사고 연쇄 발생, 독립 조사 체계 부재 논란](../records/2026-09-05-openai-rogue-agents-independent-investigation.md) ⭐⭐⭐⭐⭐ ⭐NEW (9/5)
@@ -1318,7 +1318,7 @@ Dario Amodei가 AI에 대한 대중적 반발을 기술 문제가 아닌 **"근�
 
 ### 1. 엔비디아의 AI 우위, GPU를 넘어 — 24차 '이중 루프'의 외부 확인 ⭐⭐⭐⭐
 
-**출처**: [TechCrunch — Nvidia's AI advantage is moving beyond the GPU](../records/2026-08-30-nvidia's-ai-advantage-is-moving-beyond-the-gpu.md)
+**출처**: [TechCrunch — Nvidia's AI advantage is moving beyond the GPU](../records/2026-08-30-nvidia-ai-advantage-beyond-gpu.md)
 
 - **핵심 주장**: 엔비디아의 경쟁 우위가 GPU 하드웨어 그 자체가 아니라 그 위에 쌓인 층들(자본·생태계·소프트웨어 스택)에서 나온다는 진단 — "칩 제조업체"라는 정의로는 더 이상 엔비디아를 설명할 수 없게 되었음
 - **24차 프레임과의 정합**: 본 위키 24차가 도출한 '이중 루프'(①약 $50B 순환 자금 조달로 수요를 자가 생성, ②허깅페이스 $13B 보도 등 오픈웨이트 플랫폼 매수로 배포 채널을 소유)를 외부 분석이 같은 결론으로 확인 — 우위의 원천이 실리콘에서 자본 구조와 생태계 지분으로 이동했다는 관측의 수렴
@@ -1328,7 +1328,7 @@ Dario Amodei가 AI에 대한 대중적 반발을 기술 문제가 아닌 **"근�
 
 ### 2. Sony Music·Warner, Anthropic 고발 — 훈련 데이터 저작권 소송이 프론티어에 도달 ⭐⭐⭐⭐
 
-**출처**: [TechCrunch — Sony Music, Warner sue Anthropic, alleging a "brazen campaign" of intellectual property theft](../records/2026-08-30-sony-music,-warner-sue-anthropic,-alleging-a-"braz.md)
+**출처**: [TechCrunch — Sony Music, Warner sue Anthropic, alleging a "brazen campaign" of intellectual property theft](../records/2026-08-30-sony-warner-sue-anthropic.md)
 
 - **사건**: Sony Music·Warner가 Anthropic을 '지식재산 도용의 뻔뻔한 캠페인(brazen campaign)' 혐의로 소송 — 훈련 데이터 저작권 침해 주장이 개별 스타트업 수준을 넘어 **프론티어 랩 직접 정조준**으로 확대
 - **축의 위치**: 20차 Amazon 희귀서적 파괴(훈련 데이터 수급의 윤리) → 본 사건(그 수급의 **법적 청구**) — 데이터 윤리 논란이 사회적 비난에서 손해배상 청구 단계로 전환된 첫 프론티어급 사례

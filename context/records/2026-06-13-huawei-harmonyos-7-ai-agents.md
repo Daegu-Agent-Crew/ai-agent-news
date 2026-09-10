@@ -8,7 +8,7 @@
 - **수집자**: 대구루
 - **카테고리**: industry
 - **태그**: [huawei, harmonyos, ai-agent, operating-system, on-device-ai, xiaoyi]
-- **중요도": ⭐⭐⭐⭐⭐
+- **중요도**: ⭐⭐⭐⭐⭐
 - **신선도**: fresh
 
 ## 핵심 요약

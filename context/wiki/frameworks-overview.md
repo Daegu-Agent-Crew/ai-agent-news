@@ -2,8 +2,8 @@
 
 ## 메타데이터
 - **카테고리**: frameworks
-- **관련 뉴스 수**: 32
-- **최종 업데이트**: 2026-09-07 (17차 갱신)
+- **관련 뉴스 수**: 33
+- **최종 업데이트**: 2026-09-10 (18차 갱신)
 
 ## 요약
 2026년 6월 현재, 에이전트 프레임워크 생태가 8개 주력 SDK로 정리되었다. Microsoft Agent Framework(MAF)가 BUILD 2026에서 Agent Harness·CodeAct·Foundry Hosted Agents를 발표하며 프로덕션 배포 인프라를 통합했고, Anthropic은 Claude Agent SDK를 별도 월간 크레딧 과금제로 전환했다. Cisco의 FAPO는 파이프라인 단계별 자동 디버깅을, 화웨이는 OS 수준 통합이라는 각기 다른 접근을 보여준다. MCP가 200+ 서버를 확보하며 사실상 표준 도구 프로토콜로 자리 잡았고, ACP가 A2A로 통합되며 Linux Foundation 산하로 이관되었다.
@@ -554,3 +554,26 @@ Keenable은 프레임워크 생태계에 새로운 계층 구도를 추가한다
 
 ### 17차 갱신 요약
 HydraFusion은 오케스트레이션의 결정 시점을 '개발자의 사전 설계'에서 '런타임의 요청별 계획'으로 옮겼다. Single·Cascade·Critique 3패턴과 5가지 가드레일(특히 크리틱 격리)은 멀티모델 워크플로가 프로덕션 안전장치와 함께 표준 부품이 될 수 있음을 보여주는 참조 구현이며, 벤치마크는 라우팅 부활의 실증 데이터다. 남은 질문은 폐쇄형 프리뷰를 벗어난 일반화 — 오픈 구현 등장 여부가 다음 관전 포인트.
+
+---
+
+## 2026년 9월 18차 갱신: NVIDIA CUDA Rust — AI 시스템 소프트웨어 Rust화의 마지막 영역, GPU 커널
+
+### NVIDIA CUDA Rust — cuda-oxide(SIMT)·cutile-rs(Tile), 컴파일 타임 별칭 차단 ⭐⭐⭐⭐
+
+**출처**: [MarkTechPost / NVIDIA Developer Blog — CUDA Rust](../records/2026-09-09-nvidia-cuda-rust-gpu-kernels.md) (9/8 발표)
+
+- **핵심**: Rust를 GPU 커널 작성의 일급 언어로 격상. 두 트랙으로 공개 — ① **cuda-oxide**(SIMT 트랙): 커스텀 rustc 코드젠 백엔드(Rust MIR → Pliron IR → LLVM IR → PTX), 얼리 알파·나이틀리 툴체인 고정 ② **cutile-rs**(Tile 트랙): `#[cutile::module]` 매크로가 커널을 호스트 바이너리에 내장 후 첫 실행 시 CUDA Tile IR로 JIT 컴파일, stable Rust 1.89+에서 동작·crates.io 공개. NVIDIA는 Tile(컴파일러가 스레드 매핑·메모리 배치 처리) 우선, 명시적 제어 필요 시 SIMT 권고
+- **안전성 논거**: 소유권 규칙으로 버퍼 별칭(aliasing) 버그를 **컴파일 타임에 거부** — SIMT 출력은 `DisjointSlice` 타입으로 스레드별 배타적 접근만 허용, Tile은 `.partition([128])` 호출로 타일별 배타적 소유권 부여(소유권이 런치 경계 너어 텐서를 따라감 — NVIDIA가 더 강한 보장이라 부르는 지점). 별칭 재현 시 각각 error[E0502]/[E0382]로 실패하는 것이 확인됨
+- **실사용과 장벽**: cutile-rs는 HF Grout 추론 엔진·mistral.rs에 이미 채택(단 두 프로젝트 모두 프로덕션 확정 아님). Linux 전용, CUDA 12.x(cuda-oxide)/13.3(cutile-rs) 버전 분리, SIMT의 shared memory는 여전히 unsafe 필요 — 제어력 vs 안전성의 트레이드오프가 명시적으로 남아 있음
+
+### 프레임워크 생태계에서의 의미
+
+1. **스택 전 층의 언어 통합**: 7차 [NemoClaw](#2026년-7월-7차-업데이트-langchain--nvidia-nemoclaw--풀스택-에이전트-최적화-패러다임)가 모델·하네스·런타임 3레이어 최적화를 제시했다면, CUDA Rust는 그 아래 **커널 계층**까지 같은 언어로 묶는다. 추론 엔진(Nova 리눅스 드라이버·Dynamo Rust 코어·NVTX 바인딩)에 이어 커널까지 — AI 인프라 스택 전체가 Rust로 수렴하는 마지막 조각. 하부일수록 교체 주기가 길다는 점에서 10년 단위의 결정
+2. **안전성의 수직 적용**: 17차 [HydraFusion](#2026년-9월-17차-갱신-github-hydrafusion--요청마다-워크플로를-설계하는-런타임-오케스트레이션)의 런타임 가드레일(크리틱 격리·페일세이프·비용 정산)이 오케스트레이션 계층의 안전장치라면, CUDA Rust는 **타입 시스템 수준의 컴파일 타임 안전**을 계층 최하단에 심는다. 코드를 생성·검증하는 에이전트 시대에 안전성 기준의 적용 영역이 커널까지 확장되는 토대
+3. **추론 경제학의 기반 기술 경쟁**: Grout·mistral.rs의 조기 채택은 오픈소스 추론 엔진들의 다음 채택 물결 예고 — [모델 동향](models-overview.md)의 추론 비용 경쟁이 커널 작성 언어 선택까지 내려가는 구도. C++ CUDA 전문가 풀 병목 완화로 메모리 안전을 내재한 고성능 최적화 인재 시장이 커짐
+
+> 💡 **교차 참조**: 16차 [Keenable](#2026년-8월-16차-갱신-keenable--에이전트-전용-검색-인프라-도구-계층-아래의-데이터-계층)이 오케스트레이션·도구 프로토콜 아래 '검색 인프라 계층'을 독립시켰다면, CUDA Rust는 그 아래 '커널·메모리 안전 계층'의 언어 표준 경쟁이 시작됐음을 알린다. NVIDIA 스택 내 위치는 [Nemotron 3.5 Lightning·Nemo Switchyard](../records/2026-08-12-nvidia-nemotron-3-5-lightning-nemo-switchyard.md)(Dynamo Rust 코어)·[TensorRT Model Connect](../records/2026-08-20-nvidia-tensorrt-model-connect.md) 추론 인프라 축의 연장. [Google Mantis](../records/2026-09-10-google-mantis-agent-security-toolkit.md)(코딩 에이전트 보안 스킬 툴킷)가 스킬 계층의 보안이라면 이쪽은 컴파일 타임 메모리 안전 — '에이전트 시대의 보안이 스택 전 층에 분산 배치되는' 같은 주의 다른 층.
+
+### 18차 갱신 요약
+CUDA Rust는 프레임워크 생태계 지도의 가장 아래층을 채운다: 오케스트레이션(HydraFusion) → 도구 프로토콜(MCP/A2A) → 검색 인프라(Keenable) → **커널(cutile-rs)**. 소유권 기반 별칭 차단이라는 Rust의 핵심 논거가 GPU 병렬 프로그래밍의 고질적 위험 패턴에 적용됐고, HF Grout·mistral.rs 채택으로 실험에서 현실의 첫 단계로 진입했다. 남은 관전점은 cuda-oxide의 알파 탈피, 프로덕션 확정 사례 공개, Linux/CUDA 버전 분리 같은 단기 장벽이 걷히는 속도.

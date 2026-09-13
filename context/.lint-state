@@ -1,33 +1,28 @@
 {
-  "lastLint": "2026-09-06",
-  "lastLintEpoch": 1788704520,
-  "filesChecked": 4,
-  "filesChangedSinceLastLint": ["industry-trends.md", "models-overview.md", "research-overview.md", "tools-overview.md"],
-  "totalLinksChecked": 924,
-  "recordLinksChecked": 419,
-  "anchorLinksChecked": 229,
-  "internalFileLinksChecked": 276,
+  "lastLint": "2026-09-13",
+  "lastLintEpoch": 1789667220,
+  "filesChecked": 5,
+  "filesChangedSinceLastLint": ["industry-trends.md", "frameworks-overview.md", "models-overview.md", "research-overview.md", "tools-overview.md"],
+  "totalLinksChecked": 1166,
+  "recordLinksChecked": 543,
+  "anchorLinksChecked": 267,
+  "internalFileLinksChecked": 356,
   "externalLinksChecked": 0,
-  "criticalFixed": 1,
-  "warnings": 5,
+  "criticalFixed": 0,
+  "warnings": 3,
   "details": {
-    "criticalFixed": [
-      "tools-overview.md:979 [Google Maps Agentic](#google-maps-agentic--소비자-앱의-에이전트화) → 후행 하이픈 누락(⭐ 규칙). '#google-maps-agentic--소비자-앱의-에이전트화-'로 수정 (22차 갱신 신규 유입분)"
-    ],
     "resolvedWarnings": [
-      "✅ industry-trends.md '다섯 가지 축 vs 12개 축 나열' 모순 해소 — 27차 갱신에서 12개 축을 ①~⑤ 5개 궤적으로 군집화 재구성, 요약('다섯 개 궤적')과 본문 일치. 9회 연속 지적 끝에 해결."
+      "✅ industry-trends.md Volta 거래 금액 모순($100B vs $10B) 해소 — 31차 갱신에서 전 구간 $10B로 통일됨(헤딩 343행·본문 411행·교차 앵커 4곳 모두 일치). 2회 만에 해결.",
+      "✅ frameworks-overview.md 제목 기간 미갱신 해소 — '2026년 7~9월'로 갱신됨(19차). 4회 만에 해결."
     ],
     "lintNotes": [
-      "lint 헬퍼 스크립트(.lint-run.py, 미커밋)로 GitHub 슬러그 알고리즘 에뮬레이션 검증 도입 — grep 기반보다 정확. 후행 ⭐→하이픈 규칙 자동 처리됨.",
-      "주의: grep 출력 시 한글 '의' 유무 오독 주의 — 실제 헤딩은 '소비자 앱의 에이전트화'(의 포함). 수정 전 슬러그 재계산 필수 (이번에 오수정 1회 방지함).",
-      "메타데이터는 YAML이 아닌 '## 메타데이터' 섹션 형식 — 7개 문서 모두 완비(title/category/updated 상당 항목 존재)."
+      "이번 린트는 frameworks-overview.md 포함 5개 전체 검사(기존 4개 → 5개 확대). .lint-run.py의 files 리스트에 frameworks-overview.md 추가 필요(미커밋 스크립트).",
+      "메타데이터는 '## 메타데이터' 섹션 형식 — 7개 문서 모두 카테고리·업데이트 항목 존재. 이상 없음."
     ],
     "warnings": [
-      "⚠️ NEW→지속 industry-trends.md: Volta 거래 금액 모순 — 333행 헤딩·401행 본문은 '$100B', 요약 13행·출처 링크·원본 기록(2026-08-04-anthropic-10-billion-volta-cloud-deal.md)은 '$10B'. 헤딩 수정은 내용 변경 금지로 보류 → 다음 갱신 때 '$10B' 수정 강력 요청 (2회 연속). ※ 수정 시 #1-anthropic--volta-100b... 앵커 링크 4곳 동반 갱신 필요",
-      "frameworks-overview.md 제목 '— 2026년 7월' vs 최종 업데이트 2026-08-28 (16차) — 제목 기간 미갱신. 4회 연속 지적 (models·industry·tools·research는 정상 갱신됨)",
-      "human-roles.md & human-roles-in-agentic-era.md: 고립 페이지 (incoming links: 0 재확인). 9회 연속 지적, 70일 경과 (2026-06-28~)",
-      "human-roles.md & human-roles-in-agentic-era.md: 내용 중복 — 병합 권장. 9회 연속 지적",
-      "human-roles-in-agentic-era.md: 카테고리 'industry'이나 실제 내용은 'analysis'에 더 가까움. 9회 연속 지적"
+      "⚠️ human-roles.md & human-roles-in-agentic-era.md: 고립 페이지 (incoming links 0 재확인). 10회 연속 지적, 77일 경과 (2026-06-28~). 병합 후 리다이렉트 링크 추가 권장.",
+      "⚠️ human-roles.md & human-roles-in-agentic-era.md: 내용 중복('2026년 6월 인간의 역할' 주제 동일) — 병합 권장. 10회 연속 지적.",
+      "⚠️ human-roles-in-agentic-era.md: 카테고리 'industry'이나 실제 내용은 'analysis'에 가까움. 10회 연속 지적."
     ]
   }
 }

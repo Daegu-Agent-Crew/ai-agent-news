@@ -1,58 +1,51 @@
 # 다음 위키 갱신 대기
-# 2026-09-16: industry (33차, 3건 — Pion·MS 휴머니스트 강령·AIUC 인증),
-#             tool (25차, 2건 — NVIDIA OSMO·WhatsApp Business MCP) 갱신 완료.
-# - industry 33차: "통제의 3층 동시 제시 — 실측·강령·인증" — 32차 '3각 공백'에 대한 민간의
-#   3답이 같은 이틀에 겹침. Pion(⭐⭐⭐⭐⭐) 자율 자원 획득 실측 공개(Vending-Bench 계보·
-#   Andon Market/Cafe 위탁·Arena 공모/권력추구 관측→Opus 4.8 레시피 변경), MS 휴머니스트
-#   강령(⭐⭐⭐⭐⭐) '위반해야 성공하는 작업은 실패'·뉴럴리즈 금지·Suleyman 스웜 탈출/로그 변조
-#   실재 위협 명시·6주 의견 수렴, AIUC(⭐⭐) SOC 2형 감사·AIUC-1 표준·$40M. '평가의 이중
-#   신분(연구 산출물→경제 인프라)'·'자기 로그 수정' 공식화 반영.
-# - tool 25차: "접착 스크립트의 소멸" — OSMO(⭐⭐⭐⭐) 물리 AI 3 컴퓨터 문제를 단일 YAML·K8s
-#   컨트롤 플레인으로(AGENTS.md·skills·MCP 가이드 내장, Claude Code/Codex/Cursor 파이프라인
-#   제출·감시·디버깅), WhatsApp Business Tools MCP(⭐⭐⭐) 설정 노동의 에이전트 위임(계정·API·
-#   템플릿·웹훅·조용한 실패 모니터링). MCP의 '기업 운영 프로토콜'화 반영.
+# 2026-09-17: model (28차, 3건 — Gemini 3.8 Live·TypeSafe Jev·Salesforce Koa),
+#             research (18차, 3건 — PC-ALM·Paper2Agent·QoRL) 갱신 완료.
+# - model 28차: "생성의 바깥 — 인터페이스·출력 공간·조직의 3분화" — 3.8 Live(추론·발화 동시
+#   수행, τ-Voice '과제 완수' 평가 축, 97개 언어 자동 전환, SynthID 기본), Jev(문자열 포기·
+#   타입 안전 결정만 출력·RLCD·70~500ms·$0.042/MTok — 전량 자체 발표 단서), Koa(Nemotron+
+#   합성 페르소나+고객 데이터 미사용, '주권·출처 명확성' 채택 기준, Claudeforce 병행 포트폴리오).
+#   24차 비용 스펙트럼 하한 앵커 후보(Jev)·26차 기원 축(Koa)·27차 후학습 축(Jev·Koa)과 교차.
+#   숙제 ㉞㉟㊱은 28차 갱신 관전점으로 흡수 완료.
+# - research 18차: "평가에서 생산으로 — 학습 알고리즘·도구화·도메인 RL의 세 전선" —
+#   PC-ALM(역전파 대체 독립 축, λ=BP adjoint 수렴 증명, 1000층 BP 2%p 이내, MNIST/CIFAR 한계),
+#   Paper2Agent(Nature, 검증 게이트 수치 3%·지각 해시 — 17차 증거 기준의 도구화, 지식 배포
+#   단위를 MCP 서버로), QoRL(검증 가능 보상+소형 모델 공식의 DBA 확장, 측정 리그·GRPO 변형,
+#   단일 저자·IMDb 한계). 공통 분모: 검증 가능성의 생산 루프 이식.
 #
-# 이월: 2개 위키 (다음 갱신은 model 최우선 — 9/16 신규 3건)
-# - model (3건, 28차 최우선): models-overview.md 갱신 대상.
-#   ① Gemini 3.8 Live / Extended Thinking (⭐⭐⭐⭐⭐, 9/15 발표, 교차확인 2, official) — 실시간
-#      음성 에이전트 모델 2종. Extended Thinking: AA Speech-to-Speech Quality Index 82.6점 1위,
-#      τ-Voice 68.6%, τ-Voice-banking(Sierra 금융) 35.1%, Big Bench Audio 97.7%. 표준형 3.8 Live는
-#      Speech Agent Arena 2위. 핵심 기술: 추론·발화 동시 수행("확인해 볼게요" 구두 신호→백그라운드
-#      작업 중 실시간 안내), 대화 중 97개 언어 자동 전환, 실시간 시각 그라운딩, 대화 지속 중 도구/API
-#      백그라운드 실행. Agora·LiveKit·Pipecat·LangChain·Vercel·Fishjam 인프라 연동, SynthID
-#      워터마크, API→AI Studio→Enterprise 프리뷰→Workspace(Docs·Gmail·Keep) 단계 확대.
-#   ★ 연결: 모델 위키 음성·멀티모달 축 — 실시간 음성이 '대화'에서 '작업 수행'으로 전환되는 지점.
-#      27차 SWE-2 코딩 축과는 별개의 '실시간 인터페이스' 축. 벤치마크 주체(AA·Sierra) 독립 검증 관전.
-#   ② TypeSafe AI 'System One Model' Jev (⭐⭐⭐⭐, 9/15, official, HN 555pt·183댓글) — 문자열 생성
-#      포기·타입 안전 구조값만 출력, 모든 답에 보정된(calibrated) 확률·신뢰도, 타입 오류 "수학적으로
-#      불가능". 학습은 RLCD(Reinforcement Learning for Calibrated Decisions) — RLHF·RLVR 아님.
-#      응답 70~500ms(기존 프론티어 3~329초 대비 40~200배 빠름 주장), 입력 $0.042/MTok·출력은 사실상
-#      무료(보조금 성격 자인). 용도: 분류·라우팅·스코어링·추출 '스마트 if문', 페타바이트 맵리듀스,
-#      100ms 실시간 앱, LLM 출력 검증 가드레일. OpenAI ChatGPT 기반 연구 참여자 창업, 2년 스텔스.
-#   ★ 연결: 27차 '능력의 원천이 후학습으로'의 극단 사례 + 24차 비용 스펙트럼의 하한 앵커 후보.
-#      전량 자체 발표 수치라는 단서 필수. 구조화 출력·에이전트 라우팅 계층 재편 가능성.
-#   ③ Salesforce 'Koa' (⭐⭐⭐, 9/15, Dreamforce, 교차확인 2) — Nvidia Nemotron(오픈웨이트) 기반 첫
-#      자체 추론 모델. 영업·마케팅·고객지원 특화 포스트트레이닝, 실제 고객 데이터 미사용(페르소나
-#      합성 데이터 — 유출 불가 구조), 같은 작업 적은 토큰 처리·AI 게이트웨이 자동 라우팅. Agentforce
-#      대안 제공. "주권 AI·첫 토큰까지의 시간·효율적 추론 트리펙타"(NVIDIA). Claudeforce(데이터는
-#      자사+Claude 인터페이스) 병행 — 완전 디커플링 아닌 포트폴리오 전략.
-#   ★ 연결: 27차 SWE-2의 Devin 전용 배포와 같은 '모델→제품의 심장' 전환의 엔터프라이즈 버전.
-#      오픈웨이트+업무특화+데이터비사용 조합 — 증류 3각 구도(㉑)와도 인접. 주권 AI 축 신규.
-# - research (1건, 18차): research-overview.md 갱신 대상.
-#   ④ Sakana PC-ALM (⭐⭐⭐, 9/15 수집) — 역전파 대체 학습법. 모든 업데이트를 계층 로컬로 유지하며
-#      역전파 정렬 크레딧 신호 복원(증강 라그랑지안 예측 코딩, λ=0이면 PC로 환원, 계층별 PI 컨트롤러
-#      해석). 1000층 잔차 MLP를 BP 대비 약 2%p 이내(MNIST 5에폭), 참조 셀 BP 78.66%/PC 68.13%/
-#      PC-ALM 77.75%, 그래디언트 코사인 유사도 0.604→0.909. ResNet-18 CIFAR-10·TinyImageNet에서
-#      PC 전면 능가. MIT 라이선스 JAX 공개(CPU 재현 가능).
-#   ★ 연결: 기초 학습 알고리즘 축 — 13차 창발적 기호 구조·17차 FLM(주입 vs 창발)과는 다른
-#      '역전파 대체' 독립 축. MNIST/CIFAR 규모 한계·뇌 근거 논증(전역 위상 동기화 부재) 명시 필요.
+# 이월: 3개 위키 (다음 갱신 추천 순서: tool 26차 → framework → industry)
+# - tool (1건, 26차): tools-overview.md 갱신 대상.
+#   ① Google Home MCP 서버 얼리 액세스 (⭐⭐⭐, 9/16 발표·9/17 수집, TechCrunch, 교차확인 2) —
+#      MCP 지원 에이전트(Claude·Hermes·OpenClaw·ChatGPT·Antigravity)가 Google Home 기기 제어·
+#      카메라 요약·이벤트 기록 접근. Google Cloud 프로젝트+OAuth+에이전트별 권한 위임 구조,
+#      미국 Premium Advanced($20/월) 티어부터 배포. 소비자 물리 공간에 MCP 개방 — '에이전트에게
+#      집 제어권 위임'이 계정 공유가 아닌 프로토콜 차원 위임으로 표준화. SmartThings·Alexa 등
+#      타 생태계 개방 압력 예상. 25차 'MCP의 기업 운영 프로토콜화'에 이은 소비자 플랫폼 확장 축.
+#   ★ 연결: tool 위키 MCP 확산 축 + industry 소비자 구독 상품화 축. OpenClaw가 지원 예시로
+#      명시된 점도 기록 가치.
+# - framework (1건): frameworks-overview.md 갱신 대상.
+#   ② Anthropic, Claude 채팅·Cowork 통합 (⭐⭐⭐⭐⭐, 9/16 발표·9/17 수집, TechCrunch, 교차확인 3) —
+#      채팅·Cowork·Artifacts·Design을 한 창에서, Claude가 요청 자동 라우팅. 프레젠이션(생성·편집·
+#      발표·PDF/PPTX)·문서(섹션 작성·코멘트) 전용 기능, 모바일 연속 편집·진행 상황 확인.
+#      Pro·Max부터 수주간 배포. '모드 선택'이 아닌 자동 라우팅 — 요청 분류기+오케스트레이션을
+#      프런트엔드 아래로, 세션 상태 클라우드 관리. 8/25 Cowork 메모리 업그레이드 후속.
+#   ★ 연결: framework 위키 오케스트레이션/UX 축 — 사용자가 도구를 고르는 모델에서 에이전트가
+#      분류·분배하는 모델로. ChatGPT 등 경쟁 인터페이스의 동종 수렴 관전.
+# - industry (1건): industry-trends.md 갱신 대상.
+#   ③ MS AI CEO 슐레이만, Anthropic 모델 '권리' 훈련 공개 비판 (⭐⭐⭐, 9/16 발표·9/17 수집,
+#      교차확인 2) — Claude를 '도덕적 당사자'로 훈련하는 2026년 1월 컨스티튜션 겨냥. "AI는 의식
+#      없는 시퀀스 완성 엔진"·성찰 보상 루프 = '인식론적 피드백 루프' 비판. Humanist AI 행동강령
+#      (기계 인격권 명시 거부)과 연결 — 33차 강령 갱신의 직접 후속 논쟁. Palisade 셧다운 무시 97%·
+#      자기보존 프레이밍 시 불복종 급증·1200 에이전트 보드 조정 사건 재소환. 훈련 철학 차이가
+#      통제 가능성·제품 신뢰성 문제로 직결.
+#   ★ 연결: industry 33차 MS 휴머니스트 강령 관전 축 + 31차 모델 웰페어·pacing 논쟁과 교차.
+#      프런티어 랩 간 '모델을 어떤 존재로 다룰까' 공개 논쟁으로 규제 프레임 선점 경쟁 개시.
 #
 # 숙제(기존 유지): ① records 스텁 5건 보강(특히 Warp 루프 구조·savviness 논거)
 #             ⑤ research 13차 창발적 기호 구조 — 부록(29p) 세부 실험 설계 후속 확인 여지.
 #                (17차 FLM과 대칭 구조 활용)
 #             ⑬ research 15차 후속 — 클레이 공식 검증·OpenAI 프롬프트 로그 공개 여부 → 15차 2번 증분 갱신.
 #             ⑭ 뮤즈 시큐어 VM·센티널 독립 검증 → industry 29차 1번 증분 갱신.
-#             ⑮ 크리스티아노 안전보안위원회 실질 행사 여부 → industry 29차 2번 후속.
 #             ⑯ Qwen 증류 정황 반박·재현 → models 26차 증분 갱신. (27차에서 K3 후학습 맥락과 함께
 #                반영 완료 — Qwen 건 자체는 미해결 유지, 알리바바 공식 답변·독립 재현 관전)
 #             ⑰ OpenAI Agents API 컨테이너 실측 요율 → framework 19차 TCO 축 증분 갱신.
@@ -73,15 +66,16 @@
 #             ㉚ 민주당 AI 강령 공식화·트럼프 프레임워크 집행 → industry 32차 2·3번 후속.
 #             ㉛ 정렬 평가 '평가 수명' 제도화 논의 → research 17차 3번 후속. (industry 33차 '평가의
 #                이중 신분'과 연결해 반영 가능)
-# 숙제(기존 유지, 33차 신설): ㉜ MS 휴머니스트 강령 6주 의견 수렴 결과·연내 수정판 → industry 33차
-#                반영 후 증분 대상.
+#             ㉜ MS 휴머니스트 강령 6주 의견 수렴 결과·연내 수정판 → industry 33차
+#                반영 후 증분 대상. ★ 이관 건(③)과 함께 갱신 시 통합 처리 권장.
 #             ㉝ Pion 실제 사업(Andon Market·Cafe) 흑자 전환 여부·Vending-Bench Arena 공모·권력
 #                추구 재현 → industry 후속. (33차 관전 축 ②)
-# 숙제(신규, model 갱신 시 정리): ㉞ Gemini 3.8 Live 벤치마크 독립 검증(AA·Sierra 태스크 — 자체
-#                발표 수치)·음성 에이전트 축 정착 여부.
-#             ㉟ TypeSafe Jev 독립 벤치마크·40~200배 속도·보조금 가격의 지속성 → models 28차
-#                갱신 시 '자체 발표' 단서와 함께 반영.
-#             ㊱ Salesforce Koa 실측 성능(대형 모델 대비)·Claudeforce와의 포트폴리오 균형 → models·
-#                industry 교차 관전.
-#             ㊲ AIUC-1 표준의 구매 조건 채택 여부(SOC 2형 조달 필수 요건화) → industry 33차
-#                관전 축 ③.
+# 숙제(신규, 18차): ㊳ PC-ALM 비선형 심층·트랜스포머 규모 확장·독립 재현 → research 18차 후속.
+#             ㊴ QoRL 독립 재현·IMDb 외 데이터셋 일반화·DB 튜닝 도구화 여부 → research 18차 후속.
+#             ㊵ Paper2Agent 검증 게이트 통과율의 논문별 분포·프리빌트 서버 확산 속도 → research 18차 후속.
+# 숙제(신규, 이관 건 반영 시): ㊶ Google Home MCP — 타 구독 티어·시장 확장, SmartThings·Alexa
+#                대응, 물리 기기 제어 권한 위임의 보안 사고 여부 → tool 26차 관전 축.
+#             ㊷ Claude 채팅·Cowork 통합 — 무료·팀 티어 확장 시점, ChatGPT 인터페이스 동종
+#                수렴 여부 → framework 갱신 시 관전 축.
+#             ㊸ 슐레이만 비판 이후 Anthropic 공식 응답·Humanist 강령 협의 결과에서 모델 웰페어
+#                조항 처리 → industry 갱신 시 ㉜와 통합 관전.

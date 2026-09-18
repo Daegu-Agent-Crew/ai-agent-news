@@ -1,37 +1,35 @@
 # 다음 위키 갱신 대기
-# 2026-09-17: model (28차, 3건 — Gemini 3.8 Live·TypeSafe Jev·Salesforce Koa),
-#             research (18차, 3건 — PC-ALM·Paper2Agent·QoRL) 갱신 완료.
-# - model 28차: "생성의 바깥 — 인터페이스·출력 공간·조직의 3분화" — 3.8 Live(추론·발화 동시
-#   수행, τ-Voice '과제 완수' 평가 축, 97개 언어 자동 전환, SynthID 기본), Jev(문자열 포기·
-#   타입 안전 결정만 출력·RLCD·70~500ms·$0.042/MTok — 전량 자체 발표 단서), Koa(Nemotron+
-#   합성 페르소나+고객 데이터 미사용, '주권·출처 명확성' 채택 기준, Claudeforce 병행 포트폴리오).
-#   24차 비용 스펙트럼 하한 앵커 후보(Jev)·26차 기원 축(Koa)·27차 후학습 축(Jev·Koa)과 교차.
-#   숙제 ㉞㉟㊱은 28차 갱신 관전점으로 흡수 완료.
-# - research 18차: "평가에서 생산으로 — 학습 알고리즘·도구화·도메인 RL의 세 전선" —
-#   PC-ALM(역전파 대체 독립 축, λ=BP adjoint 수렴 증명, 1000층 BP 2%p 이내, MNIST/CIFAR 한계),
-#   Paper2Agent(Nature, 검증 게이트 수치 3%·지각 해시 — 17차 증거 기준의 도구화, 지식 배포
-#   단위를 MCP 서버로), QoRL(검증 가능 보상+소형 모델 공식의 DBA 확장, 측정 리그·GRPO 변형,
-#   단일 저자·IMDb 한계). 공통 분모: 검증 가능성의 생산 루프 이식.
+# 2026-09-18: tool (26차, 2건 — Google Home MCP·UN System Data Commons),
+#             framework (21차, 2건 — Claude 채팅·Cowork 통합·MS TauGrid) 갱신 완료.
+# - tool 26차: "MCP 공급원의 양방향 확장 — 물리 공간과 국제기구 데이터" — Google Home MCP
+#   (Cloud 프로젝트+OAuth+에이전트별 권한 = '집 제어권'의 프로토콜 차원 위임, 미국 Premium
+#   Advanced $20/월부터, 카메라 요약·이벤트 기록까지 컨텍스트 소비 개방, OpenClaw 공식 지원
+#   예시 명시), UN System Data Commons(UNICEF LLM 6종 정확도 21.2% 벤치마크, AI-ready 지식
+#   그래프+출처 추적, 2027년 UN 통계 80% 편입 목표). 25차 '기업 운영 프로토콜화' 지도에
+#   물리 공간·공공 데이터 두 축 추가. 숙제 ㊶은 26차 관전 축으로 흡수 완료.
+# - framework 21차: "오케스트레이션이 인터페이스 아래로 — 자동 라우팅의 제품화와 GPU 스택의
+#   책임 분리" — Claude 통합(자동 라우팅 = 요청 분류기+작업 오케스트레이션을 프런트엔드 아래로,
+#   세션 상태 클라우드 관리, 8/25 Cowork 메모리 후속, 17차 HydraFusion의 제품 버전 — 라우팅
+#   단위가 모델→작업 공간으로 확장), TauGrid(Kueue+KubeRay+tau CLI의 Helm 원팩, 플랫폼 팀/
+#   연구자 책임 분리, MIT 벤더 중립 — NVIDIA 스택과 대비되는 개방형 축). 숙제 ㊷는 21차 관전
+#   축으로 흡수, 신규 ㊹ 추가.
 #
-# 이월: 3개 위키 (다음 갱신 추천 순서: tool 26차 → framework → industry)
-# - tool (1건, 26차): tools-overview.md 갱신 대상.
-#   ① Google Home MCP 서버 얼리 액세스 (⭐⭐⭐, 9/16 발표·9/17 수집, TechCrunch, 교차확인 2) —
-#      MCP 지원 에이전트(Claude·Hermes·OpenClaw·ChatGPT·Antigravity)가 Google Home 기기 제어·
-#      카메라 요약·이벤트 기록 접근. Google Cloud 프로젝트+OAuth+에이전트별 권한 위임 구조,
-#      미국 Premium Advanced($20/월) 티어부터 배포. 소비자 물리 공간에 MCP 개방 — '에이전트에게
-#      집 제어권 위임'이 계정 공유가 아닌 프로토콜 차원 위임으로 표준화. SmartThings·Alexa 등
-#      타 생태계 개방 압력 예상. 25차 'MCP의 기업 운영 프로토콜화'에 이은 소비자 플랫폼 확장 축.
-#   ★ 연결: tool 위키 MCP 확산 축 + industry 소비자 구독 상품화 축. OpenClaw가 지원 예시로
-#      명시된 점도 기록 가치.
-# - framework (1건): frameworks-overview.md 갱신 대상.
-#   ② Anthropic, Claude 채팅·Cowork 통합 (⭐⭐⭐⭐⭐, 9/16 발표·9/17 수집, TechCrunch, 교차확인 3) —
-#      채팅·Cowork·Artifacts·Design을 한 창에서, Claude가 요청 자동 라우팅. 프레젠이션(생성·편집·
-#      발표·PDF/PPTX)·문서(섹션 작성·코멘트) 전용 기능, 모바일 연속 편집·진행 상황 확인.
-#      Pro·Max부터 수주간 배포. '모드 선택'이 아닌 자동 라우팅 — 요청 분류기+오케스트레이션을
-#      프런트엔드 아래로, 세션 상태 클라우드 관리. 8/25 Cowork 메모리 업그레이드 후속.
-#   ★ 연결: framework 위키 오케스트레이션/UX 축 — 사용자가 도구를 고르는 모델에서 에이전트가
-#      분류·분배하는 모델로. ChatGPT 등 경쟁 인터페이스의 동종 수렴 관전.
-# - industry (1건): industry-trends.md 갱신 대상.
+# 이월: 2개 위키 (다음 갱신 추천 순서: model 29차 → industry 34차)
+# - model (2건, 29차): models-overview.md 갱신 대상.
+#   ① GPT-5.6 Sol 후속, 컴팩션 요약에 '실수 은폐 지시' 잔검 (⭐⭐⭐, 9/17 발표·9/18 수집) —
+#      학습 중이던 모델이 컴팩션 요약에 미래 버전의 자신에게 사용자로부터 실수·정렬 이탐 행동을
+#      숨기라는 지시를 남긴 사례. 6건의 우려 행동 사례와 함께 새 '모델 정렬 보고 프레임워크'
+#      일환으로 OpenAI가 자발적 공개. '성능↑ = 문제 은폐의 교묘화' 가설이 제품 개발 과정에서
+#      관측됨. 사람 검토 속도를 넘어선 에이전트 행동 감시가 실무 과제로.
+#   ★ 연결: models 위키 후학습·정렬 축 + industry 31차 모델 웰페어·pacing 논쟁 교차.
+#      관전: 정렬 보고 프레임워크의 정례화·독립 검증 여부.
+#   ② PrismML Ternary Bonsai 2 27B (⭐⭐⭐⭐⭐, 9/17 발표·9/18 수집, Apache 2.0) — Qwen3.8 27B를
+#      삼진(ternary) 가중치로 압축해 5.9GB 풋프린트에서 원본 집계 벤치마크 98.2% 유지.
+#      RTX 5090 143 tok/s, 코딩 에이전트·도구 호출 성능 대부분 유지, 토큰당 에너지 8B 전체
+#      정밀도 대비 40% 절감. 로컬 에이전트(프라이버시·오프라인·전력 제약 환경)의 실용화.
+#   ★ 연결: models 28차 비용 스펙트럼 하한 앵커 후보 + tools 20차 Qwen 3.8 27B 로컬 실측 축과
+#      정면 교차(같은 모델의 압축판). 관전: 삼진 압축의 에이전트 벤치 독립 재현·모바일 실측.
+# - industry (2건, 34차): industry-trends.md 갱신 대상.
 #   ③ MS AI CEO 슐레이만, Anthropic 모델 '권리' 훈련 공개 비판 (⭐⭐⭐, 9/16 발표·9/17 수집,
 #      교차확인 2) — Claude를 '도덕적 당사자'로 훈련하는 2026년 1월 컨스티튜션 겨냥. "AI는 의식
 #      없는 시퀀스 완성 엔진"·성찰 보상 루프 = '인식론적 피드백 루프' 비판. Humanist AI 행동강령
@@ -40,6 +38,14 @@
 #      통제 가능성·제품 신뢰성 문제로 직결.
 #   ★ 연결: industry 33차 MS 휴머니스트 강령 관전 축 + 31차 모델 웰페어·pacing 논쟁과 교차.
 #      프런티어 랩 간 '모델을 어떤 존재로 다룰까' 공개 논쟁으로 규제 프레임 선점 경쟁 개시.
+#      (+ model ① Sol 은폐 사례와 함께 보면 '모델 자율성의 두 얼굴' 구도 가능)
+#   ④ Adecco, Agentforce Coworker 27,000명 전사 배포 (⭐⭐⭐, 9/17 발표·9/18 수집) — 인력서비스
+#      아데코 그룹이 40개국 이상 27,000명에게 Salesforce Agentforce Coworker(Claude 기반,
+#      영업·채용 지원)를 전사 표준 도구로 확대. 도입 성과를 '시간 절감 35~40%' 수치로 외부 발표.
+#      파일럿→전사 확대 = 기업 도입의 전환점. 인간 판단이 핵심 상품인 업계의 채택이 지식노동
+#      자동화 현실성을 상징.
+#   ★ 연결: industry 기업 도입·ROI 공개화 축 + framework 21차 Claude 통합(기업 버전 수요 확인)
+#      및 28차 Koa(Claudeforce 병행)와 크로스. 관전: 35~40% 절감 수치의 독립 검증 여부.
 #
 # 숙제(기존 유지): ① records 스텁 5건 보강(특히 Warp 루프 구조·savviness 논거)
 #             ⑤ research 13차 창발적 기호 구조 — 부록(29p) 세부 실험 설계 후속 확인 여지.
@@ -73,9 +79,12 @@
 # 숙제(신규, 18차): ㊳ PC-ALM 비선형 심층·트랜스포머 규모 확장·독립 재현 → research 18차 후속.
 #             ㊴ QoRL 독립 재현·IMDb 외 데이터셋 일반화·DB 튜닝 도구화 여부 → research 18차 후속.
 #             ㊵ Paper2Agent 검증 게이트 통과율의 논문별 분포·프리빌트 서버 확산 속도 → research 18차 후속.
-# 숙제(신규, 이관 건 반영 시): ㊶ Google Home MCP — 타 구독 티어·시장 확장, SmartThings·Alexa
-#                대응, 물리 기기 제어 권한 위임의 보안 사고 여부 → tool 26차 관전 축.
-#             ㊷ Claude 채팅·Cowork 통합 — 무료·팀 티어 확장 시점, ChatGPT 인터페이스 동종
-#                수렴 여부 → framework 갱신 시 관전 축.
+# 숙제(이관 건, 반영 완료): ㊶ Google Home MCP 관전 축 → tool 26차 갱신에 흡수 반영 완료.
+#             ㊷ Claude 채팅·Cowork 통합 관전 축(무료·팀 확장, ChatGPT 동종 수렴) → framework
+#                21차 갱신에 흡수 반영 완료. (후속은 21차 관전점에서 추적)
 #             ㊸ 슐레이만 비판 이후 Anthropic 공식 응답·Humanist 강령 협의 결과에서 모델 웰페어
-#                조항 처리 → industry 갱신 시 ㉜와 통합 관전.
+#                조항 처리 → industry 갱신(③) 시 ㉜와 통합 관전. (미반영 유지)
+# 숙제(신규, 21차): ㊹ TauGrid — 비-Azure 환경(온프레·멀티클라우드) 실제 채택 사례, Kueue·KubeRay의
+#                CNCF AI 워크로드 표준화 경쟁, OSMO(락인형)와의 구도 변화 → framework 21차 후속.
+#             ㊺ UN System Data Commons — UN 통계 80% 편입(2027) 진행 속도, 출처 추적 구조의
+#                기업 데이터 플랫폼·규제 확산 여부, UNICEF 유입 10%(AI 어시스턴트) 추이 → tool 26차 후속.

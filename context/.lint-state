@@ -1,31 +1,27 @@
 {
-  "lastLint": "2026-09-20",
-  "lastLintEpoch": 1789913400,
+  "lastLint": "2026-09-27",
+  "lastLintEpoch": 1790534640,
   "filesChecked": 5,
-  "filesChangedSinceLastLint": [],
-  "totalLinksChecked": 1282,
-  "recordLinksChecked": 606,
-  "anchorLinksChecked": 275,
-  "internalFileLinksChecked": 401,
+  "filesChangedSinceLastLint": ["industry-trends.md", "models-overview.md", "research-overview.md", "tools-overview.md", "frameworks-overview.md"],
+  "totalLinksChecked": 1409,
+  "recordLinksChecked": 668,
+  "anchorLinksChecked": 277,
+  "internalFileLinksChecked": 464,
   "externalLinksChecked": 0,
-  "criticalFixed": 1,
+  "criticalFixed": 0,
   "warnings": 3,
   "details": {
-    "criticalFixed": [
-      "🔴 tools-overview.md:1123 — '22차 Gemini Spark' 앵커 링크가 대상 헤딩(⭐⭐⭐ 접미 슬러그)의 끝 대시와 불일치. '#...소비자-에이전트' → '#...소비자-에이전트-'로 수정. 링크만 변경, 내용 무변경."
-    ],
-    "scriptChanges": [
-      ".lint-run.py files 리스트에 frameworks-overview.md 추가(지난 린트 미커밋 과제 해결).",
-      ".lint-run.py 메타데이터 검사를 '## 메타데이터' 섹션 형식(카테고리·최종 업데이트)에 맞게 수정 — 15건 오탐 제거. 스크립트는 여전 미커밋."
-    ],
+    "criticalFixed": [],
     "lintNotes": [
-      "5개 문서 모두 '## 메타데이터' 섹션에 카테고리·최종 업데이트 존재. 최신 갱신: models·tools 9/20, industry 9/19, frameworks 9/18, research 9/17 — 시의성 정상.",
-      "지난 해소 사항 재확인: industry Volta 금액 통일 유지, frameworks 제목 '2026년 7~9월' 유지."
+      "9/20 린트 이후 5개 활성 문서 총 ~580줄 추가됨. 신규 링크·앵커 전수 검사 결과 크러티컬 0건.",
+      "메타데이터 5건 모두 정상 (카테고리·최종 업데이트·갱신 차수 기재). 최신 갱신: industry·research 9/27, models 9/26, tools 9/25, frameworks 9/23.",
+      "신규 섹션(OpenClaw 원자적 업데이트, AWS Strands, 아마존-Muse 차단, OpenAI 메디케어 사고 등)이 최근 records와 주제 일치 — 모순 징후 없음.",
+      "지난 린트의 앵커 대시 불일치 수정(1건) 재발 없음."
     ],
     "warnings": [
-      "⚠️ human-roles.md & human-roles-in-agentic-era.md: 고립 페이지 (5개 활성 위키에서 incoming links 0 재확인). 11회 연속 지적, 84일 경과 (2026-06-28~). 병합 후 리다이렉트 링크 추가 권장.",
-      "⚠️ human-roles.md & human-roles-in-agentic-era.md: 내용 중복('2026년 6월 인간의 역할' 주제 동일) — 병합 권장. 11회 연속 지적.",
-      "⚠️ human-roles-in-agentic-era.md: 카테고리 'industry'이나 실제 내용은 'analysis'에 가까움. 11회 연속 지적."
+      "⚠️ human-roles.md & human-roles-in-agentic-era.md: 고립 페이지 (5개 활성 위키에서 incoming links 0). 12회 연속 지적, 91일 경과 (2026-06-28~). 병합 후 리다이렉트 링크 추가 권장.",
+      "⚠️ human-roles.md & human-roles-in-agentic-era.md: 내용 중복('2026년 6월 인간의 역할' 주제 동일) — 병합 권장. 12회 연속 지적.",
+      "⚠️ human-roles-in-agentic-era.md: 카테고리 'industry'이나 실제 내용은 'analysis'에 가까움. 12회 연속 지적."
     ]
   }
 }

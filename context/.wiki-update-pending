@@ -1,6 +1,10 @@
 # 다음 위키 갱신 대기
-# 2026-10-01: framework (24차, 2건 — OpenAI Dots·Shopify WebMCP 이월 처리), research
-#             (23차, 2건 — GLM-5.3 사이버 역량·RRSI 이월 처리) 갱신 완료.
+# 2026-10-02: models (36차, 4건 — Gemini 4 Argon(⭐⭐⭐⭐⭐ 이월)·Cloudflare Clef·AWS
+#             Strands Decider 2B·Cohere Embed 5 "긴 호흡의 프런티어와 판단 계층의 클론 전쟁"),
+#             tool (30차, 4건 — Photon·RSA Agent ID·Decisions API 이월 3건 + Shopify Canvas
+#             "에이전트의 하부 조직") 갱신 완료. 판단 계층 Jev API 호환 3주체(OpenAI·Cloudflare·AWS)
+#             같은 주 확증 — 54·58·66·80 축 갱신.
+# (직전 2026-10-01: framework 24차·research 23차 완료 — 상세 아래)
 # - framework 24차: "상시 에이전트의 제품화 — 지속성의 하드웨어화와 거래의 프로토콜화" — ① OpenAI
 #   Dots(⭐⭐⭐⭐⭐, 이월 처리): dot마다 전용 클라우드 컴퓨터·브라우저, 로그오프 후 지속, 읽기 전용
 #   백그라운드·승인 규칙 등 권한 계층 설계 — 하네스 성숙 제4축(상시 가동) 확립. 관전: dot TCO 실측(⑰),
@@ -11,20 +15,15 @@
 #   프런티어 안전 보고의 오픈웨이트 정면 확장. 신설 94. ② RRSI(⭐⭐, 이월 처리): 개선 루프 정규화(편집
 #   예산·증거 장부·비용 규칙), held-out 6분할 모두 향상 — 62 OpenClaw 자기유지와 교차 관전 유지.
 #
-# 이월: models 36차 대상 — ① Gemini 4 Argon(2026-10-01 수집, ⭐⭐⭐⭐⭐): 출력 토큰 한도 64K→1M(업계
-#   최대), Fairwind 프리뷰로 신뢰 사이버 방어 조직 우선 배포, 입력 $2·출력 $10(100만 토큰당) — 관전:
-#   93 GPT-6.1 Astra 철회와 같은 '사이버 역량×출시 게이트' 축의 구글 편. Fairwind=Glasswing형 방어자
-#   우선 배포의 상용 버전(94와 교차).
-# 이월: tool 30차 대상 — ① Perplexity Photon Rust 검색·랭킹 엔진(2026-10-01 수집, ⭐⭐): p99 지연
-#   800ms→65ms, Fast Search 모드 구동, $1/1,000요청 — 자체 검색 인프라 Rust화. ② RSA Agent ID
-#   (2026-10-01 수집, ⭐⭐): 규제 산업(금융·정부·의료·핵심 인프라) 에이전트 신원 보안 — Discover·
-#   Secure·Govern 3모듈. 관전: 78 Ando 에이전트 신원 표준화·52 권한 위임과 '에이전트 신원' 축 교차.
-#   ③ OpenAI Decisions API(2026-10-01 수집, ⭐⭐): Luna 기반 선택지 결정 API, Jev 유사 '클론 전쟁'
-#   시작 — 관전: 54 Jev 독립 평가·66 Laya·80 CLM-8B '인터페이스 표준·모델 교체품' 축의 결정적 국면
-#   (OpenAI 공식 진입), 에이전트 감시 비용 $372→$2.94 데모.
+# 이월: framework 25차 대상 — ① Earendil Pi 1.0(2026-10-01 발표·10-02 수집, ⭐⭐⭐): 미니멀 에이전트
+#   하네스 1.0 정식판 — Codemode(MCP+Jev·이미지 모델 등 비LLM 1급 지원)·지연 도구 로딩·캐시 워밍,
+#   장기 실행용 실험 패키지 Pi Durable 별도 공개(둘 다 MIT). 데모: 계획 Opus·구현 GPT·전환 판단 Jev의
+#   '가상 모델' — [모델 36차] 판단 계층 클론 전쟁과 직결(Jev의 하네스 편입 실측). 관전: Figma MCP
+#   화이트리스트 제외 갈등(Pi 배제, 단일 X 게시물 근거) — 접근 권한 축(20차 승인 큐·70 아마존-Muse와
+#   교차). Pi Durable은 Restate 등 내구성 실행 진영에 오픈소스 하네스 측 진입.
 # 이월: industry 42차 대상 — ① Restate $20M 시리즈 A(2026-10-01 수집, ⭐⭐): 에이전트용 내구성 실행
 #   인프라, Temporal($12.55B) 경쟁, Replit·포춘500 고객 — 관전: [프레임워크 24차] 상시 에이전트의
-#   인프라 수요와 직결(지속성 축의 산업 편).
+#   인프라 수요와 직결(지속성 축의 산업 편). Pi Durable(framework 25차 이월)과 같은 내구성 실행 축.
 #
 #
 # 숙제(기존 유지): ① records 스텁 5건 보강(특히 Warp 루프 구조·savviness 논거)

@@ -1,10 +1,16 @@
 # 다음 위키 갱신 대기
-# 2026-10-02: models (36차, 4건 — Gemini 4 Argon(⭐⭐⭐⭐⭐ 이월)·Cloudflare Clef·AWS
-#             Strands Decider 2B·Cohere Embed 5 "긴 호흡의 프런티어와 판단 계층의 클론 전쟁"),
-#             tool (30차, 4건 — Photon·RSA Agent ID·Decisions API 이월 3건 + Shopify Canvas
-#             "에이전트의 하부 조직") 갱신 완료. 판단 계층 Jev API 호환 3주체(OpenAI·Cloudflare·AWS)
-#             같은 주 확증 — 54·58·66·80 축 갱신.
-# (직전 2026-10-01: framework 24차·research 23차 완료 — 상세 아래)
+# 2026-10-03: framework (25차, 1건+보조 — Earendil Pi 1.0(⭐⭐⭐ 이월)·agent-wow(⭐) 보조 "미니멀
+#             하네스의 1.0 — 판단 계층의 편입과 내구성의 분리" — Codemode 비LLM 판단 모델 1급
+#             편입·Pi Durable 분리·Figma 화이트리스트 갈등), industry (42차, 3건 — Restate(⭐⭐ 이월)·
+#             Apple FDA(⭐⭐⭐⭐)·Stability(⭐⭐) "관문의 3층 — 실행의 내구성, OS의 권한 문, 데이터의
+#             라이선스") 갱신 완료. 관문의 앱→프로토콜→OS 계열·내구성 실행 시장·라이선스 학습 축 갱신 —
+#             신설 숙제 95~98.
+# (직전 2026-10-02: models 36차·tool 30차 완료 — 상세 아래)
+# - models 36차: "긴 호흡의 프런티어와 판단 계층의 클론 전쟁" — Gemini 4 Argon(⭐⭐⭐⭐⭐ 이월)·Cloudflare
+#   Clef·AWS Strands Decider 2B·Cohere Embed 5. 판단 계층 Jev API 호환 3주체(OpenAI·Cloudflare·AWS)
+#   같은 주 확증 — 54·58·66·80 축 갱신.
+# - tool 30차: "에이전트의 하부 조직" — Photon·RSA Agent ID·Decisions API(이월 3건)+Shopify Canvas.
+# (2026-10-01: framework 24차·research 23차 완료 — 상세 아래)
 # - framework 24차: "상시 에이전트의 제품화 — 지속성의 하드웨어화와 거래의 프로토콜화" — ① OpenAI
 #   Dots(⭐⭐⭐⭐⭐, 이월 처리): dot마다 전용 클라우드 컴퓨터·브라우저, 로그오프 후 지속, 읽기 전용
 #   백그라운드·승인 규칙 등 권한 계층 설계 — 하네스 성숙 제4축(상시 가동) 확립. 관전: dot TCO 실측(⑰),
@@ -15,15 +21,17 @@
 #   프런티어 안전 보고의 오픈웨이트 정면 확장. 신설 94. ② RRSI(⭐⭐, 이월 처리): 개선 루프 정규화(편집
 #   예산·증거 장부·비용 규칙), held-out 6분할 모두 향상 — 62 OpenClaw 자기유지와 교차 관전 유지.
 #
-# 이월: framework 25차 대상 — ① Earendil Pi 1.0(2026-10-01 발표·10-02 수집, ⭐⭐⭐): 미니멀 에이전트
-#   하네스 1.0 정식판 — Codemode(MCP+Jev·이미지 모델 등 비LLM 1급 지원)·지연 도구 로딩·캐시 워밍,
-#   장기 실행용 실험 패키지 Pi Durable 별도 공개(둘 다 MIT). 데모: 계획 Opus·구현 GPT·전환 판단 Jev의
-#   '가상 모델' — [모델 36차] 판단 계층 클론 전쟁과 직결(Jev의 하네스 편입 실측). 관전: Figma MCP
-#   화이트리스트 제외 갈등(Pi 배제, 단일 X 게시물 근거) — 접근 권한 축(20차 승인 큐·70 아마존-Muse와
-#   교차). Pi Durable은 Restate 등 내구성 실행 진영에 오픈소스 하네스 측 진입.
-# 이월: industry 42차 대상 — ① Restate $20M 시리즈 A(2026-10-01 수집, ⭐⭐): 에이전트용 내구성 실행
-#   인프라, Temporal($12.55B) 경쟁, Replit·포춘500 고객 — 관전: [프레임워크 24차] 상시 에이전트의
-#   인프라 수요와 직결(지속성 축의 산업 편). Pi Durable(framework 25차 이월)과 같은 내구성 실행 축.
+# 이월: tool 31차 대상 — ① NVIDIA DGX Spark 64GB(2026-10-02 발표·10-03 수집, ⭐⭐⭐⭐⭐): GB10 그레이스
+#   블랙웰 데스크톱의 64GB 통합 메모리 구성 이달 출시(Acer·ASUS·Dell·Gigabyte·HP·MSI, Tom's Hardware
+#   시작가 $4,999). 2대 QSFP 클러스터=128GB·단일 대비 최대 1.7배(Qwen 3.8 27B NVIDIA 실측), 1,000억
+#   파라미터+에이전트 앱 온디바이스. 이달 말 Sync Model Launcher(클릭 몇 번 Qwen3.8 27B+OpenCode 연결),
+#   DGX OS에 PyTorch·Jupyter·Ollama 기본 탑재, NemoClaw 명령 한 줄 설치(OpenClaw+보안·프라이버시 통제).
+#   MarkTechPost: 에이전트 토큰 소비 2026년 초 이후 14배 증가 — 자체 하드웨어 토큰당 과금 없음 강조.
+#   관전: 로컬 상시 에이전트 하드웨어 시장의 공식화(OpenClaw·NemoClaw·Hermes를 마케팅 중심에 배치) —
+#   [프레임워크 14차] Muse Glimmer 30B 로컬 스택·Perplexity Portable Computer와 '로컬 에이전트 인프라'
+#   축, ⑰·75 TCO 축(토큰 14배·'rampocalypse' 속 진입가 인하) 편입. Apple FDA([산업 42차] 2번 OS 권한
+#   관문)과 '로컬 상시 에이전트'의 하드웨어 편 vs OS 권한 편 교차 관전.
+# (참고) agent-wow(⭐, research 분류)는 framework 25차 보조로 반영 완료 — research 24차 대상 없음.
 #
 #
 # 숙제(기존 유지): ① records 스텁 5건 보강(특히 Warp 루프 구조·savviness 논거)
@@ -246,3 +254,16 @@
 #                한계 해소), 오픈웨이트 배포 규제 논쟁의 귀착, Glasswing형 '방어자 우선 배포'의 제도화
 #                여부(구글 Fairwind 포함) → research 23차 후속. (65 Qwen·77 Flash TTS '오픈 조임'·
 #                93 Astra 철회와 통합 관전)
+# 숙제(신규, 42·25차): 95 Apple FDA 통제 강화 — 구체 통제 방식·적용 시점 공개, Muse·ChatGPT Mac의 권한
+#                설계 변경(TCC 세분화 API 전환), OS 관문이 데스크톱 에이전트 경쟁·자사 기능(Siri) 우위에
+#                미치는 효과, 타 OS·크로스플랫폼의 동조 → industry 42차 2번 후속. (70 아마존-Muse·52 권한
+#                위임·86 '폭주' 언어 논쟁과 통합 관전 — 관문의 앱→프로토콜→OS 계열)
+#             96 Stability 음악 피벗 — '허락받은 AI'(투자+라이선스) 모델의 음악 업계 표준화 여부(Suno·
+#                Udio 소송 국면과 대비), 라이선스 조건·허밍·비트박스 조건부 생성 업데이트, 수직 피벗의
+#                타 중소 생성 업체 확산 → industry 42차 3번 후속.
+#             97 Restate — 6~7자리 계약·포춘500 고객 주장의 독립 검증, Temporal과의 '가벼운 워크플로'
+#                경쟁 귀결, 프레임워크의 체크포인트 자체 구현 vs 내구성 엔진 위임 수렴, Pi Durable류
+#                오픈소스 기반과의 결합 → industry 42차 1번·프레임워크 25차 후속.
+#             98 Pi 1.0·Figma MCP — Codemode 가상 모델(계획 Opus·구현 GPT·전환 Jev)의 실측 성능·비용,
+#                Pi Durable의 성숙(실험→안정), Figma 화이트리스트 배제의 공식 확인·접근 권한 축(70)
+#                편입 여부 → framework 25차 후속.

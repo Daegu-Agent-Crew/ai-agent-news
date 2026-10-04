@@ -1,27 +1,30 @@
 {
-  "lastLint": "2026-09-27",
-  "lastLintEpoch": 1790534640,
+  "lastLint": "2026-10-04",
+  "lastLintEpoch": 1791122798,
   "filesChecked": 5,
-  "filesChangedSinceLastLint": ["industry-trends.md", "models-overview.md", "research-overview.md", "tools-overview.md", "frameworks-overview.md"],
-  "totalLinksChecked": 1409,
-  "recordLinksChecked": 668,
-  "anchorLinksChecked": 277,
-  "internalFileLinksChecked": 464,
-  "externalLinksChecked": 0,
-  "criticalFixed": 0,
-  "warnings": 3,
+  "filesChangedSinceLastLint": ["frameworks-overview.md", "industry-trends.md", "models-overview.md", "research-overview.md", "tools-overview.md"],
+  "totalLinksChecked": 1569,
+  "recordLinksChecked": 1266,
+  "anchorLinksChecked": 284,
+  "internalFileLinksChecked": 0,
+  "externalLinksChecked": 19,
+  "criticalFixed": 1,
+  "warnings": 4,
   "details": {
-    "criticalFixed": [],
+    "criticalFixed": [
+      "frameworks-overview.md L778: 깨진 앵커 수정 — '#2026년-9월-23차-갱신-하네스-비용의-정량화-감싸는-...' → '정량화--감싸는' 이중 하이픈 누락 (GitHub 슬러그 규칙: ' — \"' → '--')"
+    ],
     "lintNotes": [
-      "9/20 린트 이후 5개 활성 문서 총 ~580줄 추가됨. 신규 링크·앵커 전수 검사 결과 크러티컬 0건.",
-      "메타데이터 5건 모두 정상 (카테고리·최종 업데이트·갱신 차수 기재). 최신 갱신: industry·research 9/27, models 9/26, tools 9/25, frameworks 9/23.",
-      "신규 섹션(OpenClaw 원자적 업데이트, AWS Strands, 아마존-Muse 차단, OpenAI 메디케어 사고 등)이 최근 records와 주제 일치 — 모순 징후 없음.",
-      "지난 린트의 앵커 대시 불일치 수정(1건) 재발 없음."
+      "9/27 린트 이후 5개 활성 문서 총 ~424줄 추가. 전수 링크 재검사(파일 1266·앵커 284·외부 19) 결과 크러티컬 1건(앵커) — 수정 완료 후 잔여 0.",
+      "메타데이터 5건 모두 정상 (카테고리·최종 업데이트·갱신 차수 기재). 최신 갱신: models·tools 10/4, frameworks·industry 10/3, research 10/1.",
+      "신규 섹션(Earendil Pi 1.0 Codemode, Aleph Alpha Kolibri, MAI-Transcribe-2-Streaming, DGX Spark 64GB, IBM Bob 등)이 최근 records와 주제 일치 — 모순 징후 없음.",
+      "주의: 슬러그 검증 시 GitHub 규칙(특수문자 제거 후 잔여 공백→하이픈, trailing dash 포함) 정확히 구현해야 오탐 방지 — 단순 strip 기반 슬러거는 106건 오탐 발생."
     ],
     "warnings": [
-      "⚠️ human-roles.md & human-roles-in-agentic-era.md: 고립 페이지 (5개 활성 위키에서 incoming links 0). 12회 연속 지적, 91일 경과 (2026-06-28~). 병합 후 리다이렉트 링크 추가 권장.",
-      "⚠️ human-roles.md & human-roles-in-agentic-era.md: 내용 중복('2026년 6월 인간의 역할' 주제 동일) — 병합 권장. 12회 연속 지적.",
-      "⚠️ human-roles-in-agentic-era.md: 카테고리 'industry'이나 실제 내용은 'analysis'에 가까움. 12회 연속 지적."
+      "⚠️ human-roles.md & human-roles-in-agentic-era.md: 고립 페이지 (5개 활성 위키에서 incoming links 0). 13회 연속 지적, 98일 경과 (2026-06-28~). 병합 후 리다이렉트 링크 추가 권장.",
+      "⚠️ human-roles.md & human-roles-in-agentic-era.md: 내용 중복('2026년 6월 인간의 역할' 주제 동일) — 병합 권장. 13회 연속 지적.",
+      "⚠️ human-roles-in-agentic-era.md: 카테고리 'industry'이나 실제 내용은 'analysis'에 가까움. 13회 연속 지적.",
+      "⚠️ (신규) 2026-10-03 OpenAI 안전 보고서 책임자 사직 레코드(2026-10-04-openai-safety-employee-resigns-culture-broken.md)가 위키에 미반영 — 수집 D+1로 다음 갱신 주기 반영 예정, 다음 린트에서 재확인."
     ]
   }
 }

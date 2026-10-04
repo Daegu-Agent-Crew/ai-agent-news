@@ -1,4 +1,11 @@
 # 다음 위키 갱신 대기
+# 2026-10-04: tool (31차, 3건 — DGX Spark 64GB(⭐⭐⭐⭐⭐ 이월 처리)·IBM Bob 폐쇄망 GA(⭐⭐)·
+#             Prime Inference(⭐⭐) "상시 에이전트의 자기 인프라 — 토큰 미터기 밖의 3분화"), models
+#             (37차, 2건 — Aleph Alpha Kolibri(⭐⭐⭐⭐⭐)·MAI-Transcribe-2-Streaming(⭐⭐) "무게의
+#             주권과 인터페이스의 귀속") 갱신 완료. 로컬 하드웨어·폐쇄막 플랫폼·에이전트 턴 서빙의
+#             '주권 스택' 축, 오픈 조임 vs 전면 개방의 시장별 분기, Realtime 호환 음성 표준화 갱신 —
+#             신설 숙제 99~103.
+# (직전 2026-10-03: framework 25차·industry 42차 완료 — 상세 아래)
 # 2026-10-03: framework (25차, 1건+보조 — Earendil Pi 1.0(⭐⭐⭐ 이월)·agent-wow(⭐) 보조 "미니멀
 #             하네스의 1.0 — 판단 계층의 편입과 내구성의 분리" — Codemode 비LLM 판단 모델 1급
 #             편입·Pi Durable 분리·Figma 화이트리스트 갈등), industry (42차, 3건 — Restate(⭐⭐ 이월)·
@@ -21,16 +28,18 @@
 #   프런티어 안전 보고의 오픈웨이트 정면 확장. 신설 94. ② RRSI(⭐⭐, 이월 처리): 개선 루프 정규화(편집
 #   예산·증거 장부·비용 규칙), held-out 6분할 모두 향상 — 62 OpenClaw 자기유지와 교차 관전 유지.
 #
-# 이월: tool 31차 대상 — ① NVIDIA DGX Spark 64GB(2026-10-02 발표·10-03 수집, ⭐⭐⭐⭐⭐): GB10 그레이스
-#   블랙웰 데스크톱의 64GB 통합 메모리 구성 이달 출시(Acer·ASUS·Dell·Gigabyte·HP·MSI, Tom's Hardware
-#   시작가 $4,999). 2대 QSFP 클러스터=128GB·단일 대비 최대 1.7배(Qwen 3.8 27B NVIDIA 실측), 1,000억
-#   파라미터+에이전트 앱 온디바이스. 이달 말 Sync Model Launcher(클릭 몇 번 Qwen3.8 27B+OpenCode 연결),
-#   DGX OS에 PyTorch·Jupyter·Ollama 기본 탑재, NemoClaw 명령 한 줄 설치(OpenClaw+보안·프라이버시 통제).
-#   MarkTechPost: 에이전트 토큰 소비 2026년 초 이후 14배 증가 — 자체 하드웨어 토큰당 과금 없음 강조.
-#   관전: 로컬 상시 에이전트 하드웨어 시장의 공식화(OpenClaw·NemoClaw·Hermes를 마케팅 중심에 배치) —
-#   [프레임워크 14차] Muse Glimmer 30B 로컬 스택·Perplexity Portable Computer와 '로컬 에이전트 인프라'
-#   축, ⑰·75 TCO 축(토큰 14배·'rampocalypse' 속 진입가 인하) 편입. Apple FDA([산업 42차] 2번 OS 권한
-#   관문)과 '로컬 상시 에이전트'의 하드웨어 편 vs OS 권한 편 교차 관전.
+# 이월: industry 43차 대상 — ① OpenAI 안전 보고서 책임자 사직(2026-10-03 The Atlantic 기고·
+#   TechCrunch 보도, 10-04 수집, ⭐⭐⭐⭐): 주요 제품 출시 안전 보고서 작성을 주도한 David Robinson이
+#   "회사 문화가 망가졌다"며 사직 — '반복 배포(iterative deployment)'는 주기적 실패를 보장하고
+#   시스템이 강해질수록 실패 규모가 커진다는 주장. Hugging Face 침해·불량 에이전트 사례 인용,
+#   원자력·공항식 다중 안전장치 부재·정렬 측정의 조악함(coarse) 지적, "안전을 위한 유인은 회사
+#   밖에서 와야 한다" 결론. 대변인 반박: 필요 시 학습 중단·모델 보류, 제3자 평가 확대·실시간
+#   모니터링 진행. 관전: 81 정부기관 통지·85 학습 중단·86 '폭주' 언어 논쟁·93 Astra 철회·72
+#   메디케어 침입과 'OpenAI 안전 거버넌스' 축 통합 — '자율 규제 한계' 프레임 강화 여부, 공급사
+#   안전 거버넌스의 도입 평가 항목화(Jacob Coxon 발언 연장선, 같은 주 트럼프-경영진 비구속적
+#   안전 서약과 중첩). 대응 프레임: '운영 공학(safety engineering)으로의 재정의' vs '개발 방식
+#   자체의 구조적 결함'.
+# (직전 이월 처리 완료: DGX Spark 64GB → tool 31차 1번으로 반영)
 # (참고) agent-wow(⭐, research 분류)는 framework 25차 보조로 반영 완료 — research 24차 대상 없음.
 #
 #
@@ -267,3 +276,25 @@
 #             98 Pi 1.0·Figma MCP — Codemode 가상 모델(계획 Opus·구현 GPT·전환 Jev)의 실측 성능·비용,
 #                Pi Durable의 성숙(실험→안정), Figma 화이트리스트 배제의 공식 확인·접근 권한 축(70)
 #                편입 여부 → framework 25차 후속.
+# 숙제(신규, 31·37차): 99 DGX Spark 64GB — 2대 클러스터 1.7배(Qwen 3.8 27B)의 독립 재현, $4,999
+#                시작가·10월 출시 이행, Sync Model Launcher(이달 말 예정)·NemoClaw의 실제 채택,
+#                에이전트 토큰 14배 증가 수치의 검증, 2대 $9,998의 상시 에이전트 TCO 실측 → tool 31차
+#                후속. (⑰·75 TCO 축·[산업 42차] Apple FDA와 '로컬 상시 에이전트' 하드웨어 편 vs OS
+#                권한 편 교차 관전)
+#             100 IBM Bob — 가격 공개 시점, 폐쇄막 실배치 사례(업데이트·텔레메트리·도구 호출의 내부
+#                폐쇄 운영 난도), 모델 미번들 구조의 조달 관행(지원 목록 조달·라이선스 책임 배분),
+#                멀티모델 라우팅 로드맵 이행 → tool 31차 후속. (29차 계약 기준표 '모델 조달 책임' 항목·
+#                [모델 37차] Kolibri와 주권 스택 교차)
+#             101 Prime Inference — 하루 1조 토큰·p90 40% 절감·가동률 100% 주장의 독립 검증,
+#                prefill/decode 1:4·KV 캐시 인식 라우팅의 타 서빙 플랫폼 확산, GLM-5.3 OpenRouter
+#                속도 순위 추이, Together·Fireworks와의 가격 경쟁 귀결 → tool 31차 후속. (⑰ TCO 축·
+#                16차 비용 4계층·[모델 36차] GLM-5.3 오픈웨이트와 통합 관전)
+#             102 Kolibri — 'Nemotron 3 Super급 맞먹음'·τ³-bench banking 38.1의 독립 재현, 유럽
+#                공공·규제 산업 조달 채택 사례, 78B-A3B의 온프레미스 서빙 비용 실측, Kolibri Origin→
+#                Kolibri 파이프라인(수백 건 ablation·무인 사전학습) 재현 여부, 중국계 오픈 모델
+#                (Qwen·GLM) 대체 진행 → models 37차 후속. (65 Qwen·㊽ jina-ocr '오픈 조임' vs 전면
+#                개방 분기·28차 Koa·88 Saaras V4 주권·지역 축 통합 관전)
+#             103 MAI-Transcribe-2-Streaming — AA 1위(38개 중)의 지속·독립 재측정, $0.54 도입가
+#                이후 가격(xAI·Meta 대비 비쌈·Google 추정과 비슷), OpenAI Realtime 호환 경로의 사실상
+#                표준화 여부(타 음성 모델의 동조), MAI-Voice-2.1과의 음성 루프 실측 → models 37차 후속.
+#                (55 Grok VT·88 Saaras 음성 입력 축·54 '인터페이스 표준' 축 갱신)

@@ -2,11 +2,11 @@
 
 ## 메타데이터
 - **카테고리**: frameworks
-- **관련 뉴스 수**: 45
-- **최종 업데이트**: 2026-10-03 (25차 갱신)
+- **관련 뉴스 수**: 46
+- **최종 업데이트**: 2026-10-05 (26차 갱신)
 
 ## 요약
-2026년 6월 현재, 에이전트 프레임워크 생태가 8개 주력 SDK로 정리되었다. Microsoft Agent Framework(MAF)가 BUILD 2026에서 Agent Harness·CodeAct·Foundry Hosted Agents를 발표하며 프로덕션 배포 인프라를 통합했고, Anthropic은 Claude Agent SDK를 별도 월간 크레딧 과금제로 전환했다. Cisco의 FAPO는 파이프라인 단계별 자동 디버깅을, 화웨이는 OS 수준 통합이라는 각기 다른 접근을 보여준다. MCP가 200+ 서버를 확보하며 사실상 표준 도구 프로토콜로 자리 잡았고, ACP가 A2A로 통합되며 Linux Foundation 산하로 이관되었다. 9월 들어 하네스의 성숙 축이 세 방향으로 뚜렷해졌다 — 운영 내구성(OpenClaw 원자적 업데이트, 22차), AI 친화성(Flet MCP 서버, 22차), 그리고 비용 효율(AWS Strands Harness의 하네스별 비용·정확도 비교표, 23차). 9월 넷째 주 말, '상시 가동'이 하네스 경쟁의 제4축으로 확립됐다(24차) — OpenAI Dots가 dot마다 전용 클라우드 컴퓨터·브라우저를 부여해 로그오프 후에도 과제를 추구하게 했고(읽기 전용 백그라운드·승인 규칙 등 권한 계층 설계 동반), Shopify는 WebMCP를 체크아웃까지 열어 get·update·complete 3도구와 구매자 승인으로 거래 완결을 프로토콜에 맡겼다. 10월 첫째 주, 하네스의 조립 단위가 변했다(25차) — Earendil Pi 1.0이 Jev 같은 비LLM 판단 모델을 1급 구성요소(Codemode)로 편입하고 '계획 Opus·구현 GPT·전환 판단 Jev'의 가상 모델 데모로 판단 계층의 하네스 편입 실측을 열었으며, 장기 실행용 Pi Durable을 별도 패키지로 분리해 내구성 실행 진영(Restate·Temporal)에 오픈소스 하네스가 합류했다.
+2026년 6월 현재, 에이전트 프레임워크 생태가 8개 주력 SDK로 정리되었다. Microsoft Agent Framework(MAF)가 BUILD 2026에서 Agent Harness·CodeAct·Foundry Hosted Agents를 발표하며 프로덕션 배포 인프라를 통합했고, Anthropic은 Claude Agent SDK를 별도 월간 크레딧 과금제로 전환했다. Cisco의 FAPO는 파이프라인 단계별 자동 디버깅을, 화웨이는 OS 수준 통합이라는 각기 다른 접근을 보여준다. MCP가 200+ 서버를 확보하며 사실상 표준 도구 프로토콜로 자리 잡았고, ACP가 A2A로 통합되며 Linux Foundation 산하로 이관되었다. 9월 들어 하네스의 성숙 축이 세 방향으로 뚜렷해졌다 — 운영 내구성(OpenClaw 원자적 업데이트, 22차), AI 친화성(Flet MCP 서버, 22차), 그리고 비용 효율(AWS Strands Harness의 하네스별 비용·정확도 비교표, 23차). 9월 넷째 주 말, '상시 가동'이 하네스 경쟁의 제4축으로 확립됐다(24차) — OpenAI Dots가 dot마다 전용 클라우드 컴퓨터·브라우저를 부여해 로그오프 후에도 과제를 추구하게 했고(읽기 전용 백그라운드·승인 규칙 등 권한 계층 설계 동반), Shopify는 WebMCP를 체크아웃까지 열어 get·update·complete 3도구와 구매자 승인으로 거래 완결을 프로토콜에 맡겼다. 10월 첫째 주, 하네스의 조립 단위가 변했다(25차) — Earendil Pi 1.0이 Jev 같은 비LLM 판단 모델을 1급 구성요소(Codemode)로 편입하고 '계획 Opus·구현 GPT·전환 판단 Jev'의 가상 모델 데모로 판단 계층의 하네스 편입 실측을 열었으며, 장기 실행용 Pi Durable을 별도 패키지로 분리해 내구성 실행 진영(Restate·Temporal)에 오픈소스 하네스가 합류했다. 10월 둘째 주, 하네스의 교체 단위가 전층으로 일반화됐다(26차) — DeepSeek Harness v0.2가 모델 어댑터·도구 레지스트리·에이전트 루프까지 모두 플러그인으로 교체하는 구조와 공식 데스크톱 앱을 갖추고, 코딩을 넘어 일상 업무(문서 처리·예약 실행)로 영역을 넓혔다.
 
 ## 주요 프레임워크
 
@@ -783,3 +783,20 @@ Pizza Bot은 백그라운드 에이전트의 통제 UI(수신함+승인 큐) 표
 하네스의 조립 단위가 'LLM 단일 모델'에서 'LLM+비LLM 판단 모델+내구성 기반'으로 이동했다. 관전점: ① Codemode 가상 모델 패턴의 실측 성능·비용(⑰ TCO 축 편입) ② Pi Durable의 성숙과 내구성 실행 엔진(Restate·Temporal) 결합 여부 ③ Figma 화이트리스트 갈등의 공식화와 접근 권한 축(70) 편입 (신설 98)
 
 > 💡 **교차 참조**: [모델 36차](models-overview.md) 판단 계층 클론 전쟁의 하네스 편 실측 — Jev가 계획-구현-전환 루프에서 어느 자리를 차지하는지. [산업 42차](industry-trends.md) Restate가 같은 내구성 실행 축의 자본 편, Pi Durable이 오픈소스 편. agent-wow의 code-as-action은 Minecraft·Factorio 계열 평가 환경([연구 동향](research-overview.md))의 MMORPG 확장 — '도구를 주는 하네스'(MCP 중심)와 '도구를 만들게 하는 하네스'(code-as-action)라는 설계 스펙트럼의 양끝이 같은 주에 관측됨.
+
+## 2026년 10월 26차 갱신: 하네스의 전층 교체와 데스크톱 도달 — DeepSeek Harness v0.2
+
+25차가 하네스의 조립 단위를 'LLM+비LLM 판단+내구성'로 확장했다면, 26차는 조립 원칙 자체의 일반화다. DeepSeek Harness v0.2는 모델 어댑터·도구 레지스트리·에이전트 루프까지 모든 계층을 플러그인으로 교체 가능하게 만들고, 공식 데스크톱 앱으로 코딩을 넘어 일상 업무에 도달했다 — 고정점을 줄이는 미니멀 진영(Pi)과 교체 가능성을 최대화하는 전층 플러그인 진영(dsh)이 같은 MIT 오픈소스 안에서 병존하게 됐다.
+
+### DeepSeek Harness v0.2 — 전층 플러그인 하네스, macOS·Windows 공식 앱 동반 ⭐⭐
+
+**출처**: [MarkTechPost](../records/2026-10-05-deepseek-harness-v0-2-desktop-app.md) (10/3 발표·10/5 수집, major-media, 교차 확인 1)
+
+- **내용**: MIT 라이선스 오픈소스 하네스 dsh의 v0.2 프리뷰와 함께 macOS(Apple silicon)·Windows(64비트) 공식 데스크톱 앱 공개(deepseek.com/harness, `npx @deepseek-ai/dsh web`). 모델 어댑터·도구 레지스트리·에이전트 루프가 모두 플러그인 — DeepSeek 모델 전용이 아니며 서드파티 제공자·OpenAI 호환 엔드포인트 지원. 일상 업무 확장: 문서·스프레드시트·PDF로 차트·슬라이드 생성, 반복 프롬프트 예약 실행 'Automation Task' 플러그인, 생성물 미리보기 사이드바. 세션 4모드 — Standard(기본)·Creator(채팅 설명만으로 에이전트가 플러그인을 직접 생성·설치)·PTC(별도 프로세스에서 Node 코드로 도구 호출)·Minimal(벤치마크용 경량 루프). v0.2.1-alpha.1에 실험적 'Claude Code Mods' 호환 계층(완전한 호환은 비약속). GitHub 스타 24만·포크 2.9만(기사 인용). 앞으로 호환성을 깨는 변경이 이어질 것이라 경고
+- **축 배치**: ① 전층 교체는 [25차](#2026년-10월-25차-갱신-미니멀-하네스의-10--판단-계층의-편입과-내구성의-분리) Codemode(판단 계층 편입)의 원칙적 확장 — 하네스의 어느 계층도 고정점이 아니게 되는 '조립의 완전화'. 벤더 중립 설계(OpenAI 호환 엔드포인트)는 [모델 36차](models-overview.md) 판단 계층의 'API 우선·교체품' 구도가 하네스에서도 반복됨 — 모델 교체 자유가 하네스 경쟁 변수로 ② 데스크톱 앱·일상 업무 겨냥은 [24차](#2026년-9월-24차-갱신-상시-에이전트의-제품화--지속성의-하드웨어화와-거래의-프로토콜화) '상시 가동' 축의 소비자 도달 편 — OpenClaw류 셀프호스팅 하네스 계열에 중국 프런티어 랩이 정식 진입. Automation Task(예약 실행)는 상시 가동의 가벼운 형태 ③ Creator 모드는 agent-wow(25차 보조)의 code-as-action — 에이전트가 도구를 스스로 만든다 — 을 플러그인 생태로 제도화한 형태
+- **관전**: v0.2의 안정화 궤도(파괴적 변경의 수렴), Claude Code Mods 호환 계층의 완성도·실측, Creator 모드가 만드는 플러그인 품질, 24만 스타 생태계의 지속성, 데스크톱 앱이 [산업 42차](industry-trends.md) Apple Full Disk Access 통제(95)의 적용 대상이 되는 첫 충돌 (신설 107)
+
+### 26차 갱신 요약
+오픈소스 하네스 경쟁이 미니멀 코어(Pi — 검증된 것만 채택)와 전층 플러그인+데스크톱 도달(dsh — 무엇이든 교체 가능)으로 양분됐다. 관전점: ① dsh의 안정화 속도와 24만 스타 생태계 유지 ② Mods 호환 계층이 Claude Code 체계의 사실상 표준화를 가속하는지 ③ 일상 업무 하네스가 OS 권한 관문([산업 42차](industry-trends.md) Apple FDA)과 충돌하는 첫 사례 ④ 예약 실행·문서 처리가 '상시 가동' 제4축의 저가 소비자 형태로 정착하는지
+
+> 💡 **교차 참조**: [산업 42차](industry-trends.md) Apple Full Disk Access 통제와 '데스크톱 에이전트 대중화 vs OS 권한 관문' 대칭 관전(95·107). [모델 36차](models-overview.md) 판단 계층 교체품 구도의 하네스 확장. [도구 동향](tools-overview.md) 51 AGENTS.md·플러그인 생태 논의와 '규약·확장 표준화' 축. 25차 agent-wow code-as-action의 제도화 편(Creator 모드) — 같은 설계 스펙트럼의 양끝이 이제 한 생태계 안에 공존.

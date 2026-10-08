@@ -1,4 +1,21 @@
 # 다음 위키 갱신 대기
+# 2026-10-08: industry (45차, 3건 — 이월 2건 포함: AI 에이전트 웹사이트 차단(⭐⭐ 이월 처리)·
+#             Claude for Startups 확대(⭐⭐ 이월 처리) + Nous Research 시리즈B $90M(⭐⭐⭐)
+#             "문턱의 3층 — 사업체의 문, 개발자의 문, 수익화의 문" — 접근의 실측(의도적 차단 vs 우발적
+#             CAPTCHA 분리 관측, Meta·Walmart·Stripe·Sierra 등 에이전트-기업 통신 오픈 표준 착수 —
+#             70 아마존-Muse·87 플립카트 '소비자 에이전트 거래' 축의 접근 단계), 생태 점유율의 유통화
+#             (Team 1년 무료·$1,000 크레딧·Marketplace 접근 — 갇힘 효과를 유통 비용으로 전환), 오픈
+#             하네스의 엔터프라이즈 수익화($1.5B·토큰 2.5% 자체 추정 — 독립 검증 관전)), models (40차,
+#             2건 — Claude Haiku 5.5(⭐⭐⭐⭐⭐)·GPT-6 Intelligent UI(⭐⭐⭐⭐⭐)
+#             "부품값의 붕괴와 접점의 흡수" — 소형 모델 가격 1/10(10만 토큰 이하 $0.10/$0.50)·
+#             Terminal-Bench 0.0%→39.2%·Haiku 최초 effort 조절·Sonnet 캐시 읽기 절반, 12억 사용자
+#             생성형 UI(컴포넌트 라이브러리+컴파일러·제한된 어휘)·유료 Sol/무료 Luna 계층·interleaved
+#             thinking(검색 질문 44% 빠른 답변 시작)) 갱신 완료.
+#             이월: framework 1건(Docker Agent YAML 멀티에이전트 CLI ⭐⭐⭐⭐ — framework 27차 대상.
+#             YAML 선언형 정의·MCP 도구·공급자 무관 모델·OCI 레지스트리 push·pull, Docker Desktop
+#             4.63+ 기본 탑재 — '에이전트=배포 가능한 패키지' 축, 8/10 Docker Sandboxes와 작성→격리→
+#             배포 일원화 전략으로 편입 예정). 신설 숙제 116~118.
+# (직전 2026-10-07: models 39차·research 24차 완료 — 상세 아래)
 # 2026-10-07: models (39차, 2건 — Mistral Large 4 'Le Chonk'(⭐⭐⭐⭐⭐)·EmbeddingGemma 2(⭐⭐⭐⭐)
 #             "무게의 양극 — 주권의 무게와 부품의 무게" — 1T-A49B 멀티모달 MoE 유럽 자체 인프라 학습·
 #             가중치 이달 말 공개·사이버 82% '거부 없음' 판매점으로 오픈웨이트 3극의 유럽 편 대형 후보,
@@ -379,3 +396,15 @@
 #             공개 서비스의 에이전트 접근 제어 강화 여부, 독립 관측망의 제도화(에이전트 트래픽 관측
 #             표준·스텔스형 대응의 등장) → industry 44차 3번 후속. (58 Vals '독립 평가'와 '독립 관측'
 #             대칭 축)
+
+# 숙제(신규, 40·45차): 116 Haiku 5.5 — Terminal-Bench 39.2·OSWorld 72.4·'75% 절감'의 독립 실측(AA
+#             토큰당·과제당 비용), effort 조절의 라우팅 단순화 효과·리드+사이드킥(Devin Fusion형) 멀티에이전트
+#             비용 구조 독립 검증, 소형 티어 가격전의 경쟁 응답(GPT-6 Luna·Gemini Flash) → models 40차 후속.
+#             (⑰ TCO·75 Opus·76 Luna·32차 프런티어 인하 축 통합)
+#             117 GPT-6 Intelligent UI — 컴포넌트 라이브러리·컴파일러의 개방 여부(API·서드파티 컴포넌트),
+#             interleaved thinking의 학습 목표·평가 방법 공개, 생성형 UI가 프론트엔드 개발 영역을 흡수하는
+#             정도·경쟁사(Artifacts·Gemini) 동조, 시각 요소 축소 설정·디자인 판단력 개선 → models 40차 후속.
+#             (28차 인터페이스 분화·[프레임워크] 승인 큐·Dots 상시 에이전트와 교차)
+#             118 Nous Hermes — 연환산 $100M 도달·매출 구조(소비자 vs 기업), '전 세계 토큰 2.5%·2,400만
+#             클론' 주장의 독립 검증, Hermes for Businesses의 '데이터 비공개' 배포 구조 실현 방식 →
+#             industry 45차 후속. (71 Meta-OpenClaw 규약·[프레임워크] 하네스 경쟁·주권 스택과 교차)

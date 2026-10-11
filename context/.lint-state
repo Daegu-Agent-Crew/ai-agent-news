@@ -1,30 +1,33 @@
 {
-  "lastLint": "2026-10-04",
-  "lastLintEpoch": 1791122798,
+  "lastLint": "2026-10-11",
+  "lastLintEpoch": 1791874800,
   "filesChecked": 5,
   "filesChangedSinceLastLint": ["frameworks-overview.md", "industry-trends.md", "models-overview.md", "research-overview.md", "tools-overview.md"],
-  "totalLinksChecked": 1569,
-  "recordLinksChecked": 1266,
-  "anchorLinksChecked": 284,
+  "totalLinksChecked": 1643,
+  "recordLinksChecked": 1334,
+  "anchorLinksChecked": 290,
   "internalFileLinksChecked": 0,
   "externalLinksChecked": 19,
-  "criticalFixed": 1,
-  "warnings": 4,
+  "externalUniqueChecked": 14,
+  "criticalFixed": 0,
+  "warnings": 3,
+  "resolvedWarnings": 1,
   "details": {
-    "criticalFixed": [
-      "frameworks-overview.md L778: 깨진 앵커 수정 — '#2026년-9월-23차-갱신-하네스-비용의-정량화-감싸는-...' → '정량화--감싸는' 이중 하이픈 누락 (GitHub 슬러그 규칙: ' — \"' → '--')"
-    ],
+    "criticalFixed": [],
     "lintNotes": [
-      "9/27 린트 이후 5개 활성 문서 총 ~424줄 추가. 전수 링크 재검사(파일 1266·앵커 284·외부 19) 결과 크러티컬 1건(앵커) — 수정 완료 후 잔여 0.",
-      "메타데이터 5건 모두 정상 (카테고리·최종 업데이트·갱신 차수 기재). 최신 갱신: models·tools 10/4, frameworks·industry 10/3, research 10/1.",
-      "신규 섹션(Earendil Pi 1.0 Codemode, Aleph Alpha Kolibri, MAI-Transcribe-2-Streaming, DGX Spark 64GB, IBM Bob 등)이 최근 records와 주제 일치 — 모순 징후 없음.",
-      "주의: 슬러그 검증 시 GitHub 규칙(특수문자 제거 후 잔여 공백→하이픈, trailing dash 포함) 정확히 구현해야 오탐 방지 — 단순 strip 기반 슬러거는 106건 오탐 발생."
+      "10/4 린트 이후 5개 활성 문서 총 ~473줄 추가 (frameworks 27차·industry 47차·models 41차·research 25차·tools 32차). 전수 링크 재검사(파일 1334·앵커 290·외부 19건/유니크 14) 결과 크리티컬 0건.",
+      "외부 URL 14개 유니크 전수 HTTP 확인 — 전부 200 OK (arXiv·GitHub·TechCrunch·Anthropic·Nature·Docker 등).",
+      "메타데이터 5건 모두 정상. 최신 갱신: research·tools 10/11, industry·models 10/10, frameworks 10/9 — 각 문서 최신 섹션 차수와 일치.",
+      "신규 섹션(Docker Agent OCI 배포, DeepSeek Harness v0.2, Gemini 통합 에이전트, Manus $500M, Reflection Beam, Mistral Large 4, Haiku 5.5, GPT-6 Intelligent UI, Anthropic 평가 인터넷 차단, NVIDIA PivotOPD 등) 출처 링크 전부 실재 records와 대응 — 모순 징후 없음. 산업 47차(필라델피아 허위 제보)↔연구 25차(Anthropic 보고서 본체) 교차 서술 정합 확인.",
+      "슬러그 검증은 GitHub 규칙 정확 구현 버전 사용(특수문자 제거 후 잔여 공백→하이픈, 중복 헤더 -N 접미) — 오탐 0."
     ],
     "warnings": [
-      "⚠️ human-roles.md & human-roles-in-agentic-era.md: 고립 페이지 (5개 활성 위키에서 incoming links 0). 13회 연속 지적, 98일 경과 (2026-06-28~). 병합 후 리다이렉트 링크 추가 권장.",
-      "⚠️ human-roles.md & human-roles-in-agentic-era.md: 내용 중복('2026년 6월 인간의 역할' 주제 동일) — 병합 권장. 13회 연속 지적.",
-      "⚠️ human-roles-in-agentic-era.md: 카테고리 'industry'이나 실제 내용은 'analysis'에 가까움. 13회 연속 지적.",
-      "⚠️ (신규) 2026-10-03 OpenAI 안전 보고서 책임자 사직 레코드(2026-10-04-openai-safety-employee-resigns-culture-broken.md)가 위키에 미반영 — 수집 D+1로 다음 갱신 주기 반영 예정, 다음 린트에서 재확인."
+      "⚠️ human-roles.md & human-roles-in-agentic-era.md: 고립 페이지 (5개 활성 위키에서 incoming links 0). 14회 연속 지적, 105일 경과 (2026-06-28~). 병합 후 리다이렉트 링크 추가 권장.",
+      "⚠️ human-roles.md & human-roles-in-agentic-era.md: 내용 중복('2026년 6월 인간의 역할' 주제 동일) — 병합 권장. 14회 연속 지적.",
+      "⚠️ human-roles-in-agentic-era.md: 카테고리 'industry'이나 실제 내용은 'analysis'에 가까움. 14회 연속 지적."
+    ],
+    "resolvedWarnings": [
+      "✅ (10/4 지적 해소) 2026-10-03 OpenAI 안전 보고서 책임자 사직 레코드 — industry-trends.md 47차에 반영 완료 (출처: 2026-10-04-openai-safety-employee-resigns-culture-broken.md)."
     ]
   }
 }

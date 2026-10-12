@@ -11,6 +11,13 @@ WIKI = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "context",
 FILES = ["frameworks-overview.md", "models-overview.md", "research-overview.md",
          "tools-overview.md", "industry-trends.md"]
 DATED = re.compile(r"## 2026년 \d+월 \d+차")
+WIKI_LINK = re.compile(r"\]\(((?:frameworks-overview|models-overview|research-overview|tools-overview|industry-trends|human-roles|human-roles-in-agentic-era)\.md)")
+
+
+def relink(block):
+    """archive/ 하위로 옮기므로 상대 링크를 한 단계 올린다."""
+    block = WIKI_LINK.sub(r"](../\1", block)
+    return block.replace("](../records/", "](../../records/")
 
 for name in FILES:
     path = os.path.join(WIKI, name)
@@ -24,7 +31,7 @@ for name in FILES:
         continue
     arch_path = os.path.join(WIKI, "archive", f"{name[:-3]}-archive.md")
     with open(arch_path, "a", encoding="utf-8") as fa:
-        fa.write("".join(b if b.endswith("\n") else b + "\n" for i, b in enumerate(blocks) if i in move))
+        fa.write("".join(relink(b) if b.endswith("\n") else relink(b) + "\n" for i, b in enumerate(blocks) if i in move))
     kept = "".join(b for i, b in enumerate(blocks) if i not in move)
     open(path, "w", encoding="utf-8").write(head + kept)
     print(f"{name}: {len(move)}개 차수 → archive")

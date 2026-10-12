@@ -20,9 +20,9 @@
 ### MCP 생태계 확장 (2026년 6월~7월)
 MCP(Model Context Protocol)가 200개 이상의 서버 구현체를 보유하며 사실상 표준 도구 프로토콜로 확립되었다. 단일 설정 라인으로 Playwright, Slack, GitHub 등을 연결할 수 있게 만들었으며, 프레임워크가 도구 통합을 자체 구현하는 대신 표준 프로토콜에 위임하는 패러다임 전환을 보여준다. ACP(Agent Communication Protocol)가 Linux Foundation 산하에서 A2A(Agent-to-Agent) 프로토콜로 통합되어, 다중 벤더 에이전트 생태계의 기반이 마련되었다.
 
-> 🔧 **MCP 2026-07-28 스펙 업데이트**: 무상태 프로토콜 코어 전환 — `initialize/initialized` 핸드셰이크와 `Mcp-Session-Id` 헤더가 제거되고, 모든 요청이 `_meta` 필드에 자기 설명 정보를 포함하는 request/response 방식으로 변경. 일반 라운드 로빈 로드 밸런서 뒤의 어떤 인스턴스로도 요청 라우팅이 가능해져 쿠버네티스/서버리스 환경에서의 확장성이 극적으로 향상됨. 상태 유지 스트림 대신 MRTR(Multi Round-Trip Requests) 패턴으로 사용자 입력 처리. RFC 9207 발급자 검증, CIMD 기반 클라이언트 등록으로 보안 강화. 월간 5억 다운로드를 기록하는 MCP의 엔터프라이즈 확장성 확보. — [상세](../records/2026-07-29-mcp-spec-2026-07-28-stateless-protocol.md) ⭐⭐⭐⭐⭐ (7/28)
+> 🔧 **MCP 2026-07-28 스펙 업데이트**: 무상태 프로토콜 코어 전환 — `initialize/initialized` 핸드셰이크와 `Mcp-Session-Id` 헤더가 제거되고, 모든 요청이 `_meta` 필드에 자기 설명 정보를 포함하는 request/response 방식으로 변경. 일반 라운드 로빈 로드 밸런서 뒤의 어떤 인스턴스로도 요청 라우팅이 가능해져 쿠버네티스/서버리스 환경에서의 확장성이 극적으로 향상됨. 상태 유지 스트림 대신 MRTR(Multi Round-Trip Requests) 패턴으로 사용자 입력 처리. RFC 9207 발급자 검증, CIMD 기반 클라이언트 등록으로 보안 강화. 월간 5억 다운로드를 기록하는 MCP의 엔터프라이즈 확장성 확보. — [상세](../../records/2026-07-29-mcp-spec-2026-07-28-stateless-protocol.md) ⭐⭐⭐⭐⭐ (7/28)
 
-> 💡 **교차 참조**: MCP + A2A를 함께 사용하는 조직이 단일 프로토콜 방식보다 40~60% 빠른 워크플로우 개발 속도를 보인다는 2026년 채택 트렌드 분석이 있다. 자세한 내용은 [프레임워크 동향](frameworks-overview.md) 참조.
+> 💡 **교차 참조**: MCP + A2A를 함께 사용하는 조직이 단일 프로토콜 방식보다 40~60% 빠른 워크플로우 개발 속도를 보인다는 2026년 채택 트렌드 분석이 있다. 자세한 내용은 [프레임워크 동향](../frameworks-overview.md) 참조.
 
 ### 도구 라우팅 & 토큰 혁신 (2026년 7월)
 
@@ -31,9 +31,9 @@ MCP(Model Context Protocol)가 200개 이상의 서버 구현체를 보유하며
 - **기술**: Skill-Aware Decomposition(SAD) 피드백 루프 + 실행 그래프 생성
 - **성과**: 토큰 사용량 99% 이상 절감, 정확도 동시 향상
 - **의미**: 기업 AI가 수백~수천 개의 도구를 보유해도 비용 폭증 없이 운영 가능
-- **링크**: [VentureBeat 원문](../records/2026-07-05-alibaba-skillweaver-tool-routing.md) · [프레임워크 분석](../records/2026-07-03-alibaba-skillweaver-token-routing.md)
+- **링크**: [VentureBeat 원문](../../records/2026-07-05-alibaba-skillweaver-tool-routing.md) · [프레임워크 분석](../../records/2026-07-03-alibaba-skillweaver-token-routing.md)
 
-> 💡 **교차 참조**: SkillWeaver는 [프레임워크 동향](frameworks-overview.md)의 그래프 기반 오케스트레이션 패러다임과 연결된다. 도구 선택을 그래프 노드-엣지로 모델링하는 접근은 Google ADK Go 2.0 및 LangGraph와 같은 맥락. [AutoTool 연구](research-overview.md)도 유사한 도구 선택 최적화를 다룬다.
+> 💡 **교차 참조**: SkillWeaver는 [프레임워크 동향](../frameworks-overview.md)의 그래프 기반 오케스트레이션 패러다임과 연결된다. 도구 선택을 그래프 노드-엣지로 모델링하는 접근은 Google ADK Go 2.0 및 LangGraph와 같은 맥락. [AutoTool 연구](../research-overview.md)도 유사한 도구 선택 최적화를 다룬다.
 
 ## 코딩 & 개발 도구 (2026년 7월)
 
@@ -42,17 +42,17 @@ MCP(Model Context Protocol)가 200개 이상의 서버 구현체를 보유하며
 - **핵심**: '에이전트 우선(agent-first)' 개발 — 채팅 사이드바가 아닌, 결과를 설명하면 에이전트가 계획·편집·검사·반복 수행
 - **특징**: WeChat·Feishu·Telegram 원격 제어, GLM-5.2에 최적화
 - **비용**: 경쟁사(Cursor, Claude Code) 대비 최대 82% 저렴한 API 가격
-- **링크**: [VentureBeat 원문](../records/2026-07-03-zai-zcode-agentic-dev-environment.md)
+- **링크**: [VentureBeat 원문](../../records/2026-07-03-zai-zcode-agentic-dev-environment.md)
 
 ### BNB Agent Studio — 블록체인 AI 에이전트
 - **개발**: BNB Chain × AWS 협업
 - **핵심**: 15분 만에 자체 월렛을 갖춘 자율형 온체인 AI 에이전트 생성·배포
 - **적용**: 온체인 거래 자동화, 디지털 자산 관리, DeFi
 - **의미**: 블록체인 + AI 에이전트 융합이 상용화 단계 진입
-- **링크**: [Forbes 원문](../records/2026-07-03-bnb-agent-studio.md)
+- **링크**: [Forbes 원문](../../records/2026-07-03-bnb-agent-studio.md)
 
 ### 10 Modern Agentic Tools (2026 개발자 탐색 목록)
-2026년 개발자가 주목할 10가지 도구 카테고리가 정리되었다 ([원문](../records/2026-07-05-modern-agentic-tools.md)). 핵심 전환은 **단순 명령 실행 도구 → 협력적 에이전트 도구**:
+2026년 개발자가 주목할 10가지 도구 카테고리가 정리되었다 ([원문](../../records/2026-07-05-modern-agentic-tools.md)). 핵심 전환은 **단순 명령 실행 도구 → 협력적 에이전트 도구**:
 - 도구 간 전환, 반복 명령, API 연결 관리를 자동화하는 통합 에이전트 도구가 부상
 - 개발 워크플로우 전체를 조율하는 메타 도구(Meta-tool) 개념 등장
 
@@ -64,9 +64,9 @@ MCP(Model Context Protocol)가 200개 이상의 서버 구현체를 보유하며
 - **기반 기술**: Amazon Bedrock AgentCore (에이전트 구축·운영), SageMaker (맞춤형 ML), S3 + Apache Iceberg (데이터 레이크), ECS (애플리케이션 호스팅)
 - **에이전트 특징**: 캠페인별 지속적 자기 학습 — 결과를 바탕으로 구매자·판매자 양측 최적화. 유연한 타겟팅으로 선형·디지털 채널에서 브랜드·청중 세그먼트 조준.
 - **의미**: 미디어 업계 최초 대규모 end-to-end 에이전트 광고 상용화. 전통적 분할 광고 워크플로우를 자율 최적화 시스템으로 전환.
-- **링크**: [AWS Press Room 원문](../records/2026-07-09-warner-bros-agentic-ai-advertising.md)
+- **링크**: [AWS Press Room 원문](../../records/2026-07-09-warner-bros-agentic-ai-advertising.md)
 
-> 💡 **교차 참조**: AWS Bedrock AgentCore 기반 구축 사례로, [CRN Top 10](#aws-bedrock-agentcore)의 AgentCore를 미디어 도메인에 적용한 선례. [산업 동향](industry-trends.md)의 미디어 광고 산업 에이전트 전환 섹션과 연결.
+> 💡 **교차 참조**: AWS Bedrock AgentCore 기반 구축 사례로, [CRN Top 10](#aws-bedrock-agentcore)의 AgentCore를 미디어 도메인에 적용한 선례. [산업 동향](../industry-trends.md)의 미디어 광고 산업 에이전트 전환 섹션과 연결.
 
 ## 전문 도메인 도구 (2026년 7월)
 
@@ -77,12 +77,12 @@ MCP(Model Context Protocol)가 200개 이상의 서버 구현체를 보유하며
 - **기술**: '타겟 시험 모방(target trial emulation)' — 무작위 대조 시험의 핵심 기능을 일상 치료 데이터에 적용
 - **의미**: 임상 시험 설계의 시간과 비용을 획기적으로 단축; 노인·다병 환자 등 기존 시험에서 누락된 인구집단 포함 가능
 - **HITL**: 인간 전문가가 에이전트 작업을 모니터링하고 개입하여 교정 → 시스템이 실수 반복 감소
-- **링크**: [Weill Cornell 원문](../records/2026-07-08-weill-cornell-clinical-trial.md) · [Nature Communications 논문](https://www.nature.com/articles/s41467-026-74501-2)
+- **링크**: [Weill Cornell 원문](../../records/2026-07-08-weill-cornell-clinical-trial.md) · [Nature Communications 논문](https://www.nature.com/articles/s41467-026-74501-2)
 
-> 💡 **교차 참조**: EmulatRx의 다중 전문 에이전트 구조는 [Google ADK 2.0](frameworks-overview.md)의 결정론적 워크플로우 + 전문 에이전트 호출 모델과 같은 패러다임이다. 감독자 에이전트가 워크플로우를 관리하고 결과를 통합하는 구조는 ADK 2.0의 그래프 런타임과 유사하다. Berkeley의 [데이터 시스템 재설계 연구](research-overview.md)도 에이전트가 대량으로 데이터를 쿼리하는 패턴(에이전트 추측)을 예측하는데, EmulatRx의 정보학자 에이전트가 그 선례를 보여준다.
+> 💡 **교차 참조**: EmulatRx의 다중 전문 에이전트 구조는 [Google ADK 2.0](../frameworks-overview.md)의 결정론적 워크플로우 + 전문 에이전트 호출 모델과 같은 패러다임이다. 감독자 에이전트가 워크플로우를 관리하고 결과를 통합하는 구조는 ADK 2.0의 그래프 런타임과 유사하다. Berkeley의 [데이터 시스템 재설계 연구](../research-overview.md)도 에이전트가 대량으로 데이터를 쿼리하는 패턴(에이전트 추측)을 예측하는데, EmulatRx의 정보학자 에이전트가 그 선례를 보여준다.
 
 ## 엔터프라이즈 에이전트 제품 (CRN 2026 상반기 Top 10)
-CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문](../records/2026-07-05-crn-top-agentic-ai-products.md)). 기업용 에이전트 시장이 상용화 단계에 진입했음을 보여주는 지표:
+CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문](../../records/2026-07-05-crn-top-agentic-ai-products.md)). 기업용 에이전트 시장이 상용화 단계에 진입했음을 보여주는 지표:
 
 ### AWS Bedrock AgentCore
 - **핵심**: 프레임워크·모델·프로토콜 무관한 대규모 에이전트 운영 플랫폼. 보안 내장, AgentCore Web Search, Bedrock Managed Knowledge Base 추가
@@ -101,13 +101,13 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - **핵심**: 현지 인프라에서 에이전트 워크플로우 배포·확장. 클라우드 전용 접근의 비용·지연·데이터 주권 제약 해결
 - **의미**: 온프레미스 에이전트 배포 수요 존재 확인
 
-> 💡 **교차 참조**: 이 제품들은 [프레임워크 동향](frameworks-overview.md)의 '엔터프라이즈 플랫폼 vs 오픈소스 SDK' 이원화에서 관리형 엔터프라이즈 플랫폼에 해당한다. AWS Bedrock AgentCore는 [산업 동향](industry-trends.md)의 클라우드 플랫폼 경쟁과도 연결된다. AlphaCorp 분석에서 TCO가 핵심 기준으로 부상한 것도 이러한 엔터프라이즈 제품들의 비용 구조와 직결된다.
+> 💡 **교차 참조**: 이 제품들은 [프레임워크 동향](../frameworks-overview.md)의 '엔터프라이즈 플랫폼 vs 오픈소스 SDK' 이원화에서 관리형 엔터프라이즈 플랫폼에 해당한다. AWS Bedrock AgentCore는 [산업 동향](../industry-trends.md)의 클라우드 플랫폼 경쟁과도 연결된다. AlphaCorp 분석에서 TCO가 핵심 기준으로 부상한 것도 이러한 엔터프라이즈 제품들의 비용 구조와 직결된다.
 
 ## 음성 & 대화 도구 (2026년 7월)
 
 ### GPT-Live (OpenAI) — 풀-덱스 음성 대화 모델
 
-**출처**: [OpenAI — Introducing GPT-Live](../records/2026-07-13-introducing-gpt-live.md) ⭐⭐⭐⭐
+**출처**: [OpenAI — Introducing GPT-Live](../../records/2026-07-13-introducing-gpt-live.md) ⭐⭐⭐⭐
 
 - **발표**: 2026년 7월 8일
 - **핵심**: **풀-덱스 아키텍처** — 동시에 듣고 말할 수 있는 음성 모델. 기존 턴 기반(STT→LLM→TTS 3단계)의 근본적 한계 해결
@@ -117,13 +117,13 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - **에이전트 위임**: 웹 검색·추론·복잡한 작업을 배후 프론티어 모델에 위임하면서도 대화 흐름 유지
 - **의미**: AI 음성 상호작용이 턴 기반에서 **지속적 대화**로 전환. 고객 서비스, 교육, 엔터테인먼트 등 실시간 상호작용 분야 AI 채택 급증 예상
 
-> 💡 **교차 참조**: GPT-Live의 풀-덱스 아키텍처는 [모델 동향](models-overview.md)의 GPT-5.6 Ultra(병렬 에이전트)와 같은 방향성 — 단일 스레드에서 **동시 다중 처리**로 전환. 배후 모델에 작업을 위임하면서 대화를 유지하는 패턴은 [프레임워크 동향](frameworks-overview.md)의 ADK 2.0 결정론적+자율 하이브리드 모델과 유사하다.
+> 💡 **교차 참조**: GPT-Live의 풀-덱스 아키텍처는 [모델 동향](../models-overview.md)의 GPT-5.6 Ultra(병렬 에이전트)와 같은 방향성 — 단일 스레드에서 **동시 다중 처리**로 전환. 배후 모델에 작업을 위임하면서 대화를 유지하는 패턴은 [프레임워크 동향](../frameworks-overview.md)의 ADK 2.0 결정론적+자율 하이브리드 모델과 유사하다.
 
 ## 생산성 에이전트 도구 (2026년 7월)
 
 ### ChatGPT Work (OpenAI) — 야심찬 프로젝트를 위한 AI 에이전트
 
-**출처**: [OpenAI — ChatGPT for Your Most Ambitious Work](../records/2026-07-13-chatgpt-for-your-most-ambitious-work.md) ⭐⭐⭐⭐⭐
+**출처**: [OpenAI — ChatGPT for Your Most Ambitious Work](../../records/2026-07-13-chatgpt-for-your-most-ambitious-work.md) ⭐⭐⭐⭐⭐
 
 - **발표**: 2026년 7월 9일
 - **핵심**: ChatGPT 내 에이전트 — 앱·워크플로우에서 정보를 수집하여 시트, 슬라이드, 문서, 웹 앱 등 **완성된 자료**를 생성
@@ -136,13 +136,13 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - **초기 성과**: OpenAI 내부 영업팀 — 발견 대화를 24시간 내 POC로 전환 (기존 수주 소요). 재무팀 — 월간 마감·예측을 며칠에서 시간으로 단축
 - **의미**: AI가 단순 대화 도구에서 **복잡한 프로젝트의 협업 파트너**로 진화하는 결정적 사례. 인간의 창의성과 AI의 실행력이 결합되는 새로운 협업 패러다임
 
-> 💡 **교차 참조**: ChatGPT Work의 배후 모델인 GPT-5.6은 [모델 동향](models-overview.md)에서 Microsoft 365 Copilot에도 탑재되었다. 같은 모델이 엔터프라이즈 생산성 도구(M365)와 소비자/프로 에이전트(ChatGPT Work) 양쪽에 배포되며, OpenAI의 **양면 공략 전략**을 보여준다. Codex 통합은 [코딩 도구](#zcode-zai--glm-52-전용-에이전트-개발-환경) 생태계와도 연결된다.
+> 💡 **교차 참조**: ChatGPT Work의 배후 모델인 GPT-5.6은 [모델 동향](../models-overview.md)에서 Microsoft 365 Copilot에도 탑재되었다. 같은 모델이 엔터프라이즈 생산성 도구(M365)와 소비자/프로 에이전트(ChatGPT Work) 양쪽에 배포되며, OpenAI의 **양면 공략 전략**을 보여준다. Codex 통합은 [코딩 도구](#zcode-zai--glm-52-전용-에이전트-개발-환경) 생태계와도 연결된다.
 
 ## 컴퓨터 사용 에이전트 (2026년 7월)
 
 ### Claude Computer Use (Anthropic) — AI가 컴퓨터를 직접 조작하다
 
-**출처**: [Anthropic — Claude 3.5 Sonnet Computer Use](../records/2026-07-15-anthropic-claude-computer-use.md) ⭐⭐⭐⭐
+**출처**: [Anthropic — Claude 3.5 Sonnet Computer Use](../../records/2026-07-15-anthropic-claude-computer-use.md) ⭐⭐⭐⭐
 
 - **발표**: 2026년 7월 10일
 - **핵심**: Claude 3.5 Sonnet에 **컴퓨터 사용 기능** 추가 — AI 에이전트가 웹 브라우저 조작, 문서 작성, 데이터 분석 등 실제 컴퓨터 작업을 자율 수행
@@ -155,13 +155,13 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - **안전성**: 철저한 테스트 후 점진적 롤아웃, 사용자 피드백 수집 중
 - **의미**: AI가 단순 대화를 넘어 **실제 디지털 작업을 수행**하는 단계 진입. 업무 자동화의 새로운 시대 개막.
 
-> 💡 **교차 참조**: Claude Computer Use는 브라우저 자동화(agent-browser, browser-use 등)의 상위 개념으로, 웹 브라우저뿐 아니라 운영체제 전체를 조작 대상으로 삼는다. [프레임워크 동향](frameworks-overview.md)의 Claude Agent SDK와 자연스럽게 통합되며, MCP 생태계의 도구 호출과 보완적이다. Meta Muse Spark 1.1([모델 동향](models-overview.md))의 컴퓨터 사용 능력과 경쟁하는 동일 트렌드. 개인정보·데이터 보안 규제 논의가 [산업 동향](industry-trends.md)에서 부각될 것.
+> 💡 **교차 참조**: Claude Computer Use는 브라우저 자동화(agent-browser, browser-use 등)의 상위 개념으로, 웹 브라우저뿐 아니라 운영체제 전체를 조작 대상으로 삼는다. [프레임워크 동향](../frameworks-overview.md)의 Claude Agent SDK와 자연스럽게 통합되며, MCP 생태계의 도구 호출과 보완적이다. Meta Muse Spark 1.1([모델 동향](../models-overview.md))의 컴퓨터 사용 능력과 경쟁하는 동일 트렌드. 개인정보·데이터 보안 규제 논의가 [산업 동향](../industry-trends.md)에서 부각될 것.
 
 ## 엔터프라이즈 에이전트 플랫폼 (2026년 7월)
 
 ### Microsoft Azure AI Agent Service — 비즈니스 자동화의 새로운 전선
 
-**출처**: [Microsoft — AI Agents at Work](../records/2026-07-17-microsoft-azure-ai-agents-work-business-automation.md) ⭐⭐⭐⭐
+**출처**: [Microsoft — AI Agents at Work](../../records/2026-07-17-microsoft-azure-ai-agents-work-business-automation.md) ⭐⭐⭐⭐
 
 - **발표**: 2026년 7월 16일
 - **핵심**: Azure AI Agent Service + Microsoft 365 Copilot 통합으로 기업용 에이전트 자동화 생태계 구축
@@ -176,11 +176,11 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - **에이전트 유형 전망**: 개인 비서, 비즈니스 프로세스 에이전트, 조직 간 에이전트가 협업하는 차세대 등장 예상
 - **의미**: 기업 AI가 단순 대화에서 벗어나 **실제 비즈니스 프로세스 자동화**로 전환. 개발자·비개발자 양쪽을 아우르는 도구로 시장 폭 확대
 
-> 💡 **교차 참조**: Azure AI Agent Service의 다중 에이전트 환경은 [프레임워크 동향](frameworks-overview.md)의 ADK 2.0 그래프 런타임 및 MAF CodeAct와 같은 오케스트레이션 패러다임이다. Copilot Studio의 자연어 빌더는 [모델 동향](models-overview.md)의 GPT-5.6 × M365 Copilot 통합과 직결된다. ChatGPT Work([위](#chatgpt-work-openai--야심찬-프로젝트를-위한-ai-에이전트))와 마이크로소프트의 엔터프라이즈 에이전트 전략은 같은 방향성을 공유한다.
+> 💡 **교차 참조**: Azure AI Agent Service의 다중 에이전트 환경은 [프레임워크 동향](../frameworks-overview.md)의 ADK 2.0 그래프 런타임 및 MAF CodeAct와 같은 오케스트레이션 패러다임이다. Copilot Studio의 자연어 빌더는 [모델 동향](../models-overview.md)의 GPT-5.6 × M365 Copilot 통합과 직결된다. ChatGPT Work([위](#chatgpt-work-openai--야심찬-프로젝트를-위한-ai-에이전트))와 마이크로소프트의 엔터프라이즈 에이전트 전략은 같은 방향성을 공유한다.
 
 ### Meta Llama Agent Framework — 상업용 오픈소스 에이전트 프레임워크
 
-**출처**: [Meta — Llama Agent Framework Open Source](../records/2026-07-18-meta-llama-agent-framework-open-source-commercial.md) ⭐⭐⭐⭐
+**출처**: [Meta — Llama Agent Framework Open Source](../../records/2026-07-18-meta-llama-agent-framework-open-source-commercial.md) ⭐⭐⭐⭐
 
 - **발표**: 2026년 7월 17일
 - **라이선스**: 관대한 상업용 오픈소스 (permissive commercial license)
@@ -191,13 +191,13 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - **전략**: Meta 웹 생태계(소셜 미디어, 메타버스)와 통합 가능 → 광범위한 도달
 - **의미**: 대형 테크의 오픈소스 에이전트 프레임워크로 **에이전트 개발의 기술 장벽을 크게 낮춤**. 중소기업·스타트업도 강력한 에이전트 솔루션 구축 가능. 보안 샌드박싱 내장으로 기업 환경 도입 촉진
 
-> 💡 **교차 참조**: Llama Agent Framework의 사전 구성 컴포넌트는 [프레임워크 동향](frameworks-overview.md)의 컴포넌트 기반 조립 패러다임(LangChain × NemoClaw)과 같은 방향성이다. 보안 샌드박싱은 [도구 생태계](#docker-sandboxes--ai-코딩-에이전트를-위한-일회용-microvm-격리-환경-)의 MCP 기반 격리 패턴과 보완적. 상업용 오픈소스 전략은 [산업 동향](industry-trends.md)의 에이전트 민주화 트렌드와 연결. 컴포넌트 재사용·표준화는 전체 에이전트 생태계의 성숙도를 높이는 핵심 요소.
+> 💡 **교차 참조**: Llama Agent Framework의 사전 구성 컴포넌트는 [프레임워크 동향](../frameworks-overview.md)의 컴포넌트 기반 조립 패러다임(LangChain × NemoClaw)과 같은 방향성이다. 보안 샌드박싱은 [도구 생태계](#docker-sandboxes--ai-코딩-에이전트를-위한-일회용-microvm-격리-환경-)의 MCP 기반 격리 패턴과 보완적. 상업용 오픈소스 전략은 [산업 동향](../industry-trends.md)의 에이전트 민주화 트렌드와 연결. 컴포넌트 재사용·표준화는 전체 에이전트 생태계의 성숙도를 높이는 핵심 요소.
 
 ## 엔터프라이즈 개발 플랫폼 (2026년 7월)
 
 ### Port AI Builder — 기업용 "Vibe Coding" 플랫폼
 
-**출처**: [InfoWorld — Port AI Builder](../records/2026-07-20-port-ai-builder-vibe-coding.md) ⭐⭐⭐⭐
+**출처**: [InfoWorld — Port AI Builder](../../records/2026-07-20-port-ai-builder-vibe-coding.md) ⭐⭐⭐⭐
 
 - **발표**: 2026년 7월 20일
 - **핵심**: 자연어로 에이전트 워크플로우를 생성·실행하는 기업용 "vibe coding" 플랫폼. 내장된 human-in-the-loop 검토/승인으로 품질과 통제력 유지
@@ -206,11 +206,11 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - **의미**: "vibe coding" 개념이 소비자 도구를 넘어 **기업용 프로덕션 환경**으로 진입. 자연어 개발과 기존 툴체인(VS Code, Codex 등) 통합으로 변환 저항 최소화
 - **링크**: [Port AI Builder](https://port.io/platform/port-ai-builder)
 
-> 💡 **교차 참조**: Port AI Builder의 human-in-the-loop 거버넌스는 [프레임워크 동향](frameworks-overview.md)의 ADK 2.0 HITL 내장화 트렌드와 일치한다. Oracle AI Agent Studio(친숙한 도구 + 기업 런타임 연결)와 같은 방향성 — pro-code와 vibe coding이 기업용 에이전트 구축의 양대 패러다임으로 부상.
+> 💡 **교차 참조**: Port AI Builder의 human-in-the-loop 거버넌스는 [프레임워크 동향](../frameworks-overview.md)의 ADK 2.0 HITL 내장화 트렌드와 일치한다. Oracle AI Agent Studio(친숙한 도구 + 기업 런타임 연결)와 같은 방향성 — pro-code와 vibe coding이 기업용 에이전트 구축의 양대 패러다임으로 부상.
 
 ### Macky AI — 첫 AI 비즈니스 컨설팅 플랫폼
 
-**출처**: [AI News — Macky AI Consulting Platform](../records/2026-07-20-macky-ai-business-consulting-platform.md) ⭐⭐⭐⭐
+**출처**: [AI News — Macky AI Consulting Platform](../../records/2026-07-20-macky-ai-business-consulting-platform.md) ⭐⭐⭐⭐
 
 - **발표**: 2026년 7월 20일
 - **핵심**: OpenAI 기반, 55개 비즈니스 카테고리를覆盖하는 프롬프트 없는 AI 컨설팅 플랫폼. 최대 3개 질문으로 원하는 결과물 생성
@@ -219,13 +219,13 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - **의미**: AI가 단순 도구를 넘어 **비즈니스 컨설팅이라는 전문 서비스 영역**으로 진입. SME의 디지털 격차 해소에 기여
 - **링크**: [Macky AI](https://macky.ai/)
 
-> 💡 **교차 참조**: Macky AI는 [산업 동향](industry-trends.md)의 에이전트 민주화 트렌드를 구체화한다. 비즈니스 컨설팅 자동화는 에이전트가 단순 반복 업무를 넘어 **전문 지식 영역**으로 확장됨을 시사. ChatGPT Work([위](#chatgpt-work-openai--야심찬-프로젝트를-위한-ai-에이전트))의 '복잡한 프로젝트 완수'와 방향성이 유사하되, SME를 타겟으로 한 접근이 차이점.
+> 💡 **교차 참조**: Macky AI는 [산업 동향](../industry-trends.md)의 에이전트 민주화 트렌드를 구체화한다. 비즈니스 컨설팅 자동화는 에이전트가 단순 반복 업무를 넘어 **전문 지식 영역**으로 확장됨을 시사. ChatGPT Work([위](#chatgpt-work-openai--야심찬-프로젝트를-위한-ai-에이전트))의 '복잡한 프로젝트 완수'와 방향성이 유사하되, SME를 타겟으로 한 접근이 차이점.
 
 ## 모바일 에이전트 (2026년 7월)
 
 ### Gemini Task Automation (Google) — 스마트폰에서 작동하는 첫 AI 에이전트
 
-**출처**: [The Verge — Gemini Task Automation Hands-on](../records/2026-07-23-gemini-task-automation-phone-agent.md) ⭐⭐⭐⭐
+**출처**: [The Verge — Gemini Task Automation Hands-on](../../records/2026-07-23-gemini-task-automation-phone-agent.md) ⭐⭐⭐⭐
 
 - **발표**: 2026년 7월 22일 정식 론칭
 - **지원 기기**: 삼성 갤럭시 S26 울트라, Google 픽셀 10 프로
@@ -236,13 +236,13 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - **한계**: 사람용 UI 탐색의 근본적 비효율성. 구글은 MCP나 Android App Functions 같은 구조화된 접근법으로의 전환을 예상
 - **의미**: 스마트폰에서 AI 에이전트가 처음으로 "진짜 일"을 하는 이정표. 발표장 데모가 아닌 실제 기기·실제 앱·실제 주문 완료
 
-> 💡 **교차 참조**: Gemini Task Automation의 GUI 탐색 방식은 [Claude Computer Use](#claude-computer-use-anthropic--ai가-컴퓨터를-직접-조작하다)의 OS 전체 조작과 같은 패러다임이지만, 모바일에 특화되어 있다. 사람용 UI를 AI가 탐색하는 "중간 단계" 해결책이라는 점에서 MCP 생태계(본 문서 상단)의 구조화된 도구 호출로 진화할 전환기적 기술. 삼성·구글 파트너십은 [산업 동향](industry-trends.md)의 모바일 AI 경쟁 가속화와 연결.
+> 💡 **교차 참조**: Gemini Task Automation의 GUI 탐색 방식은 [Claude Computer Use](#claude-computer-use-anthropic--ai가-컴퓨터를-직접-조작하다)의 OS 전체 조작과 같은 패러다임이지만, 모바일에 특화되어 있다. 사람용 UI를 AI가 탐색하는 "중간 단계" 해결책이라는 점에서 MCP 생태계(본 문서 상단)의 구조화된 도구 호출로 진화할 전환기적 기술. 삼성·구글 파트너십은 [산업 동향](../industry-trends.md)의 모바일 AI 경쟁 가속화와 연결.
 
 ## 엔터프라이즈 에이전트 프로덕션 플랫폼 (2026년 7월)
 
 ### OpenAI Presence — 프로덕션급 에이전트 배포·관리 플랫폼
 
-**출처**: [OpenAI — Introducing Presence](../records/2026-07-23-openai-presence-enterprise-agent-platform.md) ⭐⭐⭐⭐⭐
+**출처**: [OpenAI — Introducing Presence](../../records/2026-07-23-openai-presence-enterprise-agent-platform.md) ⭐⭐⭐⭐⭐
 
 - **발표**: 2026년 7월 22일
 - **핵심**: 기업이 프로덕션 환경에서 신뢰할 수 있는 AI 에이전트를 배포·관리하는 통합 플랫폼. 음성·채팅 채널 지원
@@ -256,13 +256,13 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - **고객**: BBVA, 소프트뱅크, IAG 등 탐색 중
 - **의미**: AI 에이전트가 "실험실"에서 "실제 업무"로 나아가는 데 필요한 인프라 제공. 단순 API가 아닌 정책·가드레일·평가·지속적 개선을 포함한 완전한 프로덕션 운영 체계. 에이전트 생태계에 '운영 신뢰성(operational reliability)'이라는 새로운 기준 제시
 
-> 💡 **교차 참조**: Presence의 FDE 배포 모델과 최소 권한 원칙은 [산업 동향](industry-trends.md)의 에이전트 보안 갭(54% 기업 사고 경험)에 대한 직접적 해결책이다. Codex 개선 루프는 [모델 동향](models-overview.md)의 GPT-5.6 Memory Core(자기 교정)와 같은 'behavior drift' 해결 철학을 플랫폼 레벨에서 구현한다. Microsoft Azure AI Agent Service([위](#microsoft-azure-ai-agent-service--비즈니스-자동화의-새로운-전선))와 경쟁하면서도, Azure가 셀프서비스를 지향한다면 Presence는 FDE 기반 맞춤형 배포로 차별화. ChatGPT Work([위](#chatgpt-work-openai--야심찬-프로젝트를-위한-ai-에이전트))의 기업용 확장판으로 볼 수 있다.
+> 💡 **교차 참조**: Presence의 FDE 배포 모델과 최소 권한 원칙은 [산업 동향](../industry-trends.md)의 에이전트 보안 갭(54% 기업 사고 경험)에 대한 직접적 해결책이다. Codex 개선 루프는 [모델 동향](../models-overview.md)의 GPT-5.6 Memory Core(자기 교정)와 같은 'behavior drift' 해결 철학을 플랫폼 레벨에서 구현한다. Microsoft Azure AI Agent Service([위](#microsoft-azure-ai-agent-service--비즈니스-자동화의-새로운-전선))와 경쟁하면서도, Azure가 셀프서비스를 지향한다면 Presence는 FDE 기반 맞춤형 배포로 차별화. ChatGPT Work([위](#chatgpt-work-openai--야심찬-프로젝트를-위한-ai-에이전트))의 기업용 확장판으로 볼 수 있다.
 
 ## AI 인프라 & 비용 최적화 도구 (2026년 7월)
 
 ### Fireworks AI Nexus — 코딩 에이전트 비용 라우팅 계층
 
-**출처**: [MarkTechPost — Fireworks Nexus](../records/2026-07-29-fireworks-ai-nexus-cost-routing.md) ⭐⭐⭐⭐
+**출처**: [MarkTechPost — Fireworks Nexus](../../records/2026-07-29-fireworks-ai-nexus-cost-routing.md) ⭐⭐⭐⭐
 
 - **발표**: 2026년 7월 28일
 - **핵심**: AI 코딩 에이전트(Claude Code, Codex, OpenCode 등)의 요청 난이도를 실시간 평가하여, 일반 작업은 오픈 웨이트 모델(GLM-5.2, Kimi K3)로, 복잡한 작업은 프론티어 모델(Claude Opus 5)로 자동 라우팅. **3~5배 비용 절감** 달성
@@ -271,11 +271,11 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - **의미**: Uber가 Claude Code 도입 후 4개월 만에 연간 AI 예산 소진 등 비용 폭발이 산업계 실제 문제로 부상. 기존 워크플로우 변경 없이 드롭인 적용 가능한 실용적 해결책
 - **링크**: [Fireworks Nexus](https://fireworks.ai/blog/fireworks-nexus) · [FireConnect GitHub](https://github.com/fw-ai/fireconnect)
 
-> 💡 **교차 참조**: Nexus의 난이도 기반 라우팅은 [Alibaba SkillWeaver](#alibaba-skillweaver--99-토큰-절감)의 조합형 스킬 라우팅과 같은 방향성 — 도구/모델 선택 최적화로 비용 구조를 근본적으로 개선. 에스컬레이션 래더 설계는 [프레임워크 동향](frameworks-overview.md)의 ADK 2.0 결정론적+자율 하이브리드 모델(쉬운 작업은 코드, 어려운 작업은 LLM)과도 같은 패러다임. MCP 무상태 전환과 함께 AI 인프라 중간 계층이 새로운 경쟁 영역으로 부상.
+> 💡 **교차 참조**: Nexus의 난이도 기반 라우팅은 [Alibaba SkillWeaver](#alibaba-skillweaver--99-토큰-절감)의 조합형 스킬 라우팅과 같은 방향성 — 도구/모델 선택 최적화로 비용 구조를 근본적으로 개선. 에스컬레이션 래더 설계는 [프레임워크 동향](../frameworks-overview.md)의 ADK 2.0 결정론적+자율 하이브리드 모델(쉬운 작업은 코드, 어려운 작업은 LLM)과도 같은 패러다임. MCP 무상태 전환과 함께 AI 인프라 중간 계층이 새로운 경쟁 영역으로 부상.
 
 ### OpenAI Codex Security — 오픈소스 보안 스캐닝 CLI
 
-**출처**: [GitHub — OpenAI Codex Security](../records/2026-07-29-openai-opensource-codex-security.md) ⭐⭐⭐⭐
+**출처**: [GitHub — OpenAI Codex Security](../../records/2026-07-29-openai-opensource-codex-security.md) ⭐⭐⭐⭐
 
 - **발표**: 2026년 7월 28일
 - **핵심**: 보안 취약점 탐지·검증·수정을 위한 CLI 및 TypeScript SDK (`@openai/codex-security`). 저장소 전체 스캔, 변경 사항 검토, CI 파이프라인 통합 자동화 지원
@@ -284,7 +284,7 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - **의미**: AI 코딩 에이전트가 작성하는 코드의 보안 검증이 핵심 요소로 부상. 기존 Snyk·SonarQube와 경쟁하면서 AI 기반 분석이라는 차별점. 오픈소스 공개로 CI/CD 파이프라인 통합 진입 장벽 제거
 - **링크**: [GitHub 저장소](https://github.com/openai/codex-security)
 
-> 💡 **교차 참조**: Codex Security는 [Claude 암호학적 취약점 발견](../records/2026-07-29-claude-discovers-cryptographic-weaknesses.md)([연구 동향](research-overview.md))과 같은 맥락 — AI가 코드 보안의 탐지·수정 양쪽에서 활약. [ChatGPT Work](#chatgpt-work-openai--야심찬-프로젝트를-위한-ai-에이전트)에 내장된 Codex 기술과 보완적. HN 199포인트로 기술 커뮤니티 높은 관심.
+> 💡 **교차 참조**: Codex Security는 [Claude 암호학적 취약점 발견](../../records/2026-07-29-claude-discovers-cryptographic-weaknesses.md)([연구 동향](../research-overview.md))과 같은 맥락 — AI가 코드 보안의 탐지·수정 양쪽에서 활약. [ChatGPT Work](#chatgpt-work-openai--야심찬-프로젝트를-위한-ai-에이전트)에 내장된 Codex 기술과 보완적. HN 199포인트로 기술 커뮤니티 높은 관심.
 
 ## 보안 패치 자동화 (2026년 7월)
 
@@ -295,9 +295,9 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - **인사이트**: "LLM이 사이버 보안의 경제학을 근본적으로 변화시켰다" (Chrome 엔지니어링 디렉터 Doug Turner). 취약점 발견이 수동 감사에서 **자동화된 산업 규모 작업**으로 전환
 - **경쟁 격차**: Google(1,072건)와 Microsoft(570건)가 AI 기반 패치로 급증한 반면, Apple은 482건으로 정체 — **AI 보안 도구 채택 여부가 보안 태세 격차를 직접적으로 벌리고 있음**
 - **양면성**: 방어자(더 빠른 패치)와 공격자(동일한 AI로 0-day 대량 발굴) 모두 동일한 방법론 사용 가능 — **AI 보안 군비 경쟁** 시사
-- **링크**: [TechCrunch 원문](../records/2026-07-31-google-chrome-ai-bug-fixing-record.md)
+- **링크**: [TechCrunch 원문](../../records/2026-07-31-google-chrome-ai-bug-fixing-record.md)
 
-> 💡 **교차 참조**: Chrome AI 패치는 [Codex Security](#openai-codex-security--오픈소스-보안-스캐닝-cli)의 코드 보안 스캐닝과 보완적 — 생성 단계에서는 Codex Security가 검증하고, 기존 코드베이스에서는 Google의 AI 도구가 취약점을 찾아낸다. Claude의 [암호학적 취약점 자율 발견](research-overview.md)과 같은 맥락. [산업 동향](industry-trends.md)의 Hugging Face 침해 사건이 보여준 AI의 공격 능력에 대한 방어적 활용.
+> 💡 **교차 참조**: Chrome AI 패치는 [Codex Security](#openai-codex-security--오픈소스-보안-스캐닝-cli)의 코드 보안 스캐닝과 보완적 — 생성 단계에서는 Codex Security가 검증하고, 기존 코드베이스에서는 Google의 AI 도구가 취약점을 찾아낸다. Claude의 [암호학적 취약점 자율 발견](../research-overview.md)과 같은 맥락. [산업 동향](../industry-trends.md)의 Hugging Face 침해 사건이 보여준 AI의 공격 능력에 대한 방어적 활용.
 
 ## 코딩 에이전트 실증 (2026년 7월)
 
@@ -308,9 +308,9 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - **성과**: 최대 **60배 런타임 단축** — HelixForge(BAMSurgeon GPU 네이티브 재구축), RustQC(15개 RNA QC 도구 단일 프로그램 통합)
 - **핵심 교훈**: "제약은 코드 생성이 아니라 **검증**" — 에이전트는 자체 출력이 과학적으로 타당한지 판단 불가. 인간이 수용 테스트를 구축하는 것이 실제 병목
 - **의미**: 코딩 에이전트가 학계의 만성적 연구 소프트웨어 유지보수 문제를 해결할 수 있음. 단, 도구 파편화 위험도 존재
-- **링크**: [AI News 원문](../records/2026-07-29-openai-coding-agents-science-software-faster-builds.md)
+- **링크**: [AI News 원문](../../records/2026-07-29-openai-coding-agents-science-software-faster-builds.md)
 
-> 💡 **교차 참조**: "검증이 병목"이라는 교훈은 [에이전트 보안 격차](../records/2026-07-19-ai-agent-security-gap.md)의 구조적 문제와 동일한 패턴 — 에이전트가 자율적으로 작업을 수행할 때 인간의 검증 능력이 뒤따르지 못하는 현상. [Codex Security](#openai-codex-security--오픈소스-보안-스캐닝-cli)가 자동화된 검증을 CI/CD에 통합하는 것은 이 병목을 해결하는 방향.
+> 💡 **교차 참조**: "검증이 병목"이라는 교훈은 [에이전트 보안 격차](../../records/2026-07-19-ai-agent-security-gap.md)의 구조적 문제와 동일한 패턴 — 에이전트가 자율적으로 작업을 수행할 때 인간의 검증 능력이 뒤따르지 못하는 현상. [Codex Security](#openai-codex-security--오픈소스-보안-스캐닝-cli)가 자동화된 검증을 CI/CD에 통합하는 것은 이 병목을 해결하는 방향.
 
 ## 모델 라우팅 재평가 (2026년 8월)
 
@@ -324,9 +324,9 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
   3. 모델 간 전환은 **동작 일관성**을 깸
   4. 예측 불가능성은 에이전트 워크플로 관리 비용 증가
 - **의미**: 업계가 모델 라우팅에 열광하는 동안 실제 운영 데이터는 **프리픽스 캐시 + 단일 모델 일관성**이 더 효과적임을 시사. 특히 에이전트 시스템에서 모델 간 전환은 평가(evals)와 관측 가능성(observability)을 복잡하게 만듦
-- **링크**: [Manifest 블로그 원문](../records/2026-08-01-manifest-deprecates-llm-router-single-model-wins.md)
+- **링크**: [Manifest 블로그 원문](../../records/2026-08-01-manifest-deprecates-llm-router-single-model-wins.md)
 
-> 💡 **교차 참조**: Manifest의 결론은 [Fireworks AI Nexus](#fireworks-ai-nexus--코딩-에이전트-비용-라우팅-계층)의 라우팅 접근과 **정면으로 충돌**한다. Nexus는 난이도 기반 라우팅으로 3~5배 비용 절감을 주장하지만, Manifest는 캐시가 더 효과적이라고 반박. 이 분기는 에이전트 시스템 설계의 핵심 의사결정: **라우팅(비용 절감 vs 일관성 저하)** vs **캐싱(비용 절감 + 일관성 유지)**. 또한 [Anthropic의 컨텍스트 엔지니어링 가이드](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)가 강조하는 컨텍스트 일관성과도 연관. [프레임워크 동향](frameworks-overview.md)의 Prompt→Loop→Graph 계층 모델에서, 라우터는 그래프 계층에 해당하며 과도한 복잡성을 경고하는 Anthropic의 입장을 뒷받침.
+> 💡 **교차 참조**: Manifest의 결론은 [Fireworks AI Nexus](#fireworks-ai-nexus--코딩-에이전트-비용-라우팅-계층)의 라우팅 접근과 **정면으로 충돌**한다. Nexus는 난이도 기반 라우팅으로 3~5배 비용 절감을 주장하지만, Manifest는 캐시가 더 효과적이라고 반박. 이 분기는 에이전트 시스템 설계의 핵심 의사결정: **라우팅(비용 절감 vs 일관성 저하)** vs **캐싱(비용 절감 + 일관성 유지)**. 또한 [Anthropic의 컨텍스트 엔지니어링 가이드](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)가 강조하는 컨텍스트 일관성과도 연관. [프레임워크 동향](../frameworks-overview.md)의 Prompt→Loop→Graph 계층 모델에서, 라우터는 그래프 계층에 해당하며 과도한 복잡성을 경고하는 Anthropic의 입장을 뒷받침.
 
 ## 코딩 에이전트 대전 & 인프라 혁신 (2026년 8월 12차 갱신)
 
@@ -334,7 +334,7 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 
 ### Warp Agent CLI — 모든 터미널에서 작동하는 독립형 코딩 에이전트 ⭐⭐⭐
 
-**출처**: [Warp — Introducing Agent CLI](../records/2026-08-04-warp-releases-agent-cli-standalone-coding-agent.md)
+**출처**: [Warp — Introducing Agent CLI](../../records/2026-08-04-warp-releases-agent-cli-standalone-coding-agent.md)
 
 - **발표**: 2026년 8월 4일
 - **핵심**: Warp Terminal에 내장된 코딩 에이전트를 **독립형 CLI**로 분리. Ghostty, iTerm2, VS Code 등 모든 터미널에서 사용 가능
@@ -347,7 +347,7 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 
 ### AWS × Superblocks — 사설 클라우드 Vibe Coding ⭐⭐⭐⭐
 
-**출처**: [TechCrunch — AWS Embeds Superblocks in Private Clouds](../records/2026-08-04-aws-superblocks-vibe-coding-private-cloud.md)
+**출처**: [TechCrunch — AWS Embeds Superblocks in Private Clouds](../../records/2026-08-04-aws-superblocks-vibe-coding-private-cloud.md)
 
 - **발표**: 2026년 8월 3일
 - **핵심**: AWS 고객의 **사설 클라우드** 내에 바이브 코딩 도구 Superblocks를 임베드. 앱과 AI 모델의 분리(decoupling) 가속
@@ -355,11 +355,11 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - **산업 의미**: 클라우드 벤더가 AI 코딩 도구를 자사 플랫폼에 통합하는 경쟁의 신호탄. Google Project IDX, Microsoft Copilot에 이어 AWS 본격 진입
 - **관련**: [Port AI Builder](#port-ai-builder--기업용-vibe-coding-플랫폼)의 엔터프라이즈 vibe coding 흐름과 같은 맥락
 
-> 💡 **교차 참조**: Superblocks의 사설 클라우드 배포는 [에이전트 보안 격차](../records/2026-07-19-ai-agent-security-gap.md)의 54% 사고 경험에 대한 인프라 차원 대응. [Azure AI Agent Service](#microsoft-azure-ai-agent-service--비즈니스-자동화의-새로운-전선)의 엔터프라이즈 통합과 같은 방향성이나, AWS는 서드파티 도구(Superblocks) 임베드로 차별화.
+> 💡 **교차 참조**: Superblocks의 사설 클라우드 배포는 [에이전트 보안 격차](../../records/2026-07-19-ai-agent-security-gap.md)의 54% 사고 경험에 대한 인프라 차원 대응. [Azure AI Agent Service](#microsoft-azure-ai-agent-service--비즈니스-자동화의-새로운-전선)의 엔터프라이즈 통합과 같은 방향성이나, AWS는 서드파티 도구(Superblocks) 임베드로 차별화.
 
 ### Cloudflare Workers AI — Kimi K2.6·GLM 5.2 대규모 추론 최적화 ⭐⭐⭐⭐
 
-**출처**: [Cloudflare Blog — Smaller Faster Safer Models](../records/2026-08-04-cloudflare-kimi-glm-workers-ai-inference.md)
+**출처**: [Cloudflare Blog — Smaller Faster Safer Models](../../records/2026-08-04-cloudflare-kimi-glm-workers-ai-inference.md)
 
 - **발표**: 2026년 8월 3일
 - **3단계 최적화**:
@@ -369,11 +369,11 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 - **기반**: 오픈소스 추론 프레임워크 **SGLang**. Cloudflare가 SGLang 팀과 협력하여 업스트림 기여
 - **의미**: 동일 하드웨어에서 더 많은 에이전트 인스턴스 동시 실행 가능 → 대규모 에이전트 배포 경제성 획기적 개선. 엣지에서 중국계 대형 모델의 상용 서비스 수준 제공
 
-> 💡 **교차 참조**: INT4 가중치 압축은 [모델 동향](models-overview.md)의 추론 경제학 경쟁의 인프라 차원. [Fireworks Nexus](#fireworks-ai-nexus--코딩-에이전트-비용-라우팅-계층)가 모델 선택으로 비용을 최적화한다면, Cloudflare는 **동일 모델의 서빙 효율**으로 비용을 최적화. SGLang 오픈소스 기여는 [MCP 생태계](#mcp-생태계-확장-2026년-6월7월)의 상호운용성 정신과 일치.
+> 💡 **교차 참조**: INT4 가중치 압축은 [모델 동향](../models-overview.md)의 추론 경제학 경쟁의 인프라 차원. [Fireworks Nexus](#fireworks-ai-nexus--코딩-에이전트-비용-라우팅-계층)가 모델 선택으로 비용을 최적화한다면, Cloudflare는 **동일 모델의 서빙 효율**으로 비용을 최적화. SGLang 오픈소스 기여는 [MCP 생태계](#mcp-생태계-확장-2026년-6월7월)의 상호운용성 정신과 일치.
 
 ### Hark Handoff — 브라우저 작업 자동화 에이전트 ⭐⭐⭐
 
-**출처**: [TechCrunch — Hark Previews Browser Use Agent](../records/2026-08-05-hark-handoff-browser-agent.md)
+**출처**: [TechCrunch — Hark Previews Browser Use Agent](../../records/2026-08-05-hark-handoff-browser-agent.md)
 
 - **발표**: 2026년 8월 5일
 - **핵심**: API가 없는 웹사이트(Target, Walmart, OpenTable 등)도 자유롭게 탐색해 작업 완수. 웹사이트 구조와 시각 데이터를 분석해 클릭·입력 자동 수행
@@ -383,14 +383,14 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 
 ### Meta Muse Code — 대규모 코드베이스 코딩 에이전트 ⭐⭐⭐⭐
 
-**출처**: [TechCrunch — Meta Launches Muse Code](../records/2026-08-05-meta-muse-code-coding-agent.md)
+**출처**: [TechCrunch — Meta Launches Muse Code](../../records/2026-08-05-meta-muse-code-coding-agent.md)
 
 - **발표**: 2026년 8월 5일
 - **핵심**: 자체 코딩 모델 **Muse Spark**를 구동하는 터미널 기반 AI 코딩 에이전트. 단일 명령어 설치. OpenAI Codex, Anthropic Claude Code와 직접 경쟁
 - **멀티 에이전트 오케스트레이션**: 대규모 작업 시 자동으로 병렬 서브에이전트 분할 실행. 각 서브에이전트는 **격리된 워크트리**에서 작동 → 사용자 작업 사본 변경 없음. Zuckerberg 밝힌 바에 따르면 6개 기능 동시 구축 시 충돌 0건
 - **의미**: Meta가 [Llama Agent Framework](#meta-llama-agent-framework--상업용-오픈소스-에이전트-프레임워크)에 이어 코딩 에이전트 시장에 본격 진입. 멀티 에이전트 병렬 실행의 충돌 없는 작동은 산업 최초 수준
 
-> 💡 **교차 참조**: Muse Code의 병렬 서브에이전트(격리 워크트리)는 [Prime Agent](frameworks-overview.md)의 Continual Harness(에이전트가 서브에이전트를 CRUD)와 같은 방향성 — 단일 에이전트에서 멀티 에이전트 자가 조직화로 진화. [Warp Agent CLI](#warp-agent-cli--모든-터미널에서-작동하는-독립형-코딩-에이전트-)의 멀티 에이전트 오케스트레이션과 직접 경쟁. [Microsoft 자체 모델 89% 비용 절감](../records/2026-07-28-microsoft-in-house-ai-models-cut-costs-89-percent-vs-openai.md)과 같은 자체 모델 전략(Muse Spark)으로 비용 우위 확보 시도.
+> 💡 **교차 참조**: Muse Code의 병렬 서브에이전트(격리 워크트리)는 [Prime Agent](../frameworks-overview.md)의 Continual Harness(에이전트가 서브에이전트를 CRUD)와 같은 방향성 — 단일 에이전트에서 멀티 에이전트 자가 조직화로 진화. [Warp Agent CLI](#warp-agent-cli--모든-터미널에서-작동하는-독립형-코딩-에이전트-)의 멀티 에이전트 오케스트레이션과 직접 경쟁. [Microsoft 자체 모델 89% 비용 절감](../../records/2026-07-28-microsoft-in-house-ai-models-cut-costs-89-percent-vs-openai.md)과 같은 자체 모델 전략(Muse Spark)으로 비용 우위 확보 시도.
 
 ### 12차 갱신 분석: "코딩 에이전트의 터미널 네이티브 다원화"
 
@@ -426,98 +426,98 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 21. **데이터 합성의 스키마 제로화**: Adaption Labs 'Invent a Dataset'이 시드 코퍼스·스키마·라벨링 가이드 없이 행동 묘사만으로 SFT/DPO 데이터셋 생성 — 파인튜닝 진입장벽이 데이터 엔지니어링에서 프롬프팅으로 이동 ⭐NEW (9/5)
 22. **소비자 개인 데이터 운영 에이전트**: Gemini Spark가 개인 미디어 라이브러리 전체를 크로스앱으로 관리 — 소비자 에이전트의 전장이 거래 완수(주문·예약)에서 장기 데이터 운영으로 확장 ⭐NEW (9/5)
 
-> 💡 **교차 참조**: MCP 도구 호출 성능은 [평가 벤치마크](research-overview.md)의 MCP Atlas로 측정된다. 도구 호출 최적화는 [FAPO](frameworks-overview.md)의 파이프라인 최적화와도 연결된다 — FAPO는 도구 호출이 포함된 에이전트 체인의 프롬프트를 자동 개선한다. MAF의 CodeAct는 도구 호출 효율성을 모델 턴 수 차원에서 혁신적으로 개선한다.
+> 💡 **교차 참조**: MCP 도구 호출 성능은 [평가 벤치마크](../research-overview.md)의 MCP Atlas로 측정된다. 도구 호출 최적화는 [FAPO](../frameworks-overview.md)의 파이프라인 최적화와도 연결된다 — FAPO는 도구 호출이 포함된 에이전트 체인의 프롬프트를 자동 개선한다. MAF의 CodeAct는 도구 호출 효율성을 모델 턴 수 차원에서 혁신적으로 개선한다.
 
 ## 관련 뉴스
-- [CRN 2026 상반기 Top 10 AI 에이전트 제품](../records/2026-07-05-crn-top-agentic-ai-products.md) ⭐NEW (7월)
-- [EmulatRx 임상 시험 설계 에이전트 (Weill Cornell)](../records/2026-07-08-weill-cornell-clinical-trial.md) ⭐NEW (7월)
-- [Vercel agent-browser](../records/2026-06-20-vercel-agent-browser-tool.md)
-- [Claude Agent SDK 구독제 변화](../records/2026-06-24-claude-agent-sdk-credit-2026.md) (MCP 200+ 생태계)
-- [Cisco FAPO](../records/2026-06-20-cisco-fapo-prompt-optimization.md) (도구 호출 최적화 맥락)
-- [Agentic AI Benchmarks 2026](../records/2026-06-18-agentic-benchmarks-2026.md) (MCP Atlas 벤치마크)
-- [Alibaba SkillWeaver — 99% 토큰 절감](../records/2026-07-05-alibaba-skillweaver-tool-routing.md) (7월)
-- [Alibaba SkillWeaver 프레임워크 분석](../records/2026-07-03-alibaba-skillweaver-token-routing.md) (7월)
-- [Z.ai ZCode 에이전트 개발 환경](../records/2026-07-03-zai-zcode-agentic-dev-environment.md) (7월)
-- [BNB Agent Studio](../records/2026-07-03-bnb-agent-studio.md) (7월)
-- [Warner Bros × AWS 에이전트 광고 기술](../records/2026-07-09-warner-bros-agentic-ai-advertising.md) ⭐NEW (7월)
-- [10 Modern Agentic Tools](../records/2026-07-05-modern-agentic-tools.md) (7월)
-- [GPT-Live 풀-덱스 음성 모델](../records/2026-07-13-introducing-gpt-live.md) ⭐NEW (7월)
-- [ChatGPT Work 생산성 에이전트](../records/2026-07-13-chatgpt-for-your-most-ambitious-work.md) ⭐NEW (7월)
-- [Claude Computer Use — 컴퓨터 조작 에이전트](../records/2026-07-15-anthropic-claude-computer-use.md) (7/15)
-- [Microsoft Azure AI Agent Service — 비즈니스 자동화](../records/2026-07-17-microsoft-azure-ai-agents-work-business-automation.md) ⭐NEW (7/17)
-- [Meta Llama Agent Framework — 상업용 오픈소스](../records/2026-07-18-meta-llama-agent-framework-open-source-commercial.md) (7/18)
-- [Port AI Builder — 기업용 Vibe Coding 플랫폼](../records/2026-07-20-port-ai-builder-vibe-coding.md) ⭐NEW (7/20)
-- [Macky AI — AI 비즈니스 컨설팅 플랫폼](../records/2026-07-20-macky-ai-business-consulting-platform.md) (7/20)
-- [Gemini Task Automation — 모바일 에이전트](../records/2026-07-23-gemini-task-automation-phone-agent.md) ⭐NEW (7/23)
-- [OpenAI Presence — 프로덕션 에이전트 배포 플랫폼](../records/2026-07-23-openai-presence-enterprise-agent-platform.md) ⭐NEW (7/23)
-- [Fireworks AI Nexus — 비용 라우팅 계층](../records/2026-07-29-fireworks-ai-nexus-cost-routing.md) ⭐NEW (7/28)
-- [MCP 2026-07-28 스펙 — 무상태 프로토콜 전환](../records/2026-07-29-mcp-spec-2026-07-28-stateless-protocol.md) ⭐NEW (7/28)
-- [OpenAI Codex Security — 오픈소스 보안 CLI](../records/2026-07-29-openai-opensource-codex-security.md) ⭐NEW (7/28)
-- [Google Chrome AI 버그 수정 기록 — Gemini 기반 패치](../records/2026-07-31-google-chrome-ai-bug-fixing-record.md) ⭐NEW (7/30)
-- [OpenAI 코딩 에이전트 과학 소프트웨어 보고서](../records/2026-07-29-openai-coding-agents-science-software-faster-builds.md) ⭐NEW (7/29)
-- [Manifest, LLM 라우터 폐지 선언](../records/2026-08-01-manifest-deprecates-llm-router-single-model-wins.md) ⭐NEW (7/31)
+- [CRN 2026 상반기 Top 10 AI 에이전트 제품](../../records/2026-07-05-crn-top-agentic-ai-products.md) ⭐NEW (7월)
+- [EmulatRx 임상 시험 설계 에이전트 (Weill Cornell)](../../records/2026-07-08-weill-cornell-clinical-trial.md) ⭐NEW (7월)
+- [Vercel agent-browser](../../records/2026-06-20-vercel-agent-browser-tool.md)
+- [Claude Agent SDK 구독제 변화](../../records/2026-06-24-claude-agent-sdk-credit-2026.md) (MCP 200+ 생태계)
+- [Cisco FAPO](../../records/2026-06-20-cisco-fapo-prompt-optimization.md) (도구 호출 최적화 맥락)
+- [Agentic AI Benchmarks 2026](../../records/2026-06-18-agentic-benchmarks-2026.md) (MCP Atlas 벤치마크)
+- [Alibaba SkillWeaver — 99% 토큰 절감](../../records/2026-07-05-alibaba-skillweaver-tool-routing.md) (7월)
+- [Alibaba SkillWeaver 프레임워크 분석](../../records/2026-07-03-alibaba-skillweaver-token-routing.md) (7월)
+- [Z.ai ZCode 에이전트 개발 환경](../../records/2026-07-03-zai-zcode-agentic-dev-environment.md) (7월)
+- [BNB Agent Studio](../../records/2026-07-03-bnb-agent-studio.md) (7월)
+- [Warner Bros × AWS 에이전트 광고 기술](../../records/2026-07-09-warner-bros-agentic-ai-advertising.md) ⭐NEW (7월)
+- [10 Modern Agentic Tools](../../records/2026-07-05-modern-agentic-tools.md) (7월)
+- [GPT-Live 풀-덱스 음성 모델](../../records/2026-07-13-introducing-gpt-live.md) ⭐NEW (7월)
+- [ChatGPT Work 생산성 에이전트](../../records/2026-07-13-chatgpt-for-your-most-ambitious-work.md) ⭐NEW (7월)
+- [Claude Computer Use — 컴퓨터 조작 에이전트](../../records/2026-07-15-anthropic-claude-computer-use.md) (7/15)
+- [Microsoft Azure AI Agent Service — 비즈니스 자동화](../../records/2026-07-17-microsoft-azure-ai-agents-work-business-automation.md) ⭐NEW (7/17)
+- [Meta Llama Agent Framework — 상업용 오픈소스](../../records/2026-07-18-meta-llama-agent-framework-open-source-commercial.md) (7/18)
+- [Port AI Builder — 기업용 Vibe Coding 플랫폼](../../records/2026-07-20-port-ai-builder-vibe-coding.md) ⭐NEW (7/20)
+- [Macky AI — AI 비즈니스 컨설팅 플랫폼](../../records/2026-07-20-macky-ai-business-consulting-platform.md) (7/20)
+- [Gemini Task Automation — 모바일 에이전트](../../records/2026-07-23-gemini-task-automation-phone-agent.md) ⭐NEW (7/23)
+- [OpenAI Presence — 프로덕션 에이전트 배포 플랫폼](../../records/2026-07-23-openai-presence-enterprise-agent-platform.md) ⭐NEW (7/23)
+- [Fireworks AI Nexus — 비용 라우팅 계층](../../records/2026-07-29-fireworks-ai-nexus-cost-routing.md) ⭐NEW (7/28)
+- [MCP 2026-07-28 스펙 — 무상태 프로토콜 전환](../../records/2026-07-29-mcp-spec-2026-07-28-stateless-protocol.md) ⭐NEW (7/28)
+- [OpenAI Codex Security — 오픈소스 보안 CLI](../../records/2026-07-29-openai-opensource-codex-security.md) ⭐NEW (7/28)
+- [Google Chrome AI 버그 수정 기록 — Gemini 기반 패치](../../records/2026-07-31-google-chrome-ai-bug-fixing-record.md) ⭐NEW (7/30)
+- [OpenAI 코딩 에이전트 과학 소프트웨어 보고서](../../records/2026-07-29-openai-coding-agents-science-software-faster-builds.md) ⭐NEW (7/29)
+- [Manifest, LLM 라우터 폐지 선언](../../records/2026-08-01-manifest-deprecates-llm-router-single-model-wins.md) ⭐NEW (7/31)
 
 ### 8월
-- [Cursor, 사용량 페이지 비용 정보 제거](../records/2026-08-02-cursor-removes-cost-info-from-usage.md) ⭐⭐⭐ (8/2)
-- [Google Earth AI 이미지 생성 기능 철회](../records/2026-08-02-google-earth-ai-image-generation-removed.md) ⭐⭐⭐ (8/2)
-- [Warp Agent CLI — 독립형 코딩 에이전트](../records/2026-08-04-warp-releases-agent-cli-standalone-coding-agent.md) ⭐⭐⭐ ⭐NEW (8/4)
-- [AWS × Superblocks — 사설 클라우드 Vibe Coding](../records/2026-08-04-aws-superblocks-vibe-coding-private-cloud.md) ⭐⭐⭐⭐ ⭐NEW (8/4)
-- [Cloudflare Workers AI — Kimi·GLM 추론 최적화](../records/2026-08-04-cloudflare-kimi-glm-workers-ai-inference.md) ⭐⭐⭐⭐ ⭐NEW (8/4)
-- [Hark Handoff — 브라우저 작업 자동화 에이전트](../records/2026-08-05-hark-handoff-browser-agent.md) ⭐⭐⭐ ⭐NEW (8/5)
-- [Meta Muse Code — 대규모 코드베이스 코딩 에이전트](../records/2026-08-05-meta-muse-code-coding-agent.md) ⭐⭐⭐⭐ ⭐NEW (8/5)
-- [Cloudflare Kitesurf — 에이전트 전용 브라우저, V8 Isolate](../records/2026-08-07-cloudflare-kitesurf-agent-first-browser.md) ⭐⭐⭐⭐ ⭐NEW (8/7)
-- [TencentDB Agent Memory v2.0 — 팀 단위 메모리 허브, 오픈소스](../records/2026-08-08-tencentdb-agent-memory-v2-open-source.md) ⭐⭐⭐⭐ ⭐NEW (8/8)
-- [Google Maps Agentic — 소비자 앱 에이전트화](../records/2026-08-08-google-maps-agentic-features.md) ⭐⭐⭐ (8/8)
-- [Shepherd — 에이전트 실행 포크·리플레이·되돌리기 Python 런타임](../records/2026-08-08-shepherd-agent-fork-replay-substrate.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/8)
-- [NVIDIA TensorRT Model Connect — 두 명령어 C++ 추론 배포](../records/2026-08-19-nvidia-tensorrt-model-connect-public-preview.md) ⭐⭐⭐ ⭐NEW (8/19)
-- [Warp Factories — 아웃오브더박스 소프트웨어 팩토리](../records/2026-08-19-warp-factories-ai-software-factory.md) ⭐⭐⭐ ⭐NEW (8/19)
-- [Cursor Origin — GitHub 대항 코드 호스팅](../records/2026-08-19-cursor-launches-origin-code-hosting.md) ⭐⭐⭐⭐ ⭐NEW (8/19)
-- [Perplexity Portable Computer — DGX Spark 로컬-first 에이전트](../records/2026-08-25-perplexity-portable-computer.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/25)
-- [Gatik — $200M 무인 화물 확장](../records/2026-08-26-gatik-autonomous-freight.md) ⭐⭐⭐⭐ ⭐NEW (8/26)
-- [Gemini 브랜딩 문제 — AI 기능 파편화](../records/2026-08-26-gemini-branding.md) ⭐⭐⭐⭐ ⭐NEW (8/26)
-- [Warp — Claude 기반 자기개선 에이전트 구축 사례](../records/2026-08-30-warp-builds-self-improving-agents-on-claude.md) ⭐⭐⭐⭐ ⭐NEW (8/30)
+- [Cursor, 사용량 페이지 비용 정보 제거](../../records/2026-08-02-cursor-removes-cost-info-from-usage.md) ⭐⭐⭐ (8/2)
+- [Google Earth AI 이미지 생성 기능 철회](../../records/2026-08-02-google-earth-ai-image-generation-removed.md) ⭐⭐⭐ (8/2)
+- [Warp Agent CLI — 독립형 코딩 에이전트](../../records/2026-08-04-warp-releases-agent-cli-standalone-coding-agent.md) ⭐⭐⭐ ⭐NEW (8/4)
+- [AWS × Superblocks — 사설 클라우드 Vibe Coding](../../records/2026-08-04-aws-superblocks-vibe-coding-private-cloud.md) ⭐⭐⭐⭐ ⭐NEW (8/4)
+- [Cloudflare Workers AI — Kimi·GLM 추론 최적화](../../records/2026-08-04-cloudflare-kimi-glm-workers-ai-inference.md) ⭐⭐⭐⭐ ⭐NEW (8/4)
+- [Hark Handoff — 브라우저 작업 자동화 에이전트](../../records/2026-08-05-hark-handoff-browser-agent.md) ⭐⭐⭐ ⭐NEW (8/5)
+- [Meta Muse Code — 대규모 코드베이스 코딩 에이전트](../../records/2026-08-05-meta-muse-code-coding-agent.md) ⭐⭐⭐⭐ ⭐NEW (8/5)
+- [Cloudflare Kitesurf — 에이전트 전용 브라우저, V8 Isolate](../../records/2026-08-07-cloudflare-kitesurf-agent-first-browser.md) ⭐⭐⭐⭐ ⭐NEW (8/7)
+- [TencentDB Agent Memory v2.0 — 팀 단위 메모리 허브, 오픈소스](../../records/2026-08-08-tencentdb-agent-memory-v2-open-source.md) ⭐⭐⭐⭐ ⭐NEW (8/8)
+- [Google Maps Agentic — 소비자 앱 에이전트화](../../records/2026-08-08-google-maps-agentic-features.md) ⭐⭐⭐ (8/8)
+- [Shepherd — 에이전트 실행 포크·리플레이·되돌리기 Python 런타임](../../records/2026-08-08-shepherd-agent-fork-replay-substrate.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/8)
+- [NVIDIA TensorRT Model Connect — 두 명령어 C++ 추론 배포](../../records/2026-08-19-nvidia-tensorrt-model-connect-public-preview.md) ⭐⭐⭐ ⭐NEW (8/19)
+- [Warp Factories — 아웃오브더박스 소프트웨어 팩토리](../../records/2026-08-19-warp-factories-ai-software-factory.md) ⭐⭐⭐ ⭐NEW (8/19)
+- [Cursor Origin — GitHub 대항 코드 호스팅](../../records/2026-08-19-cursor-launches-origin-code-hosting.md) ⭐⭐⭐⭐ ⭐NEW (8/19)
+- [Perplexity Portable Computer — DGX Spark 로컬-first 에이전트](../../records/2026-08-25-perplexity-portable-computer.md) ⭐⭐⭐⭐⭐ ⭐NEW (8/25)
+- [Gatik — $200M 무인 화물 확장](../../records/2026-08-26-gatik-autonomous-freight.md) ⭐⭐⭐⭐ ⭐NEW (8/26)
+- [Gemini 브랜딩 문제 — AI 기능 파편화](../../records/2026-08-26-gemini-branding.md) ⭐⭐⭐⭐ ⭐NEW (8/26)
+- [Warp — Claude 기반 자기개선 에이전트 구축 사례](../../records/2026-08-30-warp-builds-self-improving-agents-on-claude.md) ⭐⭐⭐⭐ ⭐NEW (8/30)
 
 ### 9월
-- [AIR — 에이전트 스킬·애드온 검증, 시드 합산 $50M](../records/2026-09-02-air-raises-50m-vet-ai-agent-skills.md) ⭐⭐⭐⭐ ⭐NEW (9/2)
-- [Adaption Labs 'Invent a Dataset' — 행동 묘사만으로 데이터셋 생성](../records/2026-09-05-adaption-labs-invent-a-dataset.md) ⭐⭐⭐ ⭐NEW (9/5)
-- [Gemini Spark — 구글 포토 라이브러리 관리](../records/2026-09-05-gemini-spark-manages-google-photos.md) ⭐⭐⭐ ⭐NEW (9/5)
-- [Google Mantis — 코딩 에이전트용 보안 스킬 툴킷](../records/2026-09-10-google-mantis-agent-security-toolkit.md) ⭐⭐⭐⭐ ⭐NEW (9/10)
-- [Redis LangCache — 관리형 시맨틱 캐시, LLM 비용 최대 90% 절감](../records/2026-09-11-redis-langcache-semantic-cache.md) ⭐⭐⭐ ⭐NEW (9/10)
-- [ChatGPT 모바일 음성 에이전트 — 워크 탭 작업을 말로 시작](../records/2026-09-24-chatgpt-mobile-voice-agentic.md) ⭐⭐⭐ ⭐NEW (9/24)
-- [Ando — 인간·에이전트 팀 메시징, 에이전트에 신원·수신함](../records/2026-09-25-ando-agent-native-team-messaging.md) ⭐⭐⭐ ⭐NEW (9/25)
-- [Whiteboard — 인간-에이전트 설계 캔버스 오픈소스 IDE](../records/2026-09-25-whiteboard-open-source-agent-ide.md) ⭐⭐⭐ ⭐NEW (9/25)
-- [기업용 AI 코딩 에이전트 계약 비교 — IP 배상·데이터 소재·500석 비용](../records/2026-09-28-ai-coding-agents-enterprise-contracts.md) ⭐⭐⭐⭐ ⭐NEW (9/28)
-- [NVIDIA Open Agent Safety Platform — OpenShell·Sentry 대역 외 감시](../records/2026-09-28-nvidia-open-agent-safety-platform.md) ⭐⭐⭐ ⭐NEW (9/28)
-- [Perplexity Photon — Rust 자체 검색 엔진, p99 65ms](../records/2026-09-30-perplexity-photon-rust-retrieval-engine.md) ⭐⭐ ⭐NEW (9/30)
-- [RSA Agent ID — 섀도 에이전트 발견·신원 3모듈](../records/2026-09-30-rsa-agent-id-agentic-identity-security.md) ⭐⭐ ⭐NEW (9/30)
-- [OpenAI Decisions API (DevDay 발표) — 감시 비용 $372→$2.94 데모](../records/2026-09-30-openai-decisions-api-jev-clone.md) ⭐⭐ ⭐NEW (9/30)
+- [AIR — 에이전트 스킬·애드온 검증, 시드 합산 $50M](../../records/2026-09-02-air-raises-50m-vet-ai-agent-skills.md) ⭐⭐⭐⭐ ⭐NEW (9/2)
+- [Adaption Labs 'Invent a Dataset' — 행동 묘사만으로 데이터셋 생성](../../records/2026-09-05-adaption-labs-invent-a-dataset.md) ⭐⭐⭐ ⭐NEW (9/5)
+- [Gemini Spark — 구글 포토 라이브러리 관리](../../records/2026-09-05-gemini-spark-manages-google-photos.md) ⭐⭐⭐ ⭐NEW (9/5)
+- [Google Mantis — 코딩 에이전트용 보안 스킬 툴킷](../../records/2026-09-10-google-mantis-agent-security-toolkit.md) ⭐⭐⭐⭐ ⭐NEW (9/10)
+- [Redis LangCache — 관리형 시맨틱 캐시, LLM 비용 최대 90% 절감](../../records/2026-09-11-redis-langcache-semantic-cache.md) ⭐⭐⭐ ⭐NEW (9/10)
+- [ChatGPT 모바일 음성 에이전트 — 워크 탭 작업을 말로 시작](../../records/2026-09-24-chatgpt-mobile-voice-agentic.md) ⭐⭐⭐ ⭐NEW (9/24)
+- [Ando — 인간·에이전트 팀 메시징, 에이전트에 신원·수신함](../../records/2026-09-25-ando-agent-native-team-messaging.md) ⭐⭐⭐ ⭐NEW (9/25)
+- [Whiteboard — 인간-에이전트 설계 캔버스 오픈소스 IDE](../../records/2026-09-25-whiteboard-open-source-agent-ide.md) ⭐⭐⭐ ⭐NEW (9/25)
+- [기업용 AI 코딩 에이전트 계약 비교 — IP 배상·데이터 소재·500석 비용](../../records/2026-09-28-ai-coding-agents-enterprise-contracts.md) ⭐⭐⭐⭐ ⭐NEW (9/28)
+- [NVIDIA Open Agent Safety Platform — OpenShell·Sentry 대역 외 감시](../../records/2026-09-28-nvidia-open-agent-safety-platform.md) ⭐⭐⭐ ⭐NEW (9/28)
+- [Perplexity Photon — Rust 자체 검색 엔진, p99 65ms](../../records/2026-09-30-perplexity-photon-rust-retrieval-engine.md) ⭐⭐ ⭐NEW (9/30)
+- [RSA Agent ID — 섀도 에이전트 발견·신원 3모듈](../../records/2026-09-30-rsa-agent-id-agentic-identity-security.md) ⭐⭐ ⭐NEW (9/30)
+- [OpenAI Decisions API (DevDay 발표) — 감시 비용 $372→$2.94 데모](../../records/2026-09-30-openai-decisions-api-jev-clone.md) ⭐⭐ ⭐NEW (9/30)
 
 ### 10월
-- [Shopify Canvas — Sidekick 실제 테마 코드 수정·스크린샷 자기 검증](../records/2026-10-01-shopify-canvas-sidekick-store-builder.md) ⭐⭐ ⭐NEW (10/1)
-- [NVIDIA DGX Spark 64GB — $4,999 로컬 상시 에이전트 클러스터](../records/2026-10-02-nvidia-dgx-spark-64gb.md) ⭐⭐⭐⭐⭐ ⭐NEW (10/2)
-- [IBM Bob 자체 호스팅·폐쇄막 GA — 모델 없는 하네스](../records/2026-10-04-ibm-bob-self-hosted-air-gapped.md) ⭐⭐ ⭐NEW (10/4)
-- [Prime Intellect Prime Inference — 에이전트 턴 설계 기준 오픈 모델 서빙](../records/2026-10-04-prime-intellect-prime-inference.md) ⭐⭐ ⭐NEW (10/4)
-- [Goodfire 인사이드아웃 모니터 — 내부 활성값 프로브, $51 감시](../records/2026-10-09-goodfire-inside-out-agent-monitors.md) ⭐⭐ ⭐NEW (10/9)
-- [OpenAI Decisions API 공개 베타 — $0.10/MTok·출력 과금 없음](../records/2026-10-10-openai-decisions-api-public-beta.md) ⭐⭐ ⭐NEW (10/10)
-- [개인 CFO 에이전트 은행정보 회사 Slack 유출 — 출력 경로 통제 부재](../records/2026-10-10-grok-bot-cfo-agent-leaked-bank-details-slack.md) ⭐⭐⭐⭐ ⭐NEW (10/11)
+- [Shopify Canvas — Sidekick 실제 테마 코드 수정·스크린샷 자기 검증](../../records/2026-10-01-shopify-canvas-sidekick-store-builder.md) ⭐⭐ ⭐NEW (10/1)
+- [NVIDIA DGX Spark 64GB — $4,999 로컬 상시 에이전트 클러스터](../../records/2026-10-02-nvidia-dgx-spark-64gb.md) ⭐⭐⭐⭐⭐ ⭐NEW (10/2)
+- [IBM Bob 자체 호스팅·폐쇄막 GA — 모델 없는 하네스](../../records/2026-10-04-ibm-bob-self-hosted-air-gapped.md) ⭐⭐ ⭐NEW (10/4)
+- [Prime Intellect Prime Inference — 에이전트 턴 설계 기준 오픈 모델 서빙](../../records/2026-10-04-prime-intellect-prime-inference.md) ⭐⭐ ⭐NEW (10/4)
+- [Goodfire 인사이드아웃 모니터 — 내부 활성값 프로브, $51 감시](../../records/2026-10-09-goodfire-inside-out-agent-monitors.md) ⭐⭐ ⭐NEW (10/9)
+- [OpenAI Decisions API 공개 베타 — $0.10/MTok·출력 과금 없음](../../records/2026-10-10-openai-decisions-api-public-beta.md) ⭐⭐ ⭐NEW (10/10)
+- [개인 CFO 에이전트 은행정보 회사 Slack 유출 — 출력 경로 통제 부재](../../records/2026-10-10-grok-bot-cfo-agent-leaked-bank-details-slack.md) ⭐⭐⭐⭐ ⭐NEW (10/11)
 
 ## 관련 위키 문서
-- [평가 벤치마크](research-overview.md) — MCP Atlas로 측정하는 도구 호출 성능
-- [프레임워크 동향](frameworks-overview.md) — MAF CodeAct, Claude Agent SDK MCP 통합, 도구 호출 파이프라인 최적화
-- [모델 동향](models-overview.md) — customtools 엔드포인트로 도구 호출 최적화하는 모델
+- [평가 벤치마크](../research-overview.md) — MCP Atlas로 측정하는 도구 호출 성능
+- [프레임워크 동향](../frameworks-overview.md) — MAF CodeAct, Claude Agent SDK MCP 통합, 도구 호출 파이프라인 최적화
+- [모델 동향](../models-overview.md) — customtools 엔드포인트로 도구 호출 최적화하는 모델
 
 ## 분석 (7월 15일 5차 갱신)
 **Claude Computer Use**는 도구 생태계의 범위를 브라우저 자동화에서 **OS 전체 조작**으로 확장한다. 기존 도구들이 MCP 서버나 API를 통한 간접적 도구 호출에 그쳤다면, Claude Computer Use는 화면을 보고 마우스·키보드를 조작하는 '직접 제어' 방식으로, 에이전트가 인간의 컴퓨터 사용 패턴 자체를 모방하게 한다. 이는 반복 업무 자동화의 자유도를 극대화하지만, 동시에 개인정보 보호와 데이터 보안이라는 새로운 과제를 제시한다. 의도 추론과 오류 자동 복구가 결합되어 안정성을 확보하려는 시도가 주목된다.
 
 브라우저 자동화는 에이전트가 물리 세계(웹)에 개입하는 가장 중요한 인터페이스다. agent-browser의 Rust 네이티브 접근과 MCP 내장은 두 가지 중요한 방향성을 보여준다: 성능 최적화와 표준 준수. MCP가 200+ 서버를 확보하며 도구 호출의 사실상 표준으로 자리잡았고, ACP→A2A 통합으로 다중 에이전트 협업의 기반도 마련되었다.
 
-**Microsoft Azure AI Agent Service**와 **Meta Llama Agent Framework**는 에이전트 도구가 두 가지 새로운 방향으로 확장됨을 보여준다. Microsoft는 코드 우선 개발 환경과 비개발자용 자연어 빌더(Copilot Studio)를 결합하여, 기업 내 **모든 역할**이 에이전트를 구축할 수 있게 만든다. Cineplex 사례(15분→30초)는 이미 실질적인 ROI가 입증되었음을 보여준다. Meta는 반대로 **오픈소스 + 상업용 라이선스**로 접근하여, 사전 구성 컴포넌트·보안 샌드박싱·배포 도구를 포함한 완전한 프레임워크를 무료로 제공한다. 이 두 접근법은 에이전트 도구의 양극화 — **관리형 엔터프라이즈 플랫폼 vs 오픈소스 프레임워크** — 를 보여주며, [프레임워크 동향](frameworks-overview.md)의 이원화 트렌드와 일치한다. 특히 Meta의 보안 샌드박싱 내장은 도구 수준에서의 안전장치를 표준화하며, 규제 산업(금융·의료)의 에이전트 도입 장벽을 낮춘다.
+**Microsoft Azure AI Agent Service**와 **Meta Llama Agent Framework**는 에이전트 도구가 두 가지 새로운 방향으로 확장됨을 보여준다. Microsoft는 코드 우선 개발 환경과 비개발자용 자연어 빌더(Copilot Studio)를 결합하여, 기업 내 **모든 역할**이 에이전트를 구축할 수 있게 만든다. Cineplex 사례(15분→30초)는 이미 실질적인 ROI가 입증되었음을 보여준다. Meta는 반대로 **오픈소스 + 상업용 라이선스**로 접근하여, 사전 구성 컴포넌트·보안 샌드박싱·배포 도구를 포함한 완전한 프레임워크를 무료로 제공한다. 이 두 접근법은 에이전트 도구의 양극화 — **관리형 엔터프라이즈 플랫폼 vs 오픈소스 프레임워크** — 를 보여주며, [프레임워크 동향](../frameworks-overview.md)의 이원화 트렌드와 일치한다. 특히 Meta의 보안 샌드박싱 내장은 도구 수준에서의 안전장치를 표준화하며, 규제 산업(금융·의료)의 에이전트 도입 장벽을 낮춘다.
 
 7월 들어 **도구 라우팅**이 핵심 테마로 부상했다. SkillWeaver의 99% 토큰 절감은 도구 선택 최적화가 비용 구조를 근본적으로 바꿀 수 있음을 증명했다. ZCode와 BNB Agent Studio는 각각 코딩과 블록체인 도메인에서 '도구 → 에이전트 환경'으로의 진화를 보여준다. **EmulatRx**는 의료 도메인에서 다중 전문 에이전트 협업 모델의 성공을 입증하며, HITL을 통한 신뢰성 구축의 중요성을 보여준다. **Warner Bros×AWS**는 미디어 광고 도메인에서 에이전트가 전통적 비즈니스 프로세스를 end-to-end 자율화한 첫 대규모 상용 사례로, 산업별 에이전트 도구의 가능성을 열었다. **GPT-Live**와 **ChatGPT Work**는 각각 음성 대화와 업무 자동화라는 새로운 도구 카테고리를 열었다. GPT-Live의 풀-덱스 아키텍처는 기존 3단계 음성 파이프라인(STT→LLM→TTS)을 붕괴시키며 실시간 동시 대화를 가능하게 했고, ChatGPT Work는 에이전트가 수 시간 지속되는 복잡한 프로젝트를 독립적으로 수행하며 완성된 자료를 생산하는 새로운 협업 모델을 제시했다. 두 도구 모두 GPT-5.5/5.6 프론티어 모델에 의존하며, 모델 성능과 도구 경험의 경계가 흐려지고 있음을 보여준다.
 
 전반적으로 도구 생태계가 **분산된 단일 기능 도구 → 통합 에이전트 플랫폼 → 도메인 특화 다중 에이전트 시스템**으로 진화하고 있으며, MCP가 그 연결 조직 역할을 하고 있다. 음성(GPT-Live)과 업무 자동화(ChatGPT Work)의 추가로 도구 생태계의 범위가 대화형 인터페이스에서 전체 업무 파이프라인으로 확장되었다.
 
-7월 20일 기준, **Port AI Builder**와 **Macky AI**는 도구 생태계의 두 가지 새로운 확장을 보여준다. Port는 'vibe coding'을 기업용 SDLC에 통합하며, 개발 생산성과 거버넌스 사이의 균형을 제시한다. 이는 Oracle AI Agent Studio([프레임워크 동향](frameworks-overview.md))의 pro-code 접근과 보완적 — 친숙한 도구를 활용하면서 기업 런타임에 연결한다는 공통 전략. Macky AI는 에이전트가 **전문 서비스(컨설팅)** 영역으로 진입했음을 보여주며, 특히 SME의 디지털 격차 해소라는 사회적 의미를 갖는다. 두 도구 모두 기존 툴체인(VS Code, OpenAI 등)과 통합되면서 에이전트 기능을 추가하는 '접목식' 접근을 취하고 있어, 기업의 전환 저항을 최소화하는 실용적 경로를 제시한다.
+7월 20일 기준, **Port AI Builder**와 **Macky AI**는 도구 생태계의 두 가지 새로운 확장을 보여준다. Port는 'vibe coding'을 기업용 SDLC에 통합하며, 개발 생산성과 거버넌스 사이의 균형을 제시한다. 이는 Oracle AI Agent Studio([프레임워크 동향](../frameworks-overview.md))의 pro-code 접근과 보완적 — 친숙한 도구를 활용하면서 기업 런타임에 연결한다는 공통 전략. Macky AI는 에이전트가 **전문 서비스(컨설팅)** 영역으로 진입했음을 보여주며, 특히 SME의 디지털 격차 해소라는 사회적 의미를 갖는다. 두 도구 모두 기존 툴체인(VS Code, OpenAI 등)과 통합되면서 에이전트 기능을 추가하는 '접목식' 접근을 취하고 있어, 기업의 전환 저항을 최소화하는 실용적 경로를 제시한다.
 
 **7월 업데이트 (8차)**: **Gemini Task Automation**과 **OpenAI Presence**는 도구 생태계의 두 가지 핵심 방향성을 각각 구체화한다. Gemini Task Automation은 **모바일 환경**에서 AI 에이전트가 처음으로 실제 작업을 수행하는 이정표를 세웠다. 사람용 GUI를 추론으로 탐색하는 방식은 분명 "중간 단계" 해결책이지만, 발표장 데모가 아닌 실제 기기에서 실제 주문을 완료하는 경험이 제공된다는 점에서 의미가 크다. 구글이 자신이 예상하는 MCP/App Functions 기반 구조화된 접근으로의 전환이 업계 과제로 부상했다.
 
@@ -533,7 +533,7 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 
 **Google Chrome AI 버그 수정**은 AI가 보안 취약점 발견을 **산업 규모의 자동화 작업**으로 전환했음을 입증한 결정적 사례다. 한 달간 1,072개의 Chrome 버그를 수정하여 2년치 실적을 넘어선 것은, AI 보안 도구가 인간 감사자가 도달하지 못하는 코드 경로까지 탐색할 수 있음을 보여준다. 동시에 Microsoft(570건)와 Apple(482건)의 격차는 AI 보안 도구 채택 여부가 기업의 보안 태세를 직접적으로 가른다는 것을 시사한다. 그러나 공격자도 동일한 AI로 새로운 취약점을 대량 발굴할 수 있다는 “양면성”은 AI 보안 군비 경쟁의 본질적 딜레마다.
 
-**OpenAI 코딩 에이전트 과학 소프트웨어 보고서**는 코딩 에이전트의 실증적 가치와 근본적 한계를 동시에 보여준다. 8개 과학 프로젝트에서 최대 60배 런타임 단축을 달성하며 에이전트의 코드 최적화 역량을 입증했지만, 핵심 교훈은 "제약은 코드 생성이 아니라 **검증**"이라는 점이다. 에이전트가 과학적으로 타당한지 판단하지 못하고 자신감 있게 오류를 포함하는 결과를 낸다는 것은, [에이전트 보안 격차](../records/2026-07-19-ai-agent-security-gap.md)에서 지적된 구조적 문제와 동일한 패턴 — **자율 작업에 대한 인간 검증 능력의 부재** — 을 코딩 도메인에서 확인한다.
+**OpenAI 코딩 에이전트 과학 소프트웨어 보고서**는 코딩 에이전트의 실증적 가치와 근본적 한계를 동시에 보여준다. 8개 과학 프로젝트에서 최대 60배 런타임 단축을 달성하며 에이전트의 코드 최적화 역량을 입증했지만, 핵심 교훈은 "제약은 코드 생성이 아니라 **검증**"이라는 점이다. 에이전트가 과학적으로 타당한지 판단하지 못하고 자신감 있게 오류를 포함하는 결과를 낸다는 것은, [에이전트 보안 격차](../../records/2026-07-19-ai-agent-security-gap.md)에서 지적된 구조적 문제와 동일한 패턴 — **자율 작업에 대한 인간 검증 능력의 부재** — 을 코딩 도메인에서 확인한다.
 
 **Manifest의 LLM 라우터 폐지 선언**은 업계 트렌드에 대한 대담한 역행이지만, 7,000명 사용자의 실제 운영 데이터에 기반한 것이다. 핵심 인사이트는 **캐싱이 라우팅보다 더 효과적인 비용 절감 수단**이라는 것. 에이전트 시스템에서 시스템 프롬프트와 대화 이력이 프롬프트의 대부분을 차지하는 만큼, 프리픽스 캐시는 라우터 없이도 75~90%의 비용 절감을 달성한다. 동시에 모델 간 전환이 동작 일관성을 깬다는 점은, 에이전트 시스템의 신뢰성을 최우선으로 하는 팀에게 중요한 교훈이다. 이는 [Fireworks Nexus](#fireworks-ai-nexus--코딩-에이전트-비용-라우팅-계층)의 라우팅 접근과 정면으로 충돌하며, 에이전트 비용 최적화의 두 가지 철학 — **라우팅(비용 vs 일관성 트레이드오프)** vs **캐싱(비용 + 일관성 동시 확보)** — 이 산업 내에서 경쟁하고 있음을 보여준다.
 
@@ -541,7 +541,7 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 
 ### Cursor, 사용량 페이지에서 비용 정보 제거 ⭐⭐⭐
 
-**출처**: [Hacker News — Cursor Removed Cost Info](../records/2026-08-02-cursor-removes-cost-info-from-usage.md)
+**출처**: [Hacker News — Cursor Removed Cost Info](../../records/2026-08-02-cursor-removes-cost-info-from-usage.md)
 
 - **사건**: 2026년 8월, AI 코딩 도구 Cursor가 사용량 페이지와 CSV 내보내기에서 비용(cost) 정보를 제거. HN 280포인트 반발
 - **반발 이유**: 구독 기반 AI 도구에서 실제 사용량·비용 추적은 개발자의 기본적 권리. 비용 정보 은폐가 가격 인상·사용량 제한의 사전 준비일 가능성 우려
@@ -552,13 +552,13 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 
 ### Google Earth AI 이미지 생성 철회 — 제품 가드레일 실패 ⭐⭐⭐
 
-**출처**: [TechCrunch — Google Nixes Earth AI Feature](../records/2026-08-02-google-earth-ai-image-generation-removed.md)
+**출처**: [TechCrunch — Google Nixes Earth AI Feature](../../records/2026-08-02-google-earth-ai-image-generation-removed.md)
 
 - **사건**: Nano Banana 2 AI 이미지 생성기를 Google Earth 위성 지도에 통합 → 허위정보 우려로 **하루 만에 철회**
 - **도구 의미**: 신뢰할 수 있는 지리 정보 시스템에 AI 이미지 생성을 가드레일 없이 통합하려던 시도. AI 도구 설계 단계에서 위험 평가 부재를 보여줌
 - **출처 추적**: C2PA 등 출처 표준의 중요성 재확인. [MCP 생태계](#mcp-생태계-확장-2026년-6월7월)의 도구 검증 패턴과도 연결
 
-> 💡 **교차 참조**: [산업 동향](industry-trends.md) 10차 갱신에서 상세 분석. 도구 관점에서는 AI 기능의 출시-테스트-철회 사이클 비용과 평판 타격을 보여주는 사례. [Codex Security](#openai-codex-security--오픈소스-보안-스캐닝-cli)의 CI/CD 보안 검증과 같은 사전 검증 프로세스가 AI 도구 출시에도 필요함을 시사.
+> 💡 **교차 참조**: [산업 동향](../industry-trends.md) 10차 갱신에서 상세 분석. 도구 관점에서는 AI 기능의 출시-테스트-철회 사이클 비용과 평판 타격을 보여주는 사례. [Codex Security](#openai-codex-security--오픈소스-보안-스캐닝-cli)의 CI/CD 보안 검증과 같은 사전 검증 프로세스가 AI 도구 출시에도 필요함을 시사.
 
 ### 11차 갱신 분석: "AI 도구 신뢰는 투명성과 가드레일에서"
 
@@ -566,7 +566,7 @@ CRN이 선정한 2026년 상반기 핵심 AI 에이전트 제품 10선 ([원문]
 
 Cursor 사례는 AI SaaS 기업이 사용자로부터 비용 정보를 감추려는 유혹과 그 결과를 보여준다. 개발자 커뮤니티의 강한 반응(HN 280포인트)은 AI 도구 시장에서 사용자 목소리의 영향력을 입증하며, 투명성이 경쟁 우위가 될 수 있음을 시사한다. 이는 [Fireworks Nexus](#fireworks-ai-nexus--코딩-에이전트-비용-라우팅-계층)의 비용 라우팅과 [Manifest의 라우터 폐지](#manifest-llm-라우터-폐지-선언--단일-모델-고수가-최선-)의 캐싱 접근 사이에서, **사용자에게 비용 가시성을 제공하는 것이 전제 조건**임을 강조한다.
 
-Google Earth 사례는 AI 이미지 생성 기술이 신뢰 기반 정보 시스템에 무분별하게 통합될 때 발생하는 위험을 보여준다. 하루 만에 철회한 것은 Google이 사회적 영향을 사전에 평가하지 않았음을 입증하며, [산업 동향](industry-trends.md)의 보안 위기가 모델 수준이라면 이것은 **제품 출시 수준**의 가드레일 부재다.
+Google Earth 사례는 AI 이미지 생성 기술이 신뢰 기반 정보 시스템에 무분별하게 통합될 때 발생하는 위험을 보여준다. 하루 만에 철회한 것은 Google이 사회적 영향을 사전에 평가하지 않았음을 입증하며, [산업 동향](../industry-trends.md)의 보안 위기가 모델 수준이라면 이것은 **제품 출시 수준**의 가드레일 부재다.
 
 ## 에이전트 인프라 혁신 & 소비자 에이전트 (2026년 8월 13차 갱신)
 
@@ -574,7 +574,7 @@ Google Earth 사례는 AI 이미지 생성 기술이 신뢰 기반 정보 시스
 
 ### Cloudflare Kitesurf — 에이전트 전용 브라우저, V8 Isolate에서 구동 ⭐⭐⭐⭐
 
-**출처**: [MarkTechPost — Cloudflare Kitesurf](../records/2026-08-07-cloudflare-kitesurf-agent-first-browser.md)
+**출처**: [MarkTechPost — Cloudflare Kitesurf](../../records/2026-08-07-cloudflare-kitesurf-agent-first-browser.md)
 
 - **발표**: 2026년 8월 6일
 - **핵심**: AI 에이전트 전용 경량 브라우저. Chromium 기반이 아닌 **V8 isolate 기반**으로, 사람용 기능(탭, 확장, 60fps 렌더링)을 제거하고 에이전트에 필요한 것만 남김
@@ -583,11 +583,11 @@ Google Earth 사례는 AI 이미지 생성 기술이 신뢰 기반 정보 시스
 - **호환성**: 기존 Puppeteer, Playwright, MCP 클라이언트와 호환 — `browser=kitesurf` 파라미터 하나만 추가하면 즉시 사용 가능
 - **의미**: 수많은 에이전트가 동시에 웹을 탐색하는 시대에 브라우저 인프라 비용을 수직적으로 낮추는 패러다임 전환. 프롬프트 인젝션 방어 계층도 내장
 
-> 💡 **교차 참조**: Kitesurf는 브라우저를 "사람용 UI 렌더러"에서 "에이전트용 콘텐츠 추출기"로 재정의했다. 이는 [agent-browser](#agent-browser-vercel)의 ref 기반 접근성 트리(DOM 대비 10~25배 토큰 절감)와 같은 방향성이지만, V8 isolate라는 근본적으로 다른 아키텍처를 사용한다. [Hark Handoff](#hark-handoff--브라우저-작업-자동화-에이전트-)의 '다음 행동 예측' 모델과도 보완적 — Kitesurf는 인프라 계층을, Hark는 인지 계층을 혁신한다. 에이전트가 웹을 탐색하는 비용이 [Fireworks Nexus](#fireworks-ai-nexus--코딩-에이전트-비용-라우팅-계층)의 모델 라우팅, [Cloudflare Workers AI](../records/2026-08-04-cloudflare-kimi-glm-workers-ai-inference.md)의 추론 최적화와 함께 3축으로 절감되고 있다.
+> 💡 **교차 참조**: Kitesurf는 브라우저를 "사람용 UI 렌더러"에서 "에이전트용 콘텐츠 추출기"로 재정의했다. 이는 [agent-browser](#agent-browser-vercel)의 ref 기반 접근성 트리(DOM 대비 10~25배 토큰 절감)와 같은 방향성이지만, V8 isolate라는 근본적으로 다른 아키텍처를 사용한다. [Hark Handoff](#hark-handoff--브라우저-작업-자동화-에이전트-)의 '다음 행동 예측' 모델과도 보완적 — Kitesurf는 인프라 계층을, Hark는 인지 계층을 혁신한다. 에이전트가 웹을 탐색하는 비용이 [Fireworks Nexus](#fireworks-ai-nexus--코딩-에이전트-비용-라우팅-계층)의 모델 라우팅, [Cloudflare Workers AI](../../records/2026-08-04-cloudflare-kimi-glm-workers-ai-inference.md)의 추론 최적화와 함께 3축으로 절감되고 있다.
 
 ### TencentDB Agent Memory v2.0 — 팀 단위 에이전트 메모리 허브, 오픈소스 ⭐⭐⭐⭐
 
-**출처**: [MarkTechPost — TencentDB Agent Memory v2.0](../records/2026-08-08-tencentdb-agent-memory-v2-open-source.md)
+**출처**: [MarkTechPost — TencentDB Agent Memory v2.0](../../records/2026-08-08-tencentdb-agent-memory-v2-open-source.md)
 
 - **발표**: 2026년 8월 7일 (MIT 라이선스)
 - **핵심**: AI 코딩 에이전트를 위한 **팀 단위 메모리 허브**. 대화·문서·코드를 4가지 재사용 가능한 메모리 에셋으로 변환
@@ -601,11 +601,11 @@ Google Earth 사례는 AI 이미지 생성 기술이 신뢰 기반 정보 시스
 - **통합**: Memory Proxy가 Anthropic + OpenAI 프로토콜 모두 지원. Claude Code, OpenClaw, Hermes, CodeBuddy와 통합. Docker 명령 하나로 자체 호스팅
 - **의미**: 한 에이전트가 배운 것을 다른 에이전트가 재학습하지 않아도 되게 만들며, 프라이버시 보호와 메모리 공유를 동시에 해결한 결정적 사례
 
-> 💡 **교차 참조**: TencentDB Agent Memory의 ACL 거버넌스는 [Omnigent](frameworks-overview.md)의 정책 중심 보안(셸 명령어·파일 편집·토큰 소비 제어)과 같은 철학 — 도구 사용에 대한 거버넌스 계층. [Gemini Enterprise Agent Platform](frameworks-overview.md)의 Enterprise Memory System과 기능적으로 겹치지만, TencentDB는 오픈소스 자체 호스팅이라는 점에서 접근성이 혁신적으로 높다. [Prime Agent](frameworks-overview.md)의 Continual Harness(에이전트가 자신의 스킬·메모리를 CRUD)와도 연결 — 단, Prime Agent는 단일 에이전트 내부의 자기 수정이고, TencentDB는 팀 간 메모리 공유가 핵심 차이점.
+> 💡 **교차 참조**: TencentDB Agent Memory의 ACL 거버넌스는 [Omnigent](../frameworks-overview.md)의 정책 중심 보안(셸 명령어·파일 편집·토큰 소비 제어)과 같은 철학 — 도구 사용에 대한 거버넌스 계층. [Gemini Enterprise Agent Platform](../frameworks-overview.md)의 Enterprise Memory System과 기능적으로 겹치지만, TencentDB는 오픈소스 자체 호스팅이라는 점에서 접근성이 혁신적으로 높다. [Prime Agent](../frameworks-overview.md)의 Continual Harness(에이전트가 자신의 스킬·메모리를 CRUD)와도 연결 — 단, Prime Agent는 단일 에이전트 내부의 자기 수정이고, TencentDB는 팀 간 메모리 공유가 핵심 차이점.
 
 ### Google Maps Agentic — 소비자 앱의 에이전트화 ⭐⭐⭐
 
-**출처**: [TechCrunch — Google Maps Agentic Features](../records/2026-08-08-google-maps-agentic-features.md)
+**출처**: [TechCrunch — Google Maps Agentic Features](../../records/2026-08-08-google-maps-agentic-features.md)
 
 - **발표**: 2026년 8월 6일 (미국 사용자 순차 롤아웃)
 - **핵심**: Google Maps의 "Ask Maps"에 음식 주문, 호텔 예약, 이벤트 티켓 구매 등 에이전트형 능력 추가. 20억+ 사용자 플랫폼에서 에이전트 AI 도입
@@ -621,7 +621,7 @@ Google Earth 사례는 AI 이미지 생성 기술이 신뢰 기반 정보 시스
 
 세 건의 신규 도구는 에이전트 도구 생태계의 **인프라·미들웨어·소비자** 3계층이 동시에 혁신되고 있음을 보여준다.
 
-**인프라 계층 (Kitesurf)**: 브라우저 자동화의 가장 큰 비용 구조인 Chromium 오버헤드를 V8 isolate로 근본적으로 해결했다. Puppeteer/Playwright 호환성으로 도입 장벽을 제거한 점이 핵심 — 기존 코드 한 줄만 바꾸면 된다. 이는 [Cloudflare Workers AI](../records/2026-08-04-cloudflare-kimi-glm-workers-ai-inference.md)의 추론 최적화와 함께 Cloudflare가 에이전트 인프라 전체(추론 + 브라우징)를 엣지에서 최적화하려는 전략의 일환으로 보인다.
+**인프라 계층 (Kitesurf)**: 브라우저 자동화의 가장 큰 비용 구조인 Chromium 오버헤드를 V8 isolate로 근본적으로 해결했다. Puppeteer/Playwright 호환성으로 도입 장벽을 제거한 점이 핵심 — 기존 코드 한 줄만 바꾸면 된다. 이는 [Cloudflare Workers AI](../../records/2026-08-04-cloudflare-kimi-glm-workers-ai-inference.md)의 추론 최적화와 함께 Cloudflare가 에이전트 인프라 전체(추론 + 브라우징)를 엣지에서 최적화하려는 전략의 일환으로 보인다.
 
 **미들웨어 계층 (TencentDB Agent Memory)**: 에이전트 메모리의 "거버넌스 간극"을 해결했다. 기존 에이전트 메모리는 세션 단위 격리 또는 전체 공유의 양극단만 존재했지만, ACL 기반 3단계 가시성(private/team/restricted)으로 팀 협업 시 프라이버시와 공유를 동시에 달성했다. MIT 라이선스 + Docker 원령 배포 + Anthropic/OpenAI 프로토콜 동시 지원으로 기업 도입 장벽을 최소화한 것이 차별점.
 
@@ -633,7 +633,7 @@ Google Earth 사례는 AI 이미지 생성 기술이 신뢰 기반 정보 시스
 
 ### Docker Sandboxes — AI 코딩 에이전트를 위한 일회용 microVM 격리 환경 ⭐⭐⭐⭐
 
-**출처**: [Docker — Docker Sandboxes](../records/2026-08-10-docker-sandboxes-ai-agents.md)
+**출처**: [Docker — Docker Sandboxes](../../records/2026-08-10-docker-sandboxes-ai-agents.md)
 **링크**: [docker.com/products/docker-sandboxes](https://www.docker.com/products/docker-sandboxes/)
 
 #### 핵심 설계
@@ -650,11 +650,11 @@ Docker가 Claude Code, Gemini CLI, Copilot CLI, Codex, OpenCode, Kiro 등 주요
 #### 의미: "승인 피로"의 인프라 해결책
 AI 코딩 에이전트 도입의 가장 큰 장애물인 보안 우려를 인프라 수준에서 해결한다. `--dangerously-skip-permissions` 모드에서도 microVM 격리로 호스트가 보호되므로, 에이전트에게 최대 자율성을 부여하면서도 안전을 유지할 수 있다. 이는 아래 Claude Code Auto Mode의 통계(수동 검토 13.6% vs 자동 모드 89% 위험 차단)와 결합하면, **인프라 격리 + 모델 자체 판단**의 이중 안전망이 에이전트 실용성을 크게 높인다.
 
-> 💡 **교차 참조**: Docker Sandboxes는 [Shepherd](research-overview.md)(에이전트 실행 포크·리플레이)와 보완적 — Shepherd는 실행 상태의 버전 관리를, Docker Sandboxes는 실행 환경의 격리를 담당한다. 두 기술이 결합하면 '안전하고 롤백 가능한 에이전트 실행 환경'이 완성된다. [Omnigent](frameworks-overview.md)의 정책 중심 보안(셸 명령어·파일 편집 제어)과도 같은 방향성 — 단, Omnigent는 정책 엔진이고, Docker Sandboxes는 인프라 계층이다.
+> 💡 **교차 참조**: Docker Sandboxes는 [Shepherd](../research-overview.md)(에이전트 실행 포크·리플레이)와 보완적 — Shepherd는 실행 상태의 버전 관리를, Docker Sandboxes는 실행 환경의 격리를 담당한다. 두 기술이 결합하면 '안전하고 롤백 가능한 에이전트 실행 환경'이 완성된다. [Omnigent](../frameworks-overview.md)의 정책 중심 보안(셸 명령어·파일 편집 제어)과도 같은 방향성 — 단, Omnigent는 정책 엔진이고, Docker Sandboxes는 인프라 계층이다.
 
 ### Anthropic Claude Code — Auto Mode 기본 전환, 승인 피로 해소 ⭐⭐⭐⭐
 
-**출처**: [TechCrunch — Claude Code Auto Mode Default](../records/2026-08-10-anthropic-claude-code-auto-mode-default.md)
+**출처**: [TechCrunch — Claude Code Auto Mode Default](../../records/2026-08-10-anthropic-claude-code-auto-mode-default.md)
 **링크**: [claude.com/blog/auto-mode-default-in-claude-code](https://claude.com/blog/auto-mode-default-in-claude-code)
 
 #### 핵심 변화
@@ -671,7 +671,7 @@ Anthropic이 Claude Code의 자동 모드(Auto Mode)를 **Pro, Max, Team 계정�
 #### 의미: 에이전트 자율성의 사회적 합의 형성
 이 결정은 AI 코딩 에이전트 시장에서 중요한 선례를 만든다. Cursor, GitHub Copilot, Windsurf 등 경쟁사들도 유사한 자동 실행 모드를 고려할 가능성이 높으며, 사용자 워크플로우에서 "AI 코딩 도구"가 "AI 코딩 동료"로 전환되는 기념비적 순간이다. Docker Sandboxes와 결합하면, 개발자는 AI에게 더 많은 자율성을 부여하면서도 안전을 유지할 수 있다.
 
-> 💡 **교차 참조**: Auto Mode의 승인 피로 해소는 [Docker Sandboxes](#docker-sandboxes--ai-코딩-에이전트를-위한-일회용-microvm-격리-환경-)와 완벽한 상보 관계를 형성한다. Docker Sandboxes가 인프라 수준의 격리를 제공하면, Auto Mode는 모델 수준의 안전 판단을 제공한다 — 이중 안전망. [프레임워크 동향](frameworks-overview.md)의 Claude Agent SDK 생명주기 훅(PreToolUse/PostToolUse)과 같은 맥락이지만, 훅을 사용자가 아닌 모델이 활용하는 것이 차이점. [연구 동향](research-overview.md)의 AI 안전 평가 위기(샌드박스 탈출)와 대조적 — 안전 평가 환경의 위기를 제품 수준에서 해결하는 실용적 접근.
+> 💡 **교차 참조**: Auto Mode의 승인 피로 해소는 [Docker Sandboxes](#docker-sandboxes--ai-코딩-에이전트를-위한-일회용-microvm-격리-환경-)와 완벽한 상보 관계를 형성한다. Docker Sandboxes가 인프라 수준의 격리를 제공하면, Auto Mode는 모델 수준의 안전 판단을 제공한다 — 이중 안전망. [프레임워크 동향](../frameworks-overview.md)의 Claude Agent SDK 생명주기 훅(PreToolUse/PostToolUse)과 같은 맥락이지만, 훅을 사용자가 아닌 모델이 활용하는 것이 차이점. [연구 동향](../research-overview.md)의 AI 안전 평가 위기(샌드박스 탈출)와 대조적 — 안전 평가 환경의 위기를 제품 수준에서 해결하는 실용적 접근.
 
 ### 14차 갱신 분석: "자율성-안전 트레이드오프의 해소 — 인프라와 모델의 이중 안전망"
 
@@ -682,13 +682,13 @@ Docker Sandboxes와 Claude Code Auto Mode는 각각 다른 계층에서 같은 �
 | **인프라** | Docker Sandboxes | microVM 격리로 호스트 보호. 에이전트가 무엇을 하든 호스트에는 영향 없음 |
 | **모델** | Claude Code Auto Mode | 모델 스스로 행위의 안전성 판단. 수동 승인의 97% 자동 승인 현실 해소 |
 
-이 두 발전이 동시에 일어난 것은 우연이 아니다. 에이전트 생태계 전반에서 **"AI에게 더 많은 권한을 줘도 안전하다"**는 새로운 합의가 형성되고 있다. Docker는 인프라 수준의 보장을, Anthropic은 모델 수준의 판단을 각각 제공하며, 이 두 층위가 독립적으로 작동하면서 상호 보완한다. 이는 [Kitesurf](#cloudflare-kitesurf--에이전트-전용-브라우저-v8-isolate에서-구동-)(V8 isolate 브라우저)와 [TencentDB Agent Memory](#tencentdb-agent-memory-v20--팀-단위-에이전트-메모리-허브-오픈소스-)(ACL 거버넌스)로 이어진 2026년 8월의 에이전트 인프라 혁신 흐름의 핵심 축이다. 또한 [ByteDance SeedRealtime](../records/2026-08-10-bytedance-seedrealtime-audio-visual-llm.md) 등 멀티모달 모델의 발전과 결합하면, 코딩 에이전트를 넘어 일반 작업 에이전트의 자율성도 빠르게 확대될 것이다.
+이 두 발전이 동시에 일어난 것은 우연이 아니다. 에이전트 생태계 전반에서 **"AI에게 더 많은 권한을 줘도 안전하다"**는 새로운 합의가 형성되고 있다. Docker는 인프라 수준의 보장을, Anthropic은 모델 수준의 판단을 각각 제공하며, 이 두 층위가 독립적으로 작동하면서 상호 보완한다. 이는 [Kitesurf](#cloudflare-kitesurf--에이전트-전용-브라우저-v8-isolate에서-구동-)(V8 isolate 브라우저)와 [TencentDB Agent Memory](#tencentdb-agent-memory-v20--팀-단위-에이전트-메모리-허브-오픈소스-)(ACL 거버넌스)로 이어진 2026년 8월의 에이전트 인프라 혁신 흐름의 핵심 축이다. 또한 [ByteDance SeedRealtime](../../records/2026-08-10-bytedance-seedrealtime-audio-visual-llm.md) 등 멀티모달 모델의 발전과 결합하면, 코딩 에이전트를 넘어 일반 작업 에이전트의 자율성도 빠르게 확대될 것이다.
 
 ## 에이전트 런타임 관리 (2026년 8월 15차 갱신)
 
 ### Shepherd — 에이전트 실행 포크·리플레이·되돌리기 Python 런타임 ⭐⭐⭐⭐⭐
 
-**출처**: [MarkTechPost — Shepherd: Open-Source Python Substrate](../records/2026-08-08-shepherd-agent-fork-replay-substrate.md)
+**출처**: [MarkTechPost — Shepherd: Open-Source Python Substrate](../../records/2026-08-08-shepherd-agent-fork-replay-substrate.md)
 **코드**: [github.com/shepherd-agents/shepherd](https://github.com/shepherd-agents/shepherd) (MIT 라이선스)
 **설치**: `pip install shepherd-ai` (Python 3.11+, macOS/Linux)
 
@@ -711,7 +711,7 @@ Shepherd는 AI 에이전트의 모든 실행 상태(프로세스, 파일시스�
 - 4개 벤치마크 최대 **11포인트 향상**, **58% 실행 시간 단축** (반사실적 메타 최적화)
 - TerminalBench-2: **34.2% → 39.4%** (Tree-RL 훈련)
 
-> 💡 **교차 참조**: Shepherd는 [Docker Sandboxes](#docker-sandboxes--ai-코딩-에이전트를-위한-일회용-microvm-격리-환경-)와 보완적 — Docker는 실행 환경의 격리를, Shepherd는 실행 상태의 버전 관리를 담당. 결합하면 '안전하고 롤백 가능한 에이전트 실행 환경' 완성. [TencentDB Agent Memory](#tencentdb-agent-memory-v20--팀-단위-에이전트-메모리-허브-오픈소스-)의 팀 메모리 공유와도 시너지. [연구 동향](research-overview.md)에서 런타임 혁신 관점으로 상세 분석(5차 갱신).
+> 💡 **교차 참조**: Shepherd는 [Docker Sandboxes](#docker-sandboxes--ai-코딩-에이전트를-위한-일회용-microvm-격리-환경-)와 보완적 — Docker는 실행 환경의 격리를, Shepherd는 실행 상태의 버전 관리를 담당. 결합하면 '안전하고 롤백 가능한 에이전트 실행 환경' 완성. [TencentDB Agent Memory](#tencentdb-agent-memory-v20--팀-단위-에이전트-메모리-허브-오픈소스-)의 팀 메모리 공유와도 시너지. [연구 동향](../research-overview.md)에서 런타임 혁신 관점으로 상세 분석(5차 갱신).
 
 ### 15차 갱신 분석: "에이전트 실행의 일급 객체화"
 
@@ -721,7 +721,7 @@ Shepherd의 등장으로 에이전트 도구 생태계에 **'실행 상태 관�
 
 ### Okta MCP Tool Scoping — "툴 세금" 90% 절감, 비용과 보안의 동시 해결 ⭐⭐⭐⭐
 
-**출처**: [AI News — Okta targets AI agent token costs with MCP scoping](../records/2026-08-14-okta-mcp-tool-scoping.md)
+**출처**: [AI News — Okta targets AI agent token costs with MCP scoping](../../records/2026-08-14-okta-mcp-tool-scoping.md)
 
 #### 문제: "툴 세금(tool tax)"
 MCP 서버가 노출하는 도구가 많을수록 모델은 매 턴마다 모든 도구의 스키마·이름·설명·파라미터를 프롬프트에 싣는다. 에이전트가 결국 호출하지 않을 도구에도 토큰을 소비하며, MCP 생태계가 커질수록 이 오버헤드는 **선형적으로 증가**한다.
@@ -742,7 +742,7 @@ MCP 서버가 노출하는 도구가 많을수록 모델은 매 턴마다 모든
 
 ### 16차 갱신 분석: "에이전트 비용 절감 3계층의 완성"
 
-Okta의 툴 스코핑은 같은 주(8/13~14)에 발표된 [Writer Palmyra X6](models-overview.md)의 하니스 최적화·[Gemini 3.7 Flash](models-overview.md)의 가격 파괴와 함께 **에이전트 토큰 비용 절감의 3계층**을 완성한다:
+Okta의 툴 스코핑은 같은 주(8/13~14)에 발표된 [Writer Palmyra X6](../models-overview.md)의 하니스 최적화·[Gemini 3.7 Flash](../models-overview.md)의 가격 파괴와 함께 **에이전트 토큰 비용 절감의 3계층**을 완성한다:
 
 | 계층 | 솔루션 | 절감률 |
 |------|--------|--------|
@@ -760,18 +760,18 @@ Okta의 툴 스코핑은 같은 주(8/13~14)에 발표된 [Writer Palmyra X6](mo
 
 ### Cursor Origin — GitHub 대항 에이전트 네이티브 코드 호스팅 ⭐⭐⭐⭐
 
-**출처**: [TechCrunch — Cursor launches rival hosting platform Origin](../records/2026-08-19-cursor-launches-origin-code-hosting.md)
+**출처**: [TechCrunch — Cursor launches rival hosting platform Origin](../../records/2026-08-19-cursor-launches-origin-code-hosting.md)
 
 - **전략**: GitHub과 **병행 사용 가능한 상호운용 설계** — 전환 장벽을 최소화하며 이탈 수요를 흡수. GitHub 리포를 Org 단위로 동기화
 - **계기**: GitHub 1년간 257회 장애 분석, Origin 출시 당일 6시간+ 전 세계 장애 발생 — 고프로필 사용자 이탈 가시화
 - **차별화**: '에이전트 네이티브' 기능 예고 — PR 리뷰·코드 검색·브랜치 관리를 에이전트가 API 수준에서 수행하는 환경 구축
 - **한계**: GitHub 1억 8천만 사용자 기반 압도. 오픈소스 프로젝트 이동·CI/CD 통합·서드파티 앱 생태계 확보가 과제
 
-> 💡 **교차 참조**: SpaceX 인수 이후 '도구'에서 '플랫폼'으로 확장 중([산업 동향 18차](industry-trends.md) SpaceX-Cursor $60B). [Warp Agent CLI](#warp-agent-cli--모든-터미널에서-작동하는-독립형-코딩-에이전트-)(12차)의 터미널 계층에 이어 Cursor는 호스팅 계층으로 — AI 코딩 도구의 개발 스택 전 방향 확장이 진행 중.
+> 💡 **교차 참조**: SpaceX 인수 이후 '도구'에서 '플랫폼'으로 확장 중([산업 동향 18차](../industry-trends.md) SpaceX-Cursor $60B). [Warp Agent CLI](#warp-agent-cli--모든-터미널에서-작동하는-독립형-코딩-에이전트-)(12차)의 터미널 계층에 이어 Cursor는 호스팅 계층으로 — AI 코딩 도구의 개발 스택 전 방향 확장이 진행 중.
 
 ### Warp Factories — 아웃오브더박스 소프트웨어 팩토리 ⭐⭐⭐
 
-**출처**: [TechCrunch — Warp's out-of-the-box software factory](../records/2026-08-19-warp-factories-ai-software-factory.md)
+**출처**: [TechCrunch — Warp's out-of-the-box software factory](../../records/2026-08-19-warp-factories-ai-software-factory.md)
 
 - **구조**: 트리아지 → 사양 정의 → 구현 → 리뷰 → 검증의 개발 파이프라인 전 단계를 에이전트 슬롯으로 추상화
 - **모델 어그노스틱**: Claude Code·Codex 모두 지원. 모든 에이전트가 동일 환경에서 실행되어 모델-프롬프트-하네스 조합의 A/B 비교·토큰 지출 추적 가능
@@ -779,18 +779,18 @@ Okta의 툴 스코핑은 같은 주(8/13~14)에 발표된 [Writer Palmyra X6](mo
 - **민주화**: Stripe 'minions'·Ramp 백그라운드 에이전트급 자체 팩토리를 중소기업에 제공
 - **현실 인식**: Warp 자체 자동화율 주간 30~35%(CEO 증언) — 인간-에이전트 협업 모델이 당분간 지속
 
-> 💡 **교차 참조**: '소프트웨어 팩토리' 패러다임의 상품화. [ChatGPT Work](#chatgpt-work-openai--야심찬-프로젝트를-위한-ai-에이전트)(프로젝트 자율 실행)·[Shepherd](../records/2026-08-08-shepherd-agent-fork-replay-substrate.md)(런타임 관리)와 함께 에이전트 개발 라이프사이클 인프라를 완성. 16차 "비용 절감 3계층"에 이어 모델-하네스 조합을 실험하는 **팩토리 운영 계층**이 새로 추가됨.
+> 💡 **교차 참조**: '소프트웨어 팩토리' 패러다임의 상품화. [ChatGPT Work](#chatgpt-work-openai--야심찬-프로젝트를-위한-ai-에이전트)(프로젝트 자율 실행)·[Shepherd](../../records/2026-08-08-shepherd-agent-fork-replay-substrate.md)(런타임 관리)와 함께 에이전트 개발 라이프사이클 인프라를 완성. 16차 "비용 절감 3계층"에 이어 모델-하네스 조합을 실험하는 **팩토리 운영 계층**이 새로 추가됨.
 
 ### NVIDIA TensorRT Model Connect — 두 명령어 C++ 추론 배포 ⭐⭐⭐
 
-**출처**: [MarkTechPost — TensorRT Model Connect public preview](../records/2026-08-19-nvidia-tensorrt-model-connect-public-preview.md)
+**출처**: [MarkTechPost — TensorRT Model Connect public preview](../../records/2026-08-19-nvidia-tensorrt-model-connect-public-preview.md)
 
 - **핵심**: Hugging Face 체크포인트를 ONNX 변환 없이 `trtmc build` / `trtmc run` **두 명령어**로 네이티브 C++ TensorRT 추론 환경에 배포 (버전 관리되는 .bundle 아티팩트, Apache-2.0)
 - **성능**: 76개 모델 패밀리·105개 프로필 테스트(GB300 기준), 102개가 기준 대비 5%+ 빠름
 - **제약**: 현재 Linux aarch64 전용 릴리즈(x86_64는 Docker 소스 빌드), Python 3.10/3.12·TensorRT 11.1 필요
 - **의미**: PyTorch 없는 C++ 런타임 — 엣지·로봛·자율주행·의료기기 등 제한 환경 배포의 진입 장벽 제거. 태스크 API(`generate()`·`transcribe()`·`embed()`) 추상화로 모델별 통합 코드 대폭 감소. 프로젝트 전체를 OpenAI Codex 에이전트로 구축했다는 점에서 에이전트 개발 실증 사례이기도 함
 
-> 💡 **교차 참조**: [Cloudflare Workers AI](#cloudflare-workers-ai--kimi-k26glm-52-대규모-추론-최적화-)(12차)가 서버리스 추론이라면 TRTMC는 네이티브 온디바이스 추론 — 배포 계층의 양극화. [모델 동향](models-overview.md)의 배포 매트릭스·추론 인프라 경쟁(Groq 네오클라우드 피벗 포함, [산업 동향 20차](industry-trends.md))과 연결.
+> 💡 **교차 참조**: [Cloudflare Workers AI](#cloudflare-workers-ai--kimi-k26glm-52-대규모-추론-최적화-)(12차)가 서버리스 추론이라면 TRTMC는 네이티브 온디바이스 추론 — 배포 계층의 양극화. [모델 동향](../models-overview.md)의 배포 매트릭스·추론 인프라 경쟁(Groq 네오클라우드 피벗 포함, [산업 동향 20차](../industry-trends.md))과 연결.
 
 ### 17차 갱신 분석: "코딩 도구의 인프라 계층화 — 에디터에서 파이프라인 OS로"
 
@@ -802,9 +802,9 @@ Okta의 툴 스코핑은 같은 주(8/13~14)에 발표된 [Writer Palmyra X6](mo
 | 개발 프로세스 | Warp Factories | 단계별 수동 파이프라인 | 에이전트 슬롯 기반 자동 팩토리 |
 | 모델 배포 | TensorRT Model Connect | PyTorch→ONNX→TRT 다단계 | 두 명령어 .bundle 배포 |
 
-핵심 통찰은 **플랫폼 전환 강요 없는 계층 장악**이라는 공통 전략이다. Origin은 GitHub 병행을 허용하고, Factories는 기존 티켓·메시징에 통합되며, TRTMC는 HF 체크포인트를 그대로 받는다. 채택 장벽을 낮춘 채 생태계를 내부로 흡수하는 전략 — [Stripe-OpenRouter](industry-trends.md)(19차)의 유통 계층 흡수와 같은 구조가 도구 생태계에서도 반복되고 있다.
+핵심 통찰은 **플랫폼 전환 강요 없는 계층 장악**이라는 공통 전략이다. Origin은 GitHub 병행을 허용하고, Factories는 기존 티켓·메시징에 통합되며, TRTMC는 HF 체크포인트를 그대로 받는다. 채택 장벽을 낮춘 채 생태계를 내부로 흡수하는 전략 — [Stripe-OpenRouter](../industry-trends.md)(19차)의 유통 계층 흡수와 같은 구조가 도구 생태계에서도 반복되고 있다.
 
-> 💡 **교차 참조**: 12차 "터미널 네이티브 다원화"(Warp Agent CLI·Claude Code Auto Mode)가 실행 환경 경쟁이었다면, 17차는 그 위의 인프라 계층 경쟁. [산업 동향](industry-trends.md) 18차 SpaceX-Cursor의 수직 통합이 자본 시장에서 일어났다면, 17차 세 발표는 제품 수준에서 같은 흐름을 구현한다. [Docker Sandboxes](#docker-sandboxes--ai-코딩-에이전트를-위한-일회용-microvm-격리-환경-)(14차)·[Shepherd](../records/2026-08-08-shepherd-agent-fork-replay-substrate.md)(15차)로 이어진 실행 인프라에 호스팅·팩토리·배포가 더해져 에이전트 개발 스택의 전 계층이 갖춰졌다.
+> 💡 **교차 참조**: 12차 "터미널 네이티브 다원화"(Warp Agent CLI·Claude Code Auto Mode)가 실행 환경 경쟁이었다면, 17차는 그 위의 인프라 계층 경쟁. [산업 동향](../industry-trends.md) 18차 SpaceX-Cursor의 수직 통합이 자본 시장에서 일어났다면, 17차 세 발표는 제품 수준에서 같은 흐름을 구현한다. [Docker Sandboxes](#docker-sandboxes--ai-코딩-에이전트를-위한-일회용-microvm-격리-환경-)(14차)·[Shepherd](../../records/2026-08-08-shepherd-agent-fork-replay-substrate.md)(15차)로 이어진 실행 인프라에 호스팅·팩토리·배포가 더해져 에이전트 개발 스택의 전 계층이 갖춰졌다.
 
 ---
 
@@ -814,7 +814,7 @@ Okta의 툴 스코핑은 같은 주(8/13~14)에 발표된 [Writer Palmyra X6](mo
 
 ### Google Search/Gemini 학습 도구 — 교육 AI 시장 정면 진입 ⭐⭐⭐⭐
 
-**출처**: [TechCrunch — Google study tools](../records/2026-08-20-google-ai-study-tools.md) · [Google Blog — 5 new ways](../records/2026-08-20-google-study-tools-blog.md) (8/20 수집분 이월 반영)
+**출처**: [TechCrunch — Google study tools](../../records/2026-08-20-google-ai-study-tools.md) · [Google Blog — 5 new ways](../../records/2026-08-20-google-study-tools-blog.md) (8/20 수집분 이월 반영)
 
 - **Search 측**: AI 생성 **상호 시각 자료·시뮬레이션** (예: "pH 척도" 검색 → 개념 시각화, "시트러스 과일 표시" 등 후속 질의 지원), 과목별 **맞춤 연습 퀴즈** (Princeton Review 검증 콘텐츠, ACT·AP·GRE·LSAT·MCAT·SAT 등 주요 시험 대응), **Lens 단계별 학습** (문제 사진 → 개념 분해·풀이 경로 확인)
 - **Gemini 측**: 학습 도구 통합 **학생 허브**, 플래시카드·연습 퀴즈, 다단계 연구 보고서 생성 후 대화형 토론. **노트북(구 NotebookLM) AI 모드**로 강의 슬라이드·논문·웹 자료 통합 학습 환경
@@ -823,7 +823,7 @@ Okta의 툴 스코핑은 같은 주(8/13~14)에 발표된 [Writer Palmyra X6](mo
 
 ### PrimeIntellect NanoGPT Speedrun — 프론티어 에이전트 평가 인프라 ⭐⭐⭐⭐
 
-**출처**: [PrimeIntellect — NanoGPT Speedrun Frontier](../records/2026-08-24-nanogpt-speedrun.md)
+**출처**: [PrimeIntellect — NanoGPT Speedrun Frontier](../../records/2026-08-24-nanogpt-speedrun.md)
 
 - **설계**: nanoGPT 최적화 속도경쟁(스텝 수 최소화, 휴먼 레코드 2,600 vs 베이스라인 3,290)에 **18개 프론티어 모델 × 153회 자율 실행**, 동일 예산(24h) 비교
 - **상위권**: Fable 5 1위(기록 2,726, 휴먼 대비 81.7% 도달) → Opus 5(2,920·53.6%) → Kimi K3(2,930·52.2%). 이어 GPT-5.6 Sol 3,042(35.9%), Qwen3.8 Max 3,120(24.6%), GLM 5.2 3,150(20.3%), DeepSeek V4 Pro 12.3% 등. GLM 5.3은 검증 기록 없음
@@ -832,7 +832,7 @@ Okta의 툴 스코핑은 같은 주(8/13~14)에 발표된 [Writer Palmyra X6](mo
 
 ### Linkdaze — 가정 운영형 스마트 캘린더 ⭐⭐⭐
 
-**출처**: [TechCrunch — Linkdaze smart calendar](../records/2026-08-24-linkdaze-smart-calendar.md)
+**출처**: [TechCrunch — Linkdaze smart calendar](../../records/2026-08-24-linkdaze-smart-calendar.md)
 
 - **개념**: 개인 일정이 아닌 **가구(household) 운영**용 터치스크린 캘린더(15.6/10.1인치). Google·iCloud·Outlook·Yahoo·Cozi 동기화 + 구성원 색상 코딩, 집안일·보상·쇼핑 리스트·디지털 액자 겸용
 - **AI 차별점**: **Snap-to-Sync 식단 계획** — 종이 레시피·학급 점심 메뉴 사진(OCR+NLP)을 디지털 식단 계획+쇼핑 리스트로 자동 변환
@@ -848,7 +848,7 @@ Okta의 툴 스코핑은 같은 주(8/13~14)에 발표된 [Writer Palmyra X6](mo
 
 주목할 점은 두 가지다. 첫째, Google과 Linkdaze 모두 **신학기(back-to-school) 시즌을 겨냥**해 같은 주에 학습·가정 관리 도구를 내놓았다 — 교육과 가정이라는 인접 시장이 AI 도구의 다음 전선이 됐다. 둘째, NanoGPT Speedrun은 '도구'가 에이전트의 실행기일 뿐 아니라 **평가기**이기도 함을 보여준다. 동일 예산·전체 궤적 공개라는 방법론은 에이전트 벤치마크의 투명성 기준을 한 단계 올린다.
 
-> 💡 **교차 참조**: NanoGPT Speedrun의 모델별 성적(Kimi K3 상위권, Qwen3.8 Max·GLM 5.2 중위권)은 [모델 동향 20차](models-overview.md)의 Harvey Tenet(Kimi K3 베이스)·Qwen 3.8 27B와 직접 교차 검증된다 — 하네스·모델 조합이 성능을 좌우한다는 증거. Google 노트북 AI 모드는 Search·Gemini 통합 흐름으로, [산업 동향](industry-trends.md)의 플랫폼 경쟁 구도와 연결. Linkdaze의 Snap-to-Sync와 Google Lens 학습 기능은 같은 '카메라 입력 → AI 구조화' 패턴의 소비자 버전이다.
+> 💡 **교차 참조**: NanoGPT Speedrun의 모델별 성적(Kimi K3 상위권, Qwen3.8 Max·GLM 5.2 중위권)은 [모델 동향 20차](../models-overview.md)의 Harvey Tenet(Kimi K3 베이스)·Qwen 3.8 27B와 직접 교차 검증된다 — 하네스·모델 조합이 성능을 좌우한다는 증거. Google 노트북 AI 모드는 Search·Gemini 통합 흐름으로, [산업 동향](../industry-trends.md)의 플랫폼 경쟁 구도와 연결. Linkdaze의 Snap-to-Sync와 Google Lens 학습 기능은 같은 '카메라 입력 → AI 구조화' 패턴의 소비자 버전이다.
 
 ---
 
@@ -858,7 +858,7 @@ Okta의 툴 스코핑은 같은 주(8/13~14)에 발표된 [Writer Palmyra X6](mo
 
 ### Perplexity Portable Computer — 도구 스택 전체를 디바이스에 싣다 ⭐⭐⭐⭐⭐
 
-**출처**: [MarkTechPost — Perplexity Ships Portable Computer](../records/2026-08-25-perplexity-portable-computer.md) (8/25 수집분 이월 반영)
+**출처**: [MarkTechPost — Perplexity Ships Portable Computer](../../records/2026-08-25-perplexity-portable-computer.md) (8/25 수집분 이월 반영)
 
 - **구조**: 에이전트 하네스·오케스트레이터·플래너·도구 라우터·사후학습 모델을 NVIDIA DGX Spark에서 직접 실행. 로컬 모델+추론 엔진+도구 샌드박스+앱 커넥터가 **하나의 패키지 시스템**으로 제공 — 추론 서버 설정·도구 수동 연결 작업 제거
 - **비용 모델**: 모든 작업이 디바이스에서 시작, **로컬 처리 단계 토큰 비용 0**. 실시간 웹·프론티어 추론이 필요하면 오케스트레이터가 정지 → PII 분류기로 무엇이 밖으로 나가는지 보여준 뒤 승인받아 15개+ 클라우드 모델로 해당 단계만 전송
@@ -868,7 +868,7 @@ Okta의 툴 스코핑은 같은 주(8/13~14)에 발표된 [Writer Palmyra X6](mo
 
 ### Gatik — 도구가 도로 위로: 무인 화물의 상업 검증 ⭐⭐⭐⭐
 
-**출처**: [Artificial Intelligence News — Gatik raises $200M](../records/2026-08-26-gatik-autonomous-freight.md)
+**출처**: [Artificial Intelligence News — Gatik raises $200M](../../records/2026-08-26-gatik-autonomous-freight.md)
 
 - **펀딩**: $200M 시리즈 D — 카타르투자청·Koch Disruptive Technologies 주도, Millennium Management·ARK Invest 등 참여
 - **실증**: 계약 수익 $600M 이상, **완전 무인 주문 85,000건 완료, 준시간 배송률 99%** — 파일럿이 아닌 상업 운영 데이터
@@ -878,7 +878,7 @@ Okta의 툴 스코핑은 같은 주(8/13~14)에 발표된 [Writer Palmyra X6](mo
 
 ### Gemini 브랜딩 문제 — 기능이 늘수록 깨지는 경험 ⭐⭐⭐⭐
 
-**출처**: [TechCrunch — Google's Gemini has a branding problem](../records/2026-08-26-gemini-branding.md)
+**출처**: [TechCrunch — Google's Gemini has a branding problem](../../records/2026-08-26-gemini-branding.md)
 
 - **문제**: Google이 Gemini 산하 모든 기능에 별도 브랜딩 — 채팅·Spark(에이전트)·Daily Brief가 각각 독립 아이콘·탐색 위치를 가짐. "어떤 작업이 Spark인지 Daily Brief인지 추측할 필요 없다"는 자사 발표 문구와 정면 충돌
 - **본질**: **내부 아키텍처의 사용자 노출** — 주류 사용자는 요청을 입력하면 AI가 처리 방법을 찾기를 원하지, 어떤 '측면'으로 가야 하는지 생각하고 싶지 않다. Spark는 앱 내 가장 유용한 에이전트 기능인데 독립 브랜드로 격리됨
@@ -895,7 +895,7 @@ Okta의 툴 스코핑은 같은 주(8/13~14)에 발표된 [Writer Palmyra X6](mo
 
 앞의 두 건은 도구가 견고해져 경계를 밀어내는 방향이라면, Gemini는 정반대로 간다 — 기능이 늘어난 만큼 내부 조직도를 브랜딩으로 사용자에게 강요하면서 경험 경계가 오히려 좁아진다. Perplexity가 '로컬이 어디까지 처리하고 클라우드로 무엇이 나가는지'를 한 번의 승인 게이트로 추상화했다면, Google은 그 추상화를 풀어헤쳤다. 도구의 성숙이 경험의 성숙을 자동으로 보장하지 않는다는 것이 이번 갱신의 요점이다.
 
-> 💡 **교차 참조**: PPLX 27B(85.4%) vs Pi 하네스(77.6%)의 7.8pp 격차는 [모델 동향 20차](models-overview.md) Qwen 3.8 27B·[도구 생태계 18차](#교육평가생활로-확산--ai-도구의-영역-다변화-2026년-8월-18차-갱신) NanoGPT Speedrun과 같은 결론 — 모델×하네스 조합이 성능을 좌우한다. 로컬 단계 토큰 비용 0은 [SkillWeaver](#alibaba-skillweaver--99-토큰-절감)(99% 절감)으로 이어진 토큰 경제학의 극단점이며, Nemotron 3.5 Lightning 지원 예정은 [모델 동향 16차](models-overview.md)와 직결. Gatik은 [산업 동향 22차](industry-trends.md) XPeng IRON과 같은 주에 나온 물리 AI 자본 흐름의 물류 버전이고, Gemini 브랜딩 파편화는 [모델 동향](models-overview.md)의 플랫폼 경쟁이 UX 계층에서 만든 균열이다.
+> 💡 **교차 참조**: PPLX 27B(85.4%) vs Pi 하네스(77.6%)의 7.8pp 격차는 [모델 동향 20차](../models-overview.md) Qwen 3.8 27B·[도구 생태계 18차](#교육평가생활로-확산--ai-도구의-영역-다변화-2026년-8월-18차-갱신) NanoGPT Speedrun과 같은 결론 — 모델×하네스 조합이 성능을 좌우한다. 로컬 단계 토큰 비용 0은 [SkillWeaver](#alibaba-skillweaver--99-토큰-절감)(99% 절감)으로 이어진 토큰 경제학의 극단점이며, Nemotron 3.5 Lightning 지원 예정은 [모델 동향 16차](../models-overview.md)와 직결. Gatik은 [산업 동향 22차](../industry-trends.md) XPeng IRON과 같은 주에 나온 물리 AI 자본 흐름의 물류 버전이고, Gemini 브랜딩 파편화는 [모델 동향](../models-overview.md)의 플랫폼 경쟁이 UX 계층에서 만든 균열이다.
 
 ---
 
@@ -905,7 +905,7 @@ Okta의 툴 스코핑은 같은 주(8/13~14)에 발표된 [Writer Palmyra X6](mo
 
 ### Qwen3.8 27B Mac Studio 로컬 실행 실측 ⭐⭐⭐⭐
 
-**출처**: [Terminal Bytes — Run Qwen 3.8 27B locally: real numbers from my Mac Studio](../records/2026-08-28-qwen-3-8-local-run.md) (Hacker News, 8/28 수집분 이월)
+**출처**: [Terminal Bytes — Run Qwen 3.8 27B locally: real numbers from my Mac Studio](../../records/2026-08-28-qwen-3-8-local-run.md) (Hacker News, 8/28 수집분 이월)
 
 - **실측 범위**: 모델 로딩·추론 속도·메모리 사용량의 구체적 수치 공개 — 마케팅 벤치마크가 아닌 실사용 환경 데이터
 - **최적화 기법**: 양자화, 모델 압축, 캐시 최적화, 메모리 매핑을 조합해 소비자급 하드웨어(Mac Studio)에서 27B 파라미터 모델의 실용적 실행 입증
@@ -918,9 +918,9 @@ Okta의 툴 스코핑은 같은 주(8/13~14)에 발표된 [Writer Palmyra X6](mo
 | 전용 패키지 | Perplexity Portable Computer (19차) | DGX Spark·GB10급·24GB VRAM | 스택 통짜 제공, 로컬 토큰 비용 0, PPLX 27B 하네스 튜닝 |
 | 보유 장비 활용 | Qwen 3.8 27B Mac Studio 실측 (20차) | 기존 Mac Studio | 양자화·압축·캐시 최적화로 진입, 실전 데이터 공개 |
 
-두 경로는 경쟁이 아니라 **로컬 실행 시장의 계층 분화**다. 전용 박스는 '설정 없는 통합'을, 보유 장비는 '최적화 노동 대비 비용 절감'을 판다. 공통점은 27B급 모델이 양쪽의 표준 단위가 됐다는 것 — 이는 [연구 동향 8차](research-overview.md) 지식-추론 트레이드오프의 예언("지식을 harness로 이관하면 활성 크기로 수축, 소비자 GPU 실행 가능")이 실측으로 확인된 순간이다.
+두 경로는 경쟁이 아니라 **로컬 실행 시장의 계층 분화**다. 전용 박스는 '설정 없는 통합'을, 보유 장비는 '최적화 노동 대비 비용 절감'을 판다. 공통점은 27B급 모델이 양쪽의 표준 단위가 됐다는 것 — 이는 [연구 동향 8차](../research-overview.md) 지식-추론 트레이드오프의 예언("지식을 harness로 이관하면 활성 크기로 수축, 소비자 GPU 실행 가능")이 실측으로 확인된 순간이다.
 
-> 💡 **교차 참조**: Qwen 3.8 계보의 교차 검증 — 18차 NanoGPT Speedrun에서 Qwen3.8 Max 중위권(3,120스텝), 19차 PPLX 27B 하네스 효과(+7.8pp)에 이어 로컬 실행 실측이 세 번째 조각. [모델 동향 22차](models-overview.md) GLM-5.3 오픈웨이트와 함께 오픈웨이트 로컬 선택지 확대 중. [SkillWeaver](#alibaba-skillweaver--99-토큰-절감)의 토큰 절감과 함께 로컬 경제학 축을 형성 — 클라우드 토큰 비용을 회피하는 두 경로(라우팅 최적화 vs 완전 로컬).
+> 💡 **교차 참조**: Qwen 3.8 계보의 교차 검증 — 18차 NanoGPT Speedrun에서 Qwen3.8 Max 중위권(3,120스텝), 19차 PPLX 27B 하네스 효과(+7.8pp)에 이어 로컬 실행 실측이 세 번째 조각. [모델 동향 22차](../models-overview.md) GLM-5.3 오픈웨이트와 함께 오픈웨이트 로컬 선택지 확대 중. [SkillWeaver](#alibaba-skillweaver--99-토큰-절감)의 토큰 절감과 함께 로컬 경제학 축을 형성 — 클라우드 토큰 비용을 회피하는 두 경로(라우팅 최적화 vs 완전 로컬).
 
 ---
 
@@ -930,12 +930,12 @@ Okta의 툴 스코핑은 같은 주(8/13~14)에 발표된 [Writer Palmyra X6](mo
 
 ### Warp — Claude 위에 자기개선 에이전트 구축 ⭐⭐⭐⭐
 
-**출처**: [Claude Blog — How Warp builds self-improving agents on Claude](../records/2026-08-30-warp-builds-self-improving-agents-on-claude.md) (8/30 수집분 이월)
+**출처**: [Claude Blog — How Warp builds self-improving agents on Claude](../../records/2026-08-30-warp-builds-self-improving-agents-on-claude.md) (8/30 수집분 이월)
 
 - **핵심**: Anthropic 고객 사례 연구로 공개된 Warp의 에이전트 운영법 — Claude 기반 에이전트가 반복 작업을 수행하면서 자신의 성과를 되돌아보고 다음 실행을 개선하는 **자기개선(self-improving) 루프** 구축
 - **Warp 3부작의 완결**: [Agent CLI](#warp-agent-cli--모든-터미널에서-작동하는-독립형-코딩-에이전트-)(12차·실행 환경) → [Factories](#warp-factories--아웃오브더박스-소프트웨어-팩토리-)(17차·프로세스) → 자기개선 에이전트(21차·품질 루프). 실행→팩토리→자기개선으로 Warp의 에이전트 스택 계층 완성
 - **하네스 중심 접근의 유지**: Factories가 Claude Code·Codex를 모두 지원했던 것처럼, 자기개선 루프도 특정 모델의 고유 능력이 아닌 **하네스 설계 문제**로 접근 — 개선의 증거를 남기고 회수하는 구조가 핵심
-- **의미**: '자기개선'이 연구 실증([연구 동향 10차](research-overview.md) Anthropic AAR)에서 **제품 운영**으로 넘어온 첫 고객 사례급 문서화
+- **의미**: '자기개선'이 연구 실증([연구 동향 10차](../research-overview.md) Anthropic AAR)에서 **제품 운영**으로 넘어온 첫 고객 사례급 문서화
 
 ### 21차 갱신 분석: "자기개선의 3층위 — 모델, 하네스, 팩토리"
 
@@ -947,7 +947,7 @@ Okta의 툴 스코핑은 같은 주(8/13~14)에 발표된 [Writer Palmyra X6](mo
 
 AAR이 "AI가 AI를 정렬하는 부트스트랩 루프"를 연구 실증했다면, Warp는 같은 루프를 소프트웨어 개발이라는 상용 도메인에 이식했다. 주목할 점은 두 사례 모두 **개선의 증거를 남기는 관측 인프라**를 전제한다는 것 — AAR은 벤치마크 회귀 검사, Warp는 [Factories](#warp-factories--아웃오브더박스-소프트웨어-팩토리-)의 토큰 지출 추적·모델-하네스 A/B 환경이다. 즉 자기개선은 모델 능력이 아니라 **관측 인프라의 함수**다. 이는 [Shepherd](#shepherd--에이전트-실행-포크리플레이되돌리기-python-런타임-)(15차·실행 궤적 버전 관리), [TencentDB Agent Memory](#tencentdb-agent-memory-v20--팀-단위-에이전트-메모리-허브-오픈소스-)(13차·Skill 에셋 축적)로 이어진 '에이전트 경험의 저장' 계열이 왜 선행됐는지 설명한다 — 저장이 있어야 개선 루프가 돈다.
 
-> 💡 **교차 참조**: [연구 동향 10차](research-overview.md) AAR과 같은 주(8/28~30) 등장 — 자기개선이 연구·제품 양쪽에서 동시 확인. [Claude Code Auto Mode](#anthropic-claude-code--auto-mode-기본-전환-승인-피로-해소-)(14차)가 자율성을 넓혔다면 자기개선 루프는 그 자율성의 산출물을 개선으로 회수하는 마지막 고리. 같은 주 [research 12차](research-overview.md)의 savviness 에세이와 짝을 이뤄, '에이전트는 개선되는데 인간 검증자는 마모되는' 비대칭 문제를 공유한다.
+> 💡 **교차 참조**: [연구 동향 10차](../research-overview.md) AAR과 같은 주(8/28~30) 등장 — 자기개선이 연구·제품 양쪽에서 동시 확인. [Claude Code Auto Mode](#anthropic-claude-code--auto-mode-기본-전환-승인-피로-해소-)(14차)가 자율성을 넓혔다면 자기개선 루프는 그 자율성의 산출물을 개선으로 회수하는 마지막 고리. 같은 주 [research 12차](../research-overview.md)의 savviness 에세이와 짝을 이뤄, '에이전트는 개선되는데 인간 검증자는 마모되는' 비대칭 문제를 공유한다.
 
 *※ 원문 record가 템플릿 스텁 상태 — 루프 구조·메트릭·구체 사례는 보강 후 업데이트 예정.*
 
@@ -959,7 +959,7 @@ AAR이 "AI가 AI를 정렬하는 부트스트랩 루프"를 연구 실증했다�
 
 ### AIR — "에이전트용 드라이버 서명", 시드 합산 $50M ⭐⭐⭐⭐
 
-**출처**: [TechCrunch — AIR raises $50M to vet the skills and add-ons AI agents use](../records/2026-09-02-air-raises-50m-vet-ai-agent-skills.md) (9/2 수집분 이월)
+**출처**: [TechCrunch — AIR raises $50M to vet the skills and add-ons AI agents use](../../records/2026-09-02-air-raises-50m-vet-ai-agent-skills.md) (9/2 수집분 이월)
 
 - **펀딩**: 시드 2라운드 합산 **$50M** (Sequoia $10M → Greenoaks $40M 주도). 8200부대 출신 창업자, Wiz 공동창업자·Cognition 사장 등 참여
 - **문제의식**: 에이전트가 운영체제처럼 쓰이는데 스킬·플러그인·MCP 서버에는 2000년대 초 '드라이버 서명'에 해당하는 감독이 없다. 에이전트를 직접 공격하는 대신 **에이전트가 소비하는 콘텐츠를 오염**시키는 공급망 공격이 새로운 표면
@@ -967,11 +967,11 @@ AAR이 "AI가 AI를 정렬하는 부트스트랩 루프"를 연구 실증했다�
 - **차별점**: 일회성 스캔이 아닌 **지속 재검증** — 승인된 스킬도 의존성 변경·개발자 계정 탈취 시마다 재평가. Sequoia: "스캔 문제가 아니라 지속 재검증의 인프라 문제"
 - **시장**: 고객 20+ 곳(4분의 1이 대기업), 금융·제약 등 규제 산업 수요 최강. Zenity(8월 $125M C)·Noma($100M B)·Astrix·Operant AI·Okta(Permiso 인수)와 경쟁 — 에이전트 보안이 2026년 최고 투자 카테고리로 굳어지는 중
 
-> 💡 **교차 참조**: [16차 Okta MCP 툴 스코핑](#mcp-비용-거버넌스--신원-기반-툴-스코핑-2026년-8월-16차-갱신)이 신원 계층에서 '권한 없는 도구를 안 보이게' 하는 사전 통제라면, AIR은 보이는 도구를 상시 재검증하는 운영 통제 — 같은 문제(툴 세금·툴 위험)의 분업 해법. [Codex Security](#openai-codex-security--오픈소스-보안-스캐닝-cli)(생성 코드 검증)·[Chrome AI 패치](#google-chrome-ai-버그-수정--gemini-기반-산업-규모-보안-패치-)(기존 코드 결함)와 합치면 보안의 3시점(설계·생성·운영)이 갖춰진다. 같은 주 공개된 [오픈AI 로그 에이전트 사고 연쇄·독립 조사 부재 논란](industry-trends.md#1-openai-에이전트-사고-연쇄--샌드박스-탈출에서-공개-프레임워크-약속까지-)(industry 27차)가 '사후 조사 체계 부재'를 드러낸 것과 대비하면, 사전·상시 검증 시장이 자본을 먼저 끌어모으는 그림이다.
+> 💡 **교차 참조**: [16차 Okta MCP 툴 스코핑](#mcp-비용-거버넌스--신원-기반-툴-스코핑-2026년-8월-16차-갱신)이 신원 계층에서 '권한 없는 도구를 안 보이게' 하는 사전 통제라면, AIR은 보이는 도구를 상시 재검증하는 운영 통제 — 같은 문제(툴 세금·툴 위험)의 분업 해법. [Codex Security](#openai-codex-security--오픈소스-보안-스캐닝-cli)(생성 코드 검증)·[Chrome AI 패치](#google-chrome-ai-버그-수정--gemini-기반-산업-규모-보안-패치-)(기존 코드 결함)와 합치면 보안의 3시점(설계·생성·운영)이 갖춰진다. 같은 주 공개된 [오픈AI 로그 에이전트 사고 연쇄·독립 조사 부재 논란](../industry-trends.md#1-openai-에이전트-사고-연쇄--샌드박스-탈출에서-공개-프레임워크-약속까지-)(industry 27차)가 '사후 조사 체계 부재'를 드러낸 것과 대비하면, 사전·상시 검증 시장이 자본을 먼저 끌어모으는 그림이다.
 
 ### Adaption Labs 'Invent a Dataset' — 행동 묘사만으로 학습 데이터셋 생성 ⭐⭐⭐
 
-**출처**: [MarkTechPost — Invent a Dataset](../records/2026-09-05-adaption-labs-invent-a-dataset.md)
+**출처**: [MarkTechPost — Invent a Dataset](../../records/2026-09-05-adaption-labs-invent-a-dataset.md)
 
 - **핵심**: 시드 코퍼스·스키마 설계·라벨링 가이드 없이 **학습시키고 싶은 행동의 텍스트 묘사만으로** 학습 준비가 된 데이터셋 생성. 기존 합성 데이터 도구가 '스키마 정의 다음 단계'를 자동화했다면, 이것은 **정의 단계 자체를 자동화**
 - **API 설계**: `datasets.invent` 한 번으로 도메인(`medical.symptoms_diagnosis` 식 2계층)·행 수·포맷 지정. 출력은 SFT용 `instruction_dataset`과 DPO용 `preference_pairs` 두 종류, JSONL/JSON/CSV/Parquet로 다운로드. `estimate=True` 사전 비용 견적·`idempotency_key` 멱등성 등 프로덕션 API 수준의 운영 요소
@@ -982,7 +982,7 @@ AAR이 "AI가 AI를 정렬하는 부트스트랩 루프"를 연구 실증했다�
 
 ### Gemini Spark, 구글 포토 라이브러리 관리 — 개인 데이터 위의 소비자 에이전트 ⭐⭐⭐
 
-**출처**: [TechCrunch — Gemini Spark can now manage your Google Photos library](../records/2026-09-05-gemini-spark-manages-google-photos.md)
+**출처**: [TechCrunch — Gemini Spark can now manage your Google Photos library](../../records/2026-09-05-gemini-spark-manages-google-photos.md)
 
 - **기능**: 구글 포토에서 이미지 편집·앨범 큐레이션·공유 앨범 자동 생성·공연 포스터 사진의 캘린더 일정 변환·워크플로우 실행을 대화 한 번으로 수행
 - **배포**: 미국 Gemini AI Pro·Ultra 구독자에 영어 순차 배포 — 프리미엄 구독 등급으로 에이전트 기능을 묶는 수익화 실험
@@ -1009,7 +1009,7 @@ AAR이 "AI가 AI를 정렬하는 부트스트랩 루프"를 연구 실증했다�
 
 ### 가사·캐릭터 방어 강화 — 우회 경로까지 봉쇄하는 정책 설계 ⭐⭐⭐
 
-**출처**: [Simon Willison — Claude's new system prompt](../records/2026-09-06-claude-system-prompt-lyrics-copyright.md) (9/2 발행, HN 경유)
+**출처**: [Simon Willison — Claude's new system prompt](../../records/2026-09-06-claude-system-prompt-lyrics-copyright.md) (9/2 발행, HN 경유)
 
 - **가사·시·책 구절 전면 금지**: 전체든 부분이든 재현 금지 — 마지막 소절, 후렴, 악보로 옮긴 멜로디, "자기 노래라며" 한 줄씩 붙여넣는 우회까지 명시적 포괄. 거절 시 작품의 설명·분석으로 유도
 - **거절 재표현 차단**: 한 번 거절한 요청은 표현을 바꾸거나 범위를 좁혀 다시 물어도 대화가 끝날 때까지 거절 유지 — '프롬프트 재구성으로 우회' 경로 원천 봉쇄
@@ -1027,7 +1027,7 @@ AAR이 "AI가 AI를 정렬하는 부트스트랩 루프"를 연구 실증했다�
 
 시스템 프롬프트가 페르소나 설정을 넘어 **정책 엔진(policy engine)**으로 기능함을 보여주는 첫 상세 공개 사례다. 저작 연도 판정·거절 재표현 차단·멀티모달 채널 포괄(SVG/ASCII까지)은 '텍스트만 보는 저작권 검열'이 무의미해진 시대의 출력 게이트 설계도다. 두 번째 함의는 API 생태계 쪽이다 — Claude API 기반 제품은 시스템 프롬프트 조항 변경 시 서비스 동작이 달라지므로, 릴리스 노트 diff 감시 자동화가 새 운영 업무로 자리잡는다. OpenAI·Google도 유사 정책을 갖고 있으나 전문·변경 이력까지 공개하는 곳은 Anthropic뿐이라는 점에서, '정책 투명성'이 B2B 조달 요건이자 업계 표준화 압력으로 번질 관전 포인트다.
 
-> 💡 **교차 참조**: [산업 동향 27차 3번 — 시애틀타임스·뉴스데이의 OpenAI·MS 소송](industry-trends.md#3-시애틀타임스뉴스데이-openaims-제소--저작권-전쟁의-지역-언론-확산-)과 거울상 연결 — 저작권 전쟁이 학습 데이터(소송)와 출력(프롬프트)이라는 두 방어선에서 동시에 진행 중이다. 직접적 계기인 [Sony Music·Warner Chappell의 Anthropic 소송](../records/2026-08-30-sony-warner-sue-anthropic.md)과 대상 모델의 [Fable 5.1 출시](models-overview.md)는 각각 근거·맥락. [Anthropic 저작권 합의금 분쟁](industry-trends.md#2-anthropic-15b-합의의-집행-단계-분쟁--보상은-누구에게-)(industry 28차)까지 합치면 '합의→집행→출력 방어'로 이어지는 저작권 대응의 전 과정이 같은 주에 관찰된다. 출력 단계 가드레일의 속도 우위는 [16차 Okta MCP 툴 스코핑](#mcp-비용-거버넌스--신원-기반-툴-스코핑-2026년-8월-16차-갱신)과 같은 '즉석 통제' 계열 — 모델을 다시 학습시키지 않고 정책을 바꾸는 운영 패턴의 저작권 버전이다.
+> 💡 **교차 참조**: [산업 동향 27차 3번 — 시애틀타임스·뉴스데이의 OpenAI·MS 소송](../industry-trends.md#3-시애틀타임스뉴스데이-openaims-제소--저작권-전쟁의-지역-언론-확산-)과 거울상 연결 — 저작권 전쟁이 학습 데이터(소송)와 출력(프롬프트)이라는 두 방어선에서 동시에 진행 중이다. 직접적 계기인 [Sony Music·Warner Chappell의 Anthropic 소송](../../records/2026-08-30-sony-warner-sue-anthropic.md)과 대상 모델의 [Fable 5.1 출시](../models-overview.md)는 각각 근거·맥락. [Anthropic 저작권 합의금 분쟁](../industry-trends.md#2-anthropic-15b-합의의-집행-단계-분쟁--보상은-누구에게-)(industry 28차)까지 합치면 '합의→집행→출력 방어'로 이어지는 저작권 대응의 전 과정이 같은 주에 관찰된다. 출력 단계 가드레일의 속도 우위는 [16차 Okta MCP 툴 스코핑](#mcp-비용-거버넌스--신원-기반-툴-스코핑-2026년-8월-16차-갱신)과 같은 '즉석 통제' 계열 — 모델을 다시 학습시키지 않고 정책을 바꾸는 운영 패턴의 저작권 버전이다.
 
 ---
 
@@ -1037,7 +1037,7 @@ AAR이 "AI가 AI를 정렬하는 부트스트랩 루프"를 연구 실증했다�
 
 ### Redis LangCache — 관리형 시맨틱 캐시, 히트 시 LLM 호출 자체를 소거 ⭐⭐⭐
 
-**출처**: [MarkTechPost — Redis LangCache](../records/2026-09-11-redis-langcache-semantic-cache.md) (9/10 발행, Redis 공식 문서·블로그 교차 확인, Redis Cloud 퍼블릭 프리뷰)
+**출처**: [MarkTechPost — Redis LangCache](../../records/2026-09-11-redis-langcache-semantic-cache.md) (9/10 발행, Redis 공식 문서·블로그 교차 확인, Redis Cloud 퍼블릭 프리뷰)
 
 - **구조**: 애플리케이션과 모델 사이의 완전 관리형 시맨틱 캐시 — 들어온 프롬프트를 정확한 텍스트가 아니라 **의미**로 대조(서비스가 임베딩 생성 → 벡터 검색), 유사도 임계값을 넘는 매치가 있으면 저장된 응답을 반환. LLM 호출 미발생. REST API + Python·JavaScript SDK, 임베딩 모델 기본 제공 또는 자체 모델 지원
 - **효과**: Redis 발표 기준 API 비용 최대 90% 절감, 캐시 히트 응답 최대 15배 빠름. 공식 데모에서 패러프레이즈 질문에 직접 추론 2.232초·입출력 764토큰 vs LangCache 0.37초·**토큰 0**. 고객 Mangoes.ai는 70% 히트율로 LLM 지출 70% 절감. 데이터는 고객 Redis 서버에 잔류·학습 미사용 명시
@@ -1047,20 +1047,20 @@ AAR이 "AI가 AI를 정렬하는 부트스트랩 루프"를 연구 실증했다�
 
 ### Google Mantis — 코딩 에이전트용 보안 스킬 툴킷, 닫힌 루프의 코드 검증 ⭐⭐⭐⭐
 
-**출처**: [Google — Mantis agent security toolkit](../records/2026-09-10-google-mantis-agent-security-toolkit.md) (9/10, Apache 2.0)
+**출처**: [Google — Mantis agent security toolkit](../../records/2026-09-10-google-mantis-agent-security-toolkit.md) (9/10, Apache 2.0)
 
 - **루프**: 발견 → 오탐 필터 → gVisor 샌드박스 재현 → 패치 → 재공격 → 점수화의 **닫힌 보안 루프** — 코딩 에이전트가 짠 코드의 취약점을 에이전트가 스스로 찾고, 고치고, 다시 공격해 확인
 - **구성**: /mantis-* 슬래시 스킬 체인 + /mantis-meta-agent 장기 세션 구동. /mantis-advise는 흐름을 뒤집어 **코드 작성 전 예방 조언** 단계로 전환 — 사후 검증을 사전 방어로
-- **위치**: [23차 Claude 시스템 프롬프트](#2026년-9월-23차-갱신-claude-시스템-프롬프트--출력-단계의-저작권-방어-프롬프트가-정책-엔진이-되다)(출력 방어)·[Docker Sandboxes](#docker-sandboxes--ai-코딩-에이전트를-위한-일회용-microvm-격리-환경-)(14차, 실행 격리)와 같은 '에이전트 보안' 계열의 **코드-보안 축** — 보안이 스택의 어느 층(프롬프트·샌드박스·스킬·컴파일 타임)에도 분산 배치되는 흐름에서 스킬 계층에 해당. [프레임워크 동향 18차](frameworks-overview.md) CUDA Rust(컴파일 타임 메모리 안전)와 같은 주제의 다른 층
+- **위치**: [23차 Claude 시스템 프롬프트](#2026년-9월-23차-갱신-claude-시스템-프롬프트--출력-단계의-저작권-방어-프롬프트가-정책-엔진이-되다)(출력 방어)·[Docker Sandboxes](#docker-sandboxes--ai-코딩-에이전트를-위한-일회용-microvm-격리-환경-)(14차, 실행 격리)와 같은 '에이전트 보안' 계열의 **코드-보안 축** — 보안이 스택의 어느 층(프롬프트·샌드박스·스킬·컴파일 타임)에도 분산 배치되는 흐름에서 스킬 계층에 해당. [프레임워크 동향 18차](../frameworks-overview.md) CUDA Rust(컴파일 타임 메모리 안전)와 같은 주제의 다른 층
 - **한계**: 데모 전용임을 명시, 전문가 검증 권고 — 자동 판정 점수의 신뢰성은 아직 열린 문제
 
 ### 24차 갱신 분석: "제4의 비용 계층과 보안의 계층 분산 — 에이전트 스택의 중간 계층 상품화"
 
-1. **비용 최적화의 인프라 편입**: 16차 3계층(모델 단가·하니스 최적화·도구 노출)이 엔지니어링 선택이었다면, LangCache는 그것을 **관리형 서비스로 구독**하게 만든다. [SkillWeaver](#alibaba-skillweaver--99-토큰-절감)의 스킬 주문형 로딩(99% 절감)·[Okta 툴 스코핑](#mcp-비용-거버넌스--신원-기반-툴-스코핑-2026년-8월-16차-갱신)(툴 세금 90%)·LangCache(호출 소거)가 쌓이며, 비용 절감이 각 조직의 과제가 아니라 스택의 기본 계층으로 굳어진다. 호출 단위 비용 $0는 [모델 동향 24차](models-overview.md)의 '성공 1회당 비용' 스펙트럼(최대 47배)에 하한 앵커를 추가
+1. **비용 최적화의 인프라 편입**: 16차 3계층(모델 단가·하니스 최적화·도구 노출)이 엔지니어링 선택이었다면, LangCache는 그것을 **관리형 서비스로 구독**하게 만든다. [SkillWeaver](#alibaba-skillweaver--99-토큰-절감)의 스킬 주문형 로딩(99% 절감)·[Okta 툴 스코핑](#mcp-비용-거버넌스--신원-기반-툴-스코핑-2026년-8월-16차-갱신)(툴 세금 90%)·LangCache(호출 소거)가 쌓이며, 비용 절감이 각 조직의 과제가 아니라 스택의 기본 계층으로 굳어진다. 호출 단위 비용 $0는 [모델 동향 24차](../models-overview.md)의 '성공 1회당 비용' 스펙트럼(최대 47배)에 하한 앵커를 추가
 2. **보안 검증의 스킬 내재화**: Mantis는 보안을 독립 제품이 아니라 코딩 에이전트의 **작업 흐름 내부 스킬**로 넣는다 — 같은 주 Anthropic 위협정보 보고가 공격자의 다중 에이전트 킬체인 자동화(PentAGI 등)를 공식 문서화한 것과 정확히 대칭. 공격·방어 모두 '에이전트 스킬'이라는 같은 구조로 온다는 뜻에서, 22차 '신뢰가 화폐' 프레임의 보안 버전
 3. **중간 계층의 상품화**: 세션(OpenAI Agents API)·캐시(LangCache)·코드 검증(Mantis) — 모델 주변의 중간 계층이 같은 주에 잇달아 상품화되며, 도구 생태계의 무게중심이 '에이전트를 만드는 도구'에서 '에이전트를 둘러싼 운영 계층'으로 이동을 완성해가는 흐름
 
-> 💡 **종합 교차 참조**: LangCache의 '호출 제거'는 [Fireworks Nexus](#fireworks-ai-nexus--코딩-에이전트-비용-라우팅-계층)(라우팅)·[Manifest의 라우터 폐지 선언](#manifest-llm-라우터-폐지-선언--단일-모델-고수가-최선-)(라우팅 회의) 논쟁에 제3의 답 — 라우팅 최적화 대신 캐시로 우회. Mantis는 [산업 동향 이월 예정](industry-trends.md)인 Anthropic 위협정보 보고서(9/11 수집)의 '공격 자동화' 진단과 거울상으로, industry 갱신 시 방어-공격 대칭 구도로 다시 연결할 것. OpenAI Agents API의 하네스 관리형화(9/11, framework 이월)까지 합치면 '중간 계층 상품화'가 이번 주 도구 생태계의 공통 키워드다.
+> 💡 **종합 교차 참조**: LangCache의 '호출 제거'는 [Fireworks Nexus](#fireworks-ai-nexus--코딩-에이전트-비용-라우팅-계층)(라우팅)·[Manifest의 라우터 폐지 선언](#manifest-llm-라우터-폐지-선언--단일-모델-고수가-최선-)(라우팅 회의) 논쟁에 제3의 답 — 라우팅 최적화 대신 캐시로 우회. Mantis는 [산업 동향 이월 예정](../industry-trends.md)인 Anthropic 위협정보 보고서(9/11 수집)의 '공격 자동화' 진단과 거울상으로, industry 갱신 시 방어-공격 대칭 구도로 다시 연결할 것. OpenAI Agents API의 하네스 관리형화(9/11, framework 이월)까지 합치면 '중간 계층 상품화'가 이번 주 도구 생태계의 공통 키워드다.
 
 ---
 

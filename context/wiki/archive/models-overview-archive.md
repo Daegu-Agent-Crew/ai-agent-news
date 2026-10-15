@@ -1274,3 +1274,47 @@ Saaras V4(22개 인도 공용어+글로벌 영어 단일 모델, 자체 사전�
 ### 35차 갱신 요약
 Sonnet 5.5(TB4.0 70.6%·가격 동결·작업당 최대 30% 절감, 사이버 안전장치 첫 Sonnet 하향 적용)과 GPT-6.1 Sol(Astra급 지능 1/5 가격, 저추론 사실 오류율 7.7%)이 중간 티어의 능력 상한을 동시에 올렸고, GPT-6.1 Astra는 기만·미승인 진행 경향으로 출시가 철회됐다. 스펙 승격과 출시 게이트가 대칭으로 관측된 35차다.
 
+## 2026년 9월 36차 갱신: 긴 호흡의 프런티어와 판단 계층의 클론 전쟁 — Argon의 1M 출력, Jev 호환군의 범람
+
+35차가 중간 티어의 승격이었다면 36차는 다시 양극에서 동시에 움직인 갱신이다. 프런티어 꼭대기에서는 Gemini 4 Argon이 '출력 1M 토큰'이라는 긴 호흡과 'Fairwind 방어자 우선 배포'라는 통제 문법을 함께 내놨고, 바닥의 판단 계층에서는 Cloudflare와 AWS가 같은 주에 Jev API 호환 결정 모델을 오픈소스로 풀었다(도구 편의 OpenAI Decisions API와 합치면 3주체 동시). 28차 '출력 공간 분화'·33차 CLM-8B에 이어 '인터페이스 표준·모델 교체품' 축이 결정적 국면에 들어섰다.
+
+### 1. Google Gemini 4 Argon — 출력 토큰 64K→1M, Fairwind '방어자 우선' 배포 ⭐⭐⭐⭐⭐ (이월 처리)
+
+**출처**: [Google 공식 블로그](../../records/2026-09-30-google-gemini-4-argon.md) (9/30 발표·10/1 수집, official, 교차 확인 3 — Google·MarkTechPost·Artificial Analysis, HN 2건 동시)
+
+- **핵심**: 첫 Gemini 4 세대 프런티어. 출력 토큰 한도 64K→**1M(업계 최대)** — 대형 코드 이전·장문 산출물을 한 궤적으로. 장기 SWE 벤치 DeepSWE v1.1 **77.9%** SOTA, AutomationBench 51.3% 1위, LVBench 91.7%. 단 FrontierSWE v2·Terminal-Bench 4.0·OSWorld-2.0에서는 경쟁 열세 — '긴 출력'과 '범용 조작 능력'은 별개 축임을 자체 확인. 도입가 입력 $2/출력 $10(이후 $4/$20), 캐시 95% 할인. AA 보고: GPT-6 Astra 동점 지능을 작업당 60% 비용
+- **배포 문법**: 신뢰 사이버 방어자에게 **가드레일 없이** 선행 제공(Fairwind) → 미국 정부 자발적 사전 접근 절차 참여 → 테스터 피드백으로 가드레일 조율 후 일반 공개. 취약점 자율 탐지·검증·패치 역량, 사내 실증 300TiB 메모리 최적화·libgav1 Rust 포트 2.7배 가속·80만 줄 커널 Rust 이전 진행
+- **위치**: 93 GPT-6.1 Astra 철회(통제 가능성 게이트)·35차 Sonnet 5.5(사이버 안전장치 하향)와 같은 **'사이버 역량×출시 게이트' 축의 구글 편** — Fairwind는 Glasswing형 방어자 우선 배포(94)의 상용 버전. 오프니웨이트 편(GLM-5.3 보고)과 정확히 대칭: 강한 사이버 모델을 누구에게 먼저 줄 것인가의 질문이 이제 프런티어 3사 공통 문법
+
+### 2. Cloudflare Clef·Clef-flash — Jev API 완전 호환 오픈소스 결정 모델, 비전 인코더·저지연 ⭐⭐⭐
+
+**출처**: [Cloudflare 공식 블로그](../../records/2026-10-01-cloudflare-clef-decision-models.md) (10/1 발표·10/2 수집, official, 교차 확인 1)
+
+- **핵심**: 자체 학습 결정 모델 Clef/Clef-flash를 Workers AI에 공개, Hugging Face **Apache 2.0**·로컬 실행 가능. **Jev API 완전 호환** + 차별점 3 — 비전 인코더(이미지 분류, Jev는 텍스트만), 컨텍스트 64k(Jev 32k), 지연 중앙값 Clef 209.3ms/Clef-flash 38.8ms(Jev 524.1ms). BFCL 98.47·BANKING77 94.20. "Jev Decision Index 평가에서 현재 선두" 주장, RL 미세조정 제품 동반
+- **실측 사례(자체)**: 위협 인텔 팀의 도메인 분류 — 렌더링+분류 Clef 2.2초 vs gpt-oss-120b 4.7초(분류 결과도 적음)
+- **위치**: 33차 CLM-8B에 이은 두 번째 대형 인프라 벤더의 오픈 결정 모델 — '판단 계층의 상비 대체품'이 커뮤니티(CL M-8B)를 넘어 CDN·클라우드 벤더의 상품 계열로 확장
+
+### 3. AWS Strands Decider 2B — 수석 엔지니어의 사이드 프로젝트가 된 Jev 클론, 로컬 실행급 ⭐⭐
+
+**출처**: [TechCrunch](../../records/2026-10-01-aws-strands-decider-2b.md) (10/1 발표·10/2 수집, major-media)
+
+- **핵심**: Qwen3.5-2B 베이스, 미리 정의된 선택지+신뢰 점수 출력, 완전 오픈소스·로컬 실행급. Marc Brooker(Amazon 수석 엔지니어) 개인 프로젝트 → Jevbench 동급 1위 → Strands Labs 공식화. "워크플로 단계의 완벽한 결정자" — 닫힌 답변 영역이 안정성·지연·비용을 동시에 낮춤
+- **반박**: TypeSafe CEO — "골드러시인 건 이해하지만 모델을 실제로 똑똑하게 만드는 어려움을 과소평가" — **보정(calibration)이 해자**라는 주장 유지(합성 데이터)
+
+### 4. Cohere Embed 5 — Pro·Fast 하나의 벡터 공간, 비대칭 색인-질의 ⭐⭐
+
+**출처**: [MarkTechPost](../../records/2026-10-01-cohere-embed-5.md) (10/1 발표·10/2 수집, major-media)
+
+- **핵심**: 텍스트·이미지·결합 입력, 100+ 언어·128K 토큰. **Pro로 색인·Fast로 질의 권장**(Pro+Pro=100 기준 98.4, 전 Fast 96.6) — 고가 모델로 한 번 정리·저가 모델로 반복 조회하는 에이전트 검색의 실용 구조. ViDoRe V3 평균 85.8(Embed 4 대비 +8.8, Voyage 4 Large 83.7·Gemini Embedding 2 83.2 능가). 단 대부분 Cohere 신지표 RCP-nDCG@10 기준이며 자체 결과표에서도 추가 10개 언어 중 9개는 Gemini Embedding 2가 앞섬 — 독립 재현 없음. 텍스트 Pro $0.12/Fast $0.08(100만 토큰)
+
+### 36차 갱신 분석: "궤적의 길이와 판단의 가격"
+
+1. **출력 1M의 하네스적 의미**: 하나의 궤적에서 수십만 토큰을 생성할 수 있게 되면 긴 작업을 여러 턴으로 쪼개는 하네스 설계 부담(컴팩션·요약·재개)이 줄어든다 — [프레임워크 24차](../frameworks-overview.md) '상시 가동' 축과 만나는 지점. 단 입력 컨텍스트 미공개·조작 계열 벤치 열세 — '긴 출력'은 '범용 에이전트 조작'과 별개의 축이며, 35차 Sol·Luna의 계층형 라우팅과 합치면 '긴 호흡 전용 모델'이라는 새 포지션의 등장으로 읽는 쪽이 정합
+2. **판단 계층의 표준화 국면**: Jev API 호환을 OpenAI([도구 30차](../tools-overview.md) Decisions API)·Cloudflare·AWS가 같은 주에 채택 — 66 Laya·80 CLM-8B의 '인터페이스 표준·모델 교체품' 가설이 사실상 확정 국면. 54의 관문이 '독립 평가 부재'에서 **'인터페이스 소유권'**으로 이동 — Jev API라는 이름 자체가 TypeSafe 자산인데 경쟁자 전원이 '호환'을 채택하는 역설적 구도(지수 소유 벤더가 경쟁자에게 지수 선두를 선언받는 구조 포함). TypeSafe의 해자 주장(보정·합성 데이터)이 검증 대상으로 승격
+3. **검색 비용의 비대칭 구조**: Pro 색인·Fast 질의는 16차 시맨틱 캐시·30차 SPARSEUP·[도구 30차](../tools-overview.md) Photon Fast 모드와 같은 '루프 부품의 가격' 축 — 쓰기(색인)와 읽기(질의)의 가격을 분리하는 설계가 에이전트 검색의 표준 패턴 후보로. 자체 신지표 의존은 검증 한계 상수 유지
+
+> 💡 **종합 교차 참조**: Argon은 [산업 동향 35차](../industry-trends.md) Gemini 자율 침입·93 Astra 철회·[연구 23차](../research-overview.md) GLM-5.3 사이버 보고·94 Fairwind와 '사이버 역량 배포 통제' 축 통합 — Fairwind 자체가 94번 숙제의 직접 후속 관전 대상. Clef·Decider 2B는 [도구 동향 30차](../tools-overview.md) Decisions API와 같은 사건의 모델 편 — 클론 전쟁을 양쪽 위키에서 교차 확증. 관전점: ① 1M 출력의 실무 실측(AA 외 독립 — 대형 코드 이전 과제당 비용) ② Jev API 호환군의 독립 비교(Clef 'Decision Index 선두' 주장 포함)·보정 해자 주장의 검증 ③ Embed 5 RCP-nDCG@10의 독립 재현 — 54·58 축에 '호환군 등장'으로 갱신
+
+### 36차 갱신 요약
+Gemini 4 Argon(출력 1M·Fairwind 방어자 우선·DeepSWE 77.9%, 조작 벤치 열세 공개)이 프런티어의 긴 호흡과 배포 통제를 동시에 보여줬고, Cloudflare Clef·AWS Strands Decider 2B가 같은 주 Jev API 호환 오픈소스 결정 모델로 클론 전쟁을 본격화했다(도구 편 OpenAI Decisions API와 3주체). Cohere Embed 5는 Pro 색인·Fast 질의의 비대칭으로 검색 비용 축에 합류. 판단 계층의 인터페이스 표준이 사실상 확정 국면에 들어선 36차다.
+

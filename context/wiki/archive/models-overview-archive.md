@@ -1318,3 +1318,38 @@ Sonnet 5.5(TB4.0 70.6%·가격 동결·작업당 최대 30% 절감, 사이버 �
 ### 36차 갱신 요약
 Gemini 4 Argon(출력 1M·Fairwind 방어자 우선·DeepSWE 77.9%, 조작 벤치 열세 공개)이 프런티어의 긴 호흡과 배포 통제를 동시에 보여줬고, Cloudflare Clef·AWS Strands Decider 2B가 같은 주 Jev API 호환 오픈소스 결정 모델로 클론 전쟁을 본격화했다(도구 편 OpenAI Decisions API와 3주체). Cohere Embed 5는 Pro 색인·Fast 질의의 비대칭으로 검색 비용 축에 합류. 판단 계층의 인터페이스 표준이 사실상 확정 국면에 들어선 36차다.
 
+## 2026년 10월 37차 갱신: 무게의 주권과 인터페이스의 귀속 — 78B-A3B 주권형 오픈웨이트, Realtime 호환 스트리밍 STT
+
+36차가 프런티어의 긴 호흡과 판단 계층의 클론 전쟁이었다면, 37차는 능력의 '소유'와 연결의 '규격'이 양극에서 움직인 갱신이다. 독일 Aleph Alpha가 활성 3B의 78B MoE를 Apache 2.0 전면 개방하며 '주권'을 무게의 속성으로 제시했고, Microsoft는 첫 스트리밍 STT를 OpenAI Realtime 호환 규격으로 내놓으며 음성 인터페이스에서도 '벤더가 타사 규격을 채택하는' 구도를 재현했다.
+
+### 1. Aleph Alpha Kolibri — 78B-A3B·1M 컨텍스트 주권형 오픈웨이트, Apache 2.0 전면 개방 ⭐⭐⭐⭐⭐
+
+**출처**: [Aleph Alpha 공식 블로그](../../records/2026-10-04-aleph-alpha-kolibri-sovereign-open-weight-model.md) (10/3 발표·10/4 수집, official, 교차 확인 2 — 공식·tej.as 해설, HN 470pt·댓글 283)
+
+- **핵심**: 영어-독일어 MoE 트랜스포머, 총 78B·**활성 3B**, 컨텍스트 최대 1M 토큰, Hugging Face 전체 가중치 **Apache 2.0**. 총 30B·활성 3B·65k의 Kolibri Origin으로 학습 파이프라인(데이터 수집·정제, 수백 건 ablation, 사전·사후 학습, 평가)을 먼저 검증 — 하드웨어 장애·데이터 단절에도 사람 개입 없이 사전학습 완료. '활성 파라미터 4배급(Nemotron 3 Super급)과 맞먹는다' 주장. AIME 2025 96.9·GPQA diamond 84.3·LiveCodeBench v6 85.9·**τ³-bench banking 38.1**(비교 모델 5.7~15.5 대비) — 단 τ²-bench telecom·BFCL v4에서는 Qwen3.6-35B-A3B보다 낮은 점수를 스스로 공개. 영어·독일어 모두 품질 대비 서빙 비용 파레토 프런티어 주장
+- **주권의 2차원 정의**: '모델을 어떻게 만들었는가'(데이터 수집부터 평가까지 공급망 무결성·투명성)와 '고객에게 어떻게 이전되는가'(배포 자유·IP 안전) — 주권을 라이선스가 아니라 **공급망 전체의 속성**으로 정의. 활성 3B의 낮은 운영 비용으로 '데이터를 외부 추론 서비스로 보내지 않는 온프레미스 에이전트'를 현실적 비용으로 만든다는 포지셔닝 — 공공행정·산업·항공우주 등 규제 분야 겨냥
+- **위치**: 28차 Koa(조직·데이터 주권)·34차 Saaras V4(지역 특화)에 이은 **주권·지역 축의 유럽 공공 판** — 과거 독자 대형 모델 경쟁에서 물러났던 Aleph Alpha의 '범용 최강이 아니라 주권·특화·저비용' 재진입. Apache 2.0 전면 개방은 31차 Qwen-Image 연구 라이선스·㊽ jina-ocr·33차 ThinkingCap 게이트의 '오픈 조임'과 정반대 방향 — **주권 시장에서는 전면 개방이 신뢰의 경쟁 무기**임을 보여주는 대칭. 극단 희소 MoE(78B-A3B)는 20차 '아키텍처 컨센서스'의 희소화 편이 온프레미스 비용 문제로 극단화된 사례
+
+### 2. Microsoft MAI-Transcribe-2-Streaming — 첫 스트리밍 STT, AA 38개 모델 중 1위·첫 가설 ~100ms ⭐⭐
+
+**출처**: [MarkTechPost](../../records/2026-10-04-microsoft-mai-transcribe-2-streaming.md) (10/1 출시·10/4 수집, major-media)
+
+- **핵심**: 배치형 MAI-Transcribe-2(9월)의 실시간 버전, TTS MAI-Voice-2.1·2.1-Flash와 동시 출시. 60개 언어 자동·연속 감지, 오디오 수신 후 **~100ms에 첫 가설(partial)** → 문맥 축적 후 최종 전사 확정 — 에이전트가 발화 종료 전 추론·도구 호출 시작 가능. Artificial Analysis **최종·첫 partial 전사 정확도 38개 모델 중 1위** 평가(AA-WER Streaming 지표 — 발화 종료 감지 시점부터 지연 측정, 가중치 50%가 에이전트 대화 데이터 AA-AgentTalk). 가격 $0.54/시간(2026년 말까지 도입가, 배치형 $0.10). 통합 경로 **OpenAI Realtime 호환 WebSocket** + Azure Speech SDK. MAI-Voice-2.1-Flash(45초 오디오 150ms 종단 지연, $15/100만 자)와 '완전한 음성 루프' 구성 제안
+- **위치**: 55 Grok VT 2.0·88 Saaras V4의 음성 입력 축에 대형 벤더 편 합류 — 스트리밍 요금은 xAI·Meta보다 높고 Google 추정가와 비슷(MarkTechPost). MAI 자체 모델 전략(7월 'OpenAI 대비 89% 절감')의 STT·TTS 완결. **OpenAI Realtime 호환 채택**은 36차 Jev API 클론 전쟁과 동형 — '인터페이스 표준·모델 교체품' 축(54·66·80)이 판단 계층을 넘어 음성 인터페이스로 확장: 경쟁사 규격을 채택해 고객의 이전 비용을 낮추고 자기 모델을 판다는 구도
+
+### 37차 갱신 분석: "소유의 개방과 연결의 표준화"
+
+| 축 | 사례 | 이동 방향 | 검증 구조 |
+|----|------|----------|----------|
+| 무게(가중치) | Kolibri | 폐쇄→전면 개방(Apache 2.0) | 벤더 보고, 이중 성적표 공개 |
+| 연결(인터페이스) | MAI-Transcribe | 독자→경쟁사 규격 호환 | AA 1위(독립 지표·벤더 요금) |
+
+1. **오픈 조임의 시장별 분기**: 주권·공공 시장(Kolibri)에서는 Apache 2.0 전면 개방이 신뢰 획득의 조건이고, 소비자·크리에이터 시장(Qwen-Image·jina-ocr)에서는 게이트가 관행으로 — '개방의 정도'(33차 스펙트럼)가 시장 세그먼트별로 수렴하는 구도. 유럽이 중국계 오픈 모델(Qwen·GLM)의 대체재를 갖게 됨에 따라 오픈웨이트 지형의 지역 3극(미·중·유럽) 후보
+2. **이중 성적표의 관행 확산**: τ³-bench banking 우위와 telecom·BFCL 열세를 함께 공개 — 30차 SPARSEUP 통제 비교·33차 CLM-8B 열세 인정에 이은 '비교 가능성 기준 상향'의 세 번째 사례. '맞먹는다'(Nemotron 3 Super급) 주장의 독립 재현이 다음 관문
+3. **인터페이스 표준화의 음성 편**: MS가 OpenAI Realtime 호환을 택한 것은 Jev API 호환군(Clef·Decider 2B·Decisions API)과 같은 '타사 규격 채택' 전략 — 인터페이스 소유자(OpenAI·TypeSafe)와 준수자(호환군)의 역할 분리가 음성에서도 성립. AA-WER Streaming의 50%가 에이전트 대화 데이터라는 점은 평가 기준 자체가 에이전트 중심으로 재편됨을 보여주는 지표 설계의 실측
+
+> 💡 **종합 교차 참조**: Kolibri는 28차 Koa(주권)·34차 Saaras V4(지역)·[도구 31차](../tools-overview.md) IBM Bob·DGX Spark(폐쇄막·온프레미스 인프라)와 '주권 스택' 축 통합 — 하드웨어·플랫폼·모델 3면이 같은 주에 관측됨. MAI-Transcribe는 55 Grok VT 2.0·88 Saaras V4(음성 입력)·77 Flash TTS(음성 출력 대칭)·36차 Jev 클론(인터페이스 표준)과 연결. 관전점(숙제 신설 102~103): ① 'Nemotron 3 Super급 맞먹음'·τ³-bench 38.1의 독립 재현, 유럽 공공 조달 채택, 78B-A3B의 실무 서빙 비용 실측 ② AA 1위 지속 여부·$0.54 도입가 이후 가격·Realtime 호환의 사실상 표준화 — (55·88 음성 입력 축·54 '인터페이스 표준' 축 갱신)
+
+### 37차 갱신 요약
+Aleph Alpha Kolibri(78B-A3B·1M 컨텍스트·Apache 2.0, τ³-bench banking 38.1 특화·열세 벤치 동시 공개)가 주권형 오픈웨이트의 유럽 판을 열었고, MAI-Transcribe-2-Streaming(AA 38개 중 1위·첫 가설 ~100ms·$0.54/시간·OpenAI Realtime 호환)가 음성 입력 축에 합류했다. 가중치는 열리고(주권의 무기), 인터페이스는 경쟁사 규격으로 수렴하는(교체품의 조건) 대칭이 관측된 37차다.
+

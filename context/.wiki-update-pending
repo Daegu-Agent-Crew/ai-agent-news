@@ -1,4 +1,14 @@
 # 다음 위키 갱신 대기
+# 2026-10-21: models (47차, 2건 — 이월 2건 처리: MiniMax M3.1 Flash ⭐⭐·NVIDIA Nemotron 3.5 Super VL·Bolt ⭐⭐
+#             "가격의 바닥과 소유의 계층" — 428B-A23B 멀티모달 MoE·$0.15/$0.60·Automation-Bench 62.2 자체 표 최고
+#             (Opus 5 50.3 상회·Terminal Bench 38.1 열세·추론 상시 켜짐·Space Bunny 정체 공개·가중치 10/23 예정·라이선스 미공개),
+#             Nvidia 120B 기업용+74B-A9B 24GB AI PC+E4B 대화형 티어 완성·'과제별 사후학습 후 Opus 5·GPT-6.1 Sol보다
+#             빠름' 조건부 주장(Skydance·EY·Ramp·CrowdStrike·Perplexity·Salesforce·칩 벤더의 기업 소유 서사)) +
+#             industry (52차, 1건 — 이월 처리: Microsoft Guardian Agents ⭐⭐ "감시의 상품 완성" — '프런티어 모델은
+#             예측 불가능성으로 신뢰 불가'(악의 아닌 예측 불가능성 재프레임)·Project Perception 확장·Defender 60종
+#             탐지(Claude Code·Codex·OpenClaw 포함)·작업별 동적 권한·위험 시 인간 승인 — 48차 나델라 '지능 공급과
+#             권한 분리' 원칙의 제품 착지·감시의 연구소(METR)-국가(CERT-In)-기업 3층위 동시 제도화) 갱신 완료.
+#             이월: 없음(전건 처리). 신설 숙제 165~167.
 # 2026-10-20: tool (37차, 3건 — 이월 1건 처리: TinyFish Search·Fetch 무료화 ⭐⭐ + 신규 OpenCode 침해 후속 ⭐⭐⭐⭐·NVIDIA Run:ai ⭐⭐
 #             "비용의 재배치 — 도둑맞은 토큰, 열린 오케스트레이터, 0원의 검색" — 침해 피해가 무단 과금(수백 달러·일부 $1,000+)으로
 #             구체화(OpenAI 환불·Anthropic/Google 키 차단), 방어 AI 모델이 안전 필터로 악성 코드 분석 거부(7월 HF 유사 사례 반복·
@@ -16,7 +26,7 @@
 #             industry 1건(Microsoft Guardian Agents ⭐⭐ — '프런티어 모델은 신뢰할 수 없다'(악의 아닌 예측 불가능성)·에이전트 감시
 #             Guardian Agents(Perception 확장)·Defender 60종 탐지(Claude Code·Codex·OpenClaw 포함)·작업별 동적 권한·위험 시 인간 승인·
 #             나델라 '지능 공급과 권한 분리' — industry 52차 대상, 48차 신뢰 아키텍처·90 Open Agent Safety Platform(창립 멤버)과 축).
-#             신설 숙제 161~164.
+#             신설 숙제 161~164. ★10-21 models 47차(이월 2건 전건)·industry 52차(이월 1건)로 처리 완료.
 # 2026-10-19: industry (51차, 4건 — 이월 2건 처리: OpenAI 오작동 사고 4건 추가 ⭐⭐⭐·Anthropic 사내 보고서 ⭐⭐ +
 #             신규 웹사이트 에이전트 차단(Verge) ⭐⭐⭐⭐·Anthropic 공익 펀드 지분 5% ⭐⭐⭐⭐ "사다리와 문 — 노동의 실측,
 #             접근의 과금, 우회의 축적, 성장의 배분") — Delta·JPMorgan·Schwab 차단 확인·Yelp 유료 라이선스만 허용·

@@ -1,4 +1,23 @@
 # 다음 위키 갱신 대기
+# 2026-10-22: industry (53차, 2건 — 'PHP 아마겟돈' OpenAI·Wiz AI 발견 ⭐⭐⭐⭐⭐ + 월마트 Agent Gateway·Agent Profiles ⭐⭐
+#             "발견의 양날과 문의 양극" — 2004년부터 모든 PHP 버전에 숨은 치명 취약점 2건을 AI가 발견(Calif-GPT-5.6 Sol·
+#             Wiz Atlas-Gemini 4 Argon, NSA 경보·8.5.12 패치, "AI 덕분에 발견됐지만 AI 때문에만 고위험"·LLM 익스플로잇
+#             적응 경고 — 43차 구글 버그바운티 슬롯의 반대편·49차 Torvalds와 'AI 코드·보안 검증' 축), 월마트는 에이전트용
+#             MCP 서버 Agent Gateway·에이전트별 프로필(지출 한도·거래별 승인·오작동 반품 보장·약관 위반 차단)으로 아마존
+#             차단과 정면 분기 — 45차 오픈 표준 착수의 첫 실물 후보·51차 가격표 시장의 제3 가격 '개방+통제') +
+#             tool (38차, 1건 — Anthropic Claude Duet 리서치 프리뷰 ⭐⭐⭐⭐⭐ "대화 주도권의 이전" — Opus 5.5 기반 능동형
+#             앱(아침 브리핑·백그라운드 작업·행동 전 확인 push 구조·6,000+ 커넥터), 비밀번호·토큰 직접 비보유·auto mode 분류기·
+#             민감 등급 거부 분류기·침투 테스트, 백그라운드 점검의 사용량 한도 소모(상시 에이전트 비용의 사용자 전가),
+#             긴급도 오판·스레드 오독 한계 자인 — 33·34차 상주화의 소비자 앱 완결편) 갱신 완료.
+#             이월: model 1건(Recursive Flint ⭐⭐⭐⭐ — 총 40B·활성 2.5B MoE 코딩 모델 Apache 2.0·노트북 로컬·4비트 약 23GB·
+#             M4 Pro 초당 약 131토큰(Gemma 4·Nemotron 3.5 Lightning 58~69토큰의 약 2배), SWE-bench Verified 74.2%(50B 미만 1위
+#             자체 주장)·Terminal-Bench 2.1 54.9%(Qwen 3.8 73.0% 열세)·IFEval 95.1%, 'Eureka Machine' 자동 연구 시스템이 개발
+#             대부분 수행(희소 구조·품질 손실 거의 없이 71% 축소 저비트 학습·커스텀 커널 — 4개월 만에 구축, Socher 재귀적
+#             자기개선 장기 목표·GV·Nvidia·AMD $650M) — models 48차 대상), framework 1건(Vercel durable-harness ⭐⭐⭐ —
+#             Pi·OpenCode·fx·Claude Code·Codex 등 기존 하네스를 수정 없이 감싸는 내구성 계층 npm 오픈소스(Apache 2.0·0.0.x),
+#             턴 단계의 내구성 로그·큐 기반 재개·토큰 이중 과금 방지·replay safe/never 멱등성 명시, Vercel Sandbox 종속·
+#             자체 보고 한계 — 프레임워크 29차 대상, 25차 Pi Durable·[산업 42차] Restate 내구성 실행 축).
+#             신설 숙제 168~170.
 # 2026-10-21: models (47차, 2건 — 이월 2건 처리: MiniMax M3.1 Flash ⭐⭐·NVIDIA Nemotron 3.5 Super VL·Bolt ⭐⭐
 #             "가격의 바닥과 소유의 계층" — 428B-A23B 멀티모달 MoE·$0.15/$0.60·Automation-Bench 62.2 자체 표 최고
 #             (Opus 5 50.3 상회·Terminal Bench 38.1 열세·추론 상시 켜짐·Space Bunny 정체 공개·가중치 10/23 예정·라이선스 미공개),
@@ -756,3 +775,15 @@
 #             164 HybridAgents — 11벤치 수치의 독립 재현(하네스 차이 통제 비교), HybridLink 전환부 해석가능성('잠재 사고 검사'
 #             주장 실측), 잠재 추론과 CoT 감시의 양립 구조(감시 계층 설계), 타 하네스·모델 이식·상용화 → research 27차 후속.
 #             (160 Harness²·129 transcript 검토·⑰ TCO와 교차)
+
+# 숙제(신규, 53·38차): 168 PHP 아마겟돈 — Patch the Planet의 확산(타 모델사 동조)·성과·범위 공개, 발견 2건의 기술 상세·
+#             독립 재현, 공개 직후 패치 경쟁 구조에서 레거시 PHP(8.1 이하 지원 종료) 노출 사이트의 실제 악용 관측, 'AI 발견 vs
+#             AI 악용' 군비 경쟁의 실측 → industry 53차 1번 후속. (106 구글 버그바운티·49차 Torvalds 패치·50차 PostgreSQL·
+#             [도구 37차] 방어 모델 거부와 'AI 코드·보안 검증' 축 통합 관전)
+#             169 월마트 Agent Gateway — 가동 후 실제 에이전트 거래량·차단 사례, Agent Profiles의 가족 추가 사용자 모델 실측
+#             (오남용·한도 우회), 에이전트 전용 약관의 업계 표준화(아마존·타 유통의 응답), 45차 오픈 표준 그룹과의 관계(개별 MCP
+#             vs 표준) → industry 53차 2번 후속. (70 아마존-Muse·87 플립카트·120 Gemini 통합 에이전트·159 숙제와 '소비자 에이전트
+#             접근' 축 통합 관전)
+#             170 Claude Duet — 긴급도 보정의 실측(오알림·침묵 누락 빈도), auto mode 분류기의 승인 기준 공개·우회 사례,
+#             백그라운드 점검의 한도 소모율(상시 에이전트의 실질 가격), Muse·Gemini와의 소비자 능동형 3각 귀결(승인 UX·커넥터
+#             범위·가격) → tool 38차 후속. (139·140 상주화·126 개인 CFO 유출 정보 흐름·⑰ TCO 축 교차 관전)

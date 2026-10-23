@@ -1,4 +1,27 @@
 # 다음 위키 갱신 대기
+# 2026-10-23: models (48차, 1건 — 이월 처리: Recursive Flint ⭐⭐⭐⭐ "제작의 자동화" — 총 40B·활성 2.5B
+#             MoE 코딩 모델 Apache 2.0·4비트 약 23GB·M4 Pro 초당 약 131토큰(Gemma 4·Nemotron 3.5 Lightning
+#             58~69토큰의 약 2배), SWE-bench Verified 74.2%(50B 미만 1위 자체 주장)·Terminal-Bench 2.1 54.9%
+#             (Qwen 3.8 73.0% 열세)·IFEval 95.1%, 'Eureka Machine' 자동 연구 시스템이 개발 대부분 수행(희소 구조·
+#             품질 손실 거의 없이 71% 축소 저비트 학습(lm_head 4비트+증류 복구)·커스텀 커널 — 4개월 만에 구축,
+#             Socher 재귀적 자기개선 장기 목표·GV·Nvidia·AMD $650M·기업가치 $4.65B) — 45차 Spark Open(상한)·
+#             44차 LFM2.5(바닥) 로컬 계보의 노트북급 편·[프레임워크 28차] Harness²와 대칭되는 '설계의 자동화') +
+#             framework (29차, 1건 — 이월 처리: Vercel durable-harness ⭐⭐⭐ "내구성의 공통 계층" — Pi·OpenCode·fx·
+#             Claude Code·Codex를 수정 없이 감싸는 npm 오픈소스(Apache 2.0·0.0.x), 턴 단계 의도·결과 내구성 로그·
+#             Vercel Queues 기반 재개·토큰 이중 과금 방지·replay safe/never 멱등성 명시, Claude Code·Codex는
+#             셀프호스팅도 Vercel Sandbox 종속·벤치마크 미공개 자체 보고 — 25차 Pi Durable의 공통 계층 완성·
+#             [산업 42차] Restate 내구성 실행 축·상주화([도구 34차] OpenCode 2.0·139 Codex 데몬)의 클라우드 인프라 편)
+#             갱신 완료.
+#             이월: industry 2건(① Uber 전 직원 3만 명 ChatGPT Work ⭐⭐ — 파일럿 1,000명·초기 사용자 80% 비개발자,
+#             엔지니어링 외 부서 확산 실측 — industry 54차 대상. ② Spotify '에이전트가 선택하는 음악 서비스' 전략 ⭐⭐ —
+#             MAU 7억 8,800만·매출 약 €50억, Meta Muse 최초 연동 음악 서비스·ChatGPT·Claude 연동, '에이전트 시대에
+#             번성하는 카테고리' 서사 — industry 54차 대상, 159 웹사이트 차단·169 월마트·120 Gemini 통합 에이전트와
+#             '소비자 에이전트 접근' 축), tool 1건(1Password for Agents ⭐⭐⭐ — 에이전트가 자격 증명을 보지 않고 대신
+#             로그인, 고유 디지털 키 신원 확인·사용자 승인·1Password가 자격 증명 대신 주입 — '비밀값의 위치' 축·
+#             126 개인 CFO·156 OpenCode 침해와 교차 — tool 39차 대상), framework 1건(NVIDIA OpenShell 0.1.x ⭐⭐⭐⭐ —
+#             자율 에이전트 무리용 안전·프라이빗 런타임, 커널 계측으로 파일 접근·시스콜·네트워크 연결에 정책 강제·
+#             정책 변경 형식 검증 사전 점검 — 90 Open Agent Safety Platform의 런타임 편·격리 축 — framework 30차 대상).
+#             신설 숙제 171~172.
 # 2026-10-22: industry (53차, 2건 — 'PHP 아마겟돈' OpenAI·Wiz AI 발견 ⭐⭐⭐⭐⭐ + 월마트 Agent Gateway·Agent Profiles ⭐⭐
 #             "발견의 양날과 문의 양극" — 2004년부터 모든 PHP 버전에 숨은 치명 취약점 2건을 AI가 발견(Calif-GPT-5.6 Sol·
 #             Wiz Atlas-Gemini 4 Argon, NSA 경보·8.5.12 패치, "AI 덕분에 발견됐지만 AI 때문에만 고위험"·LLM 익스플로잇

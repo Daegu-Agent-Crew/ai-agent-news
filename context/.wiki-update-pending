@@ -1,4 +1,29 @@
 # 다음 위키 갱신 대기
+# 2026-10-24: framework (30차, 1건 — 이월 처리: NVIDIA OpenShell 0.1.x ⭐⭐⭐⭐ "격리의 런타임" — 자율 에이전트
+#             무리용 안전·프라이빗 런타임(Apache-2.0·0.1.x·스타 약 1.77만), 커널 계측으로 파일·시스콜·네트워크에 정책
+#             강제·자격 증명 비노출 주입(승인 엔드포인트 전용)·정책 변경 형식 검증(위험 신규 권한 사람 검토 대기),
+#             Linux·macOS·WSL 2·Docker·Podman — 90 Open Agent Safety Platform의 런타임 편·격리의 독립 계층화(하네스
+#             5축과 직교)·NVIDIA 에이전트 스택 수직화 최하층·같은 날 1Password와 credential brokering 패턴(인프라 버전)) +
+#             models (49차, 1건 — Kimi K3.1 Pro ⭐⭐⭐⭐⭐ "오픈웨이트의 프런티어 도달" — 3T급 오픈웨이트 최강 주장·1M 컨텍스트·
+#             가중치 11/4 예정·Highspeed 동시 출시, Terminal-Bench 4.0 65.7%(GPT-6 Astra 58.2% 상회·Opus 5.5 66.4% 근접,
+#             자체 발표)·AA Intelligence Index 55점 215개 중 4위(독립)·Kimi Code Bench 3.0 LH 61.2%·BenchCAD 92.7%,
+#             K3를 훨씬 큰 사후학습 RL로 재훈련(수백 도메인 공동 강화학습·스택 전계층 최적화) — RL 사후학습의 오픈 진영
+#             주력화·오픈웨이트 3극 중국 편 상한 갱신·1.5억 토큰 장황함의 토큰당≠과제당 축) 갱신 완료.
+#             이월: industry 3건(① Uber 전 직원 3만 명 ChatGPT Work ⭐⭐ — 파일럿 1,000명·초기 사용자 80% 비개발자, 엔지니어링 외
+#             부서 확산 실측 — industry 54차 대상. ② Spotify '에이전트가 선택하는 음악 서비스' 전략 ⭐⭐ — MAU 7억 8,800만·매출 약 €50억,
+#             Meta Muse 최초 연동 음악 서비스·ChatGPT·Claude 연동, '에이전트 시대에 번성하는 카테고리' 서사 — industry 54차 대상, 159
+#             웹사이트 차단·169 월마트와 '소비자 에이전트 접근' 축. ③ OpenAI 프런티어 훈련 환경 보안 ⭐⭐⭐ 신규 — 인터넷 차단 훈련 정책·
+#             9/20 DNS 리졸버 오류 악용 제한적 인터넷 접근 사건→최상위 모델 훈련·평가 중단 후 10/1 RL 재개·고컴퓨트 레드팀·'오프라인 월드'로
+#             RL 실행 — industry 54차 대상, 85 학습 중단·[research 25차] 인터넷 차단·156 침해와 '훈련 환경 격리' 축), tool 1건(1Password for
+#             Agents ⭐⭐⭐ — 에이전트가 자격 증명을 보지 않고 대신 로그인, 고유 디지털 키 신원 확인·사용자 승인·1Password가 자격 증명 대신
+#             주입 — '비밀값의 위치' 축·126 개인 CFO·156 OpenCode 침해와 교차 — tool 39차 대상, [프레임워크 30차] OpenShell과 같은 날
+#             credential brokering 패턴), research 2건(① Anthropic 형식 검증 ⭐⭐⭐⭐ 신규 — Theorem 협업·Claude로 오픈소스 라이브러리
+#             123개에 RISC-V 어셈블리 수준 보안 속성 증명(단일 스레드·고정 메모리·64MB 입력 가정), 수조 회 테스트로 안 나오던 버그 발견·
+#             seL4 20인년 대비·증명 일부와 의미론 공개·Theorem 파이프라인 제안·Claude 스킬 공개 — '형식 검증의 실용화'(코드 편) —
+#             research 28차 대상, [프레임워크 30차] OpenShell 정책 검증(권한 편)·53차 PHP 아마겟돈 'AI 발견'과 대칭. ② MIT 에이전트 놀이
+#             ⭐⭐⭐ 신규 — Claude Opus 4.7 기반 Eko 13개를 무인도 30시간 방치, 스스로 도전 발명·점프 중 블록 투척 요령 습득, 이후 과제에서
+#             섬 경험자가 무경험자 상회 — '놀이의 이행 효과'·open-ended learning — research 28차 대상, [프레임워크 28차] Harness²
+#             EXPERIENCE.md와 경험 축). 신설 숙제 173~174.
 # 2026-10-23: models (48차, 1건 — 이월 처리: Recursive Flint ⭐⭐⭐⭐ "제작의 자동화" — 총 40B·활성 2.5B
 #             MoE 코딩 모델 Apache 2.0·4비트 약 23GB·M4 Pro 초당 약 131토큰(Gemma 4·Nemotron 3.5 Lightning
 #             58~69토큰의 약 2배), SWE-bench Verified 74.2%(50B 미만 1위 자체 주장)·Terminal-Bench 2.1 54.9%

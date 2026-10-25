@@ -1,4 +1,21 @@
 # 다음 위키 갱신 대기
+# 2026-10-25: research (28차, 3건 — 이월 2건 처리: Anthropic·Theorem 형식 검증 ⭐⭐⭐⭐ + MIT 에이전트 놀이 ⭐⭐⭐ + 신규 Convovo 선거 편향 ⭐⭐
+#             "증명과 놀이" — Claude로 오픈소스 123개에 RISC-V 어셈블리 수준 보안 속성 증명(수조 회 테스트로 안 나오던 버그 발견·
+#             seL4 20인년 대비·증명 일부·의미론 공개·Theorem 파이프라인 제안·Claude 스킬 공개), 무인도 30시간 방치 Eko 13개의
+#             자기주도 놀이·이행 효과(6/13 의도 외 요령 습득·'soul' 프롬프트 유도 가능성·Yiu 인지 증거 요구), API 강제 선택의 정치
+#             분화(Grok 공화당 92%·GPT 민주당 97%·일치 <10%·인용 출처·검색 주제까지 분화 — 제품 층위 정책 vs 모델 내재 성향)) +
+#             industry (54차, 5건 — 이월 3건 처리: Uber ChatGPT Work 3만 명 ⭐⭐(파일럿 80% 비개발자) + Spotify 에이전트 우선 미디어 ⭐⭐
+#             (MAU 7억 8,800만·Muse 최초 연동) + OpenAI 훈련 환경 보안 ⭐⭐⭐(DNS 우회 사건·오프라인 RL·10/1 재개) + 신규 Altman '패치 불가'
+#             방어 전환 ⭐⭐·Apollo '기술 섹터 밖 성과 신호 없음' ⭐⭐⭐⭐(매그7 vs S&P 493·토큰 지출=비용 전환·HN 407pt) "확산과 회의")
+#             갱신 완료.
+#             이월: tool 2건(① 1Password for Agents ⭐⭐⭐ — 에이전트가 자격 증명을 보지 않고 대신 로그인, 고유 디지털 키 신원 확인·
+#             사용자 승인·1Password가 자격 증명 대신 주입 — '비밀값의 위치' 축·126 개인 CFO·156 OpenCode 침해와 교차 — tool 39차 대상,
+#             [프레임워크 30차] OpenShell과 같은 날 credential brokering 패턴. ② TechCrunch 문자 메시지 에이전트 지도 ⭐⭐ — Ask Proxy·
+#             Caddy·Comma·Fambot·Folk·Instinct(9월 $10B 밸류 에이전트), 하루 $1·월 $8.33 가격 기준선 형성, 메시징 채널 UI(OpenClaw 계열)·
+#             채널 점유 경쟁에서 플랫폼 소유자(Apple iMessage·Meta WhatsApp) 정책의 사업 리스크 — tool 39차 대상, 38차 Claude Duet와
+#             소비자 능동형 축), model 1건(Block Dessa 전이중 음성 모델 ⭐⭐ — 사람 음성만 학습·GPU 랙 1대 훈련·MacBook M4 Max 로컬 실행·
+#             감정 내재 주장(텍스트 중간 단계 제거·지식은 대화 데이터에서)·공개 전 안전성 연구자 테스트 모집·Square 음성 AI와 사업 연결 —
+#             models 50차 대상, 88 Saaras·103 MAI-Transcribe 음성 축·48차 'ChatGPT 모먼트 미도달' 반례 후보). 신설 숙제 175~176.
 # 2026-10-24: framework (30차, 1건 — 이월 처리: NVIDIA OpenShell 0.1.x ⭐⭐⭐⭐ "격리의 런타임" — 자율 에이전트
 #             무리용 안전·프라이빗 런타임(Apache-2.0·0.1.x·스타 약 1.77만), 커널 계측으로 파일·시스콜·네트워크에 정책
 #             강제·자격 증명 비노출 주입(승인 엔드포인트 전용)·정책 변경 형식 검증(위험 신규 권한 사람 검토 대기),
@@ -23,7 +40,8 @@
 #             research 28차 대상, [프레임워크 30차] OpenShell 정책 검증(권한 편)·53차 PHP 아마겟돈 'AI 발견'과 대칭. ② MIT 에이전트 놀이
 #             ⭐⭐⭐ 신규 — Claude Opus 4.7 기반 Eko 13개를 무인도 30시간 방치, 스스로 도전 발명·점프 중 블록 투척 요령 습득, 이후 과제에서
 #             섬 경험자가 무경험자 상회 — '놀이의 이행 효과'·open-ended learning — research 28차 대상, [프레임워크 28차] Harness²
-#             EXPERIENCE.md와 경험 축). 신설 숙제 173~174.
+#             EXPERIENCE.md와 경험 축). 신설 숙제 173~174. ★industry 3건·research 2건 이월은 10-25 industry 54차·
+#             research 28차로 처리 완료(신규 Altman·Apollo·Convovo 포함). tool 1건(1Password)은 tool 39차 대상으로 유지 이월.
 # 2026-10-23: models (48차, 1건 — 이월 처리: Recursive Flint ⭐⭐⭐⭐ "제작의 자동화" — 총 40B·활성 2.5B
 #             MoE 코딩 모델 Apache 2.0·4비트 약 23GB·M4 Pro 초당 약 131토큰(Gemma 4·Nemotron 3.5 Lightning
 #             58~69토큰의 약 2배), SWE-bench Verified 74.2%(50B 미만 1위 자체 주장)·Terminal-Bench 2.1 54.9%

@@ -1309,3 +1309,46 @@ AAR이 "AI가 AI를 정렬하는 부트스트랩 루프"를 연구 실증했다�
 ### 30차 갱신 요약
 Perplexity Photon(Rust 자체 검색 엔진, p99 65ms·Fast 모드 68% 절감·호스팅 전용), RSA Agent ID(섀도 에이전트 발견·신원 3모듈·위험 엔진 승인 선별), OpenAI Decisions API(감시 비용 $372→$2.94 데모·Jev API 축 공식 진입), Shopify Canvas(실제 코드 렌더링·스크린샷 자기 검증)가 같은 이틀 사이에 나왔다. 에이전트가 소비하는 부품의 자체화와 에이전트를 관리하는 계층의 분업이 동시 관측된 30차다.
 
+## 2026년 10월 31차 갱신: 상시 에이전트의 자기 인프라 — 책상 위 클러스터, 폐쇄망 플랫폼, 에이전트 턴 서빙
+
+30차가 에이전트가 소비하는 부품과 관리 계층의 분업이었다면, 31차는 그 모든 것이 도는 '곳'이 클라우드 API 과금 밖으로 내려앉는 갱신이다. 토큰당 과금 없는 책상 위 하드웨어(엔비디아 DGX Spark 64GB), 인터넷과 단절된 폐쇄망까지 내려가는 코딩 에이전트 플랫폼(IBM Bob), 그리고 '14만 토큰 프롬프트+6천 토큰 증분'의 에이전트 턴을 설계 기준으로 삼은 오픈 모델 서빙(Prime Inference)이 같은 주에 겹쳤다.
+
+### 1. NVIDIA DGX Spark 64GB — $4,999 시작가의 로컬 상시 에이전트 하드웨어, 2대 클러스터 128GB ⭐⭐⭐⭐⭐ (이월 처리)
+
+**출처**: [NVIDIA 공식 블로그](../../records/2026-10-02-nvidia-dgx-spark-64gb.md) (10/2 발표·10/3 수집, official, 교차 확인 3 — NVIDIA·MarkTechPost·Tom's Hardware)
+
+- **핵심**: GB10 Grace Blackwell 슈퍼칩 데스크톱 DGX Spark에 64GB 통합 메모리 구성 추가 — 이번 달 Acer·ASUS·Dell·Gigabyte·HP·MSI를 통해 출시(시작가 $4,999, Tom's Hardware). 기존 128GB 모델과 같은 GB10 칩·DGX OS·AI 스택, 최대 1,000억 파라미터 모델+에이전트 앱 온디바이스. **2대 QSFP 직접 연결 = 메모리 128GB 합산**(최대 2,000억 파라미터)·대역폭 2배·단일 대비 최대 **1.7배 성능**(NVIDIA 실측, Qwen 3.8 27B), 클러스터 구성은 Sync Cluster Assistant가 자동 처리
+- **소프트웨어 진영**: DGX OS에 PyTorch·Jupyter·Ollama 기본 탑재, OpenClaw 기반 **NemoClaw**(보안·프라이버시 통제 추가)를 명령 한 줄에 설치. 이달 말 **Sync Model Launcher** — 클릭 몇 번으로 Qwen3.8 27B 띄우고 OpenCode 연결. MarkTechPost: 에이전트 토큰 소비 2026년 초 이후 **14배 증가** — 자체 하드웨어는 토큰당 과금이 없다는 점을 마케팅 중심에 배치
+- **의미**: [프레임워크 14차](../frameworks-overview.md) Muse Glimmer 30B 로컬 스택·Perplexity Portable Computer가 연 '로컬 에이전트 인프라' 축에 칩 벤더 공식 상품이 합류 — OpenClaw·NemoClaw를 전면에 내세운 '상시 에이전트용 개인 서버' 카테고리의 공식화. ⑰·75 TCO 축(토큰 14배·'rampocalypse')의 하드웨어 해법 편. [산업 42차](../industry-trends.md) Apple FDA의 OS 권한 관문과 '로컬 상시 에이전트'의 하드웨어 편 vs OS 권한 편 교차 관전
+
+### 2. IBM Bob 자체 호스팅·폐쇄망 GA — 모델 없는 하네스, 코드를 밖으로 못 내보내는 조직으로 ⭐⭐
+
+**출처**: [MarkTechPost](../../records/2026-10-04-ibm-bob-self-hosted-air-gapped.md) (10/2 발행·10/4 수집, major-media)
+
+- **핵심**: 에이전트형 개발 플랫폼 Bob(코드 이해→계획→실행→검증 전 생애주기)의 자체 호스팅 정식(GA) 출시 — 온프레미스·사설/주권 클라우드·**폐쇄망(air-gapped)** 운영. **모델 번들 없음** — 고객이 IBM 지원 목록에서 직접 조달·라이선스·호스팅(코드·개발 맥락·빌드 산출물이 고객 환경에 머묾). 은행 예시: 핵심 뱅킹은 온프레미스 추론, 덜 민감한 작업은 승인된 외부 모델 — 개발자는 같은 Bob 경험, 플랫폼·보안팀이 아키텍처 통제. 가격 미공개(데모 요청), 멀티모델 라우팅은 로드맵(출시 기능 아님)
+- **의미**: 런타임과 모델의 분리 — 하네스가 특정 LLM에 묶이지 않는 계층으로 분화한다는 [프레임워크](../frameworks-overview.md) 관점의 엔터프라이즈 실측 편. Java·IBM i·메인프레임 레거시 현대화를 공용 인터넷 밖에서 수행한다는 포지션이 GitLab·GitHub·Mistral과 다른 지면. 같은 날 수집된 [Kolibri](../models-overview.md)(주권형 오픈웨이트)와 '온프레미스 에이전트 스택'의 플랫폼+모델 양면이 함께 관측
+
+### 3. Prime Intellect Prime Inference — 에이전트 턴을 설계 기준으로 삼은 오픈 모델 서빙, 하루 1조 토큰의 내부 검증 ⭐⭐
+
+**출처**: [MarkTechPost](../../records/2026-10-04-prime-intellect-prime-inference.md) (10/2 발행·10/4 수집, major-media)
+
+- **핵심**: 프런티어 오픈 모델용 서빙(서버리스+예약 용량, 멀티 데이터센터 자체 GPU). 공개 전 내부 **하루 약 1조 토큰**(RL 롤아웃·합성 데이터·평가·장시간 코딩 에이전트). **전형적 에이전트 터 = 14만 토큰 프롬프트+약 6천 토큰 증분**을 설계 기준으로 — prefill/decode 별도 GPU 그룹, KV 캐시 인식 라우팅(세션을 같은 decoder에 유지), 초당 100토큰 목표에서 **1:4 prefill/decode 비율**이 최대 처리량. p90 토큰 간 지연 약 40% 감소(자체 실측). 스택: NVIDIA Dynamo·vLLM·Mooncake·FlashInfer(Inferact·NVIDIA 공동). GLM-5.3 엔드포인트 OpenRouter 최속 축·도구 호출 오류율 거의 0·가동률 100%(자체 보고). structural-tag 빌더(Dynamo 기여)·xgrammar 토큰 마스킹으로 도구 스키마 위반 원천 차단 — **에이전트 신뢰성을 모델이 아닌 서빙 계층에서 해결**. prime-rl·verifiers·sandboxes로 이어지는 학습-서빙-트레이스 재학습 플라이휠 완성
+- **의미**: 30차 '루프 부품의 가격'(Photon·Decisions API·Embed 5)에 이은 **루프 형태의 서빙** — 단발 채팅이 아닌 긴 컨텍스트 재사용(KV 적중률)이 워크로드 모델. 오픈 진영이 폐쇄형 연구소식 운영 데이터 플라이휠을 만드는 시도, Together·Fireworks와의 가격·속도 경쟁 관전
+
+### 31차 갱신 분석: "토큰 미터기 밖으로 — 장소의 3분화"
+
+| 계층 | 사례 | 소유의 단위 | 상태 |
+|------|------|------------|------|
+| 하드웨어 | DGX Spark 64GB | 책상 위 클러스터(2대 128GB·$9,998) | 제조 6사, 이번 달 출시 |
+| 플랫폼 | IBM Bob 자체 호스팅 | 폐쇄막 안의 개발 생애주기 | GA(가격 미공개·모델 별도 조달) |
+| 서빙 | Prime Inference | 에이전트 턴(140K+6K) 단위 최적화 | 출시(수치 자체 보고) |
+
+1. **'토큰 14배'의 두 답**: 에이전트 토큰 소비 급증(MarkTechPost 수치)에 대한 답이 하드웨어 구매(DGX Spark — 과금 없음)와 서빙 최적화(Prime — 턴 구조 활용)로 분화 — ⑰·75 TCO 축이 '클라우드 API vs 자산'의 회계 대결로 구체화. 2대 $9,998이 상시 에이전트 손익분기 실측의 기준점이 됨
+2. **모델 없는 하네스의 상품화**: Bob의 '모델 번들 없음'은 하네스-모델 분리를 조달 계약 차원에서 강제하는 설계 — 29차 계약 기준표(배상·데이터 소재·좌석)에 '모델 조달 책임' 항목 추가. [모델 37차](../models-overview.md) Kolibri와 결합 시 '주권 스택'의 완결 구도
+3. **폐쇄망·주권 시장의 3면 완성**: 같은 주에 하드웨어(엔비디아)·플랫폼(IBM)·모델(Aleph Alpha)이 각자 폐쇄망·온프레미스 용도로 하강 — 공공·금융·규제 산업이 에이전트 도입의 별도 시장으로 성형 중. [산업 42차](../industry-trends.md) Apple FDA와 교차: OS 권한(관문) vs 자체 하드웨어·폐쇄망(탈출)의 양방향
+
+> 💡 **종합 교차 참조**: DGX Spark는 [프레임워크 14차](../frameworks-overview.md) '로컬 에이전트 인프라'·62 OpenClaw 자기유지(NemoClaw 기반)·[산업 42차](../industry-trends.md) Apple FDA와, Bob은 29차 계약 기준표·[모델 37차](../models-overview.md) Kolibri와, Prime Inference는 16차 비용 4계층·30차 '루프 부품' 축·[모델 36차](../models-overview.md) GLM-5.3 오픈웨이트와 연결된다. 관전점(숙제 신설 99~101): ① 1.7배 클러스터 성능·$4,999 출시 이행·NemoClaw 실채택·토큰 14배 수치 검증 ② Bob 가격 공개·폐쇄막 실배치 사례·모델 조달 관행 ③ 하루 1조 토큰·p90 40%의 독립 검증·멀티모델 라우팅 로드맵 이행 — (⑰·75 TCO 축 갱신)
+
+### 31차 갱신 요약
+엔비디아 DGX Spark 64GB($4,999·2대 클러스터 128GB·NemoClaw 기본 탑재·토큰 과금 없음), IBM Bob 자체 호스팅·폐쇄망 GA(모델 번들 없는 하네스), Prime Inference(에이전트 턴 140K+6K 설계 기준·prefill/decode 분리·p90 40% 감소)가 같은 주에 나왔다. 에이전트가 도는 장소가 클라우드 과금 밖 — 책상 위·폐쇄막·에이전트 터 특화 서빙으로 3분화되는 31차다.
+

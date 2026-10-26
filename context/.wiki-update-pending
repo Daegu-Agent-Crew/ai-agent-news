@@ -1,4 +1,23 @@
 # 다음 위키 갱신 대기
+# 2026-10-26: tool (39차, 4건 — 이월 2건 처리: 1Password for Agents ⭐⭐⭐ + TechCrunch 문자 에이전트 지도 ⭐⭐ +
+#             신규 Anthropic OSS Scanner ⭐⭐⭐ + Cognition Devin Vulnerability Fixes 플러그인 ⭐⭐⭐ "보안 루프의
+#             에이전트화와 문의 위임") — OSS Scanner는 핵심 오픈소스 대상 무료·옵트인 취약점 감사(Claude Mythos 등 자사 최강
+#             모델·보고서 사람 검토 없이 메인테이너 직접 전달·치명 77·높음 803건·정밀도 88% 자체 감사·빌드 네트워크 허용/감사
+#             격리 VM 분리 — OpenAI Codex for OSS·Google CodeMender에 이은 프런티어 랩 3번째 무료 감사), Devin 플러그인은
+#             RCE 3종(PHP2Shell·Node.js·GitLab CVSS 10.0) 자동 패치 SKILL.md 스킬(MIT·승인 게이트·읽기 전용 인벤토리·PR 1건
+#             — 발견-수정 양쪽 파이프라인 동시 에이전트화), 1Password는 credential brokering의 소비자 완성(디지털 키 신원 확인·
+#             사용자 승인·자격 증명 대신 주입 — OpenShell·SPACE·Duet과 '비밀값의 위치' 3층), TechCrunch 지도는 채널 점유 경쟁·
+#             가격 기준선(하루 $1·월 $8.33·Instinct $10B) +
+#             models (50차, 2건 — 이월 1건 처리: Block Dessa ⭐⭐ + 신규 Nanbeige4.3-33B ⭐⭐⭐ "본업 밖의 모델") — BOSS Zhipin
+#             산하 33B 밀집·512K·Apache 2.0 에이전틱 코딩(TB 2.1 80.9 자체 보고·TB 4.0 23.8 벤치 버전 격차·증류 교사 전략),
+#             Block 전이중 음성·사람 음성만 학습·M4 Max 로컬·감정 내재 주장(안전성 연구자 테스트 단계) 갱신 완료.
+#             이월: framework 1건(Microsoft Agensh ⭐⭐⭐ — 오케스트레이터 없는 분산 멀티에이전트 하네스 MIT·최대 1,024개
+#             에이전트, CLAIM 선점·공유 Git·컨텍스트 보드·조정 루프가 프롬프트 안에, ProgramBench 최난 5과제 GPT-5.6-sol
+#             기준 1→128개 19.31→28.78%·pandoc 1,024개 55.06%(GPT-6.1-sol 32개 79.59%는 README 추가·v1 논문 없음), 규모별
+#             창발 행동(8개 인터페이스 합의→32개 상호 리뷰→128개 신뢰 리뷰어 재사용→1,024개 통합자 역할, 하드코딩 없음),
+#             1→8개 +1.37p의 낮은 한계 수익·토큰 비용 선형 이상 — 리드+서브에이전트 주류(Claude Code 팀·Codex·Copilot fleet·
+#             Kimi Swarm)에 대한 반대 방향 실증 — framework 31차 대상, 25차 Pi·26차 dsh·[research 28차] 창발 축과 교차)
+#             신설 숙제 177~181.
 # 2026-10-25: research (28차, 3건 — 이월 2건 처리: Anthropic·Theorem 형식 검증 ⭐⭐⭐⭐ + MIT 에이전트 놀이 ⭐⭐⭐ + 신규 Convovo 선거 편향 ⭐⭐
 #             "증명과 놀이" — Claude로 오픈소스 123개에 RISC-V 어셈블리 수준 보안 속성 증명(수조 회 테스트로 안 나오던 버그 발견·
 #             seL4 20인년 대비·증명 일부·의미론 공개·Theorem 파이프라인 제안·Claude 스킬 공개), 무인도 30시간 방치 Eko 13개의
@@ -16,6 +35,7 @@
 #             소비자 능동형 축), model 1건(Block Dessa 전이중 음성 모델 ⭐⭐ — 사람 음성만 학습·GPU 랙 1대 훈련·MacBook M4 Max 로컬 실행·
 #             감정 내재 주장(텍스트 중간 단계 제거·지식은 대화 데이터에서)·공개 전 안전성 연구자 테스트 모집·Square 음성 AI와 사업 연결 —
 #             models 50차 대상, 88 Saaras·103 MAI-Transcribe 음성 축·48차 'ChatGPT 모먼트 미도달' 반례 후보). 신설 숙제 175~176.
+#             ★tool 2건(1Password·TechCrunch 지도)·model 1건(Block Dessa) 이월은 10-26 tool 39차·models 50차로 처리 완료.
 # 2026-10-24: framework (30차, 1건 — 이월 처리: NVIDIA OpenShell 0.1.x ⭐⭐⭐⭐ "격리의 런타임" — 자율 에이전트
 #             무리용 안전·프라이빗 런타임(Apache-2.0·0.1.x·스타 약 1.77만), 커널 계측으로 파일·시스콜·네트워크에 정책
 #             강제·자격 증명 비노출 주입(승인 엔드포인트 전용)·정책 변경 형식 검증(위험 신규 권한 사람 검토 대기),

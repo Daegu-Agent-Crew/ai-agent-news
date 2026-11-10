@@ -1518,3 +1518,30 @@ Microsoft-Decision-1(Qwen3.5-9B 후학습·36 벤치마크 자체 비교 최고�
 ### 42차 갱신 요약
 vLLM Semantic Router의 Decision 3.0(0.8B~27B 5종·Apache-2.0·이미지 판단, 팀 내부 평가에서 Jev 상회·9B가 구세대 27B 상회)이 결정 계층을 오픈 제품군 단위로 완성했고, Nace Drex 1.5(9B·Jev 호환 systemone API·10B 미만 최고 58.08·RAIL-M)는 인터페이스 표준 쟁탈을 전략으로 명시한 오픈 웨이트 2호가 됐으며, OrcaCyber Zero 1.5(Cybench 100%(39/39) 자체 주장·Security Research 등급·$3/$7.50)는 사이버 특화의 '통제된 거부 없음' 제3경로를 열었다. 판단 부품이 무료·다양체·특화를 한 번에 갖춘 42차다.
 
+## 2026년 10월 43차 갱신: 프런티어의 네 번째 문과 기억의 모델 편입 — Meta Muse Wonder
+
+42차가 판단 부품의 오픈 완성이었다면 43차는 프런티어 경쟁 자체의 지형 변화다. Meta Superintelligence Lab이 첫 프런티어 모델 Muse Wonder 시리즈를 공개하며 4강 구도에 정식 합류했다. 능력 차별화를 벤치 점수가 아닌 **Active Memory**(장기 기억)와 **Active Focus**(장기 과제 지속)로 제시한 점에서, 에이전트 하네스가 담당해온 기억 관리·승인·지속성이 모델 학습 목표로 편입되는 첫 프런티어급 시도다.
+
+### 1. Meta Muse Wonder·Wonder Full — 에이전트·기억력 중심 첫 프런티어, 입력 $4/출력 $20 ⭐⭐⭐⭐⭐
+
+**출처**: [Meta AI Research Blog](../../records/2026-10-13-meta-muse-wonder-frontier-model.md) (10/12 발표·10/13 수집, official, 교차 확인 2 — Meta·TechCrunch, HN 481pt)
+
+- **핵심**: "개인·업무용 에이전트 작업에서 최첨단 성능"을 내건 Meta의 첫 프런티어 시도(Alexandr Wang 재편 이후 첫 출시). **Active Memory** — 대화를 넘어 사용자에 관한 중요한 맥락을 기억하고 필요할 때 인출, **Active Focus** — 어려운 목표에 대안을 시도하며 장애물을 돌파하고 중요한 행동 전에 확인을 구하는 지속력. 평가는 자체 FocusBench·장기 소프트웨어 프로젝트 SWE-Marathon. Prometheus 기가와트급 데이터센터 학습
+- **성능 주장**: TechCrunch 인용 모델 카드 기준 Fable 5.1·GPT-6 Astra와 비슷한 수준, **MemoryBench에서는 Fable·Opus·Astra 상회**. Wonder Full은 Muse Spark 1.3 추세보다 학습 때 겨냥하지 않은 낯선 과제(OOD)에서 더 높음 — 더 크고 강한 베이스 모델 덕분이라는 설명과 함께 인-분포 대비 아웃-오브-분포 곡선 공개
+- **상업 구조**: 입력 $4/출력 $20 per MTok(GPT-6 Sol·Opus 5.5와 비슷한 동급 책정 — 저가 공세 불참). 최상위 **Wonder Full은 API 미제공·Muse Code 구독 전용** — 코딩 에이전트 시장의 자체 제품 락인. 오픈 웨이트 언급 없음 — Llama 시절 개방 노선과 추가 이격
+- **위치**: 하네스의 기억 관리(벡터DB·컴팩션)·승인 게이트·장기 과제 지속성이 **모델 차원 학습 목표로 흡수**되려는 첫 프런티어급 시도 — [프레임워크 24차](../frameworks-overview.md) OpenAI Dots(상시 가동·권한 계층)·[산업 46차](../industry-trends.md) Gemini 통합 에이전트(Workspace 계정·감사 추적)와 '기억·신원의 비서 경쟁' 축에서 교차. 27차 SWE-2 '모델이 심장인 제품' 판매 단위 이동의 Full 구독 락인 편. 32차 프런티어 인하 국면(가격 절반)과 대비되는 동급 가격 선택은 능력 서사(기억·지속)로 승부하겠다는 선언
+- **관전(숙제 신설 136)**: ① MemoryBench·FocusBench 자체 평가의 독립 재현(벤치 공개 여부 포함 — 58 Vals 축) ② Active Memory가 하네스 기억 관리 계층을 실제로 대체하는지(Muse 앱 경험 실측 — 78 Ando·120 Gemini 통합 에이전트와 '에이전트 신원' 축 교차) ③ $4/$20 동급 가격의 과제당 비용 귀결(Sol·Opus 5.5 대비 — ⑰ TCO 축) ④ Wonder Full 구독 락인·오픈웨이트 부재가 Meta 생태 지위에 미치는 효과
+
+### 43차 갱신 분석: "기억의 모델 편입과 프런티어 4강"
+
+1. **기억의 모델 편입**: Active Memory는 지금까지 하네스·앱 계층의 재산(컴팩션·벡터DB·사용자 프로필)이었다. 이를 모델 학습 목표로 끌어들이면 하네스 간 이동성이 약해지고 '모델이 곧 비서 상태를 소유'하는 구조로 향한다 — 40차 GPT-6 Intelligent UI(화면의 모델 편입)에 이어 **접점→기억**으로 흡수 순서가 확장
+2. **4강 체제와 가격 전략의 분기**: OpenAI(수학·인하)·Anthropic(코딩·캐시)·Google(출력 1M·Fairwind)·Meta(기억·구독 락인) — 각기 다른 축으로 프런티어를 정의. Meta의 동급 가격 책정은 32~35차 가격 인하 경쟁에 대한 불참 선언으로, 기억·지속 서사가 소비자 전환을 만들 수 있는지가 관건
+3. **자체 평가 상수**: 모든 비교 수치(벤치 유사성·MemoryBench 우위·OOD 우수성)가 Meta 자체 측정 — 42차 '팀 내부 평가' 한계의 프런티어 편 반복. OOD 곡선 공개는 29차 SPARSEUP 이래 투명성 관행의 확산 신호
+
+> 💡 **종합 교차 참조**: [프레임워크](../frameworks-overview.md) 24차 Dots·[산업](../industry-trends.md) 46차 Gemini 통합 에이전트와 '상시 비서·기억' 축, [도구](../tools-overview.md) 32차·78 Ando '에이전트 신원' 축에서 교차. 39차 오픈웨이트 지역 3극 논쟁에서 Meta의 사실상 이탈 심화. 관전점(숙제 신설 136): 독립 재현·하네스 기억 대체 여부·TCO·락인 전략 효과
+
+### 43차 갱신 요약
+Meta가 첫 프런티어 Muse Wonder·Wonder Full(Active Memory·Active Focus, Fable 5.1·GPT-6 Astra급 주장·MemoryBench 상회, $4/$20·Full은 Muse Code 구독 전용, 오픈웨이트 부재)을 공개했다. 기억과 지속을 모델 학습 목표로 편입한 첫 프런티어 시도이자 4강 체제의 네 번째 문 — 프런티어의 정의 축이 성능·가격에서 기억으로 확장된 43차다.
+
+---
+

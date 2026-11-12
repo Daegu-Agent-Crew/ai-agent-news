@@ -1,8 +1,7 @@
-# 2026-11-11: tool (40차, 3건 — 이월 2건 처리: Medium TK AI 집필 앱 ⭐⭐ + Automattic Spacefast ⭐⭐⭐ + 신규 Anthropic
-#             Claude Meetings ⭐⭐ "글쓰기·배포·회의 — 산출물을 받아주는 3개 계층") + industry (56차, 3건 — Anthropic IPO 가격 밴드
-#             $70~78·완전희석 최대 $1.404T·7개사 $26B 사전 매입 ⭐⭐⭐⭐ + 뉴욕 RAISE법 시행 등록·72시간 보고·최대 $300만 ⭐⭐⭐ +
-#             구글 TPU 8tx·8i Max 기밀 컴퓨팅·메모리 2배 ⭐⭐⭐ "심판의 시간") 갱신 완료.
-#             이월: model 1건(구글 Gemini for healthcare ⭐⭐⭐ — 파편화된 의료 데이터 조율 에이전트, EHR·청구·임상지침·
-#             메디케어 결합·사전승인 다단계 워크플로 가드레일 실행, HCA·Highmark·Northwell 프리뷰, 임상의 주당 28시간 행정업무 —
-#             models 52차 대상, 도메인 특화·버티컬 에이전트 축).
+# 2026-11-12: model (52차, 1건 — 이월 Gemini for healthcare ⭐⭐⭐ 처리) + industry (57차, 2건 — OpenAI 분기 매출 첫
+#             $100억·런레이트 $500억·Anthropic $810억 계산방식 차이 병기 ⭐⭐⭐ + 영국 Fractile $7.2억 시리즈C
+#             £50억+·주권 AI 기금·DRAM 적층 추론 칩 ⭐⭐⭐⭐ "심판 직후의 숫자와 주권 자본") 갱신 완료.
+# 이월: tool 3건 (Databricks Genie 멀티스텝 에이전트·CEO '거짓 없는 진실' ⭐⭐ + 구글 Gemini Decisions API
+#             닫힌 결정 전용·150-250ms·$0.10/MTok·1000질문 단일 패스 ⭐⭐⭐ + Plurai 에이전트 시뮬레이션 시드 $13M
+#             자율주행 방식 신뢰성 검증 ⭐⭐ — tools 41차 대상, 판단 프리미티브(Decisions)·시뮬레이션 평가 계층).
 # 다음 위키 갱신 대기

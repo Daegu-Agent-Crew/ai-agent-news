@@ -31,3 +31,9 @@ Comp AI CRM의 증거 장부(evidence ledger) 패턴을 축소 적용한 것. �
 ## 위키 컴파일
 
 기존 관행 유지: `context/records/`의 누적 레코드를 주제별 `context/wiki/*.md`로 정리. 위키에서도 사실/해석 구분을 유지하고, 레코드로 소급 가능한 문장만 사실로 쓴다.
+
+## 뉴스·그림책 Pages 전달 (2026-11-13)
+- 매일 뉴스 및 그림책 발송 끝에 `https://daegu-agent-crew.github.io/ai-agent-news/archive.html?date=YYYY-MM-DD`를 실제 수집일로 치환해 포함한다.
+- 그림책 PNG는 반드시 Git에 커밋·push한다. main push 후 Pages workflow가 공개 인덱스를 자동 생성한다.
+- 생성/업로드/배포/전달 성공을 구분한다. 그림책이 없으면 준비 중으로 표기하며 이전 날짜 이미지를 대신 쓰지 않는다.
+- Android 로컬 MEDIA 첨부는 전체 메시지 전달을 실패시키므로 사용하지 않는다. Pages 링크로 전달한다.

@@ -724,6 +724,7 @@
 
   function renderHeader() {
     var links = [
+      { href: "archive.html", label: "뉴스·그림책", page: "archive" },
       { href: "#/", label: "홈", page: "home" },
       { href: "#/news", label: "뉴스 리스트", page: "news" },
       { href: "#/wiki", label: "위키", page: "wiki" },

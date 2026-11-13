@@ -45,3 +45,14 @@ Comp AI CRM의 증거 장부(evidence ledger) 패턴을 축소 적용. 상세 �
 ## 라이선스
 
 Daegu Agent Crew © 2026
+
+## 뉴스·그림책 보관함
+
+- 보관함: https://daegu-agent-crew.github.io/ai-agent-news/archive.html
+- 날짜별 링크: `archive.html?date=YYYY-MM-DD`
+- 뉴스는 `context/records/*.md`의 수집일(없으면 파일명 날짜)로 묶입니다.
+- 그림책은 Git에 커밋된 `assets/news-digest-YYYY-MM-DD*.png`, 저녁 그림책은 `assets/briefing-YYYY-MM-DD*.png`를 연결합니다.
+- 뉴스/그림책을 main에 push하면 `.github/workflows/pages.yml`이 `scripts/build_archive.py`로 인덱스를 만들고 Pages를 배포합니다. 날짜 링크는 그대로 유지됩니다.
+- 이미지가 아직 없으면 준비 중으로 표시됩니다. 비공개 로컬 파일은 인덱스에 포함하지 않습니다.
+- GitHub Pages는 읽기 전용이며 수정·추가는 저장소에서 관리합니다. 기존 기사·위키 라우트는 유지됩니다.
+- 로컬 점검: `python3 scripts/build_archive.py`, `node --check archive.js`. `archive-data.json`은 빌드 산출물입니다.

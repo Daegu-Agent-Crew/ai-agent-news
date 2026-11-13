@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>매일의 AI — 뉴스와 그림책</title><meta name="description" content="날짜별 AI 뉴스, 그림책과 브리핑을 함께 읽는 아카이브"><link rel="stylesheet" href="archive.css"></head>
+<body><header><a class="brand" href="archive.html">매일의 AI <span>NEWS & PICTURE BOOKS</span></a><nav><a href="index.html#/news">전체 뉴스</a><a href="index.html#/wiki">위키</a><a href="https://github.com/Daegu-Agent-Crew/ai-agent-news">GitHub 관리 ↗</a></nav></header>
+<main><section class="intro"><p class="eyebrow">DAEGU AGENT CREW · DAILY ARCHIVE</p><h1>뉴스를 읽고,<br>그림으로 기억하세요.</h1><p>하루의 AI 소식과 그림책을 한곳에. 날짜를 고르면 그날의 기록이 펼쳐집니다.</p><p id="stats" class="stats" aria-live="polite">보관함을 불러오는 중…</p></section>
+<section class="toolbar" aria-label="날짜 및 검색"><label>날짜 <input type="date" id="date"></label><label class="search">기록 찾기 <input type="search" id="search" placeholder="제목·내용·회사 검색"></label><label>분야 <select id="category"><option value="">전체 분야</option><option value="model">모델</option><option value="tool">도구</option><option value="industry">산업</option><option value="framework">프레임워크</option><option value="research">연구</option></select></label><button id="latest">최신 날짜</button></section>
+<div class="layout"><aside><h2>날짜별 기록</h2><div id="days"></div></aside><section id="edition" aria-live="polite"></section></div>
+<p id="status" role="status"></p></main><footer>새 뉴스·그림책이 저장소에 올라오면 자동 갱신됩니다. 자료 수정·추가는 GitHub에서 관리합니다.</footer>
+<dialog id="viewer"><button id="close">닫기 ✕</button><img id="large" alt="그림책 확대 보기"></dialog><script src="archive.js"></script></body></html>

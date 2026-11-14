@@ -1572,3 +1572,30 @@ Meta가 첫 프런티어 Muse Wonder·Wonder Full(Active Memory·Active Focus, F
 ### 44차 갱신 요약
 Liquid AI가 총 24B·활성 2B의 추론 전용 MoE LFM2.5-24B-A2B를 오픈웨이트로 공개했다. OpenClaw·OpenCode 등 하네스 안에서 에이전트 RL을 수행했고(AutomationBench 27.69·LiveClaw 48.09로 Qwen3.6-35B-A3B 상회 — 자체 평가), git 기록 탐색·샌드박스 자각 같은 보상 해킹도 소형에서 공개됐다. 하네스가 학습 환경이 되는 첫 오픈웨이트 사례 — 모델-하네스 경계 이동의 바닥 편 44차다.
 
+## 2026년 10월 45차 갱신: 프런티어 오픈웨이트의 책상 도달 — 816B가 Mac Studio 2대에 내려앉다
+
+44차가 하네스가 학습 환경이 되는 바닥의 관측이었다면, 45차는 오픈웨이트의 상한이 책상 위로 내려온 갱신이다. Meta가 총 816B·활성 42B·1M 컨텍스트의 네이티브 멀티모달 MoE 'Muse Spark Open' 가중치를 공개하며 "미국 최고 성능 오픈 웨이트 모델"을 자칭했고, M5 Ultra Mac Studio 두 대와 MLX로 전체 모델을 데스크톱에서 구동할 수 있다고 밝혔다.
+
+### 1. Meta Muse Spark Open — 총 816B·활성 42B·1M 컨텍스트, "미국 최고 오픈 웨이트" ⭐⭐⭐⭐⭐
+
+**출처**: [Meta AI Research 공식 블로그](../../records/2026-10-16-meta-muse-spark-open-816b-open-weight.md) (10/15 발표·10/16 수집, official, 교차 확인 4 — TechCrunch·9to5Mac·Engadget, HN 546pt)
+
+- **구조**: 총 816B·토큰당 활성 42B의 네이티브 멀티모달 MoE, 컨텍스트 **100만 토큰**. 코딩·에이전트 작업용 — 장기 과제·복잡한 소프트웨어 엔지니어링·다단계 추론 강조. 추가 안전 후학습·Meta Superintelligence Scaling Framework 공개 기준 충족 주장(전체 평가 보고서는 아직 미공개 — 자체 평가 상수 유지)
+- **데스크톱 구동**: M5 Ultra Mac Studio 2대 + 최신 MLX — 대당 최대 512GB 통합 메모리를 GPU가 써 두 대로 모델 전체를 수용, 1.2TB/s 메모리 대역폭이 토큰마다 필요한 일부만 고속 판독(TechCrunch/Engadget 인용: 로컬 구동에 최소 1TB RAM). 실측 데모 — Muse Code 결합으로 오픈소스 Mastodon 클라이언트 Ice Cubes에 버그 수정·신기능·전체 빌드까지 실제 iOS 변경 반영, DaVinci Resolve 프레임 단위 검토·하이라이트 세로 크롭 작업 완전 온디바이스
+- **유통**: API — Baseten·Fireworks AI·Groq·Modal·Nebius·OpenRouter·Together AI 7개 동시 출시. 가중치 — Hugging Face·SageMaker·Google Cloud Model Garden·Microsoft Foundry. 라이선스 — '제한적 상업 조건'의 Muse Model License(전문 공개 대기)
+- **위치 ① (오픈웨이트 지역 3극의 미국 편 대형 후보)**: "미국 오픈 웨이트" 프레이밍은 중국계(Qwen·GLM)·유럽(39차 Mistral)·미국(38차 Beam) 3극 구도에서 Meta의 정식 참전 — 43차 Muse Wonder(폐쇄·Active Memory)의 **열린 자매편**으로, 한 랩이 폐쇄 프런티어(구독 전용 Wonder Full)와 오픈웨이트(로컬 Spark Open)를 병행하는 양면 작전이 첫 완성
+- **위치 ② (로컬 에이전트 상한의 상향)**: 극단적 희소 MoE(활성 비율 약 5.1% — 38차 Beam 4.6%와 동일 계보)는 메모리 용량은 크지만 대역폭이 제한된 통합 메모리 기기용 설계 — 44차 LFM2.5-24B(활성 2B·바닥 최적화)와 정확히 대칭되는 **상한 최적화**. 민감 코드·데이터를 외부로 보내지 않는 강력 코딩 에이전트의 로컬 옵션 — [도구 31차](../tools-overview.md) DGX Spark·[산업 동향](../industry-trends.md) 49차 Rivian 엣지-클라우드 라우팅과 로컬 에이전트 축의 소비자 하드웨어 편
+- **라이선스 관전**: '제한적 상업 조건'은 65 Qwen·㊽ jina-ocr '오픈 조임' 축의 최대 편 — Apache 2.0 경쟁(Beam 약속·Kolibri·LFM2.5) 대비 기업 도입 검토 부담. 조건 전문이 첫 관문
+- **관전(숙제 신설 147)**: ① 벤치마크의 독립 재현("미국 최고" 주장·전체 보고서 미공개 — 58 Vals 축 편입 여부) ② Muse Model License 조건 공개·상업 문턱 ③ Mac Studio 2대 실측(토큰/초·메모리·MLX 안정성) ④ 7개 API 사업자 가격·가용성 ⑤ Muse Code 결합의 실무 검증 (43차 Wonder·44차 LFM2.5·38차 Beam과 3극·로컬 축 교차)
+
+### 45차 갱신 분석: "무게의 희소화와 개방의 조건"
+
+1. **희소율의 경쟁화**: 활성 42B/총 816B는 '용량은 크게, 토큰당 계산은 적게' 설계의 연속선 — 통합 메모리 소비자 하드웨어가 오픈웨이트 배포의 1차 형태가 되는 흐름을 816B급에서 실측. 31차 Step 5(1.2TB 멀티GPU)의 '1TB RAM 2대' 하향판이자, 로컬 배포 관문이 '데이터센터 GPU'에서 '책상 위 메모리'로 이동했음을 보여줌
+2. **양면 작전의 완성**: Wonder(폐쇄·구독)와 Spark Open(오픈·로컬) — 프런티어 성능의 판매처와 생태 확산 경로를 분리 운영하는 Meta 구조의 첫 완성. '오픈웨이트=마케팅' 비판과 '오픈웨이트=주권' 옹호가 같은 라이선스에서 시험되며, 조건 전문 공개가 그 판정문이 됨
+3. **검증의 공백**: "미국 최고" 주장에 전체 평가 보고서 미공개 — 40차 Haiku·43차 Wonder에 이은 자체 평가 상수 관행이 오픈웨이트에도 이어짐. 독립 평가 수요(58 Vals·49차 METR 상주)가 오픈 모델에도 확장되는지가 다음 관문
+
+> 💡 **종합 교차 참조**: 43차 Muse Wonder(자매 편)·38차 Beam·39차 Mistral과 '오픈웨이트 지역 3극' 축, 44차 LFM2.5·[도구 31차](../tools-overview.md) DGX Spark·[산업 49차](../industry-trends.md) Rivian과 로컬·엣지 축, 65·77 '오픈 조임' 라이선스 축 교차. 관전점(숙제 신설 147): 독립 재현·라이선스 공개·실기기 실측·API 가격
+
+### 45차 갱신 요약
+Meta가 총 816B·활성 42B·1M 컨텍스트의 멀티모달 MoE 오픈웨이트 Muse Spark Open을 공개했다. "미국 최고 오픈 웨이트" 자칭과 함께 M5 Ultra Mac Studio 2대(MLX) 전체 로컬 구동이 가능하고, 7개 API 사업자·4개 클라우드에서 동시 유통된다. 라이선스는 '제한적 상업 조건' — 오픈웨이트 3극의 미국 편 대형 후보이자 로컬 에이전트 상한 상향의 45차다.
+

@@ -39,6 +39,6 @@ Comp AI CRM의 증거 장부(evidence ledger) 패턴을 축소 적용한 것. �
 - Android 로컬 MEDIA 첨부는 전체 메시지 전달을 실패시키므로 사용하지 않는다. Pages 링크로 전달한다.
 
 ## 오리지널 그림책 캐릭터 (2026-11-15)
-- 그림책 생성 전 `context/characters/README.md`와 `assets/characters/moabyeol-v2.png`를 읽고 참조한다.
-- 모아별 편집부(모루·누비·또록)를 취재/설명/검증 역할로 사용한다. 기존 브랜드 마스코트 대신 독립 캐릭터로 등장시킨다.
+- 그림책 생성 전 `context/characters/README.md`와 `assets/characters/teumsae-v1.png`를 읽고 참조한다.
+- 틈새 탐사대(두몽·리루·코핀)를 탐험/실험/길잡이 역할로 사용한다. 모아별은 이전 시안으로만 보존한다. 기존 브랜드 마스코트 대신 독립 캐릭터로 등장시킨다.
 - 시안의 저작권 독점성·등록·유사성 검증 완료를 주장하지 않는다. 실제 사용자 수정 내역을 제작 기록에 남긴다.

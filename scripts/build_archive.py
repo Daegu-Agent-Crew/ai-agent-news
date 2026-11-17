@@ -28,8 +28,8 @@ def build():
             summary = re.search(r'^## 핵심 요약\s*\n(.*?)(?=^## |\Z)', body, re.M | re.S)
             text = re.sub(r'(?m)^>\s*|\*\*', '', summary[1]).strip() if summary else ''
             day(date)['news'].append(dict(title=title[1] if title else path.stem, summary=text[:1400], category=meta('카테고리'), source=meta('소스'), url=meta('원문 URL'), path=name, slug=path.stem))
-        elif name.startswith('assets/') and re.match(r'(news-digest|briefing)-\d{4}-\d{2}-\d{2}.*\.(png|jpg|webp)$', path.name):
-            day(date)['images'].append(dict(path=name, label=('저녁 브리핑' if path.name.startswith('briefing') else '아침 그림책') + (' · 수정본' if re.search(r'\d{2}-(?:morning|soft)', path.name) else '')))
+        elif name.startswith('assets/') and re.match(r'(news-digest|briefing|future-digest|future-characters)-\d{4}-\d{2}-\d{2}.*\.(png|jpg|webp)$', path.name):
+            day(date)['images'].append(dict(path=name, label=('미래예측 그림책' if path.name.startswith('future-digest') else '미래 캐릭터 시트' if path.name.startswith('future-characters') else '저녁 브리핑' if path.name.startswith('briefing') else '아침 그림책') + (' · 수정본' if re.search(r'\d{2}-(?:morning|soft)', path.name) else '')))
         elif name.startswith('context/briefings/') and name.endswith('.md'):
             day(date)['briefings'].append(name)
     result = dict(updatedAt=datetime.now(timezone.utc).isoformat(), days=sorted(days.values(), key=lambda d:d['date'], reverse=True))

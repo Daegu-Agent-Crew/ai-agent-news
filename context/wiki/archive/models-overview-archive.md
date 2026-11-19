@@ -1666,3 +1666,29 @@ DeepSeek V4.1-Flash-1017이 DeepSWE 77.0(자체 표)의 코딩 체크포인트�
 ### 47차 갱신 요약
 MiniMax M3.1 Flash(총 428B·활성 23B·$0.15/$0.60·Automation-Bench 62.2 자체 표 최고·가중치 10/23 예정)가 에이전트 심부름 가격의 바닥을 갱신했고, NVIDIA가 Nemotron 3.5 Super VL(120B)·Bolt(74B-A9B·E4B)로 기업 서버~AI PC의 티어형 오픈웨이트를 완성했다 — 가격과 소유, 두 조건부 주장이 겹친 47차다.
 
+## 2026년 10월 48차 갱신: 제작의 자동화 — 자동 연구 시스템이 4개월 만에 지은 노트북용 코딩 모델
+
+47차가 가격의 바닥과 소유의 계층이었다면, 48차는 모델 개발 공정 자체가 AI로 이동한 갱신이다. Recursive가 첫 모델 Flint를 공개하며 자동 연구 시스템 'Eureka Machine'이 개발의 대부분을 수행했다고 밝혔다 — 'AI가 AI를 만든다'는 재귀적 자기개선 논쟁이 공개 제품으로 시험대에 올랐다. 이월 처리 1건.
+
+### 1. Recursive Flint — 총 40B·활성 2.5B MoE 코딩 모델, 'Eureka Machine'이 개발 대부분 수행 ⭐⭐⭐⭐ (이월 처리)
+
+**출처**: [TechCrunch](../../records/2026-10-22-recursive-flint-local-coding-model-eureka.md) (10/21 발표·10/22 수집, major-media, 교차 확인 4 — MarkTechPost·Wired·공식 블로그, HN 20pt)
+
+- **구조**: 총 40B·한 번에 활성 2.5B의 MoE 코딩 모델, Apache 2.0으로 Hugging Face 공개. 4비트 가중치 약 23GB — 48GB 메모리 Apple Silicon Mac·NVIDIA GPU에서 노트북 로컬 구동. M4 Pro MacBook Pro 초당 약 131토큰 — 같은 기기에서 Gemma 4·Nemotron 3.5 Lightning의 58~69토큰 약 2배(자체 테스트)
+- **성적표(자체 보고)**: SWE-bench Verified **74.2%** — 50B 미만 1위 주장, IFEval 95.1%. Terminal-Bench 2.1은 54.9%로 dense Qwen 3.8(73.0%)에 크게 열세 — 긴 셸 상호작용의 소형 MoE 한계. 대형 유료 코딩 어시스턴트보다 지침이 더 필요하고 큰 작업은 단계 분해를 권고한다고 스스로 명시
+- **Eureka Machine**: 아이디어 생성→실험→다음 시도 결정의 자동 연구 루프. 기여로 밝힌 것 — 더 희소한 모델 구조, 품질 손실 거의 없이 **71% 축소**한 저비트 학습(lm_head까지 4비트 후 증류 복구 — 관행 밖 선택), 연산 가속 커스텀 커널. 소규모 팀이 **4개월 만에** 처음부터 구축. Socher(Salesforce 전 수석 과학자) 장기 목표는 "사람이 감독하고 멈출 수 있는 상태의 완전한 재귀적 자기개선". 5월 GV·Nvidia·AMD Ventures 등 $650M 조달(기업가치 $4.65B)
+- **위치 ① (로컬 코딩 계보의 노트북급)**: 45차 Muse Spark Open(상한 816B·Mac Studio 2대)·47차 Nemotron 3.5 Bolt(AI PC)·44차 LFM2.5-24B(활성 2B·바닥)에 이은 노트북급 편 — 활성 2.5B로 SWE-bench Verified 70%대 주장은 로컬 코딩 에이전트 실용 하한선 상향 사례. 코드를 외부로 보내지 않는 보안 민감 기업·비용 민감 개인의 클라우드 의존 축소 후보
+- **위치 ② (제작의 자동화)**: AutoML이 아키텍처 탐색을 넘어 구조·학습 레시피·커널까지 전 스택으로 확장된 첫 공개 사례 후보 — 41차 Mellum2.1(아키텍처 동결·RL만)·38차 Beam(RL 청구서)이 '학습의 자동화'라면 Flint는 '설계의 자동화'. [프레임워크 28차](../frameworks-overview.md) Harness²(하네스의 자기 개선)와 대칭되는 모델 제작 편. TechCrunch가 OpenAI '에이전트가 인간 연구자 1일당 3.1 근무일' 발표와 병치 — 연구 자동화가 업계 전반 흐름임을 보여줌
+- **관전(숙제 신설 171)**: ① 74.2%·131토큰 자체 보고의 독립 재현(50B 미만 1위 주장 검증 — 58 Vals 축) ② Eureka Machine 기여의 검증 가능성(어디까지 AI가 했는지 분리·재현) ③ 재귀적 자기개선의 통제 구조('감독·중단 가능' 원칙) 실측 — 규제·안전 논의의 실증 사례화 여부 ④ Gemma 4·Nemotron 3.5 Lightning과의 로컬 코딩 실기기 비교
+
+### 48차 갱신 분석: "제작의 재귀와 성능의 선택성"
+
+1. **개발 공정의 AI 이동(1번)**: 설계·압축·커널까지 AI가 수행하고 4개월 만에 완성 — 모델 개발의 병목이 연구 인력에서 연산·감독 구조로 이동할 수 있음을 시사하는 첫 상용 규모 실측. 'AI가 만든 모델'의 기여 분리 검증 방법이 없다는 점이 새로운 신뢰 문제
+2. **벤치의 선택성 상수**: SWE-V 1위 주장과 Terminal-Bench 열세가 공존 — 47차 MiniMax(Automation-Bench 우위·Terminal 열세)·46차 DeepSeek(DeepSWE 우위·HLE 열세)와 같은 용도 분화 패턴의 연속. '무엇을 잘하는 모델인가'가 '어떤 벤치를 내놓았는가'로 읽히는 구도 고착
+3. **재귀적 자기개선의 상업화**: 통제 상실 우려가 큰 주제가 제품 서사로 전환 — Socher의 '감독·중단 가능' 프레임이 안전 논의([연구 25차](../research-overview.md) 보상 해킹·94 안전장치 우회)와 만나는 지점의 실측 시작
+
+> 💡 **종합 교차 참조**: 44차 LFM2.5·47차 Bolt·45차 Muse Spark Open과 로컬·오픈웨이트 축, [프레임워크 28차](../frameworks-overview.md) Harness²·[연구 25차](../research-overview.md) 자기개선·보상 해킹 축과 교차. 관전점(숙제 신설 171): 독립 재현·Eureka 기여 분리 검증·통제 구조 실측·로컬 실기기 비교
+
+### 48차 갱신 요약
+Recursive Flint(총 40B·활성 2.5B MoE·Apache 2.0·4비트 약 23GB·M4 Pro 131토큰/초)이 자동 연구 시스템 Eureka Machine의 기여로 4개월 만에 구축된 노트북용 코딩 모델로 공개됐다 — SWE-bench Verified 74.2%(50B 미만 1위 자체 주장)·Terminal-Bench 54.9%(Qwen 3.8 열세). 'AI가 AI를 만든다'는 재귀적 자기개선이 공개 제품 단계에 들어선 48차다.
+

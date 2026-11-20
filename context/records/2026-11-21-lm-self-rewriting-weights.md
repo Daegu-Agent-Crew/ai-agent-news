@@ -8,9 +8,9 @@
 - **수집자**: 레노버
 - **카테고리**: research
 - **태그**: [self-improvement, weights, research, arXiv, recursion]
-- **소스 권위**: community (사전공개 논문, 동료검토 전)
-- **교차 확인**: 1 (arXiv 단일)
-- **중요도**: ⭐⭐⭐ (community +0, 교차 1개, HN 50pt+ 진입 +1 → 1+0+0+1=2; 다만 주제 독창성은 분석 영역으로 산정 제외) 
+- **소스 권위**: community
+- **교차 확인**: 1
+- **중요도**: ⭐⭐
 - **신선도**: fresh
 
 ## 핵심 요약

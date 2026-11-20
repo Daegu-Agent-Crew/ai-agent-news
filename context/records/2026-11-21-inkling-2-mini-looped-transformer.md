@@ -9,8 +9,8 @@
 - **카테고리**: model
 - **태그**: [open-weights, looped-transformer, MoE, on-device, agentic-coding]
 - **소스 권위**: official
-- **교차 확인**: 2 (Thinking Machines 공식, Hacker News 프런트페이지)
-- **중요도**: ⭐⭐⭐⭐ (official +2, 교차 2개 +1, HN 50pt+ 진입 +1 → 1+2+1+1)
+- **교차 확인**: 2
+- **중요도**: ⭐⭐⭐⭐
 - **신선도**: fresh
 
 ## 핵심 요약

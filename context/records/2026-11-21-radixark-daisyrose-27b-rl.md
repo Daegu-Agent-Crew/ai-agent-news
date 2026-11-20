@@ -9,8 +9,8 @@
 - **카테고리**: model
 - **태그**: [reinforcement-learning, agentic-coding, open-weights, post-training, Qwen]
 - **소스 권위**: official
-- **교차 확인**: 3 (RadixArk 공식, MarkTechpost, Hugging Face 모델 카달로그)
-- **중요도**: ⭐⭐⭐⭐⭐ (official +2, 교차 3개 +2, 커뮤니티 반응 — HF 파생 모델 다수 확인되나 규칙상 100pt+ 미확인 제외 → 1+2+2)
+- **교차 확인**: 3
+- **중요도**: ⭐⭐⭐⭐⭐
 - **신선도**: fresh
 
 ## 핵심 요약

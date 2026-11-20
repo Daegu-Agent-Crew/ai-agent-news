@@ -9,8 +9,8 @@
 - **카테고리**: industry
 - **태그**: [Apple, computer-use, AI-agent, macOS, Bloomberg]
 - **소스 권위**: major-media
-- **교차 확인**: 2 (TechCrunch, Bloomberg — 채용 공고 원문 존재)
-- **중요도**: ⭐⭐⭐⭐ (major-media +1, 교차 2개 +1, 반응 미확인 → 1+1+1=3이나 채용 공고라는 1차 증거가 존재해 상단 기록. 규칙상 3점이나 1차 증거 병기) 
+- **교차 확인**: 2
+- **중요도**: ⭐⭐⭐
 - **신선도**: fresh
 
 ## 핵심 요약

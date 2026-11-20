@@ -9,8 +9,8 @@
 - **카테고리**: industry
 - **태그**: [Anthropic, IPO, AI-infra, Nvidia, Google]
 - **소스 권위**: major-media
-- **교차 확인**: 3 (TechCrunch, NBC News, The Guardian — IPO 관련 보도 다수)
-- **중요도**: ⭐⭐⭐⭐⭐ (major-media +1, 교차 3개 +2, 반응 규모 — 글로벌 시장 뉴스로 다수 보도 → 1+1+2+1)
+- **교차 확인**: 3
+- **중요도**: ⭐⭐⭐⭐
 - **신선도**: fresh
 
 ## 핵심 요약

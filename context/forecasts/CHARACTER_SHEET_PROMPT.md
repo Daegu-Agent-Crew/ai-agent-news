@@ -1,7 +1,16 @@
-# 미래예측 캐릭터 시트 생성 프롬프트 v2
+# 미래예측 캐릭터 시트 생성 프롬프트 v3
 
 적용: 매일 미래편 신규 캐릭터 시트. 뉴스편 틈새 탐사대에는 적용하지 않는다.
 목표: 장식용 마스코트 소개장이 아니라, 다음 이미지 생성에 실제 참조할 수 있는 **연기 가능한 캐릭터 모델 시트**.
+
+## v3 우선 원칙 — 매력과 연기, 장식보다 먼저
+- 매일 새로운 팀은 유지하되, 오늘의 기사 키워드를 귀·꼬리·재질로 모두 붙이지 않는다. 기억할 수 있는 캐릭터를 먼저 만들고 미래 상황 속에 넣는다.
+- 최종 팀을 정하기 전 텍스트로 서로 다른 팀 콘셉트 3개(한 줄 성격 관계 + 실루엣)를 구상하고 하나를 선택한다. 이미지 시안 3회 생성이나 추가 검수를 뜻하지 않는다.
+- 최근 3일 캐릭터 문서를 읽고 몸집 큰 받침대 / 길쭉한 조립가 / 작은 발광 안내자 조합을 반복하지 않는다. 같은 역할에 색·이름만 바꾸는 것을 신규 디자인으로 삼지 않는다.
+- 고정 특징은 2~3개로 충분하다. 그중 하나는 얼굴의 식별점으로 삼는다. 장식적 재질·복잡한 해부 비율·미세 비대칭을 모두 강제하지 않는다. 눈썹/눈꺼풀/입/볼과 몸의 자세로 감정을 읽을 수 있게 한다.
+- 캐릭터가 왜 함께 다니는지, 서로 무엇을 오해하는지, 어떻게 화해하는지 한 문장씩 정한다. 모두 착하고 능숙하기만 한 팀은 피한다.
+- 얼굴과 주연을 크게 보여주는 시트가 우선이다. 작은 인물도 얼굴 확대를 둔다. 똑같은 미소 대신 망설임·억울함·놀람·집중·안도의 차이를 설계한다.
+- 시트는 정체성 참고자료다. 그 시트의 아이보리 배경·정면 포즈·균일한 조명을 만화에 그대로 복사하지 않는다.
 
 ## 생성 전 기획 — 예측문을 읽고 빈칸을 채운다
 먼저 `context/forecasts/CHARACTER_DESIGN_ANALYSIS.md`를 매번 읽는다. 당일에 맞는 원칙 3개와 독립적으로 적용한 설계를 날짜별 캐릭터 문서에 기록한다. 유명 캐릭터 이름/이미지는 생성 프롬프트에 전달하지 않는다.
@@ -32,7 +41,7 @@ CAST — use these exact designs consistently in every view
 {{For EACH of 2–3 characters insert:
 Name / narrative role / desire / strength / comic vulnerability.
 Body silhouette and center of gravity; head-to-body ratio; limb count and attachment positions.
-Face geometry and eye/mouth placement. Exactly three memorable fixed identity features.
+Face geometry and eye/mouth placement. Two or three memorable fixed identity features, including distinctive facial geometry.
 Named muted colors assigned to specific body regions; material finish.
 Intrinsic anatomy versus removable prop; exact anatomical left/right for asymmetric features.
 Signature movement and how another character helps them.}}
@@ -40,14 +49,14 @@ Relative standing heights: {{HEIGHT_RATIOS}}.
 Avoid identical faces, identical body shapes, and props that are the only way to identify a character.
 
 LAYOUT — landscape, generous separation, ivory background
-Top 55%: one clearly separated character column per character. Each column has a large full-body
+Top approximately 55% (flexible, readability first): one clearly separated character column per character. Each column has a large full-body
 three-quarter hero view and smaller FRONT, SIDE, BACK neutral model views. Match anatomy, proportions,
 color placement and attachment points across views. Feet on a shared baseline for size comparison.
 Show entire bodies without cropping. Keep props from hiding key silhouette features.
-Middle 25%: three acting poses per character: intent/curiosity, effort/frustration, and relief/affection.
-Use whole-body acting: leaning weight, bent knees, counterbalance, gaze and mouth changes.
+Middle approximately 25%: three acting poses per character: intent/curiosity, effort/frustration, and relief/affection.
+Include readable facial close-ups, especially for the smallest character. Use whole-body acting: leaning weight, bent knees, counterbalance, gaze and mouth changes. Do not repeat the same smile.
 {{CHARACTER_SPECIFIC_ACTING_POSES}}
-Bottom 20%: ONE compact cooperative scene showing {{COOPERATIVE_INCIDENT}}.
+Bottom approximately 20%: ONE compact cooperative scene showing {{COOPERATIVE_INCIDENT}}.
 {{EXACT_CONTACTS_AND_REACTIONS}}
 The team must physically affect the shared object and react to each other.
 No spectators lined up, no identical smiles, no three unrelated solo actions.

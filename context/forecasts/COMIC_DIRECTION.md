@@ -15,6 +15,14 @@
 - 배경은 생활 변화가 보이는 공간으로 설계한다. 모두 기계 공방·시계탑·지하 단면으로 만들지 않는다. 사건에 쓰이는 소품은 풍부하게, 무관한 장식은 줄인다.
 - 눈의 편안함은 모든 색을 갈색으로 만드는 것이 아니다. 낮은 채도 안에서 따뜻한 인물/차가운 배경, 밝기와 초점 차이로 시선을 안내한다. 중요한 얼굴과 행동은 또렷하게, 배경은 한 단계 절제한다. 네온·두꺼운 검정선은 피한다.
 
+## 시점 표시는 생략 불가 — 2026-11-27 보완
+- 상단 발행일이나 뉴스의 시행일은 예측 시점 표시를 대신하지 않는다.
+- 각 시점이 시작되는 컷 상단에 독립된 큰 시간 배지를 넣는다: **3개월 뒤 · YYYY-MM-DD**, **6개월 뒤 · YYYY-MM-DD**, **1년 뒤 · YYYY-MM-DD**, **5년 뒤 · YYYY-MM-DD**. 네 배지 모두 실제 이미지 텍스트로 생성한다. 콘티에만 쓰면 안 된다.
+- 오늘의 출발점 컷은 **현재 · 기준일 YYYY-MM-DD**로 구분한다. 이어지는 같은 시점의 컷은 같은 배지 색/구역으로 연결한다.
+- 본문 속 정책 시행일·뉴스 날짜와 혼동되지 않도록 시간 배지는 해설 상자보다 먼저 읽히게 배치한다. 장식·반복 면책 문구보다 우선하며 공간 부족 시 장식을 줄인다.
+- 생성 프롬프트에 기준일과 계산한 네 배지의 정확한 문자열, 적용 컷 번호를 반드시 넣는다. 월말은 해당 월 마지막 유효 날짜를 사용한다. 생성 후 검수 단계는 추가하지 않는다.
+- 2026-11-27 예: 현재 · 기준일 2026-11-27 / 3개월 뒤 · 2027-02-27 / 6개월 뒤 · 2027-05-27 / 1년 뒤 · 2027-11-27 / 5년 뒤 · 2031-11-27.
+
 ## 이미지 안의 정보 전달 — 필수 텍스트 설계
 11/23 그림은 짧은 대사와 은유적 소품만으로 실제 예측을 이해하기 어려웠다. 이전 지침의 “조건은 문서에, 이미지에는 핵심 변화만”을 폐기한다. 만화만 읽어도 무엇이 왜 달라질 수 있는지 이해하도록 만든다.
 - 상단에 **오늘의 출발점** 1~2문장: 예측을 촉발한 뉴스의 사실/보도 내용을 요약한다. 회사 주장·제안·실험을 확정된 성과로 바꾸지 않는다.
@@ -40,6 +48,6 @@ Maintain distinctive faces, anatomy and relative scale, but never copy the same 
 Balance character appeal and causal storytelling with self-contained explanatory captions; reduce decorative machinery, not essential information.
 Use a controlled muted palette with clear focal contrast, not uniform sepia. Keep Korean dialogue brief.
 Include a brief current-news premise and one readable Korean narrator box for EACH horizon explaining the predicted change, its causal reason and a key condition. Use the supplied exact Korean copy. Dialogue carries emotion; captions carry information. Reserve clear caption space without shrinking text or covering faces and actions. Never replace explanations with cryptic labels or orphan numbers.
-Preserve all four dated horizons and label the whole work as a conditional future scenario.
+Render FOUR prominent time badges at the start of their respective scenes, using the supplied exact Korean strings: 3개월 뒤 · [date], 6개월 뒤 · [date], 1년 뒤 · [date], 5년 뒤 · [date]. A publication date or policy effective date is NOT a horizon label. Keep the current-news opening separately labeled 현재 · 기준일 [date]. Label the whole work once as a conditional future scenario.
 
 새 캐릭터 시트를 실제 이미지 참조로 전달하는 규칙은 유지한다. 별도 생성 후 품질 검수·OCR·QC_PASS·검수 재생성은 추가하지 않는다. 이번 피드백의 수동 진단을 정기 검수로 바꾸지 않는다.
